@@ -54,6 +54,15 @@ Antes de implementar, revise o plano visual contra o produto, público e tarefa 
 - Em erros, explique a causa conhecida e a recuperação possível; em estados vazios, ofereça uma próxima ação concreta.
 - Revise screenshots quando houver navegador disponível; não transforme a revisão em checkpoint de aprovação desnecessário.
 
+## Referências visuais sob demanda
+
+Estas referências refinam uma direção já indicada pelo briefing; não são padrões para toda interface.
+
+- [Brutalismo industrial](references/industrial-brutalist-ui.md): quando o pedido ou referência pede linguagem industrial, impressão suíça, blueprint ou terminal tático. Não acionar apenas porque o produto é um dashboard.
+- [Interfaces imersivas](references/immersive-ui.md): quando a tarefa pede experiência cinematográfica, portfolio interativo ou movimento expressivo. Escolher efeitos por função e validar comportamento com toque, teclado e movimento reduzido.
+
+Leia somente a referência pertinente; nenhuma exige instalar bibliotecas ou reconstruir o sistema do projeto.
+
 ## Especializações sob demanda
 
 - `shadcn-ui-engineering`: quando o projeto usa shadcn e a tarefa exige composição, atualização ou diagnóstico dos componentes.
