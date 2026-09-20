@@ -46,9 +46,9 @@ Não use recursos mecanicamente.
 
 ## Descoberta eficiente
 
-Não leia todos os SKILL.md ou STACK.md.
+Para `arsenal:` ou seleção automática, leia primeiro `ARSENAL INDEX.md`.
 
-Use primeiro nomes e descriptions para selecionar candidatas.
+O índice é o catálogo leve de nomes e descriptions. Não leia todos os SKILL.md ou STACK.md.
 
 Depois leia somente os arquivos escolhidos e seus references, scripts ou assets necessários.
 
@@ -145,6 +145,7 @@ Use skills de validação apenas quando agregarem valor, por exemplo:
 ## Alterações no próprio Arsenal
 
 Ao editar o Arsenal:
+- atualize `ARSENAL INDEX.md` quando uma skill/stack for criada, removida, renomeada ou tiver sua description alterada materialmente;
 - preserve compatibilidade com Agent Skills;
 - evite duplicações;
 - prefira melhorar recursos existentes;
