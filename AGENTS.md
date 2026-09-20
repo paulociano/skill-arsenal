@@ -93,6 +93,12 @@ Analise a fonte, compare com o Arsenal, revise segurança e portabilidade, class
 
 Não copie skills externas cegamente.
 
+### Aplicação ao final da avaliação
+
+Por autorização permanente do usuário, dada em 2026-09-20 ("faça as alterações sempre ao final da avaliação"), conclua cada avaliação aplicando as mudanças úteis no Arsenal, registrando a decisão em `evaluations/`, atualizando o índice quando necessário e publicando as alterações verificadas no GitHub. Essa autorização inclui commit e push das mudanças decorrentes da avaliação; não peça confirmação novamente para esse escopo.
+
+Prefira enriquecer skills existentes a duplicá-las. Para uma candidata sem valor adicional ou inadequada, registre a decisão sem instalá-la. Não execute instaladores externos apenas para avaliar, não altere projetos consumidores e não amplie esta autorização para ações fora do Arsenal. Instruções posteriores do usuário prevalecem.
+
 ## Instalação de nova skill
 
 Instale no repositório canônico em:
@@ -126,7 +132,7 @@ Depois das alterações:
 `git status`
 `git diff`
 
-Commit e push somente com autorização explícita do usuário.
+Commit e push somente com autorização explícita do usuário; para mudanças decorrentes de avaliações, a autorização permanente acima já atende a essa exigência. Com o conector GitHub, leia a versão atual, preserve alterações concorrentes e publique sem force-push.
 
 ## Portabilidade
 

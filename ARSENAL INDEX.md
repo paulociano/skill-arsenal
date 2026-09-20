@@ -57,6 +57,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **founder-diagnose** — Diagnosticar gargalos de startups em produto, mercado, posicionamento, distribuição ou monetização antes de escolher uma intervenção.
 - **golden-circle-feedback** — Redigir feedback comportamental usando POR QUÊ, COMO e O QUÊ, com propósito, fatos observáveis e próxima ação.
 - **graph-engineering** — Modelar workflows com dependências e paralelismo reais como grafos limitados, com contratos de saída, joins e recuperação local.
+- **gsap-animation** — Implementar e revisar animações GSAP com timelines, ScrollTrigger e integração ao ciclo de vida, preservando escopo, acessibilidade e limpeza.
 - **handoff** — Preparar contexto compacto para continuar uma tarefa em outra sessão ou obter comparação independente ou crítica.
 - **idea-refine** — Refinar ideias vagas, explorar alternativas, testar premissas e definir uma direção e escopo de MVP.
 - **jtbd-framing** — Reformular decisões de produto por Jobs-to-be-Done, situações reais, dificuldades e critérios de adoção ou abandono.
@@ -85,6 +86,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **runtime-ui-verification** — Verificar mudanças de UI no app em execução por consequências de domínio, estado e rede além da aparência visual.
 - **seo-research-audit** — Pesquisar palavras-chave ou auditar SEO e concorrentes com evidências reais, métricas disponíveis e prioridades acionáveis.
 - **session-learn** — Extrair aprendizados duráveis de uma sessão quando solicitado ou autorizado, com deduplicação e rastreabilidade.
+- **shadcn-ui-engineering** — Implementar, atualizar e depurar componentes em projetos shadcn/ui preservando configuração, composição acessível e personalizações locais.
 - **shader-graphics-engineering** — Implementar, depurar ou otimizar shaders GLSL/WebGL e gráficos procedurais conforme efeito, runtime e orçamento de desempenho.
 - **skill-builder** — Criar ou atualizar skills reutilizáveis a partir de workflows recorrentes, com gatilhos claros, dependências reais e validação.
 - **skill-security-review** — Inspecionar segurança de skills, agentes ou plugins antes da adoção sem executar instaladores ou código da fonte avaliada.
@@ -100,6 +102,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **to-questionnaire** — Transformar lacunas de decisão em perguntas direcionadas à pessoa que possui o contexto necessário.
 - **to-spec** — Converter decisões de uma conversa ou projeto em especificação executável sem reiniciar descoberta já resolvida.
 - **to-tickets** — Decompor specs e planos em tickets verticais pequenos, demonstráveis e com dependências e critérios de aceitação explícitos.
+- **ui-ux-catalog** — Consultar o catálogo UI UX Pro Max para selecionar paletas, tipografia e padrões de interface, verificando pertinência e preservando decisões de design existentes.
 - **value-investing-company-analysis** — Analisar empresas por fundamentos e value investing com dados atuais, cenários de valuation e riscos que podem invalidar a tese.
 - **verify-before-claim** — Verificar afirmações consequenciais de conclusão, correção ou publicação com evidência fresca do escopo afirmado.
 - **video-editing-pipeline** — Editar vídeos com transcrição, decisões de corte explícitas, EDL, render e revisão audiovisual preservando as fontes.

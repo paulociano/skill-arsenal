@@ -43,6 +43,25 @@ Projetar, construir ou redesenhar artefatos visuais para navegador com nível al
 - Quando usar números de UI, distinguir especificação/standard de convenção ou heurística; não vender opinião como regra normativa.
 - Findings de revisão devem trazer evidência e correção acionável, não apenas `looks good` ou score de gosto.
 
+## Direção visual e escrita de interface
+
+Antes de implementar, revise o plano visual contra o produto, público e tarefa principal. Se a mesma composição pudesse servir a qualquer produto apenas trocando o nome, refine a escolha pouco específica. Preserve a direção explícita do usuário e o sistema existente; cores, cards e famílias tipográficas não são proibidos por si só.
+
+- Concentre a expressão visual em um elemento memorável quando isso servir ao objetivo; retire decoração que compete com a tarefa.
+- Use numeração para sequências reais e divisores/rótulos para relações informativas, não para preencher espaço.
+- Diferencie movimento que responde a uma ação de movimento automático. Dê propósito ao segundo e evite repetir entradas em todas as seções.
+- Nomeie ações pelo efeito que o usuário entende. Mantenha o mesmo vocabulário entre botão, confirmação e estado final.
+- Em erros, explique a causa conhecida e a recuperação possível; em estados vazios, ofereça uma próxima ação concreta.
+- Revise screenshots quando houver navegador disponível; não transforme a revisão em checkpoint de aprovação desnecessário.
+
+## Especializações sob demanda
+
+- `shadcn-ui-engineering`: quando o projeto usa shadcn e a tarefa exige composição, atualização ou diagnóstico dos componentes.
+- `ui-ux-catalog`: quando faltam referências de paleta, tipografia ou padrões e consultar um catálogo agregaria valor.
+- `gsap-animation`: quando GSAP já é usado ou a complexidade de animação justifica sua adoção no escopo autorizado.
+
+Carregue somente a especialização necessária. Direção de marca e comportamento do produto prevalecem sobre presets.
+
 ## Evidência dos findings de UI
 
 Antes de reportar um finding de UI existente, separar candidato de finding e exigir, quando aplicável:
@@ -66,6 +85,8 @@ Reabrir a fonte e tentar falsificar o finding antes de entregá-lo. Repetição,
 Usar leitura e escrita de arquivos e execução de código pelo terminal disponível. Localizar os runtimes e bibliotecas fornecidos pelo ambiente antes de usá-los; verificar separadamente SDKs, CLIs e dependências do projeto. Para páginas web, usar o navegador controlável disponível e sua API documentada; separar inspeção de DOM, evidência visual e estado de aplicação. Controle de navegador não implica controle de aplicativos nativos ou dispositivos móveis. Usar stack e assets do projeto; consultar as skills específicas de framework quando contribuírem. Não exigir Claude Code ou subagentes.
 
 ## Referências
+
+Metodologia de direção visual consultada: [Anthropic · frontend-design](https://github.com/anthropics/claude-code/blob/main/plugins/frontend-design/skills/frontend-design/SKILL.md). Síntese própria, sem importar persona, proibições estéticas universais ou dependências do agente original.
 
 [GitHub · ConardLi/garden-skills · web-design-engineer](https://github.com/ConardLi/garden-skills/tree/main/skills/web-design-engineer)
 
