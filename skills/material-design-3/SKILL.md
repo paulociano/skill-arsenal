@@ -53,6 +53,17 @@ Projetar, implementar e auditar interfaces segundo Material Design 3, com foco p
 9. Auditar contra implementação real.
 10. Verificar visual/runtime antes de afirmar conformidade.
 
+## Aplicação por plataforma e estado
+
+Antes de transpor uma receita, registre a plataforma, pacote/BOM ou SDK e versão real, componente/feature desejado, API confirmada e fallback. Uma tabela de conceitos Material não prova que o componente existe como API na plataforma escolhida.
+
+- Pareie cada superfície com seu papel de conteúdo correspondente (`primary/onPrimary`, container/onContainer etc.). Verifique o resultado nos temas usados, inclusive esquema dinâmico quando habilitado; tokens corretos não dispensam contraste medido.
+- Se usar cor dinâmica, confira disponibilidade do sistema e preferências do produto e mantenha esquemas estáticos de fallback. Não presuma que uma cor de exemplo gera um tema completo.
+- Selecione navegação e organização de painéis pela janela e tarefa, preservando seleção, estado e foco ao mudar de layout. Considere insets, teclado e regiões não utilizáveis, como dobradiças, quando presentes.
+- Na web, verifique exports/imports e registro dos custom elements antes de copiar tags de exemplos. Identifique o que é componente fornecido e o que é HTML/CSS próprio com tokens Material; confira renderização inicial e hidratação se houver SSR.
+- Em Compose/Flutter, confirme disponibilidade e opt-ins de cada API; não converta nomes de tokens web diretamente em APIs nativas nem prometa paridade Expressive.
+- Quando houver exigência Material explícita, seus contratos de componente e tokens prevalecem sobre preferências genéricas de design; não rejeite uma fonte ou componente apropriado ao sistema apenas por ser comum.
+
 ## Auditoria
 
 Avaliar, quando aplicável:
@@ -68,7 +79,7 @@ Avaliar, quando aplicável:
 - accessibility;
 - theming/dark mode.
 
-Não transformar o audit em score teatral. Findings precisam apontar evidência e fix.
+Não transformar o audit em score teatral. Findings precisam apontar evidência e fix. Para cada achado, registrar superfície/componente, papel ou contrato esperado, valor/comportamento observado, plataforma/versão, impacto e correção. Diferenciar requisito não aplicável de requisito não verificado; nenhum deles equivale automaticamente a falha.
 
 ## Expressive / mudanças recentes
 
@@ -96,6 +107,6 @@ Não depender do plugin/CLI original. Usar código, screenshots, browser e ferra
 
 ## Referências
 
-Adaptada de hamen/material-3-skill.
+Adaptada de [hamen/material-3-skill](https://github.com/hamen/material-3-skill/blob/14385f2bf3804d8779f8b4db2604211f1e70b4c1/skills/material-3/SKILL.md). Atualização do Arsenal em 2026-09-20: aplicação por plataforma e evidência de auditoria, sem copiar tabelas de valores/versionamento ou exemplos executáveis. [Licença MIT da origem](references/hamen-MIT.txt).
 
 Origem local: [material-design-3.docx](../material-design-3.docx).

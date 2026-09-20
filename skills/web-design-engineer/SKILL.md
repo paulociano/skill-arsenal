@@ -54,6 +54,10 @@ Antes de implementar, revise o plano visual contra o produto, público e tarefa 
 - Em erros, explique a causa conhecida e a recuperação possível; em estados vazios, ofereça uma próxima ação concreta.
 - Revise screenshots quando houver navegador disponível; não transforme a revisão em checkpoint de aprovação desnecessário.
 
+## Estrutura antes do tema
+
+Para páginas novas ou redesign com mudança de composição, use [seleção de estrutura e escopo](references/structure-first-design.md) quando houver risco de repetir a mesma página apenas trocando cores. Para componente isolado, preserve a estrutura da página e o sistema existente.
+
 ## Referências visuais sob demanda
 
 Estas referências refinam uma direção já indicada pelo briefing; não são padrões para toda interface.
