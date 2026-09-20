@@ -8,24 +8,30 @@ description: Seleciona e orquestra a menor combinação necessária de skills e 
 ## Objetivo
 Selecionar a menor combinação de stacks e Agent Skills que melhore materialmente o resultado.
 
+## Fonte de roteamento
+Para seleção automática, leia primeiro `ARSENAL INDEX.md`.
+
+O índice é o catálogo leve de nomes e descriptions. Não abra todos os SKILL.md ou STACK.md.
+
+Depois de selecionar candidatas, abra somente os arquivos necessários.
+
 ## Workflow
 
 ### 1. Entender a tarefa
 Determine objetivo final, artefato esperado, domínio, restrições e necessidade de pesquisa, implementação ou validação.
 
-### 2. Verificar stacks primeiro
-Consulte os nomes e descriptions em `stacks/*/STACK.md`.
+### 2. Consultar o índice
+Leia `ARSENAL INDEX.md` e identifique as candidatas mais específicas.
 
+### 3. Verificar stacks
 Use uma stack quando ela representar claramente um workflow recorrente compatível com a tarefa.
 
 Não use stack apenas porque existe.
 
-### 3. Considerar skills isoladas
+### 4. Considerar skills isoladas
 Se uma skill resolver adequadamente a tarefa, prefira a skill isolada.
 
-Considere inicialmente nomes e descriptions. Não leia todos os SKILL.md.
-
-### 4. Selecionar a menor combinação
+### 5. Selecionar a menor combinação
 Ordem de preferência:
 
 1. uma skill isolada;
@@ -33,7 +39,7 @@ Ordem de preferência:
 3. pequena combinação de skills;
 4. stack + skill adicional somente quando necessário.
 
-### 5. Carregar somente o necessário
+### 6. Carregar somente o necessário
 Leia apenas:
 - STACK.md selecionado;
 - SKILL.md das skills realmente necessárias;
@@ -41,10 +47,10 @@ Leia apenas:
 
 Skills listadas em uma stack são candidatas, não obrigatórias.
 
-### 6. Executar
+### 7. Executar
 Siga o workflow selecionado e adapte ferramentas às capacidades realmente disponíveis no ambiente atual.
 
-### 7. Validar
+### 8. Validar
 Antes de concluir:
 - verifique se o objetivo foi atingido;
 - use skills de verificação quando agregarem valor;
@@ -53,8 +59,11 @@ Antes de concluir:
 ## Comandos do Arsenal
 - `use <skill>`: usar explicitamente a skill correspondente.
 - `use <stack>`: usar explicitamente a stack correspondente.
-- `arsenal: <tarefa>`: selecionar automaticamente a menor combinação.
+- `arsenal: <tarefa>`: consultar o índice e selecionar automaticamente a menor combinação.
 - `avaliar skill: <url>`: preferir a stack `evaluate-and-import-skill`.
+
+## Manutenção do índice
+Quando uma skill ou stack for criada, removida, renomeada ou tiver sua `description` alterada materialmente, atualize também `ARSENAL INDEX.md`.
 
 ## Regras
 Não carregue todo o Arsenal.
