@@ -1,184 +1,63 @@
-\---
-
+---
 name: arsenal-router
+description: Seleciona e orquestra a menor combinação necessária de skills e stacks do Skill Arsenal. Use quando o usuário escrever "arsenal:", pedir para usar o Arsenal, pedir seleção automática ou quando uma tarefa complexa puder se beneficiar de workflows coordenados.
+---
 
-description: Seleciona e orquestra a menor combinação necessária de skills do Skill Arsenal. Use quando o usuário escrever "arsenal:", pedir para usar o Arsenal, pedir seleção automática de skills ou quando uma tarefa complexa puder se beneficiar de múltiplas skills.
+# Arsenal Router
 
-\---
+## Objetivo
+Selecionar a menor combinação de stacks e Agent Skills que melhore materialmente o resultado.
 
+## Workflow
 
+### 1. Entender a tarefa
+Determine objetivo final, artefato esperado, domínio, restrições e necessidade de pesquisa, implementação ou validação.
 
-\# Arsenal Router
+### 2. Verificar stacks primeiro
+Consulte os nomes e descriptions em `stacks/*/STACK.md`.
 
+Use uma stack quando ela representar claramente um workflow recorrente compatível com a tarefa.
 
+Não use stack apenas porque existe.
 
-\## Objetivo
+### 3. Considerar skills isoladas
+Se uma skill resolver adequadamente a tarefa, prefira a skill isolada.
 
+Considere inicialmente nomes e descriptions. Não leia todos os SKILL.md.
 
+### 4. Selecionar a menor combinação
+Ordem de preferência:
 
-Selecionar a menor combinação de Agent Skills disponível que melhore
+1. uma skill isolada;
+2. uma stack compatível;
+3. pequena combinação de skills;
+4. stack + skill adicional somente quando necessário.
 
-materialmente o resultado de uma tarefa.
+### 5. Carregar somente o necessário
+Leia apenas:
+- STACK.md selecionado;
+- SKILL.md das skills realmente necessárias;
+- references, scripts e assets necessários.
 
+Skills listadas em uma stack são candidatas, não obrigatórias.
 
+### 6. Executar
+Siga o workflow selecionado e adapte ferramentas às capacidades realmente disponíveis no ambiente atual.
 
-\## Quando usar
-
-
-
-Use esta skill quando:
-
-
-
-\- o usuário escrever `arsenal:`;
-
-\- o usuário pedir para usar o Skill Arsenal;
-
-\- for necessário selecionar skills automaticamente;
-
-\- houver dúvida sobre qual skill utilizar;
-
-\- uma tarefa complexa puder exigir múltiplas skills.
-
-
-
-\## Workflow
-
-
-
-\### 1. Entender a tarefa
-
-
-
-Determine:
-
-
-
-\- objetivo final;
-
-\- artefato esperado;
-
-\- domínio;
-
-\- restrições;
-
-\- necessidade de pesquisa, implementação ou validação.
-
-
-
-\### 2. Identificar candidatas
-
-
-
-Considere primeiro os nomes e descriptions das skills instaladas.
-
-
-
-Não leia todos os SKILL.md.
-
-
-
-\### 3. Selecionar
-
-
-
-Escolha a menor combinação de skills que resolva adequadamente a tarefa.
-
-
-
-Prefira uma skill a três quando uma for suficiente.
-
-
-
-\### 4. Carregar
-
-
-
-Leia somente:
-
-
-
-\- SKILL.md das skills selecionadas;
-
-\- references necessários;
-
-\- scripts necessários;
-
-\- assets necessários.
-
-
-
-\### 5. Executar
-
-
-
-Siga as metodologias das skills selecionadas, adaptando-as às
-
-capacidades realmente disponíveis no ambiente atual.
-
-
-
-\### 6. Validar
-
-
-
+### 7. Validar
 Antes de concluir:
+- verifique se o objetivo foi atingido;
+- use skills de verificação quando agregarem valor;
+- não declare sucesso sem evidência suficiente.
 
+## Comandos do Arsenal
+- `use <skill>`: usar explicitamente a skill correspondente.
+- `use <stack>`: usar explicitamente a stack correspondente.
+- `arsenal: <tarefa>`: selecionar automaticamente a menor combinação.
+- `avaliar skill: <url>`: preferir a stack `evaluate-and-import-skill`.
 
-
-\- verifique se a tarefa foi realmente concluída;
-
-\- utilize skills de verificação quando elas agregarem valor;
-
-\- não declare sucesso sem evidência suficiente.
-
-
-
-\## Regras
-
-
-
+## Regras
 Não carregue todo o Arsenal.
-
-
-
-Não use skills apenas porque estão disponíveis.
-
-
-
-Não invente ferramentas ou integrações.
-
-
-
-Não preserve comandos específicos de Claude, Claude Code ou outro
-
-agente quando não existirem neste ambiente.
-
-
-
-Preserve a metodologia útil e adapte a implementação.
-
-
-
-\## Regra de composição
-
-
-
-A ordem preferida é:
-
-
-
-tarefa
-
-→ identificação
-
-→ menor conjunto de skills
-
-→ execução
-
-→ verificação
-
-
-
-Use stacks ou múltiplas skills somente quando houver ganho real.
-
+Não invente ferramentas, stacks ou integrações.
+Preserve metodologia útil de skills externas, mas adapte dependências incompatíveis.
+Prefira melhorar recursos existentes a criar duplicatas.
