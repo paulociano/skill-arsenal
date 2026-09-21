@@ -38,8 +38,21 @@ Decompor specs e planos em tickets verticais pequenos, demonstráveis e com depe
 - ao transformar issue em tarefas, usar outputs verificáveis, dependências e tipos como WRITE / TEST / MIGRATE / CONFIG / REVIEW quando ajudarem o executor;
 - preferir testes junto da mudança, não um bloco gigante no fim.
 
+## Consistência com spec e plano
+
+Ao gerar ou atualizar tarefas:
+
+- cada tarefa deve apontar para requisito, contrato, entidade ou decisão do plano que a originou;
+- constraints do modelo de dados e contratos precisam chegar aos acceptance criteria relevantes;
+- tarefas paralelas só devem ser marcadas quando não disputam o mesmo owner/artefato ou quando a estratégia de merge está clara;
+- após execução, comparar tarefas concluídas com spec e plano, não apenas com checkboxes;
+- gaps de convergência entram como novas tarefas pequenas, sem reabrir trabalho já validado;
+- alteração material de requisito deve atualizar a spec antes de multiplicar tickets compensatórios.
+
 ## Referências
 
 [GitHub · mattpocock/skills · to-tickets](https://github.com/mattpocock/skills/tree/main/skills/engineering/to-tickets)
+
+Rastreabilidade spec → plan → tasks e convergence pass adaptadas de https://github.com/github/spec-kit.
 
 Origem local: [to-tickets.docx](../to-tickets.docx).
