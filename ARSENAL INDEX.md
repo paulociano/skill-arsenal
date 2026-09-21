@@ -18,6 +18,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/debug-and-fix/STACK.md`
 - **evaluate-and-import-skill** — Avalia uma skill externa, compara com o Arsenal, adapta para o ambiente atual, revisa segurança e importa somente quando houver valor real.  
   `stacks/evaluate-and-import-skill/STACK.md`
+- **gestao-comercial-da-semana** — Organizar a gestão semanal do time de consultoria financeira com retrospectiva, avaliação de conversas, slots de agenda, prioridades verificáveis, mensagens e continuidade entre semanas.  
+  `stacks/gestao-comercial-da-semana/STACK.md`
 - **improve-existing-web-app** — Melhora uma aplicação web existente preservando funcionalidades, refinando design e validando o resultado no runtime.  
   `stacks/improve-existing-web-app/STACK.md`
 - **meeting-to-actions** — Transforma reuniões, transcrições ou notas em conhecimento reutilizável, decisões, ações e handoffs.  
