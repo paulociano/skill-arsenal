@@ -52,6 +52,23 @@ Capturar somente o que muda materialmente o workflow:
 18. Antes de criar nova skill, verificar overlap semântico com skills existentes e preferir generalizar/atualizar a duplicar.
 19. Quando a mesma lógica determinística aparecer repetidamente nos testes, considerar helper/script reutilizável somente se o runtime real suportar isso.
 
+## Source-to-skill ledger e prova
+
+Ao extrair múltiplas capacidades de artigo, tutorial, coleção ou prompt pack, criar antes um ledger simples:
+
+| Source fragment | Reusable capability | Keep | Remove | Existing owner/new skill | Proof |
+| --- | --- | --- | --- | --- | --- |
+
+Regras:
+- uma capability reutilizável por skill, salvo quando separar destrói o workflow;
+- atualizar owner existente quando ele já cobre o contrato;
+- remover brand, copy, assets e layout incidentais;
+- manter mechanics, state transitions, defaults, accessibility, failure modes e acceptance checks quando forem portáveis;
+- para skill visual/interativa, uma demo executável pode ser melhor prova que uma descrição;
+- para workflow não visual, usar input + expected-output ou cenário equivalente;
+- screenshot sozinho não prova interação;
+- demo não é requisito universal: só criar quando reduz ambiguidade ou prova comportamento relevante.
+
 ## Versionamento e validação de evolução
 
 - criar mentalmente ou materialmente uma **candidate version** antes de substituir a canônica;
@@ -73,5 +90,7 @@ Criar `<nome-em-kebab-case>/SKILL.md` com frontmatter YAML contendo `name` igual
 ## Referências
 
 Documento avaliado: **The 7 ChatGPT Work Skills I Use Every Day — Copy-and-Paste Setup Prompts**.
+
+Ledger de extração, portable contract e proof-oriented demos adaptados de https://github.com/MengTo/Skills, especialmente article-prompts-to-skills, sem exigir seu initializer, gallery ou estrutura de agentes específica.
 
 Origem local: [skill-builder.docx](../skill-builder.docx).
