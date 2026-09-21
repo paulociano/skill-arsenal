@@ -30,6 +30,18 @@ Extrair conteúdo estruturado de sites quando busca comum não basta, com técni
 4. Browser renderizado quando JavaScript for necessário.
 5. Crawler/spider apenas para conjuntos de páginas realmente necessários.
 
+## Adapters, fallback e diagnóstico por plataforma
+
+Para plataformas sociais/nicho cuja superfície muda com frequência:
+
+- modelar cada plataforma como capability, não como uma URL fixa;
+- manter uma rota primária e, quando legítimo e permitido, uma fallback compatível;
+- trocar de backend somente quando o novo caminho preserva escopo, autenticação e regras de acesso;
+- ter um diagnóstico read-only que informe **available / degraded / unavailable** e a causa observada;
+- não esconder perda de cobertura: fallback parcial deve ser reportado como parcial;
+- não usar fallback para contornar bloqueio, paywall, login, anti-bot ou proibição da plataforma;
+- separar health check de coleta: diagnóstico não deve disparar ações externas desnecessárias.
+
 ## Workflow
 
 1. Definir objetivo, campos, domínio, escopo e frequência.
@@ -91,5 +103,7 @@ Combina com `kb-retriever`, `niche-research`, `skill-security-review` e `verify-
 Adaptada de D4Vinci/Scrapling.
 
 Boundary de contexto e batching adaptados de [lidge-jun/aside-codemode](https://github.com/lidge-jun/aside-codemode), usando apenas capacidades realmente disponíveis no ambiente.
+
+Primary/fallback adapters e diagnostics por plataforma adaptados de https://github.com/Panniantong/Agent-Reach, preservando regras de acesso e sem importar CLIs ou scrapers da fonte.
 
 Origem local: [web-extraction-pipeline.docx](../web-extraction-pipeline.docx).
