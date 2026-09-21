@@ -77,6 +77,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **presentation-template-adaptation** — Adaptar conteúdo a um deck de referência preservando identidade visual, elementos fixos e capacidade dos layouts.
 - **procedural-3d-reconstruction** — Reconstruir objetos de imagens como modelos procedurais Three.js por estágios e comparação visual com a referência.
 - **project-complexity-management** — Diagnosticar focos de complexidade técnica, organizacional e externa e definir intervenções proporcionais às evidências.
+- **procedural-film** — Criar curtas verticais animados proceduralmente com Canvas/Web Audio, storyboard em beat grid, render determinístico e revisão quadro a quadro.
 - **project-skill-architecture** — Organizar ou migrar regras e workflows de projetos em skills pequenas, com proprietários canônicos e rotas sem duplicação.
 - **publication-figure-engineering** — Produzir figuras científicas alinhadas aos claims de papers, separando diagramas conceituais de gráficos quantitativos exatos.
 - **quick-grill** — Fazer uma rodada curta de perguntas de alinhamento quando o usuário pedir explicitamente para ser questionado antes da execução.
