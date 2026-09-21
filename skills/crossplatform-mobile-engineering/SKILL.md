@@ -65,6 +65,20 @@ Foco:
 9. **Release check** — env/config, signing/build variants, crash/error handling e store constraints.
 10. **Verify final** — usar `verify-before-claim`.
 
+## Realtime voice, media e tool calls
+
+Para apps Expo/React Native com WebRTC, áudio contínuo, background execution ou ferramentas acionadas por uma sessão de IA:
+
+- assumir que Expo Go pode não suportar módulos nativos necessários; validar em dev build/device real;
+- manter API keys e credenciais de provider no servidor, nunca em variáveis `EXPO_PUBLIC_*`;
+- tokens expostos ao app devem ter escopo e finalidade próprios; não reutilizar secret do backend;
+- lifecycle da sessão deve possuir cancelamento: ao encerrar chamada, abortar lookups/tool calls pendentes quando eles não devam continuar;
+- se uma operação precisa sobreviver ao hangup/background, persistir job/estado fora da conexão efêmera;
+- tool runner deve validar argumentos, limitar quantidade/tempo e propagar abort signal para requests externos;
+- ações consequenciais como mensagem, compra ou mudança de conta exigem confirmação do usuário antes da execução;
+- background audio/call é comportamento específico de plataforma e precisa de teste separado por OS;
+- autenticação real é obrigatória antes de expor backend de desenvolvimento à internet.
+
 ## Regras
 
 - não impor Riverpod, Bloc, Zustand, Jotai, React Query, NativeWind, FlashList ou qualquer lib só porque aparece na fonte;
@@ -93,5 +107,7 @@ Combina com `runtime-ui-verification`, `mobile-device-automation`, `tdd`, `diagn
 ## Referências
 
 Adaptada de MiniMax-AI/skills, especialmente `flutter-dev` e `react-native-dev`.
+
+Realtime voice/tool lifecycle adaptado de [davidmokos/expo-gpt-live](https://github.com/davidmokos/expo-gpt-live), preservando princípios e não versões específicas de APIs/modelos.
 
 Origem local: [crossplatform-mobile-engineering.docx](../crossplatform-mobile-engineering.docx).
