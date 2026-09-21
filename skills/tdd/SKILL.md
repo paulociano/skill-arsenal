@@ -21,6 +21,19 @@ Aplicar desenvolvimento orientado a testes por ciclos red–green em fatias vert
 - Trabalhar em slices verticais, um teste e uma mudança por ciclo.
 - Evitar testes acoplados à implementação, tautológicos ou horizontais.
 
+## Test doubles de compatibilidade
+
+Quando produção depende de um componente indisponível, caro ou inadequado para CI, um substituto de desenvolvimento pode ser útil se preservar **semântica observável**, mesmo sendo deliberadamente lento ou simples.
+
+- reproduzir contrato, parser, operadores, erros e regras de visibilidade relevantes ao consumidor;
+- preferir correção simples a otimizações que criem divergência;
+- marcar explicitamente o substituto como não-production quando performance/armazenamento/arquitetura não forem equivalentes;
+- rodar, quando possível, a mesma suíte contra implementação real e substitute;
+- tratar diferenças descobertas como regressões de compatibilidade, não como oportunidade de ajustar o teste ao double;
+- não afirmar equivalência fora da superfície realmente coberta pelos testes.
+
+Um test double de compatibilidade é uma ferramenta de teste, não um fallback de produção.
+
 ## Teste no aplicativo real
 
 Quando o comportamento só existe com o app inteiro rodando:
@@ -38,5 +51,7 @@ Se houver instrumentação adequada, encadear com `runtime-ui-verification`.
 ## Referências
 
 [GitHub · mattpocock/skills · tdd](https://github.com/mattpocock/skills/tree/main/skills/engineering/tdd)
+
+Test doubles de compatibilidade inspirados em [planetscale/lead](https://github.com/planetscale/lead), que privilegia semântica correta de desenvolvimento/teste sobre performance de produção.
 
 Origem local: [tdd.docx](../tdd.docx).
