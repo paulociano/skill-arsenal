@@ -51,6 +51,19 @@ Não aplicar OCR/VLM pesado a tudo quando text layer confiável já resolve.
 - correção por LLM deve ser restrita ao material observado, sem adicionar fatos;
 - output limpo não prova fidelidade ao documento.
 
+## Router de formato e conversão leve
+
+Antes de acionar OCR, layout pesado ou VLM:
+
+- identificar se o formato já possui estrutura textual utilizável;
+- para DOCX, PPTX, XLSX, HTML, CSV, JSON, XML, ZIP e formatos semelhantes, preferir primeiro um conversor determinístico para Markdown/texto estruturado;
+- tratar imagens embutidas, áudio e vídeo como capacidades adicionais, não como motivo para tornar todo o pipeline multimodal;
+- manter plugins e converters opcionais desativados por padrão quando não forem necessários;
+- serviços remotos de document intelligence/content understanding entram apenas quando o ganho esperado justifica custo, upload e boundary de dados;
+- quando houver várias estratégias de conversão para o mesmo formato, escolher a menor que preserve o downstream contract.
+
+A saída Markdown é uma representação intermediária útil, não prova de fidelidade. Estrutura perdida, tabelas achatadas e conteúdo visual ainda precisam de verificação contra a fonte.
+
 ## Modos conceituais
 
 - **No-OCR:** text-layer only.
@@ -75,5 +88,7 @@ Combina com `source-to-skill`, `kb-retriever`, `retrieval-quality-engineering` e
 ## Referências
 
 Adaptada de datalab-to/marker.
+
+Router de formatos e fast path de conversão adaptados de https://github.com/microsoft/markitdown, sem exigir MarkItDown, plugins, Azure Content Understanding ou Document Intelligence.
 
 Origem local: [document-extraction-pipeline.docx](../document-extraction-pipeline.docx).
