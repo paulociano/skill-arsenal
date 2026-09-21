@@ -54,6 +54,21 @@ Antes de implementar, revise o plano visual contra o produto, público e tarefa 
 - Em erros, explique a causa conhecida e a recuperação possível; em estados vazios, ofereça uma próxima ação concreta.
 - Revise screenshots quando houver navegador disponível; não transforme a revisão em checkpoint de aprovação desnecessário.
 
+## Fingerprint estrutural e estudo de referências
+
+Para evitar páginas que mudam apenas cor e tipografia:
+
+- escolher primeiro uma macroestrutura coerente com a tarefa;
+- registrar 2–4 knobs que definem o fingerprint, como eixo dominante, densidade, proporção hero/conteúdo, sistema de navegação, ritmo de seções e tipo de composição;
+- quando produzir várias páginas do mesmo produto, variar pelo menos um knob estrutural quando o briefing realmente pedir variedade;
+- em redesign, preservar copy, IA, constraints e marca antes de trocar a estrutura;
+- em estudo de screenshot/URL, extrair **estrutura, ritmo, type roles, colour anchor e relações**, não pixels;
+- produzir um diagnóstico da referência antes de reconstruir;
+- recusar pixel clone ou dependência em template pago sem autorização adequada;
+- uma referência visual é matéria-prima de decisões, não uma especificação secreta para cópia.
+
+O anti-slop deve testar se a composição é específica para o produto. Não usar uma blacklist estética rígida ou uma pontuação de gosto como verdade objetiva.
+
 ## Estrutura antes do tema
 
 Para páginas novas ou redesign com mudança de composição, use [seleção de estrutura e escopo](references/structure-first-design.md) quando houver risco de repetir a mesma página apenas trocando cores. Para componente isolado, preserve a estrutura da página e o sistema existente.
@@ -102,5 +117,7 @@ Usar leitura e escrita de arquivos e execução de código pelo terminal dispon�
 Metodologia de direção visual consultada: [Anthropic · frontend-design](https://github.com/anthropics/claude-code/blob/main/plugins/frontend-design/skills/frontend-design/SKILL.md). Síntese própria, sem importar persona, proibições estéticas universais ou dependências do agente original.
 
 [GitHub · ConardLi/garden-skills · web-design-engineer](https://github.com/ConardLi/garden-skills/tree/main/skills/web-design-engineer)
+
+Macrostructure/fingerprint e estudo estrutural de referências adaptados de https://github.com/Nutlope/hallmark, sem importar temas, gates estéticos universais ou dependências do projeto.
 
 Origem local: [web-design-engineer.docx](../web-design-engineer.docx).
