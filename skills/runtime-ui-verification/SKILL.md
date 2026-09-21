@@ -68,9 +68,23 @@ Antes de verificar UI no browser, escolher a evidência adequada:
 
 Permissões de page context devem ser task-scoped. History, tab sets, screenshots ou microphone não entram como contexto “por precaução”.
 
+## Action space observada e guardas de frescor
+
+Quando o navegador controlável expuser DOM/elementos acionáveis, prefira decisões sobre uma **action space derivada do estado observado**, não selectors, coordenadas ou JavaScript inventados pelo modelo.
+
+1. Observar a página e construir uma lista pequena de operações realmente suportadas no estado atual.
+2. Para cada operação, oferecer apenas targets compatíveis: por exemplo, click em elementos clicáveis e fill em campos editáveis.
+3. Associar a decisão a um fingerprint, versão ou outro marcador de frescor da página quando a ferramenta permitir.
+4. Antes da mutação, verificar se página e target continuam válidos; se ficaram stale, reobservar e decidir de novo.
+5. Consumir a decisão uma única vez antes da mutação para que retry não produza double-click/double-submit.
+6. Depois da ação, observar novamente e registrar a consequência antes de escolher o próximo passo.
+7. Em loops, impor budget de ações/model calls e bloquear repetição quando várias ações seguidas não alteram estado útil.
+
+Texto gerado para preencher um campo deve ficar restrito ao campo observado e ao objetivo atual. A saída textual nunca deve virar selector, código executável ou comando de sistema sem um contrato separado e autorização apropriada.
+
 ## Ferramentas e dependências
 
-Para páginas web, usar o navegador controlável disponível e sua API documentada; separar inspeção de DOM, evidência visual e estado de aplicação. Controle de navegador não implica controle de aplicativos nativos ou dispositivos móveis. Usar testes de integração e logs disponíveis no projeto como evidência complementar. Não presumir Reticle, Playwright ou acesso interno a rede/state sem instrumentação.
+Para páginas web, usar o navegador controlável disponível e sua API documentada; separar inspeção de DOM, evidência visual e estado de aplicação. Controle de navegador não implica controle de aplicativos nativos ou dispositivos móveis. Usar testes de integração e logs disponíveis no projeto como evidência complementar. Não presumir Reticle, Playwright, Jev, Browser Harness ou acesso interno a rede/state sem instrumentação.
 
 ## Integração
 
@@ -82,5 +96,7 @@ Para páginas web, usar o navegador controlável disponível e sua API documenta
 ## Referências
 
 Adaptada de reticlehq/reticle, especialmente `verify-ui-change`, `agentic-tdd`, `false-green-tests` e `replay-user-flows`.
+
+Action-space e freshness guards adaptados de [browser-use/jev-ultrafast](https://github.com/browser-use/jev-ultrafast), sem depender de Jev ou Browser Harness.
 
 Origem local: [runtime-ui-verification.docx](../runtime-ui-verification.docx).
