@@ -36,6 +36,20 @@ Sem um loop vermelho que capture o bug real, não avançar para teorias.
 
 Síntese metodológica de [buddhist-method](https://github.com/nai0om/buddhist-method/blob/745caa74ef27fce7c57cbdbf27af5add3de884d7/SKILL.md), com suas referências de debugging e tentativas sem progresso. Modificação do Arsenal em 2026-09-20: integração secular e contextual, sem gatilho global, alegações religiosas ou número fixo de tentativas. [Licença MIT da origem](references/buddhist-method-MIT.txt).
 
+## Cobertura da observação em problemas de rede
+
+Quando o sintoma depender de rede, registrar junto da evidência:
+- sistema operacional, interface/escopo observado, origem da medição e permissões disponíveis;
+- quais métricas foram medidas, estão ausentes ou ficaram obsoletas;
+- cobertura de atribuição por processo e possibilidade de perder conexões curtas entre polls;
+- quantidade/representatividade das amostras do baseline, sem declarar prontidão apenas por tempo decorrido.
+
+Ausência de alertas não prova saúde quando faltam entradas para os detectores. Configuração habilitada não prova coletor operacional; hipótese de um LLM não substitui achado medido. Comparar antes/depois sob carga e condições equivalentes e só declarar recuperação quando a melhoria se sustentar na janela relevante ao problema.
+
+Usar medições e ferramentas já disponíveis; não instalar capturador, elevar privilégios, alterar DNS ou enviar metadados de tráfego a um serviço externo por padrão.
+
+Método sintetizado da [matriz de capacidades do NetWatch](https://github.com/matthart1983/netwatch/blob/6e282321b845b380e0b3e3fcbb6bb3f935e6003b/docs/CAPABILITIES.md). Não depende do binário nem promete paridade entre plataformas.
+
 ## Referências
 
 [GitHub · mattpocock/skills · diagnosing-bugs](https://github.com/mattpocock/skills/tree/main/skills/engineering/diagnosing-bugs)

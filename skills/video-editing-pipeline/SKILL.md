@@ -91,6 +91,19 @@ Valores exatos como 30 ms de fade ou 30–200 ms de padding pertencem ao pipelin
 
 Usar leitura e escrita de arquivos e execução de código pelo terminal disponível. Localizar os runtimes e bibliotecas fornecidos pelo ambiente antes de usá-los; verificar separadamente SDKs, CLIs e dependências do projeto. Verificar ferramentas de mídia e transcrição antes de usá-las; FFmpeg, ASR, TTS e geração de vídeo não estão garantidos. Sem render, entregar estratégia/EDL e declarar que edição materializada e revisão audiovisual não ocorreram.
 
+## Recortes verticais orientados pela cena
+
+Quando transformar footage longo em shorts:
+- selecionar trechos com ideia completa e contexto suficiente; quantidade e duração são metas editoriais, não garantias de alcance;
+- inspecionar a cena antes de escolher layout: pessoa única pode usar crop com acompanhamento; duas pessoas simultâneas podem usar split; plano/contraplano não deve duplicar o mesmo rosto; demonstração de tela precisa preservar informação fora do centro;
+- registrar timestamps na fonte e sua correspondência na timeline final, especialmente ao recortar um clip já produzido;
+- verificar legendas preexistentes antes de queimar novas e posicionar texto sem cobrir rostos ou conteúdo essencial;
+- reverificar mudanças de plano, perda do sujeito e resolução de entrada no preview;
+- separar geração, armazenamento privado, galeria pública e publicação social. Produzir um vídeo não autoriza upload público ou postagem;
+- em integração real, tratar 401 como falha de autenticação até verificar configuração, nunca como prova de modo anônimo; preservar job ID e respeitar quotas sem reenviar tarefa incerta.
+
+Método sintetizado de [OpenShorts](https://github.com/mutonby/openshorts/blob/4b2cf58922587ecb17b990a9575e46320bdb3118/skills/openshorts/SKILL.md), sem exigir seu serviço, MCP, providers ou presets.
+
 ## Referências
 
 Adaptada de browser-use/video-use.
