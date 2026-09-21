@@ -69,6 +69,22 @@ Para loops em tempo real ou controle contínuo:
 
 O modelo interpreta o estado; código continua dono de matemática exata e enforcement de limites.
 
+## Mandato de autonomia para ações consequenciais
+
+Quando um loop puder causar efeito financeiro, publicar, deletar, enviar, alterar produção ou agir em nome do usuário, um simples nível de autonomia pode ser insuficiente. Definir um **mandato explícito** antes da execução:
+
+- recursos/alvos autorizados;
+- tipos de ação permitidos;
+- teto por ação e teto agregado por período, quando aplicável;
+- condições de expiração;
+- ambientes/contas permitidos;
+- ações proibidas;
+- mecanismo de halt/kill switch independente do modelo.
+
+O executor deve **fail closed** quando não consegue provar que a ação cabe no mandato. Antes de agir, validar estado atual + mandato + target. Depois, escrever um ledger auditável com intent, parâmetros relevantes, decisão do guard, resultado e correlation id quando disponível.
+
+Se a plataforma não oferece distinção estrutural confiável entre sandbox/paper e produção/live, limitar o agente ao nível mais seguro que pode ser comprovado. Nunca inferir que um ambiente é de teste apenas pelo nome.
+
 ## Correção focada
 
 Para loops de correção:
@@ -104,5 +120,7 @@ Capacidade deve carregar confidence, evidence freshness e max risk boundary. Aut
 Adaptada de Mark393295827/third-brain-v7-skills · loop-engineering (V8.1).
 
 Estado canônico, macros legais e timing adaptados de [fhshaik/typesafe-mario](https://github.com/fhshaik/typesafe-mario), sem depender de Jev, emulator ou ROM.
+
+Mandato bounded-autonomy, fail-closed guard, kill switch e audit ledger adaptados de https://github.com/HKUDS/Vibe-Trading. A metodologia foi generalizada; nenhuma lógica de trading ou broker foi importada.
 
 Origem local: [loop-engineering.docx](../loop-engineering.docx).
