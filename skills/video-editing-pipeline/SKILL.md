@@ -35,6 +35,37 @@ Editar vídeos com transcrição, decisões de corte explícitas, EDL, render e 
 9. **Bounded correction** — corrigir e re-renderizar somente problemas observados, com limite de iterações.
 10. **Final + persistence** — salvar output final e notas de sessão/decisões em área separada das fontes.
 
+## Modo de produção generativa
+
+Quando o pedido começa por tema/brief em vez de footage pronto, usar uma cadeia explícita e auditável:
+
+1. pesquisa/brief;
+2. roteiro;
+3. termos de busca e plano de assets;
+4. aquisição/geração de footage, imagens e áudio;
+5. voiceover/TTS quando autorizado;
+6. legendas alinhadas;
+7. música/SFX;
+8. composição;
+9. render;
+10. revisão audiovisual.
+
+Cada estágio deve poder ser inspecionado e, quando útil, interrompido/reutilizado sem refazer toda a cadeia.
+
+### Runtime e modo de composição
+
+Escolher runtime pelo trabalho real e pela disponibilidade do ambiente:
+
+- FFmpeg para montagem, trims, transcodes, overlays e composição determinística simples;
+- runtime programático de cenas, como Remotion, quando UI/texto/animação React-like forem centrais;
+- HTML/GSAP/WebGL ou equivalente quando a composição for uma experiência visual autoral e o runtime suportar render determinístico.
+
+Separar:
+- **templated**: cenas/blocks existentes cobrem o briefing com eficiência;
+- **atelier/custom**: composição precisa ser autorada porque o catálogo impõe repetição ou limita a direção.
+
+Nunca fingir que um runtime/provider está disponível. Verificar primeiro e usar fallback apenas quando o resultado continua atendendo ao contrato.
+
 ## Regras de produção
 
 Quando o pipeline usar timestamps de fala + ffmpeg ou ferramenta equivalente:
@@ -63,5 +94,7 @@ Usar leitura e escrita de arquivos e execução de código pelo terminal dispon�
 ## Referências
 
 Adaptada de browser-use/video-use.
+
+Pipeline tema→roteiro→assets→voz→legendas→música→composição adaptado de https://github.com/harry0703/MoneyPrinterTurbo. Seleção explícita de runtime e modos templated/atelier adaptados de https://github.com/calesthio/OpenMontage, sem exigir seus providers, Remotion, HyperFrames ou ferramentas vendorizadas.
 
 Origem local: [video-editing-pipeline.docx](../video-editing-pipeline.docx).
