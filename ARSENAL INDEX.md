@@ -74,6 +74,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **meeting-knowledge-capture** — Converter gravações, transcrições ou notas de reuniões em decisões e ações rastreáveis no destino autorizado.
 - **mobile-device-automation** — Executar e verificar tarefas em dispositivos móveis somente com controle real disponível, por ações pequenas e observação de estado.
 - **model-routing-gateway** — Projetar ou configurar roteamento de modelos LLM com seleção por capacidade, retries, fallback, orçamento e observabilidade.
+- **ml-production-engineering** — Projetar e operar sistemas de machine learning do dado à produção com testes, avaliação, serving, monitoramento e ciclos seguros de melhoria.
 - **niche-research** — Pesquisar pautas atuais de um nicho e propor ângulos editoriais com fontes e datas verificadas.
 - **presentation-template-adaptation** — Adaptar conteúdo a um deck de referência preservando identidade visual, elementos fixos e capacidade dos layouts.
 - **procedural-3d-reconstruction** — Reconstruir objetos de imagens como modelos procedurais Three.js por estágios e comparação visual com a referência.
@@ -97,6 +98,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **source-to-skill** — Converter fontes longas em skills de conhecimento com entrada compacta, referências sob demanda e fidelidade à origem.
 - **sprite-sheet-pipeline** — Converter animações ou frames em sprite sheets com registro, escala, transparência e timing verificados.
 - **structured-output-contract** — Definir e validar schemas para saídas LLM consumidas por código, com tipos, incerteza explícita e retries limitados.
+- **system-design-engineering** — Projetar sistemas escaláveis a partir de requisitos, estimativas, trade-offs, componentes, dados, falhas e evolução operacional.
 - **svg-handdrawn-animation** — Animar o desenho progressivo de SVGs com strokes e revelação de fills preservando cores, estrutura e segurança do embed.
 - **swiftui-modern-ui** — Implementar ou revisar SwiftUI adaptativo com APIs nativas compatíveis com o SDK e deployment target reais.
 - **tdd** — Aplicar desenvolvimento orientado a testes por ciclos red–green em fatias verticais de comportamento observável.
