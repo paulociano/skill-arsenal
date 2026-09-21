@@ -19,9 +19,10 @@ Responder perguntas em bases documentais grandes por busca progressiva, leitura 
 2. Identificar a fonte oficial: arquivos locais ou fonte remota acessível por conector indicado pelo usuário.
 3. Navegar primeiro por índices, títulos, estrutura e resultados de busca para reduzir o espaço de procura.
 4. Começar pelos arquivos mais prováveis e ler apenas os trechos necessários.
-5. Refinar termos com sinônimos, siglas, nomes alternativos e termos de domínio quando a primeira busca for insuficiente.
-6. Limitar exploração redundante; mudar de ramo quando uma fonte deixa de acrescentar evidência.
-7. Responder com rastreabilidade e distinguir fatos encontrados de inferências.
+5. Quando o runtime permitir, fazer busca/agregação em lote, deduplicar hits e retornar primeiro paths, contagens ou trechos mínimos antes de abrir conteúdo maior.
+6. Refinar termos com sinônimos, siglas, nomes alternativos e termos de domínio quando a primeira busca for insuficiente.
+7. Limitar exploração redundante; mudar de ramo quando uma fonte deixa de acrescentar evidência.
+8. Responder com rastreabilidade e distinguir fatos encontrados de inferências.
 
 ## Regras por arquivo
 
@@ -31,7 +32,7 @@ Responder perguntas em bases documentais grandes por busca progressiva, leitura 
 
 ## Ferramentas e dependências
 
-Buscar arquivos locais com rg, índices e trechos; usar os conectores disponíveis para fontes remotas. Para PDF e planilhas, usar as skills correspondentes e leitura localizada. Não pressupor diretório knowledge/, Notion ou uma biblioteca remota acessível.
+Buscar arquivos locais com rg, índices e trechos; usar os conectores disponíveis para fontes remotas. Para PDF e planilhas, usar as skills correspondentes e leitura localizada. Não pressupor diretório knowledge/, Notion, aside-codemode ou uma biblioteca remota acessível.
 
 ## Governança documental
 
@@ -57,6 +58,9 @@ Preferir loadouts específicos a um prompt global gigantesco. Para bases em cama
 
 - buscar símbolo/termo antes de abrir arquivo inteiro;
 - preferir trechos/ranges e resumos de erro ao output bruto gigante;
+- em árvores grandes, preferir uma busca que devolva paths/linhas relevantes a dezenas de leituras separadas;
+- deduplicar e agregar no runtime antes de transportar resultados quando houver código/ferramenta capaz disso;
+- retornar resposta + evidência suficiente para julgamento, mantendo ponteiro para raw quando necessário;
 - não reler conteúdo imutável já presente no contexto;
 - para build/test/logs grandes, recuperar falhas e summaries primeiro;
 - a dieta reduz transporte, nunca compreensão: ao editar/debugar, ler contexto suficiente para entender de fato.
@@ -64,5 +68,7 @@ Preferir loadouts específicos a um prompt global gigantesco. Para bases em cama
 ## Referências
 
 [GitHub · ConardLi/garden-skills · kb-retriever](https://github.com/ConardLi/garden-skills/tree/main/skills/kb-retriever)
+
+Economia de contexto em batch adaptada de [lidge-jun/aside-codemode](https://github.com/lidge-jun/aside-codemode), sem depender do pacote externo.
 
 Origem local: [kb-retriever.docx](../kb-retriever.docx).
