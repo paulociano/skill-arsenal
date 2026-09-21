@@ -94,6 +94,18 @@ Quando o alvo cruza muitos arquivos, serviços, schemas ou documentos, pode ser 
 
 Ferramentas de knowledge graph podem acelerar esse processo quando já existem no ambiente, mas não são requisito. Se forem usadas, validar pelo menos uma amostra de nós/edges contra o código-fonte antes de confiar em queries derivadas.
 
+## Impact analysis e memória arquitetural
+
+Quando a pergunta for "o que esta mudança afeta?" ou "por que isso existe?":
+
+- partir do diff/símbolos alterados e expandir por callers, imports, contracts, routes, data flows e dependências cross-service;
+- distinguir **direct impact** de **transitive candidate impact**;
+- marcar risco maior quando a mudança cruza boundary de serviço, schema, API pública, fila/evento ou persistência;
+- verificar uma amostra dos paths de impacto no código antes de reportá-los;
+- ADRs, RFCs, comentários WHY e histórico de commits podem explicar intenção, mas não substituem estado runtime atual;
+- quando decisões arquiteturais precisarem sobreviver sessões, manter registro canônico separado do grafo/índice derivado;
+- índice/grafo é cache reconstruível; decisão/ADR é conhecimento autoral e precisa de provenance.
+
 ## Known concepts
 
 Quando o usuário já domina determinado conceito, mencioná-lo brevemente e investir contexto no que é novo. Não presumir nível com base apenas em cargo/título.
@@ -120,5 +132,7 @@ Quando o usuário já domina determinado conceito, mencioná-lo brevemente e inv
 Adaptada de mohi-devhub/antivibe.
 
 Proveniência de edges e consultas por subgrafo adaptadas de https://github.com/Graphify-Labs/graphify, sem exigir Graphify, hooks, pacote Python ou backend semântico.
+
+Impact mapping, cross-service linking e separação entre índice reconstruível e ADR persistente adaptados de https://github.com/DeusData/codebase-memory-mcp, sem executar binários, installers, daemon ou hooks da fonte.
 
 Origem local: [code-understanding-audit.docx](../code-understanding-audit.docx).
