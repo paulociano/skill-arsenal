@@ -55,6 +55,20 @@ Antes de executar, explicitar:
 6. **State** — persistir diagnóstico, evidência, orçamento e próximo passo.
 7. **Stop/continue** — parar por sucesso, limite, permissão, regressão ou falta de progresso.
 
+## Estado canônico e action space limitada
+
+Para loops em tempo real ou controle contínuo:
+
+- transformar telemetry/raw state em um **estado canônico estruturado** antes de pedir decisão ao modelo;
+- fazer aritmética exata, deadlines, colisões, limites e invariantes em código determinístico quando isso puder ser calculado;
+- oferecer ao modelo apenas ações legais para o estado atual, preferencialmente como macros de duração/efeito conhecidos;
+- registrar decisão, confidence/probabilidades quando existirem, estado canônico e outcome observado;
+- evitar duplicar no prompt dados brutos que já foram convertidos em features úteis, mas manter raw/debug state fora do caminho crítico quando for necessário para auditoria;
+- medir observation-to-action delay quando latência puder alterar a decisão;
+- não permitir que o modelo invente uma ação fora do executor autorizado.
+
+O modelo interpreta o estado; código continua dono de matemática exata e enforcement de limites.
+
 ## Correção focada
 
 Para loops de correção:
@@ -88,5 +102,7 @@ Capacidade deve carregar confidence, evidence freshness e max risk boundary. Aut
 ## Referências
 
 Adaptada de Mark393295827/third-brain-v7-skills · loop-engineering (V8.1).
+
+Estado canônico, macros legais e timing adaptados de [fhshaik/typesafe-mario](https://github.com/fhshaik/typesafe-mario), sem depender de Jev, emulator ou ROM.
 
 Origem local: [loop-engineering.docx](../loop-engineering.docx).
