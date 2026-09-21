@@ -34,6 +34,23 @@ Responder perguntas em bases documentais grandes por busca progressiva, leitura 
 
 Buscar arquivos locais com rg, índices e trechos; usar os conectores disponíveis para fontes remotas. Para PDF e planilhas, usar as skills correspondentes e leitura localizada. Não pressupor diretório knowledge/, Notion, aside-codemode ou uma biblioteca remota acessível.
 
+## Fontes, notas e transformações
+
+Em workspaces de pesquisa, manter papéis distintos:
+
+- **source**: material original/importado;
+- **note**: interpretação ou síntese humana/assistida;
+- **transformation**: saída derivada por uma operação reproduzível, como resumo, extração temática ou roteiro;
+- **chat answer**: resposta efêmera baseada em um conjunto selecionado de contexto.
+
+Regras:
+- citações apontam para sources sempre que a afirmação depender delas;
+- não citar uma note derivada como se fosse a fonte primária quando a origem estiver disponível;
+- permitir seleção explícita de quais sources entram no contexto;
+- busca full-text e busca vetorial são rotas complementares, não substitutas automáticas;
+- transformation reutilizável deve registrar inputs e propósito para que o usuário saiba do que foi derivada;
+- manter notas e outputs derivados separados do corpus bruto facilita revisão, atualização e descarte.
+
 ## Governança documental
 
 - preservar a fonte original como evidência e separar fonte de interpretação;
@@ -70,5 +87,7 @@ Preferir loadouts específicos a um prompt global gigantesco. Para bases em cama
 [GitHub · ConardLi/garden-skills · kb-retriever](https://github.com/ConardLi/garden-skills/tree/main/skills/kb-retriever)
 
 Economia de contexto em batch adaptada de [lidge-jun/aside-codemode](https://github.com/lidge-jun/aside-codemode), sem depender do pacote externo.
+
+Separação source/note/transformation, context selection e busca full-text+vector adaptadas de https://github.com/lfnovo/open-notebook, sem exigir SurrealDB, Docker ou seus providers.
 
 Origem local: [kb-retriever.docx](../kb-retriever.docx).
