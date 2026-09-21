@@ -12,6 +12,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 
 ## Stacks
 
+- **checkpoint-nao-iniciados** — Lista clientes com status “Não iniciado” em um período informado, agrupando por mês e por líder direto ou responsável do consultor, e entrega o resultado pronto para WhatsApp.  
+  `stacks/checkpoint-nao-iniciados/STACK.md`
 - **content-production** — Planeja, produz, adapta e revisa conteúdo para múltiplos canais mantendo consistência de mensagem e qualidade.  
   `stacks/content-production/STACK.md`
 - **debug-and-fix** — Investiga, corrige e valida bugs em software com diagnóstico estruturado, testes e revisão proporcional ao risco.  
