@@ -46,6 +46,26 @@ Regras:
 - check fraco ou noisy deve ser reescrito ou desativado;
 - judge não substitui linter para o que pode ser checado deterministicamente.
 
+## Skills canônicas, adapters e distribuições
+
+Quando uma mesma coleção de skills precisa funcionar em vários harnesses ou plugins:
+
+- manter uma única árvore canônica de skills e referências;
+- manter conteúdo reutilizável e metodologia harness-neutral;
+- colocar configuração específica de cada host em adapters, manifests ou wrappers separados;
+- tratar dist, bundles e branches geradas como artefatos derivados, não como fonte de verdade;
+- reconstruir distribuições a partir da origem canônica em vez de editar cópias geradas;
+- separar famílias por audiência real, por exemplo: desenvolver extensão, operar ambiente existente, contribuir no produto ou usar uma skill embarcada;
+- não expor a mesma skill a todas as audiências só porque ela existe no mesmo repositório;
+- usar rotas explícitas para impedir que uma skill de desenvolvimento seja chamada para leitura de dados ou que uma skill de leitura altere configuração.
+
+Para integrações com workspace ou sistemas externos:
+
+- separar operação read/inspect de customize/write quando isso reduzir risco;
+- URLs, tokens e credenciais específicas do usuário ficam em configuração privada, não em distribuição compartilhada;
+- destructive/deploy/production actions precisam de boundary explícito de aprovação;
+- um alvo self-hosted ou custom domain é válido quando o contrato do produto permite; não hardcode o SaaS do fornecedor como único destino.
+
 ## Regras gerais
 
 - estrutural green não prova preservação semântica;
@@ -57,7 +77,7 @@ Regras:
 
 ## Ferramentas e dependências
 
-Usar arquivos, terminal e conectores reais disponíveis. Adaptadores específicos de agentes devem apontar para conteúdo canônico. Não exigir Abide, Jev ou scaffolds externos.
+Usar arquivos, terminal e conectores reais disponíveis. Adaptadores específicos de agentes devem apontar para conteúdo canônico. Não exigir Abide, Jev, Twenty, Codex plugin ou scaffolds externos.
 
 ## Integração
 
@@ -68,5 +88,7 @@ skill-builder, graph-engineering, to-spec, verify-before-claim, retrospective-co
 Adaptada de WoJiSama/skill-based-architecture.
 
 Classificação de enforceability e rastreabilidade de regras adaptadas de https://github.com/coldteadotai/abide, especialmente abide-compile, sem hooks ou dependência de Jev.
+
+Separação entre skills canônicas, distribuições geradas, adapters de harness e audiências adaptada de https://github.com/twentyhq/twenty, especialmente SKILLS.md e packages/twenty-agent-skills, sem importar o CLI, MCP ou runtime do Twenty.
 
 Origem local: [project-skill-architecture.docx](../project-skill-architecture.docx).
