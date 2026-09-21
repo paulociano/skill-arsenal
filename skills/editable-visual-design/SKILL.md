@@ -50,6 +50,8 @@ Não usar para websites responsivos, decks tradicionais, vídeo, logo isolado ou
 
 ## Imagens geradas
 
+Para séries com identidade consistente, edição por referência ou export de assets gerados, ler [referências e validação de imagens](references/imagens-consistentes.md). Aplicar somente quando houver raster necessário à peça.
+
 - Não pedir ao modelo lettering que precisa ser exato no artefato final.
 - Adequar cada prompt ao slot, crop, perspectiva e função visual.
 - Usar transparência apenas quando a ferramenta realmente suportar alpha.
