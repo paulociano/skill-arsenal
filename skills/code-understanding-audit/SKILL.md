@@ -79,6 +79,21 @@ Para modo **Critique**:
 
 Diversidade de modelos pode ampliar cobertura, mas não é requisito nem prova de independência. Se não houver subagentes/modelos adicionais, fazer uma segunda passagem deliberadamente adversarial sobre a explicação já fundamentada.
 
+## Grafo de evidência para codebases grandes
+
+Quando o alvo cruza muitos arquivos, serviços, schemas ou documentos, pode ser útil construir mentalmente ou materializar um grafo de conceitos antes de explicar:
+
+- nós representam símbolos, módulos, entidades, documentos ou conceitos relevantes;
+- edges devem carregar relação semântica, não apenas proximidade;
+- rotular cada edge como **EXTRACTED**, **INFERRED** ou **AMBIGUOUS**;
+- manter locator de origem para relações extraídas;
+- relações inferidas devem ter justificativa e nunca ser apresentadas como fatos;
+- usar comunidades/subgrafos para reduzir o corpus antes de responder;
+- path entre dois conceitos é evidência de conectividade, não prova automática de causalidade ou impacto;
+- preservar um artefato persistente do mapa somente quando ele reduzir releitura futura de forma material.
+
+Ferramentas de knowledge graph podem acelerar esse processo quando já existem no ambiente, mas não são requisito. Se forem usadas, validar pelo menos uma amostra de nós/edges contra o código-fonte antes de confiar em queries derivadas.
+
 ## Known concepts
 
 Quando o usuário já domina determinado conceito, mencioná-lo brevemente e investir contexto no que é novo. Não presumir nível com base apenas em cargo/título.
@@ -103,5 +118,7 @@ Quando o usuário já domina determinado conceito, mencioná-lo brevemente e inv
 ## Referências
 
 Adaptada de mohi-devhub/antivibe.
+
+Proveniência de edges e consultas por subgrafo adaptadas de https://github.com/Graphify-Labs/graphify, sem exigir Graphify, hooks, pacote Python ou backend semântico.
 
 Origem local: [code-understanding-audit.docx](../code-understanding-audit.docx).
