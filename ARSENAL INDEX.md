@@ -46,6 +46,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **deep-grill** — Conduzir entrevistas aprofundadas sobre planos ou decisões, resolvendo uma árvore de ambiguidades em rodadas sucessivas.
 - **design-system-extraction** — Extrair tokens, componentes e padrões visuais de sites ou código, separando valores observados de decisões derivadas.
 - **design-system-governance** — Criar ou evoluir design systems rastreando princípios, decisões, tokens, contratos de componentes e implementação.
+- **editable-visual-design** — Criar pôsteres, infográficos, capas, banners e social cards em canvas fixo com estrutura editável, assets rastreáveis e revisão visual do render.
 - **diagnosing-bugs** — Diagnosticar bugs difíceis e regressões com reprodução mínima, hipóteses falsificáveis e teste da correção.
 - **discovery-research-synthesis** — Sintetizar entrevistas, tickets e pesquisas em padrões, contradições e decisões com evidência rastreável.
 - **document-extraction-pipeline** — Converter documentos complexos em conteúdo estruturado, usando extração textual primeiro e OCR seletivo quando necessário.
