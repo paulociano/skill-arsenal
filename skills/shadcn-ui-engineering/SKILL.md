@@ -11,19 +11,33 @@ Projetos com shadcn/ui ou pedido explícito para adotá-lo. Não introduzir a bi
 
 ## Processo
 
-1. Leia `components.json`, manifesto, lockfile e componentes existentes. Determine aliases, framework, versão de Tailwind, gerenciador de pacotes, biblioteca de ícones e base de primitivas. Não suponha Radix nem caminhos `@/`.
-2. Use o CLI disponível e compatível para obter contexto e URLs da documentação dos componentes; leia a documentação relevante antes de escolher APIs. Comandos como `info --json`, `docs`, `search`, `view` e `add --diff` dependem da versão: confirme suporte. Sem CLI, inspecione arquivos e documentação oficial e declare a limitação.
-3. Reutilize componentes instalados, variantes e tokens semânticos. Consulte o registry configurado antes de criar equivalentes; resolva ambiguidade de origem somente quando houver escolhas materialmente diferentes.
-4. Verifique o contrato de composição da base instalada: títulos acessíveis em overlays, grupos obrigatórios, associação de labels, validação e estados disabled/loading. Não importe componentes citados na documentação que ainda não existem no projeto.
-5. Antes de atualizar, examine dry-run/diff e preserve alterações locais. Não execute atualização em massa ou troca de preset como efeito colateral de um ajuste pontual.
-6. Leia os arquivos adicionados: confira aliases, imports, ícones, subcomponentes e dependências. Teste o fluxo afetado por teclado, abertura/fechamento, foco, validação e responsividade no runtime disponível.
+1. Ler components.json, manifesto, lockfile e componentes existentes.
+2. Confirmar framework, Tailwind, aliases, package manager, icons e primitivas.
+3. Usar CLI/documentação compatíveis com a versão real.
+4. Reutilizar componentes, variants e tokens existentes.
+5. Verificar contratos de composição e acessibilidade.
+6. Antes de atualizar, examinar dry-run/diff e preservar customizações locais.
+7. Ler arquivos adicionados e testar teclado, foco, validação e responsividade.
+
+## Design-system lint
+
+Quando o projeto já usa ou autoriza um linter capaz de expressar contratos visuais:
+
+- codificar somente regras objetivas do sistema;
+- permitir layout local onde o contrato permitir sem liberar restyle total;
+- fazer diagnostics explicarem o que usar no lugar: size, variant, token, margin/gap no parent ou mudança no owner;
+- combinar component ownership com theme scale quando necessário;
+- custom messages devem apontar para o contrato real;
+- lint green prova apenas conformidade com essas regras, não acessibilidade ou qualidade visual total.
+
+Não instalar shadcn lint automaticamente. Se estiver presente, ler a configuração antes de alterá-la.
 
 ## Dependências e limites
 
-Node e gerenciador do projeto, CLI quando necessário e acesso à documentação/registry. Não use metadados `allowed-tools` de outro agente nem presuma execução de comandos embutidos em Markdown. Ler esta skill não instala pacotes. Antes de executar um CLI remoto, confira origem e versão; não force `latest` em um projeto cuja compatibilidade exija outra versão.
-
-Adapte orientações estéticas ao design system existente. Não transforme convenções de classes Tailwind em requisitos universais de acessibilidade.
+Ler esta skill não instala pacotes. Confirmar origem e versão antes de executar CLI remoto. Não forçar latest. Não transformar convenções Tailwind em requisitos universais de acessibilidade.
 
 ## Fonte
 
-[shadcn/ui — skill oficial](https://github.com/shadcn-ui/ui/blob/main/skills/shadcn/SKILL.md). Adaptação metodológica própria; consulte as referências da fonte somente conforme o componente ou operação.
+https://github.com/shadcn-ui/ui/blob/main/skills/shadcn/SKILL.md
+
+Contratos de lint agent-first adaptados de https://github.com/shadcn-ui/lint, sem dependência obrigatória.
