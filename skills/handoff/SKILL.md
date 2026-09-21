@@ -61,6 +61,21 @@ Ao condensar contexto longo, aplicar **KEEP / SUMMARIZE / DROP / RETRIEVE**:
 
 Um handoff bom deve permitir que um novo chat retome a tarefa sem perder restrições, decisões ou failure history.
 
+## Preservação seletiva sem reescrita
+
+Antes de resumir um item, perguntar se a **forma exata** ainda pode ser necessária. Resumo é lossy e pode apagar um path, erro, comando, valor, hash, constraint ou wording relevante.
+
+Separar retenção do **fato de uma ação ter ocorrido** da retenção do **resultado completo**:
+
+- manter verbatim quando o conteúdo exato é difícil de reconstruir, é evidência, contém uma restrição ou será usado diretamente;
+- manter uma linha/ponteiro quando saber que a ação foi feita importa, mas o payload completo pode ser recuperado;
+- resumir quando a conclusão importa mais que a forma;
+- descartar quando está stale, superseded, repetido ou facilmente regenerável.
+
+Fixar como KEEP os anchors que definem a tarefa: pedido original, restrições persistentes, decisões ainda vigentes e estado recente necessário para a próxima ação. Não compactar esses anchors só para reduzir tamanho.
+
+Para tool calls e resultados, não tratar o par como indivisível: às vezes o nome/input da chamada deve permanecer, enquanto o output bruto pode virar um ponteiro; em outros casos o resultado é a própria evidência e deve ficar verbatim.
+
 ## Retomada sem contexto implícito
 
 Assumir que a sessão receptora começa com **zero contexto implícito**. Um handoff precisa carregar não só o que foi decidido, mas **por que**, especialmente quando não existe caminho de volta para perguntar à sessão anterior.
@@ -76,5 +91,7 @@ Julgar o handoff perguntando: “uma sessão nova, sem memória do chat anterior
 ## Referências
 
 Documento avaliado: **The 7 ChatGPT Work Skills I Use Every Day — Copy-and-Paste Setup Prompts**.
+
+Metodologia adicional adaptada de [tamaratran/fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction), preservando o princípio de retenção seletiva sem depender de Jev ou hooks do Claude Code.
 
 Origem local: [handoff.docx](../handoff.docx).
