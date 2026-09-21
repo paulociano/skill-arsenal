@@ -53,6 +53,20 @@ Cada execução relevante deve, quando o ambiente permitir, conectar:
 9. **Gate** — só promover mudança quando o ganho é material e não há regressão crítica.
 10. **Monitor drift** — observar mudanças de distribuição, custo, latência e qualidade ao longo do tempo.
 
+## Precommit de previsões e settlement
+
+Quando o sistema faz uma previsão, score de confiança ou recomendação que só poderá ser julgada depois:
+
+- registrar **antes do outcome** a previsão, probabilidade/confidence, timestamp e versão do sistema;
+- tornar esse registro append-only ou pelo menos auditável, sem sobrescrever a chamada original após conhecer o resultado;
+- liquidar/avaliar o outcome em evento separado usando uma regra definida previamente;
+- manter casos ainda abertos separados de wins/losses; não escolher retrospectivamente a melhor janela de avaliação;
+- quando houver probabilidade, preferir proper scoring rules como Brier/log loss além de hit rate;
+- publicar misses e denominador completo, não apenas exemplos positivos;
+- distinguir o fato observado que disparou a chamada da previsão inferida sobre o que acontecerá depois.
+
+Esse padrão reduz hindsight bias e métricas que ficam melhores apenas porque o sistema escolheu retrospectivamente como se avaliar.
+
 ## Regras para evals
 
 - LLM-as-a-judge é uma métrica, não verdade absoluta;
@@ -107,5 +121,7 @@ Combina com `empirical-prompt-tuning`, `model-routing-gateway`, `retrieval-quali
 ## Referências
 
 Adaptada de langfuse/langfuse.
+
+Precommit e settlement de previsões adaptados de [dealerdefi/FLYON](https://github.com/dealerdefi/FLYON), usando a metodologia de scoreboard auditável sem incorporar lógica financeira ou on-chain.
 
 Origem local: [llm-observability-evaluation.docx](../llm-observability-evaluation.docx).
