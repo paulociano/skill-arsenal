@@ -62,6 +62,23 @@ Projetar uma camada de roteamento entre múltiplos modelos/providers com políti
    - resposta inválida.
 8. Verificar que o fallback preserva o contrato funcional esperado.
 
+## Decision engines versus modelos gerativos
+
+Nem toda decisão precisa de geração de texto. Classificadores, rerankers e **decision engines tipados** podem responder `choice`, score ordinal ou probabilidade binária sem produzir prosa.
+
+Tratar esses motores como uma classe de deployment própria quando houver benefício mensurável de latência/custo:
+
+- verificar se os critérios/opções podem ser definidos no runtime ou se o modelo exige labels fixas;
+- medir qualidade no **domínio real**, não apenas benchmark do autor;
+- validar idioma/script antes de rotear para checkpoints especializados;
+- testar cardinalidade de labels: muitos options podem degradar modelos com budget compartilhado;
+- calibrar probabilidades no domínio quando confidence aciona automação; confidence não é prova de correção;
+- preferir fallback para modelo gerativo quando a decisão exige raciocínio aberto, explicação ou contexto além da capacidade do decision engine;
+- registrar versão/checkpoint e parâmetros de calibração para reprodutibilidade;
+- quando o engine só se torna competitivo após fine-tuning, tratar o dataset e a avaliação de holdout como parte da dependência operacional.
+
+Modelos como SemIf ou Laya são implementações possíveis dessa arquitetura. Não presumir que estão instalados nem que benchmarks publicados transferem para o workload atual.
+
 ## Segurança
 
 - centralizar credenciais aumenta blast radius; usar least privilege;
@@ -77,7 +94,8 @@ Projetar uma camada de roteamento entre múltiplos modelos/providers com políti
 - fallback sem limite vira cascata cara;
 - retry agressivo piora incidentes e rate limits;
 - selecionar pelo menor custo sem medir qualidade pode degradar o produto;
-- selecionar pela menor latência sem capability gate pode quebrar tarefas.
+- selecionar pela menor latência sem capability gate pode quebrar tarefas;
+- probabilidade calibrada em um benchmark não autoriza ação consequencial em outro domínio sem validação.
 
 ## Runtime local incorporado de Ollama
 
@@ -96,7 +114,7 @@ Ollama é uma implementação possível do lado local. A metodologia vale també
 
 ## Ferramentas e dependências
 
-Usar esta skill para desenhar arquitetura ou configurar gateways reais quando o usuário tiver LiteLLM, Vercel AI Gateway, provider APIs ou infraestrutura equivalente. Não presumir que o assistente desta conversa controla roteamento interno de modelos.
+Usar esta skill para desenhar arquitetura ou configurar gateways reais quando o usuário tiver LiteLLM, Vercel AI Gateway, provider APIs ou infraestrutura equivalente. Não presumir que o assistente desta conversa controla roteamento interno de modelos. Decision engines especializados exigem runtime real e avaliação própria antes de entrar no pool.
 
 ## Integração
 
@@ -105,5 +123,7 @@ Combina com `graph-engineering`, `loop-engineering`, `library-version-grounding`
 ## Referências
 
 Adaptada de BerriAI/litellm.
+
+Decision engines tipados: [TheoLeeCJ/SemIf](https://github.com/TheoLeeCJ/SemIf) e [NandhaKishorM/laya](https://github.com/NandhaKishorM/laya), usados como referências arquiteturais, não dependências do Arsenal.
 
 Origem local: [model-routing-gateway.docx](../model-routing-gateway.docx).
