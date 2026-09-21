@@ -118,6 +118,21 @@ Usar Langfuse, OpenTelemetry, tracing próprio ou outro sistema real quando cone
 
 Combina com `empirical-prompt-tuning`, `model-routing-gateway`, `retrieval-quality-engineering`, `structured-output-contract` e `verify-before-claim`.
 
+## Avaliar compressão de contexto
+
+Quando testar filtros de saída de ferramentas ou compressão de prompts:
+1. Definir o denominador: bytes de uma saída, tokens de entrada completos, tokens de saída ou custo total da sessão. Não converter redução de bytes em economia de faturamento.
+2. Comparar os mesmos casos, modelo e configuração; medir qualidade da resposta e das ações, latência total, chamadas de recuperação, retries e custo, além da taxa de compressão.
+3. Incluir casos com falha rara no meio do log, negações, números exatos, dados repetitivos, código sob revisão e conteúdo já compacto. Verificar que a evidência decisiva sobrevive.
+4. Preservar original recuperável com origem e versão, retenção e acesso definidos quando o sistema suportar. Testar recuperação real, inclusive cache expirado; um identificador sem original disponível não torna a compressão reversível.
+5. Manter conteúdo original quando houver erro de parsing, ganho insignificante ou risco de remover informação necessária. Não descartar instruções, restrições ou exceções para melhorar uma métrica.
+6. Separar efeito de compressão, cache, redução de verbosidade e alteração de esforço do modelo. Não mudar vários fatores e atribuir o ganho a apenas um.
+7. Reportar estimativas como estimativas; usar contagem do provedor/tokenizador adequado quando disponível. Isolar baseline de hooks, plugins ou regras da candidata para evitar comparação contaminada.
+
+Compressão local não elimina exposição por proxy upstream, telemetria, memória compartilhada ou armazenamento de logs. Avaliar esses fluxos separadamente. Não instalar wrappers, modificar arquivos de instruções, registrar MCP global ou mudar endpoint/esforço por padrão. Esta skill avalia uma integração real do projeto; não reconfigura a conversa atual.
+
+Síntese de [RTK](https://github.com/rtk-ai/rtk/blob/b748a5f75563f410103551689097650be7210d99/docs/guide/resources/savings-explained.md), [Headroom](https://github.com/headroomlabs-ai/headroom/blob/89a58fd1526ba158a1614c35e455e1af0a7033c0/README.md) e da [disciplina de comparação de i-have-adhd](https://github.com/ayghri/i-have-adhd/blob/839872f9d1cd634fed642b4589ce7226199cc15f/evals/README.md). Não depende desses runtimes nem adota seus percentuais como garantia.
+
 ## Referências
 
 Adaptada de langfuse/langfuse.

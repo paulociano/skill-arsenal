@@ -82,6 +82,19 @@ Executar privadamente, quando aplicável:
 
 Aplicar revisão editorial diretamente ao texto e às fontes fornecidas. Entregar Markdown ou o formato de documento solicitado. Watchlists são sinais de inspeção, não proibições absolutas.
 
+## Instruções com menor carga de acompanhamento
+
+Quando o usuário pedir ajuda para acompanhar etapas, iniciar uma tarefa ou reduzir sobrecarga de leitura:
+- apresentar uma ação pequena e executável primeiro; numerar passos dependentes sem dividir trivialidades;
+- mostrar brevemente o estado necessário para retomar, sem repetir todo o histórico;
+- separar a tarefa atual de assuntos laterais e deixar uma próxima ação concreta apenas quando algo ainda estiver aberto;
+- agrupar listas longas para facilitar leitura, preservando todos os itens quando completude importar;
+- estimar tempo somente com base suficiente, usando faixa e condições em vez de precisão inventada.
+
+Tratar isso como preferência de comunicação, não diagnóstico. Não presumir limitações cognitivas, impor modo persistente ou inferir condição de saúde pelo pedido. Explicações completas continuam completas. Executar o trabalho autorizado quando couber ao agente, sem transferi-lo ao usuário por uma regra de “próxima ação”.
+
+Síntese de [i-have-adhd](https://github.com/ayghri/i-have-adhd/blob/839872f9d1cd634fed642b4589ce7226199cc15f/skills/i-have-adhd/SKILL.md), sem importar alegações clínicas, slash commands ou persistência automática.
+
 ## Referências
 
 [concisao](references/concisao.md) — Consultar quando o canal pedir resposta direta ou o usuário solicitar concisão extrema.
