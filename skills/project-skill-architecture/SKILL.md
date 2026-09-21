@@ -7,75 +7,66 @@ description: "Organizar ou migrar regras e workflows de projetos em skills peque
 
 ## Objetivo
 
-Organizar regras, workflows e conhecimento operacional de um projeto em uma arquitetura de skills pequena, roteável e verificável, preservando significado e evitando duplicação entre AGENTS.md, CLAUDE.md, Cursor rules e outros shells.
-
-## Quando usar
-
-- regras espalhadas ou contraditórias;
-- SKILL.md grande demais;
-- vários harnesses repetindo a mesma regra;
-- workflows recorrentes sem owner claro;
-- necessidade de migrar regras para skills sem perder semântica.
+Organizar regras, workflows e conhecimento operacional em uma arquitetura pequena, roteável e verificável, preservando significado e evitando duplicação entre AGENTS.md, CLAUDE.md e outros shells.
 
 ## Princípio central
 
-**Uma regra importante deve ter um owner canônico; shells de ferramenta só carregam o mínimo necessário para chegar nele.**
+Uma regra importante deve ter um owner canônico; shells específicos só carregam o mínimo necessário para chegar nele.
 
 ## Workflow
 
-1. Inventariar entradas existentes e seus owners.
-2. Separar:
-   - intenção do usuário;
-   - regra de negócio;
-   - contrato arquitetural;
-   - fato de implementação;
-   - evidência runtime;
-   - conclusão histórica.
+1. Inventariar entradas e owners.
+2. Separar intenção do usuário, regra de negócio, contrato arquitetural, fato de implementação, evidência runtime e conclusão histórica.
 3. Detectar duplicações e conflitos.
-4. Escolher a menor forma física suficiente:
-   - single-file;
-   - folder-light;
-   - routed/broad somente quando pressão real justificar.
-5. Mapear cada cláusula de origem para:
-   - preserve;
-   - merge;
-   - move;
-   - exclude com justificativa.
-6. Fazer preview read-only de CREATE / PRESERVE / CONFLICT antes de escrever.
-7. Materializar owners e routes somente quando admitidos pela evidência.
+4. Escolher a menor forma física suficiente.
+5. Mapear cada cláusula para preserve, merge, move ou exclude com justificativa.
+6. Fazer preview read-only antes de escrever.
+7. Materializar owners e routes apenas quando justificados.
 8. Preservar semanticamente instruções existentes.
-9. Verificar:
-   - inventory coverage;
-   - route reachability;
-   - source→destination mapping;
-   - completion criteria;
-   - behavior/runtime quando possível.
+9. Verificar coverage, reachability, source-to-destination mapping e behavior quando possível.
 10. Registrar learning reutilizável somente quando muda ação futura.
 
-## Regras
+## Compilar regras em checks
 
-- estrutural green não prova semantic preservation;
-- não forçar folder architecture em projeto pequeno;
-- não pedir ao usuário para escolher tiers internos;
+Antes de automatizar uma regra, classificar como ela pode ser verificada:
+
+1. lint/static: AST, regex ou linter detecta deterministicamente;
+2. mechanical/deferred: exige contagem, medição ou script;
+3. semantic/model: o diff ou artefato contém contexto suficiente para uma pergunta estreita;
+4. repository-context/deferred: exige conhecer o restante do codebase;
+5. process/unenforceable: regra é sobre conversa, aprovação ou processo, não sobre o código isolado.
+
+Regras:
+- extrair somente instruções realmente presentes;
+- manter source path/line ou locator equivalente;
+- não fundir regras diferentes em uma pergunta vaga;
+- para semantic/model, perguntar sobre evidência observável;
+- escolher o momento correto: edit/hunk ou diff final;
+- calibrar checks semânticos com exemplos reais quando houver histórico;
+- check fraco ou noisy deve ser reescrito ou desativado;
+- judge não substitui linter para o que pode ser checado deterministicamente.
+
+## Regras gerais
+
+- estrutural green não prova preservação semântica;
+- não forçar arquitetura em pastas num projeto pequeno;
 - plano não pode expandir o escopo pedido;
 - commit não é push; push não é PR; PR aprovado não é merge;
-- se evidência muda a premissa, replanejar em vez de manter aparência linear;
-- preview e rollback quando o runtime permitir.
+- se a evidência muda a premissa, replanejar;
+- usar preview e rollback quando possível.
 
 ## Ferramentas e dependências
 
-Usar leitura e escrita de arquivos e execução de código pelo terminal disponível. Localizar os runtimes e bibliotecas fornecidos pelo ambiente antes de usá-los; verificar separadamente SDKs, CLIs e dependências do projeto. Usar Agent Skills em pastas com SKILL.md como conteúdo canônico; adaptadores específicos de agentes só apontam para esse conteúdo. Não exigir scaffolds do repositório original.
+Usar arquivos, terminal e conectores reais disponíveis. Adaptadores específicos de agentes devem apontar para conteúdo canônico. Não exigir Abide, Jev ou scaffolds externos.
 
 ## Integração
 
-- skill-builder
-- graph-engineering
-- to-spec
-- verify-before-claim
-- retrospective-codify
+skill-builder, graph-engineering, to-spec, verify-before-claim, retrospective-codify.
 
 ## Referências
 
 Adaptada de WoJiSama/skill-based-architecture.
+
+Classificação de enforceability e rastreabilidade de regras adaptadas de https://github.com/coldteadotai/abide, especialmente abide-compile, sem hooks ou dependência de Jev.
 
 Origem local: [project-skill-architecture.docx](../project-skill-architecture.docx).
