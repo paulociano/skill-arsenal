@@ -94,6 +94,27 @@ Quando o alvo cruza muitos arquivos, serviços, schemas ou documentos, pode ser 
 
 Ferramentas de knowledge graph podem acelerar esse processo quando já existem no ambiente, mas não são requisito. Se forem usadas, validar pelo menos uma amostra de nós/edges contra o código-fonte antes de confiar em queries derivadas.
 
+## Busca estrutural e empacotamento de contexto
+
+Para codebases grandes, subir a potência da busca apenas quando necessário:
+
+1. **text search** para nomes, strings, paths e indícios rápidos;
+2. **symbol/AST search** para padrões sintáticos e relações estruturais;
+3. **semantic/static analysis** para regras, dataflow ou findings que texto/AST local não resolvem;
+4. **manual source verification** antes de transformar hit de ferramenta em conclusão arquitetural.
+
+Ferramentas como ast-grep e Semgrep são linhas de evidência, não oracles. Regra que casa código não prova bug nem impacto sem confirmar contexto.
+
+Ao empacotar um repositório para análise por LLM:
+
+- aplicar include/exclude explícito;
+- respeitar secrets, binaries, generated files e licensing boundaries;
+- medir token budget por arquivo/área;
+- preferir mapa/índice + leitura progressiva a despejar o repo inteiro;
+- manter ponteiros para arquivos originais para que conclusões possam ser reabertas e verificadas.
+
+Repomix pode acelerar empacotamento quando disponível, mas o princípio canônico é reduzir contexto sem perder provenance.
+
 ## Impact analysis e memória arquitetural
 
 Quando a pergunta for "o que esta mudança afeta?" ou "por que isso existe?":
@@ -134,5 +155,7 @@ Adaptada de mohi-devhub/antivibe.
 Proveniência de edges e consultas por subgrafo adaptadas de https://github.com/Graphify-Labs/graphify, sem exigir Graphify, hooks, pacote Python ou backend semântico.
 
 Impact mapping, cross-service linking e separação entre índice reconstruível e ADR persistente adaptados de https://github.com/DeusData/codebase-memory-mcp, sem executar binários, installers, daemon ou hooks da fonte.
+
+Busca estrutural e empacotamento de contexto refinados a partir de https://github.com/ast-grep/ast-grep, https://github.com/semgrep/semgrep e https://github.com/yamadashy/repomix, sem exigir esses CLIs.
 
 Origem local: [code-understanding-audit.docx](../code-understanding-audit.docx).
