@@ -120,14 +120,17 @@ Para vídeos públicos de terceiros potencialmente protegidos, a transcrição p
 
 ## Decisão
 
-**Adotar como nova skill A: `youtube-transcript`.**
+**Descartar como skill operacional do Arsenal.**
 
 Razões:
-- resolve um trigger recorrente e específico;
-- reduz ambiguidade de `watch-video`;
-- define fallback seguro e realista;
-- adiciona verificação de completude, algo que simples chamadas de API não garantem;
-- permanece portátil entre ambientes.
+- o teste real com um vídeo público falhou em todas as rotas disponíveis na sessão;
+- a skill dependia de condições externas não garantidas: captions expostos, biblioteca local, `yt-dlp`, plugin conectado ou mídia enviada;
+- isso não atende ao padrão de utilidade operacional do Arsenal para uma rota principal;
+- manter a skill aumentaria a chance de prometer capacidade que o ambiente não consegue cumprir de forma consistente.
+
+## Resultado do teste operacional
+
+Em 2026-09-23, o teste com um vídeo público do YouTube falhou por throttling do acesso web e ausência das ferramentas locais opcionais. Esse teste foi decisivo para reclassificar a skill.
 
 ## Limites da validação
 
