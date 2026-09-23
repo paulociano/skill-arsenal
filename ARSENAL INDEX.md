@@ -145,7 +145,6 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **visual-explanation-sketch** — Transformar conceitos, processos e relações em esboços visuais simples com caixas, setas, agrupamentos, anotações e destaques para facilitar compreensão.
 - **voice-builder** — Construir perfis de voz e posicionamento a partir de amostras reais, distinguindo identidade, estilo, audiência e canal.
 - **watch-video** — Analisar vídeos com transcrição e frames disponíveis, ancorando conclusões em timestamps e distinguindo visto, dito e inferido.
-- **youtube-transcript** — Obter e normalizar transcrições de vídeos do YouTube com timestamps, idioma, tipo de legenda e cobertura verificável, usando somente capacidades realmente disponíveis e degradando com clareza quando captions ou mídia não forem acessíveis.
 - **wayfinder** — Planejar projetos que atravessam sessões como mapas de decisões, resolvendo primeiro as incertezas já desbloqueadas.
 - **web-analytics-ga4** — Analisar tráfego, aquisição e conversão em GA4 ou exports equivalentes com períodos comparáveis e limitações de tracking.
 - **web-design-engineer** — Construir ou redesenhar interfaces web com pesquisa, direção, estrutura, interação, motion e efeitos contemporâneos, preservando marca, acessibilidade, performance e verificação em runtime.
