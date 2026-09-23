@@ -1,46 +1,49 @@
 ---
 name: eli5
-description: "Explicar conceitos a um público específico com linguagem, analogias e profundidade adequadas, sem infantilizar."
+description: "Explicar conceitos a um público específico com linguagem, analogias, exemplos e profundidade adequadas, sem infantilizar."
 ---
 
 # eli5
 
 ## Objetivo
 
-Explicar qualquer tema de forma adequada ao público, ajustando linguagem, analogias, profundidade e enquadramento.
+Explicar um conceito de forma adequada ao público, ajustando vocabulário, analogias, exemplos, profundidade e enquadramento sem sacrificar o mecanismo essencial.
 
 ## Quando usar
 
-- O usuário pede `ELI5`.
-- Precisa explicar um conceito a alguém específico.
-- O assunto está correto, mas difícil de entender.
-- É necessário traduzir tecnologia para negócio, ou vice-versa.
-
-## Variáveis de adaptação
-
-- Vocabulário
-- Analogia
-- Tom
-- Profundidade
-- Enquadramento
+- pedido explícito de ELI5;
+- explicação para público específico;
+- assunto correto, mas difícil de entender;
+- tradução entre contextos técnicos e não técnicos.
 
 ## Workflow
 
-1. O que é, em uma frase.
-2. Uma analogia adequada ao público.
-3. Detalhes na profundidade certa.
-4. Por que isso importa para aquele público.
+1. Identificar o objetivo: entender, fazer, aprender fazendo ou consultar.
+2. Quando a explicação não for trivial, usar explanation-architecture para escolher o modo dominante.
+3. Responder primeiro em uma frase simples.
+4. Construir um modelo mental ou analogia apenas se ela ajudar.
+5. Mostrar o mecanismo em poucos passos.
+6. Dar um exemplo concreto.
+7. Explicar por que importa para aquele público.
+8. Se houver exceção que invalida a simplificação, adicioná-la.
 
 ## Princípios
 
 - Simplificar sem infantilizar.
+- Não trocar precisão por metáfora sedutora.
+- Analogia deve ter limite explícito quando pode induzir erro.
 - Para técnicos, usar terminologia correta.
 - Para gestores, começar por impacto, risco, custo e decisão.
 - Para designers, focar experiência e fluxo.
-- Para código, explicar primeiro o propósito e depois o mecanismo.
+- Para código, explicar propósito antes do mecanismo.
+- Quando visual ajuda mais que texto, combinar com visual-explanation-sketch.
+
+## Integração
+
+explanation-architecture, visual-explanation-sketch e teach.
 
 ## Referências
 
-[GitHub · DreambigOu/ELI5](https://github.com/DreambigOu/ELI5/tree/main)
+DreambigOu/ELI5 e arquitetura explicativa do Arsenal.
 
-Origem local: [eli5.docx](../eli5.docx).
+Origem local: eli5.docx.
