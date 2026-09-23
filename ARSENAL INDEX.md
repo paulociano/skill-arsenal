@@ -42,6 +42,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **3gpp-standards-research** — Pesquisar padrões celulares 3GPP, protocolos e evolução de releases com TS/TR e status normativo verificáveis.
 - **academic-paper-orchestration** — Estruturar e revisar manuscritos acadêmicos a partir de pesquisa real, verificando claims, resultados, figuras e citações.
 - **after-action-review** — Conduzir retrospectivas e postmortems de eventos ou projetos concluídos, ligando causas e impacto a ações verificáveis.
+- **agenda-operations** — Auditar e operar a agenda por capacidade, preparação, conflitos, dívida de reuniões e blocos de foco, propondo alterações seguras antes de executar mudanças.
 - **architecture-visualization** — Criar diagramas de arquitetura, sequência, estados e fluxos a partir de descrições ou código com topologia rastreável.
 - **arsenal-router** — Seleciona e orquestra a menor combinação necessária de skills e stacks do Skill Arsenal.
 - **beautiful-web-article** — Transformar fontes fornecidas em artigos ou páginas editoriais HTML legíveis, explicativamente bem estruturados e fiéis ao conteúdo.
@@ -54,7 +55,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **creative-web-effects** — Selecionar e integrar efeitos visuais contemporâneos para web como shaders, texturas, partículas, pós-processamento, WebGL e backgrounds procedurais sem sacrificar legibilidade ou performance.
 - **crossplatform-mobile-engineering** — Implementar ou revisar apps Flutter e React Native/Expo respeitando versões, comportamento nativo e testes por plataforma.
 - **customer-interview** — Preparar e analisar entrevistas de descoberta focadas em comportamento passado, dor, alternativas e compromissos reais.
-- **dashboard-design** — Projetar dashboards orientados a decisão com métricas confiáveis, hierarquia, comparação, filtros e narrativa operacional sem confundir painel com depósito de gráficos.
+- **dashboard-design** — Projetar dashboards e sistemas de gestão à vista orientados a decisão, exceção e ação, com métricas confiáveis, ownership, cadência, comparação e hierarquia operacional.
 - **decision-analysis** — Estruturar decisões complexas com alternativas, critérios, incerteza, trade-offs, reversibilidade e sensibilidade sem esconder julgamento humano em uma pontuação arbitrária.
 - **deep-grill** — Conduzir entrevistas aprofundadas sobre planos ou decisões, resolvendo uma árvore de ambiguidades em rodadas sucessivas.
 - **design-direction** — Transformar um briefing visual vago em uma direção de design explícita, específica ao produto e reutilizável antes da implementação.
@@ -101,6 +102,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **prioritization-engine** — Priorizar trabalho, oportunidades ou problemas por impacto, urgência, dependências, risco e esforço com critérios explícitos e análise de sensibilidade.
 - **product-metrics-diagnostics** — Diagnosticar movimentos de métricas por definição, funil, cohort, segmento, drivers e qualidade de dados antes de propor ação.
 - **project-complexity-management** — Diagnosticar focos de complexidade técnica, organizacional e externa e definir intervenções proporcionais às evidências.
+- **project-health-review** — Revisar saúde de projetos por evidências de entrega, marcos, dependências, bloqueios, riscos, aging e próximas ações sem esconder incerteza em uma nota única.
+- **project-planning** — Transformar objetivos em plano executável com outcomes, workstreams, marcos, dependências, caminho crítico, capacidade, riscos e critérios de conclusão sem falsa precisão.
 - **procedural-film** — Criar curtas verticais animados proceduralmente com Canvas/Web Audio, storyboard em beat grid, render determinístico e revisão quadro a quadro.
 - **project-skill-architecture** — Organizar ou migrar regras e workflows de projetos em skills pequenas, com proprietários canônicos e rotas sem duplicação.
 - **prose-lint** — Auditar prosa por clareza, redundância, ambiguidade, jargão, inconsistência e linguagem potencialmente excludente usando checks como sinais, não regras absolutas.
@@ -125,6 +128,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **sprite-sheet-pipeline** — Converter animações ou frames em sprite sheets com registro, escala, transparência e timing verificados.
 - **structured-output-contract** — Definir e validar schemas para saídas LLM consumidas por código, com tipos, incerteza explícita e retries limitados.
 - **system-design-engineering** — Projetar sistemas escaláveis a partir de requisitos, estimativas, trade-offs, componentes, dados, falhas e evolução operacional.
+- **team-health-management** — Avaliar sinais operacionais de saúde de equipe e converter problemas de clareza, carga, fluxo, dependências e coordenação em ações de gestão observáveis, sem psicologizar pessoas.
 - **svg-handdrawn-animation** — Animar o desenho progressivo de SVGs com strokes e revelação de fills preservando cores, estrutura e segurança do embed.
 - **ui-motion-design** — Projetar e auditar motion de interface por função, timing, acessibilidade e custo antes de escolher CSS, Motion, GSAP, Rive ou outra tecnologia.
 - **swiftui-modern-ui** — Implementar ou revisar SwiftUI adaptativo com APIs nativas compatíveis com o SDK e deployment target reais.
@@ -147,6 +151,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **web-quality-audit** — Auditar qualidade web em runtime com performance, acessibilidade, best practices e evidência reproduzível.
 - **web-extraction-pipeline** — Extrair conteúdo estruturado de sites quando busca comum não basta, com técnica mínima, escopo limitado e validação.
 - **web-video-presentation** — Criar apresentações HTML por cenas e narração para navegação por clique ou gravação, quando a entrega em navegador é parte do pedido.
+- **weekly-review-planning** — Executar revisão semanal baseada em calendário, compromissos, projetos, pendências e capacidade para fechar loops e definir poucos outcomes realistas para a próxima semana.
 - **writing-quality** — Rascunhar, estruturar, revisar ou auditar prosa preservando significado, evidência, voz, clareza e adequação ao meio.
 
 ## Manutenção
