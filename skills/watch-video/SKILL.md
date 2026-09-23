@@ -68,9 +68,6 @@ Quando possível, estruturar a conclusão com referências temporais, por exempl
 
 Esta skill só executa análise audiovisual completa quando o ambiente fornece acesso real ao vídeo e ferramentas adequadas para imagem/áudio. Se isso não estiver disponível, deve degradar graciosamente para transcript, web, frames fornecidos pelo usuário ou solicitar o arquivo/trecho necessário. Nunca afirmar que 'assistiu' ao vídeo quando só leu transcript ou metadata.
 
-## Roteamento para YouTube
-
-Se a tarefa principal for obter a transcrição de um vídeo do YouTube, preferir `youtube-transcript`. Depois, usar `watch-video` somente quando a pergunta depender também de evidência visual, frames ou sincronização entre fala e imagem.
 
 ## Roteamento para edição
 
