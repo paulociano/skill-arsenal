@@ -59,6 +59,18 @@ Princípios:
 - memória velha não vence evidência nova apenas porque já estava salva;
 - armazenar menos, mas com melhor provenance e retrieval target.
 
+## Temporalidade e supersession
+
+Quando um fato ou decisão muda ao longo do tempo, não sobrescrever a história sem rastro:
+
+- registrar quando a informação passou a valer e, se aplicável, quando deixou de valer;
+- manter o fato antigo como superseded quando ele for relevante para explicar decisões anteriores;
+- ligar fatos derivados ao episódio/fonte que os originou;
+- distinguir event time, ingestion time e review time quando essa diferença afetar interpretação;
+- consultas sobre “o que era verdade naquela época?” precisam usar a validade temporal, não apenas o valor mais recente.
+
+Esse padrão é especialmente útil para projetos, políticas, preferências e sistemas que evoluem. Graphiti inspira a noção de fatos temporais com provenance, mas não é dependência do Arsenal.
+
 ## Integração com Arsenal
 
 - `session-learn` captura o delta da sessão.
@@ -69,5 +81,7 @@ Princípios:
 ## Referências
 
 Adaptada de Mark393295827/third-brain-v7-skills · session-learn (V8.1).
+
+Validade temporal, supersession e provenance por episódio refinados a partir de https://github.com/getzep/graphiti.
 
 Origem local: [session-learn.docx](../session-learn.docx).
