@@ -77,6 +77,19 @@ Esse padrão reduz hindsight bias e métricas que ficam melhores apenas porque o
 - uma média boa pode esconder um segmento ruim: usar slices;
 - dataset de avaliação deve incluir edge cases e failures reais, não só exemplos felizes.
 
+## Evals de agentes e CI
+
+Para agentes, não reduzir qualidade a uma nota final:
+
+- avaliar **task success**, **trajectory/steps**, **tool selection**, **argument correctness**, **retrieval**, **final answer**, **safety** e **cost/latency** como eixos separados;
+- preferir assertions determinísticas quando a propriedade for verificável; usar LLM-as-judge para critérios sem oracle simples;
+- manter uma matriz `case × version × metric` para comparar regressões, em vez de screenshots isolados de resultados;
+- usar datasets versionados e reproduzíveis em CI quando uma regressão puder bloquear release;
+- online evals detectam problemas de produção, mas não substituem suite offline estável;
+- red teaming adversarial deve ser roteado para `llm-red-team-evaluation`, preservando aqui o owner de observabilidade e qualidade geral.
+
+Padrões consolidados de Promptfoo, DeepEval, Phoenix, Opik, Langfuse e OpenLIT: ferramentas diferem, mas o owner canônico continua sendo dataset + trace + metric + experiment + regression gate.
+
 ## Prompt management
 
 Se prompts forem versionados:
@@ -116,7 +129,7 @@ Usar Langfuse, OpenTelemetry, tracing próprio ou outro sistema real quando cone
 
 ## Integração
 
-Combina com `empirical-prompt-tuning`, `model-routing-gateway`, `retrieval-quality-engineering`, `structured-output-contract` e `verify-before-claim`.
+Combina com `empirical-prompt-tuning`, `model-routing-gateway`, `retrieval-quality-engineering`, `llm-red-team-evaluation`, `structured-output-contract` e `verify-before-claim`.
 
 ## Avaliar compressão de contexto
 
@@ -136,6 +149,8 @@ Síntese de [RTK](https://github.com/rtk-ai/rtk/blob/b748a5f75563f41010355168909
 ## Referências
 
 Adaptada de langfuse/langfuse.
+
+Evals de trajetória, CI e separação entre task/tool/final-answer quality refinados a partir de https://github.com/confident-ai/deepeval, https://github.com/promptfoo/promptfoo, https://github.com/Arize-ai/phoenix, https://github.com/comet-ml/opik e https://github.com/openlit/openlit.
 
 Precommit e settlement de previsões adaptados de [dealerdefi/FLYON](https://github.com/dealerdefi/FLYON), usando a metodologia de scoreboard auditável sem incorporar lógica financeira ou on-chain.
 
