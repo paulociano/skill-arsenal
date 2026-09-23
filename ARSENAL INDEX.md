@@ -42,7 +42,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **after-action-review** — Conduzir retrospectivas e postmortems de eventos ou projetos concluídos, ligando causas e impacto a ações verificáveis.
 - **architecture-visualization** — Criar diagramas de arquitetura, sequência, estados e fluxos a partir de descrições ou código com topologia rastreável.
 - **arsenal-router** — Seleciona e orquestra a menor combinação necessária de skills e stacks do Skill Arsenal.
-- **beautiful-web-article** — Transformar fontes fornecidas em artigos ou páginas editoriais HTML legíveis e fiéis ao conteúdo.
+- **beautiful-web-article** — Transformar fontes fornecidas em artigos ou páginas editoriais HTML legíveis, explicativamente bem estruturados e fiéis ao conteúdo.
 - **brand-logo-exploration** — Explorar conceitos de logo e identidade, testar escala e monocromia e refinar a direção escolhida.
 - **call-evaluation** — Avaliar ligações comerciais de consultoria financeira pelo Card de Ligação, com evidências, rubrica e qualidade do agendamento.
 - **code-review** — Revisar mudanças de código e feedback de PR separando conformidade com padrões, fidelidade à spec e impacto real.
@@ -56,11 +56,12 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **design-direction** — Transformar um briefing visual vago em uma direção de design explícita, específica ao produto e reutilizável antes da implementação.
 - **design-system-extraction** — Extrair tokens, componentes e padrões visuais de sites ou código, separando valores observados de decisões derivadas e podendo materializar um contrato DESIGN.md.
 - **design-system-governance** — Criar ou evoluir design systems rastreando princípios, decisões, tokens, contratos de componentes, implementação e um contrato DESIGN.md quando útil.
-- **editable-visual-design** — Criar pôsteres, infográficos, capas, banners e social cards em canvas fixo com estrutura editável, assets rastreáveis e revisão visual do render.
+- **editable-visual-design** — Criar pôsteres, infográficos, capas, banners e social cards editáveis com hierarquia, composição tipográfica, assets rastreáveis e revisão visual do render.
 - **diagnosing-bugs** — Diagnosticar bugs difíceis e regressões com reprodução mínima, hipóteses falsificáveis e teste da correção.
 - **discovery-research-synthesis** — Sintetizar entrevistas, tickets e pesquisas em padrões, contradições e decisões com evidência rastreável.
 - **document-extraction-pipeline** — Converter documentos complexos em conteúdo estruturado, usando extração textual primeiro e OCR seletivo quando necessário.
-- **eli5** — Explicar conceitos a um público específico com linguagem, analogias e profundidade adequadas, sem infantilizar.
+- **eli5** — Explicar conceitos a um público específico com linguagem, analogias, exemplos e profundidade adequadas, sem infantilizar.
+- **explanation-architecture** — Escolher e estruturar a forma certa de explicar um assunto entre tutorial, how-to, explanation e reference, ajustando sequência, exemplos e profundidade ao objetivo do leitor.
 - **email-campaign-engineering** — Planejar e construir campanhas de e-mail HTML com copy, assets, compatibilidade e verificação antes do envio autorizado.
 - **empirical-prompt-tuning** — Avaliar e melhorar prompts ou skills mediante pedido de otimização empírica, com cenários fixos, baseline e holdout.
 - **experiment-design** — Desenhar experimentos falsificáveis com hipótese, métrica primária, guardrails e critérios de decisão anteriores aos resultados.
@@ -95,6 +96,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **project-complexity-management** — Diagnosticar focos de complexidade técnica, organizacional e externa e definir intervenções proporcionais às evidências.
 - **procedural-film** — Criar curtas verticais animados proceduralmente com Canvas/Web Audio, storyboard em beat grid, render determinístico e revisão quadro a quadro.
 - **project-skill-architecture** — Organizar ou migrar regras e workflows de projetos em skills pequenas, com proprietários canônicos e rotas sem duplicação.
+- **prose-lint** — Auditar prosa por clareza, redundância, ambiguidade, jargão, inconsistência e linguagem potencialmente excludente usando checks como sinais, não regras absolutas.
 - **publication-figure-engineering** — Produzir figuras científicas alinhadas aos claims de papers, separando diagramas conceituais de gráficos quantitativos exatos.
 - **quick-grill** — Fazer uma rodada curta de perguntas de alinhamento quando o usuário pedir explicitamente para ser questionado antes da execução.
 - **reels-scripting** — Analisar a estrutura narrativa de um Reel e criar roteiro original no mesmo padrão, sem copiar conteúdo ou presumir desempenho.
@@ -118,14 +120,16 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **ui-motion-design** — Projetar e auditar motion de interface por função, timing, acessibilidade e custo antes de escolher CSS, Motion, GSAP, Rive ou outra tecnologia.
 - **swiftui-modern-ui** — Implementar ou revisar SwiftUI adaptativo com APIs nativas compatíveis com o SDK e deployment target reais.
 - **tdd** — Aplicar desenvolvimento orientado a testes por ciclos red–green em fatias verticais de comportamento observável.
-- **teach** — Organizar aprendizagem em múltiplas sessões com missão, prática de recuperação, espaçamento e progressão registrada.
+- **teach** — Organizar aprendizagem em múltiplas sessões com arquitetura de explicação, prática de recuperação, espaçamento e progressão por domínio demonstrado.
 - **to-questionnaire** — Transformar lacunas de decisão em perguntas direcionadas à pessoa que possui o contexto necessário.
 - **to-spec** — Converter decisões de uma conversa ou projeto em especificação executável sem reiniciar descoberta já resolvida.
 - **to-tickets** — Decompor specs e planos em tickets verticais pequenos, demonstráveis e com dependências e critérios de aceitação explícitos.
+- **typographic-composition** — Projetar tipografia expressiva e legível em layouts, títulos e peças visuais usando hierarquia, ritmo, line breaks, spacing e forma das palavras sem confundir composição com engenharia de fontes.
 - **ui-ux-catalog** — Consultar o catálogo UI UX Pro Max para selecionar paletas, tipografia e padrões de interface, verificando pertinência e preservando decisões de design existentes.
 - **value-investing-company-analysis** — Analisar empresas por fundamentos e value investing com dados atuais, cenários de valuation e riscos que podem invalidar a tese.
 - **verify-before-claim** — Verificar afirmações consequenciais de conclusão, correção ou publicação com evidência fresca do escopo afirmado.
 - **video-editing-pipeline** — Editar vídeos com transcrição, decisões de corte explícitas, EDL, render e revisão audiovisual preservando as fontes.
+- **visual-explanation-sketch** — Transformar conceitos, processos e relações em esboços visuais simples com caixas, setas, agrupamentos, anotações e destaques para facilitar compreensão.
 - **voice-builder** — Construir perfis de voz e posicionamento a partir de amostras reais, distinguindo identidade, estilo, audiência e canal.
 - **watch-video** — Analisar vídeos com transcrição e frames disponíveis, ancorando conclusões em timestamps e distinguindo visto, dito e inferido.
 - **wayfinder** — Planejar projetos que atravessam sessões como mapas de decisões, resolvendo primeiro as incertezas já desbloqueadas.
@@ -134,7 +138,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **web-quality-audit** — Auditar qualidade web em runtime com performance, acessibilidade, best practices e evidência reproduzível.
 - **web-extraction-pipeline** — Extrair conteúdo estruturado de sites quando busca comum não basta, com técnica mínima, escopo limitado e validação.
 - **web-video-presentation** — Criar apresentações HTML por cenas e narração para navegação por clique ou gravação, quando a entrega em navegador é parte do pedido.
-- **writing-quality** — Rascunhar, revisar ou auditar prosa para leitores preservando significado, evidência, voz e adequação ao meio.
+- **writing-quality** — Rascunhar, estruturar, revisar ou auditar prosa preservando significado, evidência, voz, clareza e adequação ao meio.
 
 ## Manutenção
 
