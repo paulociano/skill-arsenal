@@ -71,7 +71,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **instagram-growth-diagnostics** — Diagnosticar onde o crescimento de um perfil do Instagram está travado usando métricas disponíveis e rotear o gargalo para a intervenção adequada.
 - **jtbd-framing** — Reformular decisões de produto por Jobs-to-be-Done, situações reais, dificuldades e critérios de adoção ou abandono.
 - **kb-retriever** — Responder perguntas em bases documentais grandes por busca progressiva, leitura localizada e citações rastreáveis.
-- **landing-craft** — Projetar landing pages como narrativas de scroll com conceito visual, ritmo, assets e CTA coerentes.
+- **landing-craft** — Projetar landing pages como narrativas de scroll com conceito visual, message match, prova, objeções e CTA coerentes.
 - **legacy-system-reconstruction** — Reconstruir documentação, regras e arquitetura de sistemas legados em descoberta somente leitura antes de planejar modernização.
 - **library-version-grounding** — Fundamentar decisões de programação na versão instalada de bibliotecas e na documentação oficial correspondente.
 - **linkedin-profile-optimizer** — Reestruturar perfis de LinkedIn com posicionamento, headline, About, experiências e provas factuais.
