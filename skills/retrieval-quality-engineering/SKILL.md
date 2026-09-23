@@ -59,6 +59,18 @@ Ao combinar buscas:
 4. registrar trade-off de latência/CPU/RAM;
 5. não escolher RRF/DBSF/fusion “por vibes”.
 
+## RAG end-to-end
+
+Retrieval bom não garante resposta boa. Quando o objetivo for avaliar RAG completo, separar:
+
+- **retriever quality**: recall/precision/MRR/nDCG e presença do evidence necessário;
+- **context quality**: relevância, redundância, ordem e contamination;
+- **answer grounding**: se a resposta é sustentada pelo contexto recuperado;
+- **answer relevance/completeness**: se responde ao pedido sem extrapolar;
+- **citation correctness** quando houver citações.
+
+RAGAS e frameworks semelhantes podem acelerar essas métricas, mas não são autoridade automática. Definir dataset e oracle antes de otimizar, combinar checks determinísticos/human labels quando possível e não mascarar falha de retrieval com um gerador mais eloquente.
+
 ## Multitenancy e isolamento
 
 - payload filters não implicam automaticamente isolamento estatístico de todos os mecanismos;
@@ -91,5 +103,7 @@ Combina com `kb-retriever`, `discovery-research-synthesis`, `experiment-design`,
 ## Referências
 
 Adaptada de qdrant/qdrant e qdrant/skills.
+
+Separação retriever/context/answer e métricas end-to-end refinadas a partir de https://github.com/explodinggradients/ragas e suites de avaliação RAG de DeepEval/Opik.
 
 Origem local: [retrieval-quality-engineering.docx](../retrieval-quality-engineering.docx).
