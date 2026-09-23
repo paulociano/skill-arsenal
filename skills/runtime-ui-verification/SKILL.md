@@ -68,6 +68,18 @@ Antes de verificar UI no browser, escolher a evidência adequada:
 
 Permissões de page context devem ser task-scoped. History, tab sets, screenshots ou microphone não entram como contexto “por precaução”.
 
+## Observe, act, extract
+
+Em browser automation com LLM, separar responsabilidades reduz risco e ambiguidade:
+
+- **observe**: localizar elementos/estado real e produzir targets verificáveis;
+- **act**: executar a mutação mínima necessária;
+- **extract**: retornar dados em schema validado quando a tarefa pede informação estruturada.
+
+Credenciais, secrets e valores sensíveis devem preferir preenchimento determinístico fora do modelo quando a ferramenta permitir. O modelo pode escolher a ação sem precisar receber o segredo. Extração estruturada precisa validar schema e source state antes de ser tratada como dado confiável.
+
+Esse padrão, observado em Stagehand, complementa a action-space dinâmica já descrita abaixo sem exigir sua SDK.
+
 ## Action space observada e guardas de frescor
 
 Quando o navegador controlável expuser DOM/elementos acionáveis, prefira decisões sobre uma **action space derivada do estado observado**, não selectors, coordenadas ou JavaScript inventados pelo modelo.
@@ -98,5 +110,7 @@ Para páginas web, usar o navegador controlável disponível e sua API documenta
 Adaptada de reticlehq/reticle, especialmente `verify-ui-change`, `agentic-tdd`, `false-green-tests` e `replay-user-flows`.
 
 Action-space e freshness guards adaptados de [browser-use/jev-ultrafast](https://github.com/browser-use/jev-ultrafast), sem depender de Jev ou Browser Harness.
+
+Separação observe/act/extract e isolamento de credenciais refinados a partir de https://github.com/browserbase/stagehand.
 
 Origem local: [runtime-ui-verification.docx](../runtime-ui-verification.docx).
