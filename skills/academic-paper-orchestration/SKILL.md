@@ -61,6 +61,18 @@ Se evidência essencial estiver ausente, marcar gap em vez de inventar conteúdo
 - Related Work precisa representar diferenças reais, não criar strawman;
 - citações verificadas formam um pool permitido para a escrita.
 
+## Literature integrity e contradições
+
+Para revisão de literatura com impacto real:
+
+- quando uma fonte for central, verificar status de retratação/correção quando essa informação estiver disponível e for material;
+- distinguir paper original, preprint, versão publicada e errata;
+- procurar evidência contraditória para claims centrais em vez de coletar apenas confirmações;
+- registrar desacordo real entre fontes sem forçar consenso;
+- retrieval de papers é etapa de descoberta; metadata, conteúdo e claim precisam ser verificados separadamente.
+
+PaperQA reforça a utilidade de combinar retrieval científico com metadata e contradiction checks, mas nenhum score automático transforma uma fonte em verdade.
+
 ## Claim discipline
 
 - número no paper precisa apontar para dado/experimento/fonte;
@@ -102,5 +114,7 @@ Usar leitura e escrita de arquivos e execução de código pelo terminal dispon�
 ## Referências
 
 Adaptada metodologicamente de Ar9av/PaperOrchestra e do paper PaperOrchestra (Song et al., 2026).
+
+Checagem de metadata, retratação/correção e contradições refinada a partir de https://github.com/Future-House/paper-qa.
 
 Origem local: [academic-paper-orchestration.docx](../academic-paper-orchestration.docx).
