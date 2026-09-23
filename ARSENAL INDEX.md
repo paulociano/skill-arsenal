@@ -72,6 +72,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **library-version-grounding** — Fundamentar decisões de programação na versão instalada de bibliotecas e na documentação oficial correspondente.
 - **linkedin-profile-optimizer** — Reestruturar perfis de LinkedIn com posicionamento, headline, About, experiências e provas factuais.
 - **llm-observability-evaluation** — Instrumentar e avaliar aplicações LLM com traces, datasets, métricas e comparações reproduzíveis entre versões.
+- **llm-red-team-evaluation** — Avaliar adversarialmente aplicações GenAI com threat model, probes, detectores, cobertura, mitigação e reteste controlado.
 - **locale-adapter** — Localizar conteúdo e UX copy para outro idioma ou mercado preservando fatos, termos protegidos e comportamento do produto.
 - **loop-engineering** — Projetar trabalho recorrente ou iterativo com trigger, execução, verificação, estado persistido e limites de parada.
 - **material-design-3** — Implementar ou auditar interfaces Material Design 3 em Compose, Flutter ou web conforme a plataforma e versão reais.
@@ -119,6 +120,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **wayfinder** — Planejar projetos que atravessam sessões como mapas de decisões, resolvendo primeiro as incertezas já desbloqueadas.
 - **web-analytics-ga4** — Analisar tráfego, aquisição e conversão em GA4 ou exports equivalentes com períodos comparáveis e limitações de tracking.
 - **web-design-engineer** — Construir ou redesenhar interfaces e artefatos web com direção visual, interação, fidelidade à marca e verificação em runtime.
+- **web-quality-audit** — Auditar qualidade web em runtime com performance, acessibilidade, best practices e evidência reproduzível.
 - **web-extraction-pipeline** — Extrair conteúdo estruturado de sites quando busca comum não basta, com técnica mínima, escopo limitado e validação.
 - **web-video-presentation** — Criar apresentações HTML por cenas e narração para navegação por clique ou gravação, quando a entrega em navegador é parte do pedido.
 - **writing-quality** — Rascunhar, revisar ou auditar prosa para leitores preservando significado, evidência, voz e adequação ao meio.
