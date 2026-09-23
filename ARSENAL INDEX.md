@@ -14,6 +14,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 
 - **checkpoint-nao-iniciados** — Lista clientes com status “Não iniciado” em um período informado, agrupando por mês e por líder direto ou responsável do consultor, e entrega o resultado pronto para WhatsApp.  
   `stacks/checkpoint-nao-iniciados/STACK.md`
+- **creative-web-engineering** — Orquestra direção, estrutura, scroll, motion, microinterações e gráficos criativos para websites contemporâneos de alta expressão com verificação de acessibilidade e performance.  
+  `stacks/creative-web-engineering/STACK.md`
 - **content-production** — Planeja, produz, adapta, governa e revisa conteúdo para múltiplos canais mantendo consistência de mensagem e capacidade operacional.  
   `stacks/content-production/STACK.md`
 - **debug-and-fix** — Investiga, corrige e valida bugs em software com diagnóstico estruturado, testes e revisão proporcional ao risco.  
@@ -47,6 +49,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **code-understanding-audit** — Explicar código ou auditar decisões arquiteturais com evidências, ajustando profundidade ao conhecimento do leitor.
 - **compose-performance-audit** — Auditar desempenho de Jetpack Compose com baseline, diagnóstico, correção e comparação de métricas antes e depois.
 - **content-matrix** — Gerar ideias específicas de posts cruzando pilares editoriais com formatos e selecionando oportunidades sustentadas.
+- **creative-web-effects** — Selecionar e integrar efeitos visuais contemporâneos para web como shaders, texturas, partículas, pós-processamento, WebGL e backgrounds procedurais sem sacrificar legibilidade ou performance.
 - **crossplatform-mobile-engineering** — Implementar ou revisar apps Flutter e React Native/Expo respeitando versões, comportamento nativo e testes por plataforma.
 - **customer-interview** — Preparar e analisar entrevistas de descoberta focadas em comportamento passado, dor, alternativas e compromissos reais.
 - **deep-grill** — Conduzir entrevistas aprofundadas sobre planos ou decisões, resolvendo uma árvore de ambiguidades em rodadas sucessivas.
@@ -69,6 +72,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **handoff** — Preparar contexto compacto para continuar uma tarefa em outra sessão ou obter comparação independente ou crítica.
 - **idea-refine** — Refinar ideias vagas, explorar alternativas, testar premissas e definir uma direção e escopo de MVP.
 - **instagram-growth-diagnostics** — Diagnosticar onde o crescimento de um perfil do Instagram está travado usando métricas disponíveis e rotear o gargalo para a intervenção adequada.
+- **interaction-polish** — Refinar o último nível de qualidade de uma interface por microinterações, feedback, estados, tipografia animada e comportamento contextual sem transformar polish em decoração excessiva.
 - **jtbd-framing** — Reformular decisões de produto por Jobs-to-be-Done, situações reais, dificuldades e critérios de adoção ou abandono.
 - **kb-retriever** — Responder perguntas em bases documentais grandes por busca progressiva, leitura localizada e citações rastreáveis.
 - **landing-craft** — Projetar landing pages como narrativas de scroll com conceito visual, message match, prova, objeções e CTA coerentes.
@@ -80,6 +84,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **locale-adapter** — Localizar conteúdo e UX copy para outro idioma ou mercado preservando fatos, termos protegidos e comportamento do produto.
 - **loop-engineering** — Projetar trabalho recorrente ou iterativo com trigger, execução, verificação, estado persistido e limites de parada.
 - **material-design-3** — Implementar ou auditar interfaces Material Design 3 em Compose, Flutter ou web conforme a plataforma e versão reais.
+- **motion-asset-engineering** — Escolher, integrar e validar assets animados em web entre SVG/CSS, Lottie, Rive, Canvas e vídeo conforme interação, peso, editabilidade e acessibilidade.
 - **meeting-knowledge-capture** — Converter gravações, transcrições ou notas de reuniões em decisões e ações rastreáveis no destino autorizado.
 - **mobile-device-automation** — Executar e verificar tarefas em dispositivos móveis somente com controle real disponível, por ações pequenas e observação de estado.
 - **model-routing-gateway** — Projetar ou configurar roteamento de modelos LLM com seleção por capacidade, retries, fallback, orçamento e observabilidade.
@@ -99,9 +104,10 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **seo-research-audit** — Pesquisar palavras-chave ou auditar SEO e concorrentes com evidências reais, métricas disponíveis e prioridades acionáveis.
 - **session-learn** — Extrair aprendizados duráveis de uma sessão quando solicitado ou autorizado, com deduplicação e rastreabilidade.
 - **shadcn-ui-engineering** — Implementar, atualizar e depurar componentes em projetos shadcn/ui preservando configuração, composição acessível e personalizações locais.
-- **shader-graphics-engineering** — Implementar, depurar ou otimizar shaders GLSL/WebGL e gráficos procedurais conforme efeito, runtime e orçamento de desempenho.
+- **shader-graphics-engineering** — Implementar, depurar ou otimizar shaders GLSL/WebGL e gráficos procedurais conforme efeito, runtime, integração DOM/3D e orçamento de desempenho.
 - **skill-builder** — Criar ou atualizar skills reutilizáveis a partir de workflows recorrentes, com gatilhos claros, dependências reais e validação.
 - **skill-security-review** — Inspecionar segurança de skills, agentes ou plugins antes da adoção sem executar instaladores ou código da fonte avaliada.
+- **scroll-storytelling** — Projetar experiências narrativas guiadas por scroll com estágios, pinning, parallax, transições e sincronização DOM/WebGL sem sacrificar acessibilidade ou performance.
 - **social-analytics** — Analisar exports de redes sociais para identificar tendências e desempenho sem extrapolar amostras ou métricas indisponíveis.
 - **social-post-review** — Revisar posts separando qualidade editorial de comparação com o histórico real do autor, sem prever desempenho por score.
 - **source-to-skill** — Converter fontes longas em skills de conhecimento com entrada compacta, referências sob demanda e fidelidade à origem.
@@ -109,7 +115,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **structured-output-contract** — Definir e validar schemas para saídas LLM consumidas por código, com tipos, incerteza explícita e retries limitados.
 - **system-design-engineering** — Projetar sistemas escaláveis a partir de requisitos, estimativas, trade-offs, componentes, dados, falhas e evolução operacional.
 - **svg-handdrawn-animation** — Animar o desenho progressivo de SVGs com strokes e revelação de fills preservando cores, estrutura e segurança do embed.
-- **ui-motion-design** — Projetar e auditar motion de interface por função, timing, acessibilidade e custo antes de escolher a tecnologia de animação.
+- **ui-motion-design** — Projetar e auditar motion de interface por função, timing, acessibilidade e custo antes de escolher CSS, Motion, GSAP, Rive ou outra tecnologia.
 - **swiftui-modern-ui** — Implementar ou revisar SwiftUI adaptativo com APIs nativas compatíveis com o SDK e deployment target reais.
 - **tdd** — Aplicar desenvolvimento orientado a testes por ciclos red–green em fatias verticais de comportamento observável.
 - **teach** — Organizar aprendizagem em múltiplas sessões com missão, prática de recuperação, espaçamento e progressão registrada.
@@ -124,7 +130,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **watch-video** — Analisar vídeos com transcrição e frames disponíveis, ancorando conclusões em timestamps e distinguindo visto, dito e inferido.
 - **wayfinder** — Planejar projetos que atravessam sessões como mapas de decisões, resolvendo primeiro as incertezas já desbloqueadas.
 - **web-analytics-ga4** — Analisar tráfego, aquisição e conversão em GA4 ou exports equivalentes com períodos comparáveis e limitações de tracking.
-- **web-design-engineer** — Construir ou redesenhar interfaces e artefatos web com pesquisa visual, direção explícita, estrutura, interação, fidelidade à marca e verificação em runtime.
+- **web-design-engineer** — Construir ou redesenhar interfaces web com pesquisa, direção, estrutura, interação, motion e efeitos contemporâneos, preservando marca, acessibilidade, performance e verificação em runtime.
 - **web-quality-audit** — Auditar qualidade web em runtime com performance, acessibilidade, best practices e evidência reproduzível.
 - **web-extraction-pipeline** — Extrair conteúdo estruturado de sites quando busca comum não basta, com técnica mínima, escopo limitado e validação.
 - **web-video-presentation** — Criar apresentações HTML por cenas e narração para navegação por clique ou gravação, quando a entrega em navegador é parte do pedido.
