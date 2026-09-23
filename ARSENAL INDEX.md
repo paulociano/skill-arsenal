@@ -12,6 +12,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 
 ## Stacks
 
+- **business-decision-intelligence** — Investiga métricas e causas, estrutura decisões, prioriza ações, projeta cenários e comunica resultados em dashboards ou Power BI.  
+  `stacks/business-decision-intelligence/STACK.md`
 - **checkpoint-nao-iniciados** — Lista clientes com status “Não iniciado” em um período informado, agrupando por mês e por líder direto ou responsável do consultor, e entrega o resultado pronto para WhatsApp.  
   `stacks/checkpoint-nao-iniciados/STACK.md`
 - **creative-web-engineering** — Orquestra direção, estrutura, scroll, motion, microinterações e gráficos criativos para websites contemporâneos de alta expressão com verificação de acessibilidade e performance.  
@@ -52,6 +54,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **creative-web-effects** — Selecionar e integrar efeitos visuais contemporâneos para web como shaders, texturas, partículas, pós-processamento, WebGL e backgrounds procedurais sem sacrificar legibilidade ou performance.
 - **crossplatform-mobile-engineering** — Implementar ou revisar apps Flutter e React Native/Expo respeitando versões, comportamento nativo e testes por plataforma.
 - **customer-interview** — Preparar e analisar entrevistas de descoberta focadas em comportamento passado, dor, alternativas e compromissos reais.
+- **dashboard-design** — Projetar dashboards orientados a decisão com métricas confiáveis, hierarquia, comparação, filtros e narrativa operacional sem confundir painel com depósito de gráficos.
+- **decision-analysis** — Estruturar decisões complexas com alternativas, critérios, incerteza, trade-offs, reversibilidade e sensibilidade sem esconder julgamento humano em uma pontuação arbitrária.
 - **deep-grill** — Conduzir entrevistas aprofundadas sobre planos ou decisões, resolvendo uma árvore de ambiguidades em rodadas sucessivas.
 - **design-direction** — Transformar um briefing visual vago em uma direção de design explícita, específica ao produto e reutilizável antes da implementação.
 - **design-system-extraction** — Extrair tokens, componentes e padrões visuais de sites ou código, separando valores observados de decisões derivadas e podendo materializar um contrato DESIGN.md.
@@ -91,8 +95,11 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **model-routing-gateway** — Projetar ou configurar roteamento de modelos LLM com seleção por capacidade, retries, fallback, orçamento e observabilidade.
 - **ml-production-engineering** — Projetar e operar sistemas de machine learning do dado à produção com testes, avaliação, serving, monitoramento e ciclos seguros de melhoria.
 - **niche-research** — Pesquisar pautas atuais de um nicho e propor ângulos editoriais com fontes e datas verificadas.
+- **powerbi-engineering** — Projetar, construir, auditar e versionar soluções Power BI com modelo semântico, DAX, performance, temas, embedding e práticas de ALM conforme ferramentas realmente disponíveis.
 - **presentation-template-adaptation** — Adaptar conteúdo a um deck de referência preservando identidade visual, elementos fixos e capacidade dos layouts.
 - **procedural-3d-reconstruction** — Reconstruir objetos de imagens como modelos procedurais Three.js por estágios e comparação visual com a referência.
+- **prioritization-engine** — Priorizar trabalho, oportunidades ou problemas por impacto, urgência, dependências, risco e esforço com critérios explícitos e análise de sensibilidade.
+- **product-metrics-diagnostics** — Diagnosticar movimentos de métricas por definição, funil, cohort, segmento, drivers e qualidade de dados antes de propor ação.
 - **project-complexity-management** — Diagnosticar focos de complexidade técnica, organizacional e externa e definir intervenções proporcionais às evidências.
 - **procedural-film** — Criar curtas verticais animados proceduralmente com Canvas/Web Audio, storyboard em beat grid, render determinístico e revisão quadro a quadro.
 - **project-skill-architecture** — Organizar ou migrar regras e workflows de projetos em skills pequenas, com proprietários canônicos e rotas sem duplicação.
@@ -100,6 +107,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **publication-figure-engineering** — Produzir figuras científicas alinhadas aos claims de papers, separando diagramas conceituais de gráficos quantitativos exatos.
 - **quick-grill** — Fazer uma rodada curta de perguntas de alinhamento quando o usuário pedir explicitamente para ser questionado antes da execução.
 - **reels-scripting** — Analisar a estrutura narrativa de um Reel e criar roteiro original no mesmo padrão, sem copiar conteúdo ou presumir desempenho.
+- **root-cause-analysis** — Investigar causas de problemas operacionais, comerciais ou de produto separando sintomas, mecanismos, fatores contribuintes e evidência causal.
 - **retrieval-quality-engineering** — Diagnosticar e melhorar retrieval/RAG com conjunto de consultas, baseline e avaliação de chunking, busca híbrida e reranking.
 - **retrospective-codify** — Codificar aprendizados recorrentes quando solicitado, escolhendo entre atualizar skill, regra, checklist, teste ou documentação.
 - **runtime-ui-verification** — Verificar mudanças de UI no app em execução por consequências de domínio, estado e rede além da aparência visual.
@@ -109,6 +117,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **shader-graphics-engineering** — Implementar, depurar ou otimizar shaders GLSL/WebGL e gráficos procedurais conforme efeito, runtime, integração DOM/3D e orçamento de desempenho.
 - **skill-builder** — Criar ou atualizar skills reutilizáveis a partir de workflows recorrentes, com gatilhos claros, dependências reais e validação.
 - **skill-security-review** — Inspecionar segurança de skills, agentes ou plugins antes da adoção sem executar instaladores ou código da fonte avaliada.
+- **scenario-forecasting** — Construir forecasts e cenários com baseline, backtesting, intervalos, premissas e gatilhos de atualização sem transformar projeção em certeza.
 - **scroll-storytelling** — Projetar experiências narrativas guiadas por scroll com estágios, pinning, parallax, transições e sincronização DOM/WebGL sem sacrificar acessibilidade ou performance.
 - **social-analytics** — Analisar exports de redes sociais para identificar tendências e desempenho sem extrapolar amostras ou métricas indisponíveis.
 - **social-post-review** — Revisar posts separando qualidade editorial de comparação com o histórico real do autor, sem prever desempenho por score.
