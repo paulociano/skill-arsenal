@@ -64,6 +64,21 @@ Antes de acionar OCR, layout pesado ou VLM:
 
 A saída Markdown é uma representação intermediária útil, não prova de fidelidade. Estrutura perdida, tabelas achatadas e conteúdo visual ainda precisam de verificação contra a fonte.
 
+## Representação intermediária e locators
+
+Para documentos complexos, preferir uma representação intermediária que preserve mais do que texto corrido:
+
+- página e reading order;
+- tipo de bloco;
+- hierarchy/parent-child quando disponível;
+- tabela, fórmula, imagem, caption e code como tipos distintos;
+- bbox/locator ou outro ponteiro estável quando downstream precisar citar/verificar;
+- provenance até o arquivo/página/bloco original.
+
+Markdown pode ser a saída final para leitura, mas JSON/árvore de blocos é melhor quando reconstrução, citation mapping, chunking ou reprocessamento seletivo importam. Ferramentas como Docling, MinerU e Unstructured reforçam esse padrão sem se tornarem dependências obrigatórias.
+
+Ao fazer chunking para RAG, não quebrar automaticamente tabelas, fórmulas, listas ou seções apenas por tamanho. Chunk boundary deve respeitar estrutura antes de token budget quando isso preservar significado.
+
 ## Modos conceituais
 
 - **No-OCR:** text-layer only.
@@ -90,5 +105,7 @@ Combina com `source-to-skill`, `kb-retriever`, `retrieval-quality-engineering` e
 Adaptada de datalab-to/marker.
 
 Router de formatos e fast path de conversão adaptados de https://github.com/microsoft/markitdown, sem exigir MarkItDown, plugins, Azure Content Understanding ou Document Intelligence.
+
+Representação layout-aware, reading order, block tree e locators refinados a partir de https://github.com/docling-project/docling, https://github.com/opendatalab/MinerU e https://github.com/Unstructured-IO/unstructured.
 
 Origem local: [document-extraction-pipeline.docx](../document-extraction-pipeline.docx).
