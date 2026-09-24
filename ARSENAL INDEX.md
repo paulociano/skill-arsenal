@@ -50,6 +50,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **call-evaluation** — Avaliar ligações comerciais de consultoria financeira pelo Card de Ligação, com evidências, rubrica e qualidade do agendamento.
 - **code-review** — Revisar mudanças de código e feedback de PR separando conformidade com padrões, fidelidade à spec e impacto real.
 - **code-understanding-audit** — Explicar código ou auditar decisões arquiteturais com evidências, ajustando profundidade ao conhecimento do leitor.
+- **codex-cost-efficiency** — Reduzir tokens e gasto em tarefas de desenvolvimento no Codex por medição, leitura seletiva, controle de saída e comparação de tarefas concluídas.
 - **compose-performance-audit** — Auditar desempenho de Jetpack Compose com baseline, diagnóstico, correção e comparação de métricas antes e depois.
 - **content-matrix** — Gerar ideias específicas de posts cruzando pilares editoriais com formatos e selecionando oportunidades sustentadas.
 - **creative-web-effects** — Selecionar e integrar efeitos visuais contemporâneos para web como shaders, texturas, partículas, pós-processamento, WebGL e backgrounds procedurais sem sacrificar legibilidade ou performance.
