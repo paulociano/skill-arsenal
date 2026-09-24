@@ -139,4 +139,6 @@ Estado canônico, macros legais e timing adaptados de [fhshaik/typesafe-mario](h
 
 Mandato bounded-autonomy, fail-closed guard, kill switch e audit ledger adaptados de https://github.com/HKUDS/Vibe-Trading. A metodologia foi generalizada; nenhuma lógica de trading ou broker foi importada.
 
-Contratos de operação durável, deduplicação e resultado incerto adaptados de https://github.com/CopilotKit/openmuse (README e docs/VERIFICATION.md) e https://github.com/unreallabsai/unreal-agent (README), sem importar seus runtimes.\n\nOrigem local: [loop-engineering.docx](../loop-engineering.docx).
+Contratos de operação durável, deduplicação e resultado incerto adaptados de https://github.com/CopilotKit/openmuse (README e docs/VERIFICATION.md) e https://github.com/unreallabsai/unreal-agent (README), sem importar seus runtimes.
+
+Origem local: [loop-engineering.docx](../loop-engineering.docx).
