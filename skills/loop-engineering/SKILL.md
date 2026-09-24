@@ -85,6 +85,22 @@ O executor deve **fail closed** quando não consegue provar que a ação cabe no
 
 Se a plataforma não oferece distinção estrutural confiável entre sandbox/paper e produção/live, limitar o agente ao nível mais seguro que pode ser comprovado. Nunca inferir que um ambiente é de teste apenas pelo nome.
 
+## Tarefas duráveis e efeitos externos
+
+Para loops que retomam trabalho após interrupção ou recebem eventos repetidos:
+
+- atribuir a cada entrada externa um ID estável fornecido na origem; deduplicar dentro do escopo declarado antes de iniciar trabalho;
+- persistir histórico aceito, plano/etapa e estado da operação antes de despachar o efeito; registrar status da chamada e operações criadas de forma atômica quando o storage permitir;
+- separar a tradução/validação da chamada de ferramenta, que deve ser limitada e sem I/O bloqueante, da execução assíncrona com timeout, receipt e correlation ID;
+- usar leases ou mecanismo equivalente para recuperar workers interrompidos, impedindo que um executor antigo grave resultado depois de perder ownership;
+- distinguir `pending`, `running`, `waiting-for-input`, `waiting-for-review`, `completed`, `failed` e `outcome-unknown` quando esses estados mudarem a recuperação;
+- ligar aprovação ao alvo, parâmetros, versão e validade da ação; alterações de conta ou contexto invalidam a revisão pendente;
+- quando um provedor puder ter concluído uma escrita cuja resposta se perdeu, consultar o estado/receipt do provedor antes de tentar de novo; não tratar retry como seguro por padrão;
+- cancelamento impede etapas futuras, mas não promete desfazer uma requisição externa já despachada; expor essa condição no estado;
+- manter schema/versionamento do estado persistido e falhar explicitamente em retomadas incompatíveis; testar entrega duplicada, crash entre persistência e despacho, lease expirado e resultado externo incerto.
+
+Essas garantias dependem de storage e executor reais. Em uma conversa sem runtime persistente, usar apenas como contrato de projeto, sem alegar execução durável.
+
 ## Correção focada
 
 Para loops de correção:
@@ -123,4 +139,4 @@ Estado canônico, macros legais e timing adaptados de [fhshaik/typesafe-mario](h
 
 Mandato bounded-autonomy, fail-closed guard, kill switch e audit ledger adaptados de https://github.com/HKUDS/Vibe-Trading. A metodologia foi generalizada; nenhuma lógica de trading ou broker foi importada.
 
-Origem local: [loop-engineering.docx](../loop-engineering.docx).
+Contratos de operação durável, deduplicação e resultado incerto adaptados de https://github.com/CopilotKit/openmuse (README e docs/VERIFICATION.md) e https://github.com/unreallabsai/unreal-agent (README), sem importar seus runtimes.\n\nOrigem local: [loop-engineering.docx](../loop-engineering.docx).
