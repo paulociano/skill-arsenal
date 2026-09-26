@@ -48,6 +48,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **arsenal-router** — Seleciona e orquestra a menor combinação necessária de skills e stacks do Skill Arsenal.
 - **beautiful-web-article** — Transformar fontes fornecidas em artigos ou páginas editoriais HTML legíveis, explicativamente bem estruturados e fiéis ao conteúdo.
 - **behavior-contract-validation** — Validar aplicações, CLIs, APIs e artefatos como caixa-preta contra um contrato de comportamento observável, separando evidência de runtime de revisão de implementação.
+- **brand-strategy** — Construir ou revisar uma estratégia de marca conectando categoria, audiência, posicionamento, diferenciação, prova, personalidade, voz, mensagens e objetivos sem inventar pesquisa ou transformar opinião em fato de mercado.
 - **brand-logo-exploration** — Explorar conceitos de logo e identidade, testar escala e monocromia e refinar a direção escolhida.
 - **call-evaluation** — Avaliar ligações comerciais de consultoria financeira pelo Card de Ligação, com evidências, rubrica e qualidade do agendamento.
 - **codebase-design** — Projetar ou refatorar módulos profundos com interfaces pequenas, seams explícitos, alta alavancagem, locality e testabilidade, evitando abstrações rasas e pass-through.
@@ -78,6 +79,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **experiment-design** — Desenhar experimentos falsificáveis com hipótese, métrica primária, guardrails e critérios de decisão anteriores aos resultados.
 - **formal-methods-reconciler** — Traduzir dúvidas críticas de correção de software em modelos mínimos verificáveis e interpretar provas ou contraexemplos.
 - **founder-diagnose** — Diagnosticar gargalos de startups em produto, mercado, posicionamento, distribuição ou monetização antes de escolher uma intervenção.
+- **functional-skill-architecture** — Modularizar skills complexas como pipelines de funções com contratos explícitos de entrada e saída, referências compartilhadas, scripts determinísticos, traces e casos de regressão quando a complexidade justificar essa estrutura.
 - **golden-circle-feedback** — Redigir feedback comportamental usando POR QUÊ, COMO e O QUÊ, com propósito, fatos observáveis e próxima ação.
 - **golden-path-capture** — Capturar workflows difíceis já verificados como caminhos reutilizáveis, registrando condição de promoção, falhas descartadas, escopo e higiene de segredos antes de codificar o aprendizado como skill ou documentação.
 - **graph-engineering** — Modelar workflows com dependências e paralelismo reais como grafos limitados, com contratos de saída, joins e recuperação local.
@@ -104,6 +106,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **model-routing-gateway** — Projetar ou configurar roteamento de modelos LLM com seleção por capacidade, retries, fallback, orçamento e observabilidade.
 - **ml-production-engineering** — Projetar e operar sistemas de machine learning do dado à produção com testes, avaliação, serving, monitoramento e ciclos seguros de melhoria.
 - **niche-research** — Pesquisar pautas atuais de um nicho e propor ângulos editoriais com fontes e datas verificadas.
+- **plain-writing** — Escrever ou revisar prosa para máxima clareza usando palavras comuns, estrutura lógica, terminologia consistente, contexto suficiente e remoção de jargão, puffery e formulações artificiais.
 - **powerbi-engineering** — Projetar, construir, auditar e versionar soluções Power BI com modelo semântico, DAX, performance, temas, embedding e práticas de ALM conforme ferramentas realmente disponíveis.
 - **presentation-template-adaptation** — Adaptar conteúdo a um deck de referência preservando identidade visual, elementos fixos e capacidade dos layouts.
 - **procedural-3d-reconstruction** — Reconstruir objetos de imagens como modelos procedurais Three.js por estágios e comparação visual com a referência.
@@ -117,6 +120,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **prose-lint** — Auditar prosa por clareza, redundância, ambiguidade, jargão, inconsistência e linguagem potencialmente excludente usando checks como sinais, não regras absolutas.
 - **publication-figure-engineering** — Produzir figuras científicas alinhadas aos claims de papers, separando diagramas conceituais de gráficos quantitativos exatos.
 - **quick-grill** — Fazer uma rodada curta de perguntas de alinhamento quando o usuário pedir explicitamente para ser questionado antes da execução.
+- **research-question-design** — Transformar temas, gaps, hipóteses ou projetos científicos vagos em perguntas importantes, tratáveis e falsificáveis, com hipóteses rivais, evidência discriminante, piloto e riscos de rejeição explícitos.
 - **reels-scripting** — Analisar a estrutura narrativa de um Reel e criar roteiro original no mesmo padrão, sem copiar conteúdo ou presumir desempenho.
 - **root-cause-analysis** — Investigar causas de problemas operacionais, comerciais ou de produto separando sintomas, mecanismos, fatores contribuintes e evidência causal.
 - **retrieval-quality-engineering** — Diagnosticar e melhorar retrieval/RAG com conjunto de consultas, baseline e avaliação de chunking, busca híbrida e reranking.
