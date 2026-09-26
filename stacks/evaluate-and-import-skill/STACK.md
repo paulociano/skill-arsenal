@@ -29,3 +29,10 @@ Adicionar skills externas sem copiar dependências incompatíveis, redundância 
 
 ## Regra de parcimônia
 Prefira melhorar uma skill existente a criar uma duplicata quase equivalente.
+
+
+## Escalonamento para Autopilot
+
+Para uma única skill ou fonte simples, execute esta stack diretamente.
+
+Quando houver múltiplos repositórios, ecossistemas grandes, overlap significativo ou necessidade de consolidar várias fontes em owners canônicos, escale para `arsenal-autopilot`. O Autopilot usa esta stack como componente, adicionando capability ledger, resolução de ownership, prova de valor incremental e política de lote.
