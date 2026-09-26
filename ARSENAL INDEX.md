@@ -41,11 +41,13 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 
 - **3gpp-standards-research** — Pesquisar padrões celulares 3GPP, protocolos e evolução de releases com TS/TR e status normativo verificáveis.
 - **academic-paper-orchestration** — Estruturar e revisar manuscritos acadêmicos a partir de pesquisa real, verificando claims, resultados, figuras e citações.
+- **academic-rebuttal** — Estruturar rebuttals e author responses acadêmicos a partir de reviews, paper, código, regras confirmadas do venue, evidência rastreável, triagem de experimentos e cobertura completa das preocupações dos revisores.
 - **after-action-review** — Conduzir retrospectivas e postmortems de eventos ou projetos concluídos, ligando causas e impacto a ações verificáveis.
 - **agenda-operations** — Auditar e operar a agenda por capacidade, preparação, conflitos, dívida de reuniões e blocos de foco, propondo alterações seguras antes de executar mudanças.
 - **architecture-visualization** — Criar diagramas de arquitetura, sequência, estados e fluxos a partir de descrições ou código com topologia rastreável.
 - **arsenal-router** — Seleciona e orquestra a menor combinação necessária de skills e stacks do Skill Arsenal.
 - **beautiful-web-article** — Transformar fontes fornecidas em artigos ou páginas editoriais HTML legíveis, explicativamente bem estruturados e fiéis ao conteúdo.
+- **behavior-contract-validation** — Validar aplicações, CLIs, APIs e artefatos como caixa-preta contra um contrato de comportamento observável, separando evidência de runtime de revisão de implementação.
 - **brand-logo-exploration** — Explorar conceitos de logo e identidade, testar escala e monocromia e refinar a direção escolhida.
 - **call-evaluation** — Avaliar ligações comerciais de consultoria financeira pelo Card de Ligação, com evidências, rubrica e qualidade do agendamento.
 - **codebase-design** — Projetar ou refatorar módulos profundos com interfaces pequenas, seams explícitos, alta alavancagem, locality e testabilidade, evitando abstrações rasas e pass-through.
@@ -65,6 +67,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **design-system-governance** — Criar ou evoluir design systems rastreando princípios, decisões, tokens, contratos de componentes, implementação e um contrato DESIGN.md quando útil.
 - **editable-visual-design** — Criar pôsteres, infográficos, capas, banners e social cards editáveis com hierarquia, composição tipográfica, assets rastreáveis e revisão visual do render.
 - **diagnosing-bugs** — Diagnosticar bugs difíceis e regressões com reprodução mínima, hipóteses falsificáveis e teste da correção.
+- **directional-prompting** — Projetar ou revisar prompts, instruções e descrições de skills combinando resultado verificável, critérios de sucesso, condição de parada e linguagem positiva orientada à ação.
 - **discovery-research-synthesis** — Sintetizar entrevistas, tickets e pesquisas em padrões, contradições e decisões com evidência rastreável.
 - **domain-modeling** — Construir e refinar o modelo de domínio de um projeto com linguagem canônica, cenários de borda, glossário e ADRs somente quando decisões irreversíveis e surpreendentes exigirem contexto.
 - **document-extraction-pipeline** — Converter documentos complexos em conteúdo estruturado, usando extração textual primeiro e OCR seletivo quando necessário.
@@ -76,6 +79,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **formal-methods-reconciler** — Traduzir dúvidas críticas de correção de software em modelos mínimos verificáveis e interpretar provas ou contraexemplos.
 - **founder-diagnose** — Diagnosticar gargalos de startups em produto, mercado, posicionamento, distribuição ou monetização antes de escolher uma intervenção.
 - **golden-circle-feedback** — Redigir feedback comportamental usando POR QUÊ, COMO e O QUÊ, com propósito, fatos observáveis e próxima ação.
+- **golden-path-capture** — Capturar workflows difíceis já verificados como caminhos reutilizáveis, registrando condição de promoção, falhas descartadas, escopo e higiene de segredos antes de codificar o aprendizado como skill ou documentação.
 - **graph-engineering** — Modelar workflows com dependências e paralelismo reais como grafos limitados, com contratos de saída, joins e recuperação local.
 - **gsap-animation** — Implementar e revisar animações GSAP com timelines, ScrollTrigger, matchMedia, performance e integração ao ciclo de vida, preservando acessibilidade e limpeza.
 - **handoff** — Preparar contexto compacto para continuar uma tarefa em outra sessão ou obter comparação independente ou crítica.
