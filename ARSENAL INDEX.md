@@ -48,6 +48,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **beautiful-web-article** — Transformar fontes fornecidas em artigos ou páginas editoriais HTML legíveis, explicativamente bem estruturados e fiéis ao conteúdo.
 - **brand-logo-exploration** — Explorar conceitos de logo e identidade, testar escala e monocromia e refinar a direção escolhida.
 - **call-evaluation** — Avaliar ligações comerciais de consultoria financeira pelo Card de Ligação, com evidências, rubrica e qualidade do agendamento.
+- **codebase-design** — Projetar ou refatorar módulos profundos com interfaces pequenas, seams explícitos, alta alavancagem, locality e testabilidade, evitando abstrações rasas e pass-through.
 - **code-review** — Revisar mudanças de código e feedback de PR separando conformidade com padrões, fidelidade à spec e impacto real.
 - **code-understanding-audit** — Explicar código ou auditar decisões arquiteturais com evidências, ajustando profundidade ao conhecimento do leitor.
 - **codex-cost-efficiency** — Reduzir tokens e gasto em tarefas de desenvolvimento no Codex por medição, leitura seletiva, controle de saída e comparação de tarefas concluídas.
@@ -65,6 +66,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **editable-visual-design** — Criar pôsteres, infográficos, capas, banners e social cards editáveis com hierarquia, composição tipográfica, assets rastreáveis e revisão visual do render.
 - **diagnosing-bugs** — Diagnosticar bugs difíceis e regressões com reprodução mínima, hipóteses falsificáveis e teste da correção.
 - **discovery-research-synthesis** — Sintetizar entrevistas, tickets e pesquisas em padrões, contradições e decisões com evidência rastreável.
+- **domain-modeling** — Construir e refinar o modelo de domínio de um projeto com linguagem canônica, cenários de borda, glossário e ADRs somente quando decisões irreversíveis e surpreendentes exigirem contexto.
 - **document-extraction-pipeline** — Converter documentos complexos em conteúdo estruturado, usando extração textual primeiro e OCR seletivo quando necessário.
 - **eli5** — Explicar conceitos a um público específico com linguagem, analogias, exemplos e profundidade adequadas, sem infantilizar.
 - **explanation-architecture** — Escolher e estruturar a forma certa de explicar um assunto entre tutorial, how-to, explanation e reference, ajustando sequência, exemplos e profundidade ao objetivo do leitor.
@@ -92,6 +94,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **loop-engineering** — Projetar trabalho recorrente ou iterativo com trigger, execução, verificação, estado persistido e limites de parada.
 - **material-design-3** — Implementar ou auditar interfaces Material Design 3 em Compose, Flutter ou web conforme a plataforma e versão reais.
 - **motion-asset-engineering** — Escolher, integrar e validar assets animados em web entre SVG/CSS, Lottie, Rive, Canvas e vídeo conforme interação, peso, editabilidade e acessibilidade.
+- **merge-conflict-resolution** — Resolver conflitos de merge ou rebase por intenção e fonte primária, preservando comportamentos compatíveis, validando checks e concluindo a operação sem inventar mudanças novas.
 - **meeting-knowledge-capture** — Converter gravações, transcrições ou notas de reuniões em decisões e ações rastreáveis no destino autorizado.
 - **mobile-device-automation** — Executar e verificar tarefas em dispositivos móveis somente com controle real disponível, por ações pequenas e observação de estado.
 - **model-routing-gateway** — Projetar ou configurar roteamento de modelos LLM com seleção por capacidade, retries, fallback, orçamento e observabilidade.
