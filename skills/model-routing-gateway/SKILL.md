@@ -112,6 +112,40 @@ Quando houver requisito de execução local/on-device:
 
 Ollama é uma implementação possível do lado local. A metodologia vale também para llama.cpp/vLLM e runtimes equivalentes.
 
+## Agregação de free tiers e cotas compartilhadas
+
+Quando o pool combinar free tiers ou múltiplas chaves, aplicar estes checks adicionais:
+
+1. **Orçamento efetivo.** Registrar limite, unidade, janela, reset, origem e validade por modelo, chave e pool de conta/projeto. Não somar cotas de modelos ou chaves que compartilham o mesmo pool. Limite desconhecido não significa ilimitado; números de catálogo não garantem capacidade disponível para a conta.
+2. **Concorrência.** Reservar requisição e tokens estimados antes do dispatch, reconciliar com consumo observado e liberar reservas de forma idempotente também em erro/cancelamento. Definir expiração e recuperação após falha. Em múltiplos workers, usar coordenação compartilhada/atômica: leases somente em memória de um processo não protegem o pool global.
+3. **Pressão versus bloqueio.** Usar headroom em cache para ordenar destinos, mas manter a admissão baseada em contadores e reservas atuais. Considerar a janela mais restritiva e confirmar o reset do provedor; não generalizar meia-noite UTC para todos.
+4. **Origem do cooldown.** Separar indisponibilidade estimada, Retry-After/reset explícito, falta de crédito, autenticação inválida e restrição de plano. Usar probes com orçamento e jitter apenas para hipóteses de recuperação; uma chave autenticada não prova reposição de crédito nem acesso ao modelo. Nunca antecipar retry antes do prazo explícito, mesmo que ultrapasse o teto do backoff local.
+5. **Limites aprendidos.** Ajustar limites com evidência inequívoca de unidade e escopo em headers/erros; registrar data e confiança. Não aumentar capacidade automaticamente por interpretação ambígua nem sobrescrever ajustes locais silenciosamente.
+6. **Contrato por rota.** Testar endpoint, streaming, tools, JSON/schema, contexto e modalidade usados pelo cliente. Compatibilidade OpenAI não implica paridade de todas as APIs. Fixar grupo equivalente para pedido de modelo específico; degradar para outro modelo somente quando a política permitir, expondo o destino efetivo.
+7. **Qualidade e privacidade.** Medir qualidade conforme os melhores destinos esgotam suas cotas. Impedir fallback para destinos fora da política de dados. Rotação de chaves não cria direito a cotas adicionais; respeitar os limites de conta e termos aplicáveis.
+
+### Catálogo remoto e operação
+
+- Tratar atualização de catálogo como mudança de configuração: verificar assinatura, schema, versão e frescor; manter estado anterior em falha.
+- Preservar overrides, modelos desativados/excluídos pelo usuário e endpoints próprios. Separar disponibilidade anunciada, capacidade validada e permissão de uso.
+- Assinatura comprova procedência/integridade, não exatidão de cotas, confiança em qualquer novo destino ou disponibilidade atual. Validar também a política local antes de ativar rotas.
+- Separar credencial do gateway das chaves upstream; proteger chave mestra, backups, exportações e logs. Criptografia em repouso não protege contra comprometimento do processo que descriptografa.
+- Fixar versão/digest antes de uma implantação reproduzível. Distinguir ferramenta pessoal em rede confiável de gateway público ou multi-tenant.
+- Tratar síntese em painel de modelos e compressão de prompts como opções separadas: exigir benefício medido, orçamento e política de dados; não ativar só porque o gateway oferece.
+
+### Verificação mínima deste cenário
+
+| Cenário | Resultado exigido |
+| --- | --- |
+| Dois modelos/chaves compartilham cota de conta | Uso agregado respeita um único pool |
+| Duas chamadas disputam a última vaga | Reserva atômica admite somente a capacidade restante |
+| Provedor informa Retry-After maior que o teto local | Nenhuma tentativa antecipada |
+| Chave válida, mas crédito/plano bloqueado | Probe de autenticação não reabilita a rota |
+| Catálogo sem assinatura ou com modelo desativado localmente | Rejeitar atualização inválida e preservar decisão local |
+| Pool gratuito só tem destinos sem tools/privacidade exigida | Retornar indisponibilidade explícita, sem degradar o contrato |
+
+FreeLLMAPI é uma referência de implementação para esses padrões, não uma dependência instalada. Seu uso exige servidor real, credenciais próprias e validação do cliente. Um MCP exposto pelo produto não altera o modelo interno desta conversa nem está disponível sem conexão efetiva.
+
 ## Ferramentas e dependências
 
 Usar esta skill para desenhar arquitetura ou configurar gateways reais quando o usuário tiver LiteLLM, Vercel AI Gateway, provider APIs ou infraestrutura equivalente. Não presumir que o assistente desta conversa controla roteamento interno de modelos. Decision engines especializados exigem runtime real e avaliação própria antes de entrar no pool.
@@ -123,6 +157,8 @@ Combina com `graph-engineering`, `loop-engineering`, `library-version-grounding`
 ## Referências
 
 Adaptada de BerriAI/litellm.
+
+Cotas, leases, origem de cooldown e catálogo: [tashfeenahmed/freellmapi](https://github.com/tashfeenahmed/freellmapi/tree/a0befbc6718bbbf2d856c9cf08d01a92aefbe1e4). Ver [avaliação e limites da adaptação](../../evaluations/2026-09-26-freellmapi.md).
 
 Decision engines tipados: [TheoLeeCJ/SemIf](https://github.com/TheoLeeCJ/SemIf) e [NandhaKishorM/laya](https://github.com/NandhaKishorM/laya), usados como referências arquiteturais, não dependências do Arsenal.
 
