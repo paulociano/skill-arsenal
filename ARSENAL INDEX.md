@@ -22,6 +22,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/creative-web-engineering/STACK.md`
 - **content-production** — Planeja, produz, adapta, governa e revisa conteúdo para múltiplos canais mantendo consistência de mensagem e capacidade operacional.  
   `stacks/content-production/STACK.md`
+- **concept-to-3d-asset** — Converte uma ideia ou referência visual em asset 3D por um fluxo recorrente de direção visual, imagem 3D-ready, reconstrução neural ou procedural e QA multi-view.  
+  `stacks/concept-to-3d-asset/STACK.md`
 - **debug-and-fix** — Investiga, corrige e valida bugs em software com diagnóstico estruturado, testes e revisão proporcional ao risco.  
   `stacks/debug-and-fix/STACK.md`
 - **evaluate-and-import-skill** — Avalia uma skill externa, compara com o Arsenal, adapta para o ambiente atual, revisa segurança e importa somente quando houver valor real.  
@@ -90,8 +92,10 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **graph-engineering** — Modelar workflows com dependências e paralelismo reais como grafos limitados, com contratos de saída, joins e recuperação local.
 - **gsap-animation** — Implementar e revisar animações GSAP com timelines, ScrollTrigger, matchMedia, performance e integração ao ciclo de vida, preservando acessibilidade e limpeza.
 - **handoff** — Preparar contexto compacto para continuar uma tarefa em outra sessão ou obter comparação independente ou crítica.
+- **high-fidelity-image-generation** — Gerar ou editar imagens raster com direção visual estruturada, preservação explícita de invariantes e ciclos curtos de inspeção, incluindo preparação de imagens adequadas para reconstrução 3D.
 - **idea-refine** — Refinar ideias vagas, explorar alternativas, testar premissas e definir uma direção e escopo de MVP.
 - **instagram-growth-diagnostics** — Diagnosticar onde o crescimento de um perfil do Instagram está travado usando métricas disponíveis e rotear o gargalo para a intervenção adequada.
+- **image-to-3d** — Preparar, rotear e validar conversões de imagens em assets 3D por modelos de reconstrução externos, escolhendo backend por fidelidade, velocidade, hardware, materiais e formato sem fingir execução indisponível.
 - **interactive-system-diagram** — Criar diagramas interativos de arquitetura, workflow, sequência, dataflow ou lifecycle com topologia verificável, artefato HTML explorável e separação explícita entre validação estrutural, verificação no browser e revisão perceptual.
 - **interaction-polish** — Refinar o último nível de qualidade de uma interface por microinterações, feedback, estados, tipografia animada e comportamento contextual sem transformar polish em decoração excessiva.
 - **jtbd-framing** — Reformular decisões de produto por Jobs-to-be-Done, situações reais, dificuldades e critérios de adoção ou abandono.
