@@ -60,7 +60,8 @@ Antes de concluir:
 - `use <skill>`: usar explicitamente a skill correspondente.
 - `use <stack>`: usar explicitamente a stack correspondente.
 - `arsenal: <tarefa>`: consultar o índice e selecionar automaticamente a menor combinação.
-- `avaliar skill: <url>`: preferir a stack `evaluate-and-import-skill`.
+- `avaliar skill: <url>`: preferir `evaluate-and-import-skill` para uma fonte simples; usar `arsenal-autopilot` para lotes, ecossistemas grandes ou quando a comparação de overlap/ownership for central.
+- `arsenal autopilot: <urls/tarefa>`: usar a stack `arsenal-autopilot` para avaliar e evoluir o Arsenal de ponta a ponta.
 
 ## Manutenção do índice
 Quando uma skill ou stack for criada, removida, renomeada ou tiver sua `description` alterada materialmente, atualize também `ARSENAL INDEX.md`.
