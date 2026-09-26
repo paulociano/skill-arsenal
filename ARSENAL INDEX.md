@@ -43,6 +43,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **academic-paper-orchestration** — Estruturar e revisar manuscritos acadêmicos a partir de pesquisa real, verificando claims, resultados, figuras e citações.
 - **academic-rebuttal** — Estruturar rebuttals e author responses acadêmicos a partir de reviews, paper, código, regras confirmadas do venue, evidência rastreável, triagem de experimentos e cobertura completa das preocupações dos revisores.
 - **after-action-review** — Conduzir retrospectivas e postmortems de eventos ou projetos concluídos, ligando causas e impacto a ações verificáveis.
+- **agent-choice-audit** — Auditar decisões que um agente tomou por conta própria durante implementação, distinguindo o que veio da spec do que foi inventado, registrando impacto, confiança, reversibilidade e decisão corrigida quando necessário.
 - **agenda-operations** — Auditar e operar a agenda por capacidade, preparação, conflitos, dívida de reuniões e blocos de foco, propondo alterações seguras antes de executar mudanças.
 - **architecture-visualization** — Criar diagramas de arquitetura, sequência, estados e fluxos a partir de descrições ou código com topologia rastreável.
 - **arsenal-router** — Seleciona e orquestra a menor combinação necessária de skills e stacks do Skill Arsenal.
@@ -77,6 +78,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **email-campaign-engineering** — Planejar e construir campanhas de e-mail HTML com copy, assets, compatibilidade e verificação antes do envio autorizado.
 - **empirical-prompt-tuning** — Avaliar e melhorar prompts ou skills mediante pedido de otimização empírica, com cenários fixos, baseline e holdout.
 - **experiment-design** — Desenhar experimentos falsificáveis com hipótese, métrica primária, guardrails e critérios de decisão anteriores aos resultados.
+- **first-customer-research** — Pesquisar potenciais primeiros clientes, beta users ou design partners a partir de sinais públicos recentes, qualificando dor, fit, timing, alcance e evidência sem tratar prospect como comprador confirmado nem automatizar outreach.
 - **formal-methods-reconciler** — Traduzir dúvidas críticas de correção de software em modelos mínimos verificáveis e interpretar provas ou contraexemplos.
 - **founder-diagnose** — Diagnosticar gargalos de startups em produto, mercado, posicionamento, distribuição ou monetização antes de escolher uma intervenção.
 - **functional-skill-architecture** — Modularizar skills complexas como pipelines de funções com contratos explícitos de entrada e saída, referências compartilhadas, scripts determinísticos, traces e casos de regressão quando a complexidade justificar essa estrutura.
@@ -91,6 +93,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **jtbd-framing** — Reformular decisões de produto por Jobs-to-be-Done, situações reais, dificuldades e critérios de adoção ou abandono.
 - **kb-retriever** — Responder perguntas em bases documentais grandes por busca progressiva, leitura localizada e citações rastreáveis.
 - **landing-craft** — Projetar landing pages como narrativas de scroll com conceito visual, message match, prova, objeções e CTA coerentes.
+- **latex-to-word** — Planejar, executar e revisar conversões acadêmicas de LaTeX para Word preservando conteúdo científico, estilos, numeração, citações, referências cruzadas e semântica de objetos com validação proporcional ao risco.
 - **legacy-system-reconstruction** — Reconstruir documentação, regras e arquitetura de sistemas legados em descoberta somente leitura antes de planejar modernização.
 - **library-version-grounding** — Fundamentar decisões de programação na versão instalada de bibliotecas e na documentação oficial correspondente.
 - **linkedin-profile-optimizer** — Reestruturar perfis de LinkedIn com posicionamento, headline, About, experiências e provas factuais.
@@ -123,6 +126,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **research-question-design** — Transformar temas, gaps, hipóteses ou projetos científicos vagos em perguntas importantes, tratáveis e falsificáveis, com hipóteses rivais, evidência discriminante, piloto e riscos de rejeição explícitos.
 - **reels-scripting** — Analisar a estrutura narrativa de um Reel e criar roteiro original no mesmo padrão, sem copiar conteúdo ou presumir desempenho.
 - **root-cause-analysis** — Investigar causas de problemas operacionais, comerciais ou de produto separando sintomas, mecanismos, fatores contribuintes e evidência causal.
+- **repository-evidence-docs** — Criar e manter documentação viva de repositórios a partir de comportamento real, conceitos, mapa de código, evidências e regras de sincronização, atualizando apenas o que ficaria enganoso após mudanças.
 - **retrieval-quality-engineering** — Diagnosticar e melhorar retrieval/RAG com conjunto de consultas, baseline e avaliação de chunking, busca híbrida e reranking.
 - **retrospective-codify** — Codificar aprendizados recorrentes quando solicitado, escolhendo entre atualizar skill, regra, checklist, teste ou documentação.
 - **runtime-ui-verification** — Verificar mudanças de UI no app em execução por consequências de domínio, estado e rede além da aparência visual.
