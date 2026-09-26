@@ -181,3 +181,8 @@ Esta stack governa e compõe, conforme necessário:
 - `verify-before-claim`.
 
 Esses recursos são candidatos, não etapas obrigatórias em toda execução.
+
+
+## Referências internas
+- `references/CAPABILITY-LEDGER.md` — schema de comparação, ownership e prova.
+- `references/ACCEPTANCE-CASES.md` — should-trigger, near-miss e critérios de conclusão para regressão do Autopilot.
