@@ -32,7 +32,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/meeting-to-actions/STACK.md`
 - **research-and-synthesize** — Pesquisa um tema com múltiplas fontes, reconcilia evidências e produz uma síntese clara, útil e verificável.  
   `stacks/research-and-synthesize/STACK.md`
-- **research-to-presentation** — Converte pesquisa e evidências em uma apresentação estruturada, visualmente coerente e adequada ao público.  
+- **research-to-presentation** — Converte pesquisa, documentos ou dados em apresentações e dashboards executivos editáveis, estruturados por evidência, narrativa e QA visual.  
   `stacks/research-to-presentation/STACK.md`
 - **social-growth-engine** — Diagnostica gargalos de crescimento social, pesquisa oportunidades, planeja conteúdo, produz, mede e realimenta o próximo ciclo.  
   `stacks/social-growth-engine/STACK.md`
