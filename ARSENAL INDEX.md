@@ -72,6 +72,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **directional-prompting** — Projetar ou revisar prompts, instruções e descrições de skills combinando resultado verificável, critérios de sucesso, condição de parada e linguagem positiva orientada à ação.
 - **discovery-research-synthesis** — Sintetizar entrevistas, tickets e pesquisas em padrões, contradições e decisões com evidência rastreável.
 - **domain-modeling** — Construir e refinar o modelo de domínio de um projeto com linguagem canônica, cenários de borda, glossário e ADRs somente quando decisões irreversíveis e surpreendentes exigirem contexto.
+- **document-to-markdown** — Converter documentos de escritório, apresentações, planilhas, ebooks e PDFs em Markdown limpo usando extração local primeiro, tratando OCR como fallback explícito e proporcional ao conteúdo realmente ilegível.
 - **document-extraction-pipeline** — Converter documentos complexos em conteúdo estruturado, usando extração textual primeiro e OCR seletivo quando necessário.
 - **eli5** — Explicar conceitos a um público específico com linguagem, analogias, exemplos e profundidade adequadas, sem infantilizar.
 - **explanation-architecture** — Escolher e estruturar a forma certa de explicar um assunto entre tutorial, how-to, explanation e reference, ajustando sequência, exemplos e profundidade ao objetivo do leitor.
@@ -89,6 +90,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **handoff** — Preparar contexto compacto para continuar uma tarefa em outra sessão ou obter comparação independente ou crítica.
 - **idea-refine** — Refinar ideias vagas, explorar alternativas, testar premissas e definir uma direção e escopo de MVP.
 - **instagram-growth-diagnostics** — Diagnosticar onde o crescimento de um perfil do Instagram está travado usando métricas disponíveis e rotear o gargalo para a intervenção adequada.
+- **interactive-system-diagram** — Criar diagramas interativos de arquitetura, workflow, sequência, dataflow ou lifecycle com topologia verificável, artefato HTML explorável e separação explícita entre validação estrutural, verificação no browser e revisão perceptual.
 - **interaction-polish** — Refinar o último nível de qualidade de uma interface por microinterações, feedback, estados, tipografia animada e comportamento contextual sem transformar polish em decoração excessiva.
 - **jtbd-framing** — Reformular decisões de produto por Jobs-to-be-Done, situações reais, dificuldades e critérios de adoção ou abandono.
 - **kb-retriever** — Responder perguntas em bases documentais grandes por busca progressiva, leitura localizada e citações rastreáveis.
@@ -106,6 +108,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **merge-conflict-resolution** — Resolver conflitos de merge ou rebase por intenção e fonte primária, preservando comportamentos compatíveis, validando checks e concluindo a operação sem inventar mudanças novas.
 - **meeting-knowledge-capture** — Converter gravações, transcrições ou notas de reuniões em decisões e ações rastreáveis no destino autorizado.
 - **mobile-device-automation** — Executar e verificar tarefas em dispositivos móveis somente com controle real disponível, por ações pequenas e observação de estado.
+- **multi-agent-orchestration** — Coordenar múltiplos agentes ou workers em tarefas paralelas com isolamento, ownership explícito, contratos de entrada e saída, estados observáveis e integração centralizada, somente quando ferramentas reais de delegação estiverem disponíveis.
 - **model-routing-gateway** — Projetar ou configurar roteamento de modelos LLM com seleção por capacidade, retries, fallback, orçamento e observabilidade.
 - **ml-production-engineering** — Projetar e operar sistemas de machine learning do dado à produção com testes, avaliação, serving, monitoramento e ciclos seguros de melhoria.
 - **niche-research** — Pesquisar pautas atuais de um nicho e propor ângulos editoriais com fontes e datas verificadas.
