@@ -43,6 +43,8 @@ Para cada fonte externa:
 3. localize SKILL.md, manifests ou documentos centrais;
 4. abra somente os candidatos que parecem materialmente novos.
 
+Quando a fonte for um diretório/ecossistema como skills.sh, trate-o como **radar de descoberta**, não como autoridade: use busca, categorias, popularidade, origem e sinais de auditoria apenas para formar shortlist; em seguida resolva o repositório/fonte original e faça a avaliação canônica ali. Install counts, trending e badges não são prova de qualidade, segurança ou fit.
+
 Não execute installers, setup, scripts ou binários da fonte para descobrir valor.
 
 ### 2. Extract capabilities
@@ -143,8 +145,9 @@ Use `golden-path-capture` apenas quando a execução revelar um processo novo e 
 Não transforme cada lote em novas regras. Atualize o Autopilot somente quando a evidência mostrar que o pipeline atual perdeu um caso importante ou gerou erro recorrente.
 
 ## Política de lote
-Para muitos repositórios:
-- faça triagem ampla por README/root;
+Para muitos repositórios ou catálogos:
+- faça triagem ampla por README/root ou metadados de discovery;
+- para catálogos, nunca adote diretamente do ranking: resolva primeiro a fonte original;
 - aprofunde somente candidatos com novidade plausível;
 - agrupe avaliações relacionadas em um único registro quando isso melhorar rastreabilidade;
 - não crie uma skill por repositório;
