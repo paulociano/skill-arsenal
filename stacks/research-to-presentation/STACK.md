@@ -12,6 +12,7 @@ Partir de pesquisa, documentos, dados ou material bruto e chegar a uma apresenta
 - discovery-research-synthesis
 - dashboard-design
 - presentation-template-adaptation
+- cinematic-visual-direction
 - publication-figure-engineering
 - writing-quality
 - verify-before-claim
@@ -21,13 +22,14 @@ Partir de pesquisa, documentos, dados ou material bruto e chegar a uma apresenta
 2. **Evidence** — sintetizar as fontes e manter um ledger mínimo de claims, números, figuras, origem, período e lacunas. Não inventar número para preencher layout.
 3. **Story** — definir tese, arco e função de cada slide antes de hidratar o deck. Para apresentações relevantes, revisar a sequência enquanto mudanças ainda são baratas.
 4. **Design contract** — definir direção visual, ritmo, densidade e famílias de componentes. Use `presentation-template-adaptation` quando houver template ou deck de referência.
-5. **Dashboard route** — quando o deck for quantitativo ou recorrente, usar `dashboard-design` e mapear cada pergunta decisória para KPI, comparação, driver, exceção ou ação. Preferir gráficos, tabelas, KPIs e shapes nativos/editáveis quando o runtime permitir.
-6. **Visual encoding** — usar `publication-figure-engineering` quando gráficos ou figuras quantitativas exigirem tratamento especializado. A geometria deve representar os valores corretamente; decoração não pode se passar por evidência.
-7. **Build from source** — manter uma fonte regenerável do deck sempre que o ambiente permitir. Corrigir plano, dados, conteúdo ou layout na fonte e reconstruir, em vez de remendar apenas o PPTX final.
-8. **Deterministic QA** — verificar, conforme as ferramentas disponíveis: overflow, overlap, texto cortado, contraste, placeholders, fontes, arquivo inválido/corrompido, ausência de notas/citações exigidas e consistência entre dado e visual.
-9. **Rendered QA** — renderizar ou inspecionar visualmente o deck final quando possível. Avaliar hierarquia, ritmo, repetição, densidade, alinhamento, legibilidade e se cada slide comunica sua mensagem sem depender da intenção do autor.
-10. **Critic pass** — em decks relevantes, fazer uma revisão independente ou fresh-eyes proporcional ao risco depois do primeiro render; priorizar poucos findings de alto impacto e reconstruir o necessário.
-11. **Verify** — conferir dados, claims, fontes, períodos, consistência narrativa e entregáveis antes de afirmar conclusão.
+5. **Cinematic route** — quando a apresentação pedir linguagem de cenas, vídeo, câmera ou motion de alto impacto, usar `cinematic-presentation` como rota especializada em vez de animar o deck inteiro por padrão.
+6. **Dashboard route** — quando o deck for quantitativo ou recorrente, usar `dashboard-design` e mapear cada pergunta decisória para KPI, comparação, driver, exceção ou ação. Preferir gráficos, tabelas, KPIs e shapes nativos/editáveis quando o runtime permitir.
+7. **Visual encoding** — usar `publication-figure-engineering` quando gráficos ou figuras quantitativas exigirem tratamento especializado. A geometria deve representar os valores corretamente; decoração não pode se passar por evidência.
+8. **Build from source** — manter uma fonte regenerável do deck sempre que o ambiente permitir. Corrigir plano, dados, conteúdo ou layout na fonte e reconstruir, em vez de remendar apenas o PPTX final.
+9. **Deterministic QA** — verificar, conforme as ferramentas disponíveis: overflow, overlap, texto cortado, contraste, placeholders, fontes, arquivo inválido/corrompido, ausência de notas/citações exigidas e consistência entre dado e visual.
+10. **Rendered QA** — renderizar ou inspecionar visualmente o deck final quando possível. Avaliar hierarquia, ritmo, repetição, densidade, alinhamento, legibilidade e se cada slide comunica sua mensagem sem depender da intenção do autor.
+11. **Critic pass** — em decks relevantes, fazer uma revisão independente ou fresh-eyes proporcional ao risco depois do primeiro render; priorizar poucos findings de alto impacto e reconstruir o necessário.
+12. **Verify** — conferir dados, claims, fontes, períodos, consistência narrativa e entregáveis antes de afirmar conclusão.
 
 ## Contrato para dashboards em slides
 
