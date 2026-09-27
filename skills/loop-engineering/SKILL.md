@@ -101,6 +101,25 @@ Para loops que retomam trabalho após interrupção ou recebem eventos repetidos
 
 Essas garantias dependem de storage e executor reais. Em uma conversa sem runtime persistente, usar apenas como contrato de projeto, sem alegar execução durável.
 
+
+## Learning loop por experiência
+
+Quando um agente ou workflow precisa melhorar com base em execuções anteriores:
+
+- capturar apenas experiências diagnosticáveis: input relevante, decisão, resultado, falha e contexto suficiente para explicar o caso;
+- avaliar antes de aprender: sucesso aparente sem critério independente não vira estratégia;
+- refletir em uma hipótese operacional curta, não em narrativa extensa;
+- atualizar uma base de estratégias versionada, com provenance e escopo;
+- deduplicar estratégias semanticamente equivalentes antes de persistir;
+- manter estratégias contraditórias separadas até existir evidência para resolver o conflito;
+- limitar promoção automática a mudanças reversíveis e de baixo risco; mudanças de prompt, regra ou comportamento consequencial exigem comparação com baseline e approval apropriado;
+- medir se a estratégia nova melhora casos futuros e não apenas o caso que a originou;
+- remover ou rebaixar estratégias que causam regressão recorrente.
+
+Pipeline de referência: Execute → Evaluate → Reflect → Update → Deduplicate → Re-evaluate.
+
+Esse padrão descreve a metodologia. Em ambientes sem runtime persistente, traces, storage e executor real, não alegar aprendizado autônomo contínuo.
+
 ## Correção focada
 
 Para loops de correção:
