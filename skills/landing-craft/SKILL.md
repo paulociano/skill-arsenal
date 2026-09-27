@@ -66,7 +66,7 @@ Páginas estritamente temporárias ou de campanha não devem ser indexadas autom
 
 ## Integração com o Arsenal
 
-Usar junto com web-design-engineer. Quando direção visual não estiver resolvida, usar design-direction. Para decidir entre composições e evitar variar apenas cores, consultar a referência de estrutura de web-design-engineer. Para motion complexo, ui-motion-design decide a linguagem e gsap-animation implementa quando apropriado. Quando existir um design system robusto, design-system-governance define a autoridade e landing-craft define a narrativa da página.
+Usar junto com web-design-engineer. Quando direção visual não estiver resolvida, usar design-direction. Para decidir entre composições e evitar variar apenas cores, consultar a referência de estrutura de web-design-engineer. Para motion complexo, ui-motion-design decide a linguagem e gsap-animation implementa quando apropriado. Quando o conceito depender de câmera, profundidade, vídeo, image-to-video ou continuidade entre cenas, usar cinematic-visual-direction antes da implementação. Quando existir um design system robusto, design-system-governance define a autoridade e landing-craft define a narrativa da página.
 
 ## Referências
 
