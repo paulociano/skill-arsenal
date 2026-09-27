@@ -28,6 +28,19 @@ Classifique cada animação por uma função principal:
 
 Se não houver função clara, a animação é candidata a remoção.
 
+## Motion personality
+
+Antes de escolher curvas e durações, descreva a personalidade do movimento em poucas propriedades observáveis, por exemplo: precisa ou elástica, contida ou energética, direta ou teatral, contínua ou em beats.
+
+Use essa personalidade para manter coerência entre entradas, hover, feedback, transições e cenas. Ela deriva da marca, tarefa e frequência de uso; não é um preset estético.
+
+Para sequências com vários elementos, planeje coreografia por:
+1. elemento líder;
+2. ordem de atenção;
+3. overlap ou pausa intencional;
+4. chegada/settling;
+5. possibilidade de interrupção.
+
 ## Paradigmas
 
 - **state transition** — mudança discreta de UI;
@@ -44,20 +57,21 @@ Escolha paradigma antes de biblioteca.
 1. Inventariar estados, gatilhos e animações existentes.
 2. Separar motion iniciado pelo usuário de motion automático.
 3. Definir prioridades: ações críticas e navegação antes de decoração.
-4. Escolher paradigma e timing/easing coerentes com a função.
-5. Preferir propriedades de composição como transform/opacity quando servirem ao efeito e reduzir layout thrash.
-6. Planejar interrupção, reversão, resize, route change e unmount.
-7. Garantir prefers-reduced-motion e alternativa funcional.
-8. Escolher tecnologia pelo requisito:
+4. Definir função e, quando houver sistema de motion, uma personalidade coerente.
+5. Escolher paradigma e timing/easing coerentes com função, personalidade e plataforma.
+6. Preferir propriedades de composição como transform/opacity quando servirem ao efeito e reduzir layout thrash.
+7. Planejar interrupção, reversão, resize, route change e unmount.
+8. Garantir prefers-reduced-motion e alternativa funcional.
+9. Escolher tecnologia pelo requisito:
    - CSS/WAAPI para transições simples;
    - Motion quando layout transitions, gestures, springs e animação React declarativa forem a melhor aderência;
    - gsap-animation para timelines, scroll e coordenação complexa;
    - motion-asset-engineering para Rive/Lottie/SVG/video;
    - shader-graphics-engineering para motion procedural de GPU;
    - biblioteca já instalada quando atende sem migração.
-9. Para experiências dirigidas por scroll, usar scroll-storytelling para arquitetura narrativa antes da implementação.
-10. Verificar em runtime fluidez, foco, input por teclado/toque e ausência de bloqueio de conteúdo.
-11. Remover loops decorativos ou efeitos que aumentam custo sem ajudar a tarefa.
+10. Para experiências dirigidas por scroll, usar scroll-storytelling para arquitetura narrativa antes da implementação.
+11. Verificar em runtime fluidez, foco, input por teclado/toque e ausência de bloqueio de conteúdo.
+12. Remover loops decorativos ou efeitos que aumentam custo sem ajudar a tarefa.
 
 ## Gate de necessidade e frequência
 
@@ -79,14 +93,13 @@ Ao procurar oportunidades em uma interface, registrar também candidatos deliber
 - Reduced motion deve preservar informação e ações.
 - Motion deve ser testado no artefato real; código isolado não prova sensação ou performance.
 - Spring não é automaticamente melhor que easing; use física quando interruptibilidade/continuidade justificar.
-- Timeline autorada visualmente (por exemplo Theatre-like workflows) ainda precisa de ownership, fallback e verificação no runtime.
+- Timeline autorada visualmente ainda precisa de ownership, fallback e verificação no runtime.
+- Princípios de animação clássicos podem orientar peso, antecipação, continuidade e staging, mas não justificam teatralidade em UI frequente.
 
 ## Integração
 
 web-design-engineer, scroll-storytelling, interaction-polish, motion-asset-engineering, creative-web-effects, gsap-animation, runtime-ui-verification e web-quality-audit.
 
-Princípios de gate por frequência, propósito, função e rejeição explícita de candidatos adaptados de https://github.com/emilkowalski/skills, sem importar presets rígidos como verdade universal.
-
 ## Origem metodológica
 
-Adaptada de rbaumier/skills, greensock/gsap-skills, Motion, react-spring, Theatre.js, MengTo/Skills e podo/design-agent-skills, preservando princípios portáveis e removendo regras estéticas rígidas ou dependências específicas.
+Adaptada de rbaumier/skills, greensock/gsap-skills, Motion, react-spring, Theatre.js, MengTo/Skills, podo/design-agent-skills e LottieFiles/motion-design-skill. Preserva função, personalidade e coreografia portáveis, removendo presets rígidos e dependências específicas.
