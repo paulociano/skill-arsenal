@@ -66,6 +66,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **crossplatform-mobile-engineering** — Implementar ou revisar apps Flutter e React Native/Expo respeitando versões, comportamento nativo e testes por plataforma.
 - **customer-interview** — Preparar e analisar entrevistas de descoberta focadas em comportamento passado, dor, alternativas e compromissos reais.
 - **dashboard-design** — Projetar dashboards e sistemas de gestão à vista orientados a decisão, exceção e ação, com métricas confiáveis, ownership, cadência, comparação e hierarquia operacional.
+- **decision-questionnaire** — Transformar uma decisão bloqueada por conhecimento de outra pessoa em um questionário objetivo, priorizado e pronto para resposta assíncrona ou reunião.
 - **decision-analysis** — Estruturar decisões complexas com alternativas, critérios, incerteza, trade-offs, reversibilidade e sensibilidade sem esconder julgamento humano em uma pontuação arbitrária.
 - **deep-grill** — Conduzir entrevistas aprofundadas sobre planos ou decisões, resolvendo uma árvore de ambiguidades em rodadas sucessivas.
 - **design-direction** — Transformar um briefing visual vago em uma direção de design explícita, específica ao produto e reutilizável antes da implementação.
