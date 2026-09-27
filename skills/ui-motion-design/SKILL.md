@@ -59,6 +59,18 @@ Escolha paradigma antes de biblioteca.
 10. Verificar em runtime fluidez, foco, input por teclado/toque e ausência de bloqueio de conteúdo.
 11. Remover loops decorativos ou efeitos que aumentam custo sem ajudar a tarefa.
 
+## Gate de necessidade e frequência
+
+Antes de implementar ou sugerir motion:
+
+1. **Frequência** — quanto mais recorrente a ação, menor deve ser o motion. Atalhos de teclado, command palettes e navegação central podem exigir resposta instantânea sem transição.
+2. **Propósito** — nomear a função: feedback, orientação espacial, indicação de estado, continuidade, explicação ou narrativa. Se não houver função clara, não animar.
+3. **Função da superfície** — dados que o usuário precisa ler ou operar não devem se mover apenas por decoração.
+4. **Custo temporal** — motion não deve fazer UI frequente parecer atrasada. Entradas ocasionais toleram mais tempo; delight fica reservado a momentos raros.
+5. **Interrupção** — interações rápidas devem poder retarget/reverter sem reiniciar de forma brusca.
+
+Ao procurar oportunidades em uma interface, registrar também candidatos deliberadamente rejeitados e o motivo. Um bom audit pode concluir que nenhuma animação nova é necessária.
+
 ## Regras
 
 - Não migrar biblioteca sem necessidade explícita.
@@ -72,6 +84,8 @@ Escolha paradigma antes de biblioteca.
 ## Integração
 
 web-design-engineer, scroll-storytelling, interaction-polish, motion-asset-engineering, creative-web-effects, gsap-animation, runtime-ui-verification e web-quality-audit.
+
+Princípios de gate por frequência, propósito, função e rejeição explícita de candidatos adaptados de https://github.com/emilkowalski/skills, sem importar presets rígidos como verdade universal.
 
 ## Origem metodológica
 
