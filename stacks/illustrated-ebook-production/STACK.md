@@ -44,6 +44,14 @@ Use somente as necessárias.
 12. Render/export: usar a capacidade documental real disponível para PDF, EPUB ou HTML. Não prometer formato que o ambiente não consegue produzir.
 13. Final inspection: páginas faltantes, cortes, overflow, legibilidade, resolução, ordem, créditos/fontes e coerência.
 
+## Quality bar visual
+- Trate palavras como **premium**, **alta qualidade**, **cinematográfico**, **3D**, **livro ilustrado profissional** e referências visuais equivalentes como requisitos de acabamento, não como sugestões.
+- Não substitua ilustração raster rica por vetores simples apenas porque são mais fáceis de montar no PDF.
+- Antes de escalar, compare a página-piloto ao briefing em câmera, luz, materiais, profundidade, expressão, cenário, legibilidade e emoção.
+- Se a página-piloto ficar claramente abaixo do briefing, refine a direção ou regenere antes de produzir o restante.
+- Para personagens recorrentes, a página-piloto aprovada passa a integrar a biblioteca de referências de `character-continuity`.
+- O nível visual aprovado vira piso de qualidade para capa e páginas narrativas seguintes.
+
 ## Two-pass rule
 Não gerar prompts de todas as páginas enquanto o manuscrito ainda está mudando materialmente. Primeiro estabilize texto/arco; depois gere direção visual com contexto global. Isso reduz contradições tardias e melhora motivos visuais e continuidade.
 
