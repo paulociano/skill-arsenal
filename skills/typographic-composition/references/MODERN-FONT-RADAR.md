@@ -37,6 +37,26 @@ Fonte: https://github.com/IBM/plex
 
 ## Famílias secundárias
 
+### Instrument Sans
+Fonte: https://github.com/Instrument/instrument-sans
+
+Variable neo-grotesque com largura e vários stylistic sets. Forte para marcas digitais que querem uma base precisa sem ficar completamente neutra.
+
+### Mona Sans
+Fonte: https://github.com/github/mona-sans
+
+Variable font com weight, width, italic e optical size, além de estilos display/mono. Boa referência quando a mesma família precisa atravessar UI, headline e linguagem técnica.
+
+### Bricolage Grotesque
+Fonte: https://github.com/ateliertriay/bricolage
+
+Display/brand mais expressiva, com weight, width e optical size. Útil para heroes, campanhas e apresentações que precisam de caráter mais autoral sem abandonar variable typography.
+
+### Space Grotesk
+Fonte: https://github.com/floriankarsten/space-grotesk
+
+Grotesca proporcional derivada de Space Mono, com detalhes idiossincráticos e boa leitura fora de display. Útil em landing pages e apresentações tech/editoriais quando Geist/Inter ficariam neutras demais.
+
 ### Archivo
 Fonte: https://github.com/Omnibus-Type/Archivo
 
