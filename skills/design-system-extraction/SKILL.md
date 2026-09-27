@@ -43,6 +43,9 @@ Extrair de um site, repositório ou codebase existente o sistema visual realment
 5. Normalizar tokens repetidos e separar valor observed de derived/proposed.
 6. Capturar exemplos visuais representativos quando browser/runtime existir.
 7. Produzir token inventory, component inventory, layout grammar, motion/interactions, visual guide e provenance.
+   - para componentes recorrentes, registrar anatomy, variants e estados observados como hover/focus/disabled quando houver evidência real;
+   - registrar section patterns e combinações recorrentes de componentes quando isso ajudar a reproduzir a estrutura, não só a aparência;
+   - manter uma trilha de evidência por página/tema para diferenciar token global, exceção local e variação temática.
 8. Validar amostras contra páginas/componentes reais e computed styles quando disponíveis.
 9. Opcionalmente materializar ou atualizar um **DESIGN.md** como contrato humano/agente:
    - visual thesis/princípios já sustentados;
@@ -79,7 +82,7 @@ Quando a extração virar um sistema gerável, produzir um design model estrutur
 
 - não declarar "design system completo" se só houve análise estática;
 - computed style pode refletir exceção local, então procurar repetição antes de promover a token;
-- screenshots complementam, não substituem estrutura;
+- screenshots complementam, não substituem estrutura; use screenshots principalmente para composição, hierarquia e "feel", evitando extrair valores objetivos por visão quando computed styles ou código estiverem disponíveis;
 - código complementa, não substitui aparência real;
 - não copiar assets/fontes proprietárias sem permissão;
 - não tratar uma inspiração pública como licença para clonar marca/identidade;
