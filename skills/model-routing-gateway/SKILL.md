@@ -79,6 +79,20 @@ Tratar esses motores como uma classe de deployment própria quando houver benef�
 
 Modelos como SemIf ou Laya e playgrounds como OpenJev são implementações possíveis dessa arquitetura. OpenJev torna explícita uma comparação útil entre micro-scorers paralelos, uma chamada estruturada única e um decision engine especializado; tratar esses modos como alternativas de deployment a serem comparadas no mesmo workload, não como uma hierarquia universal. Não presumir que estão instalados nem que benchmarks publicados transferem para o workload atual.
 
+## Serving de alto throughput
+
+Para deployments GPU de modelos gerativos ou decision engines baseados em logits, considerar um servidor como vLLM somente depois de definir workload e contrato:
+- continuous batching e scheduler para throughput sob concorrência;
+- prefix caching quando requisições compartilham contexto;
+- limites de tokens, linhas, filas e concorrência para backpressure;
+- warmup de buckets de forma e medição separada de load, prefill, decode e latência por request;
+- structured outputs no servidor são restrições sintáticas; validar semântica no consumidor;
+- pinar versões e testar a compatibilidade entre o runtime, PyTorch, NumPy, modelo, tokenizer e backend de structured outputs.
+
+Um servidor OpenAI-compatible facilita clientes, mas não prova paridade de API nem segurança. Verificar endpoints protegidos e não protegidos na documentação da versão usada, colocar o serviço atrás de autenticação/reverse proxy e não expô-lo diretamente por conveniência. Quando um adapter de decision engine chama logprobs para reconstruir uma distribuição, testar normalização, cardinalidade de opções, temperatura e arredondamento no mesmo runtime.
+
+Quando dependências do servidor e do pacote de inferência entram em conflito, usar ambientes separados e um contrato HTTP explícito; não forçar uma instalação conjunta quebrando o lockfile do consumidor.
+
 ## Segurança
 
 - centralizar credenciais aumenta blast radius; usar least privilege;

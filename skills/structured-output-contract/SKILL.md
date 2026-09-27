@@ -71,6 +71,22 @@ Quando solicitado ou já disponível, seguir [instalação, execução residente
 
 Escolher o nível mais forte disponível que não complique desnecessariamente a arquitetura.
 
+## Calibração e evolução do contrato
+
+Quando uma probabilidade ou confidence participar de uma política, calibrar no conjunto rotulado do próprio domínio e guardar:
+- versão do modelo/checkpoint e do runtime;
+- versão do schema e tipo de pergunta;
+- conjunto de calibração separado do holdout;
+- temperatura ou transformação ajustada por tipo quando houver evidência suficiente;
+- NLL, ECE, cobertura e custo de erro antes e depois;
+- regra de promoção, rollback e condição de reavaliação.
+
+Não transferir thresholds entre modelos, tipos, idiomas, precisões ou runtimes. Uma resposta válida e uma probabilidade calibrada continuam semânticamente insuficientes para autorizar uma ação irreversível.
+
+### Compatibilidade de APIs
+
+Fixar a versão efetiva do servidor e consultar sua documentação oficial. APIs renomeadas/deprecadas de structured outputs podem continuar aparecendo em exemplos antigos; preferir o campo atual suportado pelo runtime e executar um smoke test do contrato. Compatibilidade OpenAI não garante suporte a todos os endpoints, parâmetros, tools ou limites de logprobs.
+
 ## Retries de transporte e validação
 
 Quando a extração estruturada falhar:

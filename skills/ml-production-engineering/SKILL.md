@@ -120,6 +120,19 @@ Definir:
 
 Training-serving skew deve ser tratado como risco explícito.
 
+### 7.1. Serving de modelos e decision engines
+
+Para inferência GPU com concorrência, definir antes do deploy:
+- política de batching e espera adaptativa;
+- prefix/KV cache e seu limite de memória;
+- warmup de kernels e buckets de comprimento;
+- admission control, backpressure e respostas de overload;
+- limites de tokens por linha, request e fila;
+- cancelamento de requests e limpeza de trabalho em andamento;
+- separação entre tempo de load, prefill, inferência aquecida e p95/p99.
+
+Comparar pelo mesmo workload, número de perguntas, comprimento, concorrência, dtype, quantização e hardware. Um número de latência isolado não demonstra throughput nem qualidade. Para outputs probabilísticos, medir accuracy, NLL/ECE e calibração por tipo de pergunta e slice, além de erro de serviço.
+
 ### 8. Deployment gate
 
 Promover somente artifact/version avaliado. Registrar qual código, dados e config produziram o modelo servido.
