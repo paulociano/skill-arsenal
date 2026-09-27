@@ -1,6 +1,6 @@
 ---
 name: decision-analysis
-description: "Estruturar decisões complexas com alternativas, critérios, incerteza, trade-offs, reversibilidade e sensibilidade sem esconder julgamento humano em uma pontuação arbitrária."
+description: "Estruturar decisões simples ou complexas com respostas tipadas, critérios, incerteza, trade-offs, reversibilidade e sensibilidade sem esconder julgamento humano em uma pontuação arbitrária."
 ---
 
 # decision-analysis
@@ -15,6 +15,12 @@ Ajudar a estruturar decisões com múltiplas alternativas e critérios, tornando
 - decisões com critérios conflitantes;
 - comparação de opções sob incerteza;
 - quando uma matriz simples de prós/contras não é suficiente.
+
+## Escolher a profundidade antes de analisar
+
+Para triagem repetitiva com opções delimitadas e critérios observáveis, usar o [protocolo de decisões tipadas](references/typed-decisions.md). Resolver a pergunta mínima e registrar a evidência, sem criar uma matriz multicritério desnecessária.
+
+Para decisões abertas, critérios conflitantes, alto custo do erro ou conclusão instável, seguir o workflow completo abaixo. A via curta não transforma ambiguidade em certeza nem autoriza ações externas.
 
 ## Workflow
 
@@ -51,7 +57,7 @@ Ajudar a estruturar decisões com múltiplas alternativas e critérios, tornando
 
 ## Integração
 
-prioritization-engine, scenario-forecasting, experiment-design, research-and-synthesize, project-complexity-management e to-spec.
+structured-output-contract para o contrato técnico e runtime opcional; arsenal-router para seleção de recursos; prioritization-engine, scenario-forecasting, experiment-design, research-and-synthesize, project-complexity-management e to-spec.
 
 ## Origem metodológica
 

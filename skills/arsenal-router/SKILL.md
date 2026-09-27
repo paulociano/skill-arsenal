@@ -39,6 +39,18 @@ Ordem de preferência:
 3. pequena combinação de skills;
 4. stack + skill adicional somente quando necessário.
 
+### 5.1. Decidir por critérios explícitos
+
+Aplicar uma triagem curta, inspirada nas decisões tipadas do Laya:
+- **Escolha:** selecionar entre as candidatas pertinentes do índice; incluir "nenhuma skill" quando execução direta bastar. Não enviar o catálogo inteiro a um classificador.
+- **Suficiência:** verificar se a candidata resolve a tarefa e suas ferramentas estão disponíveis. Ausência de contexto é "desconhecido", não "não".
+- **Complexidade:** distinguir tarefa direta, composição com dependências e decisão aberta por critérios observáveis, sem inventar uma nota de confiança.
+- **Encaminhamento:** usar caminho direto quando a escolha for clara; investigar a lacuna decisiva ou usar análise aprofundada quando houver ambiguidade relevante.
+
+Preservar a escolha explícita do usuário. Registrar motivo e limitação em uma frase quando isso ajudar; não expor JSON em toda conversa nem carregar outra skill só para cumprir esta triagem.
+
+Se um runtime Laya estiver instalado e verificado no ambiente atual, pode apoiar classificações repetitivas de baixo risco com uma shortlist. Confirmar sua disponibilidade com inferência real; instalar o pacote ou executar apenas detecção de idioma não basta. Consultar o [runtime opcional](../structured-output-contract/references/laya-runtime.md) somente nesse caso ou quando o usuário pedir instalação. Uma resposta do modelo não autoriza execução, não substitui a leitura dos arquivos selecionados e não deve sobrepor instruções explícitas. Se indisponível, usar a mesma metodologia no assistente e identificar o fallback quando relevante.
+
 ### 6. Carregar somente o necessário
 Leia apenas:
 - STACK.md selecionado;

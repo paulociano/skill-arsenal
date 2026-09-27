@@ -47,6 +47,21 @@ Quando a próxima etapa depende de dados estruturados, não pedir “JSON bonito
 - constraints sintáticas não substituem avaliação semântica;
 - structured output não é licença para omitir provenance, confidence ou caveats quando o domínio exige.
 
+## Decisões de domínio fechado
+
+Para decisões tipadas, especificar antes da inferência:
+- `choice`: opções distintas, significado de cada opção e saída para caso fora do domínio;
+- `score`: níveis ordenados com âncoras observáveis; distinguir nível escolhido, média esperada e probabilidade;
+- booleano: pergunta verificável e tratamento explícito de evidência insuficiente.
+
+O `noul` nativo do Laya é uma probabilidade de "sim", não um booleano comprovado. Na adaptação pelo assistente, representar desconhecido com `null` ou status separado, sem inventar probabilidades calibradas. Usar o [protocolo de decisão](../decision-analysis/references/typed-decisions.md) para critérios e encaminhamento.
+
+Validar o objeto completo depois da projeção: campos obrigatórios, enum/const, limites e consistência entre campos. Suporte parcial a JSON Schema não garante aderência integral. Erro ou resposta ausente não podem virar zero, falso ou primeira opção.
+
+### Runtime Laya opcional
+
+Quando solicitado ou já disponível, seguir [instalação, execução residente e benchmark](references/laya-runtime.md) e usar [laya_decisions.py](scripts/laya_decisions.py). Essa via executa um modelo real e requer Python, dependências e pesos. O caminho metodológico continua disponível sem ele. Não afirmar latência, acurácia, calibração ou disponibilidade entre sessões sem medir/verificar.
+
 ## Níveis de enforcement
 
 1. **Prompt-only** — último recurso, sem garantia estrutural.
