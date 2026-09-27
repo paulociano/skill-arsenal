@@ -18,6 +18,7 @@ Criar experiências web expressivas sem confundir "moderno" com excesso de efeit
 - ui-motion-design
 - interaction-polish
 - motion-asset-engineering
+- cinematic-visual-direction
 - creative-web-effects
 - shader-graphics-engineering
 - gsap-animation
@@ -30,7 +31,7 @@ Criar experiências web expressivas sem confundir "moderno" com excesso de efeit
 2. **Structure** — web-design-engineer define macroestrutura/greybox; landing-craft entra quando a superfície é conversão.
 3. **Narrative movement** — scroll-storytelling somente quando scroll participa da narrativa.
 4. **Motion language** — ui-motion-design define funções e tecnologia.
-5. **Creative layer** — escolher motion-asset-engineering ou creative-web-effects conforme o efeito seja asset ou runtime gráfico.
+5. **Creative layer** — quando a experiência pedir linguagem de câmera, vídeo ou continuidade entre cenas, cinematic-visual-direction define os shots; depois escolher motion-asset-engineering ou creative-web-effects conforme o efeito seja asset ou runtime gráfico.
 6. **Implementation** — shader-graphics-engineering/gsap-animation apenas quando necessários.
 7. **Polish** — interaction-polish após estrutura e conteúdo estarem estáveis.
 8. **Verify** — runtime-ui-verification e web-quality-audit com desktop/mobile, keyboard, touch, reduced motion e budget de performance.
