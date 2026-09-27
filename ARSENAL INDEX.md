@@ -120,6 +120,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **model-routing-gateway** — Projetar ou configurar roteamento de modelos LLM com seleção por capacidade, retries, fallback, orçamento e observabilidade.
 - **ml-production-engineering** — Projetar e operar sistemas de machine learning do dado à produção com testes, avaliação, serving, monitoramento e ciclos seguros de melhoria.
 - **niche-research** — Pesquisar pautas atuais de um nicho e propor ângulos editoriais com fontes e datas verificadas.
+- **patent-strategy-review** — Auditar e pressionar pedidos de patente utilitária dos EUA com gates de completude, suporte, prior art, claim coverage e design-around, separando análise técnica de aconselhamento jurídico.
 - **plain-writing** — Escrever ou revisar prosa para máxima clareza usando palavras comuns, estrutura lógica, terminologia consistente, contexto suficiente e remoção de jargão, puffery e formulações artificiais.
 - **powerbi-engineering** — Projetar, construir, auditar e versionar soluções Power BI com modelo semântico, DAX, performance, temas, embedding e práticas de ALM conforme ferramentas realmente disponíveis.
 - **presentation-template-adaptation** — Adaptar conteúdo a um deck de referência preservando identidade visual, elementos fixos e capacidade dos layouts.
