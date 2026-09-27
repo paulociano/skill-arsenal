@@ -48,3 +48,34 @@ Usar como fonte de descoberta secundária. Sinais úteis: busca semântica, popu
 
 ## Validação
 Adoção limitada a duas melhorias em owners existentes e a este registro de avaliação. Nenhum runtime externo foi prometido como disponível.
+
+
+---
+
+## Adendo — madebychip/madebychip-illustration-skills
+
+Fonte: https://github.com/madebychip/madebychip-illustration-skills
+
+### Capability ledger
+
+| Fonte/capability | Classificação | Decisão | Owner canônico | Motivo |
+| --- | --- | --- | --- | --- |
+| Guild Enamel | B | ABSORB_METHOD_ONLY | high-fidelity-image-generation | A força está no style-lock, family router e checklist de drift. O estilo específico é conteúdo de marca, não skill canônica. |
+| Premium 3D Claymorphism | B | UPDATE_EXISTING | high-fidelity-image-generation | Boa separação WHAT/HOW/COLOR/FORMAT, defaults úteis e preservação em edições iterativas. |
+| Soft 3D Otter | A/B | UPDATE_EXISTING | high-fidelity-image-generation | Excelente método para personagem fixo: autoridades separadas por identidade, pose e rendering, invariantes explícitos e regra de adaptar pose à anatomia. |
+| reference images / prompt libraries | D | KEEP_EXTERNAL_REFERENCE | n/a | Assets e exemplos têm licenças específicas e não devem ser copiados para o Arsenal; funcionam como dados de referência do estilo. |
+
+### Segurança e portabilidade
+- Não há necessidade de executar código, installer ou runtime externo para absorver a metodologia.
+- O repositório foi desenhado para ChatGPT Projects e geração de imagem nativa, portanto a portabilidade conceitual é alta.
+- Os estilos, tokens, personagem e imagens de referência permanecem externos; o Arsenal absorve apenas a metodologia genérica de consistência visual.
+- A licença do workflow/texto é MIT, mas o próprio repositório alerta que imagens de referência podem ter licenças separadas.
+
+### Mudança adotada
+Atualizar `high-fidelity-image-generation` com:
+1. autoridade explícita por dimensão de referência;
+2. invariantes para personagem fixo e famílias visuais;
+3. separação WHAT / HOW / COLOR / FORMAT;
+4. consistência de série e QA de drift.
+
+Não criar skills específicas como `guild-enamel`, `claymorphism` ou `soft-3d-otter`: elas são estilos/packs, não capacidades gerais.
