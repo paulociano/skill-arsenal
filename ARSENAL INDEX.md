@@ -16,6 +16,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/arsenal-autopilot/STACK.md`
 - **business-decision-intelligence** — Investiga métricas e causas, estrutura decisões, prioriza ações, projeta cenários e comunica resultados em dashboards ou Power BI.  
   `stacks/business-decision-intelligence/STACK.md`
+- **cinematic-presentation** — Cria apresentações como sequências de cenas com composição tipográfica, direção cinematográfica, vídeo/motion e fallback estático.  
+  `stacks/cinematic-presentation/STACK.md`
 - **checkpoint-nao-iniciados** — Lista clientes com status “Não iniciado” em um período informado, agrupando por mês e por líder direto ou responsável do consultor, e entrega o resultado pronto para WhatsApp.  
   `stacks/checkpoint-nao-iniciados/STACK.md`
 - **creative-web-engineering** — Orquestra direção, estrutura, scroll, motion, microinterações e gráficos criativos para websites contemporâneos de alta expressão com verificação de acessibilidade e performance.  
@@ -61,6 +63,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **brand-logo-exploration** — Explorar conceitos de logo e identidade, testar escala e monocromia e refinar a direção escolhida.
 - **call-evaluation** — Avaliar ligações comerciais de consultoria financeira pelo Card de Ligação, com evidências, rubrica e qualidade do agendamento.
 - **character-continuity** — Manter personagens recorrentes visualmente on-model ao longo de páginas, cenas ou séries usando bíblia de identidade, atlas/referências, seleção da referência mais próxima e QA de continuidade.
+- **cinematic-visual-direction** — Projeta shots para landing pages, apresentações e vídeos por enquadramento, câmera, profundidade, movimento, duração, transições e continuidade.
 - **codebase-design** — Projetar ou refatorar módulos profundos com interfaces pequenas, seams explícitos, alta alavancagem, locality e testabilidade, evitando abstrações rasas e pass-through.
 - **code-review** — Revisar mudanças de código e feedback de PR separando conformidade com padrões, fidelidade à spec e impacto real.
 - **code-understanding-audit** — Explicar código ou auditar decisões arquiteturais com evidências, ajustando profundidade ao conhecimento do leitor.
