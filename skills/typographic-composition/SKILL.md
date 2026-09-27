@@ -15,7 +15,8 @@ Tratar texto como conteúdo e forma visual ao mesmo tempo. A skill cuida de comp
 - capas, social cards, pôsteres e apresentações;
 - páginas editoriais;
 - títulos com alto peso visual;
-- revisão de hierarquia, line breaks, tracking e densidade.
+- revisão de hierarquia, line breaks, tracking e densidade;
+- escolha de famílias modernas ou variable fonts quando a tipografia participa da identidade ou do motion.
 
 ## Dimensões
 
@@ -29,24 +30,23 @@ Tratar texto como conteúdo e forma visual ao mesmo tempo. A skill cuida de comp
 - optical balance;
 - relationship entre texto e imagem;
 - repetição e ritmo;
-- forma da palavra/bloco.
+- forma da palavra/bloco;
+- eixos variáveis úteis, como weight, width, optical size ou slant, quando a família realmente os oferece.
 
 ## Workflow
 
 1. Preservar o texto exato quando factual.
 2. Definir função de cada bloco textual.
-3. Escolher família/estilo conforme direção visual e licença.
-4. Construir hierarquia com poucos contrastes fortes.
-5. Ajustar line breaks manualmente quando título/display justificar.
-6. Revisar palavras problemáticas, órfãs, viúvas e linhas desequilibradas.
-7. Ajustar tracking/leading por escala e função, não com valores universais.
-8. Verificar contraste, responsividade e zoom.
-9. Para lettering customizado real, decidir se a entrega será:
-   - texto com fonte;
-   - SVG/path desenhado;
-   - ilustração gerada;
-   - fonte/glyph customizado.
-10. Se houver edição de glyph/font file, encaminhar para tooling tipográfico especializado e validar licença/qualidade.
+3. Escolher família/estilo conforme direção visual, legibilidade, cobertura de caracteres e licença.
+4. Quando a direção pedir linguagem contemporânea, consultar `references/MODERN-FONT-RADAR.md` como radar, não como ranking automático.
+5. Construir hierarquia com poucos contrastes fortes.
+6. Ajustar line breaks manualmente quando título/display justificar.
+7. Revisar palavras problemáticas, órfãs, viúvas e linhas desequilibradas.
+8. Ajustar tracking/leading por escala e função, não com valores universais.
+9. Em variable fonts, usar eixos para resolver composição ou interação; não animar eixos apenas por novidade.
+10. Verificar contraste, responsividade, zoom e comportamento durante font loading.
+11. Para lettering customizado real, decidir se a entrega será texto com fonte, SVG/path desenhado, ilustração gerada ou fonte/glyph customizado.
+12. Se houver edição de glyph/font file, encaminhar para tooling tipográfico especializado e validar licença/qualidade.
 
 ## Lettering vs fonte
 
@@ -63,11 +63,13 @@ Não misturar esses escopos.
 - Não confiar em kerning automático para display crítico sem inspeção visual.
 - Não usar fonte proprietária sem direito de uso.
 - Em web, preservar fallback, loading e métricas para reduzir layout shift.
+- Repositório de fonte é fonte de assets e documentação, não uma skill executável.
+- Preferir fonte variável somente quando seus eixos trouxerem ganho real de composição, responsividade ou motion.
 
 ## Integração
 
-editable-visual-design, beautiful-web-article, web-design-engineer, design-direction e brand-logo-exploration.
+editable-visual-design, beautiful-web-article, web-design-engineer, design-direction, ui-motion-design e brand-logo-exploration.
 
 ## Origem metodológica
 
-Adaptada de práticas observadas em opentype.js, FontTools/FontBakery, Google Fonts tooling e sistemas paramétricos como Iosevka, mantendo o foco em composição e QA tipográfico em vez de exigir uma toolchain de fundição.
+Adaptada de práticas observadas em opentype.js, FontTools/FontBakery, Google Fonts tooling e sistemas paramétricos como Iosevka, enriquecida por famílias open source contemporâneas como Geist, Inter, Recursive e IBM Plex, mantendo o foco em composição e QA tipográfico em vez de exigir uma toolchain de fundição.
