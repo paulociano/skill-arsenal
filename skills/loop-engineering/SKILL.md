@@ -160,4 +160,6 @@ Mandato bounded-autonomy, fail-closed guard, kill switch e audit ledger adaptado
 
 Contratos de operação durável, deduplicação e resultado incerto adaptados de https://github.com/CopilotKit/openmuse (README e docs/VERIFICATION.md) e https://github.com/unreallabsai/unreal-agent (README), sem importar seus runtimes.
 
+Learning loop por experiência adaptado de https://github.com/kayba-ai/agentic-context-engine, preservando Execute → Evaluate → Reflect → Update → Deduplicate, sem depender do runtime, CLI ou serviço Kayba.
+
 Origem local: [loop-engineering.docx](../loop-engineering.docx).
