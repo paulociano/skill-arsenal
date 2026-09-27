@@ -81,6 +81,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **document-extraction-pipeline** — Converter documentos complexos em conteúdo estruturado, usando extração textual primeiro e OCR seletivo quando necessário.
 - **eli5** — Explicar conceitos a um público específico com linguagem, analogias, exemplos e profundidade adequadas, sem infantilizar.
 - **explanation-architecture** — Escolher e estruturar a forma certa de explicar um assunto entre tutorial, how-to, explanation e reference, ajustando sequência, exemplos e profundidade ao objetivo do leitor.
+- **evidence-claim-verification** — Verificar claims científicos ou técnicos por decomposição explícita, busca orientada a evidência, avaliação de suporte/refutação e rastreabilidade das fontes sem converter incerteza em certeza.
 - **email-campaign-engineering** — Planejar e construir campanhas de e-mail HTML com copy, assets, compatibilidade e verificação antes do envio autorizado.
 - **empirical-prompt-tuning** — Avaliar e melhorar prompts ou skills mediante pedido de otimização empírica, com cenários fixos, baseline e holdout.
 - **experiment-design** — Desenhar experimentos falsificáveis com hipótese, métrica primária, guardrails e critérios de decisão anteriores aos resultados.
