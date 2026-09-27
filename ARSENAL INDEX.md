@@ -28,6 +28,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/debug-and-fix/STACK.md`
 - **evaluate-and-import-skill** — Avalia uma skill externa, compara com o Arsenal, adapta para o ambiente atual, revisa segurança e importa somente quando houver valor real.  
   `stacks/evaluate-and-import-skill/STACK.md`
+- **fast-response** — Acelera tarefas do Arsenal com seleção mínima, contexto progressivo, menos round-trips e paralelização segura sem cortar validação essencial.  
+  `stacks/fast-response/STACK.md`
 - **gestao-comercial-da-semana** — Organizar a gestão semanal do time de consultoria financeira com retrospectiva, avaliação de conversas, slots de agenda, prioridades verificáveis, mensagens e continuidade entre semanas.  
   `stacks/gestao-comercial-da-semana/STACK.md`
 - **illustrated-ebook-production** — Produzir ebooks ilustrados, livros infantis, HQs educativas e guias visuais do briefing ao PDF/EPUB/HTML, coordenando pesquisa, arquitetura pedagógica, personagens, storyboard, geração visual, continuidade e QA factual/editorial.  
@@ -143,6 +145,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **reels-scripting** — Analisar a estrutura narrativa de um Reel e criar roteiro original no mesmo padrão, sem copiar conteúdo ou presumir desempenho.
 - **root-cause-analysis** — Investigar causas de problemas operacionais, comerciais ou de produto separando sintomas, mecanismos, fatores contribuintes e evidência causal.
 - **repository-evidence-docs** — Criar e manter documentação viva de repositórios a partir de comportamento real, conceitos, mapa de código, evidências e regras de sincronização, atualizando apenas o que ficaria enganoso após mudanças.
+- **response-latency-optimization** — Reduz tempo de resposta e latência percebida com contexto progressivo, menos round-trips, paralelização segura, orçamento de ferramentas e medição.
 - **retrieval-quality-engineering** — Diagnosticar e melhorar retrieval/RAG com conjunto de consultas, baseline e avaliação de chunking, busca híbrida e reranking.
 - **retrospective-codify** — Codificar aprendizados recorrentes quando solicitado, escolhendo entre atualizar skill, regra, checklist, teste ou documentação.
 - **runtime-ui-verification** — Verificar mudanças de UI no app em execução por consequências de domínio, estado e rede além da aparência visual.
