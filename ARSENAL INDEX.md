@@ -30,6 +30,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/evaluate-and-import-skill/STACK.md`
 - **gestao-comercial-da-semana** — Organizar a gestão semanal do time de consultoria financeira com retrospectiva, avaliação de conversas, slots de agenda, prioridades verificáveis, mensagens e continuidade entre semanas.  
   `stacks/gestao-comercial-da-semana/STACK.md`
+- **illustrated-ebook-production** — Produzir ebooks ilustrados, livros infantis, HQs educativas e guias visuais do briefing ao PDF/EPUB/HTML, coordenando pesquisa, arquitetura pedagógica, personagens, storyboard, geração visual, continuidade e QA factual/editorial.  
+  `stacks/illustrated-ebook-production/STACK.md`
 - **improve-existing-web-app** — Melhora uma aplicação web existente preservando funcionalidades, refinando design e validando o resultado no runtime.  
   `stacks/improve-existing-web-app/STACK.md`
 - **meeting-to-actions** — Transforma reuniões, transcrições ou notas em conhecimento reutilizável, decisões, ações e handoffs.  
@@ -56,6 +58,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **brand-strategy** — Construir ou revisar uma estratégia de marca conectando categoria, audiência, posicionamento, diferenciação, prova, personalidade, voz, mensagens e objetivos sem inventar pesquisa ou transformar opinião em fato de mercado.
 - **brand-logo-exploration** — Explorar conceitos de logo e identidade, testar escala e monocromia e refinar a direção escolhida.
 - **call-evaluation** — Avaliar ligações comerciais de consultoria financeira pelo Card de Ligação, com evidências, rubrica e qualidade do agendamento.
+- **character-continuity** — Manter personagens recorrentes visualmente on-model ao longo de páginas, cenas ou séries usando bíblia de identidade, atlas/referências, seleção da referência mais próxima e QA de continuidade.
 - **codebase-design** — Projetar ou refatorar módulos profundos com interfaces pequenas, seams explícitos, alta alavancagem, locality e testabilidade, evitando abstrações rasas e pass-through.
 - **code-review** — Revisar mudanças de código e feedback de PR separando conformidade com padrões, fidelidade à spec e impacto real.
 - **code-understanding-audit** — Explicar código ou auditar decisões arquiteturais com evidências, ajustando profundidade ao conhecimento do leitor.
@@ -82,6 +85,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **eli5** — Explicar conceitos a um público específico com linguagem, analogias, exemplos e profundidade adequadas, sem infantilizar.
 - **explanation-architecture** — Escolher e estruturar a forma certa de explicar um assunto entre tutorial, how-to, explanation e reference, ajustando sequência, exemplos e profundidade ao objetivo do leitor.
 - **evidence-claim-verification** — Verificar claims científicos ou técnicos por decomposição explícita, busca orientada a evidência, avaliação de suporte/refutação e rastreabilidade das fontes sem converter incerteza em certeza.
+- **educational-comic** — Transformar conteúdo factual, histórico, científico ou instrucional em HQ educativa com objetivos de aprendizagem, roteiro, storyboard por painéis, personagens, prompts visuais e QA factual/narrativo.
 - **email-campaign-engineering** — Planejar e construir campanhas de e-mail HTML com copy, assets, compatibilidade e verificação antes do envio autorizado.
 - **empirical-prompt-tuning** — Avaliar e melhorar prompts ou skills mediante pedido de otimização empírica, com cenários fixos, baseline e holdout.
 - **experiment-design** — Desenhar experimentos falsificáveis com hipótese, métrica primária, guardrails e critérios de decisão anteriores aos resultados.
