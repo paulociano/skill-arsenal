@@ -40,6 +40,15 @@ Use em implementação, correção, refatoração ou manutenção de código qua
    - Separe limitações reais de ideias futuras.
    - Mencione problemas adjacentes sem corrigi-los quando estiverem fora de escopo.
 
+## Delete-list e dívida explícita
+
+Para revisão de over-engineering:
+- produzir uma **delete-list** concreta antes de propor novas abstrações;
+- preferir remoção de código, configuração e wrappers sem uso real a "simplificação" que apenas troca uma abstração por outra;
+- quando um shortcut consciente for adiado, registrá-lo como dívida explícita com motivo, impacto e condição de revisita;
+- não reivindicar economia percentual de linhas, custo ou tempo sem baseline mensurado da mesma tarefa;
+- separar métricas publicadas por terceiros de resultados do repositório atual.
+
 ## Heurísticas
 - Se 200 linhas podem ser 50 sem perda de clareza, simplifique.
 - Se uma abstração tem um único caller e nenhum seam real, questione se ela ajuda.
@@ -48,6 +57,8 @@ Use em implementação, correção, refatoração ou manutenção de código qua
 
 ## Relação com outras skills
 Use `tdd` para red-green-refactor, `diagnosing-bugs` para investigação, `code-review` para revisão do diff e `agent-choice-audit` para decisões implícitas tomadas durante a implementação.
+
+Delete-list, auditoria de over-engineering e ledger de shortcuts adaptados de https://github.com/DietrichGebert/ponytail, sem importar hooks, modos persistentes ou benchmarks como garantia.
 
 ## Origem adaptada
 Metodologia inspirada em `multica-ai/andrej-karpathy-skills` e reforçada por padrões recorrentes de `affaan-m/ECC` e `ruvnet/ruflo`, removendo dependências de harness, hooks e runtimes específicos.
