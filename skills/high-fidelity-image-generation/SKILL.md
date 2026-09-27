@@ -55,6 +55,15 @@ Em edições:
 4. não trate referência de estilo como autorização para alterar o sujeito;
 5. prefira edição não destrutiva quando houver escolha de artefatos.
 
+Quando houver uma **família visual recorrente** ou um **personagem fixo**, separe explicitamente autoridades de referência:
+- identidade/silhueta e proporções;
+- pose/interação;
+- material/rendering;
+- paleta/tokens;
+- composição/formato.
+
+Não faça média entre referências conflitantes. Defina qual referência vence em cada dimensão. Para personagens recorrentes, adapte a pose à anatomia existente, não a anatomia à nova atividade. Para famílias de ícones/objetos, mantenha o idioma visual e varie apenas o assunto, cores e formato autorizados.
+
 ## Modo 3D-ready
 Quando a imagem será entrada para reconstrução 3D:
 - priorize um único objeto completo, sem cortes;
@@ -67,6 +76,15 @@ Quando a imagem será entrada para reconstrução 3D:
 - não inventar vistas ocultas como se fossem conhecidas.
 
 Quando múltiplas vistas forem aceitas pelo pipeline downstream, priorize consistência de identidade, proporção, materiais e detalhes entre elas.
+
+## Consistência de série
+Para gerar uma família de imagens coerente ao longo de vários pedidos:
+- registre um núcleo estável de regras de construção, materiais, iluminação, câmera, densidade e composição;
+- mantenha uma pequena biblioteca de referências representativas quando disponível;
+- separe claramente **WHAT** (assunto solicitado) de **HOW** (linguagem visual fixa), **COLOR** e **FORMAT**;
+- use o menor número de props e detalhes necessários para comunicar o conceito;
+- em iterações, altere somente a dimensão pedida quando o restante for invariável;
+- inclua falhas conhecidas específicas da família no QA, como drift de forma, cor, personagem ou detalhamento excessivo.
 
 ## QA
 Avalie somente dimensões relevantes:
