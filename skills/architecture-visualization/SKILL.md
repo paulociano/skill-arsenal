@@ -63,6 +63,8 @@ Quando o diagrama deriva de código:
 
 ## Layout discipline
 
+- quando o autor tiver uma composição específica em mente, preferir relações espaciais relativas (`right of`, `below`, alinhamentos, grupos) antes de coordenadas absolutas; isso preserva intenção manual sem transformar o diagrama em XML/posicionamento frágil;
+- usar layout automático quando a topologia importa mais que a composição e layout relativo/manual quando a narrativa espacial é parte do significado;
 - remover edges de baixo valor antes de criar rotas manuais complexas;
 - corrigir uma falha geométrica por vez;
 - preservar labels semanticamente importantes;
@@ -84,5 +86,7 @@ Usar leitura e escrita de arquivos e execução de código pelo terminal dispon�
 ## Referências
 
 Adaptada de tt-a1i/archify.
+
+Layout relativo e posição como parte da linguagem visual: [reladraw/reladraw](https://github.com/reladraw/reladraw), absorvido como metodologia sem exigir seu CLI.
 
 Origem local: [architecture-visualization.docx](../architecture-visualization.docx).
