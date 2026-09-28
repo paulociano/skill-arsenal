@@ -46,6 +46,22 @@ Regras:
 - check fraco ou noisy deve ser reescrito ou desativado;
 - judge não substitui linter para o que pode ser checado deterministicamente.
 
+## Detectar workflows recorrentes a partir do histórico
+
+Quando o usuário quer reduzir repetição operacional em um projeto, usar evidência de uso real em vez de inventar atalhos por intuição:
+
+- coletar pedidos/prompts recorrentes, commits e operações repetidas em fontes autorizadas;
+- agrupar por **intenção/outcome**, não por frase literal;
+- priorizar clusters que se repetem com frequência, exigem múltiplos passos ou já geraram correções/erros;
+- descartar one-offs e tarefas que um único comando simples já resolve;
+- procurar primeiro owners/skills existentes e estender o owner canônico antes de criar uma nova;
+- ligar cada atalho/workflow ao script, query, API ou ferramenta já existente, sem inventar ferramenta paralela;
+- registrar traps somente quando houver provenance em código, commit, incidente ou correção observável;
+- separar leitura de ação: skills de consulta reportam; skills de ação fazem dry-run/preview e exigem approval apropriado antes do efeito externo;
+- manter nomes curtos somente quando a frequência justificar o ganho de digitação, sem shadow de comandos reservados.
+
+A frequência é sinal de oportunidade, não autorização automática para materializar uma skill. Mostrar a shortlist antes de criar atalhos quando houver várias opções equivalentes.
+
 ## Skills canônicas, adapters e distribuições
 
 Quando uma mesma coleção de skills precisa funcionar em vários harnesses ou plugins:
@@ -92,3 +108,5 @@ Classificação de enforceability e rastreabilidade de regras adaptadas de https
 Separação entre skills canônicas, distribuições geradas, adapters de harness e audiências adaptada de https://github.com/twentyhq/twenty, especialmente SKILLS.md e packages/twenty-agent-skills, sem importar o CLI, MCP ou runtime do Twenty.
 
 Origem local: [project-skill-architecture.docx](../project-skill-architecture.docx).
+
+Mineração de pedidos recorrentes, clustering por intenção e atalhos baseados em evidência adaptados de [kishormorol/cli-faq-shortcuts](https://github.com/kishormorol/cli-faq-shortcuts), sem depender de seus scripts de leitura de histórico ou diretórios específicos de Claude/Codex/Cursor.
