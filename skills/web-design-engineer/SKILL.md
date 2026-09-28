@@ -54,6 +54,26 @@ Projetos pequenos podem combinar fases. Não escolher efeito antes da estrutura 
 11. Fazer revisão final em brand/system fidelity, context mismatch, interface feel e final QA.
 12. Remover efeitos cujo custo, competição ou dependência não justifique benefício.
 
+## Design constraints versus design dogma
+
+Fontes externas de UI frequentemente trazem listas rígidas de fontes, spacing, radius, backgrounds ou efeitos proibidos. Tratar essas listas como **estilo/opinião da fonte**, não como defaults universais.
+
+Importar somente quando houver valor metodológico:
+- um único objetivo/conversão dominante em landing pages;
+- message match entre origem do tráfego e hero;
+- prova próxima ao claim;
+- visual hierarchy e structural variety;
+- contraste e acessibilidade verificáveis;
+- prototipagem de variantes quando a direção é incerta;
+- preservação do design system real do produto.
+
+Não promover para o Arsenal:
+- banimentos universais de fontes ou gradientes;
+- escalas fixas de spacing/radius sem vínculo com o sistema real;
+- uma única receita de hero ou seção;
+- motion obrigatório por estética;
+- anti-patterns que sejam apenas preferência pessoal sem evidência contextual.
+
 ## Contemporary design sem checklist estético
 
 "Moderno" é uma relação entre conteúdo, estrutura, tecnologia e cultura visual atual. Não impor:
@@ -125,5 +145,7 @@ Usar leitura/escrita, browser e terminal realmente disponíveis. Não exigir bib
 ## Referências
 
 Metodologia de direção visual: Anthropic frontend-design. Macrostructure/fingerprint: Nutlope/hallmark. Pipeline estruturado: Firzus, mblode, dawitlabs e nolly-studio. Creative web routing refinado a partir de Motion, Lenis, r3f-scroll-rig, ecossistema pmndrs, React Bits, Animate UI e Magic UI.
+
+Landing-page strategy e discipline de conversão foram revisadas contra [elayadesign/ai-design-skills](https://github.com/elayadesign/ai-design-skills), preservando princípios úteis e rejeitando presets rígidos de tipografia, spacing, radius e estética universal. O catálogo [Owl-Listener/designer-skills](https://github.com/Owl-Listener/designer-skills), [ConardLi/garden-skills](https://github.com/ConardLi/garden-skills), [MengTo/Skills](https://github.com/MengTo/Skills) e [jakubkrehel/skills](https://github.com/jakubkrehel/skills) foi tratado como radar de capabilities e overlap, não como fonte para importar catálogos inteiros.
 
 Origem local: web-design-engineer.docx.
