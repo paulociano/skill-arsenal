@@ -140,6 +140,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **project-health-review** — Revisar saúde de projetos por evidências de entrega, marcos, dependências, bloqueios, riscos, aging e próximas ações sem esconder incerteza em uma nota única.
 - **project-planning** — Transformar objetivos em plano executável com outcomes, workstreams, marcos, dependências, caminho crítico, capacidade, riscos e critérios de conclusão sem falsa precisão.
 - **procedural-film** — Criar curtas verticais animados proceduralmente com Canvas/Web Audio, storyboard em beat grid, render determinístico e revisão quadro a quadro.
+- **production-go-live** — Planejar e executar a ida de uma aplicação para produção com inventário de dependências, approval gates, verificação, handoff, drift check e teardown seguro.
 - **project-skill-architecture** — Organizar ou migrar regras e workflows de projetos em skills pequenas, com proprietários canônicos e rotas sem duplicação.
 - **prose-lint** — Auditar prosa por clareza, redundância, ambiguidade, jargão, inconsistência e linguagem potencialmente excludente usando checks como sinais, não regras absolutas.
 - **publication-figure-engineering** — Produzir figuras científicas alinhadas aos claims de papers, separando diagramas conceituais de gráficos quantitativos exatos.
