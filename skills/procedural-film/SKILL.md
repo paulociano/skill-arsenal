@@ -85,6 +85,19 @@ Não usar para edição de footage existente; nesse caso, preferir `video-editin
     - assistir/revisar o resultado final com áudio antes de afirmar conclusão;
     - produzir um pequeno shot list/caption map quando isso ajudar distribuição.
 
+## Product-film mode
+
+Quando o filme é de um produto digital existente, a autoridade visual deve ser o próprio produto, não um estilo genérico da skill:
+
+- descobrir design rules, tokens, componentes, logo, landing page e claims aprovados antes da história;
+- transformar essa descoberta em um **brand/film kit** pequeno e explícito que vença defaults genéricos;
+- oferecer opções de roteiro e ingredientes usando features e superfícies realmente encontradas no produto;
+- mostrar somente claims suportados pelo produto/fonte;
+- reutilizar componentes reais quando isso for seguro e verificável, ou criar twins frame-driven quando componentes dependem de clocks/estado incompatíveis com render determinístico;
+- medir beats, posições e cores quando o runtime permitir, em vez de inferir tudo visualmente;
+- manter versões de render e verificar os deliverables finais pelo arquivo decodificado quando a pipeline suportar;
+- em landing loops, garantir compreensão sem áudio e testar seamless loop quando esse for o contrato.
+
 ## Gates mínimos
 
 Antes de concluir, verificar conforme o runtime permitir:
@@ -116,3 +129,7 @@ Combina com `web-video-presentation`, `video-editing-pipeline`, `runtime-ui-veri
 ## Referências
 
 Adaptada de [kuhnhomeuk-cell/procedural-film](https://github.com/kuhnhomeuk-cell/procedural-film), preservando o pipeline e removendo dependências específicas de Claude Code, subagents e foundation assets.
+
+Brand-first discovery, product claims, componentes reais e verificação de deliverables adaptados de [Rieranthony/product-film-skill](https://github.com/Rieranthony/product-film-skill), sem exigir Remotion, Bun, uv ou seus scripts locais.
+
+Determinismo visual, pure-frame contract e craft bar reforçados por [alexgreensh/anidoodle](https://github.com/alexgreensh/anidoodle), sem importar sua engine, estilos ou tooling.
