@@ -32,6 +32,9 @@ Manter os relatórios separados: código pode obedecer aos padrões e implementa
 
 ## Revisão da implementação
 
+- quando o diff for grande ou ruidoso, organizar a revisão por mudanças semânticas relevantes, não por volume bruto de linhas;
+- manter um decision log quando decisões do agente/implementador não estiverem diretamente impostas pela spec: decisão, evidência, impacto, reversibilidade e alternativa considerada;
+- quando uma visualização ou diagrama ajudar, ligar cada elemento relevante ao arquivo/símbolo/trecho correspondente para que o artefato seja navegável de volta ao código;
 - revisar a experiência/contrato real do usuário e o fluxo completo, não apenas o diff local;
 - buscar causa raiz antes de adicionar branches, flags, wrappers ou special cases;
 - preferir o sistema coerente mais simples ao menor patch quando a fundação estiver errada;
@@ -67,5 +70,7 @@ Usar esse eixo para calibrar severidade e evitar recomendar correções caras pa
 [revisao-independente-e-pr](references/revisao-independente-e-pr.md) — Consultar ao organizar revisão independente, devolver findings ou corrigir feedback de PR.
 
 [GitHub · mattpocock/skills · code-review](https://github.com/mattpocock/skills/tree/main/skills/engineering/code-review)
+
+Decision log, semantic diff e ligação entre visualização e código adaptados de [devdotfast/whiteboard](https://github.com/devdotfast/whiteboard), sem depender do aplicativo desktop ou SDK da fonte.
 
 Origem local: [code-review.docx](../code-review.docx).
