@@ -57,6 +57,21 @@ Antes de executar, explicitar:
 
 ## Estado canônico e action space limitada
 
+### Judgment points estreitos
+
+Em workflows agentic complexos, não delegar todas as microdecisões ao mesmo modelo principal nem espalhar heurísticas vagas pelo fluxo. Identificar **decision points** estreitos e observáveis, por exemplo: admitir contexto, decidir se um resultado ainda é relevante, detectar drift, triagem de finding, verificar completion ou escolher se uma memória vale persistir.
+
+Para cada decision point:
+- formular uma pergunta bounded sobre um estado pequeno;
+- preferir resposta tipada como yes/no, choice ou score quando suficiente;
+- manter regras determinísticas como piso de segurança e usar julgamento semântico apenas onde regra fixa perde qualidade;
+- permitir modo `shadow` quando um novo judge/classificador estiver sendo comparado antes de ganhar efeito;
+- registrar decisão, confidence/probabilidade quando houver, estado relevante e consequência no ledger;
+- não usar um judge para retirar approval humano exigido nem para contornar constraints explícitas;
+- promover um decision point para automação ativa somente depois de comparar qualidade no workload real.
+
+Esse padrão reduz contexto e custo apenas quando a decisão pode ser isolada sem perder informação essencial. Não quebrar decisões abertas ou criativas em microclassificações artificiais.
+
 Para loops em tempo real ou controle contínuo:
 
 - transformar telemetry/raw state em um **estado canônico estruturado** antes de pedir decisão ao modelo;
@@ -161,5 +176,7 @@ Mandato bounded-autonomy, fail-closed guard, kill switch e audit ledger adaptado
 Contratos de operação durável, deduplicação e resultado incerto adaptados de https://github.com/CopilotKit/openmuse (README e docs/VERIFICATION.md) e https://github.com/unreallabsai/unreal-agent (README), sem importar seus runtimes.
 
 Learning loop por experiência adaptado de https://github.com/kayba-ai/agentic-context-engine, preservando Execute → Evaluate → Reflect → Update → Deduplicate, sem depender do runtime, CLI ou serviço Kayba.
+
+Decision points estreitos, modos active/shadow/off e ledger de julgamentos adaptados de [qybaihe/mu](https://github.com/qybaihe/mu), sem importar seu runtime, judges, desktop app ou mecanismos de aprovação.
 
 Origem local: [loop-engineering.docx](../loop-engineering.docx).
