@@ -77,7 +77,7 @@ Tratar esses motores como uma classe de deployment própria quando houver benef�
 - registrar versão/checkpoint e parâmetros de calibração para reprodutibilidade;
 - quando o engine só se torna competitivo após fine-tuning, tratar o dataset e a avaliação de holdout como parte da dependência operacional.
 
-Modelos como SemIf ou Laya e playgrounds como OpenJev são implementações possíveis dessa arquitetura. OpenJev torna explícita uma comparação útil entre micro-scorers paralelos, uma chamada estruturada única e um decision engine especializado; tratar esses modos como alternativas de deployment a serem comparadas no mesmo workload, não como uma hierarquia universal. Não presumir que estão instalados nem que benchmarks publicados transferem para o workload atual.
+Modelos como SemIf, Laya, NeoHorse-Jev e CLM, além de playgrounds como OpenJev, são implementações possíveis dessa arquitetura. OpenJev torna explícita uma comparação útil entre micro-scorers paralelos, uma chamada estruturada única e um decision engine especializado; tratar esses modos como alternativas de deployment a serem comparadas no mesmo workload, não como uma hierarquia universal. Não presumir que estão instalados nem que benchmarks publicados transferem para o workload atual.
 
 ## Serving de alto throughput
 
@@ -177,3 +177,6 @@ Cotas, leases, origem de cooldown e catálogo: [tashfeenahmed/freellmapi](https:
 Decision engines tipados: [TheoLeeCJ/SemIf](https://github.com/TheoLeeCJ/SemIf), [NandhaKishorM/laya](https://github.com/NandhaKishorM/laya) e [SiliconLabAI/OpenJev](https://github.com/SiliconLabAI/OpenJev), usados como referências arquiteturais, não dependências do Arsenal.
 
 Origem local: [model-routing-gateway.docx](../model-routing-gateway.docx).
+
+
+Referências adicionais avaliadas em 2026-09-27: [TokenRhythm/NeoHorse](https://github.com/TokenRhythm/NeoHorse) e [Contrastive-LM/CLM](https://github.com/Contrastive-LM/CLM). Ambos reforçam o padrão de decisões tipadas/ranking com probabilidade e baixa latência, mas exigem runtime/model serving próprio; benchmarks publicados não são tratados como garantia transferível.
