@@ -30,6 +30,19 @@ Resolver a direção visual antes da construção: estabelecer uma tese coerente
 9. Quando houver escolha real entre direções, mostrar poucas alternativas estruturalmente diferentes; não criar variantes que só trocam cor.
 10. Entregar a direção para web-design-engineer, landing-craft ou design-system-governance.
 
+## Reference grounding and taste memory
+
+Quando houver referências visuais concretas, preferir extrair decisões observáveis delas antes de reescrever a estética como um adjetivo vago:
+
+- separar macroestrutura, hierarquia, tipografia, paleta, densidade, shape language, motion e assets;
+- usar medições determinísticas quando disponíveis para propriedades objetivas como cor/contraste, sem confundir isso com prova de qualidade estética;
+- registrar decisões do projeto em um contrato persistente somente quando o ambiente realmente suportar arquivo/estado persistente;
+- distinguir **project lock** de **preference memory**: o primeiro preserva consistência do produto atual; o segundo só deve promover preferências reutilizáveis após evidência repetida ou aprovação explícita;
+- manter precedence clara: pedido atual > regras do projeto > decisões anteriores resolvidas > preferências gerais;
+- não transformar uma preferência de um projeto em default universal.
+
+Quando a direção ainda estiver incerta, prototipar poucas alternativas estruturalmente distintas e capturar explicitamente o que foi mantido ou rejeitado. O histórico serve como evidência de preferência, não como autoridade automática sobre o próximo projeto.
+
 ## Saída mínima
 
 - visual thesis;
@@ -58,3 +71,5 @@ Usar antes de web-design-engineer ou landing-craft quando a direção não estiv
 ## Origem metodológica
 
 Síntese adaptada de dawitlabs/ui-skills, travisjneuman/.claude, Firzus/agent-skills, nolly-studio/agent-skills e AgentsORG/DESIGN, sem dependências de Claude Code, slash commands ou instaladores.
+
+Grounding por referências, separação entre style lock do projeto e memória de preferências, e distinção entre checks objetivos e julgamento estético refinados a partir de [codeswithroh/tastemaker](https://github.com/codeswithroh/tastemaker), sem importar seus scripts, diretórios ou perfil local.
