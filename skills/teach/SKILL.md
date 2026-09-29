@@ -11,7 +11,7 @@ Ensinar um tema ao longo de múltiplas sessões, mantendo missão, conteúdo, pr
 
 ## Workflow
 
-1. Definir missão, conhecimento atual e resultado de aprendizagem.
+1. Definir missão, conhecimento atual e resultado de aprendizagem. Quando o nível estiver incerto, fazer um probe curto por strands e aprofundar apenas onde a resposta discriminar conhecimento, evitando um pré-teste enciclopédico.
 2. Para cada bloco, escolher o modo com explanation-architecture:
    - tutorial para aprender fazendo;
    - explanation para modelo mental;
