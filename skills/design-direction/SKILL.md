@@ -60,6 +60,7 @@ Quando a direção ainda estiver incerta, prototipar poucas alternativas estrutu
 
 - Não reabrir identidade aprovada sem pedido.
 - Não impor listas universais de fontes, cores ou estilos proibidos.
+- Estilos nomeados como Scandinavian/Nordic/minimal devem ser tratados como direção contextual, não preset universal: preservar semântica, densidade necessária e identidade existente; remover decoração apenas quando melhora hierarquia ou tarefa.
 - Referência visual é evidência, não licença para copiar marca.
 - Se a mesma direção servir a qualquer produto após trocar o nome, ela ainda está genérica.
 - Perguntas só são necessárias quando uma ambiguidade muda materialmente a direção; caso contrário, faça uma proposta explícita e verificável.
