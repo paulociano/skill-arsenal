@@ -48,6 +48,8 @@ Quando a skill/prompt fizer parte de um programa LLM repetível:
 - usar busca de candidatos orientada pela métrica em vez de reescrita intuitiva infinita;
 - preservar dev/holdout para detectar overfitting;
 - comparar ganho de qualidade com custo de otimização e custo de inferência;
+- ao comparar harnesses/agentes, manter modelo, task set, recursos e policy de ambiente constantes; pin de commit/configuração e fresh restore por caso melhoram atribuição;
+- mudança de provider, egress policy, hardware/runtime ou corpus deve ser registrada como diferença metodológica; sem matched control, não apresentar o resultado como diretamente comparável;
 - salvar a versão otimizada e manter o programa original reproduzível;
 - quando houver módulos múltiplos, avaliar se o ganho veio de uma parte específica antes de recompilar tudo.
 
