@@ -20,6 +20,9 @@ Diminuir o custo por tarefa concluída sem perder correção, evidência necess�
    - resumir logs extensos com linhas de erro e caminho para o original; manter falhas raras e números exatos recuperáveis;
    - retirar instruções duplicadas ou globais que não ajudam a tarefa; carregar referências sob demanda;
    - iniciar uma sessão nova ou preparar `handoff` quando o histórico deixou de ser relevante;
+   - agrupar reconnaissance e probes de ambiente independentes em uma única passagem quando isso reduz round-trips sem esconder falhas;
+   - para leitura exploratória, começar por trechos pequenos e expandir sob demanda; nunca truncar silenciosamente dados que serão transformados;
+   - tratar polling como custo: esperar em intervalos proporcionais ao job em vez de consultar loops longos agressivamente;
    - usar modelo mais leve apenas para trabalho delimitado e verificável, se a interface permitir escolha real.
 5. Comparar custo **por tarefa aceita**, qualidade, retrabalho e latência. Reverter uma economia aparente que aumente falhas ou iterações. Conservar testes obrigatórios e verificação proporcional ao risco.
 
