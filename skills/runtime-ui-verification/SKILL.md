@@ -92,6 +92,8 @@ Quando o navegador controlável expuser DOM/elementos acionáveis, prefira decis
 5. Consumir a decisão uma única vez antes da mutação para que retry não produza double-click/double-submit.
 6. Depois da ação, observar novamente e registrar a consequência antes de escolher o próximo passo.
 7. Em loops, impor budget de ações/model calls e bloquear repetição quando várias ações seguidas não alteram estado útil.
+8. Para ações com efeito material, declarar postcondition antes de executar e retornar expected, actual e evidence; mensagem de sucesso/toast não substitui a mudança de estado esperada.
+9. Se um workflow verificado for reutilizado, cada replay deve revalidar suas postconditions e usar recovery limitado; batch success é reconciliado contra estado final, não contra número de tentativas.
 
 Texto gerado para preencher um campo deve ficar restrito ao campo observado e ao objetivo atual. A saída textual nunca deve virar selector, código executável ou comando de sistema sem um contrato separado e autorização apropriada.
 
