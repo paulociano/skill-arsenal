@@ -41,3 +41,7 @@ Ler esta skill não instala pacotes. Confirmar origem e versão antes de executa
 https://github.com/shadcn-ui/ui/blob/main/skills/shadcn/SKILL.md
 
 Contratos de lint agent-first adaptados de https://github.com/shadcn-ui/lint, sem dependência obrigatória.
+
+## Registry externo coss ui
+
+Quando coss ui for solicitado ou escolhido em projeto compatível, consultar a seção coss do [catálogo de referências](../web-design-engineer/references/ui-component-references.md). Confirmar React, Tailwind v4, Base UI, tokens e imports reais. Não presumir API Radix: conferir composição por componente, inclusive `render` versus `asChild`. Preferir adicionar somente os itens necessários e preservar tema/customizações locais. Revalidar licença por caminho de origem.

@@ -149,3 +149,7 @@ Metodologia de direção visual: Anthropic frontend-design. Macrostructure/finge
 Landing-page strategy e discipline de conversão foram revisadas contra [elayadesign/ai-design-skills](https://github.com/elayadesign/ai-design-skills), preservando princípios úteis e rejeitando presets rígidos de tipografia, spacing, radius e estética universal. O catálogo [Owl-Listener/designer-skills](https://github.com/Owl-Listener/designer-skills), [ConardLi/garden-skills](https://github.com/ConardLi/garden-skills), [MengTo/Skills](https://github.com/MengTo/Skills) e [jakubkrehel/skills](https://github.com/jakubkrehel/skills) foi tratado como radar de capabilities e overlap, não como fonte para importar catálogos inteiros.
 
 Origem local: web-design-engineer.docx.
+
+## Catálogo externo de componentes sob demanda
+
+Quando a tarefa se beneficiar de referências concretas de UI para IA, componentes de aplicação, landing pages ou microinterações, consultar [referências de componentes](references/ui-component-references.md): Beautiful UI, OriginKit, coss ui e Bencho. Selecionar por problema e stack existente; registrar licença/dependências do item e validar a integração. A referência não exige instalar bibliotecas nem copiar catálogos.
