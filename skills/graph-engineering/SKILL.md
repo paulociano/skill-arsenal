@@ -49,6 +49,7 @@ Para workflows que viram aplicações/agentes persistentes:
 - mudanças observáveis em runtime precisam de evidência de teste no nível adequado, não apenas validação estática do grafo;
 - escolher teste barato no owner local e E2E apenas para jornadas críticas que atravessam fronteiras;
 - observabilidade/logs fazem parte do contrato do workflow quando o sistema precisa operar em produção.
+- quando recuperação, replay ou auditoria importarem, preferir um event log append-only como record durável e tratar UI, prompt atual e projections como views reconstruíveis desse record; compaction pode remover contexto ativo sem apagar provenance histórica.
 
 ## Padrões de orquestração
 
