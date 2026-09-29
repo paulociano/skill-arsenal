@@ -42,6 +42,14 @@ Explorar direções de logo e identidade visual de forma estruturada, gerando co
 
 ## Variação
 
+Quando a direção envolver mascote/IP simples ou ícone-personagem:
+- apresente poucas direções conceituais antes da geração;
+- mantenha o sujeito explícito quando o usuário já o definiu e varie tratamento, silhueta, região secundária de cor ou traço definidor;
+- quando o sujeito estiver aberto, conecte cada proposta a uma promessa de produto ou atributo de marca, evitando variedade arbitrária;
+- prefira formas grandes, arredondadas e legíveis em tamanho pequeno a detalhes anatômicos explicativos;
+- valide leitura em 32×32 e fundo sólido sem depender de efeitos para sustentar a forma;
+- gere variantes controladas que testem composição e crop sem trocar o conceito central.
+
 As direções devem variar em conceito:
 
 - geométrica;
@@ -74,5 +82,7 @@ Usar a geração de imagem disponível para conceitos raster e ferramentas de de
 ## Referências
 
 Adaptada de op7418/logo-generator-skill.
+
+Mascote/IP simples: metodologia absorvida de s1dashu/ip-as-logo-skill, sem fixar modelo externo, número obrigatório de imagens ou convenções específicas de outro agente.
 
 Origem local: [brand-logo-exploration.docx](../brand-logo-exploration.docx).
