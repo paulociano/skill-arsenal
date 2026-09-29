@@ -44,6 +44,8 @@ Projetar, implementar, depurar e otimizar shaders e gráficos procedurais em tem
 5. Build minimal visual antes de polish.
 6. Add lighting/material/postprocessing de forma incremental.
 7. Integrar com DOM/scroll apenas depois que o efeito funciona isoladamente.
+   - Para galerias/carrosséis SDF, preferir uma passagem única quando isso simplificar composição e continuidade visual; manter dados de cards/projetos como fonte única para atlas, ordem e metadata quando o design depender dessa coerência.
+   - Em cenas procedurais densas, usar seed determinística quando reproducibility importar e separar sistemas gráficos em contextos/iframes quando o isolamento de estado WebGL reduzir vazamentos ou conflitos.
 8. Profile loops, samples, overdraw, DPR, resolution, branching e passes.
 9. Optimize com bounds, early exits, LOD, lower-res passes e quality tiers quando fizer sentido.
 10. Debug visually.
@@ -82,6 +84,6 @@ creative-web-effects, scroll-storytelling, web-design-engineer, procedural-3d-re
 
 ## Referências
 
-Adaptada de MiniMax-AI/skills shader-dev e refinada com padrões portáveis de pmndrs/react-three-fiber, drei/postprocessing, oframe/ogl, curtainsjs e r3f-scroll-rig.
+Adaptada de MiniMax-AI/skills shader-dev e refinada com padrões portáveis de pmndrs/react-three-fiber, drei/postprocessing, oframe/ogl, curtainsjs e r3f-scroll-rig. Padrões de SDF carousel, fonte única de ordem/atlas e seed/isolation refinados a partir de Yousuf-developer/Viscose-carousel e MengTo/sylva.
 
 Origem local: shader-graphics-engineering.docx.
