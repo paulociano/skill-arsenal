@@ -35,6 +35,13 @@ Impedir afirmações de conclusão, correção, segurança, publicação, implan
 
 Pode incluir teste direcionado, build, lint, leitura pós-escrita, inspeção de diff, comparação de fonte, status real de ferramenta/conector, consulta de dashboard ou health check.
 
+Para trabalho substancial com vários outcomes independentes, trate a conclusão como um **ledger de aceitação**:
+- inventarie cada resultado ou restrição que possa ser omitido sem perceber;
+- associe cada item a um owner e a uma observação verificável;
+- marque evidência antiga como stale quando definição, escopo ou dependência material mudar;
+- reexecute o check que prova o item depois da última mudança relevante, em vez de confundir status registrado com revalidação;
+- faça checks globais no nível de integração quando o comportamento atravessar vários componentes, sem repeti-los mecanicamente em cada leaf.
+
 ## Regras
 
 - Check parcial só autoriza conclusão parcial.
