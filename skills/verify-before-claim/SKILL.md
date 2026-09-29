@@ -47,6 +47,7 @@ Para trabalho substancial com vários outcomes independentes, trate a conclusão
 - Check parcial só autoriza conclusão parcial.
 - Evidência anterior à última mudança é stale.
 - Disparo de automação não prova execução.
+- Para mutações destrutivas ou de sistema, preferir discovery/read-only primeiro, preview explícito do efeito, confirmação antes da escrita e readback pós-mudança; histórico de operação melhora auditabilidade, mas não substitui rollback/backup quando o risco exigir.
 - Ausência de erro não prova sucesso.
 - Não repetir check idêntico apenas para fabricar confiança.
 - Se não houver método direto de verificação, reduzir a afirmação ou declarar evidência insuficiente.
