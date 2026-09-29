@@ -42,6 +42,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/meeting-to-actions/STACK.md`
 - **research-and-synthesize** — Pesquisa um tema com múltiplas fontes, reconcilia evidências e produz uma síntese clara, útil e verificável.  
   `stacks/research-and-synthesize/STACK.md`
+- **product-management-cycle** — Conduz decisões recorrentes de produto conectando estratégia, descoberta, especificação, priorização, métricas e revisão de resultados sem misturar frameworks incompatíveis.  
+  `stacks/product-management-cycle/STACK.md`
 - **research-to-presentation** — Converte pesquisa, documentos ou dados em apresentações e dashboards executivos editáveis, estruturados por evidência, narrativa e QA visual.  
   `stacks/research-to-presentation/STACK.md`
 - **social-growth-engine** — Diagnostica gargalos de crescimento social, pesquisa oportunidades, planeja conteúdo, produz, mede e realimenta o próximo ciclo.  
@@ -146,6 +148,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **publication-figure-engineering** — Produzir figuras científicas alinhadas aos claims de papers, separando diagramas conceituais de gráficos quantitativos exatos.
 - **quick-grill** — Fazer uma rodada curta de perguntas de alinhamento quando o usuário pedir explicitamente para ser questionado antes da execução.
 - **research-question-design** — Transformar temas, gaps, hipóteses ou projetos científicos vagos em perguntas importantes, tratáveis e falsificáveis, com hipóteses rivais, evidência discriminante, piloto e riscos de rejeição explícitos.
+- **secure-code-privacy-review** — Revisar código e diffs por vulnerabilidades de segurança e violações de privacidade com trust boundaries, data flows, validação de findings e baixa tolerância a falsos positivos.
+- **postgres-migration-safety** — Planejar, revisar e validar migrações PostgreSQL em produção considerando versão, locks, compatibilidade entre deploys, backfill, rollback e evidência pós-migração.
 - **reels-scripting** — Analisar a estrutura narrativa de um Reel e criar roteiro original no mesmo padrão, sem copiar conteúdo ou presumir desempenho.
 - **root-cause-analysis** — Investigar causas de problemas operacionais, comerciais ou de produto separando sintomas, mecanismos, fatores contribuintes e evidência causal.
 - **repository-evidence-docs** — Criar e manter documentação viva de repositórios a partir de comportamento real, conceitos, mapa de código, evidências e regras de sincronização, atualizando apenas o que ficaria enganoso após mudanças.
