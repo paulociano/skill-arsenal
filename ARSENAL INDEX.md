@@ -67,6 +67,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **character-continuity** — Manter personagens recorrentes visualmente on-model ao longo de páginas, cenas ou séries usando bíblia de identidade, atlas/referências, seleção da referência mais próxima e QA de continuidade.
 - **cinematic-visual-direction** — Projeta shots para landing pages, apresentações e vídeos por enquadramento, câmera, profundidade, movimento, duração, transições e continuidade.
 - **codebase-design** — Projetar ou refatorar módulos profundos com interfaces pequenas, seams explícitos, alta alavancagem, locality e testabilidade, evitando abstrações rasas e pass-through.
+- **coaching-development-loop** — Transformar evidências de desempenho ao longo do tempo em coaching longitudinal, distinguindo melhoria, regressão e padrão estável e fechando o ciclo com prática observável e nova verificação.
 - **code-review** — Revisar mudanças de código e feedback de PR separando conformidade com padrões, fidelidade à spec e impacto real.
 - **code-understanding-audit** — Explicar código ou auditar decisões arquiteturais com evidências, ajustando profundidade ao conhecimento do leitor.
 - **codex-cost-efficiency** — Reduzir tokens e gasto em tarefas de desenvolvimento no Codex por medição, leitura seletiva, controle de saída e comparação de tarefas concluídas.
