@@ -19,6 +19,7 @@ Carregar somente candidatas necessárias:
 - [after-action-review](../../skills/after-action-review/SKILL.md): comparar execução anterior quando houver metas/resultados/compromissos.
 - [call-evaluation](../../skills/call-evaluation/SKILL.md): avaliar conversas com evidências e Card vigente.
 - [golden-circle-feedback](../../skills/golden-circle-feedback/SKILL.md): transformar observações suficientes em devolutivas individuais.
+- [coaching-development-loop](../../skills/coaching-development-loop/SKILL.md): comparar evidência entre semanas, verificar feedback anterior e escolher uma prioridade observável de desenvolvimento quando houver histórico suficiente.
 - [loop-engineering](../../skills/loop-engineering/SKILL.md): estruturar estado, retomada e limites ao implantar ou mudar a continuidade; não precisa recarregar em toda rodada estável.
 
 A combinação máxima usual é esta stack com as três competências de análise/feedback aplicáveis. Aritmética da agenda segue o contrato abaixo, sem inventar uma skill de calendário. Não carregar design, dashboards, tickets ou pesquisa externa sem necessidade.
