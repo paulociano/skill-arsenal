@@ -154,6 +154,10 @@ Origem local: web-design-engineer.docx.
 
 Quando a tarefa se beneficiar de referências concretas de UI para IA, componentes de aplicação, landing pages ou microinterações, consultar [referências de componentes](references/ui-component-references.md): Beautiful UI, OriginKit, coss ui e Bencho. Selecionar por problema e stack existente; registrar licença/dependências do item e validar a integração. A referência não exige instalar bibliotecas nem copiar catálogos.
 
+## Componentes animados e efeitos
+
+Para referências de landing pages, motion e efeitos de superfície, consultar [bibliotecas de componentes animados e efeitos](../creative-web-effects/references/animated-component-libraries.md). Reutilizar somente padrões compatíveis com a arquitetura, acessibilidade e licença do projeto.
+
 ## Produtos e runtimes como referência
 
 Quando o projeto exigir editor Office embutido, conhecimento documental, CRM WhatsApp, visualização geográfica ou agentes de equipe, consultar [produtos web e limites de integração](references/office-knowledge-agent-products.md). Distinguir componente, produto completo e serviço externo; escolher somente quando o requisito justificar operação, licenças e dependências.

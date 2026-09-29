@@ -62,6 +62,10 @@ web-design-engineer, ui-motion-design, shadcn-ui-engineering, runtime-ui-verific
 
 Adaptada de Motion Primitives, Animate UI, React Bits, Magic UI, Kokonut UI, Radix Primitives, Floating UI e Number Flow. O Arsenal importa padrões de comportamento e revisão, não catálogos visuais inteiros.
 
+## Referências de motion e efeitos
+
+Para comparar microinterações e efeitos de superfície, consultar [bibliotecas de componentes animados e efeitos](../creative-web-effects/references/animated-component-libraries.md). Extrair um comportamento verificável e manter alternativas para teclado, toque e reduced motion.
+
 ## Referência de blocos interativos
 
 Para exemplos concretos de press, drag, seleção, confirmação ou reorder, consultar Bencho no [catálogo de referências](../web-design-engineer/references/ui-component-references.md). Adaptar o comportamento à stack existente e conferir licença do código e dos assets separadamente. Fornecer alternativas acessíveis a hover/drag e validar estados reais; a demo não prova adequação ao produto.

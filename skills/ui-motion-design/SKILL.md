@@ -96,6 +96,10 @@ Ao procurar oportunidades em uma interface, registrar também candidatos deliber
 - Timeline autorada visualmente ainda precisa de ownership, fallback e verificação no runtime.
 - Princípios de animação clássicos podem orientar peso, antecipação, continuidade e staging, mas não justificam teatralidade em UI frequente.
 
+## Referências de componentes
+
+Para exemplos concretos de motion e efeitos por stack, consultar [bibliotecas de componentes animados e efeitos](../creative-web-effects/references/animated-component-libraries.md). Escolher pelo comportamento e custo, não pela quantidade de demos.
+
 ## Integração
 
 web-design-engineer, scroll-storytelling, interaction-polish, motion-asset-engineering, creative-web-effects, gsap-animation, runtime-ui-verification e web-quality-audit.

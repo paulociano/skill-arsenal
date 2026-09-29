@@ -54,6 +54,10 @@ Tratar efeitos criativos como camada de direção visual com orçamento explíci
 - Bibliotecas de componentes/effects são repertório, não identidade pronta.
 - Respeitar licença de shaders/assets/exemplos.
 
+## Referências de componentes animados
+
+Para escolher componentes, backgrounds e efeitos por função e stack, consultar [bibliotecas de componentes animados e efeitos](references/animated-component-libraries.md). A seleção é repertório; conferir runtime, licença, acessibilidade, reduced motion e performance no artefato real.
+
 ## Integração
 
 design-direction, web-design-engineer, scroll-storytelling, shader-graphics-engineering, ui-motion-design e web-quality-audit.
