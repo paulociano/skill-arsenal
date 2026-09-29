@@ -178,6 +178,8 @@ Quando o usuário pedir para "dar feedback", "reescrever feedback" ou equivalent
 
 ## Integrações
 
+Quando houver histórico suficiente para avaliar mudança ao longo do tempo, usar primeiro `coaching-development-loop` para decidir o que realmente melhorou, regrediu ou permaneceu estável; esta skill redige a devolutiva, não prova a tendência.
+
 Pode combinar com:
 
 - writing-quality, para lapidar linguagem;
