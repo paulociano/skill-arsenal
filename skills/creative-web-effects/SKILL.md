@@ -26,6 +26,7 @@ Tratar efeitos criativos como camada de direção visual com orçamento explíci
 - **image transition** — displacement, masks, shader wipes;
 - **postprocessing** — color grade, vignette, DOF, aberration;
 - **procedural background** — canvas/WebGL/SVG systems.
+- **procedural audio** — interface sounds synthesized at runtime when audio feedback is part of the interaction system.
 
 ## Workflow
 
@@ -43,7 +44,8 @@ Tratar efeitos criativos como camada de direção visual com orçamento explíci
 7. Lazy-load dependências grandes quando o efeito não é essencial à primeira pintura.
 8. Medir CPU/GPU, memória, DPR e impacto em Core Web Vitals.
 9. Verificar cleanup e perda/restauração de contexto quando aplicável.
-10. Manter fallback estático coerente com a direção.
+10. Para procedural audio, separar receita, player e curadoria; manter limites de loudness/frequência e tratar feedback humano como dado de gosto, não como verdade universal.
+11. Manter fallback estático ou silencioso coerente com a direção.
 
 ## Regras
 
@@ -64,7 +66,7 @@ design-direction, web-design-engineer, scroll-storytelling, shader-graphics-engi
 
 ## Origem metodológica
 
-Adaptada de pmndrs/react-three-fiber, drei, postprocessing, oframe/ogl, curtainsjs, React Bits, Magic UI, tsParticles e exemplos de transição WebGL. Importa decisões e budgets, não uma stack obrigatória.
+Adaptada de pmndrs/react-three-fiber, drei, postprocessing, oframe/ogl, curtainsjs, React Bits, Magic UI, tsParticles e exemplos de transição WebGL. Procedural audio e separação recipe/player/curation refinados a partir de m1ckc3s/procedural-sounds. Importa decisões e budgets, não uma stack obrigatória.
 
 ## Efeitos em HTML/CSS
 
