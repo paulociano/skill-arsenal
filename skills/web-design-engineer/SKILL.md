@@ -165,3 +165,7 @@ Quando o projeto exigir editor Office embutido, conhecimento documental, CRM Wha
 ## Projetos HTML e CSS
 
 Para páginas estáticas, HTML único, componentes sem framework JS e efeitos CSS, consultar [referências HTML/CSS](references/html-css-component-references.md). Diferenciar snippets, tokens, frameworks, temas e dependências de build; preservar a stack existente e validar comportamento além da aparência.
+
+## Pesquisa visual e templates
+
+Para referências como Dribbble, Canva, galerias de sites e fluxos de apps, consultar [bibliotecas de referências de design](../design-direction/references/design-reference-libraries.md). Extrair estrutura e comportamento conforme design-direction; usar o catálogo HTML/CSS para implementação quando essa for a stack do projeto.

@@ -73,3 +73,7 @@ Usar antes de web-design-engineer ou landing-craft quando a direção não estiv
 Síntese adaptada de dawitlabs/ui-skills, travisjneuman/.claude, Firzus/agent-skills, nolly-studio/agent-skills e AgentsORG/DESIGN, sem dependências de Claude Code, slash commands ou instaladores.
 
 Grounding por referências, separação entre style lock do projeto e memória de preferências, e distinção entre checks objetivos e julgamento estético refinados a partir de [codeswithroh/tastemaker](https://github.com/codeswithroh/tastemaker), sem importar seus scripts, diretórios ou perfil local.
+
+## Bibliotecas de referências
+
+Quando precisar de fontes de inspiração, fluxos reais ou templates, consultar [bibliotecas de referências de design](references/design-reference-libraries.md). Escolher fontes pela pergunta de design e registrar exemplos específicos; distinguir conceito, screenshot, produto e template antes de derivar decisões.
