@@ -30,6 +30,8 @@ Transformar calendário em instrumento de capacidade e execução, não apenas r
    - assunto melhor resolvido de forma assíncrona.
 4. Detectar necessidades de preparação, deslocamento, pós-reunião e follow-up.
 5. Relacionar a agenda aos outcomes prioritários da semana e identificar trabalho importante sem espaço protegido.
+   - Para gestores, distinguir tempo de alto leverage (decisões, desenvolvimento, remoção de bloqueios, preparação) de atividade administrativa; não tratar agenda cheia como output.
+   - Reservar capacidade abaixo de 100% quando interrupções e decisões não planejadas fizerem parte real do papel.
 6. Propor ajustes em ordem de menor impacto: encurtar, adicionar pauta/resultado, mover, agrupar, criar buffer, criar foco, converter em async ou cancelar como proposta.
 7. Mostrar consequências e conflitos antes de qualquer mutação.
 8. Executar apenas alterações autorizadas e verificar o estado final no calendário.
