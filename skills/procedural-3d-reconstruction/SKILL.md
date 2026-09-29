@@ -30,7 +30,7 @@ Reconstruir um objeto ou personagem de uma imagem de referência como modelo 3D 
 1. **Validate** — verificar se a referência é adequada ao objetivo 3D.
 2. **Analyze** — decompor macro → meso → micro, materiais, silhouette, relações e áreas invisíveis.
 3. **Quality contract** — declarar fidelidade esperada, complexidade, orçamento e features críticas.
-4. **Spec** — componentes, hierarquia, materiais, pivots, sockets, anchors e topology rationale.
+4. **Spec** — componentes, hierarquia, materiais, pivots, sockets, anchors e topology rationale. Para objetos físicos/fabricáveis, separar intent imutável de uma cena semântica mutável e registrar ownership de features, interfaces, dimensões e materiais antes de compilar geometria.
 5. **Build passes** — blockout → structural → form → material → surface → lighting → interaction → optimization.
 6. **Review** — capturar viewpoints, comparar silhouette/proporções/materiais/detalhes e registrar correções.
 7. **Bounded correction loop** — corrigir apenas falhas observadas; limitar iterações e preservar evidência.
