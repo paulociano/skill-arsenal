@@ -65,6 +65,12 @@ Critérios de separação de agente: especialização, paralelismo, isolamento d
 
 Para sistemas persistentes, verificar drift entre arquitetura declarada, agentes/skills reais e orquestrador. Dados intermediários grandes devem usar artefatos persistentes/checkpoints quando o runtime suportar, em vez de mensagens gigantes.
 
+Em salas ou runtimes com múltiplos agentes reagindo ao mesmo evento, separar dois problemas:
+- **colisão de concorrência**: resolver com mecanismos determinísticos de estado, freshness/seen-cursor, claim atômico, debounce/coalescing e limites de concorrência;
+- **erro de julgamento do modelo**: resolver no prompt ou na política somente quando o estado apresentado já estiver correto.
+
+Não use instrução textual para substituir lock, claim, idempotência ou freshness gate que o runtime pode impor de forma determinística. Em bursts, prefira pacing determinístico e backoff/adaptação observável a jitter aleatório como único controle.
+
 Multiagente não é default universal: usar quando comunicação/paralelismo/isolamento gerarem ganho maior que o overhead. Para tarefas simples, um único executor continua preferível.
 
 ## Coordenador e workers isolados
