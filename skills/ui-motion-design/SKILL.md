@@ -62,6 +62,8 @@ Escolha paradigma antes de biblioteca.
 6. Preferir propriedades de composição como transform/opacity quando servirem ao efeito e reduzir layout thrash.
 7. Planejar interrupção, reversão, resize, route change e unmount.
 8. Garantir prefers-reduced-motion e alternativa funcional.
+   - Em morphs interruptíveis, retomar da forma atualmente renderizada em vez de reiniciar da origem quando isso preserva continuidade.
+   - Em transições dependentes de assets/fontes, preservar layout e função com fallback estático quando o morph não puder ser resolvido.
 9. Escolher tecnologia pelo requisito:
    - CSS/WAAPI para transições simples;
    - Motion quando layout transitions, gestures, springs e animação React declarativa forem a melhor aderência;
@@ -106,4 +108,4 @@ web-design-engineer, scroll-storytelling, interaction-polish, motion-asset-engin
 
 ## Origem metodológica
 
-Adaptada de rbaumier/skills, greensock/gsap-skills, Motion, react-spring, Theatre.js, MengTo/Skills, podo/design-agent-skills e LottieFiles/motion-design-skill. Preserva função, personalidade e coreografia portáveis, removendo presets rígidos e dependências específicas.
+Adaptada de rbaumier/skills, greensock/gsap-skills, Motion, react-spring, Theatre.js, MengTo/Skills, podo/design-agent-skills e LottieFiles/motion-design-skill. Continuidade de morph interruptível e fallback funcional refinados a partir de KickNext/morphnext. Preserva função, personalidade e coreografia portáveis, removendo presets rígidos e dependências específicas.
