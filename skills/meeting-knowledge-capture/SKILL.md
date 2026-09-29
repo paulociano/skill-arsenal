@@ -23,7 +23,7 @@ Transformar gravação ou transcrição de uma reunião em memória operacional:
 1. **Source** — recording, transcript ou notes.
 2. **Transcription/diarization** — somente quando ferramenta real estiver disponível.
 3. **Preserve raw** — manter transcript/fonte separado do resumo.
-4. **Normalize speakers/time** — timestamps e speaker labels quando existentes.
+4. **Normalize speakers/time** — timestamps e speaker labels quando existentes. Preferir identidade fornecida pela plataforma/captura quando disponível; diarização inferida deve permanecer corrigível e não pode inventar nomes.
 5. **Summarize**:
    - topics;
    - decisions;
@@ -42,6 +42,8 @@ Transformar gravação ou transcrição de uma reunião em memória operacional:
 - não transformar intenção vaga em decisão;
 - decisão precisa estar distinguida de sugestão;
 - transcript é fonte, resumo é interpretação;
+- decisões e action items gerados devem ser rastreáveis ao trecho/timestamp quando a fonte permitir; draft gerado por IA não vira fato aprovado só por aparecer no resumo;
+- preservar transcript bruto separadamente de correções/normalizações quando isso for necessário para auditoria;
 - pesquisas sobre pessoas citadas não entram automaticamente;
 - notas pessoais/terceiros exigem necessidade e autorização apropriadas;
 - não poluir um vault/base existente com estruturas novas sem pedido.
