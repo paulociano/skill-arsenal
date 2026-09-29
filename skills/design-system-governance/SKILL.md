@@ -84,12 +84,27 @@ Ao materializar um design system de referência:
 5. validar contraste, token references e previews;
 6. não afirmar que um fallback pertence à marca original sem evidência.
 
+Quando o sistema também gera CSS/utilities:
+- tratar o editor visual como uma interface sobre o modelo, não como a autoridade final;
+- garantir export/import portátil e legível quando possível;
+- manter escalas fluidas derivadas de poucas restrições explícitas, em vez de dezenas de valores soltos;
+- preservar compatibilidade entre tokens semânticos, selectors/component contracts e CSS produzido;
+- considerar reduced motion, touch e themes como parte do contrato de saída, não preferências escondidas no editor.
+
+
+1. distinguir primitives de semantic tokens;
+2. manter um design model como fonte única;
+3. fazer component contracts apontarem para tokens e princípios;
+4. justificar derived components;
+5. validar contraste, token references e previews;
+6. não afirmar que um fallback pertence à marca original sem evidência.
+
 ## Ferramentas e dependências
 
 Não exigir oh-my-design, shadcn lint, Regen Icons ou formato compilado específico. Preservar decisões e rastreabilidade.
 
 ## Referências
 
-Adaptada de kwakseongjae/oh-my-design, contratos agent-first inspirados em shadcn-ui/lint, governança de derivados inspirada em kazdenc/regen-icons e living design contracts inspirados em nolly-studio/agent-skills e AgentsORG/DESIGN.
+Adaptada de kwakseongjae/oh-my-design, contratos agent-first inspirados em shadcn-ui/lint, governança de derivados inspirada em kazdenc/regen-icons e living design contracts inspirados em nolly-studio/agent-skills e AgentsORG/DESIGN. Portabilidade de projeto, geração visual de tokens e escalas fluidas refinadas a partir de CoreBunch/Core-Framework.
 
 Origem local: design-system-governance.docx.
