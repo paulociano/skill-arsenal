@@ -180,3 +180,13 @@ Learning loop por experiência adaptado de https://github.com/kayba-ai/agentic-c
 Decision points estreitos, modos active/shadow/off e ledger de julgamentos adaptados de [qybaihe/mu](https://github.com/qybaihe/mu), sem importar seu runtime, judges, desktop app ou mecanismos de aprovação.
 
 Origem local: [loop-engineering.docx](../loop-engineering.docx).
+
+## Descoberta e recibo de loops
+
+Ao descobrir recorrência em histórico autorizado, exigir pelo menos duas ocorrências concretas antes de chamá-la recorrente. Código que sugere repetição sem histórico é oportunidade inferida. Feedback novo precisa poder alterar a próxima ação; caso contrário, preferir workflow único.
+
+Para execuções que exigem auditoria/debrief, retornar recibo compacto com definição exata ou revisão imutável do loop, escopo, check e condições, limite finito, ações, evidências e motivo de parada. Data de modificação sozinha não identifica uma definição. Não criar persistência ou agenda fora do escopo autorizado.
+
+No debrief, separar falha de desenho do loop, decisão de execução, ambiente/ferramenta e mudança de objetivo. Uma execução só sustenta conclusão sobre aquele caso. Alterar apenas o elemento cuja relação com a falha é sustentada por evidência; não enfraquecer verificador para transformar falha em sucesso.
+
+Adaptado de [Forward-Future/loopy](https://github.com/Forward-Future/loopy), sem instalação, catálogo obrigatório ou publicação externa. Manter os limites finitos e autorizações reais deste Arsenal.

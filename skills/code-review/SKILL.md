@@ -74,3 +74,11 @@ Usar esse eixo para calibrar severidade e evitar recomendar correções caras pa
 Decision log, semantic diff e ligação entre visualização e código adaptados de [devdotfast/whiteboard](https://github.com/devdotfast/whiteboard), sem depender do aplicativo desktop ou SDK da fonte.
 
 Origem local: [code-review.docx](../code-review.docx).
+
+## Cobertura e localização verificáveis
+
+Em revisões com múltiplos arquivos, construir inventário a partir do diff/escopo real: revisado, excluído com motivo e pendente. Não apresentar revisão parcial como completa. Agrupar arquivos relacionados quando o contrato atravessar arquivos, como traduções, schema e consumidor; aplicar apenas regras relevantes àquela unidade.
+
+Separar julgamento do finding de sua localização: confirmar caminho, símbolo, lado/revisão do diff e trecho atual antes de entregar. Reabrir a fonte para tentar refutar o defeito e verificar consequência; remover duplicatas e observações sem impacto sustentado. Ausência de findings não prova ausência de defeitos.
+
+Método refinado a partir de [alibaba/open-code-review](https://github.com/alibaba/open-code-review). Não exige CLI, subagentes ou envio de código a provedor externo; alegações de custo/precisão da fonte precisam de avaliação no workload real.
