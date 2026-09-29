@@ -34,7 +34,7 @@ Reconstruir um objeto ou personagem de uma imagem de referência como modelo 3D 
 5. **Build passes** — blockout → structural → form → material → surface → lighting → interaction → optimization.
 6. **Review** — capturar viewpoints, comparar silhouette/proporções/materiais/detalhes e registrar correções.
 7. **Bounded correction loop** — corrigir apenas falhas observadas; limitar iterações e preservar evidência.
-8. **Verify final** — validar artefato, comportamento, performance e aproximações declaradas.
+8. **Verify final** — validar artefato, comportamento, performance e aproximações declaradas. Quando o destino for fabricação, incluir checks pertinentes de espessura real, conectividade, interferência/clearance, orientação de impressão, fit e readback do formato exportado; uma preview renderizada não substitui esses checks.
 
 ## Regras
 
