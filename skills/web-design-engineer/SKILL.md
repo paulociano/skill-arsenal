@@ -161,3 +161,7 @@ Para referências de landing pages, motion e efeitos de superfície, consultar [
 ## Produtos e runtimes como referência
 
 Quando o projeto exigir editor Office embutido, conhecimento documental, CRM WhatsApp, visualização geográfica ou agentes de equipe, consultar [produtos web e limites de integração](references/office-knowledge-agent-products.md). Distinguir componente, produto completo e serviço externo; escolher somente quando o requisito justificar operação, licenças e dependências.
+
+## Projetos HTML e CSS
+
+Para páginas estáticas, HTML único, componentes sem framework JS e efeitos CSS, consultar [referências HTML/CSS](references/html-css-component-references.md). Diferenciar snippets, tokens, frameworks, temas e dependências de build; preservar a stack existente e validar comportamento além da aparência.

@@ -65,3 +65,7 @@ design-direction, web-design-engineer, scroll-storytelling, shader-graphics-engi
 ## Origem metodológica
 
 Adaptada de pmndrs/react-three-fiber, drei, postprocessing, oframe/ogl, curtainsjs, React Bits, Magic UI, tsParticles e exemplos de transição WebGL. Importa decisões e budgets, não uma stack obrigatória.
+
+## Efeitos em HTML/CSS
+
+Para keyframes, hover, loaders, revelações e fundos de gradientes sem framework JS, consultar [referências HTML/CSS](../web-design-engineer/references/html-css-component-references.md). Avaliar CSS antes de introduzir outro runtime e fornecer foco, toque e reduced motion equivalentes.
