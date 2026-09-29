@@ -63,6 +63,7 @@ Antes de verificar UI no browser, escolher a evidência adequada:
 
 - DOM para structure/labels/state exposto;
 - screenshot/vision para layout/clipping/visual;
+- quando screenshot for a evidência, registrar viewport, escala/DPR, color scheme, alvo/selector e condição de espera suficientes para tornar a captura reproduzível; não tratar uma imagem sem metadata de captura como prova determinística;
 - network/state quando consequência funcional importar;
 - hybrid para fluxos onde visual e estado precisam concordar.
 
