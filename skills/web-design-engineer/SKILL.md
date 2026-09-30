@@ -54,6 +54,19 @@ Projetos pequenos podem combinar fases. Não escolher efeito antes da estrutura 
 11. Fazer revisão final em brand/system fidelity, context mismatch, interface feel e final QA.
 12. Remover efeitos cujo custo, competição ou dependência não justifique benefício.
 
+## Loop visual sobre código real
+
+Quando a interface já existe e o ambiente permite selecionar/inspecionar elementos do runtime, preferir um loop de edição ancorado no artefato real:
+1. identificar o elemento e seu owner no código;
+2. capturar intenção visual em termos de layout/tokens/estado, não coordenadas frágeis;
+3. produzir uma mudança pequena e revisável;
+4. inspecionar diff antes de aplicar quando houver efeito material;
+5. validar type/lint/build conforme o projeto;
+6. verificar a consequência no render real;
+7. manter checkpoint/rollback quando a ferramenta real oferecer.
+
+Visual editor é uma interface sobre o código ou modelo canônico, não uma segunda fonte de verdade. Alterações manuais, de agente e visuais devem convergir para representação diffable/versionável quando possível.
+
 ## Design constraints versus design dogma
 
 Fontes externas de UI frequentemente trazem listas rígidas de fontes, spacing, radius, backgrounds ou efeitos proibidos. Tratar essas listas como **estilo/opinião da fonte**, não como defaults universais.
@@ -147,6 +160,8 @@ Usar leitura/escrita, browser e terminal realmente disponíveis. Não exigir bib
 Metodologia de direção visual: Anthropic frontend-design. Macrostructure/fingerprint: Nutlope/hallmark. Pipeline estruturado: Firzus, mblode, dawitlabs e nolly-studio. Creative web routing refinado a partir de Motion, Lenis, r3f-scroll-rig, ecossistema pmndrs, React Bits, Animate UI e Magic UI.
 
 Landing-page strategy e discipline de conversão foram revisadas contra [elayadesign/ai-design-skills](https://github.com/elayadesign/ai-design-skills), preservando princípios úteis e rejeitando presets rígidos de tipografia, spacing, radius e estética universal. O catálogo [Owl-Listener/designer-skills](https://github.com/Owl-Listener/designer-skills), [ConardLi/garden-skills](https://github.com/ConardLi/garden-skills), [MengTo/Skills](https://github.com/MengTo/Skills) e [jakubkrehel/skills](https://github.com/jakubkrehel/skills) foi tratado como radar de capabilities e overlap, não como fonte para importar catálogos inteiros.
+
+Loop visual↔código, seleção de elemento, diff revisável, checkpoints e validação no render refinados a partir de `onlook-dev/onlook`, `SandeepBaskaran/design-mode`, `Kalmuraee/OpenMagic`, `winchxyz/loupe` e `buildingopen/openpage`. Os produtos/runtimes permanecem referências externas e não são presumidos disponíveis.
 
 Origem local: web-design-engineer.docx.
 
