@@ -71,6 +71,31 @@ Quando solicitado ou já disponível, seguir [instalação, execução residente
 
 Escolher o nível mais forte disponível que não complique desnecessariamente a arquitetura.
 
+## Generative UI como contrato estruturado
+
+Quando a saída do modelo dirige uma interface, trate UI generativa como um contrato de dados e componentes, não como HTML arbitrário produzido livremente.
+
+Preferir:
+`modelo → spec estruturada validada → registry de componentes permitidos → renderer`.
+
+O schema deve limitar:
+- tipos de bloco/componentes permitidos;
+- props e tipos;
+- ordem/hierarquia;
+- conteúdo e provenance quando houver pesquisa;
+- estados de loading/error/empty;
+- ações permitidas.
+
+Regras:
+- texto/citação factual continua sujeito à verificação semântica;
+- componente desconhecido deve falhar de forma segura;
+- streaming pode montar uma spec incremental, mas a UI final precisa validar;
+- não permitir que conteúdo recuperado injete componentes privilegiados ou ações;
+- separar apresentação gerada de permissões/efeitos externos;
+- renderer deve possuir acessibilidade e comportamento, em vez de pedir ao modelo para reinventá-los a cada resposta.
+
+Esse padrão permite respostas adaptarem a forma ao conteúdo sem transformar geração de UI em execução irrestrita de código.
+
 ## Calibração e evolução do contrato
 
 Quando uma probabilidade ou confidence participar de uma política, calibrar no conjunto rotulado do próprio domínio e guardar:
@@ -112,5 +137,7 @@ Combina com `to-spec`, `graph-engineering`, `experiment-design`, `runtime-ui-ver
 ## Referências
 
 Adaptada de dottxt-ai/outlines.
+
+Generative UI por spec estruturada e component registry refinada a partir de `miurla/morphic`, sem importar seu runtime, providers ou stack de busca.
 
 Origem local: [structured-output-contract.docx](../structured-output-contract.docx).
