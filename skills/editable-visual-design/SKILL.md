@@ -38,7 +38,9 @@ Criar peças visuais de canvas fixo com alto acabamento preservando editabilidad
 8. Renderizar em tamanho real.
 9. Inspecionar hierarquia, overflow, contraste, crop, alinhamento, line breaks, repetição e qualidade dos assets.
 10. Corrigir findings observados e re-renderizar.
-11. Entregar fonte editável + render final quando possível.
+11. Antes de exportar, escolher o formato pelo uso final: raster fotográfico, gráfico/ilustração, documento digital, impressão, vetor/web ou animação; não usar o mesmo formato por hábito.
+12. Quando a peça fizer parte de uma série ou campanha, preservar tokens de marca e componentes reutilizáveis em template/brand system quando o ambiente suportar isso, evitando drift entre variações.
+13. Entregar fonte editável + render final quando possível.
 
 ## Imagens geradas
 
@@ -48,6 +50,13 @@ Não pedir ao modelo lettering que precisa ser exato no artefato final. Quando t
 
 Separar factualidade, estrutura/editabilidade, composição tipográfica, qualidade visual, runtime/export, licença e proveniência.
 
+No QA visual, verificar também:
+- consistência de spacing e alinhamento;
+- contraste direcionando atenção para o elemento certo;
+- espaço negativo suficiente para preservar hierarquia;
+- excesso de elementos sem função;
+- consistência entre peças da mesma série.
+
 ## Integração
 
 typographic-composition, visual-explanation-sketch, web-design-engineer, design-system-governance, publication-figure-engineering e verify-before-claim.
@@ -55,5 +64,7 @@ typographic-composition, visual-explanation-sketch, web-design-engineer, design-
 ## Referências
 
 Adaptada de yejy53/Editable-Design e owners tipográficos/visuais do Arsenal.
+
+Princípios de consistência de spacing, espaço negativo, contraste, templates/brand controls e seleção de formato de exportação refinados a partir de [Curious Refuge · 74 Canva Tips and Tricks for Better Designs](https://curiousrefuge.com/blog/canva-tips), tratados como heurísticas contextuais e não regras universais de design.
 
 Origem local: editable-visual-design.docx.
