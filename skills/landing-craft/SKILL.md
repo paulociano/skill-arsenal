@@ -30,7 +30,8 @@ Projetar landing pages de alto impacto como uma narrativa de scroll, combinando 
 7. Tratar objeções como parte da narrativa, não como rodapé automático. FAQ só entra quando responde fricções reais.
 8. Manter uma ação primária clara acima da dobra; CTAs secundários só entram quando representam uma jornada realmente distinta.
 9. Definir um ponto de clímax visual e o respiro que o antecede.
-10. Planejar assets reais ou gerados, evitando decoração genérica sem função narrativa.
+9a. Quando a landing for altamente art-directed, escolher uma signature idea dominante e fazê-la carregar a memória da experiência; evitar competir com ela por uma coleção de efeitos igualmente fortes.
+10. Planejar assets reais ou gerados, evitando decoração genérica sem função narrativa. Quando referências visuais existirem, extrair princípios divergentes de composição/motion em vez de convergir para uma cópia ou média estética.
 11. Construir responsivamente, com contraste, reduced motion, no-JS fallback quando necessário e prioridade clara da CTA.
 12. Revisar densidade, hierarquia, responsividade, sobreposição, contraste, ritmo de scroll, continuidade da promessa e clareza do próximo passo.
 13. Corrigir defeitos encontrados sem reconstrução total por estética.
@@ -60,6 +61,7 @@ Páginas estritamente temporárias ou de campanha não devem ser indexadas autom
 - DESIGN/brand facts existentes vencem heurísticas genéricas.
 - Não inventar métricas, prova social, logos ou fatos de marca.
 - Uma landing não deve ser apenas uma sequência de cards repetidos.
+- O primeiro frame deve sustentar hierarquia, promessa e atmosfera mesmo com motion desligado.
 - Motion deve explicar progressão, origem, feedback ou continuidade; não decorar por padrão.
 - Acessibilidade e legibilidade são parte do impacto, não um pós-processo.
 - Não importar fórmulas rígidas de ordem de seção quando a oferta ou audiência pedir outra narrativa.
