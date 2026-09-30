@@ -37,11 +37,13 @@ Para cada cena relevante, definir somente os campos que afetam a execução:
 
 1. Ler brand/design direction, narrativa, assets e formato de destino.
 2. Definir a função da sequência: capturar atenção, revelar produto, explicar mecanismo, criar atmosfera, demonstrar transformação ou conectar capítulos.
+2a. Quando a referência vier de cinema, extrair uma gramática estrutural específica — enquadramento, luz, textura, ritmo, profundidade, montagem e relação câmera/sujeito — em vez de pedir genericamente "estilo cinematográfico". A referência inspira decisões; não é uma spec para copiar.
 3. Criar poucos shots com funções distintas. Evitar movimento contínuo sem mudança narrativa.
+3a. Para web, tratar o primeiro frame/hero como um pôster: a composição precisa funcionar parada antes de depender de animação.
 4. Planejar continuidade entre shots: direção de movimento, escala, luz, cor, posição do sujeito e vetor dominante.
 5. Separar movimento de câmera de movimento do sujeito. Não pedir “cinematic motion” como propriedade abstrata.
 6. Usar profundidade e oclusão para produzir sensação espacial antes de adicionar efeitos.
-7. Escolher a técnica mínima capaz de executar o shot:
+7. Escolher a técnica mínima capaz de executar o shot. Roteie pelo efeito necessário e pelo custo, não pelo prestígio técnico:
    - CSS/SVG para transformações simples;
    - GSAP/scroll para progressão ligada à interface;
    - Canvas/WebGL/Three.js para câmera, profundidade e shaders em runtime;
@@ -84,6 +86,7 @@ Tratar slides importantes como beats de uma sequência:
 ## Limites
 
 - Esta skill dirige shots; não afirma gerar vídeo quando não houver ferramenta real disponível.
+- Uma signature idea forte por superfície costuma ser melhor que empilhar efeitos concorrentes; exceções precisam de intenção composicional clara.
 - Referências de marcas ou produtos servem para extrair linguagem de câmera, ritmo e composição, não para copiar identidade.
 - Não presumir que image-to-video preservará produto, tipografia, rosto ou geometria com precisão; validar o output.
 - Não transformar toda landing ou apresentação em filme. Motion é opcional e proporcional à função.
@@ -95,3 +98,4 @@ Tratar slides importantes como beats de uma sequência:
 - motion-canvas/motion-canvas: animação programática orientada por cenas e sincronização.
 - hakimel/reveal.js e slidevjs/slidev: apresentações web com mídia, transições e estados animados.
 - Codrops e demos associadas de GSAP/WebGL: continuidade espacial, scroll cinematográfico, shaders e transições.
+- MustBeSimo/web-design-studio, ridelink0/ultimate-frontend-skills, omarkhandji-commits/scroll-3d-cinematic-stack e PyModel/cinematic-ui: route-before-renderer, primeiro frame como pôster, gramática cinematográfica explícita, referências divergentes, fallbacks e verificação proporcional.
