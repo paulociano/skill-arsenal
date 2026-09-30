@@ -168,6 +168,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **scenario-forecasting** — Construir forecasts e cenários com baseline, backtesting, intervalos, premissas e gatilhos de atualização sem transformar projeção em certeza.
 - **scroll-storytelling** — Projetar experiências narrativas guiadas por scroll com estágios, pinning, parallax, transições e sincronização DOM/WebGL sem sacrificar acessibilidade ou performance.
 - **social-analytics** — Analisar exports de redes sociais para identificar tendências e desempenho sem extrapolar amostras ou métricas indisponíveis.
+- **social-carousel-engineering** — Projetar carrosséis sociais como narrativa slide a slide, do hook ao CTA, preservando marca, densidade legível, continuidade visual, editabilidade e QA de exportação sem prometer engajamento.
 - **social-post-review** — Revisar posts separando qualidade editorial de comparação com o histórico real do autor, sem prever desempenho por score.
 - **source-to-skill** — Converter fontes longas em skills de conhecimento com entrada compacta, referências sob demanda e fidelidade à origem.
 - **sprite-sheet-pipeline** — Converter animações ou frames em sprite sheets com registro, escala, transparência e timing verificados.
