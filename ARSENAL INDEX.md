@@ -48,6 +48,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/research-to-presentation/STACK.md`
 - **social-growth-engine** — Diagnostica gargalos de crescimento social, pesquisa oportunidades, planeja conteúdo, produz, mede e realimenta o próximo ciclo.  
   `stacks/social-growth-engine/STACK.md`
+- **venture-building-cycle** — Conduzir uma nova empresa, startup ou iniciativa de inovação da tese inicial à validação, protótipo, primeiros clientes, monetização e decisão de escala por evidência progressiva e apostas reversíveis.  
+  `stacks/venture-building-cycle/STACK.md`
 
 ## Skills
 
