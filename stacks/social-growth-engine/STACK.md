@@ -15,6 +15,7 @@ Operar crescimento social como um loop mensurável: diagnosticar antes de produz
 - social-analytics
 - niche-research
 - content-matrix
+- social-carousel-engineering
 - reels-scripting
 - social-post-review
 - content-production
@@ -28,10 +29,11 @@ Operar crescimento social como um loop mensurável: diagnosticar antes de produz
 3. Pesquisa — usar niche-research somente quando tendências, notícias ou comportamento atual importarem.
 4. Arquitetura editorial — usar content-matrix para cruzar pilares, formatos e objetivo do gargalo.
 5. Calendário operacional — distribuir peças pela capacidade real, função de cada formato, campanha e dependências. Registrar assunto, formato, objetivo, CTA, prova/fonte e status.
-6. Produção — chamar content-production e apenas as skills de canal necessárias, como reels-scripting.
-7. Revisão — usar social-post-review para qualidade editorial e aderência ao histórico quando houver dados suficientes.
-8. Medição — após publicação, usar social-analytics com janela comparável.
-9. Recalibração — atualizar hipótese de gargalo e próximo ciclo. Não mudar múltiplas variáveis de uma vez quando isso impedir aprendizado.
+6. Produção — chamar content-production e apenas as skills de canal necessárias, como reels-scripting ou social-carousel-engineering.
+7. Hipótese criativa — para conteúdo pago ou testes deliberados, explicitar audience, offer, hook, proof, CTA e conceito visual; usar experiment-design quando o objetivo for comparar variantes e aprender causalmente.
+8. Revisão — usar social-post-review para qualidade editorial e aderência ao histórico quando houver dados suficientes.
+9. Medição — após publicação, usar social-analytics com janela comparável.
+10. Recalibração — atualizar hipótese de gargalo e próximo ciclo. Não mudar múltiplas variáveis de uma vez quando isso impedir aprendizado.
 
 ## Gates
 
