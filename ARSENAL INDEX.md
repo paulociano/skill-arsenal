@@ -197,6 +197,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **value-investing-company-analysis** — Analisar empresas por fundamentos e value investing com dados atuais, cenários de valuation e riscos que podem invalidar a tese.
 - **verify-before-claim** — Verificar afirmações consequenciais de conclusão, correção ou publicação com evidência fresca do escopo afirmado.
 - **video-editing-pipeline** — Editar vídeos com transcrição, decisões de corte explícitas, EDL, render e revisão audiovisual preservando as fontes.
+- **viral-motion-explainer** — Criar vídeos explicativos verticais curtos como pipeline de hook, roteiro, direção mixed-media, keyframes e prompts de motion por cena, com execução por etapas ou ponta a ponta.
 - **visual-explanation-sketch** — Transformar conceitos, processos e relações em esboços visuais simples com caixas, setas, agrupamentos, anotações e destaques para facilitar compreensão.
 - **voice-builder** — Construir perfis de voz e posicionamento a partir de amostras reais, distinguindo identidade, estilo, audiência e canal.
 - **watch-video** — Analisar vídeos com transcrição e frames disponíveis, ancorando conclusões em timestamps e distinguindo visto, dito e inferido.
