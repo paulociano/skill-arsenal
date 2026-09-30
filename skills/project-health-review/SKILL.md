@@ -34,7 +34,8 @@ Produzir uma visão operacional confiável da saúde de um projeto ou portfólio
 
 1. Definir período, projetos cobertos e fontes.
 2. Para cada projeto, confirmar outcome, próximo marco e owner.
-3. Comparar plano versus evidência atual: marcos, atrasos, bloqueios, aging, dependências, mudança de escopo e capacidade.
+3. Comparar plano versus evidência atual: marcos, atrasos, bloqueios, aging, dependências, mudança de escopo e capacidade. Quando houver record operacional, ler essas dimensões do mesmo sistema de execução em vez de reconstruir status manualmente.
+3a. Distinguir target date, committed date, external deadline e forecast quando coexistirem; atraso contra baseline e mudança de previsão são fatos diferentes.
 4. Separar fato, inferência e dado ausente.
 5. Registrar riscos com probabilidade/impacto apenas quando houver base suficiente; caso contrário usar descrição qualitativa explícita.
 6. Identificar decisões necessárias, dono e data-limite.
@@ -66,7 +67,7 @@ Produzir uma visão operacional confiável da saúde de um projeto ou portfólio
 
 ## Integração
 
-dashboard-design, project-planning, project-complexity-management, root-cause-analysis, scenario-forecasting e verify-before-claim.
+work-delivery-flow, dashboard-design, project-planning, project-complexity-management, root-cause-analysis, scenario-forecasting e verify-before-claim.
 
 ## Origem metodológica
 
