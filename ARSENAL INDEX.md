@@ -206,6 +206,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **web-extraction-pipeline** — Extrair conteúdo estruturado de sites quando busca comum não basta, com técnica mínima, escopo limitado e validação.
 - **web-video-presentation** — Criar apresentações HTML por cenas e narração para navegação por clique ou gravação, quando a entrega em navegador é parte do pedido.
 - **weekly-review-planning** — Executar revisão semanal baseada em calendário, compromissos, projetos, pendências e capacidade para fechar loops e definir poucos outcomes realistas para a próxima semana.
+- **work-delivery-flow** — Operar fluxo de trabalho e entregas por um record único de itens, estados, owners, prazos, dependências, WIP, aging e exceções, conectando planejamento, execução e gestão à vista sem transformar atividade em progresso.
 - **writing-quality** — Rascunhar, estruturar, revisar ou auditar prosa preservando significado, evidência, voz, clareza e adequação ao meio.
 
 ## Manutenção
