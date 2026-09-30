@@ -52,6 +52,21 @@ Quando o pedido começa por tema/brief em vez de footage pronto, usar uma cadeia
 
 Cada estágio deve poder ser inspecionado e, quando útil, interrompido/reutilizado sem refazer toda a cadeia.
 
+### Shot ledger para produção generativa
+
+Para vídeo gerado por cenas, não trate o projeto como um prompt monolítico. Mantenha um ledger por shot com, quando relevante:
+- função narrativa;
+- duração/alvo de ritmo;
+- enquadramento/câmera;
+- personagens/objetos/local;
+- frame inicial/final ou referência;
+- prompt/direção de movimento;
+- backend/modelo realmente usado;
+- status `planned → generated → review → approved/rework`;
+- motivo de re-geração.
+
+A continuidade deve ser revisada entre shots, não apenas dentro de cada clip. Refilmar/regenerar somente o shot que falhou quando o restante permanece válido. Storyboard/previs é evidência intermediária e pode ser aprovado antes do custo maior de geração final.
+
 ### Runtime e modo de composição
 
 Escolher runtime pelo trabalho real e pela disponibilidade do ambiente:
@@ -109,5 +124,7 @@ Método sintetizado de [OpenShorts](https://github.com/mutonby/openshorts/blob/4
 Adaptada de browser-use/video-use.
 
 Pipeline tema→roteiro→assets→voz→legendas→música→composição adaptado de https://github.com/harry0703/MoneyPrinterTurbo. Seleção explícita de runtime e modos templated/atelier adaptados de https://github.com/calesthio/OpenMontage, sem exigir seus providers, Remotion, HyperFrames ou ferramentas vendorizadas.
+
+Shot ledger, storyboard→filming→continuity review→rework queue e roteamento de modelo por shot refinados a partir de `LudwigKienle/ai-video-production-editor`, `headline-design/seq` e `openslop/openslop`, sem importar seus providers, plugins ou runtimes.
 
 Origem local: [video-editing-pipeline.docx](../video-editing-pipeline.docx).
