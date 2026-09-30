@@ -185,7 +185,8 @@ Pode combinar com:
 - writing-quality, para lapidar linguagem;
 - voice-builder, quando houver voz de liderança definida;
 - customer-interview, quando o feedback envolver qualidade de descoberta com clientes;
-- after-action-review, quando o feedback nasce de uma análise pós-reunião.
+- after-action-review, quando o feedback nasce de uma análise pós-reunião;
+- nonviolent-communication, quando tensão, julgamento, necessidades conflitantes ou formulação de pedido/limite forem parte central da conversa.
 
 ## Referências
 
