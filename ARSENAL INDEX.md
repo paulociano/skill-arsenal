@@ -116,6 +116,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **image-to-3d** — Preparar, rotear e validar conversões de imagens em assets 3D por modelos de reconstrução externos, escolhendo backend por fidelidade, velocidade, hardware, materiais e formato sem fingir execução indisponível.
 - **interactive-system-diagram** — Criar diagramas interativos de arquitetura, workflow, sequência, dataflow ou lifecycle com topologia verificável, artefato HTML explorável e separação explícita entre validação estrutural, verificação no browser e revisão perceptual.
 - **interaction-polish** — Refinar o último nível de qualidade de uma interface por microinterações, feedback, estados, tipografia animada e comportamento contextual sem transformar polish em decoração excessiva.
+- **interior-space-prototyping** — Prototipar interiores a partir de uma planta estrutural única, conectando paredes, aberturas, dimensões, mobiliário, circulação e projeções 2D/3D sem confundir visualização decorativa com precisão arquitetônica.
+- **lettering-path-engineering** — Construir lettering customizado, glyphs e texto vetorial por paths editáveis, métricas e relações tipográficas, incluindo single-stroke para plotter/CNC, sem confundir composição tipográfica com desenho de fonte.
 - **jtbd-framing** — Reformular decisões de produto por Jobs-to-be-Done, situações reais, dificuldades e critérios de adoção ou abandono.
 - **kb-retriever** — Responder perguntas em bases documentais grandes por busca progressiva, leitura localizada e citações rastreáveis.
 - **landing-craft** — Projetar landing pages como narrativas de scroll com conceito visual, message match, prova, objeções e CTA coerentes.
@@ -136,6 +138,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **model-routing-gateway** — Projetar ou configurar roteamento de modelos LLM com seleção por capacidade, retries, fallback, orçamento e observabilidade.
 - **ml-production-engineering** — Projetar e operar sistemas de machine learning do dado à produção com testes, avaliação, serving, monitoramento e ciclos seguros de melhoria.
 - **niche-research** — Pesquisar pautas atuais de um nicho e propor ângulos editoriais com fontes e datas verificadas.
+- **parametric-cad-drawing** — Projetar geometria 2D/3D técnica por parâmetros, constraints e operações geométricas, preservando dimensões, unidades, relações e exportabilidade em vez de tratar desenho técnico como ilustração.
 - **patent-strategy-review** — Auditar e pressionar pedidos de patente utilitária dos EUA com gates de completude, suporte, prior art, claim coverage e design-around, separando análise técnica de aconselhamento jurídico.
 - **photo-relational-abstraction** — Analisar uma fotografia fornecida, extrair relações visuais observáveis e reconstruí-las como composição abstrata não literal, preservando invariantes espaciais sem aplicar style transfer à foto original.
 - **plain-writing** — Escrever ou revisar prosa para máxima clareza usando palavras comuns, estrutura lógica, terminologia consistente, contexto suficiente e remoção de jargão, puffery e formulações artificiais.
