@@ -71,6 +71,20 @@ Quando um fato ou decisão muda ao longo do tempo, não sobrescrever a história
 
 Esse padrão é especialmente útil para projetos, políticas, preferências e sistemas que evoluem. Graphiti inspira a noção de fatos temporais com provenance, mas não é dependência do Arsenal.
 
+## Memória como fonte de verdade + índice derivado
+
+Quando o ambiente suportar memória persistente própria do projeto, preferir uma arquitetura em que:
+
+- o conteúdo canônico permaneça em formato humano-editável e versionável;
+- índices de busca, embeddings, grafos e caches sejam derivados e reconstruíveis;
+- handoffs sejam objetos explícitos com ownership e estado, não apenas texto solto;
+- retenção e compactação preservem provenance e reversibilidade;
+- fatos frios possam ser compactados sem apagar a fonte original quando o storage permitir;
+- contradições sejam sinalizadas, não silenciosamente fundidas;
+- memória usada recentemente possa receber maior prioridade de retenção, desde que isso não apague informação só por falta de acesso.
+
+Não presumir que a Memory do ChatGPT, um MCP externo ou um servidor local oferece essas garantias. Esta seção descreve um contrato desejável para sistemas que realmente possuam storage, versionamento e retrieval próprios.
+
 ## Integração com Arsenal
 
 - `session-learn` captura o delta da sessão.
