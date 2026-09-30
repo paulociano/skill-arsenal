@@ -153,3 +153,42 @@ A pesquisa justificou uma nova capability canônica: `social-carousel-engineerin
 Para engajamento e orgânico, o Arsenal já possuía bons owners de diagnóstico, ideação, revisão e analytics; o ganho foi fechar o gap do formato carrossel e reforçar o loop de aprendizado.
 
 Para paid social, não foi necessário criar uma skill de operação de Meta Ads. O ganho metodológico foi incorporar creative hypothesis + experiment discipline à stack social, mantendo execução de campanhas dependente de integração real e autorização.
+
+## Continuação — consolidação do sistema de posts
+
+Após materializar `social-carousel-engineering`, foi feita uma segunda passagem de ownership para evitar criar skills estreitas demais.
+
+### UPDATE — `content-matrix`
+
+Em vez de criar um owner separado para "viral hooks", `content-matrix` passou a cobrir:
+- audience tension;
+- famílias de ângulo;
+- hook families;
+- proof/source;
+- escolha de formato;
+- CTA e função no funil;
+- visual opportunity;
+- creative hypothesis para paid;
+- distillation/idea inventory para repurposing;
+- roteamento para carrossel, vídeo curto, social card e texto.
+
+A decisão reduz fragmentação: hooks são parte da arquitetura da ideia e do formato, não um produto isolado.
+
+### UPDATE — `content-production`
+
+O fluxo agora explicita:
+- idea inventory antes de repurpose;
+- reconstrução nativa por canal em vez de cross-posting literal;
+- roteamento para `social-carousel-engineering`, `editable-visual-design` e `reels-scripting`;
+- sequence logic de campanha;
+- registro da variável alterada entre variantes;
+- `experiment-design` quando a comparação pretende produzir aprendizado causal.
+
+### Decisão de ownership
+
+Não foram criadas skills separadas para:
+- viral hooks;
+- social repurposing;
+- paid creative generator.
+
+Essas capacidades têm owners naturais em `content-matrix`, `content-production`, `social-carousel-engineering`, `experiment-design` e `social-growth-engine`. Criá-las separadamente aumentaria overlap sem ganho comportamental claro.
