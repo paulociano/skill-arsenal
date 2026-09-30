@@ -12,6 +12,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 
 ## Stacks
 
+- **ai-workspace-operating-cycle** — Opera trabalhos complexos e persistentes como um workspace estruturado, conectando fontes, decisões, assets, artifacts, contexto seletivo, geração, verificação e retomada entre sessões sem reduzir tudo a uma conversa linear.  
+  `stacks/ai-workspace-operating-cycle/STACK.md`
 - **arsenal-autopilot** — Evoluir o Skill Arsenal a partir de uma ou mais fontes externas, detectando capacidades, overlap e ownership, avaliando segurança e portabilidade, adotando apenas valor incremental e publicando mudanças verificadas com trilha de auditoria.  
   `stacks/arsenal-autopilot/STACK.md`
 - **business-decision-intelligence** — Investiga métricas e causas, estrutura decisões, prioriza ações, projeta cenários e comunica resultados em dashboards ou Power BI.  
