@@ -139,6 +139,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **ml-production-engineering** — Projetar e operar sistemas de machine learning do dado à produção com testes, avaliação, serving, monitoramento e ciclos seguros de melhoria.
 - **niche-research** — Pesquisar pautas atuais de um nicho e propor ângulos editoriais com fontes e datas verificadas.
 - **parametric-cad-drawing** — Projetar geometria 2D/3D técnica por parâmetros, constraints e operações geométricas, preservando dimensões, unidades, relações e exportabilidade em vez de tratar desenho técnico como ilustração.
+- **nonviolent-communication** — Estruturar mensagens, conversas difíceis e mediação pela separação entre observações, sentimentos, necessidades e pedidos, reduzindo julgamento sem apagar limites, responsabilidade ou clareza.
 - **patent-strategy-review** — Auditar e pressionar pedidos de patente utilitária dos EUA com gates de completude, suporte, prior art, claim coverage e design-around, separando análise técnica de aconselhamento jurídico.
 - **photo-relational-abstraction** — Analisar uma fotografia fornecida, extrair relações visuais observáveis e reconstruí-las como composição abstrata não literal, preservando invariantes espaciais sem aplicar style transfer à foto original.
 - **plain-writing** — Escrever ou revisar prosa para máxima clareza usando palavras comuns, estrutura lógica, terminologia consistente, contexto suficiente e remoção de jargão, puffery e formulações artificiais.
