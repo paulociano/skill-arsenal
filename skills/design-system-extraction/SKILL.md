@@ -43,6 +43,9 @@ Extrair de um site, repositório ou codebase existente o sistema visual realment
 5. Normalizar tokens repetidos e separar valor observed de derived/proposed.
 6. Capturar exemplos visuais representativos quando browser/runtime existir.
 7. Produzir token inventory, component inventory, layout grammar, motion/interactions, visual guide e provenance.
+   - quando o artefato de design for estruturado e legível por máquina, inspecionar também árvore de nós, relações parent/child, componentes/variants e constraints/layout sem depender apenas do render;
+   - quando houver formatos interoperáveis, preferir exportações abertas e legíveis (por exemplo SVG/CSS/HTML/JSON/tokens) para preservar portabilidade entre design e código;
+   - tratar lint de naming, layout, contraste e estrutura como evidência diagnóstica, não como prova isolada de qualidade.
    - para componentes recorrentes, registrar anatomy, variants e estados observados como hover/focus/disabled quando houver evidência real;
    - registrar section patterns e combinações recorrentes de componentes quando isso ajudar a reproduzir a estrutura, não só a aparência;
    - manter uma trilha de evidência por página/tema para diferenciar token global, exceção local e variação temática.
@@ -103,8 +106,12 @@ Usar leitura/escrita e navegador/terminal realmente disponíveis. Separar inspe�
 
 design-system-governance, design-direction, web-design-engineer, landing-craft e runtime-ui-verification.
 
+Quando existir editor/programa conectado capaz de expor estrutura real do design, usar a estrutura como fonte adicional de evidência; não presumir disponibilidade de Penpot, OpenPencil, Figma, MCP ou CLI sem conexão real.
+
 ## Referências
 
 Adaptada de amaancoderx/npxskillui e enriquecida com o contrato vivo downstream-of-code de nolly-studio/agent-skills e AgentsORG/DESIGN.
+
+Interoperabilidade design↔code, inspeção estrutural de arquivos, lint e extração de tokens refinados a partir de `penpot/penpot` e `open-pencil/open-pencil`, sem instalar seus editores, CLIs ou MCPs.
 
 Origem local: design-system-extraction.docx.
