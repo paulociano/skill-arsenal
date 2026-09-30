@@ -12,6 +12,8 @@ Levar uma ideia ou pauta até peças prontas para os canais necessários sem per
 ## Skills candidatas
 
 - content-matrix
+- social-carousel-engineering
+- editable-visual-design
 - writing-quality
 - social-post-review
 - reels-scripting
@@ -38,8 +40,11 @@ Levar uma ideia ou pauta até peças prontas para os canais necessários sem per
    - estados Hold/Kill além de Draft/Approved;
    - data de última revisão para conteúdo evergreen;
    - política explícita para uso de IA quando relevante.
-9. Adaptar/repurpose somente depois de fixar a mensagem central e as restrições do canal.
-10. Arquivar aprendizado útil para o próximo ciclo quando existir superfície persistente.
+9. Adaptar/repurpose somente depois de fixar a mensagem central e as restrições do canal. Para uma fonte longa, extrair primeiro idea inventory: ideia central, ideias atômicas, provas, histórias, objeções, oportunidades visuais e CTAs possíveis.
+10. Reconstruir cada canal de forma nativa: reutilizar fatos/ideias, não duplicar wording por padrão. Carrosséis usam social-carousel-engineering; peças visuais fixas usam editable-visual-design; vídeos curtos usam reels-scripting.
+11. Em campanhas, preservar sequence logic quando útil: introduzir → aprofundar → provar → tratar objeção → lembrar/converter, sem transformar isso em calendário universal.
+12. Para variantes deliberadas, registrar o que mudou entre versões. Em paid creative ou testes causais, combinar com experiment-design.
+13. Arquivar aprendizado útil para o próximo ciclo quando existir superfície persistente.
 
 ## Brief mínimo para operação recorrente
 
