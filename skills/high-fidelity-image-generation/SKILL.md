@@ -39,6 +39,17 @@ Não transforme todo pedido em um formulário. Se o briefing já for específico
 6. **Targeted iteration** — se necessário, fazer uma alteração principal por iteração em vez de reescrever toda a direção.
 7. **Stop** — encerrar quando os critérios do briefing estiverem satisfeitos ou quando nova iteração depender de informação ausente.
 
+## Controle espacial e edição localizada
+
+Quando a intenção puder ser expressa por uma região ou evidência visual, prefira controle localizado a regenerar a imagem inteira:
+- seleção/máscara para delimitar o que pode mudar;
+- referência visual para identidade, material ou composição;
+- sketch/line art/depth/pose somente quando a ferramenta real aceitar esse tipo de guia;
+- intensidade de transformação proporcional ao pedido;
+- regiões não selecionadas permanecem invariantes salvo necessidade explícita.
+
+Esse padrão reduz drift porque transforma `prompt → imagem inteira` em `evidência + região + mudança`. Não prometa máscara, depth, pose ou ControlNet quando a ferramenta disponível não expõe esses controles.
+
 ## Direção de detalhe
 Para aumentar fidelidade, prefira relações concretas a adjetivos genéricos:
 - descreva posição relativa e enquadramento;
@@ -117,3 +128,5 @@ Metodologia consolidada principalmente de:
 - princípios portáveis de workflows externos de geração visual avaliados pelo Arsenal.
 
 Foram removidas dependências específicas de CLI, APIs externas e runtimes não disponíveis por padrão.
+
+Controle espacial e integração com fluxo de pintura refinados a partir de `Acly/krita-ai-diffusion`; composição de pipelines visuais por nós considerada a partir do ecossistema ComfyUI/InvokeAI. Esses runtimes permanecem referências externas, não dependências nativas.
