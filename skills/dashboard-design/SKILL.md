@@ -51,6 +51,8 @@ Uma visão operacional madura deve permitir responder rapidamente:
 12. Testar consistência métrica, legibilidade e uso em viewport real.
 13. Registrar definições, ownership, cadência e regras de alerta das métricas críticas.
 14. Quando o painel sustentar ritual de gestão, definir explicitamente o que acontece após cada alerta.
+15. Em gestão de entregas, preferir views derivadas do mesmo work record usado na execução; evitar uma segunda base manual apenas para o dashboard.
+16. Separar target/commitment/deadline/forecast quando datas tiverem significados diferentes e mostrar baseline versus expectativa atual quando houver desvio.
 
 ## Princípios de interface
 
@@ -76,7 +78,7 @@ Uma visão operacional madura deve permitir responder rapidamente:
 
 ## Integração
 
-project-health-review, product-metrics-diagnostics, scenario-forecasting, prioritization-engine, web-design-engineer, powerbi-engineering e verify-before-claim.
+work-delivery-flow, project-health-review, product-metrics-diagnostics, scenario-forecasting, prioritization-engine, web-design-engineer, powerbi-engineering e verify-before-claim.
 
 ## Origem metodológica
 
