@@ -71,6 +71,22 @@ Além de localizar conteúdo, perguntar:
 
 Preferir loadouts específicos a um prompt global gigantesco. Para bases em camadas, começar por cenário/core para bootstrap e descer a atom/raw somente quando a decisão exigir precisão. Aplicar orçamento por número de itens, caracteres e tempo para impedir que memória engula o contexto.
 
+## Contexto espacial e grafo de sessão
+
+Quando o workspace for visual/canvas e os artefatos tiverem relações explícitas, o espaço pode funcionar como uma **view do contexto**, não apenas decoração.
+
+Representar, quando o runtime real suportar:
+- nodes como fontes, notas, imagens, vídeos, documentos, referências ou outputs;
+- edges como relações explícitas;
+- groups como escopo de trabalho;
+- focus/selection como sinal de prioridade, não como verdade semântica;
+- referências nomeadas como ponteiros estáveis para assets;
+- histórico/transformações separadas do asset original.
+
+O agente não deve receber automaticamente o canvas inteiro. Construir um **context pack** por orçamento usando seleção/foco, vizinhança relevante, referências explícitas e objetivo atual. A posição espacial pode ajudar a recuperar contexto, mas proximidade visual sozinha não prova relação semântica.
+
+A fonte canônica deve continuar em dados/artefatos persistentes; canvas, busca e UI são views reconstruíveis quando a arquitetura permitir.
+
 ## Economia de contexto
 
 - buscar símbolo/termo antes de abrir arquivo inteiro;
@@ -89,5 +105,7 @@ Preferir loadouts específicos a um prompt global gigantesco. Para bases em cama
 Economia de contexto em batch adaptada de [lidge-jun/aside-codemode](https://github.com/lidge-jun/aside-codemode), sem depender do pacote externo.
 
 Separação source/note/transformation, context selection e busca full-text+vector adaptadas de https://github.com/lfnovo/open-notebook, sem exigir SurrealDB, Docker ou seus providers.
+
+Context graph compartilhado entre agente, canvas e workflow, com context packing seletivo, refinado a partir de `joyedz/melda`. O runtime do projeto não é dependência do Arsenal.
 
 Origem local: [kb-retriever.docx](../kb-retriever.docx).
