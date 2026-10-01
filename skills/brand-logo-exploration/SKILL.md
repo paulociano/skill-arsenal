@@ -17,17 +17,23 @@ Explorar direções de logo e identidade visual de forma estruturada, gerando co
 - variações SVG/conceituais;
 - apresentação/showcase de uma direção escolhida.
 
+## Context scan
+
+Antes de perguntar, reutilize contexto real já disponível: nome, descrição, estratégia, cores, fonts, assets existentes, superfícies de uso e restrições. Em código/produto, procurar sinais em documentação, theme/tokens, manifest e assets sem presumir que tudo encontrado é aprovado.
+
+Faça perguntas apenas para lacunas que mudem materialmente a direção.
+
 ## Workflow
 
 1. **Brief mínimo** — nome, categoria, conceito central, personalidade, restrições e usos.
 2. **Constraints** — monocromia/cor, wordmark/symbol, small-size use, background contexts.
-3. **Direction set** — gerar 4–6 conceitos realmente diferentes, não só parâmetros.
+3. **Direction set** — gerar 3–6 conceitos realmente diferentes, não só parâmetros. Variar símbolo, lógica formal ou tipográfica, composição e relação mark/wordmark; se duas propostas aceitam trocar o nome sem parecer conceitos diferentes, refazer uma.
 4. **Rationale** — explicar a ideia sem inventar significado pós-hoc.
 5. **Small-size test** — verificar leitura em favicon/app icon/tamanho pequeno.
 6. **Monochrome test** — logo deve sobreviver sem efeitos.
 7. **Select** — usuário escolhe 1–2 direções.
-8. **Targeted refinement** — ajustar proporção, spacing, geometry e cor sem regenerar tudo.
-9. **Production pass** — SVG/vector quando adequado, exports solicitados.
+8. **Targeted refinement** — ajustar proporção, spacing, geometry e cor sem regenerar tudo. Quando já existe logo aprovado, registrar invariantes de símbolo, wordmark, silhueta e spelling antes de explorar colorways ou aplicações.
+9. **Production pass** — produzir master vetorial quando adequado e passar derivados/exports para `brand-asset-production`; não misturar criação conceitual com uma explosão de formatos.
 10. **Showcase** — mockups/backgrounds vêm depois da marca funcionar sozinha.
 
 ## Lentes modernistas
@@ -87,6 +93,9 @@ Usar a geração de imagem disponível para conceitos raster e ferramentas de de
 
 ## Integração
 
+- `brand-identity-system`
+- `brand-guidelines-authoring`
+- `brand-asset-production`
 - `design-system-governance`
 - `design-system-extraction`
 - `web-design-engineer`
@@ -105,7 +114,7 @@ Para conceitos geométricos ou modernistas, verificar separadamente:
 
 ## Referências
 
-Adaptada de op7418/logo-generator-skill e enriquecida por repertório e princípios de redução formal observados em *Logo Modernism*, de Jens Müller e R. Roger Remington. O livro funciona como referência histórica e morfológica, não como catálogo para copiar marcas.
+Adaptada de op7418/logo-generator-skill, refinada com context scan e asset-kit workflow de sacredvoid/logo-generator e separação base-logo/colorway/mascot observada em SanbaoAI/logo-generator-skill e enriquecida por repertório e princípios de redução formal observados em *Logo Modernism*, de Jens Müller e R. Roger Remington. O livro funciona como referência histórica e morfológica, não como catálogo para copiar marcas.
 
 Mascote/IP simples: metodologia absorvida de s1dashu/ip-as-logo-skill, sem fixar modelo externo, número obrigatório de imagens ou convenções específicas de outro agente.
 
