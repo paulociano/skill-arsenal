@@ -16,6 +16,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/ai-workspace-operating-cycle/STACK.md`
 - **arsenal-autopilot** — Evoluir o Skill Arsenal a partir de uma ou mais fontes externas, detectando capacidades, overlap e ownership, avaliando segurança e portabilidade, adotando apenas valor incremental e publicando mudanças verificadas com trilha de auditoria.  
   `stacks/arsenal-autopilot/STACK.md`
+- **brand-creation-system** — Conduzir uma marca da estratégia à identidade visual, logo, guidelines, assets e governança, usando apenas as etapas necessárias e mantendo decisão humana nos gates de direção.  
+  `stacks/brand-creation-system/STACK.md`
 - **business-decision-intelligence** — Investiga métricas e causas, estrutura decisões, prioriza ações, projeta cenários e comunica resultados em dashboards ou Power BI.  
   `stacks/business-decision-intelligence/STACK.md`
 - **cinematic-presentation** — Cria apresentações como sequências de cenas com composição tipográfica, direção cinematográfica, vídeo/motion e fallback estático.  
@@ -67,6 +69,9 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **behavior-contract-validation** — Validar aplicações, CLIs, APIs e artefatos como caixa-preta contra um contrato de comportamento observável, separando evidência de runtime de revisão de implementação.
 - **brand-strategy** — Construir ou revisar uma estratégia de marca conectando categoria, audiência, posicionamento, diferenciação, prova, personalidade, voz, mensagens e objetivos sem inventar pesquisa ou transformar opinião em fato de mercado.
 - **brand-logo-exploration** — Explorar conceitos de logo e identidade, testar escala e monocromia e refinar a direção escolhida.
+- **brand-asset-production** — Produzir, nomear, organizar e validar variantes e exports de marca a partir de masters aprovados para digital, social, app e print sem redesenhar silenciosamente a identidade.
+- **brand-guidelines-authoring** — Transformar uma identidade aprovada em guidelines operacionais, humanas e machine-readable com regras de logo, cor, tipografia, voz, aplicações, provenance e fonte de verdade sem criar documentação que deriva do runtime.
+- **brand-identity-system** — Transformar estratégia e referências em uma identidade visual coerente por direções contrastantes, escolha explícita e sistema final de cor, tipografia, imagem, grafismos e aplicações.
 - **call-evaluation** — Avaliar ligações comerciais de consultoria financeira pelo Card de Ligação, com evidências, rubrica e qualidade do agendamento.
 - **character-continuity** — Manter personagens recorrentes visualmente on-model ao longo de páginas, cenas ou séries usando bíblia de identidade, atlas/referências, seleção da referência mais próxima e QA de continuidade.
 - **cinematic-visual-direction** — Projeta shots para landing pages, apresentações e vídeos por enquadramento, câmera, profundidade, movimento, duração, transições e continuidade.
