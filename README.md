@@ -2,7 +2,7 @@
 
 Biblioteca operacional de skills, métodos e stacks reutilizáveis para pesquisa, escrita, design, desenvolvimento, análise e gestão.
 
-**118 skills · 12 stacks** — catálogo conferido em 26/09/2026.
+**121 skills · 13 stacks** — catálogo conferido em 26/09/2026.
 
 O [repositório no GitHub](https://github.com/paulociano/skill-arsenal) é a fonte oficial. Para selecionar o recurso adequado a uma tarefa, comece pelo [ARSENAL INDEX.md](https://github.com/paulociano/skill-arsenal/blob/master/ARSENAL%20INDEX.md) e consulte as instruções completas somente das skills ou stacks necessárias.
 
@@ -49,7 +49,7 @@ Os arquivos orientam a execução; ferramentas, scripts e integrações precisam
 
 ## Todas as skills
 
-As 115 skills abaixo estão em ordem alfabética. Cada nome abre suas instruções completas; as descrições vêm do índice oficial.
+As 121 skills abaixo estão em ordem alfabética. Cada nome abre suas instruções completas; as descrições vêm do índice oficial.
 
 | Skill | Para que serve |
 | --- | --- |
@@ -60,6 +60,9 @@ As 115 skills abaixo estão em ordem alfabética. Cada nome abre suas instruçõ
 | [architecture-visualization](https://github.com/paulociano/skill-arsenal/blob/master/skills/architecture-visualization/SKILL.md) | Criar diagramas de arquitetura, sequência, estados e fluxos a partir de descrições ou código com topologia rastreável. |
 | [arsenal-router](https://github.com/paulociano/skill-arsenal/blob/master/skills/arsenal-router/SKILL.md) | Seleciona e orquestra a menor combinação necessária de skills e stacks do Skill Arsenal. |
 | [beautiful-web-article](https://github.com/paulociano/skill-arsenal/blob/master/skills/beautiful-web-article/SKILL.md) | Transformar fontes fornecidas em artigos ou páginas editoriais HTML legíveis, explicativamente bem estruturados e fiéis ao conteúdo. |
+| [brand-asset-production](https://github.com/paulociano/skill-arsenal/blob/master/skills/brand-asset-production/SKILL.md) | Produzir, nomear, organizar e validar variantes e exports de marca a partir de masters aprovados para digital, social, app e print sem redesenhar silenciosamente a identidade. |
+| [brand-guidelines-authoring](https://github.com/paulociano/skill-arsenal/blob/master/skills/brand-guidelines-authoring/SKILL.md) | Transformar uma identidade aprovada em guidelines operacionais, humanas e machine-readable com regras de logo, cor, tipografia, voz, aplicações, provenance e fonte de verdade sem criar documentação que deriva do runtime. |
+| [brand-identity-system](https://github.com/paulociano/skill-arsenal/blob/master/skills/brand-identity-system/SKILL.md) | Transformar estratégia e referências em uma identidade visual coerente por direções contrastantes, escolha explícita e sistema final de cor, tipografia, imagem, grafismos e aplicações. |
 | [brand-logo-exploration](https://github.com/paulociano/skill-arsenal/blob/master/skills/brand-logo-exploration/SKILL.md) | Explorar conceitos de logo e identidade, testar escala e monocromia e refinar a direção escolhida. |
 | [call-evaluation](https://github.com/paulociano/skill-arsenal/blob/master/skills/call-evaluation/SKILL.md) | Avaliar ligações comerciais de consultoria financeira pelo Card de Ligação, com evidências, rubrica e qualidade do agendamento. |
 | [code-review](https://github.com/paulociano/skill-arsenal/blob/master/skills/code-review/SKILL.md) | Revisar mudanças de código e feedback de PR separando conformidade com padrões, fidelidade à spec e impacto real. |
@@ -213,4 +216,4 @@ A decisão pode ser adotar, adaptar ou descartar. Preserve a metodologia útil, 
 4. Preserve nomes em kebab-case e frontmatter válido com `name` e `description` nos arquivos de skills e stacks.
 5. Siga as regras de publicação e preservação de alterações concorrentes descritas em [AGENTS.md](https://github.com/paulociano/skill-arsenal/blob/master/AGENTS.md).
 
-**Base deste catálogo:** [commit cee2efa](https://github.com/paulociano/skill-arsenal/commit/cee2efad1e4115a9b279f3363fa2684d85ed6717), consultado em 26/09/2026. A árvore completa do repositório foi comparada ao índice: 118 skills e 12 stacks, sem entradas ausentes ou excedentes. Os links do catálogo apontam para a branch `master`, para facilitar o acesso às versões atuais.
+**Base deste catálogo:** [commit cee2efa](https://github.com/paulociano/skill-arsenal/commit/cee2efad1e4115a9b279f3363fa2684d85ed6717), consultado em 26/09/2026. A árvore completa do repositório foi comparada ao índice: 121 skills e 13 stacks, sem entradas ausentes ou excedentes. Os links do catálogo apontam para a branch `master`, para facilitar o acesso às versões atuais.
