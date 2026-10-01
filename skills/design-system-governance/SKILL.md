@@ -22,6 +22,19 @@ Criar e manter um sistema de design rastreável, em que princípios geram decis�
 9. Change governance: mudar contrato antes de propagar implementação quando a mudança for deliberada.
 10. Manter DESIGN.md/design-system.md sincronizado quando esse artefato for usado pelo projeto.
 
+## Brand model e distribuição
+
+Quando o design system nasce de uma identidade de marca, separar:
+
+1. **brand model** — decisões canônicas da identidade e referências para assets aprovados;
+2. **design tokens** — tradução para papéis semânticos de produto;
+3. **packages/implementação** — CSS, JS, mobile ou outros formatos derivados;
+4. **docs/guidelines** — explicação humana e navegação.
+
+Não fazer o manual competir com tokens nem obrigar o brand model a conhecer detalhes de todos os frameworks consumidores. Quando múltiplas plataformas consomem a marca, preferir uma fonte estruturada e gerar/adaptar outputs por plataforma.
+
+Quando licenças diferirem, separar código/tokens de brand assets proprietários ou não deriváveis; provenance e direitos fazem parte da governança.
+
 ## Contrato vivo de design
 
 Quando um repositório se beneficia de documentação persistente para humanos e agentes, manter um DESIGN.md enxuto que aponte para as fontes reais em vez de duplicá-las.
@@ -106,5 +119,7 @@ Não exigir oh-my-design, shadcn lint, Regen Icons ou formato compilado específ
 ## Referências
 
 Adaptada de kwakseongjae/oh-my-design, contratos agent-first inspirados em shadcn-ui/lint, governança de derivados inspirada em kazdenc/regen-icons e living design contracts inspirados em nolly-studio/agent-skills e AgentsORG/DESIGN. Portabilidade de projeto, geração visual de tokens e escalas fluidas refinadas a partir de CoreBunch/Core-Framework.
+
+Brand-model distribution e separação entre tokens, packages, docs e assets refinadas a partir de Better-Conversations/bc-brand, OpenAEC-Foundation/OpenAEC-style-book e Aioverse-HQ/Brand-System-Aiotize-Inc.
 
 Origem local: design-system-governance.docx.
