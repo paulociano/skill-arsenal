@@ -30,6 +30,19 @@ Explorar direções de logo e identidade visual de forma estruturada, gerando co
 9. **Production pass** — SVG/vector quando adequado, exports solicitados.
 10. **Showcase** — mockups/backgrounds vêm depois da marca funcionar sozinha.
 
+## Lentes modernistas
+
+Quando a direção pedir linguagem modernista, internacional, suíça ou corporativa histórica, usar estas lentes como repertório, não como preset:
+
+- redução formal e geometria clara;
+- uso disciplinado de grids, proporções e módulos;
+- símbolos capazes de funcionar em uma cor;
+- relação controlada entre positivo e negativo;
+- construção por formas básicas quando isso melhora reconhecimento;
+- consistência de família entre marca principal, submarcas e aplicações;
+- evitar ornamento que não contribui para identidade ou distinção;
+- comparar a solução com precedentes históricos para reduzir clichê e semelhança involuntária.
+
 ## Princípios
 
 - simplicidade e recognizability vencem showcase;
@@ -79,9 +92,20 @@ Usar a geração de imagem disponível para conceitos raster e ferramentas de de
 - `web-design-engineer`
 - `verify-before-claim`
 
+## Teste morfológico
+
+Para conceitos geométricos ou modernistas, verificar separadamente:
+
+1. **silhueta** — reconhecível sem detalhe interno;
+2. **massa** — equilíbrio entre áreas cheias e vazias;
+3. **estrutura** — lógica modular ou geométrica perceptível sem precisar ser explicada;
+4. **redução** — sobrevive em escala pequena e reprodução imperfeita;
+5. **distinção** — não parece apenas uma recombinação genérica de círculo, seta, globo ou monograma;
+6. **sistema** — pode gerar aplicações coerentes sem depender de mockup ornamental.
+
 ## Referências
 
-Adaptada de op7418/logo-generator-skill.
+Adaptada de op7418/logo-generator-skill e enriquecida por repertório e princípios de redução formal observados em *Logo Modernism*, de Jens Müller e R. Roger Remington. O livro funciona como referência histórica e morfológica, não como catálogo para copiar marcas.
 
 Mascote/IP simples: metodologia absorvida de s1dashu/ip-as-logo-skill, sem fixar modelo externo, número obrigatório de imagens ou convenções específicas de outro agente.
 
