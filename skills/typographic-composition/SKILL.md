@@ -33,6 +33,16 @@ Tratar texto como conteúdo e forma visual ao mesmo tempo. A skill cuida de comp
 - forma da palavra/bloco;
 - eixos variáveis úteis, como weight, width, optical size ou slant, quando a família realmente os oferece.
 
+## Princípios editoriais adicionais
+
+- tratar tipografia como sistema de proporções e ritmo, não como coleção de tamanhos isolados;
+- preservar a textura da página: densidade, medida, entrelinha e contraste devem produzir leitura contínua;
+- escolher largura de linha, leading e escala por contexto e tipo, evitando números universais;
+- usar hierarquia tipográfica com economia: poucas relações fortes vencem muitas exceções;
+- respeitar pontuação, caixa, espaços, hifens, aspas e sinais como parte da composição;
+- considerar alinhamento óptico e margens aparentes quando a precisão visual justificar;
+- em texto longo, legibilidade e ritmo têm precedência sobre efeitos de display.
+
 ## Workflow
 
 1. Preservar o texto exato quando factual.
@@ -70,6 +80,18 @@ Não misturar esses escopos.
 
 editable-visual-design, beautiful-web-article, web-design-engineer, design-direction, ui-motion-design e brand-logo-exploration.
 
+## Checklist editorial
+
+Antes de concluir uma composição de texto longo ou editorial, verificar:
+
+- medida confortável e coerente com o suporte;
+- leading suficiente para separar linhas sem dissolver o parágrafo;
+- hierarquia reconhecível sem excesso de estilos;
+- ritmo vertical previsível entre títulos, parágrafos, listas e notas;
+- pontuação e sinais tipograficamente corretos quando o ambiente suportar;
+- órfãs, viúvas, rivers e quebras problemáticas em entregas de alta fidelidade;
+- consistência entre intenção editorial e comportamento responsivo.
+
 ## Origem metodológica
 
-Adaptada de práticas observadas em opentype.js, FontTools/FontBakery, Google Fonts tooling e sistemas paramétricos como Iosevka, enriquecida por famílias open source contemporâneas como Geist, Inter, Recursive e IBM Plex, mantendo o foco em composição e QA tipográfico em vez de exigir uma toolchain de fundição.
+Enriquecida por princípios editoriais inspirados em *The Elements of Typographic Style*, de Robert Bringhurst, sem reproduzir a obra ou impor proporções como regras universais. Adaptada também de práticas observadas em opentype.js, FontTools/FontBakery, Google Fonts tooling e sistemas paramétricos como Iosevka, enriquecida por famílias open source contemporâneas como Geist, Inter, Recursive e IBM Plex, mantendo o foco em composição e QA tipográfico em vez de exigir uma toolchain de fundição.
