@@ -74,6 +74,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **coaching-development-loop** — Transformar evidências de desempenho ao longo do tempo em coaching longitudinal, distinguindo melhoria, regressão e padrão estável e fechando o ciclo com prática observável e nova verificação.
 - **code-review** — Revisar mudanças de código e feedback de PR separando conformidade com padrões, fidelidade à spec e impacto real.
 - **code-understanding-audit** — Explicar código ou auditar decisões arquiteturais com evidências, ajustando profundidade ao conhecimento do leitor.
+- **color-psychology-context** — Escolher e revisar cores por significado, contexto cultural, contraste, função e associação de marca sem tratar psicologia das cores como regra universal.
 - **codex-cost-efficiency** — Reduzir tokens e gasto em tarefas de desenvolvimento no Codex por medição, leitura seletiva, controle de saída e comparação de tarefas concluídas.
 - **compose-performance-audit** — Auditar desempenho de Jetpack Compose com baseline, diagnóstico, correção e comparação de métricas antes e depois.
 - **content-matrix** — Gerar e priorizar ideias específicas de conteúdo cruzando pilares, ângulos, formatos, hooks, prova e objetivo do funil sem confundir potencial editorial com previsão de performance.
@@ -85,6 +86,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **decision-analysis** — Estruturar decisões simples ou complexas com respostas tipadas, critérios, incerteza, trade-offs, reversibilidade e sensibilidade sem esconder julgamento humano em uma pontuação arbitrária.
 - **deep-grill** — Conduzir entrevistas aprofundadas sobre planos ou decisões, resolvendo uma árvore de ambiguidades em rodadas sucessivas.
 - **design-direction** — Transformar um briefing visual vago em uma direção de design explícita, específica ao produto e reutilizável antes da implementação.
+- **design-principles-audit** — Auditar decisões de design com heurísticas de percepção, cognição, comportamento, erro, hierarquia e usabilidade sem transformar princípios em checklist dogmático.
 - **design-system-extraction** — Extrair tokens, componentes e padrões visuais de sites ou código, separando valores observados de decisões derivadas e podendo materializar um contrato DESIGN.md.
 - **design-system-governance** — Criar ou evoluir design systems rastreando princípios, decisões, tokens, contratos de componentes, implementação e um contrato DESIGN.md quando útil.
 - **editable-visual-design** — Criar pôsteres, infográficos, capas, banners e social cards editáveis com hierarquia, composição tipográfica, assets rastreáveis e revisão visual do render.
@@ -198,6 +200,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **value-investing-company-analysis** — Analisar empresas por fundamentos e value investing com dados atuais, cenários de valuation e riscos que podem invalidar a tese.
 - **verify-before-claim** — Verificar afirmações consequenciais de conclusão, correção ou publicação com evidência fresca do escopo afirmado.
 - **video-editing-pipeline** — Editar vídeos com transcrição, decisões de corte explícitas, EDL, render e revisão audiovisual preservando as fontes.
+- **visual-composition-fundamentals** — Organizar layouts com proximidade, alinhamento, repetição, contraste, hierarquia e espaço para tornar relações visuais claras antes do acabamento.
 - **viral-motion-explainer** — Criar vídeos explicativos verticais curtos como pipeline de hook, roteiro, direção mixed-media, keyframes e prompts de motion por cena, com execução por etapas ou ponta a ponta.
 - **visual-explanation-sketch** — Transformar conceitos, processos e relações em esboços visuais simples com caixas, setas, agrupamentos, anotações e destaques para facilitar compreensão.
 - **voice-builder** — Construir perfis de voz e posicionamento a partir de amostras reais, distinguindo identidade, estilo, audiência e canal.
