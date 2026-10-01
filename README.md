@@ -2,7 +2,7 @@
 
 Biblioteca operacional de skills, métodos e stacks reutilizáveis para pesquisa, escrita, design, desenvolvimento, análise e gestão.
 
-**115 skills · 12 stacks** — catálogo conferido em 26/09/2026.
+**118 skills · 12 stacks** — catálogo conferido em 26/09/2026.
 
 O [repositório no GitHub](https://github.com/paulociano/skill-arsenal) é a fonte oficial. Para selecionar o recurso adequado a uma tarefa, comece pelo [ARSENAL INDEX.md](https://github.com/paulociano/skill-arsenal/blob/master/ARSENAL%20INDEX.md) e consulte as instruções completas somente das skills ou stacks necessárias.
 
@@ -210,4 +210,4 @@ A decisão pode ser adotar, adaptar ou descartar. Preserve a metodologia útil, 
 4. Preserve nomes em kebab-case e frontmatter válido com `name` e `description` nos arquivos de skills e stacks.
 5. Siga as regras de publicação e preservação de alterações concorrentes descritas em [AGENTS.md](https://github.com/paulociano/skill-arsenal/blob/master/AGENTS.md).
 
-**Base deste catálogo:** [commit cee2efa](https://github.com/paulociano/skill-arsenal/commit/cee2efad1e4115a9b279f3363fa2684d85ed6717), consultado em 26/09/2026. A árvore completa do repositório foi comparada ao índice: 115 skills e 12 stacks, sem entradas ausentes ou excedentes. Os links do catálogo apontam para a branch `master`, para facilitar o acesso às versões atuais.
+**Base deste catálogo:** [commit cee2efa](https://github.com/paulociano/skill-arsenal/commit/cee2efad1e4115a9b279f3363fa2684d85ed6717), consultado em 26/09/2026. A árvore completa do repositório foi comparada ao índice: 118 skills e 12 stacks, sem entradas ausentes ou excedentes. Os links do catálogo apontam para a branch `master`, para facilitar o acesso às versões atuais.
