@@ -52,6 +52,19 @@ Capturar somente o que muda materialmente o workflow:
 18. Antes de criar nova skill, verificar overlap semântico com skills existentes e preferir generalizar/atualizar a duplicar.
 19. Quando a mesma lógica determinística aparecer repetidamente nos testes, considerar helper/script reutilizável somente se o runtime real suportar isso.
 
+## Dry-run antes de codificar o workflow
+
+Quando a skill nasce de uma tarefa que ainda não foi formalizada, prefira capturar o processo por execução controlada antes de escrever instruções definitivas:
+
+1. executar uma primeira passagem em modo read-only, preview ou sandbox quando o domínio permitir;
+2. registrar decisões reais, entradas necessárias, ordem dos passos, falhas e pontos de aprovação observados;
+3. separar o que foi incidental naquela execução do que é invariável e reutilizável;
+4. só então escrever a candidate skill;
+5. repetir o mesmo cenário com a candidate skill e comparar o comportamento com a primeira passagem;
+6. não automatizar efeitos destrutivos apenas para “descobrir” o workflow; nesses casos, simular ou trabalhar sobre fixture/cópia.
+
+O objetivo do dry-run é reduzir instruções imaginadas. Uma execução observada é evidência para desenhar o workflow, não licença para generalizar cada detalhe da sessão.
+
 ## Source-to-skill ledger e prova
 
 Ao extrair múltiplas capacidades de artigo, tutorial, coleção ou prompt pack, criar antes um ledger simples:
@@ -92,5 +105,7 @@ Criar `<nome-em-kebab-case>/SKILL.md` com frontmatter YAML contendo `name` igual
 Documento avaliado: **The 7 ChatGPT Work Skills I Use Every Day — Copy-and-Paste Setup Prompts**.
 
 Ledger de extração, portable contract e proof-oriented demos adaptados de https://github.com/MengTo/Skills, especialmente article-prompts-to-skills, sem exigir seu initializer, gallery ou estrutura de agentes específica.
+
+Captura por dry-run antes de codificar a skill refinada a partir dos exemplos de `dry-run-workflow-for-agent-skills` em [zazencodes/zazencodes-season-3](https://github.com/zazencodes/zazencodes-season-3), preservando preview/sandbox e removendo dependências específicas do agente.
 
 Origem local: [skill-builder.docx](../skill-builder.docx).
