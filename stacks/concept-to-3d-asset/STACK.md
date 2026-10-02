@@ -33,6 +33,18 @@ Use apenas as etapas necessárias.
 ### Caminho C — controle por código
 Quando o usuário precisa de Three.js procedural, pivots, sockets, hierarquia animável ou geometria explicitamente construída por código, use `procedural-3d-reconstruction` em vez de reconstrução neural.
 
+### Caminho D — personagem rigável/animável
+Quando o asset final precisa ser um personagem humanoide jogável, animável ou retargetable:
+1. definir skeleton/runtime alvo, escala e conjunto mínimo de animações antes da geração;
+2. preparar concept/reference em pose que preserve separação de membros, preferindo A-pose ou T-pose quando o backend de rigging exigir;
+3. evitar props soltos, capas extensas, membros sobrepostos e silhuetas que confundam skinning quando isso não for parte essencial do design;
+4. reconstruir o mesh e validar geometria/material antes de gastar em rig/animation;
+5. executar rigging somente em backend realmente disponível;
+6. validar skeleton, weights, escala, root/origin e pelo menos idle + locomoção + uma animação extrema;
+7. verificar transições/blending no runtime de destino, porque clips válidos isoladamente não provam integração correta.
+
+A imagem pose-controlled é uma técnica para melhorar a entrada, não garantia de rig limpo. Quando o usuário já possui um mesh adequado, pule a geração e comece no estágio de rig/validation.
+
 ## Workflow
 
 ### 1. Target contract
@@ -84,3 +96,7 @@ Quando a reconstrução ocorrer fora do ambiente atual, entregue:
 - parâmetros/objetivo de exportação;
 - checklist de QA;
 - incertezas que exigem inspeção humana.
+
+## Origem metodológica
+
+O caminho de personagem rigável/animável foi refinado a partir de [blendi-remade/fal-3d-unreal](https://github.com/blendi-remade/fal-3d-unreal), preservando pose-controlled concept → mesh → rig → animation e QA de integração sem assumir fal.ai, Meshy, Unreal, glTFRuntime ou seus IDs de animação como capacidades disponíveis.
