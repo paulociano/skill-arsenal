@@ -50,6 +50,26 @@ Adaptar timing e estilo à biblioteca já presente. Não tornar hover/drag a ún
 
 [Licença](https://bencho.dev/licence): blocos/código exportado sob MIT; a aplicação Bencho, marca e fotos não estão cobertos da mesma maneira. Trocar imagens por assets autorizados; respeitar licenças de fontes e dependências.
 
+
+## Arc Library
+
+[Arc](https://github.com/kuratlielia/arc-library) é uma biblioteca MIT de componentes e blocos React 19 com código-fonte copiável, Motion, CSS Modules, tokens semânticos, suporte de teclado e caminho de `prefers-reduced-motion`.
+
+Usar como referência quando a tarefa pedir:
+- componentes React/shadcn com motion contido e físico;
+- gráficos/controles animados que preservem acessibilidade;
+- um sistema pequeno de motion tokens compartilhados;
+- código local editável em vez de um runtime fechado.
+
+Antes de integrar:
+- conferir o item específico, imports e dependências;
+- preservar os tokens/design system do projeto em vez de impor a foundation da Arc inteira;
+- validar keyboard, focus, touch e reduced motion no runtime real;
+- distinguir claramente itens open-source do catálogo Pro/comercial;
+- copiar somente o componente necessário quando isso reduzir dependências.
+
+A biblioteca é referência externa, não dependência padrão do Arsenal.
+
 ## Gate de incorporação
 
 1. Identificar tarefa e componente exatos; manter referências de URL/data/versão quando disponíveis.
