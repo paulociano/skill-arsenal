@@ -1,0 +1,160 @@
+---
+name: agent-memory-engineering
+description: "Projetar memória durável para agentes separando captura, distilação, retrieval, gestão e provenance, com source of truth legível, caches reconstruíveis, validade temporal, níveis de leitura e avaliação empírica antes de automatizar esquecimento ou promoção."
+---
+
+# Agent Memory Engineering
+
+## Objetivo
+
+Projetar memória de longo prazo como um sistema operável e auditável, não como um vetor de transcripts.
+
+## Quando usar
+
+Use quando:
+- um agente precisa aprender entre sessões;
+- fatos, decisões, procedimentos ou episódios devem sobreviver a context resets;
+- há necessidade de corrigir, superseder, consolidar ou esquecer memórias;
+- retrieval precisa ser econômico e rastreável;
+- múltiplos agentes/hosts compartilham conhecimento durável.
+
+Para documentação canônica de repositório, use `repository-evidence-docs`.
+Para contexto transitório de uma tarefa, prefira `handoff` ou workspace state.
+
+## Modelo W-R-M
+
+Separe três subsistemas:
+
+1. **Write**
+   - capturar evidência bruta;
+   - distilar unidades reutilizáveis;
+   - classificar tipo e provenance;
+   - nunca depender apenas de o agente "lembrar de lembrar".
+
+2. **Read**
+   - encontrar candidatos;
+   - rankear;
+   - devolver ponteiros/resumos antes de conteúdo integral;
+   - expandir progressivamente somente o necessário.
+
+3. **Manage**
+   - corrigir;
+   - superseder;
+   - fundir;
+   - arquivar;
+   - propor esquecimento;
+   - manter histórico suficiente para auditoria/as-of.
+
+## Tipos de memória
+
+Separar quando útil:
+- **semantic**: fatos e conceitos;
+- **procedural**: como fazer algo;
+- **episodic**: sequência/evento específico;
+- **decision**: escolha, contexto e razão;
+- **preference**: preferência explicitamente sustentada e com escopo.
+
+Não tratar esses tipos como ontologia universal. Use apenas os necessários.
+
+## Source of truth
+
+Preferir uma representação durável que possa ser inspecionada e exportada independentemente do índice.
+
+Quando arquivos legíveis forem adequados:
+- arquivo é truth;
+- FTS/vector/graph index é cache reconstruível;
+- links e IDs permanecem estáveis;
+- rebuild não pode destruir conhecimento.
+
+Quando database for necessária, preserve equivalente:
+- export;
+- provenance;
+- versionamento;
+- migração;
+- forma de reconstruir índices derivados.
+
+## Workflow
+
+1. **Memory contract**
+   - quem escreve;
+   - quem lê;
+   - escopo;
+   - sensibilidade;
+   - duração;
+   - tipos;
+   - critérios de retenção.
+
+2. **Capture first**
+   - quando perda seria cara, preservar trace/evidência antes da distilação;
+   - distiller incompleto não deve significar dado irrecuperável.
+
+3. **Distill**
+   - extrair uma unidade por ideia durável;
+   - adicionar abstract curto;
+   - provenance para source/episode;
+   - evitar copiar grandes transcripts.
+
+4. **Promote**
+   - só promover ao store principal o que tem reutilização plausível;
+   - usar frequência, impacto, estabilidade e confirmação como sinais;
+   - não promover segredo, ruído, erro transitório ou inferência fraca.
+
+5. **Retrieve**
+   - começar com índice curto;
+   - expandir abstract → outline/anchor → full → raw trace;
+   - combinar lexical/vector/graph apenas quando melhorar recall medido;
+   - miss em um mecanismo não significa ausência.
+
+6. **Use**
+   - citar/identificar a memória usada quando decisão importante depender dela;
+   - distinguir memória histórica de estado atual;
+   - facts externos mutáveis precisam de revalidação.
+
+7. **Correct / supersede**
+   - correção não apaga silenciosamente a história;
+   - manter `valid_from` / `invalid_at` ou mecanismo equivalente quando temporalidade importa;
+   - permitir consulta as-of quando decisões históricas dependem do estado anterior.
+
+8. **Consolidate**
+   - rodar em ciclo separado quando possível;
+   - merge exige preservar provenance;
+   - unattended deletion deve ser mais restrita que unattended add/update.
+
+9. **Evaluate**
+   - dataset/casos reais;
+   - medir retrieval exposure, acerto e custo;
+   - verificar se o agente realmente usou o caminho testado;
+   - comparar com baseline sem memória;
+   - não atribuir ganho a retrieval se o agente bypassou o mecanismo.
+
+## Segurança e privacidade
+
+- memória amplifica blast radius de dados sensíveis;
+- segredos, tokens e autenticação não entram no store;
+- separar memória de pessoa, projeto e organização;
+- acesso compartilhado precisa de autorização explícita;
+- deletion request e retention policy precisam alcançar cópias derivadas quando aplicável;
+- embeddings externos podem exfiltrar conteúdo mesmo quando o store principal é local.
+
+## Regras
+
+- transcript não é memória curada.
+- vector DB não é source of truth por definição.
+- maior recall não compensa memória incorreta sendo aplicada.
+- store invisível ao usuário exige controles mais fortes de inspeção e correção.
+- memória velha pode ser menos confiável que ausência de memória.
+- cache deve ser reconstruível ou explicitamente tratado como dado autoritativo.
+
+## Integração
+
+Combina com:
+- `ai-workspace-operating-cycle`;
+- `repository-evidence-docs`;
+- `retrieval-quality-engineering`;
+- `llm-observability-evaluation`;
+- `session-learn`;
+- `verify-before-claim`.
+
+## Provenance
+
+Consolidada de [TIMAN-group/PlugMem](https://github.com/TIMAN-group/PlugMem), [tigerless-labs/agent-memory](https://github.com/tigerless-labs/agent-memory), [mem0ai/mem0](https://github.com/mem0ai/mem0) e [letta-ai/letta](https://github.com/letta-ai/letta). Adapta tipos de memória, retrieval progressivo, memory management, provenance e avaliação sem assumir plugins, embeddings, SQLite, serviços cloud ou hosts específicos.
