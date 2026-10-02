@@ -116,6 +116,23 @@ Cada hipótese deve permanecer ligada a:
 - Não misturar suporte direto, analogia e plausibilidade mecanística sem rotular.
 - Quando a evidência for observacional, não elevar automaticamente para causalidade.
 
+## Principle-space evolution
+
+Quando várias hipóteses diferentes falham pelo mesmo motivo, o problema pode estar acima da hipótese individual: nos **princípios, mecanismos ou pressupostos compartilhados** usados para gerar candidatos.
+
+Use este modo somente quando houver evidência de que o espaço atual de hipóteses está sistematicamente mal especificado.
+
+1. Liste os princípios ativos que estão guiando a geração de hipóteses.
+2. Ligue cada hipótese aos princípios dos quais depende.
+3. Registre observações anômalas que contradizem várias hipóteses derivadas do mesmo princípio.
+4. Antes de descartar o princípio, tente explicações locais: erro de medição, implementação, variável omitida ou boundary condition.
+5. Se a anomalia persistir, proponha princípios alternativos ou refinados.
+6. Gere novas hipóteses a partir do espaço revisado.
+7. Compare o espaço antigo e o novo pelo poder explicativo e pelas previsões discriminantes, não por eloquência.
+8. Preserve o histórico da mudança de princípio e a evidência que a motivou.
+
+Evoluir princípios é uma operação mais forte que evoluir hipóteses. Exige evidência acumulada e não deve ser usada para escapar de resultados negativos inconvenientes.
+
 ## Ranking e comparação
 
 Métodos pairwise, Elo, Bradley–Terry ou scoring podem ser úteis em runtimes específicos, mas **não são requisito** desta skill.
@@ -156,4 +173,4 @@ Combina com:
 
 ## Provenance
 
-Metodologia adaptada de [OpSafari/hypoarena](https://github.com/OpSafari/hypoarena), preservando a decomposição do ciclo de descoberta de hipóteses em estágios verificáveis e removendo dependências de CLI, NumPy/PyTorch, synthetic-corpus tooling, rankers e adapters de agentes que não fazem parte do runtime do ChatGPT.
+Metodologia adaptada de [OpSafari/hypoarena](https://github.com/OpSafari/hypoarena), preservando a decomposição do ciclo de descoberta de hipóteses em estágios verificáveis e removendo dependências de CLI, NumPy/PyTorch, synthetic-corpus tooling, rankers e adapters de agentes que não fazem parte do runtime do ChatGPT. A evolução explícita do espaço de princípios foi refinada a partir de [eurekaw/pievo](https://github.com/eurekaw/pievo), sem importar AutoGen, ferramentas experimentais ou infraestrutura de execução.
