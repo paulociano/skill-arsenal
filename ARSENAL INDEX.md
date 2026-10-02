@@ -61,7 +61,9 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **academic-paper-orchestration** — Estruturar e revisar manuscritos acadêmicos a partir de pesquisa real, verificando claims, resultados, figuras e citações.
 - **academic-rebuttal** — Estruturar rebuttals e author responses acadêmicos a partir de reviews, paper, código, regras confirmadas do venue, evidência rastreável, triagem de experimentos e cobertura completa das preocupações dos revisores.
 - **after-action-review** — Conduzir retrospectivas e postmortems de eventos ou projetos concluídos, ligando causas e impacto a ações verificáveis.
+- **agent-action-governance** — Governar ações de agentes antes da execução por policy explícita, least privilege, fail-closed, audit-before-act, approval/handover humano, segregação de credenciais e classificação clara entre leitura, escrita e efeitos externos.
 - **agent-choice-audit** — Auditar decisões que um agente tomou por conta própria durante implementação, distinguindo o que veio da spec do que foi inventado, registrando impacto, confiança, reversibilidade e decisão corrigida quando necessário.
+- **agent-memory-engineering** — Projetar memória durável para agentes separando captura, distilação, retrieval, gestão e provenance, com source of truth legível, caches reconstruíveis, validade temporal, níveis de leitura e avaliação empírica antes de automatizar esquecimento ou promoção.
 - **agenda-operations** — Auditar e operar a agenda por capacidade, preparação, conflitos, dívida de reuniões e blocos de foco, propondo alterações seguras antes de executar mudanças.
 - **architecture-visualization** — Criar diagramas de arquitetura, sequência, estados e fluxos a partir de descrições ou código com topologia rastreável.
 - **arsenal-router** — Seleciona e orquestra a menor combinação necessária de skills e stacks do Skill Arsenal.
@@ -81,6 +83,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **code-understanding-audit** — Explicar código ou auditar decisões arquiteturais com evidências, ajustando profundidade ao conhecimento do leitor.
 - **color-psychology-context** — Escolher e revisar cores por significado, contexto cultural, contraste, função e associação de marca sem tratar psicologia das cores como regra universal.
 - **codex-cost-efficiency** — Reduzir tokens e gasto em tarefas de desenvolvimento no Codex por medição, leitura seletiva, controle de saída e comparação de tarefas concluídas.
+- **computer-use-agent-engineering** — Projetar, avaliar e endurecer agentes que operam browser ou desktop por visão, DOM/accessibility tree ou abordagem híbrida, com grounding, action space observada, stale guards, isolamento, trajetória, human takeover e benchmarks reproduzíveis.
 - **compose-performance-audit** — Auditar desempenho de Jetpack Compose com baseline, diagnóstico, correção e comparação de métricas antes e depois.
 - **content-matrix** — Gerar e priorizar ideias específicas de conteúdo cruzando pilares, ângulos, formatos, hooks, prova e objetivo do funil sem confundir potencial editorial com previsão de performance.
 - **creative-web-effects** — Selecionar e integrar efeitos visuais contemporâneos para web como shaders, texturas, partículas, pós-processamento, WebGL e backgrounds procedurais sem sacrificar legibilidade ou performance.
@@ -112,6 +115,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **formal-methods-reconciler** — Traduzir dúvidas críticas de correção de software em modelos mínimos verificáveis e interpretar provas ou contraexemplos.
 - **founder-diagnose** — Diagnosticar gargalos de startups em produto, mercado, posicionamento, distribuição ou monetização antes de escolher uma intervenção.
 - **functional-skill-architecture** — Modularizar skills complexas como pipelines de funções com contratos explícitos de entrada e saída, referências compartilhadas, scripts determinísticos, traces e casos de regressão quando a complexidade justificar essa estrutura.
+- **generative-ui-engineering** — Projetar e validar interfaces geradas por modelos como saída estruturada ou sandboxed runtime, com component allowlists, streaming, bridges restritas, fallback, acessibilidade e limites claros entre UI gerada e capacidades reais.
 - **golden-circle-feedback** — Redigir feedback comportamental usando POR QUÊ, COMO e O QUÊ, com propósito, fatos observáveis e próxima ação.
 - **golden-path-capture** — Capturar workflows difíceis já verificados como caminhos reutilizáveis, registrando condição de promoção, falhas descartadas, escopo e higiene de segredos antes de codificar o aprendizado como skill ou documentação.
 - **graph-engineering** — Modelar workflows com dependências e paralelismo reais como grafos limitados, com contratos de saída, joins e recuperação local.
