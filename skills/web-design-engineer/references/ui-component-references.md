@@ -1,6 +1,6 @@
-# Referências de componentes: Beautiful UI, OriginKit, coss ui e Bencho
+# Referências externas de componentes de UI
 
-Consulta: 2026-09-28. Revalidar documentação, licença e dependências ao integrar.
+Consulta consolidada: 2026-10-02. Revalidar documentação, licença e dependências ao integrar.
 Owner deste catálogo: web-design-engineer. Estas fontes são referências técnicas externas (D), não novas skills nem bibliotecas obrigatórias.
 
 ## Seleção por problema
