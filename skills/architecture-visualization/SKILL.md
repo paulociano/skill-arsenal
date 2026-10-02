@@ -72,6 +72,21 @@ Quando o diagrama deriva de código:
 - não corrigir overflow escondendo conteúdo ou diminuindo texto até ficar ilegível;
 - conteúdo visual deve continuar compreensível sem animação.
 
+## Disciplina editorial e seleção de gramática
+
+Quando o objetivo incluir comunicação editorial, documentação executiva ou um diagrama que precisa ser visualmente autossuficiente:
+
+- escolher primeiro o **padrão semântico** que carrega o significado (fluxo, estado, dependência, comparação, hierarquia, mudança, causa, jornada) e só depois a gramática visual;
+- preferir o menor tipo de diagrama que preserve a informação; se uma tabela ou parágrafo comunica melhor, não desenhar;
+- começar pela rota principal e remover elementos que não alteram a compreensão antes de adicionar ornamentação;
+- usar um orçamento explícito de complexidade: muitos nodes, crossings ou labels competindo são sinal para dividir overview + detalhe, não para comprimir tudo;
+- reservar a cor de maior contraste para poucos focos editoriais e manter o restante do sistema visual silencioso;
+- quando houver identidade visual fornecida, mapear tokens para papéis semânticos (background/paper, ink/text, muted, accent, link) em vez de copiar cores ad hoc;
+- ao redesenhar Mermaid, draw.io, Excalidraw ou outro source, preservar a semântica e a topologia como autoridade e tratar o estilo original apenas como referência;
+- static-first: o frame parado deve conter todo o significado essencial; motion só entra quando esclarece ordem ou mudança.
+
+Essa disciplina é complementar à rastreabilidade técnica. Um diagrama bonito que inventa relações continua incorreto; um diagrama tecnicamente correto mas ilegível ainda não está pronto.
+
 ## Visual semantics
 
 - cor saturada deve ter significado, não ser decoração gratuita;
@@ -88,5 +103,7 @@ Usar leitura e escrita de arquivos e execução de código pelo terminal dispon�
 Adaptada de tt-a1i/archify.
 
 Layout relativo e posição como parte da linguagem visual: [reladraw/reladraw](https://github.com/reladraw/reladraw), absorvido como metodologia sem exigir seu CLI.
+
+Disciplina editorial, seleção de gramática, orçamento de complexidade, static-first e mapeamento de marca por papéis semânticos adaptados de [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design), sem instalar plugins, executar scripts ou depender de seus comandos específicos de Claude Code/Codex.
 
 Origem local: [architecture-visualization.docx](../architecture-visualization.docx).
