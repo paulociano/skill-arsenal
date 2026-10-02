@@ -181,6 +181,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **skill-builder** — Criar ou atualizar skills reutilizáveis a partir de workflows recorrentes, com gatilhos claros, dependências reais e validação.
 - **skill-security-review** — Inspecionar segurança de skills, agentes ou plugins antes da adoção sem executar instaladores ou código da fonte avaliada.
 - **scenario-forecasting** — Construir forecasts e cenários com baseline, backtesting, intervalos, premissas e gatilhos de atualização sem transformar projeção em certeza.
+- **scientific-hypothesis-discovery** — Gerar, verificar, comparar e evoluir hipóteses científicas em ciclos rastreáveis, mantendo grounding, hipóteses rivais, deduplicação, evidência acumulada e limites explícitos entre descoberta assistida e prova científica.
 - **sales-objection-handling** — Tratar objeções comerciais e conduzir o fechamento sem confronto, usando validação, deslocamento e recondução estruturada da conversa.
 - **scroll-storytelling** — Projetar experiências narrativas guiadas por scroll com estágios, pinning, parallax, transições e sincronização DOM/WebGL sem sacrificar acessibilidade ou performance.
 - **social-analytics** — Analisar exports de redes sociais para identificar tendências e desempenho sem extrapolar amostras ou métricas indisponíveis.
