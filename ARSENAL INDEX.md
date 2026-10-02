@@ -125,6 +125,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **interaction-polish** — Refinar o último nível de qualidade de uma interface por microinterações, feedback, estados, tipografia animada e comportamento contextual sem transformar polish em decoração excessiva.
 - **interior-space-prototyping** — Prototipar interiores a partir de uma planta estrutural única, conectando paredes, aberturas, dimensões, mobiliário, circulação e projeções 2D/3D sem confundir visualização decorativa com precisão arquitetônica.
 - **lettering-path-engineering** — Construir lettering customizado, glyphs e texto vetorial por paths editáveis, métricas e relações tipográficas, incluindo single-stroke para plotter/CNC, sem confundir composição tipográfica com desenho de fonte.
+- **job-opportunity-monitoring** — Monitorar vagas ao longo do tempo como um diff de oportunidades, normalizando fontes, detectando novas/fechadas/reabertas, ranqueando fit com critérios explícitos e disparando alertas somente quando há mudança relevante.
 - **jtbd-framing** — Reformular decisões de produto por Jobs-to-be-Done, situações reais, dificuldades e critérios de adoção ou abandono.
 - **kb-retriever** — Responder perguntas em bases documentais grandes por busca progressiva, leitura localizada e citações rastreáveis.
 - **landing-craft** — Projetar landing pages como narrativas de scroll com conceito visual, message match, prova, objeções e CTA coerentes.
