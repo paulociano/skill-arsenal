@@ -69,7 +69,7 @@ Quando um fato ou decisão muda ao longo do tempo, não sobrescrever a história
 - distinguir event time, ingestion time e review time quando essa diferença afetar interpretação;
 - consultas sobre “o que era verdade naquela época?” precisam usar a validade temporal, não apenas o valor mais recente.
 
-Esse padrão é especialmente útil para projetos, políticas, preferências e sistemas que evoluem. Graphiti inspira a noção de fatos temporais com provenance, mas não é dependência do Arsenal.
+Esse padrão é especialmente útil para projetos, políticas, preferências e sistemas que evoluem. Graphiti inspira a noção de fatos temporais com provenance, mas não é dependência do Arsenal. O pipeline de aprendizagem contínua foi refinado a partir de CopilotKit/OpenDots, preservando separação entre ingestão, proposta, publicação e delivery sem adotar seu runtime.
 
 ## Memória como fonte de verdade + índice derivado
 
@@ -84,6 +84,33 @@ Quando o ambiente suportar memória persistente própria do projeto, preferir um
 - memória usada recentemente possa receber maior prioridade de retenção, desde que isso não apague informação só por falta de acesso.
 
 Não presumir que a Memory do ChatGPT, um MCP externo ou um servidor local oferece essas garantias. Esta seção descreve um contrato desejável para sistemas que realmente possuam storage, versionamento e retrieval próprios.
+
+## Pipeline de aprendizagem contínua
+
+Quando o ambiente oferecer aprendizagem automática a partir de múltiplas conversas, separar explicitamente quatro estágios:
+
+1. **Ingest**
+   - rotear evidência apenas para um escopo/workflow conhecido;
+   - registrar qual escopo recebeu cada conversa ou episódio;
+   - mudança de configuração não deve reclassificar retroativamente evidência antiga sem migração explícita.
+
+2. **Propose**
+   - gerar candidatos de aprendizado/skill a partir de evidência suficiente;
+   - proposta automática não é conhecimento canônico;
+   - manter exemplos, provenance e sinais de suporte acessíveis para revisão.
+
+3. **Review / publish**
+   - skill reutilizável precisa de revisão/publicação antes de entrar no catálogo canônico;
+   - publicação deve produzir versão/revisão identificável;
+   - ingestão pode continuar mesmo quando delivery estiver desligado, desde que isso seja intencional e visível.
+
+4. **Deliver / use**
+   - carregar apenas skills publicadas e relevantes ao contexto;
+   - manter binding estável entre conversa/episódio e o escopo de aprendizagem originalmente atribuído quando isso evitar mudanças silenciosas de comportamento;
+   - configuração de delivery não prova uso: verificar traces, tool calls, citations ou outro sinal observável de que a skill foi realmente carregada;
+   - se delivery foi configurado como requisito e estiver indisponível, preferir falha explícita a continuar silenciosamente com comportamento diferente.
+
+Esse pipeline é um contrato arquitetural. Não pressupõe CopilotKit, containers específicos, serviços cloud ou aprendizagem autônoma disponível no ChatGPT.
 
 ## Integração com Arsenal
 
