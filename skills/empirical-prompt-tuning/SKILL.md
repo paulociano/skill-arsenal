@@ -71,6 +71,21 @@ Métricas devem corresponder ao que se quer medir: task success, trajectory, too
 
 LLM-as-judge precisa de rubric explícita e, quando possível, checks determinísticos/human labels. Otimização automática cara deve vir depois de fixes manuais e com autorização explícita.
 
+## Session-evidence tuning
+
+Quando prompts, AGENTS.md, CLAUDE.md ou skills já foram usados em trabalho real:
+- coletar sessões atribuíveis ao projeto/escopo;
+- excluir sessões produzidas pelo próprio tuner para evitar self-training contamination;
+- agrupar falhas recorrentes antes de editar memória/instruções;
+- exigir evidência de múltiplas sessões distintas antes de add/rewrite/remove durável;
+- limitar cada rodada a um pequeno gradient step;
+- propostas são diffs revisáveis, não writes automáticos;
+- separar escopo de projeto de escopo de usuário;
+- manter ledger de evidência e decisões aceitas/rejeitadas;
+- quotes/samples podem conter segredos, então redaction e boundary local importam.
+
+A metáfora de gradient descent é útil apenas se o loop continuar empiricamente mensurável.
+
 ## Ferramentas e dependências
 
 Usar execuções independentes apenas quando disponíveis e autorizadas; não criar novas tarefas do usuário para simular testes. Sem contexto fresco e execução real, entregar revisão estrutural e não alegar validação empírica. Otimização paga exige orçamento autorizado.
@@ -78,5 +93,7 @@ Usar execuções independentes apenas quando disponíveis e autorizadas; não cr
 ## Referências
 
 Adaptada de [mizchi/skills · empirical-prompt-tuning](https://github.com/mizchi/skills/tree/main/empirical-prompt-tuning).
+
+kunchenguid/backpass acrescentou tuning baseado em sessões reais, evidence-gated edits de múltiplas sessões, small bounded steps e human apply gate. O Arsenal não presume stores/harnesses específicos nem acpx.
 
 Origem local: [empirical-prompt-tuning.docx](../empirical-prompt-tuning.docx).
