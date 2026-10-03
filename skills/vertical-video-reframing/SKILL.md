@@ -63,13 +63,20 @@ Converter conteúdo para formato vertical preservando o sujeito e a composição
    - split layout when crop cannot preserve both;
    - do not oscillate on rapid speaker alternation.
 
-8. **Fallback**
+8. **Layout modes**
+   - TRACK: face/person crop when a primary subject dominates;
+   - GENERAL: preserve full scene with background extension when crop would destroy context;
+   - SPLIT: stack two speakers when both matter simultaneously;
+   - SCREENCAST: preserve screen/content while keeping presenter visible;
+   - choose per scene, not once for the whole video.
+
+9. **Fallback**
    - center crop;
    - manual keyframe;
    - letterbox/background extension;
    - static composition when confidence is low.
 
-9. **QA**
+10. **QA**
    - scrub whole clip;
    - face/head not cut;
    - gestures/props preserved;
@@ -91,4 +98,4 @@ Converter conteúdo para formato vertical preservando o sujeito e a composição
 
 ## Provenance
 
-Consolidada de MediaPipe/AutoFlip concepts, Ultralytics tracking, OpenCV and face-detection pipelines. Não presume specific detector/model installed.
+Consolidada de MediaPipe/AutoFlip concepts, Ultralytics tracking, OpenCV and face-detection pipelines. Layout modes per scene foram enriquecidos por mutonby/openshorts: TRACK, GENERAL, SPLIT e SCREENCAST. Não presume detector/model/runtime específico instalado.
