@@ -64,6 +64,17 @@ Quando o diagrama servir para governar uma mudança de código:
 - material scope change invalida a confirmação anterior;
 - activity declarada pelo agente não deve ser apresentada como observação automática se o runtime não a capturou.
 
+## PR blast radius and change walkthroughs
+
+Quando a fonte for um diff/PR:
+- desenhar a mudança contra a arquitetura existente, não como diagrama isolado;
+- diferenciar adicionado, alterado e removido;
+- mostrar data-flow e payload shape quando sustentados por código/spec;
+- oferecer overview + zoom por subfluxo quando o PR for grande;
+- walkthrough pode revelar a mudança passo a passo, mas o frame estático deve continuar suficiente;
+- corrections/renames manuais devem viver em config/source, não em SVG/HTML gerado;
+- monorepos grandes exigem redução de detalhe e grouping, não compressão visual ilegível.
+
 ## Evidence discipline
 
 Quando o diagrama deriva de código:
@@ -132,6 +143,6 @@ Layout relativo e posição como parte da linguagem visual: [reladraw/reladraw](
 
 Disciplina editorial, seleção de gramática, orçamento de complexidade, static-first e mapeamento de marca por papéis semânticos adaptados de [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design), sem instalar plugins, executar scripts ou depender de seus comandos específicos de Claude Code/Codex.
 
-inkboard/system-atlas acrescentou source spec único → interactive atlas + generated SYSTEM.md, progressive disclosure e question tracking por ID. Qiuner/birdview acrescentou architecture + reviewed constraints + declared change scope + coverage + verification no mesmo viewer, preservando confirmation gates e distinção entre activity declarada e observada. O Arsenal absorve os padrões sem exigir seus renderers.
+inkboard/system-atlas acrescentou source spec único → interactive atlas + generated SYSTEM.md, progressive disclosure e question tracking por ID. Qiuner/birdview acrescentou architecture + reviewed constraints + declared change scope + coverage + verification no mesmo viewer. coldteadotai/pr-lens acrescentou blast radius visual de PR, data-flow/payload views e walkthroughs de mudança. O Arsenal absorve os padrões sem exigir seus renderers.
 
 Origem local: [architecture-visualization.docx](../architecture-visualization.docx).
