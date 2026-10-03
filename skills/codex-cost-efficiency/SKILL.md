@@ -28,7 +28,14 @@ Diminuir o custo por tarefa concluída sem perder correção, evidência necess�
    - transformar observações grandes e repetidas em handles estáveis com recall paginado/exato, preservando o original;
    - resumir logs extensos em receipts somente se cada quote/line retida continuar verificável contra a fonte arquivada;
    - compactar contexto preferencialmente após subtarefas concluídas, condicionando a pressão de janela e o custo esperado, nunca no meio de uma evidência ainda necessária.
-5. Comparar custo **por tarefa aceita**, qualidade, retrabalho e latência. Reverter uma economia aparente que aumente falhas ou iterações. Conservar testes obrigatórios e verificação proporcional ao risco.
+5. Quando houver delegação, separar:
+   - whole-task usage observado;
+   - delegated-only usage;
+   - reviewer usage;
+   - cobertura parcial/ausente;
+   - requested model/effort de runtime-confirmed values.
+   Uma comparação de preço com o mesmo número de tokens é **reprecificação**, não prova de economia real, porque outro modelo pode consumir outro número de tokens, retries ou tempo.
+6. Comparar custo **por tarefa aceita**, qualidade, retrabalho e latência. Reverter uma economia aparente que aumente falhas ou iterações. Conservar testes obrigatórios e verificação proporcional ao risco.
 
 ## Jev e outros classificadores
 
@@ -46,3 +53,4 @@ Usar um decision engine tipado somente para triagem repetitiva com opções expl
 - [codex-token-optimizer](https://github.com/zhangyiling108-code/codex-token-optimizer) e [token-efficient-workflow](https://github.com/luziyezz/codex-skills/tree/main/token-efficient-workflow): escopo, leitura e saída seletivos.
 - [Jev Skills](https://github.com/n23eos/jev-skills) e [jev-code](https://github.com/FrancoisChastel/jev-code): limites de decisões tipadas e integração opcional.
 - NVlabs/SoL-Pi: action fusion, observation handles, evidence-preserving reduction e compaction em pontos de conclusão, absorvidos como metodologia sem depender do runtime Pi.
+- DannyMac180/astra-advisor: cost receipts com cobertura explícita e distinção entre same-token repricing e economia real; model/effort snapshots específicos não são tratados como capacidades permanentes.
