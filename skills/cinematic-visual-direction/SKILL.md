@@ -83,6 +83,20 @@ Tratar slides importantes como beats de uma sequência:
 - evitar smooth scroll, WebGL ou vídeo apenas para sinalizar “premium”;
 - cenas pesadas podem ser pré-renderizadas quando vídeo comprimido for mais barato que runtime gráfico.
 
+## Generative B-roll
+
+Quando um vídeo curto precisa de apoio visual gerativo:
+
+1. partir de uma sentença/beat específico, não de um prompt genérico sobre o Reel inteiro;
+2. converter o beat em shot contract: subject, action, environment, framing, camera, duration e continuity;
+3. escolher T2V, I2V, keyframe/multi-keyframe ou video-to-video pelo controle necessário;
+4. gerar clips curtos e independentes;
+5. validar motion, anatomy/object integrity, text artifacts, continuity e brand fit;
+6. inserir como camada de apoio, não como substituto automático do apresentador/narrativa;
+7. manter fallback estático ou stock/original quando a geração falhar.
+
+Modelos mudam rapidamente. Ground version/license/capabilities antes de escolher runtime. Wan/LTX/CogVideo/Hunyuan são referências técnicas, não dependências obrigatórias.
+
 ## Limites
 
 - Esta skill dirige shots; não afirma gerar vídeo quando não houver ferramenta real disponível.
