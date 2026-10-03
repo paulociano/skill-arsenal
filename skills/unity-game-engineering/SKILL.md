@@ -85,7 +85,15 @@ Se a versão estiver ausente e a decisão depender dela, consultar projeto/docs 
    - não editar manifest manualmente quando o workflow oficial resolver;
    - verificar compatibilidade com Editor version.
 
-10. **Validate**
+10. **Editor tooling**
+    - custom inspectors/windows somente quando reduzem erro ou custo recorrente de authoring;
+    - preferir serialized properties/data binding a duplicar estado;
+    - tooling deve validar input antes de modificar assets/scenes;
+    - operações em lote precisam de preview/dry-run quando destrutivas;
+    - diagnostics/auditors devem separar finding observado de recomendação;
+    - editor-only code não pode vazar para player build.
+
+11. **Validate**
     - compile;
     - Editor Console;
     - Play Mode behavior;
@@ -131,8 +139,8 @@ Quando Entities for escolhido:
 
 ## Integração
 
-Combina com `game-development-engineering`, `game-networking-engineering`, `game-performance-engineering`, `shader-graphics-engineering`, `sprite-sheet-pipeline`, `library-version-grounding`, `diagnosing-bugs` e `tdd`.
+Combina com `game-development-engineering`, `game-networking-engineering`, `game-performance-engineering`, `game-input-engineering`, `game-ui-accessibility-engineering`, `game-testing-quality-engineering`, `game-build-release-engineering`, `shader-graphics-engineering`, `sprite-sheet-pipeline`, `library-version-grounding`, `diagnosing-bugs` e `tdd`.
 
 ## Provenance
 
-Adaptada principalmente de `Unity-Technologies/skills`, `PhysicsExamples2D`, `PaddleGameSO`, `EntityComponentSystemSamples`, `ECS-Network-Racing-Sample`, `2d-animation-samples`, `UnityPlayground` e `open-project-1`. O Arsenal absorve metodologia e guardrails, não presume Unity CLI, Editor automation ou packages externos disponíveis nesta conversa.
+Adaptada principalmente de `Unity-Technologies/skills`, `PhysicsExamples2D`, `PaddleGameSO`, `EntityComponentSystemSamples`, `ECS-Network-Racing-Sample`, `2d-animation-samples`, `UnityPlayground`, `open-project-1`, `UI Toolkit Manual Code Examples`, `ProjectAuditor` e `UnityCsReference`. O Arsenal absorve metodologia e guardrails, não presume Unity CLI, Editor automation ou packages externos disponíveis nesta conversa.
