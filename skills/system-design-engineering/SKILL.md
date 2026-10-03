@@ -110,6 +110,16 @@ Fila só agrega valor quando desacoplamento, absorção de burst, retry ou proce
 ### Dados
 Sharding é uma resposta a escala/acesso, não ponto de partida. Primeiro entender growth, query patterns, skew e migration cost.
 
+### Object storage as source of truth
+Para workloads com objetos grandes/imutáveis:
+- considerar WAL/log imutável em object storage como truth e disco local como cache descartável;
+- usar manifest pequeno com CAS como linearization point quando o store oferece compare-and-swap/conditional write;
+- separar immutable content-addressed objects de mutable control objects;
+- leitores frios podem recuperar snapshot/checkpoint + log tail em vez de reconstruir tudo;
+- máquinas pequenas podem servir metadata/indexes localmente e fazer range reads de blobs/packs grandes;
+- compaction/checkpoint devem publicar resultado como novo estado derivado, nunca reescrever silenciosamente história;
+- round trips ao object store podem dominar custo/latência e precisam de orçamento explícito.
+
 ## Entregável
 
 Uma análise de system design deve deixar claro:
@@ -135,4 +145,4 @@ Combina com architecture-visualization, project-complexity-management, graph-eng
 
 ## Referências
 
-Adaptada de https://github.com/donnemartin/system-design-primer, especialmente o fluxo requirements → high-level design → core components → scale, atualizado para enfatizar SLOs, operações e evidência atual de tecnologia.
+Adaptada de https://github.com/donnemartin/system-design-primer, especialmente o fluxo requirements → high-level design → core components → scale. tobi/walgit acrescentou o padrão WAL em object storage + manifest CAS + caches descartáveis + remote range reads para objetos maiores que a máquina. Atualizada para enfatizar SLOs, operações e evidência atual de tecnologia.
