@@ -29,6 +29,9 @@ AI/NPCs:
 Geração procedural de levels/worlds:
 - `procedural-game-content`
 
+Mundos persistentes/interativos com IA:
+- `interactive-world-simulation`
+
 LiveOps/economia/backend mutável:
 - `live-game-operations-engineering`
 
@@ -123,6 +126,7 @@ Especializações existentes:
    - systems;
    - AI/navigation → `game-ai-engineering`;
    - geração procedural → `procedural-game-content`;
+   - mundo persistente gerado/interativo → `interactive-world-simulation`;
    - multiplayer → `game-networking-engineering`;
    - persistence/live ops/economy → `live-game-operations-engineering`;
    - XR interaction/runtime → `xr-game-engineering`;
