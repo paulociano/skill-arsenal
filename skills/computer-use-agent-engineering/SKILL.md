@@ -81,6 +81,7 @@ Preferível quando uma modalidade pode corrigir a outra:
 
 Para tarefas arriscadas ou treinamento:
 - VM/container/profile separado;
+- para múltiplos browser workers/subagentes, preferir perfis de navegador separados e domain allowlists por worker quando o escopo permitir;
 - credenciais de teste quando possível;
 - filesystem/workspace dedicado;
 - network e clipboard limitados;
@@ -153,5 +154,7 @@ Combina com:
 - `verify-before-claim`.
 
 ## Provenance
+
+Perfis separados por browser worker, domain allowlists e composição de subagentes especializados refinados a partir de `PrettyPrinted/youtube_video_code` (2026-09-30, Pydantic AI Harness + browser-use), sem assumir proxies, Pydantic AI Harness ou browser-use como runtimes disponíveis.
 
 Consolidada de [trycua/cua](https://github.com/trycua/cua), [simular-ai/Agent-S](https://github.com/simular-ai/Agent-S), [bytedance/UI-TARS-desktop](https://github.com/bytedance/UI-TARS-desktop), [microsoft/OmniParser](https://github.com/microsoft/OmniParser), [browser-use/browser-use](https://github.com/browser-use/browser-use) e [browserbase/stagehand](https://github.com/browserbase/stagehand). Preserva grounding, action-space, isolation, trajectories e evaluation sem exigir seus drivers, modelos, sandboxes ou clouds.
