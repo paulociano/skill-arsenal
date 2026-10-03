@@ -48,6 +48,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/improve-existing-web-app/STACK.md`
 - **meeting-to-actions** — Transforma reuniões, transcrições ou notas em conhecimento reutilizável, decisões, ações e handoffs.  
   `stacks/meeting-to-actions/STACK.md`
+- **real-estate-investment-analysis** — Analisar ativos e projetos imobiliários por NOI, cap rate, DCF/pro forma, debt service, cash-on-cash, IRR, vacancy, rent growth, CapEx e cenários, separando valor do imóvel de assumptions de operação e financiamento.
 - **research-and-synthesize** — Pesquisa um tema com múltiplas fontes, reconcilia evidências e produz uma síntese clara, útil e verificável.  
   `stacks/research-and-synthesize/STACK.md`
 - **product-management-cycle** — Conduz decisões recorrentes de produto conectando estratégia, descoberta, especificação, priorização, métricas e revisão de resultados sem misturar frameworks incompatíveis.  
@@ -155,6 +156,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **high-fidelity-image-generation** — Gerar ou editar imagens raster com direção visual estruturada, preservação explícita de invariantes e ciclos curtos de inspeção, incluindo preparação de imagens adequadas para reconstrução 3D.
 - **idea-refine** — Refinar ideias vagas, explorar alternativas, testar premissas e definir uma direção e escopo de MVP.
 - **instagram-growth-diagnostics** — Diagnosticar onde o crescimento de um perfil do Instagram está travado usando métricas disponíveis e rotear o gargalo para a intervenção adequada.
+- **insurance-actuarial-modeling** — Modelar seguros por exposure, frequência/severidade, pricing, credibility, reserving, experience studies, Monte Carlo e capital/risk metrics com assumptions e validação explícitas.
 - **investment-portfolio-analysis** — Analisar carteiras de investimento por retorno, risco, drawdown, alocação, concentração, benchmark, contribuição de risco e rebalanceamento, evitando transformar otimização matemática em recomendação automática.
 - **image-to-3d** — Preparar, rotear e validar conversões de imagens em assets 3D por modelos de reconstrução externos, escolhendo backend por fidelidade, velocidade, hardware, materiais e formato sem fingir execução indisponível.
 - **interactive-system-diagram** — Criar diagramas interativos de arquitetura, workflow, sequência, dataflow ou lifecycle com topologia verificável, artefato HTML explorável e separação explícita entre validação estrutural, verificação no browser e revisão perceptual.
@@ -208,6 +210,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **secure-code-privacy-review** — Revisar código e diffs por vulnerabilidades de segurança e violações de privacidade com trust boundaries, data flows, validação de findings e baixa tolerância a falsos positivos.
 - **postgres-migration-safety** — Planejar, revisar e validar migrações PostgreSQL em produção considerando versão, locks, compatibilidade entre deploys, backfill, rollback e evidência pós-migração.
 - **reels-scripting** — Analisar a estrutura narrativa de um Reel e criar roteiro original no mesmo padrão, sem copiar conteúdo ou presumir desempenho.
+- **retirement-income-planning** — Modelar aposentadoria e decumulação com household cash flows, longevidade, inflação, sequence risk, pensions, spending guardrails, Monte Carlo/historical stress tests e withdrawal strategies sem tratar probabilidade de sucesso como garantia.
 - **root-cause-analysis** — Investigar causas de problemas operacionais, comerciais ou de produto separando sintomas, mecanismos, fatores contribuintes e evidência causal.
 - **repository-evidence-docs** — Criar e manter documentação viva de repositórios a partir de comportamento real, conceitos, mapa de código, evidências e regras de sincronização, atualizando apenas o que ficaria enganoso após mudanças.
 - **response-latency-optimization** — Reduz tempo de resposta e latência percebida com contexto progressivo, menos round-trips, paralelização segura, orçamento de ferramentas e medição.
