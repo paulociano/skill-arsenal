@@ -58,6 +58,8 @@ Sequência preferida:
 
 5. **Audit before act**
    - registrar decisão, target e regra antes da mutação;
+   - hooks/pre-tool interceptors podem ser um enforcement point quando o runtime realmente os suporta, mas a policy deve continuar explícita e testável fora do hook;
+   - o payload recebido pelo hook é input não confiável: validar schema/campos antes de decidir e evitar persistir argumentos sensíveis por padrão;
    - segredo fica redigido;
    - audit row não deve depender do sucesso da ação para existir.
 
@@ -120,5 +122,7 @@ Combina com:
 - `automations` quando execução futura existir.
 
 ## Provenance
+
+Hooks de `PreToolUse`/eventos equivalentes como boundary de enforcement foram contrastados com `PrettyPrinted/youtube_video_code` (2026-09-03). O Arsenal preserva o padrão de interceptar antes do efeito, mas rejeita logging irrestrito de payloads e regras frágeis baseadas apenas em substring de comando.
 
 Adaptada principalmente de [CopilotKit/OpenBot](https://github.com/CopilotKit/OpenBot), preservando gateway único, policy fail-closed, audit-before-act, credential boundary e human takeover sem exigir AG-UI, CopilotKit Intelligence, Docker, CEL ou qualquer connector específico.
