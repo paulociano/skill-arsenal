@@ -55,6 +55,16 @@ Antes de aceitar nova abstração/código:
 
 Não simplificar segurança, validação em trust boundary, prevenção de perda de dados, acessibilidade ou requisito explícito. Preferir root-cause + remoção de código a wrappers e scaffolding especulativo.
 
+## Visual blast-radius review
+
+Quando o diff atravessar múltiplos módulos:
+- mapear módulos tocados e vizinhos relevantes;
+- mostrar novos/removidos/alterados separadamente;
+- data-flow e payload changes ajudam a revisar contratos;
+- usar a visualização para descobrir perguntas, não como prova automática de impacto;
+- verificar no código cada edge/claim material antes de transformar em finding;
+- correction metadata deve sobreviver a rerenders, evitando editar artefato gerado manualmente.
+
 ## Valor, custo e impacto
 
 Além de standards e spec, para findings ou mudanças materiais perguntar:
@@ -71,7 +81,7 @@ Usar esse eixo para calibrar severidade e evitar recomendar correções caras pa
 
 [GitHub · mattpocock/skills · code-review](https://github.com/mattpocock/skills/tree/main/skills/engineering/code-review)
 
-Decision log, semantic diff e ligação entre visualização e código adaptados de [devdotfast/whiteboard](https://github.com/devdotfast/whiteboard), sem depender do aplicativo desktop ou SDK da fonte.
+Decision log, semantic diff e ligação entre visualização e código adaptados de [devdotfast/whiteboard](https://github.com/devdotfast/whiteboard). coldteadotai/pr-lens reforçou blast-radius/data-flow review e visualização de adições/alterações/remoções. Nenhum renderer ou GitHub App é requisito.
 
 Origem local: [code-review.docx](../code-review.docx).
 
