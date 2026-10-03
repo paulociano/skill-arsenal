@@ -50,6 +50,21 @@ Save/persistência:
 Modding/tooling:
 - `game-modding-tooling-engineering`
 
+Câmera/cinematics:
+- `game-camera-cinematics-engineering`
+
+Input/controls:
+- `game-input-engineering`
+
+UI/acessibilidade:
+- `game-ui-accessibility-engineering`
+
+Testing/QA:
+- `game-testing-quality-engineering`
+
+Build/release:
+- `game-build-release-engineering`
+
 Especializações existentes:
 - shaders/VFX → `shader-graphics-engineering`
 - sprite sheets → `sprite-sheet-pipeline`
@@ -104,6 +119,11 @@ Especializações existentes:
    - narrative/dialogue → `narrative-dialogue-engineering`;
    - persistence/save → `save-game-persistence-engineering`;
    - modding/tooling → `game-modding-tooling-engineering`;
+   - camera/cinematics → `game-camera-cinematics-engineering`;
+   - input/controls → `game-input-engineering`;
+   - game UI/accessibility → `game-ui-accessibility-engineering`;
+   - testing/QA → `game-testing-quality-engineering`;
+   - build/release → `game-build-release-engineering`;
    - polish.
 
 6. **Performance gate**
@@ -120,7 +140,7 @@ Especializações existentes:
 
 ## Regra de seleção
 
-Não carregar todas as skills. Um jogo single-player 2D simples pode usar apenas `game-development-engineering` + skill da engine. Multiplayer, performance, AI, procedural, LiveOps, XR, animation, audio, narrative, persistence e modding entram somente quando o requisito existe.
+Não carregar todas as skills. Um jogo single-player 2D simples pode usar apenas `game-development-engineering` + skill da engine. Multiplayer, performance, AI, procedural, LiveOps, XR, animation, audio, narrative, persistence, modding, camera, input, UI/accessibility, QA e build/release entram somente quando o requisito existe.
 
 ## Critério de conclusão
 
@@ -133,4 +153,4 @@ Não carregar todas as skills. Um jogo single-player 2D simples pode usar apenas
 
 ## Provenance
 
-Stack construída a partir dos lotes 2026-10-02 de game development. O primeiro lote cobriu core/Unity/networking/performance; o segundo adicionou AI, procedural, LiveOps e XR; o terceiro adicionou animation, audio, narrative/dialogue, save/persistence e modding/tooling, além de reforçar anti-cheat defensivo dentro do owner de networking.
+Stack construída a partir dos lotes 2026-10-02 de game development. O primeiro lote cobriu core/Unity/networking/performance; o segundo adicionou AI, procedural, LiveOps e XR; o terceiro adicionou animation, audio, narrative/dialogue, save/persistence e modding/tooling, além de reforçar anti-cheat defensivo; o quarto adicionou camera/cinematics, input, game UI/accessibility, QA/testing e build/release, com editor tooling incorporado ao owner Unity.
