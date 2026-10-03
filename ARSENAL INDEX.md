@@ -117,9 +117,11 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **formal-methods-reconciler** — Traduzir dúvidas críticas de correção de software em modelos mínimos verificáveis e interpretar provas ou contraexemplos.
 - **founder-diagnose** — Diagnosticar gargalos de startups em produto, mercado, posicionamento, distribuição ou monetização antes de escolher uma intervenção.
 - **functional-skill-architecture** — Modularizar skills complexas como pipelines de funções com contratos explícitos de entrada e saída, referências compartilhadas, scripts determinísticos, traces e casos de regressão quando a complexidade justificar essa estrutura.
+- **game-ai-engineering** — Projetar, implementar e validar AI de gameplay para NPCs com percepção, state machines, behavior trees, GOAP, steering, pathfinding/navigation e aprendizado quando realmente justificado.
 - **game-development-engineering** — Projetar, implementar e validar jogos 2D/3D por loops jogáveis pequenos, separando gameplay state, simulation, presentation, assets e runtime verification sem assumir uma engine específica.
 - **game-networking-engineering** — Projetar e validar multiplayer em jogos com autoridade, replication, RPC/events, interpolation, prediction, reconciliation, rollback, interest management e testes sob latência/perda.
 - **game-performance-engineering** — Diagnosticar e otimizar performance de jogos por frame budget, CPU/GPU profiling, memory/GC, rendering, physics, assets, streaming e entity scale, sempre com baseline e comparação antes/depois.
+- **live-game-operations-engineering** — Projetar e operar features de live games como economia, remote config, eventos sazonais, rewards, battle pass, loja, leaderboards e backend state com autoridade, rollout, observabilidade e rollback.
 - **generative-ui-engineering** — Projetar e validar interfaces geradas por modelos como saída estruturada ou sandboxed runtime, com component allowlists, streaming, bridges restritas, fallback, acessibilidade e limites claros entre UI gerada e capacidades reais.
 - **golden-circle-feedback** — Redigir feedback comportamental usando POR QUÊ, COMO e O QUÊ, com propósito, fatos observáveis e próxima ação.
 - **golden-path-capture** — Capturar workflows difíceis já verificados como caminhos reutilizáveis, registrando condição de promoção, falhas descartadas, escopo e higiene de segredos antes de codificar o aprendizado como skill ou documentação.
@@ -163,6 +165,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **powerbi-engineering** — Projetar, construir, auditar e versionar soluções Power BI com modelo semântico, DAX, performance, temas, embedding e práticas de ALM conforme ferramentas realmente disponíveis.
 - **presentation-template-adaptation** — Adaptar conteúdo a um deck de referência preservando identidade visual, elementos fixos e capacidade dos layouts.
 - **procedural-3d-reconstruction** — Reconstruir objetos de imagens como modelos procedurais Three.js por estágios e comparação visual com a referência.
+- **procedural-game-content** — Projetar e validar geração procedural de níveis, mapas, cidades, dungeons, terrenos e spawns com seeds reproduzíveis, constraints explícitas, validação de jogabilidade e bounded regeneration.
 - **prioritization-engine** — Priorizar trabalho, oportunidades ou problemas por impacto, urgência, dependências, risco e esforço com critérios explícitos e análise de sensibilidade.
 - **product-metrics-diagnostics** — Diagnosticar movimentos de métricas por definição, funil, cohort, segmento, drivers e qualidade de dados antes de propor ação.
 - **project-complexity-management** — Diagnosticar focos de complexidade técnica, organizacional e externa e definir intervenções proporcionais às evidências.
@@ -224,6 +227,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **watch-video** — Analisar vídeos com transcrição e frames disponíveis, ancorando conclusões em timestamps e distinguindo visto, dito e inferido.
 - **wayfinder** — Planejar projetos que atravessam sessões como mapas de decisões, resolvendo primeiro as incertezas já desbloqueadas.
 - **web-analytics-ga4** — Analisar tráfego, aquisição e conversão em GA4 ou exports equivalentes com períodos comparáveis e limitações de tracking.
+- **xr-game-engineering** — Projetar e validar experiências VR/AR/MR com OpenXR quando possível, tracking spaces, locomotion, grab/gaze/UI espacial, hands/controllers, conforto, performance e testes em dispositivo real.
 - **web-design-engineer** — Construir ou redesenhar interfaces web com pesquisa, direção, estrutura, interação, motion e efeitos contemporâneos, preservando marca, acessibilidade, performance e verificação em runtime.
 - **web-quality-audit** — Auditar qualidade web em runtime com performance, acessibilidade, best practices e evidência reproduzível.
 - **web-extraction-pipeline** — Extrair conteúdo estruturado de sites quando busca comum não basta, com técnica mínima, escopo limitado e validação.
