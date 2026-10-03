@@ -165,6 +165,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **live-game-operations-engineering** — Projetar e operar features de live games como economia, remote config, eventos sazonais, rewards, battle pass, loja, leaderboards e backend state com autoridade, rollout, observabilidade e rollback.
 - **narrative-dialogue-engineering** — Projetar e integrar narrativa interativa e diálogos com nodes/choices, variables, conditions, commands, localization, save-state, validation de branches e separação entre conteúdo narrativo e gameplay code.
 - **generative-ui-engineering** — Projetar e validar interfaces geradas por modelos como saída estruturada ou sandboxed runtime, com component allowlists, streaming, bridges restritas, fallback, acessibilidade e limites claros entre UI gerada e capacidades reais.
+- **git-worktree-lifecycle** — Isolar mudanças de desenvolvimento em worktrees/branches e concluir integração, PR, preservação ou cleanup com baseline e verificações seguras.
 - **golden-circle-feedback** — Redigir feedback comportamental usando POR QUÊ, COMO e O QUÊ, com propósito, fatos observáveis e próxima ação.
 - **golden-path-capture** — Capturar workflows difíceis já verificados como caminhos reutilizáveis, registrando condição de promoção, falhas descartadas, escopo e higiene de segredos antes de codificar o aprendizado como skill ou documentação.
 - **graph-engineering** — Modelar workflows com dependências e paralelismo reais como grafos limitados, com contratos de saída, joins e recuperação local.
