@@ -67,13 +67,23 @@ Transformar dados financeiros pessoais em um plano coerente, verificável e atua
    - explicitar premissas;
    - usar `scenario-forecasting` para horizontes incertos.
 
-8. **Plan**
+8. **Protection and succession inventory**
+   - beneficiaries/designations;
+   - dependents;
+   - ownership of key assets;
+   - insurance coverage;
+   - liquidity for taxes/debts/final expenses;
+   - wills/trusts/estate documents as existence/status only unless qualified legal review is available;
+   - identify concentration, missing beneficiary, illiquid-estate and succession continuity risks;
+   - do not draft legal instruments or infer legal effectiveness from a checklist.
+
+9. **Plan**
    - transformar análise em opções;
    - mostrar trade-offs;
    - usuário escolhe prioridade;
    - registrar assumptions que mudariam a decisão.
 
-9. **Review cadence**
+10. **Review cadence**
    - monthly: cash flow/budget;
    - quarterly: goals/debt;
    - annual or event-driven: insurance, tax, estate, allocation and long-term plan.
@@ -83,13 +93,13 @@ Transformar dados financeiros pessoais em um plano coerente, verificável e atua
 - não inferir saldo atual apenas de transações;
 - não tratar 50/30/20, 3-6 meses ou qualquer outra heurística como obrigação;
 - separar conselho educacional de decisão regulada/profissional;
-- regras tributárias, previdenciárias e de seguros dependem de jurisdição e data;
+- regras tributárias, previdenciárias, sucessórias e de seguros dependem de jurisdição e data;
 - não recomendar produto financeiro específico sem dados atuais e escopo apropriado;
 - preservar autonomia do usuário em prioridades entre liquidez, dívida, consumo e investimento.
 
 ## Integração
 
-`scenario-forecasting`, `investment-portfolio-analysis`, `tax-financial-modeling`, `dashboard-design` e `verify-before-claim`.
+`scenario-forecasting`, `investment-portfolio-analysis`, `retirement-income-planning`, `insurance-actuarial-modeling`, `tax-financial-modeling`, `brazil-financial-system-grounding`, `dashboard-design` e `verify-before-claim`.
 
 ## Provenance
 
