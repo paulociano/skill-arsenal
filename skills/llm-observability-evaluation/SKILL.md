@@ -67,6 +67,15 @@ Quando o sistema faz uma previsão, score de confiança ou recomendação que s�
 
 Esse padrão reduz hindsight bias e métricas que ficam melhores apenas porque o sistema escolheu retrospectivamente como se avaliar.
 
+Quando a previsão puder ser liquidada automaticamente:
+- exigir variável observável, fonte e teste numérico explícitos antes do prazo;
+- recusar claims vagos que não podem ser liquidados;
+- settled claim não deve ser reescrito como nova previsão;
+- registrar leitura observada e fonte usada no settlement;
+- manter ledger append-only/tamper-evident quando o scoreboard precisar de auditabilidade;
+- além de hit rate, acompanhar calibration gap e proper scoring rule;
+- medir também quantas previsões continuam abertas e não esconder dead/unsettled records.
+
 ## Regras para evals
 
 - LLM-as-a-judge é uma métrica, não verdade absoluta;
@@ -152,6 +161,6 @@ Adaptada de langfuse/langfuse.
 
 Evals de trajetória, CI e separação entre task/tool/final-answer quality refinados a partir de https://github.com/confident-ai/deepeval, https://github.com/promptfoo/promptfoo, https://github.com/Arize-ai/phoenix, https://github.com/comet-ml/opik e https://github.com/openlit/openlit.
 
-Precommit e settlement de previsões adaptados de [dealerdefi/FLYON](https://github.com/dealerdefi/FLYON), usando a metodologia de scoreboard auditável sem incorporar lógica financeira ou on-chain.
+Precommit e settlement de previsões adaptados de [dealerdefi/FLYON](https://github.com/dealerdefi/FLYON) e DefiLeoo/YOINK, preservando claims verificáveis, fonte/teste pré-definidos, settlement separado, calibration/Brier e ledger auditável sem incorporar lógica financeira ou blockchain write capability ou on-chain.
 
 Origem local: [llm-observability-evaluation.docx](../llm-observability-evaluation.docx).
