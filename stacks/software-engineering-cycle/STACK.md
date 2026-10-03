@@ -49,6 +49,9 @@ Production delivery:
 Behavior verification:
 - `behavior-contract-validation`
 
+Agentic software factory:
+- `software-factory-operations`
+
 ## Fluxo
 
 1. **Scope**
@@ -111,7 +114,15 @@ Behavior verification:
    - runtime verification;
    - rollback limits.
 
-11. **Operate and learn**
+11. **Factory mode when repeated agent work justifies it**
+   - durable issue/queue state;
+   - human-owned autonomy charter;
+   - deterministic claim;
+   - independent verifier;
+   - numeric review back-pressure;
+   - no automatic merge.
+
+12. **Operate and learn**
    - production signals;
    - incidents;
    - drift;
@@ -137,8 +148,10 @@ Exemplos:
 - retry sem idempotência pode amplificar incidente;
 - cache/build optimization precisa de measurement;
 - golden path só vira padrão depois de provar valor;
-- production claim exige runtime verification.
+- production claim exige runtime verification;
+- software factory deve parar quando a fila humana de revisão estiver saturada;
+- writer não deve ser o único grader da própria mudança.
 
 ## Provenance
 
-Stack construída do lote 2026-10-03 de 16 repositórios de software engineering, com maior peso em Hypothesis, Testcontainers, OpenTelemetry Collector, Temporal, Backstage, Trivy, Renovate, Semgrep, Bazel/Pants, Dagger e Argo CD. Charlytoc/ai-todo-app contribuiu para o padrão draft-first, absorvido em `deep-grill`.
+Stack construída do lote 2026-10-03 de 16 repositórios de software engineering, com maior peso em Hypothesis, Testcontainers, OpenTelemetry Collector, Temporal, Backstage, Trivy, Renovate, Semgrep, Bazel/Pants, Dagger e Argo CD. Charlytoc/ai-todo-app contribuiu para draft-first. addyosmani/factory acrescentou o modo software factory com queue durável, verifier independente, back-pressure e merge humano.
