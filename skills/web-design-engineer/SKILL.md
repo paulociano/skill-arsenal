@@ -173,6 +173,19 @@ Quando a tarefa se beneficiar de referências concretas de UI para IA, component
 
 Para referências de landing pages, motion e efeitos de superfície, consultar [bibliotecas de componentes animados e efeitos](../creative-web-effects/references/animated-component-libraries.md). Reutilizar somente padrões compatíveis com a arquitetura, acessibilidade e licença do projeto.
 
+## Resizable workspace panels
+
+Quando dashboards, IDEs ou workspaces usarem painéis redimensionáveis:
+- separar engine de resizing da camada visual/framework;
+- medir o espaço real disponível em vez de assumir a largura total do container;
+- suportar min/max, pixel e percentage sizes quando isso corresponder ao produto;
+- folding/collapse/snap devem animar o layout real, não apenas aplicar opacity/transform decorativo;
+- nesting, reordering e separator intersections precisam de regras explícitas;
+- keyboard e RTL continuam requisitos de interação;
+- motion deve preservar previsibilidade durante resize, não competir com o controle do usuário.
+
+Padrão refinado a partir de letstri/motion-panels, sem exigir Motion ou React.
+
 ## Produtos e runtimes como referência
 
 Quando o projeto exigir editor Office embutido, conhecimento documental, CRM WhatsApp, visualização geográfica ou agentes de equipe, consultar [produtos web e limites de integração](references/office-knowledge-agent-products.md). Distinguir componente, produto completo e serviço externo; escolher somente quando o requisito justificar operação, licenças e dependências.
