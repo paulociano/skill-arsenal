@@ -98,7 +98,9 @@ O Arsenal guarda a **versão nativa de Agent Skills** da skill. A fonte externa 
 
 ## Formato nativo
 
-Criar `<nome-em-kebab-case>/SKILL.md` com frontmatter YAML contendo `name` igual ao diretório e `description` curta que explique quando usar. Manter detalhes extensos em `references/` e ligar cada arquivo ao ponto de uso. Validar nomes únicos, YAML, links e conteúdo antes de concluir.
+Criar `<nome-em-kebab-case>/SKILL.md` com frontmatter YAML contendo `name` igual ao diretório e `description` curta que explique quando usar. Tratar `description` principalmente como contrato de trigger/when-to-use: evitar resumir ali o workflow inteiro quando isso puder permitir que o router imite o processo sem carregar o corpo da skill. Manter detalhes extensos em `references/` e ligar cada arquivo ao ponto de uso. Validar nomes únicos, YAML, links e conteúdo antes de concluir.
+
+Esse refinamento de discovery foi contrastado com `obra/superpowers · writing-skills`; no Arsenal ele é uma heurística de roteamento, não uma alegação universal sobre comportamento de modelos.
 
 ## Referências
 
