@@ -12,6 +12,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 
 ## Stacks
 
+- **ai-reels-production** — Produzir Reels/Shorts com IA do roteiro ou long-form ao corte, reframing 9:16, captions, B-roll, voz/avatar, motion, variantes e QA, carregando apenas os owners necessários.  
+  `stacks/ai-reels-production/STACK.md`
 - **ai-workspace-operating-cycle** — Opera trabalhos complexos e persistentes como um workspace estruturado, conectando fontes, decisões, assets, artifacts, contexto seletivo, geração, verificação e retomada entre sessões sem reduzir tudo a uma conversa linear.  
   `stacks/ai-workspace-operating-cycle/STACK.md`
 - **architectural-design-cycle** — Conduzir projetos arquitetônicos e de interiores do briefing à planta técnica, CAD paramétrico, maquete 3D, BIM/IFC, desempenho ambiental e análise estrutural preliminar, carregando somente os owners necessários.  
@@ -62,6 +64,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/social-growth-engine/STACK.md`
 - **software-engineering-cycle** — Conduzir trabalho de engenharia de software da arquitetura ao build, testes, observabilidade, supply chain, workflows duráveis, plataforma e produção, carregando apenas os owners necessários.  
   `stacks/software-engineering-cycle/STACK.md`
+- **vertical-video-reframing** — Converter e validar vídeos horizontais/quadrados para 9:16 usando subject detection/tracking, safe crop, smoothing, multi-subject policy e composition-aware reframing sem câmera virtual nervosa.
 - **venture-building-cycle** — Conduzir uma nova empresa, startup ou iniciativa de inovação da tese inicial à validação, protótipo, primeiros clientes, monetização e decisão de escala por evidência progressiva e apostas reversíveis.  
   `stacks/venture-building-cycle/STACK.md`
 
@@ -246,11 +249,13 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **scroll-storytelling** — Projetar experiências narrativas guiadas por scroll com estágios, pinning, parallax, transições e sincronização DOM/WebGL sem sacrificar acessibilidade ou performance.
 - **social-analytics** — Analisar exports de redes sociais para identificar tendências e desempenho sem extrapolar amostras ou métricas indisponíveis.
 - **social-carousel-engineering** — Projetar carrosséis sociais como narrativa slide a slide, do hook ao CTA, preservando marca, densidade legível, continuidade visual, editabilidade e QA de exportação sem prometer engajamento.
+- **short-form-video-engineering** — Projetar e automatizar Reels/Shorts/TikToks a partir de vídeo, áudio ou roteiro usando transcrição temporizada, scene detection, seleção de clipes, cortes, captions, ritmo, overlays e QA sem tratar score editorial como previsão de viralidade.
 - **social-post-review** — Revisar posts separando qualidade editorial de comparação com o histórico real do autor, sem prever desempenho por score.
 - **source-to-skill** — Converter fontes longas em skills de conhecimento com entrada compacta, referências sob demanda e fidelidade à origem.
 - **sprite-sheet-pipeline** — Converter animações ou frames em sprite sheets com registro, escala, transparência e timing verificados.
 - **structured-output-contract** — Definir e validar schemas para saídas LLM consumidas por código, com tipos, incerteza explícita e retries limitados.
 - **surgical-engineering** — Executar mudanças de código com escopo mínimo, suposições explícitas, simplicidade, critérios verificáveis e zero refatoração lateral não solicitada.
+- **synthetic-presenter-video** — Criar ou avaliar vídeos com voz sintética, voice cloning, talking-head/lip-sync e portrait animation com consentimento, identity boundaries, timing, expression, artifact QA e provenance explícita.
 - **system-design-engineering** — Projetar sistemas escaláveis a partir de requisitos, estimativas, trade-offs, componentes, dados, falhas e evolução operacional.
 - **team-health-management** — Avaliar sinais operacionais de saúde de equipe e converter problemas de clareza, carga, fluxo, dependências e coordenação em ações de gestão observáveis, sem psicologizar pessoas.
 - **svg-handdrawn-animation** — Animar o desenho progressivo de SVGs com strokes e revelação de fills preservando cores, estrutura e segurança do embed.
