@@ -56,7 +56,9 @@ Se o usuário já especificou profundidade/formato, não perguntar de novo.
 
 ## Transcrição
 
-Preferir capacidade nativa/conector. External transcription provider só com autorização e aviso de privacidade/custo quando material.
+Preferir capacidade nativa/conector. Quando o usuário exigir processamento local e o ambiente realmente tiver os runtimes necessários, um pipeline local pode separar: extração/conversão de áudio → transcrição → preservação do transcript → sumarização/ações. Tratar cada etapa como artefato verificável e não apagar a fonte intermediária antes da validação.
+
+External transcription provider só com autorização e aviso de privacidade/custo quando material.
 
 ## Integração
 
@@ -67,6 +69,8 @@ Preferir capacidade nativa/conector. External transcription provider só com aut
 - `verify-before-claim`.
 
 ## Referências
+
+Pipeline local gravação → áudio → transcript → resumo contrastado com `PrettyPrinted/youtube_video_code` (2026-07-24), sem assumir ffmpeg, whisper.cpp, paths locais ou modelo específicos disponíveis.
 
 Adaptada de reysu/ai-life-skills · summarize-call / summarize.
 
