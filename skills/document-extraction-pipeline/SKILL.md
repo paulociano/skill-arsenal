@@ -42,6 +42,18 @@ Não aplicar OCR/VLM pesado a tudo quando text layer confiável já resolve.
 10. **Batch strategy** — checkpoint, skip-existing e shard apenas quando o volume justificar.
 11. **Downstream validation** — confirmar que o formato extraído atende ao uso final.
 
+## Region-locked sequential OCR
+
+Para viewers paginados onde o texto não é selecionável:
+- calibrar a região uma vez e reutilizá-la página a página;
+- capturar em fila serial para preservar ordem e evitar corrupção;
+- manter thumbnail/crop de verificação por página;
+- detectar páginas duplicadas para flag de drift ou fim do documento;
+- auto-advance deve ter condição explícita de parada, timeout e page cap;
+- preferir OCR local quando privacidade e volume justificarem;
+- layout segmentation deve ser validado em páginas multi-coluna, pois confidence alta não garante reading order correto;
+- exportar com separadores de página para preservar provenance mínima.
+
 ## Regras
 
 - OCR não deve substituir text layer boa sem motivo;
@@ -111,5 +123,7 @@ Router de formatos e fast path de conversão adaptados de https://github.com/mic
 Representação layout-aware, reading order, block tree e locators refinados a partir de https://github.com/docling-project/docling, https://github.com/opendatalab/MinerU e https://github.com/Unstructured-IO/unstructured.
 
 Validação de schema + invariantes semânticas refinada a partir de `PrettyPrinted/youtube_video_code` (2026-06-13, extração de PDF com Pydantic AI), preservando a ideia de checar relações como saldos/totais sem adotar Pydantic AI, Phoenix ou modelos específicos.
+
+thiagotigaz/ocr-it acrescentou region-locked sequential OCR, duplicate/end detection, local OCR e verificação por thumbnail para viewers paginados. Nenhum browser extension/runtime é requisito.
 
 Origem local: [document-extraction-pipeline.docx](../document-extraction-pipeline.docx).
