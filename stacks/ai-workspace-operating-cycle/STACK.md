@@ -18,6 +18,13 @@ Não confundir a interface atual com a fonte canônica do trabalho.
 ### 1. Capture
 Registrar somente material que possa alterar o trabalho: sources, constraints, decisions, assets, outputs, open questions e acceptance criteria. Usar kb-retriever para corpus/documentos e meeting-knowledge-capture quando a origem for reunião.
 
+Quando existir captura ambiente:
+- manter raw record separado de summaries/knowledge;
+- capturar somente a superfície autorizada;
+- preservar references e timestamps;
+- permitir regras de exclusão/redaction;
+- tratar a camada derivada como reconstruível.
+
 ### 2. Structure
 Distinguir source, note, decision, artifact, transformation, task, relation e unknown. Quando houver grafo/canvas real, nodes, edges e groups podem representar essas relações. Proximidade espacial é sinal de organização, não verdade semântica. Usar domain-modeling quando o vocabulário do domínio for material.
 
@@ -56,6 +63,16 @@ A implementação pode ser arquivos, banco, canvas, Drive, Git, app ou outro sto
 ## Views
 O mesmo record pode alimentar chat, canvas, search, graph, timeline, dashboard, artifact editor e agent/workflow inspector. Uma view não deve criar uma segunda verdade silenciosa. Mudanças materiais precisam voltar ao record canônico ou ficar claramente marcadas como efêmeras.
 
+## Shared human-agent workspace
+
+Quando humanos e agentes compartilham o mesmo workspace:
+- identidades de agentes devem ser próprias, não mascaradas como usuários humanos;
+- mensagens, workflow steps, approvals e repo events devem compartilhar audit trail quando isso simplificar provenance;
+- channel/room can become the durable record of why work happened;
+- agent access should be scoped like a teammate: explicit membership, tools and credentials;
+- event log can be canonical while chat/canvas/search/git views remain projections;
+- approvals and consequential writes remain human-visible and attributable.
+
 ## Human-AI co-creation
 - IA pode propor, gerar, organizar e transformar.
 - Sugestão não é execução.
@@ -84,4 +101,4 @@ Stack sintetizada a partir de padrões já absorvidos pelo Arsenal e da avaliaç
 - jack112806/FrameForge: record estruturado de assets/decisions, geração como etapa e revisão/rollback localizado;
 - harishkotra/pixel-council: workspace espacial de agentes com connections, outputs e audit logs.
 
-Nenhum desses runtimes é dependência desta stack.
+block/buzz reforçou o padrão de workspace humano-agente baseado em event log auditável, identidade própria de agentes e views compartilhadas. dragthelake/ambient-context reforçou raw capture local-first separado de knowledge/summaries. Nenhum desses runtimes é dependência desta stack.
