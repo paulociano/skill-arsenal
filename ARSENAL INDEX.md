@@ -73,6 +73,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **architecture-visualization** — Criar diagramas de arquitetura, sequência, estados e fluxos a partir de descrições ou código com topologia rastreável.
 - **arsenal-router** — Seleciona e orquestra a menor combinação necessária de skills e stacks do Skill Arsenal.
 - **banking-ledger-engineering** — Projetar e revisar ledgers e fluxos bancários com contas, postings, pending/posted balances, atomicidade, idempotência, reconciliação, multi-moeda e APIs de banking sem confundir ledger operacional com contabilidade gerencial.
+- **brazil-financial-system-grounding** — Ancorar tarefas financeiras brasileiras em fontes atuais e oficiais do BCB, CVM, Tesouro Nacional, Receita e Open Finance Brasil, incluindo Pix, taxas, títulos, dados públicos e regras, sem congelar normas que mudam.
 - **beautiful-web-article** — Transformar fontes fornecidas em artigos ou páginas editoriais HTML legíveis, explicativamente bem estruturados e fiéis ao conteúdo.
 - **behavior-contract-validation** — Validar aplicações, CLIs, APIs e artefatos como caixa-preta contra um contrato de comportamento observável, separando evidência de runtime de revisão de implementação.
 - **brand-strategy** — Construir ou revisar uma estratégia de marca conectando categoria, audiência, posicionamento, diferenciação, prova, personalidade, voz, mensagens e objetivos sem inventar pesquisa ou transformar opinião em fato de mercado.
@@ -93,6 +94,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **compose-performance-audit** — Auditar desempenho de Jetpack Compose com baseline, diagnóstico, correção e comparação de métricas antes e depois.
 - **content-matrix** — Gerar e priorizar ideias específicas de conteúdo cruzando pilares, ângulos, formatos, hooks, prova e objetivo do funil sem confundir potencial editorial com previsão de performance.
 - **creative-web-effects** — Selecionar e integrar efeitos visuais contemporâneos para web como shaders, texturas, partículas, pós-processamento, WebGL e backgrounds procedurais sem sacrificar legibilidade ou performance.
+- **corporate-treasury-management** — Gerir análise de treasury corporativa por cash positioning, 13-week forecast, liquidity buffers, funding, debt, investments, FX/interest-rate exposure, bank reconciliation e payment controls.
+- **credit-risk-underwriting** — Analisar risco de crédito e underwriting com definição de default, PD/scorecards, affordability, collateral, policy rules, calibration, stability, fairness e decisão humana, sem automatizar aprovação apenas pelo modelo.
 - **crossplatform-mobile-engineering** — Implementar ou revisar apps Flutter e React Native/Expo respeitando versões, comportamento nativo e testes por plataforma.
 - **customer-interview** — Preparar e analisar entrevistas de descoberta focadas em comportamento passado, dor, alternativas e compromissos reais.
 - **dashboard-design** — Projetar dashboards e sistemas de gestão à vista orientados a decisão, exceção e ação, com métricas confiáveis, ownership, cadência, comparação e hierarquia operacional.
@@ -121,6 +124,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **financial-filings-analysis** — Pesquisar e analisar demonstrações e filings públicos com hierarquia de fontes, XBRL quando disponível, períodos comparáveis, provenance por line item e separação entre dados reportados, normalizações e interpretação.
 - **financial-modeling-valuation** — Construir e auditar modelos financeiros integrados e valuation por DCF, múltiplos e cenários com fórmulas rastreáveis, histórico validado, assumptions explícitas e checks de integridade.
 - **financial-planning-analysis** — Conduzir FP&A com actuals, budget, forecast, variance, drivers, cash/runway, cenários e management reporting, distinguindo plano, previsão, meta e realizado.
+- **fixed-income-analysis** — Analisar instrumentos de renda fixa por cash flows, yield/curve, duration, convexity, spread, inflation/FX exposure, scenario P&L e reinvestment/liquidity risk com convenções e datas explícitas.
 - **formal-methods-reconciler** — Traduzir dúvidas críticas de correção de software em modelos mínimos verificáveis e interpretar provas ou contraexemplos.
 - **founder-diagnose** — Diagnosticar gargalos de startups em produto, mercado, posicionamento, distribuição ou monetização antes de escolher uma intervenção.
 - **functional-skill-architecture** — Modularizar skills complexas como pipelines de funções com contratos explícitos de entrada e saída, referências compartilhadas, scripts determinísticos, traces e casos de regressão quando a complexidade justificar essa estrutura.
