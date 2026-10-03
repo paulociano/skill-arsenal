@@ -34,6 +34,12 @@ Construir um context pack mínimo para o objetivo atual: goal, active constraint
 ### 4. Work
 Escolher o operador mínimo: pesquisa/síntese, decisão, criação, implementação, workflow ou agente/worker. Multi-agent-orchestration só entra quando existem ferramentas reais de delegação e o paralelismo reduz o caminho crítico.
 
+Quando um trabalho recorrente precisa de estado próprio, várias ações e interface específica, considerar promovê-lo de workflow para **app/capability persistente**:
+- workflow é verbo: executa uma tarefa;
+- app/capability é substantivo: dá ao trabalho um lugar próprio, dados persistentes e superfícies reutilizáveis;
+- ações, skills, agents, hooks, UI/API e data podem compor a mesma capability;
+- a implementação deve continuar exportável/versionável quando possível.
+
 ### 5. Materialize
 Resultados importantes deixam de ser apenas mensagens e viram artifacts ou records reutilizáveis. Preservar inputs, owner, versão/status, relações com fontes, editabilidade quando relevante e diferença entre draft e approved. Quando a saída dirige UI, usar structured-output-contract e component registry em vez de código arbitrário gerado.
 
@@ -73,6 +79,16 @@ Quando humanos e agentes compartilham o mesmo workspace:
 - event log can be canonical while chat/canvas/search/git views remain projections;
 - approvals and consequential writes remain human-visible and attributable.
 
+## Deictic and live-canvas interaction
+
+Quando o runtime permitir entrada multimodal/contextual:
+- voz pode carregar a intenção enquanto pointer/circle/selection aponta o referente visual;
+- preservar ordem entre fala e referências capturadas;
+- uma captura de tela é evidência sensível e deve ser minimizada ao necessário;
+- apontar para algo não autoriza ação sobre esse algo;
+- em canvas colaborativo, humanos e agentes devem ver edits/status/presence de forma atribuível;
+- design memory pode registrar exemplars e decisões duráveis, mas regras propostas por distillation precisam de revisão humana.
+
 ## Human-AI co-creation
 - IA pode propor, gerar, organizar e transformar.
 - Sugestão não é execução.
@@ -101,4 +117,4 @@ Stack sintetizada a partir de padrões já absorvidos pelo Arsenal e da avaliaç
 - jack112806/FrameForge: record estruturado de assets/decisions, geração como etapa e revisão/rollback localizado;
 - harishkotra/pixel-council: workspace espacial de agentes com connections, outputs e audit logs.
 
-block/buzz reforçou o padrão de workspace humano-agente baseado em event log auditável, identidade própria de agentes e views compartilhadas. dragthelake/ambient-context reforçou raw capture local-first separado de knowledge/summaries. Nenhum desses runtimes é dependência desta stack.
+block/buzz reforçou o padrão de workspace humano-agente baseado em event log auditável, identidade própria de agentes e views compartilhadas. dragthelake/ambient-context reforçou raw capture local-first separado de knowledge/summaries. rome-os/rome acrescentou o padrão workflow→app/capability persistente e compounding de ações/skills/apps em código versionável. kgoedecke/doop acrescentou canvas multiplayer humano-agente, presença e design memory. TarunTomar122/better-voice acrescentou entrada de voz com referência visual deíctica por apontamento. Nenhum desses runtimes é dependência desta stack.
