@@ -23,6 +23,18 @@ Multiplayer:
 Performance:
 - `game-performance-engineering`
 
+AI/NPCs:
+- `game-ai-engineering`
+
+Geração procedural de levels/worlds:
+- `procedural-game-content`
+
+LiveOps/economia/backend mutável:
+- `live-game-operations-engineering`
+
+XR/VR/AR/MR:
+- `xr-game-engineering`
+
 Especializações existentes:
 - shaders/VFX → `shader-graphics-engineering`
 - sprite sheets → `sprite-sheet-pipeline`
@@ -67,9 +79,11 @@ Especializações existentes:
 5. **Expand only after proof**
    - conteúdo;
    - systems;
-   - AI/navigation;
-   - multiplayer;
-   - persistence/live ops;
+   - AI/navigation → `game-ai-engineering`;
+   - geração procedural → `procedural-game-content`;
+   - multiplayer → `game-networking-engineering`;
+   - persistence/live ops/economy → `live-game-operations-engineering`;
+   - XR interaction/runtime → `xr-game-engineering`;
    - polish.
 
 6. **Performance gate**
@@ -86,7 +100,7 @@ Especializações existentes:
 
 ## Regra de seleção
 
-Não carregar todas as skills. Um jogo single-player 2D simples pode usar apenas `game-development-engineering` + skill da engine. Multiplayer/performance entram quando o requisito existe.
+Não carregar todas as skills. Um jogo single-player 2D simples pode usar apenas `game-development-engineering` + skill da engine. Multiplayer, performance, AI, procedural, LiveOps e XR entram somente quando o requisito existe.
 
 ## Critério de conclusão
 
@@ -99,4 +113,4 @@ Não carregar todas as skills. Um jogo single-player 2D simples pode usar apenas
 
 ## Provenance
 
-Stack construída a partir do lote 2026-10-02 de 30 repositórios de game development, com maior peso em Unity-Technologies/skills, samples oficiais Unity, Godot demos, Bevy, Mirror e PurrNet.
+Stack construída a partir dos lotes 2026-10-02 de game development. O primeiro lote usou Unity-Technologies/skills, samples oficiais Unity, Godot demos, Bevy, Mirror e PurrNet; o segundo expandiu AI/NPCs, procedural content, LiveOps e XR com libgdx/gdx-ai, crashkonijn/GOAP, ProceduralToolkit, Edgar-Unity, WaveFunctionCollapse, Unity Gaming Services samples, Nakama, PlayFab, XR Interaction Toolkit Examples, AR Foundation e OpenXR.
