@@ -52,6 +52,18 @@ Transformar uma descrição de sistema ou evidência de repositório em um diagr
 11. **Freeze after acceptance** — não editar após a última validação sem invalidar o receipt.
 12. **Handoff** — reportar separadamente validação estrutural, runtime evidence e revisão visual.
 
+## Architecture + constraints + change scope
+
+Quando o diagrama servir para governar uma mudança de código:
+- mostrar arquitetura vigente e escopo proposto na mesma base espacial;
+- manter constraints revisadas separadas de documents apenas coletados;
+- registrar coverage: reviewed, uncertain e uninspected;
+- ligar modules/files/rules a source evidence;
+- mostrar checks planejados antes da mudança e checks realmente executados depois;
+- explicit confirmation pode ser exigida antes da implementação quando o fluxo pedir;
+- material scope change invalida a confirmação anterior;
+- activity declarada pelo agente não deve ser apresentada como observação automática se o runtime não a capturou.
+
 ## Evidence discipline
 
 Quando o diagrama deriva de código:
@@ -120,6 +132,6 @@ Layout relativo e posição como parte da linguagem visual: [reladraw/reladraw](
 
 Disciplina editorial, seleção de gramática, orçamento de complexidade, static-first e mapeamento de marca por papéis semânticos adaptados de [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design), sem instalar plugins, executar scripts ou depender de seus comandos específicos de Claude Code/Codex.
 
-inkboard/system-atlas acrescentou source spec único → interactive atlas + generated SYSTEM.md, chapters de progressive disclosure e question tracking por ID. O Arsenal absorve o padrão sem exigir seu renderer/build script.
+inkboard/system-atlas acrescentou source spec único → interactive atlas + generated SYSTEM.md, progressive disclosure e question tracking por ID. Qiuner/birdview acrescentou architecture + reviewed constraints + declared change scope + coverage + verification no mesmo viewer, preservando confirmation gates e distinção entre activity declarada e observada. O Arsenal absorve os padrões sem exigir seus renderers.
 
 Origem local: [architecture-visualization.docx](../architecture-visualization.docx).
