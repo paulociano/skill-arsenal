@@ -35,6 +35,21 @@ LiveOps/economia/backend mutável:
 XR/VR/AR/MR:
 - `xr-game-engineering`
 
+Animação:
+- `game-animation-engineering`
+
+Áudio/música:
+- `game-audio-engineering`
+
+Narrativa/diálogo:
+- `narrative-dialogue-engineering`
+
+Save/persistência:
+- `save-game-persistence-engineering`
+
+Modding/tooling:
+- `game-modding-tooling-engineering`
+
 Especializações existentes:
 - shaders/VFX → `shader-graphics-engineering`
 - sprite sheets → `sprite-sheet-pipeline`
@@ -84,6 +99,11 @@ Especializações existentes:
    - multiplayer → `game-networking-engineering`;
    - persistence/live ops/economy → `live-game-operations-engineering`;
    - XR interaction/runtime → `xr-game-engineering`;
+   - animation → `game-animation-engineering`;
+   - audio/music → `game-audio-engineering`;
+   - narrative/dialogue → `narrative-dialogue-engineering`;
+   - persistence/save → `save-game-persistence-engineering`;
+   - modding/tooling → `game-modding-tooling-engineering`;
    - polish.
 
 6. **Performance gate**
@@ -100,7 +120,7 @@ Especializações existentes:
 
 ## Regra de seleção
 
-Não carregar todas as skills. Um jogo single-player 2D simples pode usar apenas `game-development-engineering` + skill da engine. Multiplayer, performance, AI, procedural, LiveOps e XR entram somente quando o requisito existe.
+Não carregar todas as skills. Um jogo single-player 2D simples pode usar apenas `game-development-engineering` + skill da engine. Multiplayer, performance, AI, procedural, LiveOps, XR, animation, audio, narrative, persistence e modding entram somente quando o requisito existe.
 
 ## Critério de conclusão
 
@@ -113,4 +133,4 @@ Não carregar todas as skills. Um jogo single-player 2D simples pode usar apenas
 
 ## Provenance
 
-Stack construída a partir dos lotes 2026-10-02 de game development. O primeiro lote usou Unity-Technologies/skills, samples oficiais Unity, Godot demos, Bevy, Mirror e PurrNet; o segundo expandiu AI/NPCs, procedural content, LiveOps e XR com libgdx/gdx-ai, crashkonijn/GOAP, ProceduralToolkit, Edgar-Unity, WaveFunctionCollapse, Unity Gaming Services samples, Nakama, PlayFab, XR Interaction Toolkit Examples, AR Foundation e OpenXR.
+Stack construída a partir dos lotes 2026-10-02 de game development. O primeiro lote cobriu core/Unity/networking/performance; o segundo adicionou AI, procedural, LiveOps e XR; o terceiro adicionou animation, audio, narrative/dialogue, save/persistence e modding/tooling, além de reforçar anti-cheat defensivo dentro do owner de networking.
