@@ -38,6 +38,27 @@ Tax modeling:
 Filings/XBRL:
 - `financial-filings-analysis`
 
+Crédito/underwriting:
+- `credit-risk-underwriting`
+
+Aposentadoria/decumulação:
+- `retirement-income-planning`
+
+Seguros/atuarial:
+- `insurance-actuarial-modeling`
+
+Renda fixa:
+- `fixed-income-analysis`
+
+Treasury corporativa:
+- `corporate-treasury-management`
+
+Imobiliário:
+- `real-estate-investment-analysis`
+
+Brasil:
+- `brazil-financial-system-grounding`
+
 Complementares:
 - cenários → `scenario-forecasting`
 - dashboards → `dashboard-design`
@@ -87,7 +108,13 @@ Complementares:
    - scenarios;
    - valuation;
    - debt/payoff;
-   - liquidity.
+   - liquidity;
+   - retirement/decumulation;
+   - credit/underwriting;
+   - insurance/reserving;
+   - fixed income;
+   - treasury;
+   - real estate.
 
 6. **Verify**
    - accounting identities;
@@ -109,6 +136,7 @@ Complementares:
 
 - personalized investment, tax, legal, insurance or regulated advice may require licensed professional review;
 - use current authoritative rules/data when the answer depends on them;
+- para Brasil, usar `brazil-financial-system-grounding` antes de aplicar normas, APIs ou valores correntes;
 - avoid false precision;
 - do not infer hidden balances or liabilities;
 - do not turn model output into automatic recommendation;
@@ -125,4 +153,4 @@ Complementares:
 
 ## Provenance
 
-Stack construída a partir do lote de 100 repositórios financeiros de 2026-10-03, com maior peso metodológico em Open Accountant Skills, Frappe/ERPNext, open-financial-agents, Hyperswitch, Lago, Kill Bill, Apache Fineract, TigerBeetle, Formance Ledger, Riskfolio-Lib, Tax-Calculator, OpenFisca, EdgarTools e Arelle.
+Stack construída a partir dos lotes financeiros de 2026-10-03. O primeiro lote de 100 repositórios cobriu planejamento pessoal, contabilidade, FP&A, valuation, portfolio, payments, banking/ledger, tax e filings. O segundo adicionou crédito/underwriting, retirement income, atuarial/seguros, renda fixa, treasury, imobiliário e grounding do sistema financeiro brasileiro.
