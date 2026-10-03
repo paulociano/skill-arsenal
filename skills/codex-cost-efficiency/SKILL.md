@@ -23,7 +23,11 @@ Diminuir o custo por tarefa concluída sem perder correção, evidência necess�
    - agrupar reconnaissance e probes de ambiente independentes em uma única passagem quando isso reduz round-trips sem esconder falhas;
    - para leitura exploratória, começar por trechos pequenos e expandir sob demanda; nunca truncar silenciosamente dados que serão transformados;
    - tratar polling como custo: esperar em intervalos proporcionais ao job em vez de consultar loops longos agressivamente;
-   - usar modelo mais leve apenas para trabalho delimitado e verificável, se a interface permitir escolha real.
+   - usar modelo mais leve apenas para trabalho delimitado e verificável, se a interface permitir escolha real;
+   - fundir edit/write + validação previsível em um único passo quando isso reduzir round-trips sem esconder o resultado da validação;
+   - transformar observações grandes e repetidas em handles estáveis com recall paginado/exato, preservando o original;
+   - resumir logs extensos em receipts somente se cada quote/line retida continuar verificável contra a fonte arquivada;
+   - compactar contexto preferencialmente após subtarefas concluídas, condicionando a pressão de janela e o custo esperado, nunca no meio de uma evidência ainda necessária.
 5. Comparar custo **por tarefa aceita**, qualidade, retrabalho e latência. Reverter uma economia aparente que aumente falhas ou iterações. Conservar testes obrigatórios e verificação proporcional ao risco.
 
 ## Jev e outros classificadores
@@ -41,3 +45,4 @@ Usar um decision engine tipado somente para triagem repetitiva com opções expl
 
 - [codex-token-optimizer](https://github.com/zhangyiling108-code/codex-token-optimizer) e [token-efficient-workflow](https://github.com/luziyezz/codex-skills/tree/main/token-efficient-workflow): escopo, leitura e saída seletivos.
 - [Jev Skills](https://github.com/n23eos/jev-skills) e [jev-code](https://github.com/FrancoisChastel/jev-code): limites de decisões tipadas e integração opcional.
+- NVlabs/SoL-Pi: action fusion, observation handles, evidence-preserving reduction e compaction em pontos de conclusão, absorvidos como metodologia sem depender do runtime Pi.
