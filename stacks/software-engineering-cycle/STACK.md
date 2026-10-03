@@ -17,6 +17,9 @@ System design:
 Codebase/module design:
 - `codebase-design`
 
+Git workspace isolation/lifecycle:
+- `git-worktree-lifecycle`
+
 Testing:
 - `tdd`
 - `software-testing-engineering`
@@ -134,6 +137,7 @@ Não carregar todas as skills.
 
 Exemplos:
 - biblioteca simples: `codebase-design` + `tdd`;
+- mudança isolada ou execução paralela em Git: adicionar `git-worktree-lifecycle`;
 - serviço web: adicionar `system-design-engineering`, `software-testing-engineering`, `software-observability-engineering`;
 - workflow longo: adicionar `durable-workflow-engineering`;
 - monorepo pesado: adicionar `build-system-engineering`;

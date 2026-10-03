@@ -2,7 +2,7 @@
 
 Biblioteca operacional de skills, métodos e stacks reutilizáveis para pesquisa, escrita, design, desenvolvimento, análise e gestão.
 
-**162 skills · 21 stacks** — catálogo conferido em 26/09/2026.
+**163 skills · 21 stacks** — catálogo conferido em 03/10/2026.
 
 O [repositório no GitHub](https://github.com/paulociano/skill-arsenal) é a fonte oficial. Para selecionar o recurso adequado a uma tarefa, comece pelo [ARSENAL INDEX.md](https://github.com/paulociano/skill-arsenal/blob/master/ARSENAL%20INDEX.md) e consulte as instruções completas somente das skills ou stacks necessárias.
 
@@ -108,6 +108,7 @@ As 162 skills abaixo estão em ordem alfabética. Cada nome abre suas instruçõ
 | [formal-methods-reconciler](https://github.com/paulociano/skill-arsenal/blob/master/skills/formal-methods-reconciler/SKILL.md) | Traduzir dúvidas críticas de correção de software em modelos mínimos verificáveis e interpretar provas ou contraexemplos. |
 | [founder-diagnose](https://github.com/paulociano/skill-arsenal/blob/master/skills/founder-diagnose/SKILL.md) | Diagnosticar gargalos de startups em produto, mercado, posicionamento, distribuição ou monetização antes de escolher uma intervenção. |
 | [functional-skill-architecture](https://github.com/paulociano/skill-arsenal/blob/master/skills/functional-skill-architecture/SKILL.md) | Modularizar skills complexas como pipelines de funções com contratos explícitos de entrada e saída, referências compartilhadas, scripts determinísticos, traces e casos de regressão quando a complexidade justificar essa estrutura. |
+| [git-worktree-lifecycle](https://github.com/paulociano/skill-arsenal/blob/master/skills/git-worktree-lifecycle/SKILL.md) | Isolar mudanças de desenvolvimento em worktrees/branches e concluir integração, PR, preservação ou cleanup com baseline e verificações seguras. |
 | [golden-circle-feedback](https://github.com/paulociano/skill-arsenal/blob/master/skills/golden-circle-feedback/SKILL.md) | Redigir feedback comportamental usando POR QUÊ, COMO e O QUÊ, com propósito, fatos observáveis e próxima ação. |
 | [golden-path-capture](https://github.com/paulociano/skill-arsenal/blob/master/skills/golden-path-capture/SKILL.md) | Capturar workflows difíceis já verificados como caminhos reutilizáveis, registrando condição de promoção, falhas descartadas, escopo e higiene de segredos antes de codificar o aprendizado como skill ou documentação. |
 | [graph-engineering](https://github.com/paulociano/skill-arsenal/blob/master/skills/graph-engineering/SKILL.md) | Modelar workflows com dependências e paralelismo reais como grafos limitados, com contratos de saída, joins e recuperação local. |

@@ -112,6 +112,18 @@ Quando o ambiente oferecer aprendizagem automática a partir de múltiplas conve
 
 Esse pipeline é um contrato arquitetural. Não pressupõe CopilotKit, containers específicos, serviços cloud ou aprendizagem autônoma disponível no ChatGPT.
 
+## Escopo antes de promoção
+
+Quando um aprendizado nasce dentro de um projeto ou domínio específico:
+
+- manter o padrão project-scoped por padrão;
+- não promover para regra global só porque apareceu muitas vezes no mesmo contexto;
+- exigir evidência em contextos independentes e revisão antes de ampliar o escopo;
+- tratar confidence/frequência como sinal de suporte, não como verdade;
+- correções explícitas do usuário aumentam relevância, mas não ampliam automaticamente a validade para outros projetos.
+
+Esse refinamento foi adaptado de affaan-m/ECC · continuous-learning-v2, removendo hooks, background agents, auto-write e promoção automática.
+
 ## Integração com Arsenal
 
 - `session-learn` captura o delta da sessão.
