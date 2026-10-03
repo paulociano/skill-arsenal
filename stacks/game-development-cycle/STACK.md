@@ -1,0 +1,102 @@
+---
+name: game-development-cycle
+description: "Conduzir jogos 2D/3D da ideia ao vertical slice, implementação por engine, validação jogável, multiplayer/performance quando necessários e build verificável sem escolher tecnologia antes do requisito."
+---
+
+# Game Development Cycle
+
+## Objetivo
+
+Orquestrar criação e evolução de jogos com o menor conjunto de skills necessário, mantendo gameplay verificável no centro.
+
+## Router
+
+Sempre considerar:
+- `game-development-engineering`
+
+Unity:
+- `unity-game-engineering`
+
+Multiplayer:
+- `game-networking-engineering`
+
+Performance:
+- `game-performance-engineering`
+
+Especializações existentes:
+- shaders/VFX → `shader-graphics-engineering`
+- sprite sheets → `sprite-sheet-pipeline`
+- asset 3D de referência → `concept-to-3d-asset`
+- procedural 3D web/Three.js → `procedural-3d-reconstruction`
+- bugs → `debug-and-fix`
+- versões de libs/packages → `library-version-grounding`
+
+## Fluxo
+
+1. **Concept contract**
+   - gênero/core loop;
+   - 2D/3D;
+   - plataforma;
+   - single/multiplayer;
+   - visual direction;
+   - performance constraints;
+   - scope do primeiro vertical slice.
+
+2. **Engine grounding**
+   - engine/version;
+   - packages/plugins;
+   - render pipeline;
+   - source control;
+   - target build.
+
+3. **Vertical slice**
+   - uma cena/arena;
+   - input;
+   - movimento/interação principal;
+   - game state;
+   - feedback;
+   - win/fail/reset.
+
+4. **Runtime verify**
+   - jogar o slice;
+   - logs;
+   - state transitions;
+   - reload/retry;
+   - build quando o requisito depende da plataforma.
+
+5. **Expand only after proof**
+   - conteúdo;
+   - systems;
+   - AI/navigation;
+   - multiplayer;
+   - persistence/live ops;
+   - polish.
+
+6. **Performance gate**
+   - quando o slice já representa workload real, medir no target;
+   - otimizar bottleneck dominante;
+   - repetir baseline.
+
+7. **Build/release**
+   - build real;
+   - smoke test;
+   - version/package record;
+   - regressions conhecidas;
+   - rollback/version control.
+
+## Regra de seleção
+
+Não carregar todas as skills. Um jogo single-player 2D simples pode usar apenas `game-development-engineering` + skill da engine. Multiplayer/performance entram quando o requisito existe.
+
+## Critério de conclusão
+
+- loop jogável observável;
+- comportamento central verificado;
+- engine/version registradas;
+- erros relevantes resolvidos;
+- build/player testado quando possível;
+- limites não testados explicitamente reportados.
+
+## Provenance
+
+Stack construída a partir do lote 2026-10-02 de 30 repositórios de game development, com maior peso em Unity-Technologies/skills, samples oficiais Unity, Godot demos, Bevy, Mirror e PurrNet.
