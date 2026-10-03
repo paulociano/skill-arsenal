@@ -48,6 +48,10 @@ Não simule multiagente quando esses recursos não existirem.
 16. Papéis como explorer, researcher, worker, tester e reviewer só devem existir quando cada um tem contrato, escopo e evidência próprios; não criar personas ornamentais.
 17. Separar execução de revisão: reviewer deve receber o artefato/diff e critérios, não apenas a narrativa do worker.
 18. Em ambientes multi-dispositivo/headless, continuidade do workspace não autoriza controle remoto irrestrito; identidade, rede e filesystem continuam boundaries explícitos.
+19. Delegação deve ser capability-routed e bounded: cada subagente recebe um deliverable concreto, não uma persona genérica.
+20. Antes de delegar, fazer capability preflight; se model/effort/tool control não for observável no runtime, não fingir que foi aplicado.
+21. Requested settings e runtime-observed settings devem ser reportados separadamente quando isso importar.
+22. Após implementação substancial, usar reviewer fresco/read-only quando disponível; `fix-first` exige nova verificação antes de nova revisão.
 
 ## Segurança
 - Não responda automaticamente a prompts de aprovação de outro agente.
@@ -69,4 +73,4 @@ Evite paralelizar trabalho altamente acoplado ou decisões que precisam de uma �
 Complementa `graph-engineering`, `handoff`, `code-review`, `agent-choice-audit` e `project-planning`.
 
 ## Origem adaptada
-Metodologia inspirada em `herdrdev/herdr`, `stablyai/orca`, `chaseai-yt/claudex-loop`, block/buzz, proliferate-ai/proliferate, donvito/codex-astra-luna-orchestrator, rizqinrr/viserys-agent e unstablebuild/rune. Foram preservados isolamento por tarefa, papéis contratuais, reviewer independente e continuidade de workspace, sem depender de perfis/modelos/CLIs específicos.
+Metodologia inspirada em `herdrdev/herdr`, `stablyai/orca`, `chaseai-yt/claudex-loop`, block/buzz, proliferate-ai/proliferate, donvito/codex-astra-luna-orchestrator, rizqinrr/viserys-agent, unstablebuild/rune e DannyMac180/astra-advisor. Foram preservados isolamento por tarefa, papéis contratuais, reviewer independente e continuidade de workspace, sem depender de perfis/modelos/CLIs específicos.
