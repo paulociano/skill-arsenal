@@ -97,6 +97,19 @@ Quando o runtime permitir entrada multimodal/contextual:
 - Provenance deve distinguir conteúdo original, derivado por IA e decisão humana quando isso importar.
 - Direct manipulation deve permanecer possível quando o artifact for editável.
 
+## Persistent capability compounding
+
+Para trabalho recorrente, o workspace pode promover procedimentos comprovados a capabilities versionáveis:
+- action/operação nomeada;
+- skill/procedure;
+- app/interface específica;
+- data privada da capability;
+- workflow/schedule;
+- hooks/event handlers quando o runtime realmente oferecer;
+- source code/config versionáveis e inspecionáveis quando possível.
+
+A capability precisa continuar útil fora da conversa original. Reuso comprovado é pré-requisito melhor que “parece que pode ser útil”.
+
 ## Guardrails
 - Não transformar tudo em grafo.
 - Não criar agentes apenas para personificar etapas.
@@ -117,4 +130,4 @@ Stack sintetizada a partir de padrões já absorvidos pelo Arsenal e da avaliaç
 - jack112806/FrameForge: record estruturado de assets/decisions, geração como etapa e revisão/rollback localizado;
 - harishkotra/pixel-council: workspace espacial de agentes com connections, outputs e audit logs.
 
-block/buzz reforçou o padrão de workspace humano-agente baseado em event log auditável, identidade própria de agentes e views compartilhadas. dragthelake/ambient-context reforçou raw capture local-first separado de knowledge/summaries. rome-os/rome acrescentou o padrão workflow→app/capability persistente e compounding de ações/skills/apps em código versionável. kgoedecke/doop acrescentou canvas multiplayer humano-agente, presença e design memory. TarunTomar122/better-voice acrescentou entrada de voz com referência visual deíctica por apontamento. Nenhum desses runtimes é dependência desta stack.
+block/buzz reforçou o padrão de workspace humano-agente baseado em event log auditável, identidade própria de agentes e views compartilhadas. dragthelake/ambient-context reforçou raw capture local-first separado de knowledge/summaries. rome-os/rome acrescentou workflow→app/capability persistente e compounding de ações/skills/apps em código versionável. kgoedecke/doop acrescentou canvas multiplayer humano-agente e design memory. TarunTomar122/better-voice acrescentou entrada de voz com referência visual deíctica. unstablebuild/rune reforçou workspace persistente/headless entre dispositivos. Nenhum desses runtimes é dependência desta stack.
