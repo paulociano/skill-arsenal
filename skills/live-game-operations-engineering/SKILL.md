@@ -103,6 +103,29 @@ Separar conteúdo/configuração mutável de regras autoritativas e operar mudan
     - abuse detection;
     - least privilege no dashboard/admin tooling.
 
+## Economy balance
+
+Para economias persistentes:
+- mapear sources e sinks por currency/item;
+- medir emissão, consumo, estoque e velocity;
+- evitar inflação por source crescente sem sink correspondente;
+- distinguir progression pacing de monetização;
+- price/reward tuning deve usar cohorts e tempo até aquisição, não apenas ARP metrics;
+- proteger novos jogadores de sinks irreversíveis pouco compreensíveis;
+- mudanças de preço/reward precisam registrar versão/config e janela temporal;
+- testar cenários de hoarding, exploit, late join e jogadores veteranos com grandes saldos;
+- currency/value-bearing state continua autoritativo no servidor.
+
+Métricas úteis:
+- currency created/destroyed por período;
+- median balance por cohort;
+- sink/source ratio;
+- time-to-afford;
+- purchase frequency;
+- inventory saturation;
+- reward claim rate;
+- abnormal value creation.
+
 ## LiveOps versus gameplay code
 
 Mover para config remota:
