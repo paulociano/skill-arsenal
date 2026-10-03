@@ -64,6 +64,36 @@ Investigar:
 - pooling só quando churn e frequência justificarem;
 - pool superdimensionado pode apenas trocar GC por memória ociosa.
 
+## Platform-specific adaptation
+
+Otimização por plataforma deve partir de sinais reais do device/runtime:
+- thermal state;
+- CPU/GPU bottleneck;
+- battery/power state;
+- memory pressure;
+- refresh rate;
+- resolution;
+- available feature set.
+
+Quando o runtime expuser adaptive-performance signals:
+- definir quality tiers e knobs explícitos;
+- reduzir custo gradualmente, não em saltos arbitrários;
+- manter hysteresis para evitar quality thrashing;
+- separar ajustes temporários por thermal/power de preferências persistentes do usuário;
+- registrar qual knob mudou e por quê;
+- testar recovery quando o device volta a condições normais.
+
+Exemplos de knobs:
+- render scale;
+- shadow distance/quality;
+- LOD bias;
+- post-processing;
+- particles;
+- simulation frequency;
+- streaming budget.
+
+Mobile optimization deve considerar sustained performance, não apenas FPS frio nos primeiros minutos.
+
 ## Regras
 
 - profile player/release quando possível;
