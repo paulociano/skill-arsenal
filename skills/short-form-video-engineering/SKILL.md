@@ -50,7 +50,15 @@ Transformar uma fonte longa ou roteiro em vídeo curto vertical com narrativa cl
    - speaker turns;
    - candidate visual discontinuities.
 
-4. **Clip candidates**
+4. **Moment selection engine**
+   - transcript semantics;
+   - scene boundaries;
+   - speaker turns;
+   - activity/silence;
+   - optional local or remote LLM;
+   - keep model choice replaceable: the contract is candidate extraction, not one provider.
+
+5. **Clip candidates**
    Cada candidato precisa:
    - começar com contexto suficiente;
    - conter ideia relativamente autônoma;
@@ -58,7 +66,7 @@ Transformar uma fonte longa ou roteiro em vídeo curto vertical com narrativa cl
    - caber na duração;
    - evitar cortar palavra, gesto ou raciocínio ao meio.
 
-5. **Selection**
+6. **Selection**
    Avaliar:
    - hook clarity;
    - standalone meaning;
@@ -70,14 +78,14 @@ Transformar uma fonte longa ou roteiro em vídeo curto vertical com narrativa cl
 
    Não transformar isso em previsão de alcance.
 
-6. **First-pass edit**
+7. **First-pass edit**
    - remover dead space;
    - preservar respiração/padding natural;
    - evitar jump cuts excessivamente nervosos;
    - usar scene boundary quando melhora continuidade;
    - speed-up apenas quando inteligibilidade permanece.
 
-7. **Captions**
+8. **Captions**
    - partir de timing por palavra;
    - agrupar por unidades semânticas;
    - manter linhas curtas;
@@ -86,7 +94,7 @@ Transformar uma fonte longa ou roteiro em vídeo curto vertical com narrativa cl
    - contraste e legibilidade;
    - caption timing nunca deve antecipar significativamente a fala.
 
-8. **Visual enrichment**
+9. **Visual enrichment**
    - B-roll;
    - callouts;
    - charts;
@@ -95,14 +103,14 @@ Transformar uma fonte longa ou roteiro em vídeo curto vertical com narrativa cl
    - motion graphics;
    - usar apenas quando reforçam a fala.
 
-9. **Audio**
+10. **Audio**
    - dialogue intelligibility first;
    - loudness consistente;
    - music ducking;
    - remove noise only if voice quality does not degrade;
    - sound accents sparingly.
 
-10. **Variants**
+11. **Variants**
     - hook;
     - first-frame text;
     - caption style;
@@ -110,7 +118,7 @@ Transformar uma fonte longa ou roteiro em vídeo curto vertical com narrativa cl
     - B-roll intensity;
     - pacing.
 
-11. **QA**
+12. **QA**
     - first 1–2 seconds understandable;
     - no clipped words;
     - captions sync;
@@ -144,4 +152,4 @@ Scene detection is evidence of visual structure, not proof of semantic boundary.
 
 ## Provenance
 
-Consolidada de WhisperX, faster-whisper/Whisper, PySceneDetect, Auto-Editor, MoviePy, FFmpeg wrappers e Remotion. O Arsenal absorve timing, segmentation, edit contracts e compositing sem presumir esses runtimes instalados.
+Consolidada de WhisperX, faster-whisper/Whisper, PySceneDetect, Auto-Editor, MoviePy, FFmpeg wrappers e Remotion. mutonby/openshorts reforçou seleção híbrida de momentos, provider replaceability, hook overlays e pipeline self-hosted/local-first. O Arsenal absorve metodologia sem presumir esses runtimes instalados.
