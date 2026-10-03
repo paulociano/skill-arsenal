@@ -37,9 +37,10 @@ Não aplicar OCR/VLM pesado a tudo quando text layer confiável já resolve.
    - JSON para estrutura/blocos;
    - chunks para retrieval;
    - HTML quando fidelidade estrutural ajudar.
-8. **Visual/source verification** — revisar amostra representativa e páginas difíceis contra a fonte.
-9. **Batch strategy** — checkpoint, skip-existing e shard apenas quando o volume justificar.
-10. **Downstream validation** — confirmar que o formato extraído atende ao uso final.
+8. **Semantic validation** — quando o documento representa um domínio com invariantes verificáveis, validar o output tipado contra essas regras (por exemplo totais, saldos, datas, contagens ou relações entre campos). Schema válido não prova conteúdo correto.
+9. **Visual/source verification** — revisar amostra representativa e páginas difíceis contra a fonte.
+10. **Batch strategy** — checkpoint, skip-existing e shard apenas quando o volume justificar.
+11. **Downstream validation** — confirmar que o formato extraído atende ao uso final.
 
 ## Regras
 
@@ -49,7 +50,8 @@ Não aplicar OCR/VLM pesado a tudo quando text layer confiável já resolve.
 - tabelas reconstruídas precisam de verificação de linhas/colunas e valores;
 - fórmulas e inline math são zonas de alto risco;
 - correção por LLM deve ser restrita ao material observado, sem adicionar fatos;
-- output limpo não prova fidelidade ao documento.
+- output limpo não prova fidelidade ao documento;
+- typed/structured output reduz ambiguidade, mas ainda precisa de invariantes de domínio quando houver propriedades calculáveis ou relações verificáveis.
 
 ## Router de formato e conversão leve
 
@@ -107,5 +109,7 @@ Adaptada de datalab-to/marker.
 Router de formatos e fast path de conversão adaptados de https://github.com/microsoft/markitdown, sem exigir MarkItDown, plugins, Azure Content Understanding ou Document Intelligence.
 
 Representação layout-aware, reading order, block tree e locators refinados a partir de https://github.com/docling-project/docling, https://github.com/opendatalab/MinerU e https://github.com/Unstructured-IO/unstructured.
+
+Validação de schema + invariantes semânticas refinada a partir de `PrettyPrinted/youtube_video_code` (2026-06-13, extração de PDF com Pydantic AI), preservando a ideia de checar relações como saldos/totais sem adotar Pydantic AI, Phoenix ou modelos específicos.
 
 Origem local: [document-extraction-pipeline.docx](../document-extraction-pipeline.docx).
