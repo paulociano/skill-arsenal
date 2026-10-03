@@ -107,6 +107,8 @@ Quando database for necessária, preserve equivalente:
    - em stores de arquivos grandes, usar mapas hierárquicos locais por domínio/pasta quando isso reduzir busca: o mapa lista conteúdo, rotas e pegadinhas, mas nunca substitui o arquivo como fonte da verdade;
    - manter esses mapas pequenos e atualizáveis; divergência entre mapa e arquivo corrige o mapa, não o fato;
    - combinar lexical/vector/graph apenas quando melhorar recall medido;
+   - quando um store local combinar relações, BM25 e vetores na mesma unidade transacional, explorar consultas híbridas em vez de manter três índices desconectados;
+   - durable changefeed/event streams podem alimentar projections e memória incremental sem revarrer todo o corpus;
    - miss em um mecanismo não significa ausência.
 
 6. **Use**
@@ -135,6 +137,21 @@ Quando database for necessária, preserve equivalente:
    - verificar se o agente realmente usou o caminho testado;
    - comparar com baseline sem memória;
    - não atribuir ganho a retrieval se o agente bypassou o mecanismo.
+
+## Ambient capture
+
+Quando contexto for capturado automaticamente do ambiente de trabalho:
+
+- preservar **record bruto** separado de knowledge/summaries derivados;
+- registrar app, horário e referência/path/URL quando disponíveis;
+- deduplicar e filtrar chrome/ruído antes de persistir;
+- separar mensagens/mail quando isso permitir exclusão seletiva do prompt;
+- derived knowledge precisa apontar de volta ao record;
+- capture scope deve ser configurável por app/site e suportar redaction;
+- password managers, secure fields e private browsing devem ser excluídos quando o runtime permitir;
+- local-first reduz exposição, mas não elimina risco: plaintext local continua sensível;
+- synced folders e downstream agent CLIs são trust boundaries independentes;
+- redaction é defence-in-depth, nunca garantia de DLP.
 
 ## Segurança e privacidade
 
@@ -166,4 +183,4 @@ Combina com:
 
 ## Provenance
 
-Consolidada de [TIMAN-group/PlugMem](https://github.com/TIMAN-group/PlugMem), [tigerless-labs/agent-memory](https://github.com/tigerless-labs/agent-memory), [mem0ai/mem0](https://github.com/mem0ai/mem0) e [letta-ai/letta](https://github.com/letta-ai/letta). A avaliação local `Segundo Cérebro v3` (2026-10-02) acrescentou os padrões portáveis de bootstrap pelo briefing, mapas hierárquicos locais e checkpoint de sessão. A skill continua sem assumir Obsidian, Claude Code, hooks, embeddings, SQLite, serviços cloud ou hosts específicos.
+Consolidada de [TIMAN-group/PlugMem](https://github.com/TIMAN-group/PlugMem), [tigerless-labs/agent-memory](https://github.com/tigerless-labs/agent-memory), [mem0ai/mem0](https://github.com/mem0ai/mem0) e [letta-ai/letta](https://github.com/letta-ai/letta). A avaliação local `Segundo Cérebro v3` (2026-10-02) acrescentou os padrões portáveis de bootstrap pelo briefing, mapas hierárquicos locais e checkpoint de sessão. LatticeDB acrescentou o padrão de retrieval híbrido local graph+vector+BM25 e changefeeds duráveis em um único store embutido. dragthelake/ambient-context acrescentou captura ambiente local-first com record bruto separado de knowledge/notes derivados e privacy boundaries explícitas. A skill continua sem assumir LatticeDB, Ambient Context, Obsidian, Claude Code, hooks, embeddings, SQLite, serviços cloud ou hosts específicos.
