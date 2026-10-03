@@ -131,6 +131,18 @@ Revisão e analytics:
     - after publication, compare actual retention/engagement data;
     - do not infer “viral score” from editorial features alone.
 
+## Local-first execution path
+
+Quando o objetivo for custo baixo e houver máquina local adequada, um runtime self-hosted como OpenShorts pode executar partes do fluxo:
+- transcript/word timing;
+- moment selection;
+- adaptive 9:16 layout;
+- burned captions;
+- hook overlays;
+- optional publishing integrations.
+
+Tratar isso como implementação possível, não dependência do Arsenal. APIs externas, publishing e AI actors continuam sujeitos a suas próprias chaves, custos, consentimento e approval gates.
+
 ## Selection rule
 
 Não carregar todos os owners.
@@ -152,4 +164,4 @@ Exemplos:
 
 ## Provenance
 
-Stack construída do lote de 30 repositórios de AI video/Reels de 2026-10-03, com maior peso em WhisperX, PySceneDetect, Auto-Editor, Remotion, MediaPipe, Ultralytics, MuseTalk, LivePortrait, F5-TTS/CosyVoice e Wan/LTX video-generation ecosystems.
+Stack construída do lote de 30 repositórios de AI video/Reels de 2026-10-03, com maior peso em WhisperX, PySceneDetect, Auto-Editor, Remotion, MediaPipe, Ultralytics, MuseTalk, LivePortrait, F5-TTS/CosyVoice e Wan/LTX video-generation ecosystems. mutonby/openshorts acrescentou o caminho local-first/self-hosted e layouts adaptativos por cena.
