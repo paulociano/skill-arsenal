@@ -87,6 +87,20 @@ Quando o objetivo incluir comunicação editorial, documentação executiva ou u
 
 Essa disciplina é complementar à rastreabilidade técnica. Um diagrama bonito que inventa relações continua incorreto; um diagrama tecnicamente correto mas ilegível ainda não está pronto.
 
+## Atlas / twin view pattern
+
+Quando arquitetura precisa ser explorável e durável:
+- manter um único spec de dados como source of truth;
+- gerar dele uma visualização interativa e um text twin legível por humanos/agentes;
+- usar IDs estáveis para structures, flows, decisions e open questions;
+- quebrar o sistema em capítulos de progressive disclosure;
+- cada capítulo deve revelar poucas estruturas novas e um fluxo pequeno;
+- payloads/requests representativos podem aparecer como dados inspecionáveis, sem fingir que são traces reais;
+- feedback deve resolver perguntas por ID e atualizar a fonte única;
+- após mudança, rebuild de ambas as views é obrigatório.
+
+Viewer e text twin nunca devem divergir silenciosamente.
+
 ## Visual semantics
 
 - cor saturada deve ter significado, não ser decoração gratuita;
@@ -105,5 +119,7 @@ Adaptada de tt-a1i/archify.
 Layout relativo e posição como parte da linguagem visual: [reladraw/reladraw](https://github.com/reladraw/reladraw), absorvido como metodologia sem exigir seu CLI.
 
 Disciplina editorial, seleção de gramática, orçamento de complexidade, static-first e mapeamento de marca por papéis semânticos adaptados de [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design), sem instalar plugins, executar scripts ou depender de seus comandos específicos de Claude Code/Codex.
+
+inkboard/system-atlas acrescentou source spec único → interactive atlas + generated SYSTEM.md, chapters de progressive disclosure e question tracking por ID. O Arsenal absorve o padrão sem exigir seu renderer/build script.
 
 Origem local: [architecture-visualization.docx](../architecture-visualization.docx).
