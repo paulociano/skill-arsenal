@@ -57,6 +57,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/research-to-presentation/STACK.md`
 - **social-growth-engine** — Diagnostica gargalos de crescimento social, pesquisa oportunidades, planeja conteúdo, produz, mede e realimenta o próximo ciclo.  
   `stacks/social-growth-engine/STACK.md`
+- **software-engineering-cycle** — Conduzir trabalho de engenharia de software da arquitetura ao build, testes, observabilidade, supply chain, workflows duráveis, plataforma e produção, carregando apenas os owners necessários.  
+  `stacks/software-engineering-cycle/STACK.md`
 - **venture-building-cycle** — Conduzir uma nova empresa, startup ou iniciativa de inovação da tese inicial à validação, protótipo, primeiros clientes, monetização e decisão de escala por evidência progressiva e apostas reversíveis.  
   `stacks/venture-building-cycle/STACK.md`
 
@@ -76,6 +78,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **banking-ledger-engineering** — Projetar e revisar ledgers e fluxos bancários com contas, postings, pending/posted balances, atomicidade, idempotência, reconciliação, multi-moeda e APIs de banking sem confundir ledger operacional com contabilidade gerencial.
 - **brazil-financial-system-grounding** — Ancorar tarefas financeiras brasileiras em fontes atuais e oficiais do BCB, CVM, Tesouro Nacional, Receita e Open Finance Brasil, incluindo Pix, taxas, títulos, dados públicos e regras, sem congelar normas que mudam.
 - **beautiful-web-article** — Transformar fontes fornecidas em artigos ou páginas editoriais HTML legíveis, explicativamente bem estruturados e fiéis ao conteúdo.
+- **build-system-engineering** — Projetar e otimizar build systems e monorepos com dependency graphs, hermetic inputs, incremental execution, content-addressed caching, remote execution e reproducibility sem confundir cache hit com correção.
 - **behavior-contract-validation** — Validar aplicações, CLIs, APIs e artefatos como caixa-preta contra um contrato de comportamento observável, separando evidência de runtime de revisão de implementação.
 - **brand-strategy** — Construir ou revisar uma estratégia de marca conectando categoria, audiência, posicionamento, diferenciação, prova, personalidade, voz, mensagens e objetivos sem inventar pesquisa ou transformar opinião em fato de mercado.
 - **brand-logo-exploration** — Explorar conceitos de logo e identidade, testar escala e monocromia e refinar a direção escolhida.
@@ -103,11 +106,13 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **decision-questionnaire** — Transformar uma decisão bloqueada por conhecimento de outra pessoa em um questionário objetivo, priorizado e pronto para resposta assíncrona ou reunião.
 - **decision-analysis** — Estruturar decisões simples ou complexas com respostas tipadas, critérios, incerteza, trade-offs, reversibilidade e sensibilidade sem esconder julgamento humano em uma pontuação arbitrária.
 - **deep-grill** — Conduzir entrevistas aprofundadas sobre planos ou decisões, resolvendo uma árvore de ambiguidades em rodadas sucessivas.
+- **developer-platform-engineering** — Projetar plataformas internas de desenvolvimento com software catalog, ownership, golden paths, templates, self-service e docs-as-code, reduzindo cognitive load sem esconder limites operacionais.
 - **design-direction** — Transformar um briefing visual vago em uma direção de design explícita, específica ao produto e reutilizável antes da implementação.
 - **design-principles-audit** — Auditar decisões de design com heurísticas de percepção, cognição, comportamento, erro, hierarquia e usabilidade sem transformar princípios em checklist dogmático.
 - **design-system-extraction** — Extrair tokens, componentes e padrões visuais de sites ou código, separando valores observados de decisões derivadas e podendo materializar um contrato DESIGN.md.
 - **design-system-governance** — Criar ou evoluir design systems rastreando princípios, decisões, tokens, contratos de componentes, implementação e um contrato DESIGN.md quando útil.
 - **editable-visual-design** — Criar pôsteres, infográficos, capas, banners e social cards editáveis com hierarquia, composição tipográfica, assets rastreáveis e revisão visual do render.
+- **durable-workflow-engineering** — Projetar workflows duráveis distribuídos com state persistente, replay, retries, idempotency, timers, compensation e recovery após crash, distinguindo orquestração lógica de execução efêmera.
 - **diagnosing-bugs** — Diagnosticar bugs difíceis e regressões com reprodução mínima, hipóteses falsificáveis e teste da correção.
 - **directional-prompting** — Projetar ou revisar prompts, instruções e descrições de skills combinando resultado verificável, critérios de sucesso, condição de parada e linguagem positiva orientada à ação.
 - **discovery-research-synthesis** — Sintetizar entrevistas, tickets e pesquisas em padrões, contradições e decisões com evidência rastreável.
@@ -207,6 +212,9 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **publication-figure-engineering** — Produzir figuras científicas alinhadas aos claims de papers, separando diagramas conceituais de gráficos quantitativos exatos.
 - **quick-grill** — Fazer uma rodada curta de perguntas de alinhamento quando o usuário pedir explicitamente para ser questionado antes da execução.
 - **research-question-design** — Transformar temas, gaps, hipóteses ou projetos científicos vagos em perguntas importantes, tratáveis e falsificáveis, com hipóteses rivais, evidência discriminante, piloto e riscos de rejeição explícitos.
+- **software-observability-engineering** — Projetar observabilidade de software com traces, metrics, logs, correlation, telemetry pipelines, sampling, SLO signals e debugging de produção sem confundir coleta de dados com entendimento operacional.
+- **software-supply-chain-engineering** — Governar dependências e supply chain de software com version pinning, automated updates, vulnerability/SBOM/secret/license scanning, artifact provenance e triage por reachability/impact.
+- **software-testing-engineering** — Projetar estratégia de testes de software combinando example-based, property-based, integration com dependências reais, contract/e2e e flakiness control, escolhendo a camada mínima que prova cada risco.
 - **secure-code-privacy-review** — Revisar código e diffs por vulnerabilidades de segurança e violações de privacidade com trust boundaries, data flows, validação de findings e baixa tolerância a falsos positivos.
 - **postgres-migration-safety** — Planejar, revisar e validar migrações PostgreSQL em produção considerando versão, locks, compatibilidade entre deploys, backfill, rollback e evidência pós-migração.
 - **reels-scripting** — Analisar a estrutura narrativa de um Reel e criar roteiro original no mesmo padrão, sem copiar conteúdo ou presumir desempenho.
