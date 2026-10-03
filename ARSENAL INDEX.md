@@ -36,6 +36,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/evaluate-and-import-skill/STACK.md`
 - **fast-response** — Acelera tarefas do Arsenal com seleção mínima, contexto progressivo, menos round-trips e paralelização segura sem cortar validação essencial.  
   `stacks/fast-response/STACK.md`
+- **game-development-cycle** — Conduzir jogos 2D/3D da ideia ao vertical slice, implementação por engine, validação jogável, multiplayer/performance quando necessários e build verificável sem escolher tecnologia antes do requisito.  
+  `stacks/game-development-cycle/STACK.md`
 - **gestao-comercial-da-semana** — Organizar a gestão semanal do time de consultoria financeira com retrospectiva, avaliação de conversas, slots de agenda, prioridades verificáveis, mensagens e continuidade entre semanas.  
   `stacks/gestao-comercial-da-semana/STACK.md`
 - **illustrated-ebook-production** — Produzir ebooks ilustrados, livros infantis, HQs educativas e guias visuais do briefing ao PDF/EPUB/HTML, coordenando pesquisa, arquitetura pedagógica, personagens, storyboard, geração visual, continuidade e QA factual/editorial.  
@@ -115,6 +117,9 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **formal-methods-reconciler** — Traduzir dúvidas críticas de correção de software em modelos mínimos verificáveis e interpretar provas ou contraexemplos.
 - **founder-diagnose** — Diagnosticar gargalos de startups em produto, mercado, posicionamento, distribuição ou monetização antes de escolher uma intervenção.
 - **functional-skill-architecture** — Modularizar skills complexas como pipelines de funções com contratos explícitos de entrada e saída, referências compartilhadas, scripts determinísticos, traces e casos de regressão quando a complexidade justificar essa estrutura.
+- **game-development-engineering** — Projetar, implementar e validar jogos 2D/3D por loops jogáveis pequenos, separando gameplay state, simulation, presentation, assets e runtime verification sem assumir uma engine específica.
+- **game-networking-engineering** — Projetar e validar multiplayer em jogos com autoridade, replication, RPC/events, interpolation, prediction, reconciliation, rollback, interest management e testes sob latência/perda.
+- **game-performance-engineering** — Diagnosticar e otimizar performance de jogos por frame budget, CPU/GPU profiling, memory/GC, rendering, physics, assets, streaming e entity scale, sempre com baseline e comparação antes/depois.
 - **generative-ui-engineering** — Projetar e validar interfaces geradas por modelos como saída estruturada ou sandboxed runtime, com component allowlists, streaming, bridges restritas, fallback, acessibilidade e limites claros entre UI gerada e capacidades reais.
 - **golden-circle-feedback** — Redigir feedback comportamental usando POR QUÊ, COMO e O QUÊ, com propósito, fatos observáveis e próxima ação.
 - **golden-path-capture** — Capturar workflows difíceis já verificados como caminhos reutilizáveis, registrando condição de promoção, falhas descartadas, escopo e higiene de segredos antes de codificar o aprendizado como skill ou documentação.
@@ -200,6 +205,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **team-health-management** — Avaliar sinais operacionais de saúde de equipe e converter problemas de clareza, carga, fluxo, dependências e coordenação em ações de gestão observáveis, sem psicologizar pessoas.
 - **svg-handdrawn-animation** — Animar o desenho progressivo de SVGs com strokes e revelação de fills preservando cores, estrutura e segurança do embed.
 - **ui-motion-design** — Projetar e auditar motion de interface por função, timing, acessibilidade e custo antes de escolher CSS, Motion, GSAP, Rive ou outra tecnologia.
+- **unity-game-engineering** — Implementar e revisar jogos Unity com grounding de versão, render pipeline, packages, scenes/prefabs, MonoBehaviour/ScriptableObject/ECS, física, 2D/3D e validação no Editor/runtime.
 - **swiftui-modern-ui** — Implementar ou revisar SwiftUI adaptativo com APIs nativas compatíveis com o SDK e deployment target reais.
 - **tdd** — Aplicar desenvolvimento orientado a testes por ciclos red–green em fatias verticais de comportamento observável.
 - **teach** — Organizar aprendizagem em múltiplas sessões com arquitetura de explicação, prática de recuperação, espaçamento e progressão por domínio demonstrado.
