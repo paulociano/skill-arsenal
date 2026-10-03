@@ -45,6 +45,9 @@ Não simule multiagente quando esses recursos não existirem.
 13. Para coding agents paralelos, preferir uma unidade isolada por tarefa: branch/worktree + terminal/conversation/review state próprios.
 14. Ferramentas e integrações compartilhadas podem ser configuradas uma vez, mas cada worker recebe somente o subset necessário para seu escopo.
 15. Subagent delegation precisa devolver resultado ao parent/coordinator; child completion não equivale a integração concluída.
+16. Papéis como explorer, researcher, worker, tester e reviewer só devem existir quando cada um tem contrato, escopo e evidência próprios; não criar personas ornamentais.
+17. Separar execução de revisão: reviewer deve receber o artefato/diff e critérios, não apenas a narrativa do worker.
+18. Em ambientes multi-dispositivo/headless, continuidade do workspace não autoriza controle remoto irrestrito; identidade, rede e filesystem continuam boundaries explícitos.
 
 ## Segurança
 - Não responda automaticamente a prompts de aprovação de outro agente.
@@ -66,4 +69,4 @@ Evite paralelizar trabalho altamente acoplado ou decisões que precisam de uma �
 Complementa `graph-engineering`, `handoff`, `code-review`, `agent-choice-audit` e `project-planning`.
 
 ## Origem adaptada
-Metodologia inspirada em `herdrdev/herdr`, `stablyai/orca`, `chaseai-yt/claudex-loop`, block/buzz e proliferate-ai/proliferate. Proliferate reforçou isolamento worktree-per-task, native harnesses e retorno explícito de subagents. Dependências de CLIs/protocolos específicos foram removidas.
+Metodologia inspirada em `herdrdev/herdr`, `stablyai/orca`, `chaseai-yt/claudex-loop`, block/buzz, proliferate-ai/proliferate, donvito/codex-astra-luna-orchestrator, rizqinrr/viserys-agent e unstablebuild/rune. Foram preservados isolamento por tarefa, papéis contratuais, reviewer independente e continuidade de workspace, sem depender de perfis/modelos/CLIs específicos.
