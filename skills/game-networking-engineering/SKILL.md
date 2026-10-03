@@ -111,7 +111,7 @@ Definir explicitamente:
 - interpolation buffer;
 - determinism expectations.
 
-## Segurança
+## Segurança e integridade
 
 - cliente é input não confiável;
 - validar rate, range, ownership e state transitions;
@@ -119,6 +119,21 @@ Definir explicitamente:
 - serialization bounds;
 - limitar spawn/RPC abuse;
 - não logar secrets/session tokens.
+
+### Anti-cheat defensivo
+
+Tratar anti-cheat primeiro como **integridade de protocolo e simulação**, não como corrida armamentista no cliente:
+
+- servidor valida movimentos, cooldowns, fire rate, inventory/economy changes e transições impossíveis;
+- usar invariants e envelopes físicos/temporais explícitos;
+- comparar claims do cliente com state autoritativo;
+- distinguir prevenção, detecção e resposta;
+- coletar sinais suficientes para investigação sem capturar dados desnecessários;
+- usar thresholds tolerantes a jitter/lag para evitar falso positivo;
+- ações punitivas irreversíveis exigem evidência e policy humana/operacional apropriada;
+- client anti-tamper pode ser uma camada adicional, mas nunca substitui server authority.
+
+Não documentar bypass de anti-cheat, técnicas de evasão, ocultação de cheats, injeção em processos ou formas de derrotar mecanismos de detecção.
 
 ## Regras
 
