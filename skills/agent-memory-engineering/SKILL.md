@@ -153,6 +153,17 @@ Quando contexto for capturado automaticamente do ambiente de trabalho:
 - synced folders e downstream agent CLIs são trust boundaries independentes;
 - redaction é defence-in-depth, nunca garantia de DLP.
 
+## Governed organizational context
+
+Quando memória/contexto é compartilhado por uma organização:
+- identidade, role, namespace e source scope devem vir do credential/runtime, não de campos enviados pelo agente;
+- corrections devem superseder fatos anteriores em vez de apagar histórico silenciosamente;
+- retrieval engine deve receber uma view já ACL-scoped e, idealmente, não possuir write path;
+- success, denial, miss e error podem precisar de audit trail;
+- cold knowledge e operational context podem viver em tiers distintos, desde que authority e provenance permaneçam claros;
+- erasure precisa alcançar tombstones/derivados conforme contrato e produzir evidência verificável quando necessário;
+- retrieval backend deve ser replaceable sem mover o policy boundary para dentro dele.
+
 ## Segurança e privacidade
 
 - memória amplifica blast radius de dados sensíveis;
@@ -183,4 +194,4 @@ Combina com:
 
 ## Provenance
 
-Consolidada de [TIMAN-group/PlugMem](https://github.com/TIMAN-group/PlugMem), [tigerless-labs/agent-memory](https://github.com/tigerless-labs/agent-memory), [mem0ai/mem0](https://github.com/mem0ai/mem0) e [letta-ai/letta](https://github.com/letta-ai/letta). A avaliação local `Segundo Cérebro v3` (2026-10-02) acrescentou os padrões portáveis de bootstrap pelo briefing, mapas hierárquicos locais e checkpoint de sessão. LatticeDB acrescentou o padrão de retrieval híbrido local graph+vector+BM25 e changefeeds duráveis em um único store embutido. dragthelake/ambient-context acrescentou captura ambiente local-first com record bruto separado de knowledge/notes derivados e privacy boundaries explícitas. A skill continua sem assumir LatticeDB, Ambient Context, Obsidian, Claude Code, hooks, embeddings, SQLite, serviços cloud ou hosts específicos.
+Consolidada de [TIMAN-group/PlugMem](https://github.com/TIMAN-group/PlugMem), [tigerless-labs/agent-memory](https://github.com/tigerless-labs/agent-memory), [mem0ai/mem0](https://github.com/mem0ai/mem0) e [letta-ai/letta](https://github.com/letta-ai/letta). A avaliação local `Segundo Cérebro v3` (2026-10-02) acrescentou os padrões portáveis de bootstrap pelo briefing, mapas hierárquicos locais e checkpoint de sessão. LatticeDB acrescentou retrieval híbrido local graph+vector+BM25 e changefeeds duráveis. dragthelake/ambient-context acrescentou captura ambiente local-first com record bruto separado de knowledge/notes. kunchenguid/backpass reforçou edição de memória baseada em evidência de sessões reais com human apply gate. halofyai/halofy acrescentou namespace ACL server-owned, supersedence, scoped retrieval e signed erasure. A skill continua sem assumir esses runtimes ou stores específicos.
