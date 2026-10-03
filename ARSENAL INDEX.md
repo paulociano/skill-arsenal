@@ -260,6 +260,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **structured-output-contract** — Definir e validar schemas para saídas LLM consumidas por código, com tipos, incerteza explícita e retries limitados.
 - **surgical-engineering** — Executar mudanças de código com escopo mínimo, suposições explícitas, simplicidade, critérios verificáveis e zero refatoração lateral não solicitada.
 - **synthetic-presenter-video** — Criar ou avaliar vídeos com voz sintética, voice cloning, talking-head/lip-sync e portrait animation com consentimento, identity boundaries, timing, expression, artifact QA e provenance explícita.
+- **support-operations-engineering** — Projetar operações de suporte/helpdesk com inbox compartilhada, threading confiável, SLAs, filas duráveis, automações, KB, permissões, retenção, exports e assistência de IA governada.
 - **system-design-engineering** — Projetar sistemas escaláveis a partir de requisitos, estimativas, trade-offs, componentes, dados, falhas e evolução operacional.
 - **team-health-management** — Avaliar sinais operacionais de saúde de equipe e converter problemas de clareza, carga, fluxo, dependências e coordenação em ações de gestão observáveis, sem psicologizar pessoas.
 - **svg-handdrawn-animation** — Animar o desenho progressivo de SVGs com strokes e revelação de fills preservando cores, estrutura e segurança do embed.
