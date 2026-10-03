@@ -40,6 +40,8 @@ Não simule multiagente quando esses recursos não existirem.
 8. Em timeout ou estado ambíguo, inspecione antes de reenviar.
 9. O coordenador revisa os resultados e resolve incompatibilidades.
 10. Reexecute checks de integração no estado consolidado, não apenas nos branches individuais.
+11. Em workspaces compartilhados, preferir identidade e audit trail próprios para cada agente, com membership/scopes explícitos, em vez de credenciais compartilhadas.
+12. Quando chat, patch, CI, review e aprovação coexistirem, manter um record comum ou relações rastreáveis entre esses eventos.
 
 ## Segurança
 - Não responda automaticamente a prompts de aprovação de outro agente.
@@ -61,4 +63,4 @@ Evite paralelizar trabalho altamente acoplado ou decisões que precisam de uma �
 Complementa `graph-engineering`, `handoff`, `code-review`, `agent-choice-audit` e `project-planning`.
 
 ## Origem adaptada
-Metodologia inspirada em `herdrdev/herdr`, `stablyai/orca` e `chaseai-yt/claudex-loop`, removendo dependência de CLIs, modelos e interfaces específicas.
+Metodologia inspirada em `herdrdev/herdr`, `stablyai/orca`, `chaseai-yt/claudex-loop` e padrões de block/buzz para identidade/auditabilidade de agentes em workspaces compartilhados, removendo dependência de CLIs, protocolos e interfaces específicas.
