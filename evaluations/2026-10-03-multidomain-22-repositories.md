@@ -1,10 +1,10 @@
-# Avaliação — lote de 22 repositórios multidomínio
+# Avaliação — lote de 24 repositórios multidomínio
 
 Data: 2026-10-03
 
 ## Objetivo
 
-Avaliar um lote heterogêneo de 22 repositórios enviados em sequência, cobrindo fitness assets, AI workspaces, OCR, voice UX, software factories, agent orchestration, local inference, embodied AI, persistent worlds, architecture visualization e support operations.
+Avaliar um lote heterogêneo de 24 repositórios enviados em sequência, cobrindo fitness assets, AI workspaces, OCR, voice UX, software factories, agent orchestration, local inference, embodied AI, persistent worlds, architecture visualization e support operations.
 
 A unidade de adoção foi capability, não repositório.
 
@@ -34,7 +34,7 @@ A unidade de adoção foi capability, não repositório.
 - `game-development-cycle`
 - `ARSENAL INDEX.md`
 
-## Triage dos 22 repositórios
+## Triage dos 24 repositórios
 
 | # | Repositório | Classe | Decisão |
 |---|---|---|---|
@@ -60,6 +60,8 @@ A unidade de adoção foi capability, não repositório.
 | 20 | BuzzPlay/infinite-world | A/D | CREATE_NEW |
 | 21 | letstri/motion-panels | B/D | UPDATE_EXISTING |
 | 22 | mirza-rizvi/ResolveHQ | A/D | CREATE_NEW |
+| 23 | coldteadotai/pr-lens | A/D | UPDATE_EXISTING |
+| 24 | DannyMac180/astra-advisor | A/B/D | UPDATE_EXISTING |
 
 ## 1. bryllim/workout-guide
 
@@ -521,6 +523,56 @@ Capabilities:
 Guardrail:
 AI-drafted response não é autorização para enviar.
 
+## 23. coldteadotai/pr-lens
+
+### Capabilities
+
+- PR architecture blast radius;
+- data-flow visualization;
+- request/response payload views;
+- additions/changes/removals;
+- progressive zoom/walkthrough;
+- interactive canvas;
+- correction config that survives rerenders.
+
+### Decisão
+
+UPDATE_EXISTING em:
+- `architecture-visualization`;
+- `code-review`.
+
+Padrões adotados:
+- desenhar PR contra a arquitetura existente;
+- usar visualização para perguntas de review, não como prova automática;
+- verificar edges/claims materiais no código;
+- manter correction metadata na fonte/config, não no SVG gerado.
+
+Não foi criado owner próprio de PR visualization.
+
+## 24. DannyMac180/astra-advisor
+
+### Capabilities
+
+- capability-routed bounded delegation;
+- runtime capability preflight;
+- separation of requested vs observed model/effort;
+- fresh read-only reviewer;
+- acceptance owner no parent;
+- cost receipts with partial coverage;
+- same-token API repricing.
+
+### Decisão
+
+UPDATE_EXISTING em:
+- `multi-agent-orchestration`;
+- `codex-cost-efficiency`.
+
+Adaptações:
+- model/effort names in the source are historical/runtime-specific and are not permanent Arsenal rules;
+- if tool/model controls are unavailable or unobservable, delegation must fail closed rather than silently substitute;
+- same-token repricing is not evidence of real task savings;
+- reviewer freshness and bounded deliverables were preserved.
+
 ## Segurança e portabilidade
 
 Verdict geral: **CAUTION**, com áreas HIGH em embodied/robotics e credential-bearing agent runtimes.
@@ -568,6 +620,7 @@ Nenhum installer, shell script, model weight, Docker image, simulator, GPU runti
 
 - `skills/document-extraction-pipeline/SKILL.md`
 - `skills/architecture-visualization/SKILL.md`
+- `skills/code-review/SKILL.md`
 - `skills/empirical-prompt-tuning/SKILL.md`
 - `skills/agent-memory-engineering/SKILL.md`
 - `skills/agent-action-governance/SKILL.md`
@@ -583,7 +636,7 @@ Nenhum installer, shell script, model weight, Docker image, simulator, GPU runti
 ## Limites
 
 - avaliação aprofundou README/documentos centrais e arquitetura representativa;
-- não houve auditoria linha-a-linha de todos os 22 repositórios;
+- não houve auditoria linha-a-linha de todos os 24 repositórios;
 - claims de benchmark/performance não foram reproduzidos;
 - roadmap não foi tratado como feature atual;
 - licenças de modelos/assets/dependencies precisam ser verificadas no uso concreto;
