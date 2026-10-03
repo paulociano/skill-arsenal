@@ -36,6 +36,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/evaluate-and-import-skill/STACK.md`
 - **fast-response** — Acelera tarefas do Arsenal com seleção mínima, contexto progressivo, menos round-trips e paralelização segura sem cortar validação essencial.  
   `stacks/fast-response/STACK.md`
+- **financial-analysis-cycle** — Conduzir análises financeiras pessoais, empresariais e de investimentos do grounding dos dados à reconciliação, planejamento, cenários, valuation e revisão humana, roteando somente os owners necessários.  
+  `stacks/financial-analysis-cycle/STACK.md`
 - **game-development-cycle** — Conduzir jogos 2D/3D da ideia ao vertical slice, implementação por engine, validação jogável, multiplayer/performance quando necessários e build verificável sem escolher tecnologia antes do requisito.  
   `stacks/game-development-cycle/STACK.md`
 - **gestao-comercial-da-semana** — Organizar a gestão semanal do time de consultoria financeira com retrospectiva, avaliação de conversas, slots de agenda, prioridades verificáveis, mensagens e continuidade entre semanas.  
@@ -62,6 +64,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **3gpp-standards-research** — Pesquisar padrões celulares 3GPP, protocolos e evolução de releases com TS/TR e status normativo verificáveis.
 - **academic-paper-orchestration** — Estruturar e revisar manuscritos acadêmicos a partir de pesquisa real, verificando claims, resultados, figuras e citações.
 - **academic-rebuttal** — Estruturar rebuttals e author responses acadêmicos a partir de reviews, paper, código, regras confirmadas do venue, evidência rastreável, triagem de experimentos e cobertura completa das preocupações dos revisores.
+- **accounting-financial-statements** — Estruturar, reconciliar e analisar contabilidade de dupla entrada e demonstrações financeiras, incluindo razão, trial balance, DRE, balanço e fluxo de caixa, preservando rastreabilidade entre lançamentos e relatórios.
 - **after-action-review** — Conduzir retrospectivas e postmortems de eventos ou projetos concluídos, ligando causas e impacto a ações verificáveis.
 - **agent-action-governance** — Governar ações de agentes antes da execução por policy explícita, least privilege, fail-closed, audit-before-act, approval/handover humano, segregação de credenciais e classificação clara entre leitura, escrita e efeitos externos.
 - **agent-choice-audit** — Auditar decisões que um agente tomou por conta própria durante implementação, distinguindo o que veio da spec do que foi inventado, registrando impacto, confiança, reversibilidade e decisão corrigida quando necessário.
@@ -69,6 +72,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **agenda-operations** — Auditar e operar a agenda por capacidade, preparação, conflitos, dívida de reuniões e blocos de foco, propondo alterações seguras antes de executar mudanças.
 - **architecture-visualization** — Criar diagramas de arquitetura, sequência, estados e fluxos a partir de descrições ou código com topologia rastreável.
 - **arsenal-router** — Seleciona e orquestra a menor combinação necessária de skills e stacks do Skill Arsenal.
+- **banking-ledger-engineering** — Projetar e revisar ledgers e fluxos bancários com contas, postings, pending/posted balances, atomicidade, idempotência, reconciliação, multi-moeda e APIs de banking sem confundir ledger operacional com contabilidade gerencial.
 - **beautiful-web-article** — Transformar fontes fornecidas em artigos ou páginas editoriais HTML legíveis, explicativamente bem estruturados e fiéis ao conteúdo.
 - **behavior-contract-validation** — Validar aplicações, CLIs, APIs e artefatos como caixa-preta contra um contrato de comportamento observável, separando evidência de runtime de revisão de implementação.
 - **brand-strategy** — Construir ou revisar uma estratégia de marca conectando categoria, audiência, posicionamento, diferenciação, prova, personalidade, voz, mensagens e objetivos sem inventar pesquisa ou transformar opinião em fato de mercado.
@@ -114,6 +118,9 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **empirical-prompt-tuning** — Avaliar e melhorar prompts ou skills mediante pedido de otimização empírica, com cenários fixos, baseline e holdout.
 - **experiment-design** — Desenhar experimentos falsificáveis com hipótese, métrica primária, guardrails e critérios de decisão anteriores aos resultados.
 - **first-customer-research** — Pesquisar potenciais primeiros clientes, beta users ou design partners a partir de sinais públicos recentes, qualificando dor, fit, timing, alcance e evidência sem tratar prospect como comprador confirmado nem automatizar outreach.
+- **financial-filings-analysis** — Pesquisar e analisar demonstrações e filings públicos com hierarquia de fontes, XBRL quando disponível, períodos comparáveis, provenance por line item e separação entre dados reportados, normalizações e interpretação.
+- **financial-modeling-valuation** — Construir e auditar modelos financeiros integrados e valuation por DCF, múltiplos e cenários com fórmulas rastreáveis, histórico validado, assumptions explícitas e checks de integridade.
+- **financial-planning-analysis** — Conduzir FP&A com actuals, budget, forecast, variance, drivers, cash/runway, cenários e management reporting, distinguindo plano, previsão, meta e realizado.
 - **formal-methods-reconciler** — Traduzir dúvidas críticas de correção de software em modelos mínimos verificáveis e interpretar provas ou contraexemplos.
 - **founder-diagnose** — Diagnosticar gargalos de startups em produto, mercado, posicionamento, distribuição ou monetização antes de escolher uma intervenção.
 - **functional-skill-architecture** — Modularizar skills complexas como pipelines de funções com contratos explícitos de entrada e saída, referências compartilhadas, scripts determinísticos, traces e casos de regressão quando a complexidade justificar essa estrutura.
@@ -144,6 +151,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **high-fidelity-image-generation** — Gerar ou editar imagens raster com direção visual estruturada, preservação explícita de invariantes e ciclos curtos de inspeção, incluindo preparação de imagens adequadas para reconstrução 3D.
 - **idea-refine** — Refinar ideias vagas, explorar alternativas, testar premissas e definir uma direção e escopo de MVP.
 - **instagram-growth-diagnostics** — Diagnosticar onde o crescimento de um perfil do Instagram está travado usando métricas disponíveis e rotear o gargalo para a intervenção adequada.
+- **investment-portfolio-analysis** — Analisar carteiras de investimento por retorno, risco, drawdown, alocação, concentração, benchmark, contribuição de risco e rebalanceamento, evitando transformar otimização matemática em recomendação automática.
 - **image-to-3d** — Preparar, rotear e validar conversões de imagens em assets 3D por modelos de reconstrução externos, escolhendo backend por fidelidade, velocidade, hardware, materiais e formato sem fingir execução indisponível.
 - **interactive-system-diagram** — Criar diagramas interativos de arquitetura, workflow, sequência, dataflow ou lifecycle com topologia verificável, artefato HTML explorável e separação explícita entre validação estrutural, verificação no browser e revisão perceptual.
 - **interaction-polish** — Refinar o último nível de qualidade de uma interface por microinterações, feedback, estados, tipografia animada e comportamento contextual sem transformar polish em decoração excessiva.
@@ -175,10 +183,12 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **patent-strategy-review** — Auditar e pressionar pedidos de patente utilitária dos EUA com gates de completude, suporte, prior art, claim coverage e design-around, separando análise técnica de aconselhamento jurídico.
 - **photo-relational-abstraction** — Analisar uma fotografia fornecida, extrair relações visuais observáveis e reconstruí-las como composição abstrata não literal, preservando invariantes espaciais sem aplicar style transfer à foto original.
 - **plain-writing** — Escrever ou revisar prosa para máxima clareza usando palavras comuns, estrutura lógica, terminologia consistente, contexto suficiente e remoção de jargão, puffery e formulações artificiais.
+- **payment-billing-operations** — Projetar e analisar operações de pagamentos e billing com payment intents, routing, retries, idempotency, invoices, subscriptions, metering, reconciliation, refunds, dunning e controles antes de qualquer movimentação real de valor.
 - **powerbi-engineering** — Projetar, construir, auditar e versionar soluções Power BI com modelo semântico, DAX, performance, temas, embedding e práticas de ALM conforme ferramentas realmente disponíveis.
 - **presentation-template-adaptation** — Adaptar conteúdo a um deck de referência preservando identidade visual, elementos fixos e capacidade dos layouts.
 - **procedural-3d-reconstruction** — Reconstruir objetos de imagens como modelos procedurais Three.js por estágios e comparação visual com a referência.
 - **procedural-game-content** — Projetar e validar geração procedural de níveis, mapas, cidades, dungeons, terrenos e spawns com seeds reproduzíveis, constraints explícitas, validação de jogabilidade e bounded regeneration.
+- **personal-financial-planning** — Estruturar planejamento financeiro pessoal por fluxo de caixa, reserva, dívidas, patrimônio, metas e cenários, separando fatos, premissas e decisões do usuário sem transformar heurísticas em regras universais.
 - **prioritization-engine** — Priorizar trabalho, oportunidades ou problemas por impacto, urgência, dependências, risco e esforço com critérios explícitos e análise de sensibilidade.
 - **product-metrics-diagnostics** — Diagnosticar movimentos de métricas por definição, funil, cohort, segmento, drivers e qualidade de dados antes de propor ação.
 - **project-complexity-management** — Diagnosticar focos de complexidade técnica, organizacional e externa e definir intervenções proporcionais às evidências.
@@ -224,6 +234,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **ui-motion-design** — Projetar e auditar motion de interface por função, timing, acessibilidade e custo antes de escolher CSS, Motion, GSAP, Rive ou outra tecnologia.
 - **unity-game-engineering** — Implementar e revisar jogos Unity com grounding de versão, render pipeline, packages, scenes/prefabs, MonoBehaviour/ScriptableObject/ECS, física, 2D/3D e validação no Editor/runtime.
 - **swiftui-modern-ui** — Implementar ou revisar SwiftUI adaptativo com APIs nativas compatíveis com o SDK e deployment target reais.
+- **tax-financial-modeling** — Modelar impactos tributários com jurisdição, período, regras versionadas, base tributável, faixas/créditos/deduções e cenários, sem apresentar resultado como aconselhamento fiscal definitivo.
 - **tdd** — Aplicar desenvolvimento orientado a testes por ciclos red–green em fatias verticais de comportamento observável.
 - **teach** — Organizar aprendizagem em múltiplas sessões com arquitetura de explicação, prática de recuperação, espaçamento e progressão por domínio demonstrado.
 - **to-questionnaire** — Transformar lacunas de decisão em perguntas direcionadas à pessoa que possui o contexto necessário.
