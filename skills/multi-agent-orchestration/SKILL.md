@@ -42,6 +42,9 @@ Não simule multiagente quando esses recursos não existirem.
 10. Reexecute checks de integração no estado consolidado, não apenas nos branches individuais.
 11. Em workspaces compartilhados, preferir identidade e audit trail próprios para cada agente, com membership/scopes explícitos, em vez de credenciais compartilhadas.
 12. Quando chat, patch, CI, review e aprovação coexistirem, manter um record comum ou relações rastreáveis entre esses eventos.
+13. Para coding agents paralelos, preferir uma unidade isolada por tarefa: branch/worktree + terminal/conversation/review state próprios.
+14. Ferramentas e integrações compartilhadas podem ser configuradas uma vez, mas cada worker recebe somente o subset necessário para seu escopo.
+15. Subagent delegation precisa devolver resultado ao parent/coordinator; child completion não equivale a integração concluída.
 
 ## Segurança
 - Não responda automaticamente a prompts de aprovação de outro agente.
@@ -63,4 +66,4 @@ Evite paralelizar trabalho altamente acoplado ou decisões que precisam de uma �
 Complementa `graph-engineering`, `handoff`, `code-review`, `agent-choice-audit` e `project-planning`.
 
 ## Origem adaptada
-Metodologia inspirada em `herdrdev/herdr`, `stablyai/orca`, `chaseai-yt/claudex-loop` e padrões de block/buzz para identidade/auditabilidade de agentes em workspaces compartilhados, removendo dependência de CLIs, protocolos e interfaces específicas.
+Metodologia inspirada em `herdrdev/herdr`, `stablyai/orca`, `chaseai-yt/claudex-loop`, block/buzz e proliferate-ai/proliferate. Proliferate reforçou isolamento worktree-per-task, native harnesses e retorno explícito de subagents. Dependências de CLIs/protocolos específicos foram removidas.
