@@ -26,6 +26,20 @@ Conduzir entrevistas aprofundadas sobre planos ou decisões, resolvendo uma árv
 5. Buscar fatos disponíveis em ferramentas/fontes, em vez de perguntar ao usuário.
 6. Encerrar quando não restarem decisões silenciosamente assumidas.
 
+## Draft-first mode
+
+Quando a tarefa é produtiva e o usuário consegue reagir melhor a algo concreto do que a perguntas abstratas:
+
+- entregar uma primeira versão provisória antes de pedir contexto adicional;
+- limitar a rodada a poucas perguntas de maior valor informacional;
+- manter respostas anteriores como contexto estruturado;
+- representar claramente o que ainda está pendente;
+- atualizar o draft após cada resposta;
+- não bloquear progresso por detalhes que podem ser assumidos de forma reversível;
+- perguntas servem para melhorar o artefato, não para substituir a execução.
+
+Esse modo é útil para documentos, planos, briefs e tarefas abertas. Não usar quando uma decisão irreversível, regulatória ou de segurança precisa ser resolvida antes de produzir qualquer output.
+
 ## Registro de decisões abertas
 
 Durante entrevistas longas:
@@ -38,5 +52,7 @@ Durante entrevistas longas:
 ## Referências
 
 [GitHub · mattpocock/skills · grilling](https://github.com/mattpocock/skills/tree/main/skills/productivity/grilling)
+
+Modo draft-first adaptado de Charlytoc/ai-todo-app: produzir uma versão útil antes de pedir contexto, manter pending inputs e iterar. O Arsenal rejeita o parser de ações embutido em texto e o acoplamento a modelo/API específicos.
 
 Origem local: [deep-grill.docx](../deep-grill.docx).
