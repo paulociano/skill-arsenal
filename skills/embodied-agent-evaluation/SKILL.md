@@ -84,6 +84,18 @@ Melhorar agentes que atuam em simuladores ou robôs sem transformar falhas obser
     - recovery actor executes only bounded accepted action;
     - environment actor owns simulator/robot writes.
 
+## Direct vs hybrid policy evaluation
+
+Quando comparar um frontier model agindo diretamente com uma política híbrida:
+- alinhar task, scene e seed por caso;
+- separar **direct policy** de **review/correct policy**;
+- registrar em quantos control steps o reviewer realmente interveio;
+- comparar sucesso, native score e intervention rate;
+- referências públicas externas não contam como same-seed rerun;
+- correções do reviewer devem permanecer dentro do action contract;
+- credenciais, simulator RPC e model execution ficam em ambiente isolado;
+- report/gallery pode ser público sem expor control plane ou trajectory archives.
+
 ## Evaluation dimensions
 
 - success rate;
@@ -113,4 +125,4 @@ Melhorar agentes que atuam em simuladores ou robôs sem transformar falhas obser
 
 ## Provenance
 
-Adaptada de air-embodied-brain/Zetta-Embodiment. Preserva failure cluster → diagnose → candidate → shadow replay → paired same-seed gate → held-out promotion, com role separation e immutable campaign evidence. Não presume LIBERO, RoboCasa, Isaac, Ray, VLA checkpoints ou hardware robótico disponível.
+Adaptada de air-embodied-brain/Zetta-Embodiment e anonymous-report-421/GPT-as-Policy. Zetta contribui com failure cluster → diagnose → candidate → shadow replay → paired same-seed gate → held-out promotion; GPT-as-Policy acrescenta comparação direct-vs-hybrid com cases/seeds alinhados e intervention rate explícita. Não presume simuladores, checkpoints ou hardware disponíveis.
