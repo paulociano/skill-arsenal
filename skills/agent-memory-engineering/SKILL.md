@@ -86,7 +86,9 @@ Quando database for necessária, preserve equivalente:
 
 2. **Capture first**
    - quando perda seria cara, preservar trace/evidência antes da distilação;
-   - distiller incompleto não deve significar dado irrecuperável.
+   - distiller incompleto não deve significar dado irrecuperável;
+   - ao criar um store novo, usar o próprio briefing ou onboarding como bootstrap inicial: transformar apenas fatos confirmados em registros reais, para que captura e recuperação sejam testadas desde o primeiro uso;
+   - captura automática precisa respeitar o memory contract: não transformar toda mensagem em memória permanente sem regra de escopo, sensibilidade e retenção.
 
 3. **Distill**
    - extrair uma unidade por ideia durável;
@@ -102,6 +104,8 @@ Quando database for necessária, preserve equivalente:
 5. **Retrieve**
    - começar com índice curto;
    - expandir abstract → outline/anchor → full → raw trace;
+   - em stores de arquivos grandes, usar mapas hierárquicos locais por domínio/pasta quando isso reduzir busca: o mapa lista conteúdo, rotas e pegadinhas, mas nunca substitui o arquivo como fonte da verdade;
+   - manter esses mapas pequenos e atualizáveis; divergência entre mapa e arquivo corrige o mapa, não o fato;
    - combinar lexical/vector/graph apenas quando melhorar recall medido;
    - miss em um mecanismo não significa ausência.
 
@@ -120,7 +124,12 @@ Quando database for necessária, preserve equivalente:
    - merge exige preservar provenance;
    - unattended deletion deve ser mais restrita que unattended add/update.
 
-9. **Evaluate**
+9. **Session close / checkpoint**
+   - quando o host não garante persistência contínua confiável, fechar blocos substanciais com uma varredura curta de fatos, decisões, tarefas e correções ainda não materializados;
+   - atualizar somente os índices/mapas afetados, evitando revarrer o store inteiro;
+   - não usar o checkpoint como desculpa para adiar toda captura até o fim.
+
+10. **Evaluate**
    - dataset/casos reais;
    - medir retrieval exposure, acerto e custo;
    - verificar se o agente realmente usou o caminho testado;
@@ -157,4 +166,4 @@ Combina com:
 
 ## Provenance
 
-Consolidada de [TIMAN-group/PlugMem](https://github.com/TIMAN-group/PlugMem), [tigerless-labs/agent-memory](https://github.com/tigerless-labs/agent-memory), [mem0ai/mem0](https://github.com/mem0ai/mem0) e [letta-ai/letta](https://github.com/letta-ai/letta). Adapta tipos de memória, retrieval progressivo, memory management, provenance e avaliação sem assumir plugins, embeddings, SQLite, serviços cloud ou hosts específicos.
+Consolidada de [TIMAN-group/PlugMem](https://github.com/TIMAN-group/PlugMem), [tigerless-labs/agent-memory](https://github.com/tigerless-labs/agent-memory), [mem0ai/mem0](https://github.com/mem0ai/mem0) e [letta-ai/letta](https://github.com/letta-ai/letta). A avaliação local `Segundo Cérebro v3` (2026-10-02) acrescentou os padrões portáveis de bootstrap pelo briefing, mapas hierárquicos locais e checkpoint de sessão. A skill continua sem assumir Obsidian, Claude Code, hooks, embeddings, SQLite, serviços cloud ou hosts específicos.
