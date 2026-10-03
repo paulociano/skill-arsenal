@@ -138,6 +138,20 @@ Remover somente recursos cuja ownership do fluxo possa ser demonstrada. Antes de
 
 Depois, reconsultar o estado e reportar resíduos que não puderam ser removidos/verificados.
 
+## Reproducible delivery and GitOps
+
+Quando o pipeline de software justificar:
+
+- build/test/package/deploy devem receber inputs explícitos e produzir artifacts rastreáveis;
+- preferir o mesmo pipeline lógico entre local e CI quando a ferramenta permitir;
+- cache é otimização, não fonte de verdade;
+- promover artifact imutável é preferível a rebuildar silenciosamente depois do QA;
+- desired state versionado em Git pode funcionar como fonte declarativa para deployment;
+- reconciliation deve detectar drift entre desired e observed state;
+- auto-sync não elimina approval gates para mudanças de alto risco;
+- rollback/revert precisa considerar migrations, data e efeitos externos além do manifest;
+- separar CI (produzir/verificar artifact) de CD (promover/reconciliar ambiente) quando essa fronteira melhorar auditabilidade.
+
 ## Recovery
 
 - Retry não é automaticamente seguro para writes externos.
@@ -172,4 +186,4 @@ Combina com:
 
 ## Referências
 
-Metodologia adaptada de [mikehasa/golive-skill](https://github.com/mikehasa/golive-skill), preservando detect → plan → approve → apply → verify → handoff/status/teardown e removendo dependência do runtime GoLive.
+Metodologia adaptada de [mikehasa/golive-skill](https://github.com/mikehasa/golive-skill), preservando detect → plan → approve → apply → verify → handoff/status/teardown e removendo dependência do runtime GoLive. Reproducible delivery/GitOps complementados por Dagger e Argo CD, sem presumir container runtime ou Kubernetes.
