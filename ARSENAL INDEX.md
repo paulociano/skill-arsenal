@@ -14,10 +14,13 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 
 - **ai-workspace-operating-cycle** — Opera trabalhos complexos e persistentes como um workspace estruturado, conectando fontes, decisões, assets, artifacts, contexto seletivo, geração, verificação e retomada entre sessões sem reduzir tudo a uma conversa linear.  
   `stacks/ai-workspace-operating-cycle/STACK.md`
+- **architectural-design-cycle** — Conduzir projetos arquitetônicos e de interiores do briefing à planta técnica, CAD paramétrico, maquete 3D, BIM/IFC, desempenho ambiental e análise estrutural preliminar, carregando somente os owners necessários.  
+  `stacks/architectural-design-cycle/STACK.md`
 - **arsenal-autopilot** — Evoluir o Skill Arsenal a partir de uma ou mais fontes externas, detectando capacidades, overlap e ownership, avaliando segurança e portabilidade, adotando apenas valor incremental e publicando mudanças verificadas com trilha de auditoria.  
   `stacks/arsenal-autopilot/STACK.md`
 - **brand-creation-system** — Conduzir uma marca da estratégia à identidade visual, logo, guidelines, assets e governança, usando apenas as etapas necessárias e mantendo decisão humana nos gates de direção.  
   `stacks/brand-creation-system/STACK.md`
+- **building-performance-analysis** — Analisar desempenho ambiental de edifícios por clima, orientação, insolação, daylight, envelope, energia e cenários com modelos explícitos e validação de assumptions antes de tratar simulação como decisão.
 - **business-decision-intelligence** — Investiga métricas e causas, estrutura decisões, prioriza ações, projeta cenários e comunica resultados em dashboards ou Power BI.  
   `stacks/business-decision-intelligence/STACK.md`
 - **cinematic-presentation** — Cria apresentações como sequências de cenas com composição tipográfica, direção cinematográfica, vídeo/motion e fallback estático.  
@@ -73,6 +76,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **agent-choice-audit** — Auditar decisões que um agente tomou por conta própria durante implementação, distinguindo o que veio da spec do que foi inventado, registrando impacto, confiança, reversibilidade e decisão corrigida quando necessário.
 - **agent-memory-engineering** — Projetar memória durável para agentes separando captura, distilação, retrieval, gestão e provenance, com source of truth legível, caches reconstruíveis, validade temporal, níveis de leitura e avaliação empírica antes de automatizar esquecimento ou promoção.
 - **agenda-operations** — Auditar e operar a agenda por capacidade, preparação, conflitos, dívida de reuniões e blocos de foco, propondo alterações seguras antes de executar mudanças.
+- **architectural-design-engineering** — Estruturar projetos arquitetônicos do briefing ao layout espacial, programa de necessidades, circulação, adjacências, áreas, níveis e critérios funcionais antes de detalhar CAD/BIM ou visualização.
 - **architecture-visualization** — Criar diagramas de arquitetura, sequência, estados e fluxos a partir de descrições ou código com topologia rastreável.
 - **arsenal-router** — Seleciona e orquestra a menor combinação necessária de skills e stacks do Skill Arsenal.
 - **banking-ledger-engineering** — Projetar e revisar ledgers e fluxos bancários com contas, postings, pending/posted balances, atomicidade, idempotência, reconciliação, multi-moeda e APIs de banking sem confundir ledger operacional com contabilidade gerencial.
@@ -80,6 +84,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **beautiful-web-article** — Transformar fontes fornecidas em artigos ou páginas editoriais HTML legíveis, explicativamente bem estruturados e fiéis ao conteúdo.
 - **build-system-engineering** — Projetar e otimizar build systems e monorepos com dependency graphs, hermetic inputs, incremental execution, content-addressed caching, remote execution e reproducibility sem confundir cache hit com correção.
 - **behavior-contract-validation** — Validar aplicações, CLIs, APIs e artefatos como caixa-preta contra um contrato de comportamento observável, separando evidência de runtime de revisão de implementação.
+- **bim-ifc-engineering** — Criar, consultar, validar e coordenar modelos BIM/IFC com entidades semânticas, propriedades, relações espaciais, classifications, IDS/BCF, clash/change workflows e exports preservando modelo de informação.
 - **brand-strategy** — Construir ou revisar uma estratégia de marca conectando categoria, audiência, posicionamento, diferenciação, prova, personalidade, voz, mensagens e objetivos sem inventar pesquisa ou transformar opinião em fato de mercado.
 - **brand-logo-exploration** — Explorar conceitos de logo e identidade, testar escala e monocromia e refinar a direção escolhida.
 - **brand-asset-production** — Produzir, nomear, organizar e validar variantes e exports de marca a partir de masters aprovados para digital, social, app e print sem redesenhar silenciosamente a identidade.
@@ -87,6 +92,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **brand-identity-system** — Transformar estratégia e referências em uma identidade visual coerente por direções contrastantes, escolha explícita e sistema final de cor, tipografia, imagem, grafismos e aplicações.
 - **call-evaluation** — Avaliar ligações comerciais de consultoria financeira pelo Card de Ligação, com evidências, rubrica e qualidade do agendamento.
 - **character-continuity** — Manter personagens recorrentes visualmente on-model ao longo de páginas, cenas ou séries usando bíblia de identidade, atlas/referências, seleção da referência mais próxima e QA de continuidade.
+- **cad-parametric-modeling** — Modelar geometria CAD 2D/3D com sketches restritos, parâmetros, features, B-Rep/CSG, referências estáveis e desenhos derivados, preservando editabilidade e intent geométrico.
 - **cinematic-visual-direction** — Projeta shots para landing pages, apresentações e vídeos por enquadramento, câmera, profundidade, movimento, duração, transições e continuidade.
 - **codebase-design** — Projetar ou refatorar módulos profundos com interfaces pequenas, seams explícitos, alta alavancagem, locality e testabilidade, evitando abstrações rasas e pass-through.
 - **coaching-development-loop** — Transformar evidências de desempenho ao longo do tempo em coaching longitudinal, distinguindo melhoria, regressão e padrão estável e fechando o ciclo com prática observável e nova verificação.
@@ -131,6 +137,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **financial-modeling-valuation** — Construir e auditar modelos financeiros integrados e valuation por DCF, múltiplos e cenários com fórmulas rastreáveis, histórico validado, assumptions explícitas e checks de integridade.
 - **financial-planning-analysis** — Conduzir FP&A com actuals, budget, forecast, variance, drivers, cash/runway, cenários e management reporting, distinguindo plano, previsão, meta e realizado.
 - **fixed-income-analysis** — Analisar instrumentos de renda fixa por cash flows, yield/curve, duration, convexity, spread, inflation/FX exposure, scenario P&L e reinvestment/liquidity risk com convenções e datas explícitas.
+- **floor-plan-technical-drawing** — Criar e revisar plantas baixas e esboços técnicos com escala, paredes, aberturas, níveis, cotas, eixos, mobiliário, símbolos, áreas e exports legíveis, separando estudo, documentação e desenho executivo.
 - **formal-methods-reconciler** — Traduzir dúvidas críticas de correção de software em modelos mínimos verificáveis e interpretar provas ou contraexemplos.
 - **founder-diagnose** — Diagnosticar gargalos de startups em produto, mercado, posicionamento, distribuição ou monetização antes de escolher uma intervenção.
 - **functional-skill-architecture** — Modularizar skills complexas como pipelines de funções com contratos explícitos de entrada e saída, referências compartilhadas, scripts determinísticos, traces e casos de regressão quando a complexidade justificar essa estrutura.
@@ -160,6 +167,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **handoff** — Preparar contexto compacto para continuar uma tarefa em outra sessão ou obter comparação independente ou crítica.
 - **high-fidelity-image-generation** — Gerar ou editar imagens raster com direção visual estruturada, preservação explícita de invariantes e ciclos curtos de inspeção, incluindo preparação de imagens adequadas para reconstrução 3D.
 - **idea-refine** — Refinar ideias vagas, explorar alternativas, testar premissas e definir uma direção e escopo de MVP.
+- **interior-spatial-design** — Projetar interiores e reformas por zoning, mobiliário em escala, circulação, ergonomia, materiais, iluminação e comparação de alternativas, ligando planta 2D a maquete 3D sem confundir visualização com viabilidade técnica.
 - **instagram-growth-diagnostics** — Diagnosticar onde o crescimento de um perfil do Instagram está travado usando métricas disponíveis e rotear o gargalo para a intervenção adequada.
 - **insurance-actuarial-modeling** — Modelar seguros por exposure, frequência/severidade, pricing, credibility, reserving, experience studies, Monte Carlo e capital/risk metrics com assumptions e validação explícitas.
 - **investment-portfolio-analysis** — Analisar carteiras de investimento por retorno, risco, drawdown, alocação, concentração, benchmark, contribuição de risco e rebalanceamento, evitando transformar otimização matemática em recomendação automática.
@@ -249,6 +257,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **ui-motion-design** — Projetar e auditar motion de interface por função, timing, acessibilidade e custo antes de escolher CSS, Motion, GSAP, Rive ou outra tecnologia.
 - **unity-game-engineering** — Implementar e revisar jogos Unity com grounding de versão, render pipeline, packages, scenes/prefabs, MonoBehaviour/ScriptableObject/ECS, física, 2D/3D e validação no Editor/runtime.
 - **swiftui-modern-ui** — Implementar ou revisar SwiftUI adaptativo com APIs nativas compatíveis com o SDK e deployment target reais.
+- **structural-analysis-modeling** — Estruturar modelos de análise estrutural com geometry, materials, sections, supports, load cases/combinations, mesh, solver assumptions e result checks, exigindo revisão profissional antes de qualquer decisão construtiva.
 - **tax-financial-modeling** — Modelar impactos tributários com jurisdição, período, regras versionadas, base tributável, faixas/créditos/deduções e cenários, sem apresentar resultado como aconselhamento fiscal definitivo.
 - **tdd** — Aplicar desenvolvimento orientado a testes por ciclos red–green em fatias verticais de comportamento observável.
 - **teach** — Organizar aprendizagem em múltiplas sessões com arquitetura de explicação, prática de recuperação, espaçamento e progressão por domínio demonstrado.
