@@ -42,8 +42,9 @@ Sequência preferida:
    - financial/irreversible;
    - scheduled/background.
 
-2. **Resolve target server-side**
-   - host, path, account, tool e resource precisam vir de estado confiável;
+2. **Resolve actor and target server-side**
+   - actor, namespace, role, source scope, host, path, account, tool e resource precisam vir de estado confiável;
+   - identidade declarada no request não substitui identidade resolvida pela credencial/runtime;
    - não confiar em target construído apenas pelo modelo.
 
 3. **Classify**
@@ -102,6 +103,15 @@ Uma policy útil deve conseguir responder:
 - qual nível de efeito?
 - qual regra permitiu/negou?
 
+## Scoped retrieval as policy boundary
+
+Quando agentes consultarem contexto organizacional:
+- o retriever deve receber somente uma view já filtrada pela policy;
+- sibling/descendant namespaces não devem ser inferidos como visíveis;
+- retrieval driver não deve reimplementar ACL nem ganhar write access por conveniência;
+- miss e denial são resultados distintos e devem permanecer auditáveis;
+- trocar vector/search backend não deve alterar a identidade ou policy boundary.
+
 ## Segurança
 
 - Docker/sandbox reduz blast radius, não substitui policy.
@@ -125,4 +135,4 @@ Combina com:
 
 Hooks de `PreToolUse`/eventos equivalentes como boundary de enforcement foram contrastados com `PrettyPrinted/youtube_video_code` (2026-09-03). O Arsenal preserva o padrão de interceptar antes do efeito, mas rejeita logging irrestrito de payloads e regras frágeis baseadas apenas em substring de comando.
 
-Adaptada principalmente de [CopilotKit/OpenBot](https://github.com/CopilotKit/OpenBot), preservando gateway único, policy fail-closed, audit-before-act, credential boundary e human takeover sem exigir AG-UI, CopilotKit Intelligence, Docker, CEL ou qualquer connector específico.
+Adaptada principalmente de [CopilotKit/OpenBot](https://github.com/CopilotKit/OpenBot), preservando gateway único, policy fail-closed, audit-before-act, credential boundary e human takeover. halofyai/halofy reforçou identidade/namespace server-owned, scoped retrieval e audit de denial/miss. Nenhum desses runtimes é requisito.
