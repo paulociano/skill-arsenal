@@ -58,6 +58,7 @@ Não manter manual, tokens e implementação como três autoridades independente
 10. Gerar ou atualizar o manual a partir do modelo sempre que possível.
 11. Registrar versionamento, owner, data de aprovação e como alterações são governadas.
 12. Verificar que o manual não contém valores contraditórios com os assets/tokens canônicos.
+13. Quando precisar comparar cobertura e arquitetura documental, consultar exemplos reais em [Branding Style Guides](https://brandingstyleguides.com/), preferindo brand centers/manuais recentes e tratando-os como benchmark, não como template universal.
 
 ## Brand model
 
@@ -124,4 +125,4 @@ Recebe de `brand-identity-system` e `brand-logo-exploration`. Usa `brand-asset-p
 
 ## Origem metodológica
 
-Síntese adaptada de ordinarynerds/brand-book, Better-Conversations/bc-brand, ThinkFizzApp/branding, OpenAEC-Foundation/OpenAEC-style-book, Aioverse-HQ/Brand-System-Aiotize-Inc e InfoJobs/brand. O conceito de fonte única foi preservado sem importar hooks, schemas ou toolchains específicos.
+Síntese adaptada de ordinarynerds/brand-book, Better-Conversations/bc-brand, ThinkFizzApp/branding, OpenAEC-Foundation/OpenAEC-style-book, Aioverse-HQ/Brand-System-Aiotize-Inc e InfoJobs/brand. O conceito de fonte única foi preservado sem importar hooks, schemas ou toolchains específicos. Branding Style Guides é mantido como arquivo externo para benchmark de estrutura e aplicações, sem transformar manuais de terceiros em regras canônicas.
