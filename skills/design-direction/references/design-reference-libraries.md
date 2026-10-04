@@ -24,6 +24,13 @@ Pesquisa documental em 2026-09-29. “Canvas” foi interpretado como Canva pelo
 | [Figma Community](https://www.figma.com/community) | Arquivos e kits | Templates, UI kits e exemplos de sistemas; arquivo de design não garante código funcional. |
 | [Framer Marketplace](https://www.framer.com/marketplace/templates/) | Templates Framer | Composição e sites editáveis no ecossistema; não assumir exportação HTML/CSS independente. |
 | [Webflow Templates](https://webflow.com/templates) | Templates Webflow | Sites e layouts no ecossistema; verificar plano, exportação e funções dependentes da plataforma. |
+| [TOOOLS.design](https://www.toools.design/) | Diretório/radar | Catálogo amplo e atualizado de ferramentas, inspiração, UX, cor, tipografia e builders. Usar como radar para descobrir fontes específicas; ranking, destaque ou parceria não provam qualidade nem fit. |
+| [Branding Style Guides](https://brandingstyleguides.com/) | Brand manuals | Arquivo amplo de manuais e brand centers reais para comparar estrutura, cobertura e aplicações. Usar o manual da marca como referência documental, não copiar identidade nem assumir que todo documento está vigente. |
+| [Design Spells](https://designspells.com/) | Microinterações | Coleção de detalhes, transições, motion e pequenos comportamentos de produtos reais. Extrair o comportamento e seu contexto; não transformar delight em requisito universal. |
+| [Growth.Design Psychology](https://growth.design/psychology) | Psicologia/UX | Catálogo de vieses, heurísticas e princípios com exemplos. Usar como índice para selecionar lentes relevantes, sem tratar nomes de efeitos como prova causal. |
+| [FontBrief](https://www.fontbrief.com/fontbrief) | Tipografia | Exploração de fontes por eixos de personalidade como neutral/expressive, serious/friendly e classic/progressive. Útil para gerar shortlist; validar legibilidade, cobertura, licença e uso real separadamente. |
+| [Palitra](https://palitra.app/) | Cor | Descoberta de paletas a partir de termos/referências visuais. Boa para ideação inicial; não substitui contraste, papéis semânticos, tokens nem validação cultural. |
+| [Media Cheat Sheet](https://mediacheatsheet.com/) | Specs sociais | Diretório pesquisável de formatos, dimensões, safe zones e requisitos de plataformas sociais e ads, com links de fonte. Revalidar no momento do export porque specs de plataforma mudam. |
 
 ## Rotas de pesquisa
 
@@ -32,6 +39,12 @@ Pesquisa documental em 2026-09-29. “Canvas” foi interpretado como Canva pelo
 - Fluxos e estados: Mobbin, Refero e Page Flows.
 - Interação expressiva: Awwwards, CSS Design Awards e HOVERSTAT.ES.
 - Arquivos/templates editáveis: Canva, Figma Community, Framer Marketplace e Webflow Templates.
+- Radar amplo: TOOOLS.design para descoberta inicial, seguido pela fonte original do recurso escolhido.
+- Branding: Branding Style Guides para comparar manuais reais e brand centers.
+- Microinterações: Design Spells para exemplos pontuais de comportamento e delight.
+- Psicologia/UX: Growth.Design como índice de lentes, sempre ligado a evidência observável.
+- Tipografia e cor: FontBrief para shortlist por personalidade e Palitra para exploração inicial de paletas.
+- Entrega social: Media Cheat Sheet para specs e safe zones atuais antes do export.
 
 ## Como transformar referência em projeto
 
