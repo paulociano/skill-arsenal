@@ -31,6 +31,7 @@ Usar princípios gerais de design como lentes de diagnóstico. A skill serve par
 6. Priorizar mudanças que removem fricção estrutural antes de mudanças cosméticas.
 7. Validar em runtime, protótipo ou teste quando a conclusão depender de comportamento real.
 8. Não empilhar heurísticas contraditórias sem explicitar a tensão.
+9. Quando um catálogo amplo ajudar a formar hipótese, pode-se usar [Growth.Design Psychology](https://growth.design/psychology) como índice de repertório. A organização por informação, significado, tempo e memória serve para descoberta, não como taxonomia científica canônica nem prova causal.
 
 ## Biblioteca de lentes
 
@@ -80,4 +81,4 @@ Combina com `design-direction`, `dashboard-design`, `web-quality-audit`, `web-de
 
 ## Origem metodológica
 
-Adaptação operacional inspirada em *Princípios Universais do Design*, de William Lidwell, Kritina Holden e Jill Butler. A obra é usada como fonte conceitual; esta skill reorganiza princípios em um workflow de auditoria e não reproduz o catálogo do livro.
+Adaptação operacional inspirada em *Princípios Universais do Design*, de William Lidwell, Kritina Holden e Jill Butler. A obra é usada como fonte conceitual; esta skill reorganiza princípios em um workflow de auditoria e não reproduz o catálogo do livro. Growth.Design Psychology entra como repertório complementar de exemplos e vieses, mantendo a regra de que princípio não substitui evidência.
