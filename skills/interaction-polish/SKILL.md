@@ -64,7 +64,7 @@ Adaptada de Motion Primitives, Animate UI, React Bits, Magic UI, Kokonut UI, Rad
 
 ## Referências de motion e efeitos
 
-Para comparar microinterações e efeitos de superfície, consultar [bibliotecas de componentes animados e efeitos](../creative-web-effects/references/animated-component-libraries.md). Extrair um comportamento verificável e manter alternativas para teclado, toque e reduced motion.
+Para comparar microinterações e efeitos de superfície, consultar [bibliotecas de componentes animados e efeitos](../creative-web-effects/references/animated-component-libraries.md). [Design Spells](https://designspells.com/) também pode servir como repertório de detalhes observados em produtos reais. Extrair um comportamento verificável, registrar por que ele funciona naquele contexto e manter alternativas para teclado, toque e reduced motion.
 
 ## Referência de blocos interativos
 
