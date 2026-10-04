@@ -49,14 +49,16 @@ Tratar texto como conteúdo e forma visual ao mesmo tempo. A skill cuida de comp
 2. Definir função de cada bloco textual.
 3. Escolher família/estilo conforme direção visual, legibilidade, cobertura de caracteres e licença.
 4. Quando a direção pedir linguagem contemporânea, consultar `references/MODERN-FONT-RADAR.md` como radar, não como ranking automático.
-5. Construir hierarquia com poucos contrastes fortes.
-6. Ajustar line breaks manualmente quando título/display justificar.
-7. Revisar palavras problemáticas, órfãs, viúvas e linhas desequilibradas.
-8. Ajustar tracking/leading por escala e função, não com valores universais.
-9. Em variable fonts, usar eixos para resolver composição ou interação; não animar eixos apenas por novidade.
-10. Verificar contraste, responsividade, zoom e comportamento durante font loading.
-11. Para lettering customizado real, decidir se a entrega será texto com fonte, SVG/path desenhado, ilustração gerada ou fonte/glyph customizado.
-12. Se houver edição de glyph/font file, encaminhar para tooling tipográfico especializado e validar licença/qualidade.
+5. Para transformar adjetivos de marca em shortlist, pode-se usar [FontBrief](https://www.fontbrief.com/fontbrief) e seus eixos de personalidade como mecanismo de exploração. Tratar os eixos como linguagem de briefing, não como medição objetiva da fonte.
+6. Validar shortlist por legibilidade, cobertura de caracteres, pesos/eixos disponíveis, contexto de uso e licença antes de decidir.
+7. Construir hierarquia com poucos contrastes fortes.
+8. Ajustar line breaks manualmente quando título/display justificar.
+9. Revisar palavras problemáticas, órfãs, viúvas e linhas desequilibradas.
+10. Ajustar tracking/leading por escala e função, não com valores universais.
+11. Em variable fonts, usar eixos para resolver composição ou interação; não animar eixos apenas por novidade.
+12. Verificar contraste, responsividade, zoom e comportamento durante font loading.
+13. Para lettering customizado real, decidir se a entrega será texto com fonte, SVG/path desenhado, ilustração gerada ou fonte/glyph customizado.
+14. Se houver edição de glyph/font file, encaminhar para tooling tipográfico especializado e validar licença/qualidade.
 
 ## Lettering vs fonte
 
