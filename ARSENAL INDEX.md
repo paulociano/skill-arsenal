@@ -49,6 +49,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/gestao-comercial-da-semana/STACK.md`
 - **illustrated-ebook-production** — Produzir ebooks ilustrados, livros infantis, HQs educativas e guias visuais do briefing ao PDF/EPUB/HTML, coordenando pesquisa, arquitetura pedagógica, personagens, storyboard, geração visual, continuidade e QA factual/editorial.  
   `stacks/illustrated-ebook-production/STACK.md`
+- **japanese-learning-cycle** — Orquestrar aprendizagem de japonês por missão comunicativa, explicação gramatical, kanji contextual, prática de recuperação e progressão por domínio.  
+  `stacks/japanese-learning-cycle/STACK.md`
 - **improve-existing-web-app** — Melhora uma aplicação web existente preservando funcionalidades, refinando design e validando o resultado no runtime.  
   `stacks/improve-existing-web-app/STACK.md`
 - **meeting-to-actions** — Transforma reuniões, transcrições ou notas em conhecimento reutilizável, decisões, ações e handoffs.  
@@ -187,6 +189,9 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **jtbd-framing** — Reformular decisões de produto por Jobs-to-be-Done, situações reais, dificuldades e critérios de adoção ou abandono.
 - **kb-retriever** — Responder perguntas em bases documentais grandes por busca progressiva, leitura localizada e citações rastreáveis.
 - **landing-craft** — Projetar landing pages como narrativas de scroll com conceito visual, message match, prova, objeções e CTA coerentes.
+- **japanese-functional-communication** — Ensinar japonês orientado a situações reais de vida e trabalho no Japão por Can-do, cenário, linguagem-alvo, compreensão e produção.
+- **japanese-grammar-teaching** — Ensinar gramática japonesa com explicações em português, modelos mentais, exemplos contrastivos e prática aplicada, priorizando função antes de tradução literal.
+- **japanese-kanji-learning** — Ensinar kanji por significado, forma, contexto visual, vocabulário e recuperação ativa, evitando memorização isolada de listas de leituras.
 - **latex-to-word** — Planejar, executar e revisar conversões acadêmicas de LaTeX para Word preservando conteúdo científico, estilos, numeração, citações, referências cruzadas e semântica de objetos com validação proporcional ao risco.
 - **legacy-system-reconstruction** — Reconstruir documentação, regras e arquitetura de sistemas legados em descoberta somente leitura antes de planejar modernização.
 - **library-version-grounding** — Fundamentar decisões de programação na versão instalada de bibliotecas e na documentação oficial correspondente.
