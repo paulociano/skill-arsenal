@@ -54,6 +54,23 @@ Projetos pequenos podem combinar fases. Não escolher efeito antes da estrutura 
 11. Fazer revisão final em brand/system fidelity, context mismatch, interface feel e final QA.
 12. Remover efeitos cujo custo, competição ou dependência não justifique benefício.
 
+## Engenharia responsiva
+
+Tratar responsividade como parte da estrutura, não como etapa cosmética no fim.
+
+Ordem preferencial de decisão:
+1. intrinsic layout e constraints nativas de Grid/Flexbox;
+2. valores fluidos limitados com `min()`, `max()` e `clamp()`;
+3. container queries quando o componente deve responder ao espaço local;
+4. media queries quando a decisão realmente depende do viewport, orientação, input ou preferência;
+5. JavaScript somente quando o comportamento não puder ser expresso de forma confiável em CSS.
+
+Evitar breakpoints por modelo de device, `window.innerWidth` como engine de layout, tipografia em viewport units sem limites e correções acumulativas que escondem uma estrutura frágil.
+
+Validar não apenas mobile/tablet/desktop, mas larguras intermediárias, conteúdo extremo/localizado, zoom, reduced motion e ausência de hover quando relevantes.
+
+Para heurísticas, exemplos, anti-patterns e matriz de runtime, consultar [responsive layout engineering](references/responsive-layout-engineering.md).
+
 ## Loop visual sobre código real
 
 Quando a interface já existe e o ambiente permite selecionar/inspecionar elementos do runtime, preferir um loop de edição ancorado no artefato real:
