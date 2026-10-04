@@ -58,8 +58,9 @@ Cada slide deve ter uma função. Se dois slides fazem o mesmo trabalho, comprim
 8. **Continuity** — variar composição sem quebrar reconhecimento da série.
 9. **CTA fit** — CTA deve corresponder ao estágio: salvar/compartilhar, comentar, seguir, clicar, responder ou converter. Não forçar CTA comercial em conteúdo de descoberta quando ele quebra a narrativa.
 10. **Per-slide revision** — permitir revisar/regenerar um slide sem destruir o restante da sequência quando a ferramenta real permitir.
-11. **Render/export** — produzir no aspect ratio correto e revisar o render final. LinkedIn document carousel normalmente exige documento/PDF; Instagram/TikTok slideshow normalmente exige imagens individuais conforme o canal e fluxo real.
-12. **Learn** — após publicação, comparar o carrossel com outros conteúdos do mesmo autor/campanha usando métricas realmente disponíveis. Aprendizado histórico orienta a próxima hipótese, não vira regra universal.
+11. **Spec grounding** — antes do export, verificar dimensões, aspect ratio, formato, duração/tamanho quando aplicável e safe zones em fonte atual da plataforma. [Media Cheat Sheet](https://mediacheatsheet.com/) pode acelerar a consulta porque agrega specs com links de origem, mas a plataforma oficial continua sendo a autoridade final quando houver conflito.
+12. **Render/export** — produzir no aspect ratio correto e revisar o render final. LinkedIn document carousel normalmente exige documento/PDF; Instagram/TikTok slideshow normalmente exige imagens individuais conforme o canal e fluxo real.
+13. **Learn** — após publicação, comparar o carrossel com outros conteúdos do mesmo autor/campanha usando métricas realmente disponíveis. Aprendizado histórico orienta a próxima hipótese, não vira regra universal.
 
 ## Hook discipline
 
