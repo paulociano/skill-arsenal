@@ -95,3 +95,17 @@ Reduzir risco de dependências, builds e artefatos de terceiros sem transformar 
 ## Provenance
 
 Consolidada de Trivy, Renovate and Semgrep supply-chain/static-analysis patterns. Preserva automation + triage + provenance sem exigir seus serviços/CLIs.
+
+
+## Evidência de artefato e seleção de scanners
+
+- Vincular SBOM e relatório ao digest do artefato realmente promovido. Registrar formato, gerador/versão, escopo, horário e versão/frescor da base de vulnerabilidades; ausência de finding pode refletir cobertura incompleta.
+- Verificar assinatura contra digest, identidade esperada e issuer/trust root permitido. Assinatura criptograficamente válida de uma identidade arbitrária não atende à política.
+- Distinguir assinatura, inclusão em transparency log e proveniência das etapas. Verificar materiais/produtos, steps e executores autorizados quando atestados estiverem disponíveis; registro público não garante build seguro.
+- Avaliar destino e visibilidade de metadados antes de publicar em transparency logs. Não publicar secrets, PII ou detalhes privados inadvertidamente.
+- Tratar Scorecard por checks, data, revisão e cobertura, sem transformar nota agregada em garantia de segurança ou compliance.
+- Verificar manutenção, licença da versão/edição e permissões reais antes de escolher ferramentas. READMEs consultados em 2026-10-05: tfsec orienta migração para Trivy; kube-hunter informa ausência de desenvolvimento ativo; Gitleaks informa releases futuras de security patches. Revalidar esses estados em novas adoções.
+- Verificação online de credenciais encontradas pode chamar terceiros e usar secrets reais; exigir escopo autorizado, redigir resultados e priorizar revogação/rotação, não experimentação.
+- Testar rejeição de digest divergente, identidade/issuer inesperado e evidência ausente. Distinguir scanner error de scan limpo.
+
+Fontes adicionais: [Syft](https://github.com/anchore/syft), [Grype](https://github.com/anchore/grype), [Cosign](https://github.com/sigstore/cosign), [Rekor](https://github.com/sigstore/rekor), [in-toto](https://github.com/in-toto/in-toto) e [Scorecard](https://github.com/ossf/scorecard). Revisões em ../../evaluations/2026-10-05-saas-sla-compliance-repositories.md.
