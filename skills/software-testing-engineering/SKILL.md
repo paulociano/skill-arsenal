@@ -114,5 +114,3 @@ Boas propriedades:
 Consolidada de Hypothesis e Testcontainers. Absorve property-based testing, shrinking e dependências reais descartáveis sem exigir Python, Java, Docker ou bibliotecas específicas.
 
 Playwright acrescentou princípios de browser isolation, auto-wait/web-first assertions, locators orientados à superfície do usuário e traces de falha. A skill continua framework-agnostic: Playwright, Cypress ou outro runner só são usados quando já disponíveis e adequados.
-
-Playwright acrescentou princípios de browser isolation, auto-wait/web-first assertions, locators orientados à superfície do usuário e traces de falha. A skill continua framework-agnostic: Playwright, Cypress ou outro runner só são usados quando já disponíveis e adequados.
