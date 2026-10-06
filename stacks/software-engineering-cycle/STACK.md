@@ -30,6 +30,9 @@ Debugging:
 Observability:
 - `software-observability-engineering`
 
+AI workflow automation:
+- `ai-workflow-automation-engineering`
+
 Durable workflows:
 - `durable-workflow-engineering`
 
@@ -66,6 +69,9 @@ Resilience:
 
 Behavior verification:
 - `behavior-contract-validation`
+
+Interactive coding agents:
+- `coding-agent-engineering`
 
 Agentic software factory:
 - `software-factory-operations`
@@ -156,10 +162,12 @@ Não carregar todas as skills.
 Exemplos:
 - biblioteca simples: `codebase-design` + `tdd`;
 - mudança isolada ou execução paralela em Git: adicionar `git-worktree-lifecycle`;
+- coding agent interativo/IDE/terminal: adicionar `coding-agent-engineering`;
 - serviço web: adicionar `system-design-engineering`, `software-testing-engineering`, `software-observability-engineering`;
 - auditoria técnica de web app/PWA: preferir a stack `web-app-engineering-audit`;
 - PWA/offline/service worker: adicionar `pwa-engineering`;
 - segurança web black-box/gray-box em alvo autorizado: adicionar `web-application-security-audit`;
+- integração/automação AI-first entre sistemas: `ai-workflow-automation-engineering`;
 - workflow longo: adicionar `durable-workflow-engineering`;
 - monorepo pesado: adicionar `build-system-engineering`;
 - organização com muitos times: `developer-platform-engineering`;
