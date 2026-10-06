@@ -30,6 +30,43 @@ Extrair conteúdo estruturado de sites quando busca comum não basta, com técni
 4. Browser renderizado quando JavaScript for necessário.
 5. Crawler/spider apenas para conjuntos de páginas realmente necessários.
 
+## Modos de aquisição AI-ready
+
+Quando uma ferramenta expuser primitivas separadas, escolha o modo pelo problema em vez de usar crawl completo por padrão:
+
+- **search** — descobrir fontes relevantes antes de extrair;
+- **map** — descobrir URLs dentro de um domínio sem baixar o conteúdo inteiro;
+- **scrape** — extrair uma página conhecida em formato limpo ou estruturado;
+- **batch scrape** — extrair uma lista fechada de URLs com concorrência controlada;
+- **crawl** — percorrer um conjunto de páginas conectado por links quando a cobertura do site for realmente necessária;
+- **interact/browser** — usar somente quando estado, JavaScript ou interação forem indispensáveis.
+
+Fluxo preferido para sites grandes:
+
+`search/map → filter URLs → scrape/batch → validate → expand only if needed`
+
+Esse desenho evita usar um crawler como martelo universal, reduz custo/contexto e facilita provenance por página.
+
+### Extração estruturada
+
+Quando o consumidor precisar de campos específicos:
+- definir schema antes da coleta;
+- extrair somente os campos necessários;
+- preservar URL/source locator;
+- validar tipos e ausência de campos;
+- distinguir dado ausente de valor vazio;
+- usar `structured-output-contract` quando a saída alimentar código.
+
+### Jobs assíncronos e retomada
+
+Para crawls/batches longos:
+- tratar a execução como job com ID/status quando o runtime suportar;
+- acompanhar completed/failed/pending;
+- preservar checkpoint e deduplicação;
+- retomar somente o que falta;
+- registrar consumo/custo quando observável;
+- não confundir job aceito com job concluído.
+
 ## Adapters, fallback e diagnóstico por plataforma
 
 Para plataformas sociais/nicho cuja superfície muda com frequência:
@@ -106,6 +143,8 @@ Adaptada de D4Vinci/Scrapling.
 Boundary de contexto e batching adaptados de [lidge-jun/aside-codemode](https://github.com/lidge-jun/aside-codemode), usando apenas capacidades realmente disponíveis no ambiente.
 
 Primary/fallback adapters e diagnostics por plataforma adaptados de https://github.com/Panniantong/Agent-Reach, preservando regras de acesso e sem importar CLIs ou scrapers da fonte.
+
+A separação search/map/scrape/batch/crawl/interact, schema-first extraction e jobs assíncronos foi refinada a partir de https://github.com/firecrawl/firecrawl. Firecrawl permanece runtime externo: API keys, proxies, browser actions, installers e claims de benchmark não são assumidos pelo Arsenal.
 
 Extração em duas etapas (discovery estruturado → páginas de detalhe) refinada a partir de `PrettyPrinted/youtube_video_code` (2026-07-31), sem incorporar proxy bypass, anti-detection ou scraping específico do site demonstrado.
 
