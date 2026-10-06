@@ -66,6 +66,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/social-growth-engine/STACK.md`
 - **software-engineering-cycle** — Conduzir trabalho de engenharia de software da arquitetura ao build, testes, observabilidade, supply chain, workflows duráveis, plataforma e produção, carregando apenas os owners necessários.  
   `stacks/software-engineering-cycle/STACK.md`
+- **web-app-engineering-audit** — Auditar web apps e PWAs existentes como consultoria técnica, conectando arquitetura, código, testes, segurança, qualidade web, supply chain, PWA e runtime em findings priorizados e roadmap verificável.  
+  `stacks/web-app-engineering-audit/STACK.md`
 - **vertical-video-reframing** — Converter e validar vídeos horizontais/quadrados para 9:16 usando subject detection/tracking, safe crop, smoothing, multi-subject policy e composition-aware reframing sem câmera virtual nervosa.
 - **venture-building-cycle** — Conduzir uma nova empresa, startup ou iniciativa de inovação da tese inicial à validação, protótipo, primeiros clientes, monetização e decisão de escala por evidência progressiva e apostas reversíveis.  
   `stacks/venture-building-cycle/STACK.md`
@@ -226,6 +228,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **project-health-review** — Revisar saúde de projetos por evidências de entrega, marcos, dependências, bloqueios, riscos, aging e próximas ações sem esconder incerteza em uma nota única.
 - **project-planning** — Transformar objetivos em plano executável com outcomes, workstreams, marcos, dependências, caminho crítico, capacidade, riscos e critérios de conclusão sem falsa precisão.
 - **procedural-film** — Criar curtas verticais animados proceduralmente com Canvas/Web Audio, storyboard em beat grid, render determinístico e revisão quadro a quadro.
+- **pwa-engineering** — Projetar, revisar e validar Progressive Web Apps por installability, manifest, service worker, caching, offline/update lifecycle, storage, resiliência, performance e experiência de instalação sem confundir PWA com um score ou framework.
 - **production-go-live** — Planejar e executar a ida de uma aplicação para produção com inventário de dependências, approval gates, verificação, handoff, drift check e teardown seguro.
 - **project-skill-architecture** — Organizar ou migrar regras e workflows de projetos em skills pequenas, com proprietários canônicos e rotas sem duplicação.
 - **prose-lint** — Auditar prosa por clareza, redundância, ambiguidade, jargão, inconsistência e linguagem potencialmente excludente usando checks como sinais, não regras absolutas.
@@ -293,6 +296,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **watch-video** — Analisar vídeos com transcrição e frames disponíveis, ancorando conclusões em timestamps e distinguindo visto, dito e inferido.
 - **wayfinder** — Planejar projetos que atravessam sessões como mapas de decisões, resolvendo primeiro as incertezas já desbloqueadas.
 - **web-analytics-ga4** — Analisar tráfego, aquisição e conversão em GA4 ou exports equivalentes com períodos comparáveis e limitações de tracking.
+- **web-application-security-audit** — Auditar a segurança observável de web apps e APIs em ambiente autorizado, convertendo requisitos OWASP ASVS e cenários WSTG em testes proporcionais, evidência reproduzível, findings validados e reteste.
 - **xr-game-engineering** — Projetar e validar experiências VR/AR/MR com OpenXR quando possível, tracking spaces, locomotion, grab/gaze/UI espacial, hands/controllers, conforto, performance e testes em dispositivo real.
 - **web-design-engineer** — Construir ou redesenhar interfaces web com pesquisa, direção, estrutura, interação, motion e efeitos contemporâneos, preservando marca, acessibilidade, performance e verificação em runtime.
 - **web-quality-audit** — Auditar qualidade web em runtime com performance, acessibilidade, best practices e evidência reproduzível.
