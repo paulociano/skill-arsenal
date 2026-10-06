@@ -25,6 +25,17 @@ Executar modelos grandes em hardware limitado com trade-offs explícitos entre m
 
 **O limite real é o working set ativo, não necessariamente o tamanho total do modelo.**
 
+## Runtime selection
+
+Escolha o runtime pela natureza do workload, não pela popularidade:
+
+- **desktop/local convenience layer** — quando o objetivo é iniciar modelos facilmente, gerenciar downloads e expor uma API local; Ollama é uma referência desse padrão;
+- **embedded/portable inference** — quando integração C/C++, ampla compatibilidade de hardware, quantização e CPU+GPU híbrido importam; llama.cpp é uma referência;
+- **high-throughput serving** — quando concorrência, continuous batching, prefix caching, parallelism e serving multiusuário dominam; vLLM é uma referência;
+- **model framework / experimentation** — quando treino, fine-tuning, múltiplas modalidades e acesso uniforme a arquiteturas importam; Transformers é uma referência.
+
+Essas categorias podem coexistir no mesmo sistema. Não tratar interface OpenAI-compatible como garantia de feature parity, performance ou segurança.
+
 ## Workflow
 
 1. **Workload contract**
@@ -112,3 +123,5 @@ Executar modelos grandes em hardware limitado com trade-offs explícitos entre m
 ## Provenance
 
 Adaptada de Edge0-AI/Edge0. Preserva SSD expert offload, active-set memory budgeting, prerouter/prefetch, adapter separation, backend isolation e matched-quality benchmarking sem presumir Edge0 models, MLX, Vulkan ou hardware específico.
+
+A seleção de runtime foi refinada a partir de Ollama, llama.cpp, vLLM e Hugging Face Transformers, preservando diferenças entre convenience layer, embedded inference, serving de alto throughput e framework de modelos sem importar seus runtimes.
