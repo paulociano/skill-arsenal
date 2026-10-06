@@ -10,6 +10,7 @@ Conectar estratégia → descoberta → decisão → execução → medição em
 
 ## Skills candidatas
 - founder-diagnose
+- stakeholder-strategy
 - jtbd-framing
 - customer-interview
 - discovery-research-synthesis
@@ -20,16 +21,17 @@ Conectar estratégia → descoberta → decisão → execução → medição em
 - experiment-design
 - decision-analysis
 - after-action-review
+- product-lifecycle-transition
 
 ## Workflow
 1. **Context gate** — confirmar usuário/ICP, outcome estratégico, evidência disponível, horizonte e capacidade. Reutilizar contexto atual confiável; não interrogar novamente o que já está resolvido.
-2. **Evidence** — quando a decisão depende de necessidade real, usar discovery/interviews/telemetry antes de detalhar solução. Pedido de stakeholder é sinal, não validação automática.
+2. **Evidence** — quando a decisão depende de necessidade real, usar discovery/interviews/telemetry antes de detalhar solução. Pedido de stakeholder é sinal, não validação automática. Quando alinhamento, poder ou impacto entre grupos puder mudar a decisão, usar `stakeholder-strategy`.
 3. **Opportunity** — separar problema/oportunidade de feature; usar JTBD/idea-refine somente quando a forma da solução ainda estiver aberta.
 4. **Decision** — explicitar riscos de valor, usabilidade, viabilidade e feasibility relevantes. Para apostas grandes sem evidência, propor discovery/experimento ou marcar assumptions, não fabricar certeza.
 5. **Spec** — usar `to-spec` quando a decisão estiver suficientemente resolvida. Manter outcomes, non-goals e critérios verificáveis.
 6. **Priority & capacity** — priorizar considerando estratégia, impacto, urgência, dependências, risco, esforço e capacidade real. Frameworks como RICE são heurísticas, não autoridade.
 7. **Measure** — definir métrica/guardrails antes do resultado quando isso for material; diagnosticar tracking antes de explicar movimento.
-8. **Review** — comparar outcome com previsão/assumptions e registrar aprendizado. Atualizar decisão, não reescrever retrospectivamente a previsão.
+8. **Review** — comparar outcome com previsão/assumptions e registrar aprendizado. Atualizar decisão, não reescrever retrospectivamente a previsão. Quando o produto estiver maduro, em declínio ou sob pressão de substituição/EOL, rotear para `product-lifecycle-transition` em vez de tratar o problema como backlog comum.
 
 ## Conflitos metodológicos
 Não misturar frameworks apenas para parecer abrangente. Quando dois métodos impõem regras incompatíveis, escolher o que corresponde ao contexto e declarar a escolha. Um ciclo Shape Up, um PRD detalhado e Continuous Discovery podem coexistir na organização, mas não precisam governar a mesma decisão simultaneamente.
