@@ -31,7 +31,9 @@ Não usar apenas para criar a interface. Para implementação e direção visual
 7. **Prioritize findings** — impacto no usuário, evidência e custo de correção.
 8. **Fix proportionally** — corrigir causa, não perseguir score isolado.
 9. **Re-run same conditions** — comparar baseline vs candidate.
-10. **Report limits** — distinguir lab result, field evidence ausente e itens não testados.
+10. **Quality gates** — quando usado em CI/release, aplicar budgets/thresholds explícitos por métrica e superfície; regressão deve comparar condições equivalentes.
+11. **Continuous signal** — quando houver monitoring, separar regressão pontual de tendência em produção e correlacionar com release/version.
+12. **Report limits** — distinguir lab result, field evidence ausente e itens não testados.
 
 ## Acessibilidade
 
@@ -41,7 +43,9 @@ Não usar apenas para criar a interface. Para implementação e direção visual
 - focus order e focus visibility fazem parte da funcionalidade;
 - accessible name, role e state devem corresponder ao que o controle realmente faz;
 - testar reduced motion quando houver motion relevante;
-- automated checks detectam parte dos problemas, não substituem interação manual.
+- automated checks detectam parte dos problemas, não substituem interação manual;
+- resultado automatizado deve poder ser `incomplete`/manual-review quando a regra não consegue decidir com segurança;
+- gates automáticos devem bloquear apenas violações com regra suficientemente confiável para evitar converter incerteza em falso positivo.
 
 Quando existir um padrão no WAI-ARIA Authoring Practices Guide, usar sua interação esperada como referência, mas não copiar ARIA quando um elemento HTML nativo resolve melhor.
 
@@ -54,6 +58,13 @@ Separar:
 - **synthetic score**: sinal agregado, nunca objetivo em si.
 
 Ao comparar versões, manter condições equivalentes de device, viewport, cache, throttling e rota. Não vender variação de uma única execução como ganho estável.
+
+Para performance budgets:
+- definir budget antes da mudança;
+- usar múltiplas execuções/estatística robusta quando ruído for material;
+- separar Core Web Vitals/lab metrics de field data;
+- falha no budget indica regressão a investigar, não causa automaticamente conhecida;
+- CI e monitoramento contínuo podem compartilhar métricas, mas têm janelas e variabilidade diferentes.
 
 ## Evidência e findings
 
@@ -85,5 +96,8 @@ Combina com `web-design-engineer`, `runtime-ui-verification`, `seo-research-audi
 Adaptada de:
 - https://github.com/GoogleChrome/lighthouse
 - https://github.com/w3c/aria-practices
+- https://github.com/dequelabs/axe-core
+- https://github.com/sitespeedio/sitespeed.io
+- https://github.com/GoogleChrome/web-vitals
 
 Preserva a distinção entre auditoria automatizada, padrões de interação e verificação manual.
