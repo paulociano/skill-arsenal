@@ -40,6 +40,12 @@ Supply chain/security:
 - `software-supply-chain-engineering`
 - `secure-code-privacy-review`
 
+Authorized web application security:
+- `web-application-security-audit`
+
+Progressive Web Apps:
+- `pwa-engineering`
+
 Developer platform:
 - `developer-platform-engineering`
 
@@ -139,6 +145,9 @@ Exemplos:
 - biblioteca simples: `codebase-design` + `tdd`;
 - mudança isolada ou execução paralela em Git: adicionar `git-worktree-lifecycle`;
 - serviço web: adicionar `system-design-engineering`, `software-testing-engineering`, `software-observability-engineering`;
+- auditoria técnica de web app/PWA: preferir a stack `web-app-engineering-audit`;
+- PWA/offline/service worker: adicionar `pwa-engineering`;
+- segurança web black-box/gray-box em alvo autorizado: adicionar `web-application-security-audit`;
 - workflow longo: adicionar `durable-workflow-engineering`;
 - monorepo pesado: adicionar `build-system-engineering`;
 - organização com muitos times: `developer-platform-engineering`;
@@ -158,4 +167,4 @@ Exemplos:
 
 ## Provenance
 
-Stack construída do lote 2026-10-03 de 16 repositórios de software engineering, com maior peso em Hypothesis, Testcontainers, OpenTelemetry Collector, Temporal, Backstage, Trivy, Renovate, Semgrep, Bazel/Pants, Dagger e Argo CD. Charlytoc/ai-todo-app contribuiu para draft-first. addyosmani/factory acrescentou o modo software factory com queue durável, verifier independente, back-pressure e merge humano.
+Stack construída do lote 2026-10-03 de 16 repositórios de software engineering, com maior peso em Hypothesis, Testcontainers, OpenTelemetry Collector, Temporal, Backstage, Trivy, Renovate, Semgrep, Bazel/Pants, Dagger e Argo CD. Charlytoc/ai-todo-app contribuiu para draft-first. addyosmani/factory acrescentou o modo software factory com queue durável, verifier independente, back-pressure e merge humano. O lote 2026-10-05 acrescentou roteamento explícito para auditoria web autorizada e engenharia PWA.

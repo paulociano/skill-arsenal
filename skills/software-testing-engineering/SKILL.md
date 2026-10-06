@@ -57,9 +57,14 @@ Projetar testes por risco e contrato observável, indo além de unit tests e TDD
    - validar request/response/schema/protocol;
    - producer/consumer contracts quando múltiplos serviços evoluem independentemente.
 
-6. **E2E**
+6. **Browser/E2E**
    - reservado a jornadas críticas;
-   - ambiente previsível;
+   - ambiente previsível e dados isolados;
+   - preferir um contexto/sessão limpo por teste quando estado residual puder contaminar resultado;
+   - usar assertions que aguardem estado observável em vez de sleeps fixos;
+   - preferir locators próximos da experiência do usuário, como role, label e texto, antes de seletores acoplados à implementação;
+   - testar múltiplos browsers somente quando fizerem parte da support matrix real;
+   - em falhas difíceis, preservar trace/artifacts com DOM, network, console e screenshot quando a ferramenta suportar;
    - evitar cobrir toda regra de negócio apenas por E2E.
 
 7. **Flakiness**
@@ -96,7 +101,9 @@ Boas propriedades:
 - mock de tudo pode testar apenas o próprio mock;
 - dependência real em teste precisa ser descartável e isolada;
 - property test precisa de invariant útil, não randomização ornamental;
-- falha encontrada deve virar regressão reproduzível.
+- falha encontrada deve virar regressão reproduzível;
+- browser E2E não deve depender de sleeps arbitrários ou selectors frágeis quando existe condição observável mais estável;
+- trace, screenshot ou vídeo ajudam diagnóstico, mas não substituem assertions sobre o efeito correto.
 
 ## Integração
 
@@ -105,3 +112,5 @@ Boas propriedades:
 ## Provenance
 
 Consolidada de Hypothesis e Testcontainers. Absorve property-based testing, shrinking e dependências reais descartáveis sem exigir Python, Java, Docker ou bibliotecas específicas.
+
+Playwright acrescentou princípios de browser isolation, auto-wait/web-first assertions, locators orientados à superfície do usuário e traces de falha. A skill continua framework-agnostic: Playwright, Cypress ou outro runner só são usados quando já disponíveis e adequados.
