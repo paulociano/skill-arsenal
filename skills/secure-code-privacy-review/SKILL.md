@@ -14,7 +14,7 @@ Revisar implementação, diff ou PR por duas superfícies relacionadas mas disti
 - código que coleta, armazena, transmite ou registra dados pessoais/sensíveis;
 - PRs em que um finding precisa ser validado antes de ser reportado.
 
-Não usar para avaliar se uma skill/plugin externa é segura para instalar; use `skill-security-review`. Para red team de aplicações LLM, use `llm-red-team-evaluation`. Para testar controles de um web app/API em runtime autorizado, use `web-application-security-audit`. Para testar controles de um web app/API em runtime autorizado, use `web-application-security-audit`.
+Não usar para avaliar se uma skill/plugin externa é segura para instalar; use `skill-security-review`. Para red team de aplicações LLM, use `llm-red-team-evaluation`. Para testar controles de um web app/API em runtime autorizado, use `web-application-security-audit`.
 
 ## Workflow
 1. **Context** — identificar frameworks/proteções reais, trust boundaries e superfícies alteradas.
