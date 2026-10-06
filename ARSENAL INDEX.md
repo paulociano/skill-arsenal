@@ -142,6 +142,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **first-customer-research** — Pesquisar potenciais primeiros clientes, beta users ou design partners a partir de sinais públicos recentes, qualificando dor, fit, timing, alcance e evidência sem tratar prospect como comprador confirmado nem automatizar outreach.
 - **financial-filings-analysis** — Pesquisar e analisar demonstrações e filings públicos com hierarquia de fontes, XBRL quando disponível, períodos comparáveis, provenance por line item e separação entre dados reportados, normalizações e interpretação.
 - **financial-modeling-valuation** — Construir e auditar modelos financeiros integrados e valuation por DCF, múltiplos e cenários com fórmulas rastreáveis, histórico validado, assumptions explícitas e checks de integridade.
+- **go-to-market-strategy** — Diagnosticar e estruturar go-to-market conectando ICP, buyer/adopter, posicionamento, mensagem, motion, canais, launch, sales, activation e economics em um roadmap stage-aware orientado por evidência.
 - **financial-planning-analysis** — Conduzir FP&A com actuals, budget, forecast, variance, drivers, cash/runway, cenários e management reporting, distinguindo plano, previsão, meta e realizado.
 - **fixed-income-analysis** — Analisar instrumentos de renda fixa por cash flows, yield/curve, duration, convexity, spread, inflation/FX exposure, scenario P&L e reinvestment/liquidity risk com convenções e datas explícitas.
 - **floor-plan-technical-drawing** — Criar e revisar plantas baixas e esboços técnicos com escala, paredes, aberturas, níveis, cotas, eixos, mobiliário, símbolos, áreas e exports legíveis, separando estudo, documentação e desenho executivo.
@@ -257,6 +258,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **skill-builder** — Criar ou atualizar skills reutilizáveis a partir de workflows recorrentes, com gatilhos claros, dependências reais e validação.
 - **skill-security-review** — Inspecionar segurança de skills, agentes ou plugins antes da adoção sem executar instaladores ou código da fonte avaliada.
 - **save-game-persistence-engineering** — Projetar save/load de jogos com schema versionado, migrations, atomic writes, backups, corruption recovery, async I/O, cloud conflict policy e separação entre state persistente e runtime objects.
+- **saas-pricing-monetization** — Projetar e revisar pricing e monetização de SaaS, APIs e produtos de IA conectando valor, packaging, value metric, usage/credits, entitlements, willingness-to-pay, economics, rollout e aprendizado sem confundir billing infrastructure com estratégia.
 - **scenario-forecasting** — Construir forecasts e cenários com baseline, backtesting, intervalos, premissas e gatilhos de atualização sem transformar projeção em certeza.
 - **scientific-hypothesis-discovery** — Gerar, verificar, comparar e evoluir hipóteses científicas em ciclos rastreáveis, mantendo grounding, hipóteses rivais, deduplicação, evidência acumulada e limites explícitos entre descoberta assistida e prova científica.
 - **sales-objection-handling** — Tratar objeções comerciais e conduzir o fechamento sem confronto, usando validação, deslocamento e recondução estruturada da conversa.
@@ -267,6 +269,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **social-post-review** — Revisar posts separando qualidade editorial de comparação com o histórico real do autor, sem prever desempenho por score.
 - **source-to-skill** — Converter fontes longas em skills de conhecimento com entrada compacta, referências sob demanda e fidelidade à origem.
 - **sprite-sheet-pipeline** — Converter animações ou frames em sprite sheets com registro, escala, transparência e timing verificados.
+- **strategic-landscape-mapping** — Mapear paisagens estratégicas por necessidade do usuário, cadeia de valor, dependências, estágio de evolução, inertia e movimentos plausíveis para melhorar decisão de build/buy, investimento, plataforma e inovação sem tratar o mapa como previsão.
 - **structured-output-contract** — Definir e validar schemas para saídas LLM consumidas por código, com tipos, incerteza explícita e retries limitados.
 - **surgical-engineering** — Executar mudanças de código com escopo mínimo, suposições explícitas, simplicidade, critérios verificáveis e zero refatoração lateral não solicitada.
 - **synthetic-presenter-video** — Criar ou avaliar vídeos com voz sintética, voice cloning, talking-head/lip-sync e portrait animation com consentimento, identity boundaries, timing, expression, artifact QA e provenance explícita.
