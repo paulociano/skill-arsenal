@@ -320,6 +320,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **work-delivery-flow** — Operar fluxo de trabalho e entregas por um record único de itens, estados, owners, prazos, dependências, WIP, aging e exceções, conectando planejamento, execução e gestão à vista sem transformar atividade em progresso.
 - **writing-quality** — Rascunhar, estruturar, revisar ou auditar prosa preservando significado, evidência, voz, clareza e adequação ao meio.
 
+- **shopping-agent-governance** — Governar pesquisa, ranking, recomendação e compra assistida por agentes separando evidência, neutralidade, confiança no vendedor e autorização de checkout sem transformar recomendação em permissão para gastar.\n
 ## Manutenção
 
 Atualize este índice sempre que uma skill ou stack for criada, removida, renomeada ou tiver sua `description` alterada materialmente.
