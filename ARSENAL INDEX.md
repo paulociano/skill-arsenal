@@ -224,6 +224,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **procedural-game-content** — Projetar e validar geração procedural de níveis, mapas, cidades, dungeons, terrenos e spawns com seeds reproduzíveis, constraints explícitas, validação de jogabilidade e bounded regeneration.
 - **personal-financial-planning** — Estruturar planejamento financeiro pessoal por fluxo de caixa, reserva, dívidas, patrimônio, metas e cenários, separando fatos, premissas e decisões do usuário sem transformar heurísticas em regras universais.
 - **prioritization-engine** — Priorizar trabalho, oportunidades ou problemas por impacto, urgência, dependências, risco e esforço com critérios explícitos e análise de sensibilidade.
+- **product-lifecycle-transition** — Diagnosticar produtos maduros ou em declínio e decidir entre estender, substituir, colher ou retirar, conectando evidência de mercado, economia, migração, comunicação e critérios de saída.
 - **product-metrics-diagnostics** — Diagnosticar movimentos de métricas por definição, funil, cohort, segmento, drivers e qualidade de dados antes de propor ação.
 - **project-complexity-management** — Diagnosticar focos de complexidade técnica, organizacional e externa e definir intervenções proporcionais às evidências.
 - **project-health-review** — Revisar saúde de projetos por evidências de entrega, marcos, dependências, bloqueios, riscos, aging e próximas ações sem esconder incerteza em uma nota única.
@@ -248,6 +249,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **retirement-income-planning** — Modelar aposentadoria e decumulação com household cash flows, longevidade, inflação, sequence risk, pensions, spending guardrails, Monte Carlo/historical stress tests e withdrawal strategies sem tratar probabilidade de sucesso como garantia.
 - **root-cause-analysis** — Investigar causas de problemas operacionais, comerciais ou de produto separando sintomas, mecanismos, fatores contribuintes e evidência causal.
 - **release-engineering** — Projetar e governar releases de software por change impact, versionamento, changelog, release unit, artifact identity, compatibility, publication e comunicação ao consumidor, separando release de deploy.
+- **realtime-voice-agent-engineering** — Projetar e avaliar agentes de voz em tempo real por pipeline de áudio, turn-taking, interrupções, latência, ferramentas, estado conversacional, fallback e observabilidade sem assumir provider ou runtime específico.
 - **repository-evidence-docs** — Criar e manter documentação viva de repositórios a partir de comportamento real, conceitos, mapa de código, evidências e regras de sincronização, atualizando apenas o que ficaria enganoso após mudanças.
 - **resilience-engineering** — Projetar e validar resiliência por steady state, failure hypotheses, fault injection controlada, blast radius, observação, recovery e aprendizagem, sem transformar chaos engineering em falha aleatória ou teste destrutivo.
 - **response-latency-optimization** — Reduz tempo de resposta e latência percebida com contexto progressivo, menos round-trips, paralelização segura, orçamento de ferramentas e medição.
@@ -273,6 +275,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **source-to-skill** — Converter fontes longas em skills de conhecimento com entrada compacta, referências sob demanda e fidelidade à origem.
 - **sprite-sheet-pipeline** — Converter animações ou frames em sprite sheets com registro, escala, transparência e timing verificados.
 - **strategic-landscape-mapping** — Mapear paisagens estratégicas por necessidade do usuário, cadeia de valor, dependências, estágio de evolução, inertia e movimentos plausíveis para melhorar decisão de build/buy, investimento, plataforma e inovação sem tratar o mapa como previsão.
+- **stakeholder-strategy** — Mapear stakeholders, poder, interesse, impacto e postura para definir envolvimento, elevar vozes sub-representadas e transformar um mapa estático em plano de engajamento verificável.
 - **structured-output-contract** — Definir e validar schemas para saídas LLM consumidas por código, com tipos, incerteza explícita e retries limitados.
 - **surgical-engineering** — Executar mudanças de código com escopo mínimo, suposições explícitas, simplicidade, critérios verificáveis e zero refatoração lateral não solicitada.
 - **synthetic-presenter-video** — Criar ou avaliar vídeos com voz sintética, voice cloning, talking-head/lip-sync e portrait animation com consentimento, identity boundaries, timing, expression, artifact QA e provenance explícita.
