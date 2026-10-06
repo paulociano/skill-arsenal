@@ -230,6 +230,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **project-planning** — Transformar objetivos em plano executável com outcomes, workstreams, marcos, dependências, caminho crítico, capacidade, riscos e critérios de conclusão sem falsa precisão.
 - **procedural-film** — Criar curtas verticais animados proceduralmente com Canvas/Web Audio, storyboard em beat grid, render determinístico e revisão quadro a quadro.
 - **pwa-engineering** — Projetar, revisar e validar Progressive Web Apps por installability, manifest, service worker, caching, offline/update lifecycle, storage, resiliência, performance e experiência de instalação sem confundir PWA com um score ou framework.
+- **progressive-delivery-verification** — Planejar e verificar exposição progressiva de releases com canary, blue/green, cohorts, feature flags, métricas, acceptance tests, promotion/abort gates e blast radius controlado sem confundir deploy com sucesso.
 - **production-go-live** — Planejar e executar a ida de uma aplicação para produção com inventário de dependências, approval gates, verificação, handoff, drift check e teardown seguro.
 - **project-skill-architecture** — Organizar ou migrar regras e workflows de projetos em skills pequenas, com proprietários canônicos e rotas sem duplicação.
 - **prose-lint** — Auditar prosa por clareza, redundância, ambiguidade, jargão, inconsistência e linguagem potencialmente excludente usando checks como sinais, não regras absolutas.
@@ -246,7 +247,9 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **reels-scripting** — Analisar a estrutura narrativa de um Reel e criar roteiro original no mesmo padrão, sem copiar conteúdo ou presumir desempenho.
 - **retirement-income-planning** — Modelar aposentadoria e decumulação com household cash flows, longevidade, inflação, sequence risk, pensions, spending guardrails, Monte Carlo/historical stress tests e withdrawal strategies sem tratar probabilidade de sucesso como garantia.
 - **root-cause-analysis** — Investigar causas de problemas operacionais, comerciais ou de produto separando sintomas, mecanismos, fatores contribuintes e evidência causal.
+- **release-engineering** — Projetar e governar releases de software por change impact, versionamento, changelog, release unit, artifact identity, compatibility, publication e comunicação ao consumidor, separando release de deploy.
 - **repository-evidence-docs** — Criar e manter documentação viva de repositórios a partir de comportamento real, conceitos, mapa de código, evidências e regras de sincronização, atualizando apenas o que ficaria enganoso após mudanças.
+- **resilience-engineering** — Projetar e validar resiliência por steady state, failure hypotheses, fault injection controlada, blast radius, observação, recovery e aprendizagem, sem transformar chaos engineering em falha aleatória ou teste destrutivo.
 - **response-latency-optimization** — Reduz tempo de resposta e latência percebida com contexto progressivo, menos round-trips, paralelização segura, orçamento de ferramentas e medição.
 - **retrieval-quality-engineering** — Diagnosticar e melhorar retrieval/RAG com conjunto de consultas, baseline e avaliação de chunking, busca híbrida e reranking.
 - **retrospective-codify** — Codificar aprendizados recorrentes quando solicitado, escolhendo entre atualizar skill, regra, checklist, teste ou documentação.

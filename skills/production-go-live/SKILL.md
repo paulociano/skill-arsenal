@@ -17,7 +17,7 @@ Levar uma aplicação de desenvolvimento para produção sem tratar deploy como 
 - preparar handoff operacional de uma aplicação;
 - auditar drift ou remover recursos criados por um lançamento anterior.
 
-Não usar para simples preview/local build. Para arquitetura do sistema, combinar com `system-design-engineering`. Para release já configurado e sem mudança de infraestrutura, usar apenas a menor parte necessária deste fluxo.
+Não usar para simples preview/local build. Para arquitetura do sistema, combinar com `system-design-engineering`. Para versionamento/changelog/publication de uma release, usar `release-engineering`. Para canary/blue-green/rollout progressivo com promotion gates, usar `progressive-delivery-verification`.
 
 ## Princípios
 
@@ -180,6 +180,9 @@ Combina com:
 - `system-design-engineering`;
 - `verify-before-claim`;
 - `behavior-contract-validation`;
+- `release-engineering`;
+- `progressive-delivery-verification`;
+- `resilience-engineering` quando recovery/failure behavior precisar de prova;
 - `loop-engineering` para drift recorrente;
 - `handoff`;
 - skills específicas de provider quando existirem.
