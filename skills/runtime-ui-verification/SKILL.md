@@ -69,6 +69,32 @@ Antes de verificar UI no browser, escolher a evidência adequada:
 
 Permissões de page context devem ser task-scoped. History, tab sets, screenshots ou microphone não entram como contexto “por precaução”.
 
+## Component state coverage
+
+Quando a mudança afeta componente reutilizável ou design system, verificar estados relevantes além do happy path:
+- default;
+- loading;
+- empty;
+- error;
+- disabled/read-only;
+- overflow/long content;
+- narrow/wide viewport;
+- permission/role states quando existirem;
+- focus/keyboard/reduced-motion quando material.
+
+Ferramentas de component workshop podem ajudar, mas o contrato é cobertura de estados, não Storybook em si.
+
+## Visual baseline governance
+
+Visual regression é útil quando a aparência é parte do contrato:
+1. fixar viewport, DPR, font/assets e estado;
+2. capturar referência aprovada;
+3. comparar candidate;
+4. revisar diferenças;
+5. atualizar baseline somente quando a mudança é esperada e aprovada.
+
+Nunca atualizar baseline apenas para tornar o teste verde. Mudança observada não é sinônimo de mudança desejada.
+
 ## Observe, act, extract
 
 Em browser automation com LLM, separar responsabilidades reduz risco e ambiguidade:
@@ -115,5 +141,7 @@ Adaptada de reticlehq/reticle, especialmente `verify-ui-change`, `agentic-tdd`, 
 Action-space e freshness guards adaptados de [browser-use/jev-ultrafast](https://github.com/browser-use/jev-ultrafast), sem depender de Jev ou Browser Harness.
 
 Separação observe/act/extract e isolamento de credenciais refinados a partir de https://github.com/browserbase/stagehand.
+
+Component-state coverage e governança de visual baselines foram reforçadas a partir de Storybook, BackstopJS e ferramentas de visual regression, sem exigir qualquer runner específico.
 
 Origem local: [runtime-ui-verification.docx](../runtime-ui-verification.docx).
