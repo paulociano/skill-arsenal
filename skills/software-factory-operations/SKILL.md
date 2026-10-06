@@ -54,13 +54,16 @@ Separar:
      - needs-info;
      - blocked;
    - registrar por que;
-   - não converter ambiguidade de produto em código especulativo.
+   - não converter ambiguidade de produto em código especulativo;
+   - tarefas de triage podem usar um modelo mais barato ou regra determinística quando o objetivo é apenas filtrar/rotear, preservando o modelo mais capaz para decisões que exigem julgamento real.
 
-3. **Claim**
+3. **Claim e freshness**
    - uma unidade de trabalho por run;
-   - claim determinístico;
+   - claim determinístico e atômico;
    - primeiro claim válido vence;
-   - colisão deve falhar fechada, não criar dois writers.
+   - colisão deve falhar fechada, não criar dois writers;
+   - antes de publicar resposta ou ação derivada de contexto compartilhado, verificar se surgiram mensagens, commits ou decisões mais novas;
+   - resposta baseada em cursor/estado stale deve ser retida e reavaliada contra o contexto novo, não publicada por inércia.
 
 4. **Spec gate**
    Quando intenção ou design não forem triviais:
@@ -146,4 +149,4 @@ Sessões devem poder começar frescas e continuar a partir desse estado.
 
 ## Provenance
 
-Adaptada de addyosmani/factory. Preserva charter humano, queue durável, autonomy-by-consequence, fail-closed gates, verifier independente, review back-pressure e merge humano. Remove dependência de Claude routines, hooks e instaladores específicos; GitHub é uma implementação possível, não requisito conceitual.
+Adaptada de addyosmani/factory e enriquecida por padrões de coordenação observados em yetone/cumora. Preserva charter humano, queue durável, autonomy-by-consequence, fail-closed gates, verifier independente, review back-pressure e merge humano. De Cumora foram absorvidos freshness gate antes de responder/agir, claims atômicos sobre unidades reais de trabalho e triage econômico; o runtime, chat, Kubernetes e infraestrutura específicos não são requisitos. Remove dependência de Claude routines, hooks e instaladores específicos; GitHub é uma implementação possível, não requisito conceitual.
