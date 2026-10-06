@@ -88,6 +88,15 @@ Quando o runtime permitir entrada multimodal/contextual:
 - apontar para algo não autoriza ação sobre esse algo;
 - em canvas colaborativo, humanos e agentes devem ver edits/status/presence de forma atribuível;
 - design memory pode registrar exemplars e decisões duráveis, mas regras propostas por distillation precisam de revisão humana.
+## Progressive disclosure e artifact lifecycle
+
+- descobrir catálogo/ponteiros primeiro e carregar definições completas somente quando a tarefa exigir;
+- evitar injetar todas as tools/skills no contexto apenas porque estão disponíveis;
+- separar conversation lifecycle de artifact lifecycle: um artifact pode permanecer, ser editado, versionado e reutilizado depois que a thread termina;
+- permitir superfícies próprias para artifacts interativos quando o runtime oferecer;
+- mudanças por direct manipulation, editor visual ou agente precisam voltar ao record canônico ou ficar explicitamente efêmeras;
+- status de background work deve ser parte do workspace, não inferido pela ausência de mensagem final.
+
 
 ## Human-AI co-creation
 - IA pode propor, gerar, organizar e transformar.

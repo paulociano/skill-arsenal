@@ -24,6 +24,16 @@ Usar em triagem e decisões repetitivas com domínio delimitado. Esta é uma ada
 O caminho curto serve quando alternativas e critérios são claros, evidência é suficiente e o custo do erro é aceitável. Decisões abertas, irreversíveis, contraditórias ou sensíveis a premissas exigem o workflow completo de decision-analysis e revisão proporcional ao impacto.
 
 Não forçar respostas fechadas para perguntas que precisam de criação, explicação ou investigação. Não atribuir percentuais de confiança por intuição. Se não houver calibração validada, declarar probabilidade calibrada indisponível; evidência textual continua útil.
+## Probabilidade, calibração e threshold
+
+Quando um runtime realmente produzir distribuições probabilísticas, manter separados:
+- answer/choice: decisão ou classe;
+- distribution: probabilidades sobre alternativas definidas;
+- calibration: evidência empírica de correspondência entre probabilidade e frequência observada;
+- decision threshold: regra operacional escolhida pelo custo de erro e risco.
+
+Uma distribuição sem calibração validada não autoriza tratar 0,8 como 80% de chance real. Threshold deve ser escolhido com dados representativos.
+
 
 ## Exemplo
 

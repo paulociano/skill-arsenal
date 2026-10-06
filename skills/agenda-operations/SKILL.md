@@ -35,6 +35,14 @@ Transformar calendário em instrumento de capacidade e execução, não apenas r
 6. Propor ajustes em ordem de menor impacto: encurtar, adicionar pauta/resultado, mover, agrupar, criar buffer, criar foco, converter em async ou cancelar como proposta.
 7. Mostrar consequências e conflitos antes de qualquer mutação.
 8. Executar apenas alterações autorizadas e verificar o estado final no calendário.
+## Colaboração entre fusos
+
+- calcular a interseção real de working hours, não apenas converter relógios;
+- distinguir recorrência por instante fixo de recorrência por horário local fixo;
+- verificar transições de DST que alterem a sobreposição útil;
+- para séries recorrentes, revisar a próxima mudança relevante de offset dentro do horizonte operacional;
+- nunca assumir que a diferença entre dois fusos permanece constante ao longo do ano.
+
 
 ## Heurísticas
 

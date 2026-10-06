@@ -84,6 +84,17 @@ Não usar para edição de footage existente; nesse caso, preferir `video-editin
     - gerar master e transcodes somente se a ferramenta real existir;
     - assistir/revisar o resultado final com áudio antes de afirmar conclusão;
     - produzir um pequeno shot list/caption map quando isso ajudar distribuição.
+## Source artifact, seekability e direção por evidência
+
+- manter source artifact editável separado do master renderizado;
+- preview e render final devem derivar da mesma composição/timeline sempre que possível;
+- animações em render frame-by-frame precisam ser seekable: o estado em time/frame deve ser reconstruível sem histórico de playback;
+- preferir render(frame) → estado visual determinístico a timers soltos ou estado acumulado;
+- GSAP, CSS, Lottie, Three.js, WAAPI, Remotion e adapters equivalentes são implementações, não owners;
+- em projetos complexos, materializar analysis, brand, script, motion language, choreography e review como records distintos;
+- feedback deíctico por elemento selecionado ou crop deve virar referência explícita para a mudança;
+- componentes de motion reutilizáveis podem ser catalogados por função, preservando código/asset editável.
+
 
 ## Product-film mode
 

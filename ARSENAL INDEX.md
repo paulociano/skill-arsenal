@@ -74,6 +74,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 
 ## Skills
 
+- **2d-mesh-avatar-rigging** — Transformar uma ilustração 2D em avatar animável por layers, mesh, pivots, face/mouth/eye rig, corrective variants e pose QA antes de uso ao vivo.
 - **3gpp-standards-research** — Pesquisar padrões celulares 3GPP, protocolos e evolução de releases com TS/TR e status normativo verificáveis.
 - **academic-paper-orchestration** — Estruturar e revisar manuscritos acadêmicos a partir de pesquisa real, verificando claims, resultados, figuras e citações.
 - **academic-rebuttal** — Estruturar rebuttals e author responses acadêmicos a partir de reviews, paper, código, regras confirmadas do venue, evidência rastreável, triagem de experimentos e cobertura completa das preocupações dos revisores.
@@ -154,6 +155,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **game-ai-engineering** — Projetar, implementar e validar AI de gameplay para NPCs com percepção, state machines, behavior trees, GOAP, steering, pathfinding/navigation e aprendizado quando realmente justificado.
 - **game-build-release-engineering** — Projetar e validar builds e releases de jogos por plataforma com reproducible configuration, asset/content packaging, signing/secrets, CI, versioning, smoke tests, release artifacts e rollback/update strategy.
 - **game-animation-engineering** — Projetar, integrar e validar animação de personagens e objetos em jogos com state graphs, blending, root motion, rigging/IK, events, procedural layers e ownership explícito entre gameplay, physics e animation.
+- **explainer-video-production** — Produzir vídeos explicativos narrados sincronizando roteiro, voz e mudanças visuais por beats ou palavras, com inspeção de frames, legibilidade, áudio e render verificáveis.
 - **game-audio-engineering** — Projetar e validar áudio de jogos com eventos, buses/mixers, spatialization, concurrency, adaptive music, ducking, pooling, DSP budget e integração observável com gameplay.
 - **combat-ability-engineering** — Projetar e validar combate e abilities com attributes, costs, cooldowns, targeting, effects, hit windows, combos, status effects, cancellation, feedback e contratos de autoridade compatíveis com single e multiplayer.
 - **game-camera-cinematics-engineering** — Projetar e validar câmeras de gameplay e sequências cinematográficas com framing, follow/aim, blends, damping, collision, camera states, shake e transições dirigidas por gameplay sem acoplar lógica de jogo à câmera.
@@ -219,6 +221,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **patent-strategy-review** — Auditar e pressionar pedidos de patente utilitária dos EUA com gates de completude, suporte, prior art, claim coverage e design-around, separando análise técnica de aconselhamento jurídico.
 - **photo-relational-abstraction** — Analisar uma fotografia fornecida, extrair relações visuais observáveis e reconstruí-las como composição abstrata não literal, preservando invariantes espaciais sem aplicar style transfer à foto original.
 - **plain-writing** — Escrever ou revisar prosa para máxima clareza usando palavras comuns, estrutura lógica, terminologia consistente, contexto suficiente e remoção de jargão, puffery e formulações artificiais.
+- **music-generation-engineering** — Projetar workflows de música generativa por IA com blueprint musical, letra, BPM/key/meter, referência, variações, stems, edição localizada e QA sem depender de um modelo específico.
 - **payment-billing-operations** — Projetar e analisar operações de pagamentos e billing com payment intents, routing, retries, idempotency, invoices, subscriptions, metering, reconciliation, refunds, dunning e controles antes de qualquer movimentação real de valor.
 - **powerbi-engineering** — Projetar, construir, auditar e versionar soluções Power BI com modelo semântico, DAX, performance, temas, embedding e práticas de ALM conforme ferramentas realmente disponíveis.
 - **presentation-template-adaptation** — Adaptar conteúdo a um deck de referência preservando identidade visual, elementos fixos e capacidade dos layouts.

@@ -136,6 +136,17 @@ Cada passo deve poder falhar sem obrigar a recomeçar do zero.
 
 12. **Completion**
     Só declarar concluído quando checks relevantes passarem e o diff observado corresponder ao pedido.
+## Design versus implementation approval
+
+Em sessões educacionais ou de co-design, distinguir explicitamente:
+1. requisito/comportamento desejado;
+2. proposta de design;
+3. aprovação do design;
+4. autorização para editar;
+5. verificação do resultado.
+
+Confirmar requisito não concede automaticamente autoridade para escolher arquitetura irreversível; aprovar design também não precisa autorizar imediatamente a escrita.
+
 
 ## Autonomy tiers
 

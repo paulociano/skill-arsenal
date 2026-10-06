@@ -98,6 +98,20 @@ Para agentes, não reduzir qualidade a uma nota final:
 - red teaming adversarial deve ser roteado para `llm-red-team-evaluation`, preservando aqui o owner de observabilidade e qualidade geral.
 
 Padrões consolidados de Promptfoo, DeepEval, Phoenix, Opik, Langfuse e OpenLIT: ferramentas diferem, mas o owner canônico continua sendo dataset + trace + metric + experiment + regression gate.
+## Longitudinal model drift
+
+Quando a pergunta for se um modelo/provider mudou de comportamento ao longo do tempo, mesmo mantendo o mesmo nome:
+- congelar baseline, dataset, harness e configuração antes da observação;
+- repetir um painel pareado de casos estáveis em janelas temporais comparáveis;
+- manter um control arm capaz de revelar mudanças de infraestrutura, prompt, retrieval ou harness;
+- incluir um positive control que prove que o instrumento detecta uma degradação conhecida;
+- executar A/A ou repetição suficiente para estimar variabilidade natural;
+- pré-registrar threshold/regra de decisão, sem escolhê-los retrospectivamente;
+- registrar resultados append-only com timestamp, model identifier, provider/config e versão do harness;
+- comparar distribuição e slices, não apenas média agregada.
+
+Mudança observada sem controles adequados é evidência de comportamento diferente no sistema, não prova isolada de alteração nos pesos do modelo.
+
 
 ## Prompt management
 

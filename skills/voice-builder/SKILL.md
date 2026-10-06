@@ -45,6 +45,13 @@ Estrutura recomendada:
 8. Editing preferences.
 
 Amostras escritas manualmente pelo usuário têm prioridade sobre textos gerados por IA para inferir voz.
+## Perfil compartilhado entre operações de conteúdo
+
+- quando post, comentário, reply, DM, carousel e repurpose compartilham identidade, manter um perfil canônico de voz e channel notes;
+- especificidade, repetição estrutural, cadência uniforme, filler e vícios recorrentes são sinais editoriais, não prova de autoria humana;
+- human score heurístico nunca deve ser apresentado como detector confiável de IA;
+- publicação externa permanece separada da redação e exige autorização/ferramenta apropriada.
+
 
 ## Regras
 

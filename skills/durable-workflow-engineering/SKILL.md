@@ -97,6 +97,17 @@ Separar:
     - crash between effect and acknowledgement;
     - compensation failure;
     - version transition.
+## Conservação de trabalho e fencing de efeitos
+
+- trabalho aceito precisa existir em estado durável antes de depender da vida de um processo;
+- acknowledgement de recebimento não equivale a conclusão;
+- registrar attempt/intenção antes de efeito externo quando recovery depender disso;
+- se um worker morrer durante operação mutável, tratar o estado como ambíguo/interrompido, não como retry automaticamente seguro;
+- consultar estado externo ou usar idempotency/fencing antes de repetir writes;
+- usar generation/lease/fencing token para impedir worker antigo de sobrescrever estado mais novo;
+- separar accepted → attempt → external effect → acknowledgement → terminal outcome;
+- model checking complementa, mas não substitui boundary tests reais.
+
 
 ## Regras
 

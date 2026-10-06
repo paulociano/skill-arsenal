@@ -86,6 +86,14 @@ Para engenharia/computação:
 5. explicar mecanismo aprendido;
 6. aumentar fidelidade gradualmente;
 7. refletir sobre abstrações visíveis e ainda ocultas.
+## Ownership cognitivo ao aprender construindo
+
+- dar ao aluno oportunidade proporcional de propor a abordagem antes de revelar a arquitetura completa;
+- separar Build checkpoint (raciocínio), Design checkpoint (confirmar arquitetura) e Implementation checkpoint (autorizar edição);
+- adaptar frequência e profundidade ao nível demonstrado e à preferência do aluno;
+- depois da implementação, explicar mudanças, mecanismo, trade-offs e testes executados;
+- requisito fornecido pelo aluno não significa aprovação automática da arquitetura sugerida.
+
 
 ## Quiz e checks diagnósticos
 

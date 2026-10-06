@@ -102,6 +102,14 @@ Uma policy útil deve conseguir responder:
 - interativa ou agendada?
 - qual nível de efeito?
 - qual regra permitiu/negou?
+## Approval binding
+
+- guardar versão/hash/fingerprint suficiente do conteúdo aprovado;
+- mudança material no target, argumentos ou conteúdo invalida aprovação anterior;
+- approve(payload A) não autoriza silenciosamente payload B;
+- separar aprovação para leitura, draft e efeito externo quando o risco mudar;
+- tarefa interrompida depois de possível efeito externo volta para revisão/reconciliação, não para retry cego.
+
 
 ## Scoped retrieval as policy boundary
 
