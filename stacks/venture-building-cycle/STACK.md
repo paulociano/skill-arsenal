@@ -33,6 +33,9 @@ Para uma tarefa isolada, usar somente a skill owner correspondente.
 - experiment-design
 - first-customer-research
 - brand-strategy
+- go-to-market-strategy
+- saas-pricing-monetization
+- strategic-landscape-mapping
 - landing-craft
 - to-spec
 - project-planning
@@ -168,6 +171,8 @@ Antes do MVP:
 Usar `to-spec` somente quando a solução estiver suficientemente decidida.
 
 ### 8. Monetization hypothesis
+Quando pricing/packaging for material, usar `saas-pricing-monetization`.
+
 Separar:
 - quem paga;
 - value metric;
@@ -184,6 +189,8 @@ Preço de concorrente é âncora de mercado, não prova de willingness-to-pay.
 Quando custo recorrente é material, evitar modelos que desconectem receita do custo sem explicitar o risco.
 
 ### 9. First customers and GTM
+Usar `go-to-market-strategy` quando positioning, motion, canais, launch e sales precisarem formar um sistema coerente.
+
 Usar `first-customer-research` para design partners/beta/primeiros clientes.
 
 Explorar canais como hipóteses. Para os mais plausíveis:
@@ -252,6 +259,8 @@ A tabela é orientação, não regra automática.
 
 ## Innovation / corporate venture
 
+Quando a decisão depender de onde diferenciar, comprar, padronizar ou explorar mudança de mercado/ecossistema, considerar `strategic-landscape-mapping`.
+
 Em empresa estabelecida, adicionar:
 - sponsor/decision owner;
 - strategic fit;
@@ -280,6 +289,9 @@ Ausência de evidência não é evidência de fracasso, mas também não autoriz
 
 - ciclo de produto recorrente → `product-management-cycle`;
 - pesquisa de mercado/primeiros clientes → `first-customer-research`;
+- GTM completo → `go-to-market-strategy`;
+- pricing/packaging/monetização → `saas-pricing-monetization`;
+- paisagem estratégica/build-buy-commodity → `strategic-landscape-mapping`;
 - decisão financeira → `business-decision-intelligence` quando houver dados;
 - protótipo web → `creative-web-engineering` ou `web-design-engineer` quando fidelidade real for necessária;
 - apresentação/pitch → `research-to-presentation` somente depois de estabilizar os claims relevantes.
