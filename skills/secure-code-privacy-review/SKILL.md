@@ -14,7 +14,7 @@ Revisar implementação, diff ou PR por duas superfícies relacionadas mas disti
 - código que coleta, armazena, transmite ou registra dados pessoais/sensíveis;
 - PRs em que um finding precisa ser validado antes de ser reportado.
 
-Não usar para avaliar se uma skill/plugin externa é segura para instalar; use `skill-security-review`. Para red team de aplicações LLM, use `llm-red-team-evaluation`.
+Não usar para avaliar se uma skill/plugin externa é segura para instalar; use `skill-security-review`. Para red team de aplicações LLM, use `llm-red-team-evaluation`. Para testar controles de um web app/API em runtime autorizado, use `web-application-security-audit`.
 
 ## Workflow
 1. **Context** — identificar frameworks/proteções reais, trust boundaries e superfícies alteradas.
@@ -55,7 +55,7 @@ Mapear obrigação regulatória somente quando jurisdição, papel da organizaç
 - não afirmar cobertura completa se parte do diff/flow não foi revisada.
 
 ## Integração
-`code-review`, `behavior-contract-validation`, `skill-security-review`, `llm-red-team-evaluation`, `verify-before-claim`.
+`code-review`, `behavior-contract-validation`, `web-application-security-audit`, `skill-security-review`, `llm-red-team-evaluation`, `verify-before-claim`.
 
 ## Origem metodológica
 Síntese adaptada de `facebookresearch/secpriv-skill` e `Clear-Capabilities/agentic-security · privacy-data-flow`. Preserva detector→validator, trust boundaries e data-flow preflight sem exigir scanners, scratchpads, slash commands ou regras jurídicas absolutas das fontes.
