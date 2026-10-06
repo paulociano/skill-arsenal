@@ -52,8 +52,17 @@ Developer platform:
 Architecture decisions/domain:
 - `domain-modeling`
 
+Release engineering:
+- `release-engineering`
+
 Production delivery:
 - `production-go-live`
+
+Progressive delivery:
+- `progressive-delivery-verification`
+
+Resilience:
+- `resilience-engineering`
 
 Behavior verification:
 - `behavior-contract-validation`
@@ -116,10 +125,13 @@ Agentic software factory:
    - only when repeated team toil justifies a reusable internal platform.
 
 10. **Release**
+   - classify consumer impact;
+   - version/changelog/release unit;
    - immutable artifacts;
    - reproducible pipeline;
    - approval;
    - deploy/reconcile;
+   - progressive exposure when risk justifies;
    - runtime verification;
    - rollback limits.
 
@@ -151,7 +163,10 @@ Exemplos:
 - workflow longo: adicionar `durable-workflow-engineering`;
 - monorepo pesado: adicionar `build-system-engineering`;
 - organização com muitos times: `developer-platform-engineering`;
-- release real: `production-go-live`.
+- versionamento/changelog/package publication: `release-engineering`;
+- release real: `production-go-live`;
+- canary/blue-green/progressive rollout: `progressive-delivery-verification`;
+- fault injection/recovery testing: `resilience-engineering`.
 
 ## Regras
 
@@ -167,4 +182,4 @@ Exemplos:
 
 ## Provenance
 
-Stack construída do lote 2026-10-03 de 16 repositórios de software engineering, com maior peso em Hypothesis, Testcontainers, OpenTelemetry Collector, Temporal, Backstage, Trivy, Renovate, Semgrep, Bazel/Pants, Dagger e Argo CD. Charlytoc/ai-todo-app contribuiu para draft-first. addyosmani/factory acrescentou o modo software factory com queue durável, verifier independente, back-pressure e merge humano. O lote 2026-10-05 acrescentou roteamento explícito para auditoria web autorizada e engenharia PWA.
+Stack construída do lote 2026-10-03 de 16 repositórios de software engineering, com maior peso em Hypothesis, Testcontainers, OpenTelemetry Collector, Temporal, Backstage, Trivy, Renovate, Semgrep, Bazel/Pants, Dagger e Argo CD. Charlytoc/ai-todo-app contribuiu para draft-first. addyosmani/factory acrescentou o modo software factory com queue durável, verifier independente, back-pressure e merge humano. O lote 2026-10-05 acrescentou roteamento explícito para auditoria web autorizada e engenharia PWA. A expansão de release/quality do mesmo dia adicionou release engineering, progressive delivery e resilience engineering como owners separados.
