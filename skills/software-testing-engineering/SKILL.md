@@ -53,11 +53,20 @@ Projetar testes por risco e contrato observável, indo além de unit tests e TDD
    - lifecycle determinístico;
    - cleanup explícito.
 
-5. **Contract**
+5. **Contract and API**
    - validar request/response/schema/protocol;
-   - producer/consumer contracts quando múltiplos serviços evoluem independentemente.
+   - producer/consumer contracts quando múltiplos serviços evoluem independentemente;
+   - quando houver OpenAPI/GraphQL/schema executável, derivar casos válidos e inválidos em vez de depender só de exemplos manuais;
+   - testar violações de schema, validação bypass, edge cases e sequências stateful quando o risco justificar;
+   - falhas geradas devem ser minimizadas/reproduzíveis e virar regressão quando confirmadas.
 
-6. **Browser/E2E**
+6. **Service virtualization**
+   - usar serviço real descartável quando a semântica verdadeira importa;
+   - usar virtualization/mocks de rede quando o objetivo é controlar respostas ou falhas difíceis de reproduzir;
+   - modelar contratos relevantes: status, headers, payload, latency, timeout, disconnect, rate limit e malformed responses;
+   - não deixar mock permissivo aceitar comportamento que o provider real rejeitaria.
+
+7. **Browser/E2E**
    - reservado a jornadas críticas;
    - ambiente previsível e dados isolados;
    - preferir um contexto/sessão limpo por teste quando estado residual puder contaminar resultado;
@@ -67,19 +76,19 @@ Projetar testes por risco e contrato observável, indo além de unit tests e TDD
    - em falhas difíceis, preservar trace/artifacts com DOM, network, console e screenshot quando a ferramenta suportar;
    - evitar cobrir toda regra de negócio apenas por E2E.
 
-7. **Flakiness**
+8. **Flakiness**
    - eliminar sleeps fixos quando condição observável existe;
    - clock/randomness/network controláveis;
    - retry serve para diagnóstico, não para transformar vermelho em verde;
    - registrar causa antes de quarantine permanente.
 
-8. **Test data**
+9. **Test data**
    - builders/factories;
    - dados mínimos;
    - evitar PII/segredos reais;
    - snapshots/versioned fixtures apenas quando ajudam revisão.
 
-9. **CI**
+10. **CI**
    - focused suite primeiro;
    - full suite nos gates adequados;
    - artifacts/logs de falha;
@@ -103,7 +112,9 @@ Boas propriedades:
 - property test precisa de invariant útil, não randomização ornamental;
 - falha encontrada deve virar regressão reproduzível;
 - browser E2E não deve depender de sleeps arbitrários ou selectors frágeis quando existe condição observável mais estável;
-- trace, screenshot ou vídeo ajudam diagnóstico, mas não substituem assertions sobre o efeito correto.
+- trace, screenshot ou vídeo ajudam diagnóstico, mas não substituem assertions sobre o efeito correto;
+- schema-derived/fuzz testing deve respeitar rate limits, autorização e ambiente;
+- service virtualization complementa, não substitui, uma verificação contra integração real quando compatibility é material.
 
 ## Integração
 
@@ -113,4 +124,4 @@ Boas propriedades:
 
 Consolidada de Hypothesis e Testcontainers. Absorve property-based testing, shrinking e dependências reais descartáveis sem exigir Python, Java, Docker ou bibliotecas específicas.
 
-Playwright acrescentou princípios de browser isolation, auto-wait/web-first assertions, locators orientados à superfície do usuário e traces de falha. A skill continua framework-agnostic: Playwright, Cypress ou outro runner só são usados quando já disponíveis e adequados.
+Playwright acrescentou princípios de browser isolation, auto-wait/web-first assertions, locators orientados à superfície do usuário e traces de falha. Schemathesis reforçou schema-derived/property/stateful API testing; Pact reforçou consumer/provider contracts; WireMock, MockServer e Karate reforçaram service virtualization e fault-aware integration testing. A skill continua framework-agnostic e não exige essas ferramentas.
