@@ -134,7 +134,13 @@ Cada passo deve poder falhar sem obrigar a recomeçar do zero.
 
     Benchmark externo não substitui suite do projeto.
 
-12. **Completion**
+12. **Harness extensibility**
+    Quando o agente for uma plataforma extensível, manter o núcleo pequeno e empurrar variações de workflow para extensões, skills, templates ou pacotes carregados sob demanda.
+    - não embutir plan mode, subagents ou outras opiniões como obrigatórias se puderem ser composição externa;
+    - expor modos automatizáveis além da UI interativa, como JSON/RPC/SDK, quando outros agentes ou sistemas precisarem dirigir o runtime;
+    - extensibilidade não substitui policy: um harness sem permission boundary continua herdando todos os privilégios do processo que o executa.
+
+13. **Completion**
     Só declarar concluído quando checks relevantes passarem e o diff observado corresponder ao pedido.
 ## Design versus implementation approval
 
@@ -202,4 +208,4 @@ Combina com:
 
 ## Provenance
 
-Consolidada de `Aider-AI/aider`, `continuedev/continue` e `charmbracelet/crush`, com apoio de padrões já existentes no Arsenal. Preserva repo maps/context seletivo, Git, LSP/symbol context, sessões, multi-model support e edit-test loops. Remove installers, auto-commit obrigatório, provider-specific setup e qualquer suposição de shell irrestrito.
+Consolidada de `Aider-AI/aider`, `continuedev/continue`, `charmbracelet/crush` e `earendil-works/pi`, com apoio de padrões já existentes no Arsenal. De Pi foram absorvidos núcleo mínimo, extensibilidade por packages/skills/templates e interfaces automatizáveis por JSON/RPC/SDK; não foi absorvida a ausência de permission system, tratada aqui como risco explícito. Preserva repo maps/context seletivo, Git, LSP/symbol context, sessões, multi-model support e edit-test loops. Remove installers, auto-commit obrigatório, provider-specific setup e qualquer suposição de shell irrestrito.
