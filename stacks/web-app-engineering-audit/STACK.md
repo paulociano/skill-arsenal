@@ -29,7 +29,9 @@ Executar uma auditoria técnica de web app/PWA sem transformar a revisão em che
 - `web-quality-audit` — performance, acessibilidade e best practices;
 - `pwa-engineering` — somente quando PWA/offline/installability fizer parte do produto;
 - `software-supply-chain-engineering` — dependências, artifacts e provenance;
-- `runtime-ui-verification` — jornadas no app real;
+- `runtime-ui-verification` — jornadas, estados de componente e visual baselines no app real;
+- `resilience-engineering` — somente quando dependency/network failure e recovery forem risco material;
+- `progressive-delivery-verification` — somente quando o audit incluir estratégia de release/canary;
 - `decision-analysis` — trade-offs de modernização/adoção tecnológica;
 - `verify-before-claim` — fechamento por evidência.
 
