@@ -22,9 +22,15 @@ Modelar o ciclo de cobrança e pagamento com estados explícitos, idempotência 
 - dunning;
 - payment-provider integration.
 
+## Ownership boundary
+
+Para decidir value metric, packaging, tiers, price point, willingness-to-pay ou rollout de preço, use `saas-pricing-monetization`.
+
+Esta skill começa quando a estratégia precisa virar contrato operacional de billing e pagamento.
+
 ## Lifecycle
 
-`usage/order → pricing → invoice/charge → payment attempt → processor → settlement → reconciliation → refund/dispute if any`
+`usage/order → pricing rule → invoice/charge → payment attempt → processor → settlement → reconciliation → refund/dispute if any`
 
 ## Workflow
 
@@ -106,7 +112,7 @@ Modelar o ciclo de cobrança e pagamento com estados explícitos, idempotência 
 
 ## Integração
 
-`accounting-financial-statements`, `banking-ledger-engineering`, `secure-code-privacy-review`, `system-design-engineering` e `verify-before-claim`.
+`saas-pricing-monetization`, `accounting-financial-statements`, `banking-ledger-engineering`, `secure-code-privacy-review`, `system-design-engineering` e `verify-before-claim`.
 
 ## Provenance
 
