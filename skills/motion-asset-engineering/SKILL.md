@@ -36,7 +36,9 @@ Use quando:
 Use quando:
 - asset precisa responder a inputs/estados;
 - state machine faz parte da experiência;
-- animação precisa ser reutilizável e interativa.
+- animação precisa ser reutilizável e interativa;
+- Data Binding/View Models evitam duplicar estado visual em código;
+- o fluxo se beneficia de um artefato textual/versionável gerado ou revisado por agente via RML/CLI, desde que o CLI esteja realmente disponível e o resultado seja validado no runtime.
 
 ### Canvas/WebGL
 Use quando:
@@ -59,7 +61,13 @@ Use quando:
 7. Para autoplay/loops decorativos, respeitar reduced motion e pausar quando fora de viewport quando fizer sentido.
 8. Garantir fallback estático quando o asset comunica informação importante.
 9. Testar transparência, resize, DPR, theme/light-dark e lifecycle.
-10. Verificar consumo de CPU/GPU e impacto em LCP/INP quando relevante.
+10. Para Rive state-machine/data-binding, testar explicitamente idle, input, loading/progress quando houver, success, error, disabled, interrupção/reentrada e atualização de dados.
+11. Quando usar RML/CLI com agente:
+    - manter o markup textual em versionamento quando fizer parte do source of truth;
+    - compilar/inspecionar o artefato antes de considerar o diff suficiente;
+    - usar trace de state machine e render/headless preview quando disponíveis;
+    - não tratar geração válida de RML como prova de comportamento visual correto.
+12. Verificar consumo de CPU/GPU e impacto em LCP/INP quando relevante.
 
 ## Regras
 
@@ -69,11 +77,15 @@ Use quando:
 - Não usar autoplay pesado acima da dobra sem medir impacto.
 - Assets animados de terceiros continuam sujeitos a licença e proveniência.
 - Motion sem função pode ser substituído por um frame estático.
+- Rive não deve substituir DOM/React/layout semântico por padrão; use-o como camada de experiência quando interação visual/state machine trouxer ganho claro.
+- UI essencial precisa preservar fallback, foco, semântica e reduced motion fora do canvas/runtime quando necessário.
 
 ## Integração
 
 ui-motion-design, interaction-polish, scroll-storytelling, shader-graphics-engineering, web-quality-audit.
 
 ## Origem metodológica
+
+A avaliação 2026-10-06 de Rive incorporou o CLI/RML orientado a agentes, state-machine trace e Data Binding/View Models como padrões de produção verificável, preservando a regra de tecnologia mínima suficiente e sem assumir que o CLI esteja instalado.
 
 Adaptada de airbnb/lottie-web, rive-app/rive-wasm e práticas de SVG/Canvas/WebGL do Arsenal. Preserva a decisão tecnológica e o handoff sem exigir as ferramentas autorais de origem.

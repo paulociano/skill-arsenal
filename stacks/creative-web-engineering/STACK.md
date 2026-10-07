@@ -34,6 +34,9 @@ Criar experiências web expressivas sem confundir "moderno" com excesso de efeit
 4. **Narrative movement** — scroll-storytelling somente quando scroll participa da narrativa.
 5. **Motion language** — ui-motion-design define função, personalidade e tecnologia antes da implementação.
 6. **Creative layer** — quando a experiência pedir linguagem de câmera, vídeo ou continuidade entre cenas, cinematic-visual-direction define os shots; depois escolher motion-asset-engineering ou creative-web-effects conforme o efeito seja asset ou runtime gráfico.
+   - Para Rive, use-o como interactive experience layer quando state machine, Data Binding ou resposta rica a inputs fizerem parte do comportamento.
+   - Não mover navegação, texto semântico, formulários ou layout comum para Rive apenas porque é possível.
+   - Quando RML/CLI estiver disponível, o markup textual pode entrar no fluxo plan → generate/edit → build → preview/trace → runtime verify → commit.
 7. **Physics/procedural gate** — springs, partículas, forças, Canvas/WebGL ou simulações entram apenas quando o comportamento exige física/procedural real. Definir parâmetros observáveis e uma forma de verificar o efeito, evitando movimento aleatório usado como substituto de direção.
 8. **Implementation** — shader-graphics-engineering/gsap-animation apenas quando necessários.
 9. **Polish** — interaction-polish após estrutura e conteúdo estarem estáveis.
@@ -66,11 +69,14 @@ Antes de adicionar cada camada expressiva, responder:
 - como se comporta em mobile e reduced motion?
 - o site ainda funciona se essa camada falhar?
 - se usa física/procedural, qual comportamento observável prova que não é drift sintético?
+- se usa Rive/state machine, quais estados, inputs, eventos, bindings e fallbacks precisam ser verificados?
 
 ## Regra de parcimônia
 
 Um site contemporâneo pode usar zero WebGL e zero smooth scroll. Não ativar especializações porque estão na stack. A menor composição que entrega a direção é a correta.
 
 ## Origem metodológica
+
+A avaliação 2026-10-06 de Rive adicionou o padrão de interactive experience layer com State Machines, Data Binding, RML/CLI e verificação por estados, sem transformar Rive em substituto universal de HTML/React/CSS.
 
 Stack sintetizada da segunda avaliação de creative web, incluindo Motion, Lenis, r3f-scroll-rig, Theatre.js, Rive/Lottie, React Bits, Animate UI, Magic UI, Radix/Floating UI e ecossistema pmndrs. Enriquecida com princípios portáveis de LottieFiles/motion-design-skill e feitangyuan/motion-web, sem importar seus scripts, verificadores ou runtimes como dependências. O modo immersive 3D page foi refinado a partir de blendi-remade/dioramas, preservando scene-as-page, camera-as-layout, signature interaction, asset/performance budgets e frame-based QA sem depender de sua engine, modelos, fal/Meshy ou scripts.

@@ -116,22 +116,30 @@ Quando database for necessária, preserve equivalente:
    - distinguir memória histórica de estado atual;
    - facts externos mutáveis precisam de revalidação.
 
-7. **Correct / supersede**
+7. **Portable handoff / shared recall**
+   - quando múltiplos agentes ou sessões participarem do mesmo projeto, preferir registros portáveis, inspecionáveis e vinculados ao workspace em vez de transcripts proprietários;
+   - um handoff deve registrar fonte, horário/estado observado, o que mudou, pendências, próximo passo e target quando houver;
+   - recuperar memória antes de criar outra cópia equivalente;
+   - tratar memória recuperada como evidência potencialmente desatualizada, nunca como autorização ou verdade atual;
+   - separar escopos de projeto, equipe e usuário quando o runtime suportar isso; labels de harness/target roteiam contexto, não concedem permissão;
+   - um miss incompleto, store truncado ou documento inválido não deve ser apresentado como “não existe” sem verificar diagnósticos do mecanismo.
+
+8. **Correct / supersede**
    - correção não apaga silenciosamente a história;
    - manter `valid_from` / `invalid_at` ou mecanismo equivalente quando temporalidade importa;
    - permitir consulta as-of quando decisões históricas dependem do estado anterior.
 
-8. **Consolidate**
+9. **Consolidate**
    - rodar em ciclo separado quando possível;
    - merge exige preservar provenance;
    - unattended deletion deve ser mais restrita que unattended add/update.
 
-9. **Session close / checkpoint**
+10. **Session close / checkpoint**
    - quando o host não garante persistência contínua confiável, fechar blocos substanciais com uma varredura curta de fatos, decisões, tarefas e correções ainda não materializados;
    - atualizar somente os índices/mapas afetados, evitando revarrer o store inteiro;
    - não usar o checkpoint como desculpa para adiar toda captura até o fim.
 
-10. **Evaluate**
+11. **Evaluate**
    - dataset/casos reais;
    - medir retrieval exposure, acerto e custo;
    - verificar se o agente realmente usou o caminho testado;
@@ -193,5 +201,7 @@ Combina com:
 - `verify-before-claim`.
 
 ## Provenance
+
+O padrão de handoff portátil, scopes project/team/user, recall-before-write e memória como evidência revisável foi refinado a partir de `affaan-m/ECC` (`unified-memory`), sem adotar o runtime ECC Memory Vault como dependência.
 
 Consolidada de [TIMAN-group/PlugMem](https://github.com/TIMAN-group/PlugMem), [tigerless-labs/agent-memory](https://github.com/tigerless-labs/agent-memory), [mem0ai/mem0](https://github.com/mem0ai/mem0) e [letta-ai/letta](https://github.com/letta-ai/letta). A avaliação local `Segundo Cérebro v3` (2026-10-02) acrescentou os padrões portáveis de bootstrap pelo briefing, mapas hierárquicos locais e checkpoint de sessão. LatticeDB acrescentou retrieval híbrido local graph+vector+BM25 e changefeeds duráveis. dragthelake/ambient-context acrescentou captura ambiente local-first com record bruto separado de knowledge/notes. kunchenguid/backpass reforçou edição de memória baseada em evidência de sessões reais com human apply gate. halofyai/halofy acrescentou namespace ACL server-owned, supersedence, scoped retrieval e signed erasure. A skill continua sem assumir esses runtimes ou stores específicos.

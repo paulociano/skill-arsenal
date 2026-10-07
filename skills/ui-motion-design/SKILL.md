@@ -48,6 +48,7 @@ Para sequências com vários elementos, planeje coreografia por:
 - **timeline** — sequência coreografada;
 - **scroll-linked** — progresso dirigido por scroll;
 - **asset playback** — animação autorada externamente;
+- **interactive state machine** — componente visual cujo estado, transições, inputs e dados fazem parte do comportamento da interface;
 - **procedural** — Canvas/WebGL/shader.
 
 Escolha paradigma antes de biblioteca.
@@ -64,16 +65,17 @@ Escolha paradigma antes de biblioteca.
 8. Garantir prefers-reduced-motion e alternativa funcional.
    - Em morphs interruptíveis, retomar da forma atualmente renderizada em vez de reiniciar da origem quando isso preserva continuidade.
    - Em transições dependentes de assets/fontes, preservar layout e função com fallback estático quando o morph não puder ser resolvido.
-9. Escolher tecnologia pelo requisito:
+9. Para componentes interativos ricos, explicitar primeiro o contrato de estados e dados (ex.: ready → active → success/error → next) antes de decidir se ele vive em React/CSS, Motion/GSAP ou em uma state machine autorada como Rive.
+10. Escolher tecnologia pelo requisito:
    - CSS/WAAPI para transições simples;
    - Motion quando layout transitions, gestures, springs e animação React declarativa forem a melhor aderência;
    - gsap-animation para timelines, scroll e coordenação complexa;
    - motion-asset-engineering para Rive/Lottie/SVG/video;
    - shader-graphics-engineering para motion procedural de GPU;
    - biblioteca já instalada quando atende sem migração.
-10. Para experiências dirigidas por scroll, usar scroll-storytelling para arquitetura narrativa antes da implementação.
-11. Verificar em runtime fluidez, foco, input por teclado/toque e ausência de bloqueio de conteúdo.
-12. Remover loops decorativos ou efeitos que aumentam custo sem ajudar a tarefa.
+11. Para experiências dirigidas por scroll, usar scroll-storytelling para arquitetura narrativa antes da implementação.
+12. Verificar em runtime fluidez, foco, input por teclado/toque e ausência de bloqueio de conteúdo.
+13. Remover loops decorativos ou efeitos que aumentam custo sem ajudar a tarefa.
 
 ## Gate de necessidade e frequência
 

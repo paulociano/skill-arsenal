@@ -122,7 +122,7 @@ Quando um aprendizado nasce dentro de um projeto ou domínio específico:
 - tratar confidence/frequência como sinal de suporte, não como verdade;
 - correções explícitas do usuário aumentam relevância, mas não ampliam automaticamente a validade para outros projetos.
 
-Esse refinamento foi adaptado de affaan-m/ECC · continuous-learning-v2, removendo hooks, background agents, auto-write e promoção automática.
+Esse refinamento foi adaptado de affaan-m/ECC · continuous-learning-v2, removendo hooks, background agents, auto-write e promoção automática. O padrão de "instincts" foi preservado apenas como ideia de unidades atômicas Trigger → Action → Evidence com confiança como sinal auxiliar; frequência/confidence nunca substituem revisão nem provenance.
 
 ## Integração com Arsenal
 
