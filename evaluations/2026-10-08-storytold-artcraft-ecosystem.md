@@ -55,3 +55,10 @@ Não se trata de um catálogo de skills de agentes. Trata-se de um ecossistema d
 
 ## Limitações
 Triagem documental seletiva (README/metadados), sem executar software, auditar bases de código inteiras, testar MCP ou comprovar métricas de qualidade e paridade. Esta avaliação não certifica segurança operacional.
+
+## Implementação posterior (2026-10-08)
+
+- **UPDATE_EXISTING concluído:** `skills/editable-visual-design/SKILL.md` recebeu contrato de editabilidade, reversibilidade, pipeline fonte/render/export, interoperabilidade e cinco critérios de aceitação observáveis.
+- Commit da atualização: [`baec6984`](https://github.com/paulociano/skill-arsenal/commit/baec6984f44b3731bada05229beaae745a4e626d).
+- **Sem skill nova e sem alteração no índice:** owner e rota permanecem os mesmos.
+- **Limite da validação:** revisão estática do conteúdo publicado; nenhum round-trip de PhotoCraft/DeckCraft/PDFCraft foi executado, pois as engines externas não foram integradas.
