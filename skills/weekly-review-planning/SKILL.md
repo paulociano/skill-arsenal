@@ -56,3 +56,17 @@ agenda-operations, prioritization-engine, loop-engineering, project-health-revie
 ## Origem metodológica
 
 Adaptada principalmente de NousResearch/hermes-agent `weekly-review-planning`, com práticas convergentes em borghei/Claude-Skills, SkillMedev/skills, alirezarezvani/claude-skills e jugbandman/todays-plan. Dependências específicas de Hermes, cron e stores locais foram removidas.
+
+## Agenda executiva semanal por sinais (modo opcional)
+
+Quando o objetivo for preparar uma reunião de liderança, e não apenas planejar tarefas pessoais:
+
+1. Examinar follow-ups da reunião anterior e temas ainda sem resolução.
+2. Selecionar fontes realmente acessíveis da semana: reuniões, e-mails enviados, mensagens relevantes, projetos e registros de decisões; declarar fontes ausentes.
+3. Extrair temas com link/trecho de evidência, domínio impactado, decisão requerida, prazo e owner quando confirmados.
+4. Filtrar assuntos resolvidos, genéricos, sensíveis inadequados ao grupo e temas de um único domínio que cabem em 1:1.
+5. Priorizar por impacto, urgência, alcance entre áreas e tensão não resolvida, exibindo os critérios sem transformar soma arbitrária em verdade.
+6. Produzir de 3 a 10 tópicos conforme evidência, separados por **decidir / discutir / informar / acompanhar**, com motivo, fonte e pergunta de abertura. Destacar carry-forwards e itens abaixo do corte.
+7. Se a semana estiver vazia, não fabricar temas para completar quota; relatar cobertura e lacunas.
+
+Essa variante não altera calendário nem envia mensagens automaticamente. Provenance: https://github.com/zapier/wade-skills/tree/main/skills/exec-weekly-agenda-generator .
