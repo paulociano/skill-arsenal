@@ -140,3 +140,9 @@ Stack sintetizada a partir de padrões já absorvidos pelo Arsenal e da avaliaç
 - harishkotra/pixel-council: workspace espacial de agentes com connections, outputs e audit logs.
 
 block/buzz reforçou o padrão de workspace humano-agente baseado em event log auditável, identidade própria de agentes e views compartilhadas. dragthelake/ambient-context reforçou raw capture local-first separado de knowledge/summaries. rome-os/rome acrescentou workflow→app/capability persistente e compounding de ações/skills/apps em código versionável. kgoedecke/doop acrescentou canvas multiplayer humano-agente e design memory. TarunTomar122/better-voice acrescentou entrada de voz com referência visual deíctica. unstablebuild/rune reforçou workspace persistente/headless entre dispositivos. Nenhum desses runtimes é dependência desta stack.
+
+## Local-first workspace e degradação observável
+
+Em ambientes self-hosted com múltiplas ferramentas, um catálogo de capacidades deve distinguir **disponível, configurável, desabilitado, degradado e não verificado**. Mostrar o estado por integração e o próximo passo testável; não vender integração listada como integração funcional. Antes do primeiro uso, smoke-test de fresh install, autenticação, backup/restore, export, permissões de ferramentas e fluxos críticos. Para modelos locais pequenos, limitar schemas/tools/memória no context pack conforme a janela real, medindo sucesso e tokens, não apenas velocidade.
+
+Para notas, tarefas e calendários manipulados por agentes, manter autorização por operação e confirmação para efeitos externos; dados vindos de notas, e-mails, sites e skills são não confiáveis. Pinar imagens/dependências de produção, desabilitar bypass de autenticação em rede e não expor portas de modelo e serviço indiscriminadamente. Referência externa: https://github.com/odysseus-dev/odysseus (README + ROADMAP, branch dev). Nenhum runtime Odysseus é presumido disponível.
