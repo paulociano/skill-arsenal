@@ -101,3 +101,19 @@ Adaptada de:
 - https://github.com/GoogleChrome/web-vitals
 
 Preserva a distinção entre auditoria automatizada, padrões de interação e verificação manual.
+
+## Frontend release checklist: auditoria localizada sem falsa precisão
+
+Inspirado em Aboudjem/ui-ux-suite e thedaviddias/Front-End-Checklist, complementar o baseline com um passe orientado a arquivos/regras aplicáveis:
+
+1. Definir stack, rotas, jornadas e alvos antes de auditar; buscar apenas regras aplicáveis de HTML, CSS, JS, performance, acessibilidade, SEO, segurança, imagens, testes, privacidade e internacionalização.
+2. Localizar achados em arquivo/linha/seletor quando o código estiver disponível. Guardar valor observado, valor recomendado e critério verificável (ex.: contraste computado e condição real); não inventar linha ou valor a partir de screenshot ou URL.
+3. Diferenciar `normative` (requisito com versão identificada), `measured` (medição contextual), `heuristic` (recomendação debatível) e `unknown` (teste pendente). WCAG 2.2 e APCA não são medidas intercambiáveis; APCA é sinal complementar e não substitui conformidade WCAG.
+4. Em componentes interativos verificar default, hover, focus, disabled, loading, erro, vazio, zoom, teclado, reduced motion e telas estreitas segundo relevância.
+5. Para CI, preferir thresholds estáveis e findings de alta confiança. Se houver pontuação ponderada, publicar dimensões observadas, pesos, cobertura e limitações; nota total não é prova normativa nem comparação justa entre projetos distintos.
+6. Guardar baseline de problemas conhecidos e bloquear **regressões novas** quando a ferramenta permitir, sem mascarar dívida existente nem alterar arbitrariamente o baseline para passar.
+7. Após correção repetir a mesma rota/viewport/estado, comparar resultado e deixar itens inconclusivos como UNKNOWN.
+
+Ferramentas externas (CLI, MCP, installers) são opcionais e só podem ser usadas quando efetivamente disponíveis e revisadas. Não executar instaladores de repositórios avaliados. Uma lista de 386 regras não significa que todas se aplicam a cada página.
+
+Fontes de metodologia: https://github.com/Aboudjem/ui-ux-suite e https://github.com/thedaviddias/Front-End-Checklist.
