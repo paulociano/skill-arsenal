@@ -25,3 +25,13 @@ Converter uma reunião em registro útil e execução posterior clara.
 
 ## Regra de parcimônia
 Não gere tickets, handoffs ou retrospectivas se a reunião não exigir esses artefatos.
+
+## Tratamento proporcional e promoção controlada
+
+Classificar a reunião antes de produzir artefatos: **nível 1** (cliente/parceiro/alto impacto) recebe decisões, ações, riscos e drafts pertinentes; **nível 2** (interna substantiva) recebe registro e compromissos essenciais; **nível 3** (rotina) recebe captura breve se houver novidade. Não forçar mensagens ou tickets sem compromisso real.
+
+Priorizar notas/transcrição como evidência primária e calendário para metadados; e-mails e contexto externo entram apenas quando mudam o follow-up. Marcar cada fonte como disponível, ausente ou desnecessária. Nunca atribuir owner ou prazo inferidos como fato.
+
+Entregar primeiro debrief curto (essência, decisões, ações, riscos e loops abertos). Propor drafts somente se houve promessa explícita ou coordenação necessária. Ações consequenciais devem permanecer como **propostas** até autorização: enviar mensagens, gravar tarefas, atualizar CRM, registrar decisões duráveis. Após escrita autorizada, verificar no destino.
+
+Provenance metodológica: https://github.com/zapier/wade-skills/tree/main/skills/meeting-follow-up-pipeline .
