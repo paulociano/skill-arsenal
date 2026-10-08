@@ -62,3 +62,15 @@ structured-output-contract para o contrato técnico e runtime opcional; arsenal-
 ## Origem metodológica
 
 Adaptada de métodos MCDA observados em scikit-criteria e PyMCDM, preservando decomposição, pesos e sensibilidade sem tornar um método específico como TOPSIS/AHP uma regra universal.
+
+## Stress test por lentes adversariais (opcional)
+
+Para decisões estratégicas de alto impacto, após estruturar opções e evidências, simular perspectivas com mandatos distintos: finanças/unit economics, cliente, execução, ceticismo/contrarian e até dois especialistas de domínio quando úteis. As lentes são métodos de crítica, **não especialistas reais consultados**. Nunca inventar biografia, experiência ou autoridade factual.
+
+1. Entregar o mesmo briefing factual e constraints a cada lente.
+2. Cada lente aponta premissa frágil, maior risco subestimado, alternativa e evidência que poderia mudar a posição.
+3. Sintetizar concordâncias, conflitos e critérios decisivos; não contar votos como prova.
+4. Quando houver probabilidades, explicitar origem e incerteza. Apostas fictícias e percentuais inventados não são calibração.
+5. Fechar com decisão reversível, experimento recomendado ou evidência pendente, preservando julgamento humano.
+
+Near-miss: decisões triviais ou sem alternativas não justificam painel simulado. Provenance metodológica: https://github.com/zapier/wade-skills/tree/main/skills/war-council (absorção do stress test, sem personas com credenciais inventadas).
