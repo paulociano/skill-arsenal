@@ -100,3 +100,9 @@ Se OpenSEO/DataForSEO/Search Console ou outro conector SEO não estiver disponí
 Adaptada de every-app/open-seo, especialmente keyword-research, seo-audit, competitive-landscape e seo-report.
 
 Origem local: [seo-research-audit.docx](../seo-research-audit.docx).
+
+## AI visibility: painel observável de respostas
+
+Quando o objetivo for medir menções/citações da marca em mecanismos de resposta, não confundir visibilidade orgânica tradicional com presença em outputs de IA. Definir marca, concorrentes, público, mercado e um painel versionado de perguntas representativas (categoria, comparação, problema e solução); usar mesmas perguntas e condições comparáveis por ferramenta e data. Registrar respostas realmente coletadas, posição/menção, tom, URLs citadas, engine, modelo quando disponível e data. Medir mention rate por consultas válidas, separadamente por mecanismo; não apresentar respostas simuladas como medições. Mapear lacunas de fontes citadas e priorizar melhorias legítimas de conteúdo, relevância e autoridade. Separar resultados observados de promessas não comprovadas de GEO/AEO. `llms.txt` é opcional e não constitui fator de ranking comprovado; não desbloquear crawlers contrariamente à política do site. Verificar regras oficiais dos provedores antes de recomendações atuais.
+
+Proveniência complementar: https://github.com/AgriciDaniel/claude-seo (seo-geo) e https://github.com/irinabuht12-oss/marketing-skills (ai-visibility-audit), avaliados em 2026-10-10. Não importados percentuais ou scores heurísticos de terceiros como fatos estabelecidos.
