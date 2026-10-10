@@ -100,6 +100,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **brand-guidelines-authoring** — Transformar uma identidade aprovada em guidelines operacionais, humanas e machine-readable com regras de logo, cor, tipografia, voz, aplicações, provenance e fonte de verdade sem criar documentação que deriva do runtime.
 - **brand-identity-system** — Transformar estratégia e referências em uma identidade visual coerente por direções contrastantes, escolha explícita e sistema final de cor, tipografia, imagem, grafismos e aplicações.
 - **call-evaluation** — Avaliar ligações comerciais de consultoria financeira pelo Card de Ligação, com evidências, rubrica e qualidade do agendamento.
+- **set-continuity** — Manter sets e ambientes recorrentes coerentes em múltiplos shots por bíblia espacial, landmarks, mapa de câmeras, estados narrativos e QA de continuidade.  
+  `skills/set-continuity/SKILL.md`
 - **character-continuity** — Manter personagens recorrentes visualmente on-model ao longo de páginas, cenas ou séries usando bíblia de identidade, atlas/referências, seleção da referência mais próxima e QA de continuidade.
 - **cad-parametric-modeling** — Modelar geometria CAD 2D/3D com sketches restritos, parâmetros, features, B-Rep/CSG, referências estáveis e desenhos derivados, preservando editabilidade e intent geométrico.
 - **cinematic-visual-direction** — Projeta shots para landing pages, apresentações e vídeos por enquadramento, câmera, profundidade, movimento, duração, transições e continuidade.
