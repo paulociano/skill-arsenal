@@ -214,3 +214,15 @@ Para páginas estáticas, HTML único, componentes sem framework JS e efeitos CS
 ## Pesquisa visual e templates
 
 Para referências como Dribbble, Canva, galerias de sites e fluxos de apps, consultar [bibliotecas de referências de design](../design-direction/references/design-reference-libraries.md). Extrair estrutura e comportamento conforme design-direction; usar o catálogo HTML/CSS para implementação quando essa for a stack do projeto.
+## Produto, superfície e QA limitado (Impeccable)
+
+Para redesign, build ou revisão de UI com múltiplas decisões, distinguir três camadas sem criar documentos redundantes:
+1. **Verdade durável do produto**: público, tarefa, proposta, restrições, conteúdo verificável e evidências. Quando fizer sentido persistir, usar PRODUCT.md ou documentação equivalente do próprio projeto; não confundir essas decisões com preferência de layout.
+2. **Direção visual por superfície**: classificar a experiência como persuadir (marketing), operar (ferramentas), ler (conteúdo) ou experimentar (portfólio/galeria). Uma única aplicação pode combinar modos em superfícies distintas. DESIGN.md continua apontando para os tokens e componentes reais, não os duplicando.
+3. **Verificação por tipo**: distinguir inspeção técnica automatizável (acessibilidade estática, tokens, contraste calculável, overflow observável) de crítica humana/heurística (hierarquia, ressonância, confiança). Um detector não prova qualidade global; passar no lint não implica aprovação de UX.
+
+Quando o artefato puder rodar, usar **QA visual em passagens limitadas**: construir a solução completa, inspecionar desktop/mobile e estados relevantes em uma rodada agrupada, corrigir achados priorizados e fazer no máximo mais uma passagem de confirmação, salvo defeito crítico ainda presente. Evitar loops intermináveis de micro-polish sem ganho mensurável. Acessibilidade, testes funcionais e requisitos obrigatórios não são dispensados pelo limite de polimento.
+
+Para revisão de interface existente, distinguir explicitamente **refinamento** (preserva identidade e comportamento atuais) de **redesign** (mantém verdade do produto e funcionalidades, substitui linguagem visual após decisão de escopo). Não alterar copy factual ou alegações de produto sem evidência/autorização.
+
+Metodologia incremental adaptada de [pbakaus/impeccable](https://github.com/pbakaus/impeccable), `skill/SKILL.src.md` e `PRODUCT.md`. Não requer CLI, binário, instalação automática, extensão de navegador ou hooks Impeccable. Suas proibições estéticas categóricas são opiniões e não regras universais do Arsenal.
