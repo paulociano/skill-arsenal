@@ -124,3 +124,8 @@ Separar:
 ## Provenance
 
 Consolidada de Temporal durable execution architecture e padrões de workflow orchestration. Não exige Temporal server, SDK ou CLI.
+
+
+## Atores duráveis como padrão de coordenação
+
+Quando o problema envolve **estado por entidade/identidade** (sala, conversa, documento colaborativo, agente), considerar um ator durável como alternativa à orquestração por workflow. Identificar chave/owner por ator, limites de serialização de chamadas e `await`, acesso concorrente, interleaving intencional, campos persistidos, recuperação após interrupção, isolamento de tenants, schema migration, streaming/WebSocket, backpressure e observabilidade. Serialização por ator não implica transação entre atores nem exactly-once de efeitos externos; preservar idempotência, fencing e segurança de retry nas integrações. Comparar escalabilidade por hot key, armazenamento, latência de cold-start, distribuição e portability. Não presumir runtime/SDK Terse instalado ou garantias que não foram testadas. Referência: https://github.com/TerseAI/durable-actors.
