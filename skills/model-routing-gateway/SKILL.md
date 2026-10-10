@@ -180,3 +180,17 @@ Origem local: [model-routing-gateway.docx](../model-routing-gateway.docx).
 
 
 Referências adicionais avaliadas em 2026-09-27: [TokenRhythm/NeoHorse](https://github.com/TokenRhythm/NeoHorse) e [Contrastive-LM/CLM](https://github.com/Contrastive-LM/CLM). Ambos reforçam o padrão de decisões tipadas/ranking com probabilidade e baixa latência, mas exigem runtime/model serving próprio; benchmarks publicados não são tratados como garantia transferível.
+
+
+## Consistência de política em gateways locais multi-cliente
+
+Ao avaliar gateways locais como FlagshipRouter, separar **configuração do catálogo**, **eligibilidade operacional**, **autorização por credencial** e **capacidade efetiva por rota**. Uma flag `freeOnly` ou etiqueta `hasFree` não prova cota, gratuidade permanente, elegibilidade da conta nem acesso ao modelo. Aplicar a política no catálogo, APIs administrativas, armazenamento de conexões e no dispatch real, verificando divergências.
+
+- Testar mudança de configuração para permitir/bloquear provedores, endpoints customizados e modelos aliases/combo; qualquer caminho alternativo de seleção ou fallback deve preservar as restrições vigentes.
+- Diferenciar autenticação do painel, autenticação da API local, segredos upstream e permissões de configuração de clientes externos. Exigir mudança de senha inicial conhecida e credenciais fortes **antes** de qualquer bind remoto, túnel ou proxy. Preferir loopback, firewall e configuração por usuário; proteger também endpoints administrativos e health/detail que exponham dados sensíveis.
+- Para operações de instalação/CLI que reescrevam arquivos de configuração de Claude Code, Codex ou outros clientes, auditar destino, diff, backup, permissões e rollback. Não executar automaticamente `npm run launch`, instaladores de skills ou scripts de provedores.
+- Verificar contrato OpenAI-compatible **por endpoint e modalidade**: chat, responses, messages, SSE streaming, tool calls, embeddings, imagem, voz e web não são equivalentes apenas por compartilharem um prefixo `/v1`. Registrar perdas de semântica na tradução e o provider final escolhido em combos.
+- Revisar logs, quotas, cloud sync opcional e persistência de tokens/OAuth por minimização de dados, redaction, retenção e separação por conta; desligar sync não deve ser inferido apenas pela ausência de UI.
+- Testes de regressão: provider excluído não aparece nem é despachado via alias/fallback; endpoint local não aceita credenciais inválidas; modo remoto não funciona com senha default; custom endpoint permanece bloqueado quando proibido; fallback não enfraquece requisito de modalidade ou política de dados.
+
+Referência avaliada: [theRizwan/FlagshipRouter](https://github.com/theRizwan/FlagshipRouter), README, `brand.json`, `docs/ARCHITECTURE.md` e `skills/flagshiprouter/SKILL.md`. A implementação externa não é dependência nativa do Arsenal, e o gateway não altera o modelo interno desta conversa.
