@@ -55,6 +55,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/improve-existing-web-app/STACK.md`
 - **meeting-to-actions** — Transforma reuniões, transcrições ou notas em conhecimento reutilizável, decisões, ações e handoffs.  
   `stacks/meeting-to-actions/STACK.md`
+- **onchain-token-due-diligence** — Avaliar riscos de tokens e contratos cripto por evidências on-chain, liquidez, permissões, concentração e possibilidade de saída, sem confundir auditoria automatizada com segurança garantida ou executar trades.
 - **real-estate-investment-analysis** — Analisar ativos e projetos imobiliários por NOI, cap rate, DCF/pro forma, debt service, cash-on-cash, IRR, vacancy, rent growth, CapEx e cenários, separando valor do imóvel de assumptions de operação e financiamento.
 - **research-and-synthesize** — Pesquisa um tema com múltiplas fontes, reconcilia evidências e produz uma síntese clara, útil e verificável.  
   `stacks/research-and-synthesize/STACK.md`
