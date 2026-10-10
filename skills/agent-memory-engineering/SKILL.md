@@ -56,6 +56,10 @@ Separar quando útil:
 
 Não tratar esses tipos como ontologia universal. Use apenas os necessários.
 
+## Correções e aprendizado supervisionado
+
+Correções explícitas e padrões recorrentes são **candidatos** a memória, não instruções permanentes automáticas. Capturar evidência da correção, distinguir preferência durável de ajuste pontual, normalizar regra curta e propor escopo (sessão, projeto ou global). Revisar duplicatas, contradições e dados sensíveis; promover para arquivo canônico/AGENTS.md somente com aprovação e provenance. Padrões de workflow podem gerar propostas de skill quando recorrência e ganho incremental forem demonstrados. No ChatGPT, não presumir hooks de Claude Code nem sincronização automática de memória ou histórico; usar apenas fontes e ações efetivamente acessíveis. Origem: https://github.com/BayramAnnakov/claude-reflect.
+
 ## Source of truth
 
 Preferir uma representação durável que possa ser inspecionada e exportada independentemente do índice.
