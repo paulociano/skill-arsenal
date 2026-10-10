@@ -102,6 +102,10 @@ Uma policy útil deve conseguir responder:
 - interativa ou agendada?
 - qual nível de efeito?
 - qual regra permitiu/negou?
+## Preflight de impacto para ações destrutivas
+
+Antes de operações como remoção recursiva, reset/restore/clean de Git, force-push ou migrações, estimar o **blast radius** com meios de leitura ou dry-run seguros, quando suportados: caminhos e contagem de arquivos, alterações não commitadas, commits remotos ameaçados e migrações pendentes. Mostrar alvo, escopo, reversibilidade e incerteza antes de pedir aprovação. Se não houver prévia confiável, declarar a limitação e elevar o gate, nunca presumir ausência de impacto. Vincular a aprovação ao comando e alvo efetivos; se mudarem, pedir nova decisão. Não executar comandos destrutivos para estimar seus efeitos. Origem metodológica: https://github.com/anthropics/claude-code-playground/tree/main/claude-code/mods/blast-radius (mod Claude Code, não instalado no ChatGPT).
+
 ## Approval binding
 
 - guardar versão/hash/fingerprint suficiente do conteúdo aprovado;
