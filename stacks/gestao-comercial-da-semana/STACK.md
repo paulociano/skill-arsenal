@@ -89,6 +89,9 @@ Algoritmo determinístico:
 Executar a aritmética em código quando houver dados estruturados; preservar evidência dos intervalos usados.
 Usar categorias separadas: livre verificado, não confirmado e indisponível. Não inserir não confirmados na mensagem coletiva como oportunidade.
 
+## Inteligência de pipeline (somente com dados de oportunidades)
+Quando houver export de funil, calcular por etapa quantidade, valor, idade, dias na etapa, última atividade, avanço e escorregamento de fechamento. Sinalizar estagnação por referência histórica do próprio time, não por corte arbitrário. Distinguir probabilidade informada de probabilidade calibrada por taxa de ganhos, e não prometer previsão confiável sem histórico. Classificar oportunidades em avanço, risco e evidência insuficiente; indicar uma ação observável com responsável para cada oportunidade crítica. Não confundir saúde do pipeline com avaliação pessoal de consultores. Se dados de CRM estiverem duplicados ou inconsistentes, usar `crm-data-quality` antes de produzir ranking ou forecast.
+
 ## 5. Plano e decisões
 Priorizar pendências com prazo, oportunidades das próximas 72h, retornos já combinados e o principal comportamento a desenvolver, conforme evidências.
 Limitar a três ações principais por pessoa. Não inventar metas de ligações nem prometer preenchimento dos slots.
