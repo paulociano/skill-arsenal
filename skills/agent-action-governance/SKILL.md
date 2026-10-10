@@ -148,3 +148,8 @@ Combina com:
 Hooks de `PreToolUse`/eventos equivalentes como boundary de enforcement foram contrastados com `PrettyPrinted/youtube_video_code` (2026-09-03). O Arsenal preserva o padrão de interceptar antes do efeito, mas rejeita logging irrestrito de payloads e regras frágeis baseadas apenas em substring de comando.
 
 Adaptada principalmente de [CopilotKit/OpenBot](https://github.com/CopilotKit/OpenBot), preservando gateway único, policy fail-closed, audit-before-act, credential boundary e human takeover. halofyai/halofy reforçou identidade/namespace server-owned, scoped retrieval e audit de denial/miss. Nenhum desses runtimes é requisito.
+
+
+## Equipes de agentes com computador e takeover
+
+Para automações que combinam múltiplos bots, computadores remotos, canais de mensagens e integrações, tratar a **equipe como hierarquia explícita de identidades e permissões**, nunca como uma única credencial global. A cada delegação, propagar initiator, principal, target, tool grants, escopo de dados, canal de origem e aprovação vinculada ao efeito. Definir separadamente acesso de leitura, criação, envio, pagamento, shell e controle local da máquina. Interrupção/takeover humano exige bloquear ou isolar ações simultâneas dos agentes e logar a transferência; retomada exige revalidar estado. Não assumir isolamento ou segurança apenas por usar VM, vault ou agente especializado. Testar cross-tenant, spoofing de mensagens, autorização indireta via agente principal e falha de revogação. Referência de produto: https://github.com/OrgoAI/bops. Os recursos específicos de computador, telefonia e Vault dependem de serviço externo e não são nativos do ChatGPT.
