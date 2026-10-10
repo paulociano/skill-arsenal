@@ -55,7 +55,6 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/improve-existing-web-app/STACK.md`
 - **meeting-to-actions** — Transforma reuniões, transcrições ou notas em conhecimento reutilizável, decisões, ações e handoffs.  
   `stacks/meeting-to-actions/STACK.md`
-- **onchain-token-due-diligence** — Avaliar riscos de tokens e contratos cripto por evidências on-chain, liquidez, permissões, concentração e possibilidade de saída, sem confundir auditoria automatizada com segurança garantida ou executar trades.
 - **real-estate-investment-analysis** — Analisar ativos e projetos imobiliários por NOI, cap rate, DCF/pro forma, debt service, cash-on-cash, IRR, vacancy, rent growth, CapEx e cenários, separando valor do imóvel de assumptions de operação e financiamento.
 - **research-and-synthesize** — Pesquisa um tema com múltiplas fontes, reconcilia evidências e produz uma síntese clara, útil e verificável.  
   `stacks/research-and-synthesize/STACK.md`
@@ -218,6 +217,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **model-routing-gateway** — Projetar ou configurar roteamento de modelos LLM com seleção por capacidade, retries, fallback, orçamento e observabilidade.
 - **ml-production-engineering** — Projetar e operar sistemas de machine learning do dado à produção com testes, avaliação, serving, monitoramento e ciclos seguros de melhoria.
 - **niche-research** — Pesquisar pautas atuais de um nicho e propor ângulos editoriais com fontes e datas verificadas.
+- **onchain-token-due-diligence** — Avaliar riscos de tokens e contratos cripto por evidências on-chain, liquidez, permissões, concentração e possibilidade de saída, sem confundir auditoria automatizada com segurança garantida ou executar trades.
 - **parametric-cad-drawing** — Projetar geometria 2D/3D técnica por parâmetros, constraints e operações geométricas, preservando dimensões, unidades, relações e exportabilidade em vez de tratar desenho técnico como ilustração.
 - **nonviolent-communication** — Estruturar mensagens, conversas difíceis e mediação pela separação entre observações, sentimentos, necessidades e pedidos, reduzindo julgamento sem apagar limites, responsabilidade ou clareza.
 - **patent-strategy-review** — Auditar e pressionar pedidos de patente utilitária dos EUA com gates de completude, suporte, prior art, claim coverage e design-around, separando análise técnica de aconselhamento jurídico.
