@@ -165,3 +165,19 @@ Exemplos:
 ## Provenance
 
 Stack construída do lote de 30 repositórios de AI video/Reels de 2026-10-03, com maior peso em WhisperX, PySceneDetect, Auto-Editor, Remotion, MediaPipe, Ultralytics, MuseTalk, LivePortrait, F5-TTS/CosyVoice e Wan/LTX video-generation ecosystems. mutonby/openshorts acrescentou o caminho local-first/self-hosted e layouts adaptativos por cena.
+
+## Pipeline de clipping com escolha explícita de execução
+
+Inspiração metodológica: https://github.com/Anil-matcha/AI-Youtube-Shorts-Generator. Não presumir que MuAPI, yt-dlp, faster-whisper, ffmpeg, OpenCV ou chaves LLM estejam instalados.
+
+1. **Escolha API versus local:** discrimine custo, privacidade, residência dos dados, direitos sobre a fonte, requisitos de hardware e possibilidade de editar/verificar o MP4. Modo local não significa necessariamente offline: ranking por LLM pode chamar serviço remoto.
+2. **Transcrição rastreável:** associe transcript e timestamps à versão identificável do vídeo-fonte. Cache somente com identidade/versão da fonte, parâmetros e idioma; nunca reutilize legenda obsoleta silenciosamente.
+3. **Vídeos extensos:** faça segmentação com sobreposição delimitada, conservando timestamps globais; dedupe resultados de janelas e candidatos que apontem para o mesmo momento antes da seleção.
+4. **Seleção editorial:** armazene para cada candidato início/fim, abertura, contexto necessário, razão editorial e evidência de fala. Use score somente como ranking heurístico interno, jamais como probabilidade calibrada de viralização.
+5. **Reenquadramento:** compare detecção de rosto, subject tracking e crop estável; proteja mãos, gestos, demonstrações e falas com múltiplos participantes. Prefira layout adaptativo quando o crop destrói informação.
+6. **Saída intercambiável:** mantenha manifest estruturado com referência de fonte, transcript, candidatos, timecodes, decisão de escolha, dimensões, arquivos/URLs, versão de workflow e status de revisão.
+7. **QA e custo:** examine começo/fim de cada clipe, sincronização, clipping de áudio, legenda, permissões, duração, plataforma e custo de chamadas; amostre render real antes de produção em lote.
+8. **Direitos e dados:** não baixar, redistribuir ou publicar vídeo de terceiros sem autorização aplicável; não enviar transcrição, áudio ou imagem sensíveis a API sem base de permissão.
+
+**Should-trigger:** extrair vários Shorts de um podcast longo ou webinar com deduplicação e manifest. **Near-miss:** escrever roteiro de Reel original sem vídeo-fonte (continuar fluxo usual).
+
