@@ -183,6 +183,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **handoff** — Preparar contexto compacto para continuar uma tarefa em outra sessão ou obter comparação independente ou crítica.
 - **high-fidelity-image-generation** — Gerar ou editar imagens raster com direção visual estruturada, preservação explícita de invariantes e ciclos curtos de inspeção, incluindo preparação de imagens adequadas para reconstrução 3D.
 - **idea-refine** — Refinar ideias vagas, explorar alternativas, testar premissas e definir uma direção e escopo de MVP.
+- **interactive-isometric-figure** — Criar ilustrações técnicas isométricas interativas em HTML/SVG autocontido, com projeção geométrica, controles funcionais, estado observável e testes de interação.
 - **interior-spatial-design** — Projetar interiores e reformas por zoning, mobiliário em escala, circulação, ergonomia, materiais, iluminação e comparação de alternativas, ligando planta 2D a maquete 3D sem confundir visualização com viabilidade técnica.
 - **interactive-world-simulation** — Projetar mundos interativos persistentes gerados ou mediados por IA com world state, scenes, interactions, branches, history, replay e provider boundaries, preservando continuidade causal e estado verificável ao longo do tempo.
 - **instagram-growth-diagnostics** — Diagnosticar onde o crescimento de um perfil do Instagram está travado usando métricas disponíveis e rotear o gargalo para a intervenção adequada.
@@ -209,6 +210,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **locale-adapter** — Localizar conteúdo e UX copy para outro idioma ou mercado preservando fatos, termos protegidos e comportamento do produto.
 - **loop-engineering** — Projetar trabalho recorrente ou iterativo com trigger, execução, verificação, estado persistido e limites de parada.
 - **material-design-3** — Implementar ou auditar interfaces Material Design 3 em Compose, Flutter ou web conforme a plataforma e versão reais.
+- **modern-css-practices** — Aplicar CSS moderno adaptativo em páginas e componentes com layout intrínseco, progressive enhancement, acessibilidade e redução de scripts/breakpoints desnecessários.
 - **motion-asset-engineering** — Escolher, integrar e validar assets animados em web entre SVG/CSS, Lottie, Rive, Canvas e vídeo conforme interação, peso, editabilidade e acessibilidade.
 - **merge-conflict-resolution** — Resolver conflitos de merge ou rebase por intenção e fonte primária, preservando comportamentos compatíveis, validando checks e concluindo a operação sem inventar mudanças novas.
 - **meeting-knowledge-capture** — Converter gravações, transcrições ou notas de reuniões em decisões e ações rastreáveis no destino autorizado.
