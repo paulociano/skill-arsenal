@@ -123,3 +123,8 @@ Adaptada de kwakseongjae/oh-my-design, contratos agent-first inspirados em shadc
 Brand-model distribution e separação entre tokens, packages, docs e assets refinadas a partir de Better-Conversations/bc-brand, OpenAEC-Foundation/OpenAEC-style-book e Aioverse-HQ/Brand-System-Aiotize-Inc.
 
 Origem local: design-system-governance.docx.
+
+## Reconciliação de tokens entre design e código
+Se houver tokens.json, export de Figma, Tailwind, CSS custom properties, TypeScript theme ou SCSS concorrendo como fonte, identificar primeiro o owner canônico. Montar mapa token -> definições derivadas -> usos, classificar: cópias defasadas, hardcodes onde há token equivalente, tokens órfãos e padrões repetidos ainda sem token. Não sincronizar as duas direções automaticamente. Resolver na origem, regenerar derivados e verificar mudanças de valores semânticos; similaridade visual de cor não equivale a identidade e exige revisão. Propor guard lint/CI somente quando executável no projeto, com teste que diferencie exceções intencionais. Nunca excluir tokens órfãos por inferência.
+
+Proveniência incremental: oneWave-AI/claude-skills/design-tokens-sync, avaliação 2026-10-10.
