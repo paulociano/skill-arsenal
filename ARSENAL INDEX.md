@@ -261,6 +261,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **retrieval-quality-engineering** — Diagnosticar e melhorar retrieval/RAG com conjunto de consultas, baseline e avaliação de chunking, busca híbrida e reranking.
 - **retrospective-codify** — Codificar aprendizados recorrentes quando solicitado, escolhendo entre atualizar skill, regra, checklist, teste ou documentação.
 - **runtime-ui-verification** — Verificar mudanças de UI no app em execução por consequências de domínio, estado e rede além da aparência visual.
+- **paid-media-operations** — Auditar, planejar e otimizar mídia paga (Google Ads, Meta Ads e outras plataformas) usando dados verificáveis, atribuição, orçamento, experimentos e alterações apenas com autorização explícita.
 - **seo-research-audit** — Pesquisar palavras-chave ou auditar SEO e concorrentes com evidências reais, métricas disponíveis e prioridades acionáveis.
 - **session-learn** — Extrair aprendizados duráveis de uma sessão quando solicitado ou autorizado, com deduplicação e rastreabilidade.
 - **shadcn-ui-engineering** — Implementar, atualizar e depurar componentes em projetos shadcn/ui preservando configuração, composição acessível e personalizações locais.
