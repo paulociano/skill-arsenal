@@ -53,3 +53,9 @@ project-complexity-management, graph-engineering, prioritization-engine, wayfind
 ## Origem metodológica
 
 Sintetiza práticas observadas em britt/agent-skills, borghei/Claude-Skills, janellecipriano/pm-skills, Nikoxkx/Agent-Skills e silvainfm/claude-skills. Integrações específicas de Jira/Linear/GitHub são opcionais e só devem ser usadas quando realmente conectadas.
+
+## Gate de viabilidade antes da construção
+
+Em ideias de novos produtos, SaaS e mudanças de funcionalidades ainda não aprovadas, faça primeiro uma revisão curta da necessidade e dos riscos antes de especificar implementação. Distinga demanda e comprador, alternativa atual, distribuição/aquisição, diferencial verificável, custo de manutenção e hipótese de falha mais provável. Dê um veredito operacional: `construir pequeno`, `validar primeiro`, `pivotar primeiro` ou `não construir ainda`, com um teste barato e observável para reduzir a incerteza dominante. Para produto interno, portfólio ou aprendizado, avalie propósito e escopo, não imponha arbitrariamente critérios de tração comercial. Não bloqueie implementação rotineira já decidida e não transforme esse gate em questionário longo. Evidência insuficiente deve ser marcada como hipótese.
+
+Origem complementar: https://github.com/bin1874/before-you-build-skill; metodologia absorvida sem `npx`, install ou Case Memory externo.
