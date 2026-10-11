@@ -65,6 +65,10 @@ Foco:
 9. **Release check** — env/config, signing/build variants, crash/error handling e store constraints.
 10. **Verify final** — usar `verify-before-claim`.
 
+## Expo: roteamento por capacidade e releases
+
+Para projetos Expo, usar documentação e versão instaladas como autoridade antes de escolher módulos. Separar Expo Router/navegação, UI nativa, animação, data fetching, módulos nativos, migração web-to-native e upgrades; carregar apenas o tema do pedido. Antes de upgrade, verificar matriz SDK/React Native/dependências, breaking changes, config plugins, dev client, cache e testes em iOS/Android. Distinguir build local, EAS Build, EAS Update, distribuição e rollout, incluindo limites de plano e custos antes de recomendar serviços hospedados. Não presumir CLI/EAS/simulador ou credenciais presentes. Referência: https://github.com/expo/skills (catálogo oficial Expo); consultar documentação atual do Expo no momento da implementação.
+
 ## Realtime voice, media e tool calls
 
 Para apps Expo/React Native com WebRTC, áudio contínuo, background execution ou ferramentas acionadas por uma sessão de IA:
