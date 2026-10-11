@@ -140,6 +140,20 @@ Quando o usuário já domina determinado conceito, mencioná-lo brevemente e inv
 - resources devem ser oficiais/fortes e atuais quando externos;
 - audit não vira refactor automático sem pedido.
 
+## Investigação de artefatos distribuídos sem fonte (REA)
+
+Quando a pergunta depender de um executável, APK, pacote Electron/ASAR, assembly .NET, firmware ou comportamento que o source disponível não comprova:
+
+1. Identificar o artefato exato, versão/hash, plataforma, escopo e autorização. Não escolher aplicativos locais arbitrários.
+2. Roteá-lo ao método mais restrito e observável: inventário estático primeiro; runtime somente se realmente necessário e autorizado.
+3. Quando REA MCP ou CLI estiver de fato conectado, usar ferramentas anunciadas por esse runtime, não nomes presumidos de uma skill. Para fontes normais e completas, permanecer na análise convencional de repositório.
+4. Começar por overview resumido; descer a módulos, símbolos, imports, IPC, traces ou chamadas ligados à pergunta, reutilizando sessões e evidence IDs quando disponíveis.
+5. Construir um ledger de achados com **observação**, **derivação**, **inferência** e **desconhecido**, fonte/localizador, alvo/versão, cobertura e grau de confiança. Não transformar strings, pseudocódigo ou análise estática em prova de execução.
+6. Se o usuário pedir reconstrução, usar interfaces e testes próprios; comparar comportamento externamente por `behavior-contract-validation`. Distinguir equivalência demonstrada de semelhança visual ou hipótese.
+7. Se REA ou um provedor necessário não estiver disponível, declarar bloqueio e continuar com as ferramentas realmente existentes. Não simular decompilação ou resultados MCP.
+
+**Limites e segurança:** análise somente de targets autorizados; não instalar REA, abrir portas de depuração, executar aplicações, alterar configurações ou expor capturas/segredos como efeito implícito. O projeto externo exige infraestrutura própria, potencialmente Node/npm e Hopper/Ghidra/IDA, JADX ou navegador. Qualquer setup exige revisão de supply chain, permissões e aprovação aplicável. Fonte: https://github.com/morluto/rea e https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/SKILL.md; avaliação: `evaluations/2026-10-11-morluto-rea.md`.
+
 ## Integração
 
 - `teach`
