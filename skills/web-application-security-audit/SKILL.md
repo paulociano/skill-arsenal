@@ -165,3 +165,13 @@ Adaptada de:
 - https://github.com/OWASP/wstg
 
 Em 2026-10-05, ASVS 5.0.0 era a release estável indicada pelo projeto e o WSTG trabalhava na 5.0 mantendo 4.2 como release estável. Revalidar versões em auditorias futuras. A metodologia foi adaptada para escopo autorizado, testes não destrutivos e ferramentas realmente disponíveis; nenhum scanner ou pentest suite é requisito.
+
+## Recibos de autorização e validação independente
+
+Para avaliações executadas por agentes ou ferramentas ofensivas externas, associe cada sessão a um **recibo de escopo** verificável: autorizador e evidência da permissão, alvos e ambientes exatos, janela, técnicas permitidas/proibidas, limites de tráfego, dados de teste, contato de emergência e condição de parada. O agente não pode expandir esse recibo por inferência. Antes de qualquer chamada que gere tráfego ou efeito, revalide alvo resolvido, escopo e nível de risco; mudanças de host, redirecionamento ou credencial exigem nova decisão.
+
+Separe `observação`, `hipótese`, `achado candidato` e `achado confirmado`. Um achado confirmado precisa de evidência mínima reproduzível, tentativa proporcional de refutação, rastreio do ambiente e resultado de reteste. Registre quando uma ferramenta apenas indicou suspeita, sem evidência de exploração ou impacto. Evite a corrida por quantidade de findings: contabilize falsos positivos, bloqueios de execução e superfícies não testadas.
+
+Quando um framework alegar taxa de sucesso em benchmark, confira definição do denominador, conjunto/versão, seeds, hints, pass@k, isolamento do modelo, vazamento/ajuste sobre casos de teste e independência do verificador; verificação aritmética de JSON versionado não comprova, isoladamente, autenticidade de execução nem generalização para sistemas reais.
+
+Origem metodológica: https://github.com/elder-plinius/T3MP3ST. O repositório de origem é runtime ofensivo com CLI, agentes e scanners, **não** dependência desta skill. Não copiar playbooks operacionais, ferramentas de ataque, acesso a credenciais ou automação de exploração.
