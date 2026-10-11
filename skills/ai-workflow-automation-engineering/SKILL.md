@@ -180,6 +180,21 @@ Preservar:
 
 Um canvas bonito pode esconder dependências frágeis. O runtime, não o diagrama, é a fonte da verdade sobre execução.
 
+## Validação de schedules e calendário operacional
+
+Para agendamentos além do caso trivial, não basta uma expressão cron sintaticamente válida. Antes de publicar:
+
+1. Registrar timezone IANA, origem do relógio, precisão disponível e política para horário de verão (horários inexistentes ou repetidos).
+2. Testar exemplos de próximas execuções e datas negativas, incluindo último dia útil, feriados, virada de mês/ano e limites de recorrência quando houver regras de calendário.
+3. Distinguir tarefa **não agendada**, **perdida**, **atrasada**, **executada com falha** e **executada sem efeito**; definir catch-up ou skip para downtime sem disparo duplicado.
+4. Testar concorrência e sobreposição de runs: limite por recurso, execução longa, pause/resume, retries/backoff, idempotency key e liderança única quando distribuído.
+5. Definir observabilidade da agenda: próximo disparo esperado, início efetivo, atraso, duração, resultado verificado, histórico e alertas por missed-run.
+6. Preservar versão da definição e fingerprints de configuração; mudanças de calendário não devem reexecutar automaticamente ações antigas sem revisão.
+
+Quando o runtime não oferecer calendários business-day, lint, histórico ou detecção de atrasos, declarar essa limitação e propor validação externa ou controle proporcional ao risco. Não prometer cadência inferior à oferecida pela plataforma nem inferir execução apenas da existência do agendamento.
+
+**Proveniência:** padrões analisados em [ptweezy/cronstable](https://github.com/ptweezy/cronstable) (README consultado em 2026-10-11). O projeto é referência de comportamento, **não dependência instalada**. Não adotar seus comandos, API/MCP ou seus relatórios de segurança como evidência de capacidade disponível.
+
 ## AI agents dentro do workflow
 
 Quando um nó for um agente:
