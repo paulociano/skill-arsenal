@@ -79,3 +79,11 @@ Use `code-understanding-audit` para análise localizada, `legacy-system-reconstr
 
 ## Origem adaptada
 Metodologia inspirada em `YurunChen/repo-docs-skills`, removendo estrutura de diretórios obrigatória e scripts específicos, preservando o modelo behavior-first, evidence-first e sync cirúrgico. Ownership de fatos, separação por tipo documental e promoção empírica de regras foram refinados a partir de `scarletkc/seiso`, sem exigir seu binário, formato de configuração ou thresholds específicos.
+
+## Documentação orientada a grafo e atualização incremental
+
+Quando o repositório for grande, derive primeiro um mapa de dependências entre módulos, símbolos públicos, configurações, schemas, builds, pipelines e pontos de entrada. Divida o mapa em subsistemas coesos e documente o comportamento de cada um de baixo para cima; páginas de síntese devem apontar para as evidências dos módulos filhos, sem inventar dependências. Gere diagramas somente de arestas confirmadas e valide seus links.
+
+Para sincronizar documentação após alterações, compare a revisão-base com a revisão atual, identifique nós e artefatos alterados e percorra dependentes para determinar páginas possivelmente desatualizadas. Atualize só os componentes impactados; se o grafo estiver incompleto ou a mudança for transversal, aumente explicitamente o escopo ou faça rebuild fundamentado. Separe status `verificado`, `inferido` e `não inspecionado`; não apresente documentação gerada como cobertura completa quando faltarem arquivos, linguagens ou testes. O CodeWiki oferece implementação externa de referência, mas não pressupor seu CLI, MCP, Python ou provedor LLM instalado.
+
+Origem complementar: https://github.com/FSoft-AI4Code/CodeWiki (grafo de dependências, artefatos de build e refresh incremental).
