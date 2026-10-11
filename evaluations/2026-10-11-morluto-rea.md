@@ -45,6 +45,9 @@ Foram lidos README.md, AGENTS.md, .agents/skills/reverse-engineer-anything/SKILL
 ## Relação com avaliação anterior
 `evaluations/2026-10-10-paperclip-rea-iris-eneas-floria.md` tratava do guia externo `47thtechcorner/RayCodes_Rea-AI-Agent-Setup`, particularmente inspeção de UI via CDP. Esta avaliação examina o repositório original `morluto/rea` e sua amplitude nativa, sem duplicar skill.
 
+## Aplicação aprovada em 2026-10-11
+Após solicitação explícita de aplicar, a metodologia portável foi incorporada aos owners existentes `code-understanding-audit` e `behavior-contract-validation`: seleção por artefato, investigação resumida/progressiva, ledger com níveis de evidência e testes de reconstrução. Não foi instalado REA nem foi criada uma skill redundante. A classificação A/D e o CAUTION continuam válidos. Ativação de decompilação depende de ferramentas MCP/CLI efetivamente acessíveis e alvo autorizado.
+
 ## Fontes
 - https://github.com/morluto/rea
 - https://github.com/morluto/rea/blob/main/README.md
