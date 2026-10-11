@@ -96,6 +96,14 @@ Não usar para edição de footage existente; nesse caso, preferir `video-editin
 - componentes de motion reutilizáveis podem ser catalogados por função, preservando código/asset editável.
 
 
+## HTML como composição de vídeo com seek verificável
+
+Quando houver renderizador HTML-to-video realmente disponível, considerar HTML/CSS como source editável de composição e exigir que animações sejam avaliáveis em um tempo arbitrário `t`, sem depender da ordem dos frames anteriores. Separar timing declarativo, mídia local congelada e animação; validar a mesma composição por lint, snapshots em timestamps críticos, preview e render. Registrar frame rate, dimensões, fontes, assets, duração e ambiente para reprodutibilidade. Testar scrubbing para frente e para trás, saltos de tempo, início/fim de cena, sobreposição, sincronização de áudio e decodificação do MP4.
+
+Este fluxo não pressupõe que um HTML comum seja diretamente renderizável por ferramentas do ChatGPT. Instalação, CLI, browser e render devem ser verificados no runtime atual. Para apresentações navegáveis, preferir `web-video-presentation` e não converter em vídeo sem pedido explícito.
+
+Referência: [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes), framework HTML/CSS com animações seekable para render MP4; README consultado em 2026-10-11. Não importar o router de 21 skills, comandos de instalação nem dependências por padrão.
+
 ## Product-film mode
 
 Quando o filme é de um produto digital existente, a autoridade visual deve ser o próprio produto, não um estilo genérico da skill:
