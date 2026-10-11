@@ -213,3 +213,9 @@ Consolidada de [TIMAN-group/PlugMem](https://github.com/TIMAN-group/PlugMem), [t
 ## Higiene documental verificável (Seiso)
 
 Quando o armazenamento durável for Markdown de projeto, complementar a memória com um contrato de documentação: classificar documento por finalidade (`howto`, `reference`, `adr` ou equivalente); cada fato mutável tem um único owner canônico; outras páginas apontam para arquivo, heading ou símbolo específico sem duplicar listas que envelhecem; decisões com trade-offs ficam em ADRs, não disfarçadas de instruções. Evitar congelar estado de deploy, versão, contagens ou métricas mutáveis em guias permanentes. Um linter pode detectar inconsistências mecânicas, mas julgamentos de ownership precisam de revisão humana. Regras experimentais devem ser observacionais, não gates rígidos de CI. O GitHub oficial continua sendo a fonte canônica do Arsenal. Referência: https://github.com/scarletkc/seiso (metodologia adaptada, sem requisito de binário Rust).
+
+## Evolução coletiva sob governança
+
+Quando experiências de múltiplos agentes ou usuários forem candidatas à mesma memória ou skill, isole inicialmente a evidência por origem e escopo; deduplique por equivalência semântica e versione propostas de mudança como diffs revisáveis. Teste cada proposta com exemplos que demonstram ganho e contraexemplos que expõem regressão, verifique conflitos com instruções existentes e mantenha rollback. Compartilhar conhecimento entre pessoas não transfere automaticamente autorização para ler históricos, segredos ou preferências privadas. Somente promova a um owner canônico após aprovação e evidência; nunca habilite daemon de autosscrita, hooks ou sincronização cross-device sem runtime real e consentimento.
+
+Origem complementar: https://github.com/AMAP-ML/SkillClaw (ciclo de evolução coletiva adaptado sem instalador, daemon ou captura silenciosa).
