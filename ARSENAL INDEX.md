@@ -16,6 +16,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/ai-reels-production/STACK.md`
 - **ai-workspace-operating-cycle** — Opera trabalhos complexos e persistentes como um workspace estruturado, conectando fontes, decisões, assets, artifacts, contexto seletivo, geração, verificação e retomada entre sessões sem reduzir tudo a uma conversa linear.  
   `stacks/ai-workspace-operating-cycle/STACK.md`
+- **application-build-audit-loop** — Criar e evoluir sites e aplicações web com implementação otimizada, auditoria contínua de UX/UI, acessibilidade, performance, funcionalidade e segurança, correção e revalidação por quality gates.  
+  `stacks/application-build-audit-loop/STACK.md`
 - **architectural-design-cycle** — Conduzir projetos arquitetônicos e de interiores do briefing à planta técnica, CAD paramétrico, maquete 3D, BIM/IFC, desempenho ambiental e análise estrutural preliminar, carregando somente os owners necessários.  
   `stacks/architectural-design-cycle/STACK.md`
 - **arsenal-autopilot** — Evoluir o Skill Arsenal a partir de uma ou mais fontes externas, detectando capacidades, overlap e ownership, avaliando segurança e portabilidade, adotando apenas valor incremental e publicando mudanças verificadas com trilha de auditoria.  
