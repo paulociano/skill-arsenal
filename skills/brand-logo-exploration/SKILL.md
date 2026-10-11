@@ -119,3 +119,9 @@ Adaptada de op7418/logo-generator-skill, refinada com context scan e asset-kit w
 Mascote/IP simples: metodologia absorvida de s1dashu/ip-as-logo-skill, sem fixar modelo externo, número obrigatório de imagens ou convenções específicas de outro agente.
 
 Origem local: [brand-logo-exploration.docx](../brand-logo-exploration.docx).
+
+## Testes de produção e correção óptica (logo-design-skill)
+
+Antes de aprovar uma direção para uso real, inspecionar a master e variantes em: 16 px (favicon), 32 px, monocromia, negativo/reverso, fundos claros/escuros, redução por desfoque ou squint e conjunto de concorrentes/categoria. Verificar contraformas, overshoot, distorção aparente de curvas, alinhamento óptico e respiro; corrigir visualmente, não aplicar ajustes numéricos universais. Separar falha de construção de preferência estética; documentar o que foi observado e o que não pôde ser testado. Comparações com marcas reais servem a distinção, nunca à cópia de SVGs, nomes ou ativos protegidos.
+
+Checkpoint: apresentar 3 conceitos distintos quando houver exploração aberta; obter a escolha da direção antes de gerar o kit completo de exports. Em pedido de logo já aprovado ou de export específico, não reabrir desnecessariamente a escolha. Após aprovação, repassar master, lockups, tamanhos mínimos, paleta e favicon/manifest a `brand-asset-production`. Origem metodológica: https://github.com/kaankiziltug/logo-design-skill; seus scripts e biblioteca de marcas são opcionais e não presumidos disponíveis.
