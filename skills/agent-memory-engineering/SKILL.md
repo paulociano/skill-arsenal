@@ -176,6 +176,12 @@ Quando memória/contexto é compartilhado por uma organização:
 - erasure precisa alcançar tombstones/derivados conforme contrato e produzir evidência verificável quando necessário;
 - retrieval backend deve ser replaceable sem mover o policy boundary para dentro dele.
 
+## Repositório versionado de memória compartilhada
+
+Quando Git for apropriado para conhecimento durável, usar um repositório privado separado, índice curto e documentos temáticos ligados. Cada fato preserva fonte, data, escopo e revisão. Recuperar pelo índice antes de expandir documentos; conflitos entre agentes exigem reconciliação, não substituição automática. Separar memórias por pessoa, equipe e projeto, exigir consentimento para compartilhamento e não inserir credenciais. Validar recuperação entre sessões e correção de fatos antes de alegar persistência.
+
+Referência: https://github.com/AgentMemoryRepo/agentmemoryrepo . A arquitetura é opcional; não pressupõe plugins Devin, instaladores, Git persistente ou sincronização automática disponíveis.
+
 ## Segurança e privacidade
 
 - memória amplifica blast radius de dados sensíveis;
