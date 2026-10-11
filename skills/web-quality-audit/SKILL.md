@@ -49,6 +49,20 @@ Não usar apenas para criar a interface. Para implementação e direção visual
 
 Quando existir um padrão no WAI-ARIA Authoring Practices Guide, usar sua interação esperada como referência, mas não copiar ARIA quando um elemento HTML nativo resolve melhor.
 
+
+## Gate WCAG 2.2 e inspeção de interação (AutoSkills)
+
+Quando o objetivo incluir WCAG 2.2, acrescentar ao inventário de acessibilidade, **somente quando aplicável à superfície**:
+
+1. Verificar foco visível e não oculto por headers sticky, overlays ou containers recortados; testar teclado em scroll e zoom.
+2. Conferir tamanho e espaçamento dos alvos acionáveis conforme critério WCAG aplicável, sem substituir medições por aparência visual.
+3. Para drag-and-drop, testar alternativa sem gesto de arrastar quando a exceção normativa não for demonstrada.
+4. Exercitar estados error, disabled, loading, diálogos e formulários com nome acessível, instruções e feedback detectável por tecnologia assistiva.
+5. Registrar o número do critério e nível de conformidade ao classificar violações; não afirmar conformidade total com base em Lighthouse, axe ou somente testes automatizados.
+6. Para performance, investigar LCP, INP e CLS com evidência de laboratório ou campo identificada; não inferir Core Web Vitals de um screenshot e não prometer DevTools MCP ausente.
+
+Adaptação metodológica independente baseada em `accessibility` e `web-perf` do registro https://github.com/midudev/autoskills, consultado em 2026-10-11. Não incorpora comandos nem dependências de ferramentas externas.
+
 ## Performance
 
 Separar:
