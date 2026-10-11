@@ -51,6 +51,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/illustrated-ebook-production/STACK.md`
 - **japanese-learning-cycle** — Orquestrar aprendizagem de japonês por missão comunicativa, explicação gramatical, kanji contextual, prática de recuperação e progressão por domínio.  
   `stacks/japanese-learning-cycle/STACK.md`
+- **functional-web-app-builder** — Construir web apps completos e funcionais com UX/UI moderna, arquitetura de dados, autenticação, formulários, estados, testes e verificação de runtime, selecionando bibliotecas por adequação.  
+  `stacks/functional-web-app-builder/STACK.md`
 - **improve-existing-web-app** — Melhora uma aplicação web existente preservando funcionalidades, refinando design e validando o resultado no runtime.  
   `stacks/improve-existing-web-app/STACK.md`
 - **meeting-to-actions** — Transforma reuniões, transcrições ou notas em conhecimento reutilizável, decisões, ações e handoffs.  
