@@ -209,3 +209,9 @@ Combina com:
 ## Provenance
 
 Consolidada de `Aider-AI/aider`, `continuedev/continue`, `charmbracelet/crush` e `earendil-works/pi`, com apoio de padrões já existentes no Arsenal. De Pi foram absorvidos núcleo mínimo, extensibilidade por packages/skills/templates e interfaces automatizáveis por JSON/RPC/SDK; não foi absorvida a ausência de permission system, tratada aqui como risco explícito. Preserva repo maps/context seletivo, Git, LSP/symbol context, sessões, multi-model support e edit-test loops. Remove installers, auto-commit obrigatório, provider-specific setup e qualquer suposição de shell irrestrito.
+
+## Aprender construindo e coordenação observável
+
+**Modo de aprendizagem opcional (VibeWise):** quando o objetivo explícito incluir aprender engenharia enquanto IA implementa, pedir primeiro a hipótese arquitetural do usuário, explorar um caso de borda relevante, mapear trade-offs e distinguir checkpoint de design, autorização de implementação e explicação pós-diff. Se o usuário pediu execução direta com contexto suficiente, implementar sem transformar cada passo em entrevista. Fonte: https://github.com/nykooi1/vibe-wise.
+
+**Operação multiagente observável (Agent Office):** para vários workers, explicitar owner, task/issue, branch ou worktree isolada, estado (working, blocked, waiting approval, done, failed), handoff e links de PR/checks; permitir identificar imediatamente quem precisa de decisão humana. Uma UI 3D não é requisito. Worker não recebe privilégios globais, não pode assumir credenciais de outro, nem remover worktree/branch com trabalho não publicado sem preflight e aprovação. Antes de qualquer ação externa, seguir `agent-action-governance`. Fonte: https://github.com/AgentSystemLabs/agent-office; nenhuma CLI local é presumida instalada.
