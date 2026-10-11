@@ -44,6 +44,12 @@ Revisar apenas os grupos relevantes:
 11. Testar teclado, toque, reduced motion e latência percebida.
 12. Comparar antes/depois no runtime.
 
+## Figuras interativas com fallback
+
+Em ilustrações reativas ao ponteiro, exigir estado inicial compreensível, foco e teclado equivalentes quando houver informação, alternativa para toque, labels acessíveis e respeito a reduced-motion. Verificar resize, cleanup, tema, contraste, consumo de recursos e viewport móvel. Não confundir animação decorativa com sinalização de estado essencial.
+
+Referência: https://github.com/lucasmarkes/hairline (figuras isométricas, API update/destroy e opções de tema). Usar como repertório, não como dependência presumidamente instalada; revisar pacote, licença e desempenho antes de integrar.
+
 ## Regras
 
 - Polish não corrige arquitetura ruim.
