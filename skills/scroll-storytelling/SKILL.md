@@ -47,6 +47,10 @@ Use o padrão mais simples que preserve a narrativa.
 9. Medir custo de renderização e evitar múltiplos loops de scroll competindo.
 10. Verificar a narrativa no runtime, não apenas cada animação isolada.
 
+## Originalidade e QA de jornada
+
+Em sites premium guiados por scroll, comparar gramática de página, navegação, hero, progressão dos atos, encerramento e interação exclusiva antes de reutilizar um template. Planejar a curva de atenção e um pico narrativo sem impor estética ou número fixo de efeitos. Para heróis em camadas, estabelecer planos, oclusão e âncoras de contato; compor o mobile como cena própria. Conferir capturas em início, meio, fim e estados intermediários em desktop e mobile, com fallback de reduced motion, foco e conteúdo legível. Referência metodológica: https://github.com/nateherkai/scroll-craft ; não exigir seus serviços de geração, engine ou scripts.
+
 ## Smooth scroll
 
 Smooth scrolling não é storytelling por si só.
