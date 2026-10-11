@@ -37,6 +37,17 @@ Use para validar:
 - `runtime-ui-verification` pode fornecer a interação/runtime quando a tarefa for especificamente UI.
 - Use ambos quando for importante provar comportamento e também explicar a causa no código.
 
+## Reconstrução e engenharia reversa com evidências
+Quando validar uma funcionalidade reconstruída a partir de um artefato distribuído ou de investigação tipo REA:
+- definir o contrato por entradas, ações, saídas, erros e efeitos observáveis no **artefato original autorizado**;
+- anotar versão/hash do original e ambiente de cada observação;
+- manter separadas evidências estáticas (pseudocódigo, módulos, strings, referências) das evidências runtime (resultados efetivamente reproduzidos);
+- comparar o original e a implementação em casos normais, negativos e limites, registrando divergências e cobertura;
+- não afirmar equivalência integral quando só se observou uma amostra; reportar desconhecidos e hipóteses;
+- se REA MCP/CLI ou outro analisador não existir no ambiente, não declarar que a decompilação foi executada.
+
+Referência metodológica: https://github.com/morluto/rea; avaliação `evaluations/2026-10-11-morluto-rea.md`.
+
 ## Guardrails
 - Não declarar sucesso sem cobrir todas as cláusulas relevantes.
 - Não transformar conhecimento do código em atalho para uma validação que deveria ser black-box.
