@@ -181,3 +181,13 @@ Inspiração metodológica: https://github.com/Anil-matcha/AI-Youtube-Shorts-Gen
 
 **Should-trigger:** extrair vários Shorts de um podcast longo ou webinar com deduplicação e manifest. **Near-miss:** escrever roteiro de Reel original sem vídeo-fonte (continuar fluxo usual).
 
+## Recriação de linguagem audiovisual a partir de referência (ReelMimic)
+
+Quando a fonte for um vídeo de referência estética, antes de gerar cenas:
+1. Decompor linguagem em duração de shots, ritmo e BPM quando mensurável, tipos de corte, transições, enquadramentos, paleta, movimento de câmera e densidade de informação. Indicar pontos inferidos, não fingir medições.
+2. Escrever shot list e storyboard de **conteúdo original**, com style frames e assets próprios; requerer revisão de direção antes de produção em lote quando isso evitar retrabalho material.
+3. Produzir cenas com IDs/timecodes; quando houver múltiplos executores disponíveis, separar produção e QA independente. Quando não houver, realizar uma segunda passagem de revisão explícita, sem inventar subagentes.
+4. Em correções, comparar frame ou trecho antes/depois, registrar o defeito e comprovar o resultado; fazer revisão em timestamps, não feedback genérico como 'melhore'.
+5. Inspecionar flicker, coerência de personagens/cenários, início/fim de corte, áudio, clipping e legibilidade antes do master. Não reaproveitar áudio, pessoas, frames ou assets protegidos da referência sem direitos. Estilo pode inspirar direção, não justifica réplica confundível.
+
+Fonte: https://github.com/edenfunf/reelmimic. O aplicativo exige ferramentas e modelos locais específicos; não faz parte do runtime nativo do ChatGPT.
