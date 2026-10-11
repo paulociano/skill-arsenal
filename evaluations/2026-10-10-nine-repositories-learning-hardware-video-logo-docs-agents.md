@@ -23,3 +23,13 @@ Data: 2026-10-10. Método: `arsenal-autopilot`; leitura do `ARSENAL INDEX.md` ca
 
 ## Segurança, compatibilidade e parada
 Nenhum dos projetos foi instalado ou executado. Permissões de acessibilidade, automações de desktop, tokens, transcrição, conteúdo de vídeo de terceiros, firmware e comandos de shell requerem avaliação profunda antes de uso real. Os projetos de hardware não são skills autônomas do ChatGPT. Conservar owners existentes; esta triagem não demonstrou necessidade de skill independente nova. Registro apenas, sem mudanças em projetos consumidores. Se uma melhoria metodológica for incorporada em owner posteriormente, testar cenários de ativação e near-misses.
+
+## Implementação verificada em 2026-10-10
+
+As decisões `ABSORB_METHOD_ONLY` pertinentes foram materializadas em owners existentes, sem criar novas skills:
+- `skills/brand-logo-exploration/SKILL.md`: testes 16/32px, monocromia, reverso, comparação concorrencial, correção óptica, checkpoint de aprovação (kaankiziltug/logo-design-skill).
+- `stacks/ai-reels-production/STACK.md`: decomposição de referências, storyboard original, revisão por cena, evidências antes/depois e limites autorais (edenfunf/reelmimic).
+- `skills/coding-agent-engineering/SKILL.md`: aprendizagem guiada opcional e operação multiagente observável com boundaries (nykooi1/vibe-wise, AgentSystemLabs/agent-office).
+- `skills/agent-memory-engineering/SKILL.md`: documento tipado, fato com owner único e ADR para decisões (scarletkc/seiso).
+
+Arquivos pós-escrita relidos do GitHub e frontmatter confirmado. Referências D continuam sem instalação; nenhuma aplicação externa foi alterada. `ARSENAL INDEX.md` não precisou mudar porque os nomes e descriptions de roteamento foram preservados.
