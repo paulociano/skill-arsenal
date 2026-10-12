@@ -65,3 +65,16 @@ writing-quality é o owner da escrita e reescrita; prose-lint é a camada de aud
 ## Origem metodológica
 
 Adaptada de amperser/proselint, btford/write-good, get-alex/alex, textlint, retext, readability e LanguageTool. O Arsenal preserva a filosofia de checks configuráveis e contexto-sensitive, não listas universais de palavras proibidas.
+
+## Modo de linguagem técnica controlada (ASD-STE100 inspirado)
+
+Ative somente para instruções operacionais, especificações, mensagens de erro e interfaces entre agentes em inglês quando a ambiguidade tiver custo relevante.
+
+1. Escolha entre **strict** (procedimento/instrução) e **STE-flavored** (documentação explicativa); não afirme certificação ASD-STE100 sem acesso à especificação oficial e validação formal.
+2. Identifique sujeito responsável por cada ação, termos com sentidos conflitantes, condições e exceções escondidas, voz passiva ambígua, verbos nominalizados e frases com múltiplas instruções.
+3. Prefira instruções atômicas, vocabulário consistente, voz ativa quando o agente importa, condições explícitas e sequência testável.
+4. Compare original e proposta: nenhuma negação, obrigação, modalidade, hipótese, limite, unidade ou fallback pode desaparecer.
+5. Preserve termos de domínio e precisão; sinalize quando simplificar tornaria a instrução incorreta.
+6. Execute o método diretamente sobre o texto; não dependa de CLI, arquivo externo de vocabulário nem regras proprietárias para alegar conformidade.
+
+Origem adicional: https://github.com/danyuchn/asd-ste100-skill (triagem 2026-10-12). Não aplicar automaticamente a prosa literária ou ao português.
