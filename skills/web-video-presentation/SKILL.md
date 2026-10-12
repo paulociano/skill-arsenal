@@ -85,3 +85,13 @@ Usar leitura e escrita de arquivos e execução de código pelo terminal dispon�
 [GitHub · ConardLi/garden-skills · web-video-presentation](https://github.com/ConardLi/garden-skills/tree/main/skills/web-video-presentation)
 
 Origem local: [web-video-presentation.docx](../web-video-presentation.docx).
+
+## Padrão opcional: fontes vinculadas e cenas animadas (Mira)
+
+Quando o pedido envolver transformar PDF, projeto, artigo ou material existente em apresentação HTML animada, trabalhar em quatro artefatos conceituais separados: **fontes somente leitura → outline/claims verificáveis → roteiro e contrato das cenas → deck renderizado**. Manter a pasta de saída separada das fontes e documentar seus caminhos; não escrever automaticamente nos arquivos de origem.
+
+Para cada cena, especificar mensagem, fonte, metáfora visual ou gráfico justificado, tempo/interação, entrada e saída. Preferir transições que expliquem relações, sem impor loops contínuos a tudo; oferecer `prefers-reduced-motion`, controles por teclado e fallback estático. Testar viewport, overflow, sequência e sincronização de narração antes de exportar. Deck HTML autocontido/offline é opção, não promessa automática, e depende de verificar assets e scripts.
+
+Reordenação, desenho, controle remoto, gravação em webcam/microfone e HTML→MP4 são módulos **opcionais**, usados só quando o runtime e permissões do usuário permitem testar. Para vídeo, verificar captura, áudio, duração, dimensões, sincronismo e render final; não assumir Puppeteer/ffmpeg. Não replicar a CLI de Claude ou templates proprietários da fonte.
+
+Referência metodológica: https://github.com/sandeco/mira-animator (PolyForm Noncommercial 1.0.0; sem incorporação de código externo).
