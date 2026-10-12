@@ -53,6 +53,14 @@ Não simule multiagente quando esses recursos não existirem.
 21. Requested settings e runtime-observed settings devem ser reportados separadamente quando isso importar.
 22. Após implementação substancial, usar reviewer fresco/read-only quando disponível; `fix-first` exige nova verificação antes de nova revisão.
 
+## Plano de controle operacional (quando múltiplos runtimes existirem)
+- Separar plano de controle (fila, atribuição, aprovação, custo, logs) dos agentes que executam; dashboard não substitui a execução nem sua evidência.
+- Associar cada tarefa a identidade de agente, sessão/runtime, eventos, decisões, artefato resultante, revisão e recibo verificável de conclusão.
+- Diferenciar `queued`, `claimed`, `running`, `needs-review`, `blocked`, `completed-verified` e `unknown`; evitar declarar sucesso só com log ou evento `done`.
+- Monitorar orçamento de tokens/custo, falhas e filas apenas quando a telemetria for realmente fornecida.
+- Exigir autorização humana para operações sensíveis, least privilege por workspace e isolamento de chaves; não expor painel alfa à rede sem endurecimento.
+- Mission Control (builderz-labs) é referência de arquitetura self-hosted; não presumir integração, servidor MCP ou agentes ativos neste ambiente.
+
 ## Segurança
 - Não responda automaticamente a prompts de aprovação de outro agente.
 - Não feche sessões ou ambientes que não foram criados pelo coordenador sem autorização.
@@ -73,4 +81,4 @@ Evite paralelizar trabalho altamente acoplado ou decisões que precisam de uma �
 Complementa `graph-engineering`, `handoff`, `code-review`, `agent-choice-audit` e `project-planning`.
 
 ## Origem adaptada
-Metodologia inspirada em `herdrdev/herdr`, `stablyai/orca`, `chaseai-yt/claudex-loop`, block/buzz, proliferate-ai/proliferate, donvito/codex-astra-luna-orchestrator, rizqinrr/viserys-agent, unstablebuild/rune e DannyMac180/astra-advisor. Foram preservados isolamento por tarefa, papéis contratuais, reviewer independente e continuidade de workspace, sem depender de perfis/modelos/CLIs específicos.
+Metodologia inspirada também em https://github.com/builderz-labs/mission-control (plano de controle, receipts, custo e approvals), e em `herdrdev/herdr`, `stablyai/orca`, `chaseai-yt/claudex-loop`, block/buzz, proliferate-ai/proliferate, donvito/codex-astra-luna-orchestrator, rizqinrr/viserys-agent, unstablebuild/rune e DannyMac180/astra-advisor. Foram preservados isolamento por tarefa, papéis contratuais, reviewer independente e continuidade de workspace, sem depender de perfis/modelos/CLIs específicos.
