@@ -75,3 +75,13 @@ Usar junto com web-design-engineer. Quando direção visual não estiver resolvi
 Adaptada de oh-my-design · omd-landing e enriquecida com princípios portáveis de elayadesign/ai-design-skills e dawitlabs/ui-skills, sem importar proibições tipográficas, fórmulas universais ou claims de conversão não verificados.
 
 Origem local: landing-craft.docx.
+
+## Uso obrigatório de Impeccable
+
+Em toda criação, redesign, otimização ou auditoria de landing page, aplicar obrigatoriamente o gate Impeccable documentado em [web-design-engineer](../web-design-engineer/SKILL.md), consultando a fonte [pbakaus/impeccable](https://github.com/pbakaus/impeccable).
+
+- **init / shape**: validar produto, público, oferta, marca, message match, estrutura e CTA antes do build.
+- **craft**: implementar conteúdo verdadeiro, composição própria, responsividade e interação.
+- **critique / audit / harden / polish**: revisar argumentos e provas, hierarquia, acessibilidade, comportamento, performance e estados; corrigir e revalidar.
+
+Os nomes acima descrevem etapas metodológicas. Só executar comandos, CLI, hooks e detectores quando realmente disponíveis; se não estiverem, executar revisão equivalente verificável com ferramentas disponíveis. Não alegar instalação ou testes automáticos que não ocorreram. Identidade do produto e evidências concretas prevalecem sobre presets estéticos.
