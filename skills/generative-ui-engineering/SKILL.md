@@ -21,6 +21,15 @@ Use quando:
 Para uma UI convencional construída por humanos/agente de código, use `web-design-engineer`.
 Para diagramas interativos com topologia já conhecida, use `interactive-system-diagram`.
 
+## Roteamento orientado à tarefa
+
+Antes de gerar uma UI, escolha a menor representação que resolve a intenção:
+- **Entender:** texto para resposta direta; explicação visual ou stepper quando uma relação ou variável realmente melhorar a compreensão.
+- **Comparar:** tabela/componente nativo para critérios simples; gráfico ou controles de pesos quando houver decisão multivariável.
+- **Criar uma ferramenta:** calculadora, simulador ou planejador com entradas validadas, resultados verificáveis, unidades e reset.
+
+Não converter toda resposta em dashboard. Distinguir dados reais, dados do usuário e exemplos ilustrativos. Um renderer não fornece evidência nem acesso a dados ao vivo.
+
 ## Dois modos
 
 ### 1. Component grammar
@@ -79,24 +88,30 @@ Nesse modo:
    - evitar reexecutar efeitos colaterais em cada chunk;
    - somente ativar JS final quando o documento/contrato estiver completo quando necessário.
 
-5. **Design system**
+5. **State & follow-ups**
+   - filtros, sliders, cálculos e ordenação simples devem operar localmente, sem chamar o agente a cada movimento;
+   - follow-up ao agente somente por ação explícita do usuário, incluindo seleções atuais validadas;
+   - outputs anteriores são snapshots independentes até que um contrato de estado/patch cross-call seja realmente implementado;
+   - não presumir persistência de sessão, memória compartilhada nem sincronização do estado de iframe com o agente.
+
+6. **Design system**
    - componentes permitidos carregam tokens, responsividade, foco e reduced motion;
    - UI gerada não redefine silenciosamente identidade global;
    - temas precisam de contraste verificável.
 
-6. **Interaction**
+7. **Interaction**
    - ações essenciais têm label e estado;
    - loading, success, failure e retry são distinguíveis;
    - controles gerados não fingem capacidades inexistentes.
 
-7. **Security**
+8. **Security**
    - sanitize/parse antes de render;
    - sandbox sem permissões desnecessárias;
    - scripts/imports/network precisam de política explícita;
    - segredo nunca é interpolado no documento gerado;
    - conteúdo remoto e mensagens da UI são dados não confiáveis.
 
-8. **Verify**
+9. **Verify**
    - schema/parser;
    - render desktop/mobile;
    - keyboard/focus;
@@ -135,6 +150,12 @@ Combina com:
 - `interaction-polish`;
 - `secure-code-privacy-review`.
 
+## Implementação de referência opcional
+
+O [CopilotKit/OpenIntelligentUI](https://github.com/CopilotKit/OpenIntelligentUI) mostra um exemplo concreto em Next.js/React, CopilotKit/AG-UI, FastAPI/LangGraph e Websandbox. Seu `generateSandboxedUi` usa campos ordenados (`initialHeight`, `placeholderMessages`, `css`, `html`, `jsFunctions`, `jsExpressions`) e uma bridge própria para `sendPrompt` e `openLink`. **Esse contrato é específico daquele runtime**, não uma API universal nem uma ferramenta automaticamente disponível no ChatGPT. O projeto demanda infraestrutura, dependências e credenciais de provedores; use seus padrões conceituais aqui, não comandos ou integrações fictícias.
+
+Para execução independente, auditar separadamente isolamento de iframe, CSP/rede/imports, validação da bridge, segredos, logs/tracing, versões das dependências, smoke test com provedores reais e durabilidade do checkpoint. O exemplo documenta checkpoint em memória, inadequado por si só para memória compartilhada persistente em produção.
+
 ## Provenance
 
-Consolidada principalmente de [thesysdev/openui](https://github.com/thesysdev/openui), [CopilotKit/OpenGenerativeUI](https://github.com/CopilotKit/OpenGenerativeUI) e [CopilotKit/CopilotKit](https://github.com/CopilotKit/CopilotKit). Preserva component grammars, streaming render, sandboxed documents e host bridges, sem exigir OpenUI Lang, AG-UI, CopilotKit, LangChain ou MCP.
+Consolidada principalmente de [thesysdev/openui](https://github.com/thesysdev/openui), [CopilotKit/OpenGenerativeUI](https://github.com/CopilotKit/OpenGenerativeUI) [CopilotKit/CopilotKit](https://github.com/CopilotKit/CopilotKit) e [CopilotKit/OpenIntelligentUI](https://github.com/CopilotKit/OpenIntelligentUI) (README, architecture, master-playbook e advanced-visualization consultados em 2026-10-11). Preserva component grammars, streaming render, sandboxed documents e host bridges, sem exigir OpenUI Lang, AG-UI, CopilotKit, LangChain ou MCP.
