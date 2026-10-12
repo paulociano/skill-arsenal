@@ -226,3 +226,17 @@ Quando o artefato puder rodar, usar **QA visual em passagens limitadas**: constr
 Para revisão de interface existente, distinguir explicitamente **refinamento** (preserva identidade e comportamento atuais) de **redesign** (mantém verdade do produto e funcionalidades, substitui linguagem visual após decisão de escopo). Não alterar copy factual ou alegações de produto sem evidência/autorização.
 
 Metodologia incremental adaptada de [pbakaus/impeccable](https://github.com/pbakaus/impeccable), `skill/SKILL.src.md` e `PRODUCT.md`. Não requer CLI, binário, instalação automática, extensão de navegador ou hooks Impeccable. Suas proibições estéticas categóricas são opiniões e não regras universais do Arsenal.
+
+## Gate obrigatório: Impeccable para sites e landing pages
+
+Em **toda criação, redesign, melhoria ou auditoria de sites e landing pages**, consultar [pbakaus/impeccable](https://github.com/pbakaus/impeccable) e aplicar obrigatoriamente sua metodologia.
+
+1. **init**: definir ou recuperar verdade do produto, público, objetivo, restrições e marca. Ler PRODUCT.md / DESIGN.md quando existirem.
+2. **shape / craft**: resolver arquitetura, hierarquia, composição, conteúdo, responsividade e estados antes de decoração e motion.
+3. **critique**: revisar clareza, hierarquia, legibilidade, confiança, coerência visual e experiência.
+4. **audit / harden / adapt / optimize**: testar, quando houver runtime, acessibilidade, teclado, contraste, responsividade, zoom, reduced motion, erros, overflow e performance.
+5. **polish**: corrigir achados prioritários, revalidar e declarar limites de verificação.
+
+**Obrigatório é o método, não a instalação do software**: executar CLI, hooks, extensão ou detectores Impeccable apenas quando realmente disponíveis. Caso contrário, aplicar as etapas equivalentes com as ferramentas do ChatGPT. Nunca afirmar execução de testes ou comandos não realizados; não instalar executáveis implicitamente. Preservar marca, design system, fatos do produto e decisões contextuais em vez de adotar proibições estéticas genéricas.
+
+Para páginas de conversão, aplicar também landing-craft. Mesmo em mudanças menores, percorrer o gate com profundidade proporcional ao escopo.
