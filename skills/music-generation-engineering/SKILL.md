@@ -22,6 +22,13 @@ Transformar intenção criativa em música generativa controlável e revisável,
 ## Planner antes do sintetizador
 Preferir intent → blueprint → musical metadata/lyrics → synthesis para trabalhos estruturados.
 
+## Planejamento simbólico editável (quando o backend suportar)
+- Separar a intenção/lyrics da representação de melodia, harmonia e estrutura (score, MIDI, ABC ou equivalente), antes de gerar áudio.
+- Inspecionar e, quando possível, reproduzir o plano simbólico; alterar notas, acordes, instrumentação ou arranjo sem regenerar cegamente toda a composição.
+- Para cover ou áudio de referência, distinguir transcrição estimada de partitura confirmada; validar erros de transcrição e obter direitos antes de distribuir.
+- Preferir loop plan → render → escuta → edição localizada → novo render, registrando versão da partitura, prompt e artefato.
+- YuE2 é exemplo externo de planner simbólico + síntese, não backend presumido disponível no ChatGPT.
+
 ## Personalização
 Fine-tuning/LoRA só deve ser promovido com dados/direitos adequados, holdout separado e ganho comprovado contra baseline. Número de faixas, tempo e VRAM são propriedades do backend.
 
@@ -31,4 +38,4 @@ Fine-tuning/LoRA só deve ser promovido com dados/direitos adequados, holdout se
 - não afirmar backend, weights ou GPU disponíveis sem grounding.
 
 ## Provenance
-Adaptada principalmente de https://github.com/ACE-Step/ACE-Step-1.5, preservando planner→synthesis, controles musicais, reference audio, editing/repaint, stems/layers e personalização avaliada sem exigir ACE-Step, seus pesos, Gradio, CUDA ou hardware específico.
+Adaptada de https://github.com/ACE-Step/ACE-Step-1.5 e https://github.com/multimodal-art-projection/YuE (YuE2; referência em 2026-10-11), preservando planner→synthesis, controles musicais, reference audio, editing/repaint, stems/layers e personalização avaliada sem exigir ACE-Step, seus pesos, Gradio, CUDA ou hardware específico.
