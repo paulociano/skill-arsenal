@@ -86,6 +86,24 @@ Quando prompts, AGENTS.md, CLAUDE.md ou skills já foram usados em trabalho real
 
 A metáfora de gradient descent é útil apenas se o loop continuar empiricamente mensurável.
 
+
+## Protocolo Autoresearch controlado (quando houver iterações mensuráveis)
+
+Adaptar apenas os invariantes portáteis de Karpathy/autoresearch, uditgoenka/autoresearch, crashcartlabs/autoresearch-agent e darkroomengineering/cc-settings. Não presumir scripts, comandos slash, GPU, Claude subprocess, agentes independentes, avaliações pagas ou loops persistentes.
+
+1. **Contrato selado antes do baseline:** registrar objetivo, arquivo(s) editáveis, versões, casos de teste, métrica primária e direção, avaliador imutável, guardrails de segurança/correção, limites de custo/tempo/rodadas e critérios de interrupção. Modificação do avaliador, corpus, modelo ou critério invalida a série e exige novo baseline; nunca otimizar alterando o juiz.
+2. **Baseline repetido e ruído:** executar mais de uma amostra idêntica quando possível; estimar variabilidade de pontuação. Definir ganho mínimo superior ao ruído e à relevância prática. Se não houver amostragem independente, rotular apenas como revisão estrutural, não ganho empírico.
+3. **Controle de valor incremental:** além do baseline original, comparar, quando executável em condições equivalentes, uma instrução simples de mesma intenção sem a skill. Não alegar valor da skill apenas por superar um prompt vazio.
+4. **Blindagem train/holdout:** separar casos usados para diagnóstico de casos reservados para decisão. O otimizador não recebe textos, respostas ou justificativas do holdout; o resultado agregado é revelado somente no gate de decisão. Não ajustar cases ou checklist para acomodar a candidata; mudanças exigem nova série.
+5. **Juiz auditável:** rubric binária ou métrica mecânica previamente definida; verificar ambiguidades com dupla avaliação do mesmo output quando possível. Isolar executor e avaliador, fixar configuração/modelo e comparar condições pareadas. Uma opinião na mesma sessão não equivale a benchmark cego.
+6. **Mudança mínima e decisão:** uma hipótese por rodada; checar métrica, holdout, corretude, segurança e custo de complexidade. Preservar somente ganho acima do limiar e sem regressões críticas. Empate com simplificação pode ser aceito apenas sob critérios de equivalência predefinidos, nunca ignorando guardrails.
+7. **Trilha reversível:** registrar run ID, base commit/hash, candidato, diff, seed/config, score baseline/candidato, desvio/ruído, holdout agregado, veto, decisão (keep/discard/crash/overfit), tempo/custo e limites. Fazer mudanças via patches revisáveis; nunca usar `git reset --hard`, exclusão ampla ou reescrita de histórico em workspace compartilhado. Reverter somente arquivos do escopo com estado anterior verificado.
+8. **Parada segura:** teto finito de iterações e orçamento, interrupção em falha de teste, acesso inesperado a segredos, alteração fora do escopo, ruído dominante ou estagnação. Loops ininterruptos e execução em background não são capacidades implícitas do ChatGPT.
+
+**Casos de aceitação:** should-trigger: "otimize esta skill em cinco experimentos com pontuação e holdout"; near-miss: "melhore a redação deste parágrafo" (edição única sem benchmark); veto: aumento de score com quebra de segurança ou piora relevante no holdout. Quando ferramentas para execução independente não existirem, entregar protocolo, diff e limites sem inventar resultados.
+
+**Proveniência:** princípios de escopo, orçamento fixo, métrica congelada e registro de [karpathy/autoresearch](https://github.com/karpathy/autoresearch); métrica genérica e mínima alteração de [uditgoenka/autoresearch](https://github.com/uditgoenka/autoresearch); bounds, snapshots e guardrails de [crashcartlabs/autoresearch-agent](https://github.com/crashcartlabs/autoresearch-agent); ruído, blindagem do holdout e controle de instrução simples de [darkroomengineering/cc-settings](https://github.com/darkroomengineering/cc-settings/blob/main/skills/autoresearch/SKILL.md). Adaptação metodológica, não instalação dos executores originais.
+
 ## Ferramentas e dependências
 
 Usar execuções independentes apenas quando disponíveis e autorizadas; não criar novas tarefas do usuário para simular testes. Sem contexto fresco e execução real, entregar revisão estrutural e não alegar validação empírica. Otimização paga exige orçamento autorizado.
