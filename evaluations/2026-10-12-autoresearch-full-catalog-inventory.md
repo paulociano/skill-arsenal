@@ -284,3 +284,14 @@ O GitHub do Arsenal contém centenas de skills muito diferentes, incluindo skill
 
 ## Próximo gate de aceitação
 Por skill, registrar 1 baseline repetido, 5 candidatos e medições reais pareadas, holdout separado, resultado de guardrails e decisão registrada. Publicar apenas candidatas aprovadas. Revalidar cada commit no GitHub e não confundir baseline estático de frontmatter com qualidade.
+
+
+## Continuação: auditoria de roteamento e ferramenta determinística
+
+- Verificação direta na fonte canônica: árvore GitHub continua com **256** caminhos `skills/*/SKILL.md`.
+- Indexação: os **256 nomes de diretório** aparecem como entradas no `ARSENAL INDEX.md`; nenhuma ausência por nome foi detectada. O índice também contém stacks, por isso o total de entradas não é uma contagem exclusiva de skills.
+- Publicado `scripts/audit_skill_catalog.py` como verificador local **somente leitura** de frontmatter, correspondência `name`/diretório, descriptions, nomes duplicados e presença no índice; fornece JSON e exit code.
+- Limite da validação: a ferramenta foi relida do GitHub, mas sua execução sobre o checkout completo **não foi realizada neste turno**. Não há prova de que todos os frontmatters do repositório passem; a auditoria de nomes no índice foi feita separadamente sobre dados do GitHub.
+- **Cinco experimentos por skill seguem pendentes**: sem execução fresca, baseline comportamental nem holdout. Não houve reescrita de skills individuais nesta continuação.
+
+Comando para execução em um checkout confiável, sem dependências de terceiros: `python scripts/audit_skill_catalog.py --root . --output catalog-audit.json`. O script não executa código das skills nem altera o catálogo.
