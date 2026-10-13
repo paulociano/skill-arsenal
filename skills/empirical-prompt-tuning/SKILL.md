@@ -104,6 +104,19 @@ Adaptar apenas os invariantes portáteis de Karpathy/autoresearch, uditgoenka/au
 
 **Proveniência:** princípios de escopo, orçamento fixo, métrica congelada e registro de [karpathy/autoresearch](https://github.com/karpathy/autoresearch); métrica genérica e mínima alteração de [uditgoenka/autoresearch](https://github.com/uditgoenka/autoresearch); bounds, snapshots e guardrails de [crashcartlabs/autoresearch-agent](https://github.com/crashcartlabs/autoresearch-agent); ruído, blindagem do holdout e controle de instrução simples de [darkroomengineering/cc-settings](https://github.com/darkroomengineering/cc-settings/blob/main/skills/autoresearch/SKILL.md). Adaptação metodológica, não instalação dos executores originais.
 
+
+## Otimização em lote de um catálogo de skills
+
+Quando o pedido envolver **todas** as skills, não interpretar "cinco experimentos" como autorização para reescrever o catálogo de uma vez. Trabalhar por skill e registrar o estado de cada owner, podendo agrupar hipóteses globais somente quando o efeito for mensurável individualmente.
+
+1. Fixar inventário canônico do GitHub, commit base, lista completa de `skills/*/SKILL.md` e divisão reproduzível em cohort de diagnóstico e holdout por casos de teste (não por nome de arquivo apenas). Não confundir revisão de frontmatter com execução comportamental.
+2. Para cada skill: estabelecer cenários should-trigger, near-miss e adversarial; verificar baseline no runtime realmente disponível e com settings constantes. Ausência de executor isolado, credenciais, dados ou ferramenta necessária = `blocked_unmeasured`, não zero nem PASS.
+3. Definir até cinco **experimentos de hipótese/candidata por skill** quando o pedido especificar cinco. Não contar leitura, lint, análise estática ou cinco checklists como cinco experimentos de melhoria. Uma rodada requer candidata material, teste sobre baseline e decisão.
+4. Registrar por rodada: fonte/ref base, hipótese, diff permitido, entrada train, métrica e direção, repetição/ruído, holdout oculto, regressões críticas, custo, decisão, evidência e commit (se promovido).
+5. Não fazer modificação homogênea em massa sem falha compartilhada evidenciada; preferir fixes por família de falha com owner específico. Sem prova de valor e regressão, manter o texto original.
+6. Guardrail global: comparabilidade de métricas por domínio é limitada; agregar cobertura (`measured / total`), `kept`, `reverted`, `blocked` e não um score subjetivo único para todas as skills. Revalidar referências de índice e portabilidade após publicação.
+7. Encerrar informando exatamente quantas skills tiveram baseline real, cinco experimentos completos, holdout executado e publicação verificada. Nunca declarar "todas otimizadas" com amostra ou plano.
+
 ## Ferramentas e dependências
 
 Usar execuções independentes apenas quando disponíveis e autorizadas; não criar novas tarefas do usuário para simular testes. Sem contexto fresco e execução real, entregar revisão estrutural e não alegar validação empírica. Otimização paga exige orçamento autorizado.
