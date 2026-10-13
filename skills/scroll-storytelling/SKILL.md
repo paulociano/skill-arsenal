@@ -86,3 +86,36 @@ web-design-engineer, ui-motion-design, gsap-animation, shader-graphics-engineeri
 ## Origem metodológica
 
 Adaptada de darkroomengineering/lenis, 14islands/r3f-scroll-rig, barbajs/barba e locomotive-scroll, preservando os princípios de narrativa, progressive enhancement, sincronização e acessibilidade sem exigir bibliotecas específicas.
+
+## Taxonomia técnica complementar (scrollytelling)
+
+Ao desenhar os beats, identifique também a técnica visual concreta:
+- **graphic sequence**: troca discreta de gráfico/estado por capítulo;
+- **animated transition**: interpolação de estados quando a continuidade explica a mudança;
+- **pan and zoom**: revelar escala ou região de imagem/mapa com propósito;
+- **moviescroller**: sequência de frames guiada por scroll, somente quando os assets e o orçamento suportarem;
+- **show-and-play**: ativação de mídia ou interação em marcos narrativos, sempre com controle alternativo.
+
+Essa taxonomia descreve a experiência, não determina a biblioteca. Documentar o beat, estado inicial/final, trigger, fallback e critério verificável de entendimento.
+
+## Escolha progressiva de mecanismos nativos
+
+- Considerar CSS `animation-timeline: view()` ou `scroll()` com `@supports` para casos declarativos, verificando suporte real nos navegadores-alvo e fallback legível sem animação.
+- Preferir `IntersectionObserver` para revelar conteúdo e atualizar passos discretos; não usar listener de scroll contínuo quando um observer resolver.
+- Em React, avaliar Motion para progressos mapeados a transform/opacity; GSAP ScrollTrigger para múltiplas timelines ou pinning; não introduzir ambos sem necessidade.
+- Em código dependente de scroll contínuo, usar listeners passivos, `requestAnimationFrame` quando cabível e cleanup correto. Evitar medidas de layout e setState por frame desnecessários.
+- Não presumir bundle sizes, compatibilidade entre browsers ou ganhos de performance a partir de números retirados de exemplos externos; medir o caso real.
+
+## Mobile e interação robusta
+
+1. Desenhar versão empilhada e semanticamente completa antes de expandir para pinned desktop. Nunca ocultar o único visual explicativo no mobile.
+2. Validar `svh`, mudanças da chrome do navegador, sticky com ancestrais `overflow`, rolagem por momentum e mudanças de orientação.
+3. Não bloquear `touch`, pull-to-refresh ou back-swipe sem justificativa funcional e alternativa acessível; evitar `scroll-snap: mandatory` em painéis cujo conteúdo excede a altura útil.
+4. Toda interação por gesto deve ter controle equivalente por toque/teclado. Manter landmarks, links de âncora, histórico, leitura por screen reader e ordem de foco.
+5. Verificar no runtime progressão completa, estados intermediários, reduced motion, throttling, memória e navegação em dispositivos reais quando disponíveis. Não alegar testes em hardware que não foram feitos.
+
+## Evidência e limites
+
+Não usar alegações genéricas de aumento de engajamento, retenção ou conversão como expectativa causal para um projeto. Definir hipóteses e métricas próprias quando o negócio exigir validação.
+
+Referência adicional: [doodledood/claude-code-plugins, scrollytelling, commit 3c29306](https://github.com/doodledood/claude-code-plugins/blob/3c29306a42255bb58c1fdfd0060d449b7dd1335e/claude-plugins/frontend-design/skills/scrollytelling/SKILL.md). Adaptada sem depender das perguntas de interface, comandos ou runtime do Claude Code.
