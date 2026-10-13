@@ -44,3 +44,17 @@ Use `writing-quality` para revisão ampla de significado, evidência e voz; use 
 
 ## Origem adaptada
 Metodologia inspirada em `docwriter-org/plain-writing-skill`, flexibilizada para não impor preferências estilísticas absolutas fora de contexto.
+
+## Linguagem controlada para interfaces entre agentes
+
+Quando a saída for consumida por outro agente (descrição de ferramenta, instrução de handoff, procedimento, erro operacional), avaliar disciplina inspirada em ASD-STE100, sem afirmar certificação ou aderência ao léxico normativo:
+
+1. Uma ação principal por frase; explicitar ator, condição, objeto, resultado e exceção.
+2. Preferir voz ativa, termos estáveis, verbos concretos e tempos simples quando eliminarem ambiguidade.
+3. Separar fatos, hipóteses, permissões e obrigações: `must`, `may`, `should` não são intercambiáveis.
+4. Não trocar nomes de API, campos, strings de erro ou sintaxe literal para parecer simples.
+5. Em instruções de alto risco, usar pré-condição, passos numerados, pós-condição verificável e comportamento de falha.
+6. Aplicar modo estrito somente a procedimentos e tool specs; prosa editorial mantém flexibilidade e voz.
+7. Revisar se o leitor automatizado sabe quem executa cada passo, sob que condição, e quando parar.
+
+Fonte metodológica: https://github.com/danyuchn/asd-ste100-skill . A disciplina de clareza é adaptada; não reproduzir conteúdo controlado da especificação oficial nem apresentar os textos como certificados ASD-STE100.
