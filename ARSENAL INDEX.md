@@ -217,6 +217,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **llm-red-team-evaluation** — Avaliar adversarialmente aplicações GenAI com threat model, probes, detectores, cobertura, mitigação e reteste controlado.
 - **locale-adapter** — Localizar conteúdo e UX copy para outro idioma ou mercado preservando fatos, termos protegidos e comportamento do produto.
 - **loop-engineering** — Projetar trabalho recorrente ou iterativo com trigger, execução, verificação, estado persistido e limites de parada.
+- **mcp-agent-behavior-testing** — Testar contratos MCP e comportamento observável de agentes, distinguindo teste direto, escolha de ferramentas, evidências, repetições e segurança.  
+  `skills/mcp-agent-behavior-testing/SKILL.md`
 - **material-design-3** — Implementar ou auditar interfaces Material Design 3 em Compose, Flutter ou web conforme a plataforma e versão reais.
 - **modern-css-practices** — Aplicar CSS moderno adaptativo em páginas e componentes com layout intrínseco, progressive enhancement, acessibilidade e redução de scripts/breakpoints desnecessários.
 - **motion-asset-engineering** — Escolher, integrar e validar assets animados em web entre SVG/CSS, Lottie, Rive, Canvas e vídeo conforme interação, peso, editabilidade e acessibilidade.
