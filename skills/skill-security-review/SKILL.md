@@ -102,3 +102,17 @@ Adaptada de NVIDIA/SkillSpector.
 Installer-chain e sinais estáticos adaptados de https://github.com/dmtrKovalenko/bashka, sem depender do binário ou auto-update.
 
 Origem local: [skill-security-review.docx](../skill-security-review.docx).
+
+## Obfuscação e estado incremental
+
+Ao inspecionar grandes catálogos externos, acrescentar verificação estática de:
+- Unicode invisível e controles bidirecionais (como U+200B, U+202E), especialmente em comandos, URLs e nomes de arquivo;
+- cadeias de base64/hex/escape decodificadas antes de execução, wrappers `eval`, `curl | shell`, here-docs e substituição de comandos;
+- URLs de webhook, túneis e endpoints que recebem secrets, além de SSRF para redes internas;
+- diferenças entre exemplos em code fences e comandos realmente invocados; marcador em exemplo não é automaticamente vulnerabilidade;
+- hashes da origem, arquivos e novos findings por execução; suppressions devem ter justificativa e prazo, nunca confiar no publisher inteiro sem inspecionar mudanças;
+- **não reduzir a revisão ao delta** quando a skill tem nova permissão, script ou caminho de execução.
+
+Esses sinais são triagem e exigem leitura semântica. Não declarar fonte segura apenas porque não houve matches, nem rodar conteúdo suspeito para descobrir intenção.
+
+**Proveniência:** metodologia de triagem analisada em `BankrBot/skills/aeon-skill-security-scan/SKILL.md` (2026-10-15); padrões absorvidos sem instalar scanner, utilizar allowlist de publicadores ou confiar nos resultados de terceiros.
