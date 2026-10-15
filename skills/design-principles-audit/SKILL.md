@@ -162,3 +162,7 @@ Quando uma interface foi inspirada em páginas, campanhas ou capturas de terceir
 6. Não emitir veredito jurídico definitivo. Encaminhar casos de propriedade intelectual de alto impacto a revisão especializada.
 
 Origem metodológica: `MengTo/Skills/agent-skills/codex/audit-reference-originality/SKILL.md` (2026-10-15). Não executar ferramentas específicas de Codex sem suporte real.
+
+## Evidência de analytics de experiência (ComposioHQ 432–531, 2026-10-15)
+
+Em auditorias apoiadas por Clarity ou analytics similares, registrar janela de coleta, dimensão, filtros, população e defasagem. Respeitar limites do conector (referência Clarity: exportação de 1 a 3 dias e até três dimensões), sem alegar acesso a mapas de calor ou gravações quando só há tabelas. Não atribuir causalidade a métricas de cliques e abandono sem contexto ou evidência complementar. Referências: microsoft-clarity e microsoft_clarity, ComposioHQ 432–531.
