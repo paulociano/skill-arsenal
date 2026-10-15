@@ -119,3 +119,7 @@ Recebe masters de `brand-logo-exploration` e regras de `brand-guidelines-authori
 ## Origem metodológica
 
 Síntese adaptada de OpenHomeFoundation/brand-assets, git-grader/brand, sacredvoid/logo-generator e OpenAEC-Foundation/OpenAEC-style-book. A lógica de export foi preservada como metodologia, sem exigir Sharp, CairoSVG, Affinity, Python ou scripts específicos da fonte.
+
+## Publicação e atualização de mídia em CDNs (ComposioHQ 152–181, 2026-10-15)
+
+Na entrega de assets para um serviço externo de mídia, preservar master/versionamento, pasta e identificador público, tipo de recurso e transformação. Conferir preset de upload, formatos permitidos, política de sobrescrita e se o asset é público ou privado antes de publicar. Operações de pasta devem ser idempotentes; um lookup vazio não prova que o arquivo foi apagado. Verificar quota da conta e distinguir arquivo enviado de disponibilização em CDN, cujo cache pode propagar alterações com atraso. Não alegar publicação ou invalidação concluída sem resposta do provedor. Método adaptado de ComposioHQ/awesome-claude-skills cloudinary-automation; o conector não foi ativado.
