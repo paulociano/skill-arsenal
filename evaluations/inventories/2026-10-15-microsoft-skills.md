@@ -216,3 +216,26 @@ Data: 2026-10-15. 210 arquivos SKILL.md encontrados. Base main. Truncada: false.
 | 208 | [microsoft-docs](https://github.com/microsoft/skills/blob/main/.github/skills/microsoft-docs/SKILL.md) | B/D | REVIEW_CONTENT | inspect full content and dependencies |
 | 209 | [podcast-generation](https://github.com/microsoft/skills/blob/main/.github/skills/podcast-generation/SKILL.md) | B/D | REVIEW_CONTENT | inspect full content and dependencies |
 | 210 | [skill-creator](https://github.com/microsoft/skills/blob/main/.github/skills/skill-creator/SKILL.md) | B/D | REVIEW_CONTENT | inspect full content and dependencies |
+
+## Revisão individual de 14 Microsoft AKS, Cost, Kusto e Azure Local SKILL.md (2026-10-15)
+
+Foram lidos os 14 SKILL.md principais abaixo, com seus contratos, gatilhos e limites. A revisão não executou ferramentas Azure, captura de rede, chamadas Kusto, scripts, alteração de orçamento ou infraestrutura. Dependências transitivas e documentação auxiliar ainda exigem verificação no uso concreto.
+
+| Skill | Grupo | Classe | Decisão | Limite e risco |
+|---|---|---|---|---|
+| [aks-gpu-inference](https://github.com/microsoft/skills/blob/main/.github/plugins/aks-skills/skills/aks-gpu-inference/SKILL.md) | aks-skills | B/D | KEEP_EXTERNAL_REFERENCE | AKS: read-only e evidência antes de captura ou remediação |
+| [aks-known-issues](https://github.com/microsoft/skills/blob/main/.github/plugins/aks-skills/skills/aks-known-issues/SKILL.md) | aks-skills | B/D | KEEP_EXTERNAL_REFERENCE | AKS: read-only e evidência antes de captura ou remediação |
+| [aks-network-capture](https://github.com/microsoft/skills/blob/main/.github/plugins/aks-skills/skills/aks-network-capture/SKILL.md) | aks-skills | B/D | KEEP_EXTERNAL_REFERENCE | AKS: read-only e evidência antes de captura ou remediação |
+| [aks-troubleshooting](https://github.com/microsoft/skills/blob/main/.github/plugins/aks-skills/skills/aks-troubleshooting/SKILL.md) | aks-skills | B/D | KEEP_EXTERNAL_REFERENCE | AKS: read-only e evidência antes de captura ou remediação |
+| [azure-search-nav](https://github.com/microsoft/skills/blob/main/.github/plugins/aks-skills/skills/azure-search-nav/SKILL.md) | aks-skills | B/D | KEEP_EXTERNAL_REFERENCE | AKS: read-only e evidência antes de captura ou remediação |
+| [cost-analysis](https://github.com/microsoft/skills/blob/main/.github/plugins/azure-cost/skills/cost-analysis/SKILL.md) | azure-cost | B/D | ABSORB_METHOD_ONLY | Distinguir custo real, previsão, orçamento e otimização; escopo de conta |
+| [cost-estimation](https://github.com/microsoft/skills/blob/main/.github/plugins/azure-cost/skills/cost-estimation/SKILL.md) | azure-cost | B/D | ABSORB_METHOD_ONLY | Distinguir custo real, previsão, orçamento e otimização; escopo de conta |
+| [cost-governance](https://github.com/microsoft/skills/blob/main/.github/plugins/azure-cost/skills/cost-governance/SKILL.md) | azure-cost | B/D | ABSORB_METHOD_ONLY | Distinguir custo real, previsão, orçamento e otimização; escopo de conta |
+| [cost-optimization](https://github.com/microsoft/skills/blob/main/.github/plugins/azure-cost/skills/cost-optimization/SKILL.md) | azure-cost | B/D | ABSORB_METHOD_ONLY | Distinguir custo real, previsão, orçamento e otimização; escopo de conta |
+| [azure-kusto-graph](https://github.com/microsoft/skills/blob/main/.github/plugins/azure-kusto-graph-skills/skills/azure-kusto-graph/SKILL.md) | azure-kusto-graph-skills | B/D | KEEP_EXTERNAL_REFERENCE | IRQL/Kusto especializado; schema, extensões e acesso obrigatórios |
+| [azure-kusto-irql-graph](https://github.com/microsoft/skills/blob/main/.github/plugins/azure-kusto-graph-skills/skills/azure-kusto-irql-graph/SKILL.md) | azure-kusto-graph-skills | B/D | KEEP_EXTERNAL_REFERENCE | IRQL/Kusto especializado; schema, extensões e acesso obrigatórios |
+| [azure-kusto-irql](https://github.com/microsoft/skills/blob/main/.github/plugins/azure-kusto-graph-skills/skills/azure-kusto-irql/SKILL.md) | azure-kusto-graph-skills | B/D | KEEP_EXTERNAL_REFERENCE | IRQL/Kusto especializado; schema, extensões e acesso obrigatórios |
+| [azure-local-multi-rack](https://github.com/microsoft/skills/blob/main/.github/plugins/azure-local-skills/skills/azure-local-multi-rack/SKILL.md) | azure-local-skills | B/D | KEEP_EXTERNAL_REFERENCE | Azure Local/hardware e rede físicos, alto impacto operacional |
+| [azure-local](https://github.com/microsoft/skills/blob/main/.github/plugins/azure-local-skills/skills/azure-local/SKILL.md) | azure-local-skills | B/D | KEEP_EXTERNAL_REFERENCE | Azure Local/hardware e rede físicos, alto impacto operacional |
+
+O procedimento de diferenciar custo realizado, previsão, governança e otimização é aproveitável sem novos owners. Análises de incidentes AKS exigem prova read-only antes de captura ou mutação; nenhum serviço Azure foi presumido conectado.
