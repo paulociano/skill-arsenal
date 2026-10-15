@@ -16,3 +16,20 @@ Data: 2026-10-15. 10 arquivos SKILL.md encontrados. Base main. Truncada: false.
 | 8 | [pricing](https://github.com/slavingia/skills/blob/main/skills/pricing/SKILL.md) | B/D | REVIEW_CONTENT | inspect full content and dependencies |
 | 9 | [processize](https://github.com/slavingia/skills/blob/main/skills/processize/SKILL.md) | B/D | REVIEW_CONTENT | inspect full content and dependencies |
 | 10 | [validate-idea](https://github.com/slavingia/skills/blob/main/skills/validate-idea/SKILL.md) | B/D | REVIEW_OVERLAP | compare to quality/security owners |
+
+## Revisão individual do conteúdo: dez skills
+
+As dez SKILL.md foram abertas e examinadas em 2026-10-15. Avaliação metodológica/documental (não inclui teste empírico em clientes ou scanner de dependências, desnecessários para conteúdo sem execução própria).
+
+| Skill | Classe | Decisão | Owner candidato | Evidência e limite |
+|---|---|---|---|---|
+| [company-values](https://github.com/slavingia/skills/blob/main/skills/company-values/SKILL.md) | B | ABSORB_METHOD_ONLY | team-health-management / brand-strategy | Cultura antes de contratar; processo orientado a valores. Sem runtime obrigatório. |
+| [find-community](https://github.com/slavingia/skills/blob/main/skills/find-community/SKILL.md) | B | ABSORB_METHOD_ONLY | venture-building-cycle | Pesquisa de comunidade antes de produto. Exige validação de fontes e pessoas reais. |
+| [first-customers](https://github.com/slavingia/skills/blob/main/skills/first-customers/SKILL.md) | B | ABSORB_METHOD_ONLY | first-customer-research | Primeiras vendas, abordagem individual; não pressupor consentimento para outreach. |
+| [grow-sustainably](https://github.com/slavingia/skills/blob/main/skills/grow-sustainably/SKILL.md) | B | ABSORB_METHOD_ONLY | venture-building-cycle | Rentabilidade e runway como guardrails; não substitui dados financeiros. |
+| [marketing-plan](https://github.com/slavingia/skills/blob/main/skills/marketing-plan/SKILL.md) | B | ABSORB_METHOD_ONLY | social-growth-engine | Marketing orgânico após evidência de fit; premissas não são garantias. |
+| [minimalist-review](https://github.com/slavingia/skills/blob/main/skills/minimalist-review/SKILL.md) | C/B | KEEP_EXTERNAL_REFERENCE | decision-analysis | Checklist de simplificação e julgamento; overlap amplo. |
+| [mvp](https://github.com/slavingia/skills/blob/main/skills/mvp/SKILL.md) | B | ABSORB_METHOD_ONLY | venture-building-cycle | MVP mínimo e entrega manual antes de software; já coberto. |
+| [pricing](https://github.com/slavingia/skills/blob/main/skills/pricing/SKILL.md) | B | ABSORB_METHOD_ONLY | pricing-strategy / venture-building-cycle | Cobrar cedo e testar valor; preços requerem mercado real. |
+| [processize](https://github.com/slavingia/skills/blob/main/skills/processize/SKILL.md) | A/B | ABSORB_METHOD_ONLY | venture-building-cycle | Processualizar a entrega manual antes de automatizar. Bom método, sem skill nova. |
+| [validate-idea](https://github.com/slavingia/skills/blob/main/skills/validate-idea/SKILL.md) | B | ABSORB_METHOD_ONLY | venture-building-cycle | Validação por venda/compromisso real, sem confundir intenção com demanda. |
