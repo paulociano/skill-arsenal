@@ -235,3 +235,24 @@ Documentos abertos individualmente: 13 de Agent Platform e 11 de bancos, gateway
 | [bigtable-basics](https://github.com/google/skills/blob/main/skills/cloud/bigtable-basics/SKILL.md) | Bigtable | A/D | KEEP_EXTERNAL_REFERENCE | Dados, SQL, ACLs e cobrança exigem escopo de projeto |
 
 Aprendizado transversal: antes de sugerir operação Cloud, discriminar *read/list/describe*, escrita reversível, alteração onerosa e operação destrutiva; exigir project/region/resource e confirmação compatível com impacto, preservar plano e evidência. `agent-platform-eval-flywheel` e guias BigQuery trazem metodologia útil, mas não autorizam tratar serviços conectados como disponíveis automaticamente.
+
+## Avaliação individual: 12 Google Cloud Logging, Monitoring, Trace e Lineage (2026-10-15)
+
+Os 12 SKILL.md foram lidos com foco em trigger, fluxo, parâmetros, segurança, outputs e dependências. Não foram executados scripts, chamadas GCP, Terraform ou consultas reais. Scripts de referência e dependências transitivas não auditados integralmente.
+
+| Skill | Domínio | Classe | Decisão | Gate e observação |
+|---|---|---|---|---|
+| [cloud-logging-configuration-basics](https://github.com/google/skills/blob/main/skills/cloud/cloud-logging-configuration-basics/SKILL.md) | Logging | A/D | KEEP_EXTERNAL_REFERENCE | Alteração de sinks, IAM, buckets, canais ou policies; confirmar alvo, custo e impacto |
+| [cloud-logging-cross-project-configuration](https://github.com/google/skills/blob/main/skills/cloud/cloud-logging-cross-project-configuration/SKILL.md) | Logging | A/D | KEEP_EXTERNAL_REFERENCE | Alteração de sinks, IAM, buckets, canais ou policies; confirmar alvo, custo e impacto |
+| [cloud-logging-query-generation](https://github.com/google/skills/blob/main/skills/cloud/cloud-logging-query-generation/SKILL.md) | Logging | A/D | ABSORB_METHOD_ONLY | Montar consulta restrita em intervalo/filtro/custo |
+| [cloud-monitoring-chart-generation](https://github.com/google/skills/blob/main/skills/cloud/cloud-monitoring-chart-generation/SKILL.md) | Monitoring | A/D | ABSORB_METHOD_ONLY | Validar schema do widget e filtro antes de publicar |
+| [cloud-monitoring-list-time-series-request](https://github.com/google/skills/blob/main/skills/cloud/cloud-monitoring-list-time-series-request/SKILL.md) | Monitoring | A/D | ABSORB_METHOD_ONLY | Montar consulta restrita em intervalo/filtro/custo |
+| [cloud-monitoring-metric-selection](https://github.com/google/skills/blob/main/skills/cloud/cloud-monitoring-metric-selection/SKILL.md) | Monitoring | A/D | ABSORB_METHOD_ONLY | Identificar descritor real e semântica da métrica |
+| [cloud-monitoring-notification-channels-configuration](https://github.com/google/skills/blob/main/skills/cloud/cloud-monitoring-notification-channels-configuration/SKILL.md) | Monitoring | A/D | KEEP_EXTERNAL_REFERENCE | Alteração de sinks, IAM, buckets, canais ou policies; confirmar alvo, custo e impacto |
+| [cloud-monitoring-promql-query](https://github.com/google/skills/blob/main/skills/cloud/cloud-monitoring-promql-query/SKILL.md) | Monitoring | A/D | ABSORB_METHOD_ONLY | Montar consulta restrita em intervalo/filtro/custo |
+| [cloud-run-alert-configuration](https://github.com/google/skills/blob/main/skills/cloud/cloud-run-alert-configuration/SKILL.md) | Monitoring | A/D | KEEP_EXTERNAL_REFERENCE | Alteração de sinks, IAM, buckets, canais ou policies; confirmar alvo, custo e impacto |
+| [cloud-trace-querying](https://github.com/google/skills/blob/main/skills/cloud/cloud-trace-querying/SKILL.md) | Trace | A/D | ABSORB_METHOD_ONLY | Montar consulta restrita em intervalo/filtro/custo |
+| [datalineage-bigquery-asset-impact-analysis](https://github.com/google/skills/blob/main/skills/cloud/datalineage-bigquery-asset-impact-analysis/SKILL.md) | Lineage | A/D | ABSORB_METHOD_ONLY | Validar proveniência, fronteira upstream/downstream e lacunas do grafo |
+| [datalineage-summary](https://github.com/google/skills/blob/main/skills/cloud/datalineage-summary/SKILL.md) | Lineage | A/D | ABSORB_METHOD_ONLY | Validar proveniência, fronteira upstream/downstream e lacunas do grafo |
+
+Lição metodológica: começar de descritores de métricas e labels observáveis, limitar escopo e janela de queries, correlacionar logs/métricas/traces, distinguir leitura de configuração/mutação e não confundir grafo de lineage incompleto com mapa integral de impacto. Owners existentes absorvem o método; comandos GCP continuam externos.
