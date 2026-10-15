@@ -270,3 +270,7 @@ Ao acessar warehouses por camadas BI, identificar se os IDs são do projeto/data
 ## Reposição integral, contratos heterogêneos e ERP (ComposioHQ 432–531, 2026-10-15)
 
 Ao modificar registros de ATS/ERP (ex.: Lever e NetSuite), descobrir campos obrigatórios e metadados reais da conta, distinguir PATCH parcial de PUT/substituição integral, ler o registro atual antes de sobrescrever e preservar propriedades não alteradas. Para upsert, validar external ID e deduplicação com confirmação após escrita; pedidos comerciais exigem item, filial, tributo e regras fiscais realmente retornados no schema, não inferidos. Paginadores e timestamps variam por endpoint, às vezes ISO 8601, às vezes Unix em milissegundos; nunca aplicar conversão uniforme. Em sistemas de talentos, requisition e candidato são entidades distintas, sujeitos a permissão e privacidade. Fontes: Lever e NetSuite no catálogo ComposioHQ 432–531; sem executar Rube MCP.
+
+## Controles de integração para alertas e tarefas assíncronas (ComposioHQ 532–631)
+
+Em sistemas de alertas, criação de canal não garante entrega: validar vínculo com política, configuração específica do canal, paginação e tipo de ID aceito em cada operação. Para predições de modelos externos, descobrir schema e versão por modelo, validar arquivo/encoding, separar execução síncrona de job assíncrono e verificar status final. Não tratar 202/ID recebido como resultado concluído. Referências: New Relic e Replicate; requerem conectores realmente disponíveis.
