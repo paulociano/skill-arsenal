@@ -107,3 +107,8 @@ Compõe capacidades já canônicas do Skill Arsenal e reutiliza avaliações:
 - `evaluations/2026-10-11-functional-web-app-sources.md`
 - `evaluations/2026-10-11-ui-ux-audit-repositories.md`
 Não duplica os protocolos completos dessas skills; consulta-os conforme o cenário.
+
+
+## Portabilidade de artefatos frontend (ComposioHQ, 2026-10-15)
+
+Para artefatos web interativos, escolher runtime real antes de copiar stacks alheias. Incluir build, assets, estado, navegação, erros e renderização em QA quando o ambiente suportar. Scripts Claude, Vite ou bundlers mencionados por terceiros não são pressupostos do ChatGPT; se o output for apenas HTML estático, não prometer projeto React editável. Evitar repetição de layouts genéricos e verificar acessibilidade, responsividade e hierarquia visual no output real. Método adaptado de artifacts-builder; canvas-design e brand-guidelines de Anthropic não são identidade reutilizável do usuário.
