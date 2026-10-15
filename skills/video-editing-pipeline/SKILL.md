@@ -81,6 +81,37 @@ Separar:
 
 Nunca fingir que um runtime/provider está disponível. Verificar primeiro e usar fallback apenas quando o resultado continua atendendo ao contrato.
 
+## Remotion: composição React determinística
+
+Aplicar quando texto animado, tipografia, gráficos, templates, dados dinâmicos ou reutilização de layouts forem parte central do vídeo. Não escolher Remotion só porque há um vídeo: cortes lineares e transcodes simples costumam ser mais eficientes no FFmpeg.
+
+### Gate de ambiente e licença
+
+1. Verificar se Node.js, dependências React/Remotion, browser/render backend, codecs e espaço de armazenamento estão disponíveis no ambiente de execução real.
+2. Consultar a licença corrente em https://github.com/remotion-dev/remotion/blob/main/LICENSE.md antes de produção comercial. A licença gratuita publicada em outubro de 2026 cobre indivíduos, organizações sem fins lucrativos e empresas com até três funcionários; outras empresas comerciais podem precisar de licença.
+3. Não executar `npx create-video@latest` ou instaladores do repositório apenas para inspecioná-lo. Em projetos aprovados, preferir dependências versionadas e lockfile.
+4. Separar geração de código, preview, render e verificação. Código JSX ou preview no navegador não são prova de arquivo de vídeo finalizado.
+
+### Workflow especializado
+
+1. Definir contrato: duração, fps, resolução, proporção, codec, canais de áudio, safe areas, conteúdo e formatos de saída.
+2. Especificar timeline em frames, entradas de dados, assets, fontes e suas licenças.
+3. Criar cenas e componentes React isolando dados editoriais de animação; manter animações derivadas do frame/tempo da composição, evitando relógios não determinísticos.
+4. Verificar assets, dimensionamento, carregamento de fontes, sincronismo de áudio, legendas e tratamento de durações variáveis.
+5. Gerar render de amostra e inspecionar começo, transições, pontos de texto denso e fim; revisar quadro e áudio quando as ferramentas estiverem disponíveis.
+6. Renderizar o formato final e verificar existência, duração, resolução, fps, codec, integridade audiovisual e ausência de frames pretos ou texto cortado.
+7. Para escala/batch, testar poucos exemplos representativos antes de paralelizar ou provisionar execução remota. Registrar custos, limites e falhas.
+8. Se o runtime estiver indisponível, entregar projeto/código e plano reproduzível, sinalizando explicitamente que preview e render não foram executados.
+
+### Fronteiras
+
+- Remotion compõe/renderiza; não equivale a um gerador de vídeo por IA, ASR ou editor humano.
+- Não presumir disponibilidade de render em Lambda, Vercel ou browser só por existir documentação dessas opções.
+- Não expor chaves ou dados sensíveis em assets públicos, bundles ou outputs.
+- Não substituir `video-editing-pipeline` ou `explainer-video-production`: este é apenas um backend de composição que elas podem selecionar.
+
+**Fonte:** https://github.com/remotion-dev/remotion · https://www.remotion.dev/docs · https://github.com/remotion-dev/remotion/blob/main/LICENSE.md (consulta 2026-10-15).
+
 ## Regras de produção
 
 Quando o pipeline usar timestamps de fala + ffmpeg ou ferramenta equivalente:
