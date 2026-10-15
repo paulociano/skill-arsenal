@@ -274,3 +274,7 @@ Ao modificar registros de ATS/ERP (ex.: Lever e NetSuite), descobrir campos obri
 ## Controles de integração para alertas e tarefas assíncronas (ComposioHQ 532–631)
 
 Em sistemas de alertas, criação de canal não garante entrega: validar vínculo com política, configuração específica do canal, paginação e tipo de ID aceito em cada operação. Para predições de modelos externos, descobrir schema e versão por modelo, validar arquivo/encoding, separar execução síncrona de job assíncrono e verificar status final. Não tratar 202/ID recebido como resultado concluído. Referências: New Relic e Replicate; requerem conectores realmente disponíveis.
+
+## Contratos de resultados incompletos e consultas SQL (ComposioHQ 632–731, 2026-10-15)
+
+Para APIs de survey, separar respostas completas de parciais/desqualificadas, preservar mapeamento de pergunta para resposta, paginar coletores e distinguir survey criado de link compartilhável efetivo. Para bancos SQL externos, resolver role, warehouse, database e schema, usar parâmetros/bindings para valores do usuário, não concatenar SQL; distinguir comandos informativos de queries com custo e mudanças DDL/DML que exigem autorização. Para ferramentas de projeto, descobrir ID e workflow state e validar modos de parâmetro mutuamente exclusivos e limites de lote antes de criar dezenas de cards. Para alertas e eventos enviados a sistemas externos, distinguir API aceita de entrega e propagação real. Fontes documentais: SurveyMonkey, Snowflake e Shortcut (ComposioHQ 632–731). Não pressupor conector Rube MCP ativo.
