@@ -150,3 +150,17 @@ Sessões devem poder começar frescas e continuar a partir desse estado.
 ## Provenance
 
 Adaptada de addyosmani/factory e enriquecida por padrões de coordenação observados em yetone/cumora. Preserva charter humano, queue durável, autonomy-by-consequence, fail-closed gates, verifier independente, review back-pressure e merge humano. De Cumora foram absorvidos freshness gate antes de responder/agir, claims atômicos sobre unidades reais de trabalho e triage econômico; o runtime, chat, Kubernetes e infraestrutura específicos não são requisitos. Remove dependência de Claude routines, hooks e instaladores específicos; GitHub é uma implementação possível, não requisito conceitual.
+
+## Isolamento, contratos e integração entre lanes
+
+Inspirado na fábrica demonstrativa `PromtEngineer/software-factory`:
+
+1. **Sandboxes por etapa**: quando houver runtime de execução isolada, cada lane de triage, worker e verifier recebe ambiente efêmero dedicado, criado de snapshot identificado (base commit e dependências pinadas). No ambiente ChatGPT/GitHub sem Upstash Box, usar branches e worktrees somente onde as ferramentas realmente permitirem; não prometer sandbox provisionada.
+2. **Handoff tipado**: emitir por unidade `issue_id`, `base_sha`, `branch`, `status`, `summary`, `files_changed`, `tests_added`, `checks`, `artifacts`, `risk`, `next_action`; validar schema e transições entre etapas. Falha de schema deve bloquear promoção.
+3. **Verifier em checkout limpo**: reexecutar testes fora do ambiente do writer e analisar diff contra issue e critérios; comparar evidência de testes declarada com saídas observadas. Manter casos ocultos/holdout fora do contexto do writer quando houver mecanismo legítimo para isso.
+4. **Integração como gate distinto de PR**: PR isolado aprovado não prova compatibilidade com outros PRs. Integrar branches ordenadamente numa branch temporária, documentar conflitos, revisar resoluções, executar suíte completa após cada merge e preservar rastreabilidade por commit. Não fazer merge em branch protegida automaticamente.
+5. **Métricas de factory**: registrar throughput, triaged-out, custo por issue, falhas de gate, conflitos de integração, regressões em holdout e review debt. Distinguir tempo de execução paralela de custo total de integração.
+6. **Credenciais e rede**: preferir token mínimo por repo, injeção de secrets fora da visibilidade do agente, allowlist de egress e budget por lane; não carregar env completo no contexto do modelo. Testar política de acesso ao criar snapshots.
+7. **Limites**: não equiparar relato de benchmark do projeto a garantia de qualidade; preservar independência do teste. Quando o usuário não dispõe de runtime isolado, executar apenas as etapas comprovadamente suportadas.
+
+**Proveniência complementar:** https://github.com/PromtEngineer/software-factory (README, src/factory.ts, src/upstash.ts, src/integrate.ts, src/score.ts descritos no projeto; avaliação de 2026-10-15). Tecnologia de referência: Node 22+, Claude Code, Upstash Box, GitHub e Context7. Esses componentes não são pressupostos como instalados, e nenhum script do projeto foi executado na avaliação.
