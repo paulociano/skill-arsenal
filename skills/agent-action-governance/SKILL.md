@@ -169,3 +169,7 @@ Em registries de imagens, distinguir namespace, organização, repositório, tag
 ## Proteção de credenciais de conexão e controles de rollout (ComposioHQ 432–531, 2026-10-15)
 
 Quando ferramentas de bancos devolvem parâmetros de conexão, tratá-los como material confidencial e nunca exibi-los em respostas, logs ou artefatos. Verificar organização, projeto, ambiente e privilégios autorizados. Em serviços de feature flags, identificar projeto, ambiente e impacto esperado antes de mudar estados; exclusão de regras, gatilhos e webhooks requer aprovação específica e verificação de efeito. A publicação de uma alteração não confirma sua propagação. Metodologia aproveitada de Neon e LaunchDarkly, sem presumir acesso externo.
+
+## Faturas e documentos com estados mutáveis (ComposioHQ 532–631)
+
+Antes de criar ou alterar fatura, verificar IDs atuais de cliente, item e detalhe tributário e distinguir rascunho, emissão, pagamento e estorno. APIs com sync token exigem leitura imediatamente anterior à atualização e tratamento explícito de conflito, em vez de sobrescrita. Em assinaturas eletrônicas, confirmar versão do documento, papéis exclusivos, ordem coerente de signatários, origem do arquivo e webhook antes de enviar; documento criado não significa assinado. Fontes: QuickBooks e PandaDoc; ações financeiras ou contratuais requerem autorização específica.
