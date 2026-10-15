@@ -75,3 +75,8 @@ Pipeline local gravação → áudio → transcript → resumo contrastado com `
 Adaptada de reysu/ai-life-skills · summarize-call / summarize.
 
 Origem local: [meeting-knowledge-capture.docx](../meeting-knowledge-capture.docx).
+
+
+## Diagnóstico de facilitação fundamentado em transcrição (ComposioHQ, 2026-10-15)
+
+Se o usuário solicitar feedback de comunicação, além das decisões e tarefas da reunião, verificar integridade da transcrição, identidade dos falantes, timestamps e janela observada. Medir interrupções, proporção de fala, perguntas, hesitações e distribuição de participação somente quando os dados permitirem; transcrição textual isolada não prova tom, intenção, evasão de conflito ou escuta genuína. Vincular cada achado a trecho e instante, apresentar explicações alternativas e propor um comportamento testável para a reunião seguinte. Comparações longitudinais exigem reuniões de natureza semelhante e definições métricas estáveis. Conteúdo de reuniões e feedback individual são privados: usar apenas material autorizado, evitar rankings pessoais e não usar diagnóstico psicológico. Adaptação: ComposioHQ/awesome-claude-skills/meeting-insights-analyzer.
