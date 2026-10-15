@@ -172,3 +172,33 @@ Data: 2026-10-15. Total: 166 SKILL.md. Base: main. Árvore truncada: false.
 | 164 | [retrieving-developer-knowledge](https://github.com/google/skills/blob/main/skills/developers/retrieving-developer-knowledge/SKILL.md) | B/D | REVIEW_CONTENT | content and dependency verification needed |
 | 165 | [dpop-adoption](https://github.com/google/skills/blob/main/skills/identity/dpop-adoption/SKILL.md) | B/D | REVIEW_CONTENT | content and dependency verification needed |
 | 166 | [sign-in-with-google-web](https://github.com/google/skills/blob/main/skills/identity/sign-in-with-google-web/SKILL.md) | B/D | REVIEW_CONTENT | content and dependency verification needed |
+
+## Revisão individual de conteúdo principal: 21 skills Google (2026-10-15)
+
+Os 21 `SKILL.md` listados foram abertos e examinados no conteúdo principal; não foram executados comandos, APIs, setup de autenticação ou testes de SDK. Classificações refletem pertinência metodológica e dependência técnica, **não** autorização para mexer em contas de terceiros. Em audiência e conversões, revisão legal e de consentimento pode ser necessária. Scripts, referências e dependências transitivas **não** foram auditados integralmente.
+
+| Skill | Classe | Decisão | Razão/risco |
+|---|---|---|---|
+| [data-manager-api-audience-ingestion](https://github.com/google/skills/blob/main/skills/ads/data-manager-api-audience-ingestion/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | Muta listas de público; dados pessoais, consentimento e operações irreversíveis |
+| [data-manager-api-event-ingestion](https://github.com/google/skills/blob/main/skills/ads/data-manager-api-event-ingestion/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | Conversões/eventos: fonte, consentimento, PII e deduplicação |
+| [data-manager-api-setup](https://github.com/google/skills/blob/main/skills/ads/data-manager-api-setup/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | Setup API/SDK Ads com credenciais, versão e permissões |
+| [google-ads-api-account-diagnostics](https://github.com/google/skills/blob/main/skills/ads/google-ads-api-account-diagnostics/SKILL.md) | B/D | ABSORB_METHOD_ONLY | Diagnóstico de métricas Ads requer acesso autorizado e comparação temporal |
+| [google-ads-api-mcp-setup](https://github.com/google/skills/blob/main/skills/ads/google-ads-api-mcp-setup/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | Setup API/SDK Ads com credenciais, versão e permissões |
+| [google-ads-api-quickstart](https://github.com/google/skills/blob/main/skills/ads/google-ads-api-quickstart/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | Setup API/SDK Ads com credenciais, versão e permissões |
+| [google-mobile-ads-android-migrate-to-next-gen](https://github.com/google/skills/blob/main/skills/ads/google-mobile-ads-android-migrate-to-next-gen/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | SDK mobile e lifecycle por formato/plataforma; testes reais necessários |
+| [google-mobile-ads-banner](https://github.com/google/skills/blob/main/skills/ads/google-mobile-ads-banner/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | SDK mobile e lifecycle por formato/plataforma; testes reais necessários |
+| [google-mobile-ads-get-started](https://github.com/google/skills/blob/main/skills/ads/google-mobile-ads-get-started/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | SDK mobile e lifecycle por formato/plataforma; testes reais necessários |
+| [google-mobile-ads-interstitial](https://github.com/google/skills/blob/main/skills/ads/google-mobile-ads-interstitial/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | SDK mobile e lifecycle por formato/plataforma; testes reais necessários |
+| [google-mobile-ads-rewarded](https://github.com/google/skills/blob/main/skills/ads/google-mobile-ads-rewarded/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | SDK mobile e lifecycle por formato/plataforma; testes reais necessários |
+| [google-mobile-ads-validate](https://github.com/google/skills/blob/main/skills/ads/google-mobile-ads-validate/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | SDK mobile e lifecycle por formato/plataforma; testes reais necessários |
+| [ima-dai-sdk](https://github.com/google/skills/blob/main/skills/ads/ima-dai-sdk/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | Inserção de anúncios de vídeo; separar client-side de DAI/SSAI |
+| [ima-sdk-client-side](https://github.com/google/skills/blob/main/skills/ads/ima-sdk-client-side/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | Inserção de anúncios de vídeo; separar client-side de DAI/SSAI |
+| [google-analytics-admin-api-basics](https://github.com/google/skills/blob/main/skills/analytics/google-analytics-admin-api-basics/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | Admin altera propriedades; Data lê relatórios; escopos segregados |
+| [google-analytics-data-api-basics](https://github.com/google/skills/blob/main/skills/analytics/google-analytics-data-api-basics/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | Admin altera propriedades; Data lê relatórios; escopos segregados |
+| [finding-google-skills](https://github.com/google/skills/blob/main/skills/developers/finding-google-skills/SKILL.md) | B/D | REFERENCE_EXISTING | Router de Google Skills; sobreposição com índice do Arsenal |
+| [migrate-to-rust](https://github.com/google/skills/blob/main/skills/developers/migrate-to-rust/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | Migração complexa sem garantia automática de equivalência e performance |
+| [retrieving-developer-knowledge](https://github.com/google/skills/blob/main/skills/developers/retrieving-developer-knowledge/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | Developer Knowledge MCP/REST é integração externa não presumida |
+| [dpop-adoption](https://github.com/google/skills/blob/main/skills/identity/dpop-adoption/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | Segurança de identidade: validar tokens, nonce, chaves, origins e arquitetura |
+| [sign-in-with-google-web](https://github.com/google/skills/blob/main/skills/identity/sign-in-with-google-web/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | Segurança de identidade: validar tokens, nonce, chaves, origins e arquitetura |
+
+Algumas entradas em `plugins/cloud/google-cloud-developer/skills/` duplicam assuntos de `skills/cloud` ou `skills/developers`; cada caminho duplicado ainda conta separadamente no inventário original até inspeção de seu próprio SKILL.md. Nenhuma skill instalada; owner existente prevalece quando aplicação concreta pedir Google SDK.
