@@ -3,7 +3,7 @@
 Data: 2026-10-15. **Estado: PARCIAL, não concluído.**
 
 ## Inventário com fonte verificável
-Foram localizados **1719** SKILL.md nas árvores recursivas dos 12 repositórios e criadas fichas **individuais de descoberta** por caminho. **602 skills** tiveram seus SKILL.md abertos e decisões documentais individuais registradas: 10 slavingia, 11 antfu, 23 MiniMax, 1 multica/Karpathy, 5 BrowserAct e 176 MengTo, 166 Google e 210 Microsoft. **1117** permanecem sem leitura individual de SKILL.md. A leitura dos documentos principais não equivale a auditoria integral dos arquivos associados, scripts, referências e execução; a segurança permanece condicionada a revisão por adoção. Nas fichas, flags baseadas somente no caminho são **hipóteses**, não aprovação nem decisão real.
+Foram localizados **1719** SKILL.md nas árvores recursivas dos 12 repositórios e criadas fichas **individuais de descoberta** por caminho. **635 skills** tiveram seus SKILL.md abertos e decisões documentais individuais registradas: 10 slavingia, 11 antfu, 23 MiniMax, 1 multica/Karpathy, 38 BrowserAct e 176 MengTo, 166 Google e 210 Microsoft. **1084** permanecem sem leitura individual de SKILL.md. A leitura dos documentos principais não equivale a auditoria integral dos arquivos associados, scripts, referências e execução; a segurança permanece condicionada a revisão por adoção. Nas fichas, flags baseadas somente no caminho são **hipóteses**, não aprovação nem decisão real.
 
 | Repositório | Arquivos SKILL.md | Inventário |
 |---|---:|---|
@@ -42,60 +42,64 @@ Este arquivo é um checklist de progresso, não uma afirmação de auditoria exa
 - `multica-ai/andrej-karpathy-skills`: 1/1 SKILL.md lido; metodologia de código enxuto já coberta pelo Arsenal.
 - `browser-act/skills`: 5/103 SKILL.md lidos; dependência do browser-act CLI e de payload dinâmico exige revisão mais profunda, sem execução.
 
-Para as 50 entradas, trata-se de avaliação individual do documento principal e não revisão exaustiva de dependências transitivas. As 1.117 restantes continuam com triagem apenas por nome/caminho. Fontes agregadoras VoltAgent e 30-seconds-of-code permanecem fora desse denominador por não conterem SKILL.md na própria árvore.
+Para as 50 entradas, trata-se de avaliação individual do documento principal e não revisão exaustiva de dependências transitivas. As 1.084 restantes continuam com triagem apenas por nome/caminho. Fontes agregadoras VoltAgent e 30-seconds-of-code permanecem fora desse denominador por não conterem SKILL.md na própria árvore.
 
 ## Continuação MengTo (2026-10-15)
 
-19 skills de `MengTo/Skills` lidas individualmente: 16 de 3D (materiais, volumetria, água, texturas, tours, ambientes e performance) e 3 de UI. Decisões documentadas em `evaluations/inventories/2026-10-15-mengto-skills.md`. As duas metodologias anti-clichês de design foram integradas ao owner `design-principles-audit`. Não foram executados shaders, benchmarks nem scripts upstream. Cobertura total: **69/1719**, pendentes **1117**. Em MengTo: **19/176** lidas.
+19 skills de `MengTo/Skills` lidas individualmente: 16 de 3D (materiais, volumetria, água, texturas, tours, ambientes e performance) e 3 de UI. Decisões documentadas em `evaluations/inventories/2026-10-15-mengto-skills.md`. As duas metodologias anti-clichês de design foram integradas ao owner `design-principles-audit`. Não foram executados shaders, benchmarks nem scripts upstream. Cobertura total: **69/1719**, pendentes **1084**. Em MengTo: **19/176** lidas.
 
 ## Continuação MengTo Codex e Workflow (2026-10-15)
 
-24 SKILL.md adicionais (20 Codex + 4 workflow) lidos e avaliados no conteúdo principal. Cobertura acumulada: **93/1719**, pendentes **1117**. MengTo: **43/176**. Owner `design-principles-audit` foi ampliado com auditoria de originalidade referenciada. Não foram auditados scripts auxiliares, builds nem ambientes upstream.
+24 SKILL.md adicionais (20 Codex + 4 workflow) lidos e avaliados no conteúdo principal. Cobertura acumulada: **93/1719**, pendentes **1084**. MengTo: **43/176**. Owner `design-principles-audit` foi ampliado com auditoria de originalidade referenciada. Não foram auditados scripts auxiliares, builds nem ambientes upstream.
 
 ## Continuação MengTo: gameplay e combate (2026-10-15)
 
-26 SKILL.md lidas: 6 `game-combat` + 20 `game-development`; decisão individual registrada em `evaluations/inventories/2026-10-15-mengto-skills.md`. Reaproveitados contratos de combate data-driven, inventário atômico, inimigos e editor de fases no owner `game-development-engineering`. Não houve renderização dos efeitos, build, benchmarks ou validação de jogo real. Cobertura acumulada: **119/1719**; pendentes **1117**; MengTo: **69/176**.
+26 SKILL.md lidas: 6 `game-combat` + 20 `game-development`; decisão individual registrada em `evaluations/inventories/2026-10-15-mengto-skills.md`. Reaproveitados contratos de combate data-driven, inventário atômico, inimigos e editor de fases no owner `game-development-engineering`. Não houve renderização dos efeitos, build, benchmarks ou validação de jogo real. Cobertura acumulada: **119/1719**; pendentes **1084**; MengTo: **69/176**.
 
 ## Continuação MengTo: web design (2026-10-15)
 
-91 arquivos `agent-skills/web-design/*/SKILL.md` abertos e classificados individualmente no inventário MengTo. Classes provisórias por documento principal; não inclui dependências/assets/scripts nem verificação de UI no browser. Atualizado `ui-motion-design` com estados semânticos, visibilidade, ciclo de vida, controle de scroll e orçamento de GPU. Cobertura acumulada: **210/1719**; pendentes **1117**; MengTo **160/176**. Próxima área MengTo: 14 `illustration` e 2 `media`.
+91 arquivos `agent-skills/web-design/*/SKILL.md` abertos e classificados individualmente no inventário MengTo. Classes provisórias por documento principal; não inclui dependências/assets/scripts nem verificação de UI no browser. Atualizado `ui-motion-design` com estados semânticos, visibilidade, ciclo de vida, controle de scroll e orçamento de GPU. Cobertura acumulada: **210/1719**; pendentes **1084**; MengTo **160/176**. Próxima área MengTo: 14 `illustration` e 2 `media`.
 
 ## Fechamento da leitura do MengTo (2026-10-15)
 
-16 SKILL.md adicionais de `MengTo/Skills` (14 ilustração SVG, 2 referências a bancos de imagens) abertos individualmente e classificados em `evaluations/inventories/2026-10-15-mengto-skills.md`. Cobertura de documentos principais do MengTo concluída: **176/176**. Cobertura geral: **226/1719**; pendentes **1117**. As referências internas, scripts, ativos e resultados não foram auditados/executados. Estilos específicos permaneceram referências, evitando owners duplicados.
+16 SKILL.md adicionais de `MengTo/Skills` (14 ilustração SVG, 2 referências a bancos de imagens) abertos individualmente e classificados em `evaluations/inventories/2026-10-15-mengto-skills.md`. Cobertura de documentos principais do MengTo concluída: **176/176**. Cobertura geral: **226/1719**; pendentes **1084**. As referências internas, scripts, ativos e resultados não foram auditados/executados. Estilos específicos permaneceram referências, evitando owners duplicados.
 
 ## Continuação Google: Ads, Analytics, Identity e Developers (2026-10-15)
 
-21 SKILL.md abertos e analisados individualmente em `evaluations/inventories/2026-10-15-google-skills.md`, distinguindo leituras/alterações de conta, consentimento, versão SDK e execução externa. Cobertura Google **21/166**; total **247/1719**, pendentes **1117**. Somente documento principal; não executar credenciais, mutações ou scripts do fornecedor durante auditoria.
+21 SKILL.md abertos e analisados individualmente em `evaluations/inventories/2026-10-15-google-skills.md`, distinguindo leituras/alterações de conta, consentimento, versão SDK e execução externa. Cobertura Google **21/166**; total **247/1719**, pendentes **1084**. Somente documento principal; não executar credenciais, mutações ou scripts do fornecedor durante auditoria.
 
 ## Continuação Google Cloud: Agent Platform, BigQuery e infraestrutura (2026-10-15)
 
-24 SKILL.md adicionais do Google Cloud examinados individualmente, com decisões na ficha `evaluations/inventories/2026-10-15-google-skills.md`. Incluem 13 Agent Platform e 11 BigQuery/bancos/infra. Cobertura Google **45/166**; acumulado **271/1719**, pendentes **1117**. Nenhuma operação GCP, uso de credenciais, criação de recursos ou execução de scripts externos. A auditoria de scripts/referências permanece pendente para adoção técnica.
+24 SKILL.md adicionais do Google Cloud examinados individualmente, com decisões na ficha `evaluations/inventories/2026-10-15-google-skills.md`. Incluem 13 Agent Platform e 11 BigQuery/bancos/infra. Cobertura Google **45/166**; acumulado **271/1719**, pendentes **1084**. Nenhuma operação GCP, uso de credenciais, criação de recursos ou execução de scripts externos. A auditoria de scripts/referências permanece pendente para adoção técnica.
 
 ## Continuação Google observabilidade (2026-10-15)
 
-12 SKILL.md de Cloud Logging, Monitoring, Trace e Data Lineage examinados e registrados individualmente em `evaluations/inventories/2026-10-15-google-skills.md`. Cobertura Google **57/166**, total **283/1719**, restantes **1117**. Não executados Terraform, APIs Cloud ou consultas reais. Segurança operacional e scripts auxiliares exigem validação antes de uso.
+12 SKILL.md de Cloud Logging, Monitoring, Trace e Data Lineage examinados e registrados individualmente em `evaluations/inventories/2026-10-15-google-skills.md`. Cobertura Google **57/166**, total **283/1719**, restantes **1084**. Não executados Terraform, APIs Cloud ou consultas reais. Segurança operacional e scripts auxiliares exigem validação antes de uso.
 
 ## Continuação Google GKE (2026-10-15)
 
-40 arquivos SKILL.md de GKE revisados individualmente, desde operações padrão até falhas TPU/GPU, segurança, armazenamento e upgrades. Decisões em `evaluations/inventories/2026-10-15-google-skills.md`. Cobertura Google **97/166**; acumulado **323/1719**, pendentes **1117**. Escopo: documentos principais, sem execução de comandos GKE nem revisão integral de scripts/referências. Diagnósticos read-only precedem qualquer intervenção autorizada.
+40 arquivos SKILL.md de GKE revisados individualmente, desde operações padrão até falhas TPU/GPU, segurança, armazenamento e upgrades. Decisões em `evaluations/inventories/2026-10-15-google-skills.md`. Cobertura Google **97/166**; acumulado **323/1719**, pendentes **1084**. Escopo: documentos principais, sem execução de comandos GKE nem revisão integral de scripts/referências. Diagnósticos read-only precedem qualquer intervenção autorizada.
 
 ## Fechamento da leitura documental Google (2026-10-15)
 
-69 SKILL.md restantes do repositório `google/skills` foram individualmente abertos e classificados, inclusive entradas plugin com caminhos próprios, com registro em `evaluations/inventories/2026-10-15-google-skills.md`. Cobertura Google **166/166**, cobertura geral **392/1719**, pendentes **1117**. Não foram executadas operações cloud, mutações, scripts, migrações nem chamadas com credenciais. A auditoria profunda de dependências permanece pendente por uso concreto.
+69 SKILL.md restantes do repositório `google/skills` foram individualmente abertos e classificados, inclusive entradas plugin com caminhos próprios, com registro em `evaluations/inventories/2026-10-15-google-skills.md`. Cobertura Google **166/166**, cobertura geral **392/1719**, pendentes **1084**. Não foram executadas operações cloud, mutações, scripts, migrações nem chamadas com credenciais. A auditoria profunda de dependências permanece pendente por uso concreto.
 
 ## Microsoft: AKS, custos, Kusto e Azure Local (2026-10-15)
 
-14 SKILL.md lidos individualmente e classificados em `evaluations/inventories/2026-10-15-microsoft-skills.md`: AKS (5), Azure Cost (4), Kusto/IRQL (3) e Azure Local (2). Cobertura Microsoft **14/210**, total **406/1719**, pendentes **1117**. Não executar serviços, scripts, captura de rede ou mutações Azure durante avaliação. Avaliação documental sem auditoria exaustiva de dependências.
+14 SKILL.md lidos individualmente e classificados em `evaluations/inventories/2026-10-15-microsoft-skills.md`: AKS (5), Azure Cost (4), Kusto/IRQL (3) e Azure Local (2). Cobertura Microsoft **14/210**, total **406/1719**, pendentes **1084**. Não executar serviços, scripts, captura de rede ou mutações Azure durante avaliação. Avaliação documental sem auditoria exaustiva de dependências.
 
 ## Microsoft Azure SDK .NET e Java (2026-10-15)
 
-55 SKILL.md adicionais lidos (29 .NET, 26 Java), com decisões individuais registradas em `evaluations/inventories/2026-10-15-microsoft-skills.md`. Total Microsoft **69/210**; cobertura global **461/1719**, pendentes **1117**. O SDK Java `azure-communication-callingserver-java` foi classificado legado, não apropriado para novos projetos sem validação e alternativa atual. Sem execução de SDK, scripts, contas ou operações Azure; revisão documental apenas.
+55 SKILL.md adicionais lidos (29 .NET, 26 Java), com decisões individuais registradas em `evaluations/inventories/2026-10-15-microsoft-skills.md`. Total Microsoft **69/210**; cobertura global **461/1719**, pendentes **1084**. O SDK Java `azure-communication-callingserver-java` foi classificado legado, não apropriado para novos projetos sem validação e alternativa atual. Sem execução de SDK, scripts, contas ou operações Azure; revisão documental apenas.
 
 ## Microsoft Azure SDK Python, Rust e TypeScript (2026-10-15)
 
-73 SKILL.md principais abertos, classificados individualmente e registrados em `evaluations/inventories/2026-10-15-microsoft-skills.md`: Python (40), Rust (8), TypeScript (25). Cobertura Microsoft **142/210**; total **534/1719**, pendentes **1117**. Avaliação documental, sem instalar/executar SDKs ou scripts auxiliares e sem credenciais/contas Azure. Próximo grupo: demais 68 SKILL.md da Microsoft.
+73 SKILL.md principais abertos, classificados individualmente e registrados em `evaluations/inventories/2026-10-15-microsoft-skills.md`: Python (40), Rust (8), TypeScript (25). Cobertura Microsoft **142/210**; total **534/1719**, pendentes **1084**. Avaliação documental, sem instalar/executar SDKs ou scripts auxiliares e sem credenciais/contas Azure. Próximo grupo: demais 68 SKILL.md da Microsoft.
 
 ## Fechamento Microsoft Skills (2026-10-15)
 
-68 SKILL.md restantes do Microsoft Skills lidos e registrados individualmente, incluindo Azure, Microsoft Foundry, Microsoft 365, Deep Wiki e utilitários. Cobertura Microsoft **210/210**, cobertura geral **602/1719**, pendentes **1117**. Metodologias são referência, mas bibliotecas, scripts, exemplos e contas externas não foram auditados/executados. Decisões em `evaluations/inventories/2026-10-15-microsoft-skills.md`.
+68 SKILL.md restantes do Microsoft Skills lidos e registrados individualmente, incluindo Azure, Microsoft Foundry, Microsoft 365, Deep Wiki e utilitários. Cobertura Microsoft **210/210**, cobertura geral **602/1719**, pendentes **1084**. Metodologias são referência, mas bibliotecas, scripts, exemplos e contas externas não foram auditados/executados. Decisões em `evaluations/inventories/2026-10-15-microsoft-skills.md`.
+
+## BrowserAct e-commerce (2026-10-15)
+
+33 SKILL.md de e-commerce que ainda estavam pendentes foram abertos e registrados individualmente, complementando os 3 já lidos da mesma família: **36/36 e-commerce**. Cobertura BrowserAct: **38/103** (incluindo 2 de core/forge); global: **635/1719**, pendentes **1084**. Leitura dos documentos principais, sem testar BrowserAct CLI, scraping/API externa ou permissões. Registro: `evaluations/inventories/2026-10-15-browser-act-skills.md`.
