@@ -202,3 +202,36 @@ Os 21 `SKILL.md` listados foram abertos e examinados no conteúdo principal; nã
 | [sign-in-with-google-web](https://github.com/google/skills/blob/main/skills/identity/sign-in-with-google-web/SKILL.md) | A/D | KEEP_EXTERNAL_REFERENCE | Segurança de identidade: validar tokens, nonce, chaves, origins e arquitetura |
 
 Algumas entradas em `plugins/cloud/google-cloud-developer/skills/` duplicam assuntos de `skills/cloud` ou `skills/developers`; cada caminho duplicado ainda conta separadamente no inventário original até inspeção de seu próprio SKILL.md. Nenhuma skill instalada; owner existente prevalece quando aplicação concreta pedir Google SDK.
+
+## Avaliação individual de conteúdo principal: 24 Google Cloud SKILL.md (2026-10-15)
+
+Documentos abertos individualmente: 13 de Agent Platform e 11 de bancos, gateways e infraestrutura. A decisão refere-se ao **SKILL.md principal**, não à inspeção de scripts auxiliares, comandos executáveis ou testes com contas. Nenhum serviço Cloud, alteração de IAM, criação/deleção de endpoint, tuning, deploy ou consulta BigQuery foi executado. A portabilidade depende de GCP e credenciais explicitamente autorizadas.
+
+| Skill | Domínio | Classe | Decisão | Gate |
+|---|---|---|---|---|
+| [agent-platform-alert-configuration](https://github.com/google/skills/blob/main/skills/cloud/agent-platform-alert-configuration/SKILL.md) | Agent Platform | A/D | KEEP_EXTERNAL_REFERENCE | Ferramenta GCP externa; confirmar versão, IAM, rede e projeto |
+| [agent-platform-deploy](https://github.com/google/skills/blob/main/skills/cloud/agent-platform-deploy/SKILL.md) | Agent Platform | A/D | KEEP_EXTERNAL_REFERENCE | Muta recursos ou consome quota; permissão e custo obrigatórios |
+| [agent-platform-endpoint-management](https://github.com/google/skills/blob/main/skills/cloud/agent-platform-endpoint-management/SKILL.md) | Agent Platform | A/D | KEEP_EXTERNAL_REFERENCE | Muta recursos ou consome quota; permissão e custo obrigatórios |
+| [agent-platform-eval-flywheel](https://github.com/google/skills/blob/main/skills/cloud/agent-platform-eval-flywheel/SKILL.md) | Agent Platform | A/D | ABSORB_METHOD_ONLY | Ferramenta GCP externa; confirmar versão, IAM, rede e projeto |
+| [agent-platform-inference](https://github.com/google/skills/blob/main/skills/cloud/agent-platform-inference/SKILL.md) | Agent Platform | A/D | KEEP_EXTERNAL_REFERENCE | Ferramenta GCP externa; confirmar versão, IAM, rede e projeto |
+| [agent-platform-migrate-from-ai-studio](https://github.com/google/skills/blob/main/skills/cloud/agent-platform-migrate-from-ai-studio/SKILL.md) | Agent Platform | A/D | KEEP_EXTERNAL_REFERENCE | Ferramenta GCP externa; confirmar versão, IAM, rede e projeto |
+| [agent-platform-model-registry](https://github.com/google/skills/blob/main/skills/cloud/agent-platform-model-registry/SKILL.md) | Agent Platform | A/D | KEEP_EXTERNAL_REFERENCE | Muta recursos ou consome quota; permissão e custo obrigatórios |
+| [agent-platform-prompt-management](https://github.com/google/skills/blob/main/skills/cloud/agent-platform-prompt-management/SKILL.md) | Agent Platform | A/D | KEEP_EXTERNAL_REFERENCE | Muta recursos ou consome quota; permissão e custo obrigatórios |
+| [agent-platform-rag-engine-management](https://github.com/google/skills/blob/main/skills/cloud/agent-platform-rag-engine-management/SKILL.md) | Agent Platform | A/D | KEEP_EXTERNAL_REFERENCE | Ferramenta GCP externa; confirmar versão, IAM, rede e projeto |
+| [agent-platform-skill-registry](https://github.com/google/skills/blob/main/skills/cloud/agent-platform-skill-registry/SKILL.md) | Agent Platform | A/D | KEEP_EXTERNAL_REFERENCE | Muta recursos ou consome quota; permissão e custo obrigatórios |
+| [agent-platform-troubleshooting](https://github.com/google/skills/blob/main/skills/cloud/agent-platform-troubleshooting/SKILL.md) | Agent Platform | A/D | ABSORB_METHOD_ONLY | Ferramenta GCP externa; confirmar versão, IAM, rede e projeto |
+| [agent-platform-tuning-management](https://github.com/google/skills/blob/main/skills/cloud/agent-platform-tuning-management/SKILL.md) | Agent Platform | A/D | KEEP_EXTERNAL_REFERENCE | Muta recursos ou consome quota; permissão e custo obrigatórios |
+| [agent-platform-tuning](https://github.com/google/skills/blob/main/skills/cloud/agent-platform-tuning/SKILL.md) | Agent Platform | A/D | KEEP_EXTERNAL_REFERENCE | Muta recursos ou consome quota; permissão e custo obrigatórios |
+| [alloydb-basics](https://github.com/google/skills/blob/main/skills/cloud/alloydb-basics/SKILL.md) | AlloyDB | A/D | KEEP_EXTERNAL_REFERENCE | Dados, SQL, ACLs e cobrança exigem escopo de projeto |
+| [api-gateway-mcp-server](https://github.com/google/skills/blob/main/skills/cloud/api-gateway-mcp-server/SKILL.md) | Cloud infra/security | A/D | KEEP_EXTERNAL_REFERENCE | Ferramenta GCP externa; confirmar versão, IAM, rede e projeto |
+| [application-design-center-design-deploy](https://github.com/google/skills/blob/main/skills/cloud/application-design-center-design-deploy/SKILL.md) | Cloud infra/security | A/D | KEEP_EXTERNAL_REFERENCE | Muta recursos ou consome quota; permissão e custo obrigatórios |
+| [assuredworkloads-environment-assessor](https://github.com/google/skills/blob/main/skills/cloud/assuredworkloads-environment-assessor/SKILL.md) | Cloud infra/security | A/D | KEEP_EXTERNAL_REFERENCE | Ferramenta GCP externa; confirmar versão, IAM, rede e projeto |
+| [bigquery-ai-ml](https://github.com/google/skills/blob/main/skills/cloud/bigquery-ai-ml/SKILL.md) | BigQuery | A/D | KEEP_EXTERNAL_REFERENCE | Dados, SQL, ACLs e cobrança exigem escopo de projeto |
+| [bigquery-basics](https://github.com/google/skills/blob/main/skills/cloud/bigquery-basics/SKILL.md) | BigQuery | A/D | KEEP_EXTERNAL_REFERENCE | Dados, SQL, ACLs e cobrança exigem escopo de projeto |
+| [bigquery-bigframes](https://github.com/google/skills/blob/main/skills/cloud/bigquery-bigframes/SKILL.md) | BigQuery | A/D | KEEP_EXTERNAL_REFERENCE | Dados, SQL, ACLs e cobrança exigem escopo de projeto |
+| [bigquery-observability](https://github.com/google/skills/blob/main/skills/cloud/bigquery-observability/SKILL.md) | BigQuery | A/D | ABSORB_METHOD_ONLY | Dados, SQL, ACLs e cobrança exigem escopo de projeto |
+| [bigquery-optimization](https://github.com/google/skills/blob/main/skills/cloud/bigquery-optimization/SKILL.md) | BigQuery | A/D | ABSORB_METHOD_ONLY | Dados, SQL, ACLs e cobrança exigem escopo de projeto |
+| [bigquery-troubleshooting](https://github.com/google/skills/blob/main/skills/cloud/bigquery-troubleshooting/SKILL.md) | BigQuery | A/D | ABSORB_METHOD_ONLY | Dados, SQL, ACLs e cobrança exigem escopo de projeto |
+| [bigtable-basics](https://github.com/google/skills/blob/main/skills/cloud/bigtable-basics/SKILL.md) | Bigtable | A/D | KEEP_EXTERNAL_REFERENCE | Dados, SQL, ACLs e cobrança exigem escopo de projeto |
+
+Aprendizado transversal: antes de sugerir operação Cloud, discriminar *read/list/describe*, escrita reversível, alteração onerosa e operação destrutiva; exigir project/region/resource e confirmação compatível com impacto, preservar plano e evidência. `agent-platform-eval-flywheel` e guias BigQuery trazem metodologia útil, mas não autorizam tratar serviços conectados como disponíveis automaticamente.
