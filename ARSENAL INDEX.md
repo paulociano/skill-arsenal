@@ -78,6 +78,9 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 
 ## Skills
 
+- **python-interactive-prototyping** — Construir protótipos Python interativos escolhendo entre demos de funções/modelos no estilo Gradio e notebooks reativos/reproduzíveis no estilo marimo, com contratos de estado, segurança e teste de runtime.
+- **synthetic-test-data-engineering** — Gerar dados sintéticos e fixtures reproduzíveis para desenvolvimento, demos e testes de apps, com schemas, seeds, relacionamentos, distribuições, casos extremos, privacidade e validação.
+
 - **signal-intelligence-digest** — Projetar e operar um radar recorrente de fontes públicas, releases e comunidades com deduplicação, filtros factuais, triagem semântica auditável e digest de alta relevância, sem instalar crawlers ou prometer execução autônoma inexistente.
 
 - **image-to-svg-vectorization** — Converter logos e ícones raster em SVG vetorial editável por tracing de silhueta, com seleção de motor, preservação de vazados e validação estrutural/visual.
