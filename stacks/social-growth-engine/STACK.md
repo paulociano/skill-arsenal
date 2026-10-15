@@ -81,3 +81,8 @@ Adaptar o ciclo tópico → referências de estilo → hipótese criativa → ro
 ## Benchmark por maturidade do canal de vídeo (BrowserAct 101–103, 2026-10-15)
 
 Ao comparar canais YouTube, examinar amostras separadas de vídeos recentes, mais vistos e antigos. Registrar fonte, data de publicação, duração, views/likes/comentários disponíveis e momento da captura; evitar comparar contagem cumulativa de vídeo antigo com lançamento recente sem normalizar tempo de exposição. Inscritos não são visualizações nem taxa de conversão, e ordenação por Popular não explica causalmente crescimento. Converter achados em hipóteses para frequência, formato e distribuição, com limites da amostra. Fonte: browser-act/skills youtube-video-api-skill, incorporada como processo analítico, sem chamada à API proprietária.
+
+
+## Biblioteca de anúncios concorrentes e hipótese criativa (ComposioHQ, 2026-10-15)
+
+Para anúncios públicos de concorrentes, registrar anunciante, biblioteca, URL/ID, captura quando autorizada, período efetivamente visto, promessa, problema, público presumido, prova, formato visual e CTA. Agrupar por mensagem e formato; transformar recorrências em variantes de teste para a própria marca. **Frequência ou permanência de um anúncio não comprova desempenho, ROI ou taxa de conversão**; diferenciar observação de hipótese e não inventar dados ou screenshots ausentes. Respeitar direitos sobre criativos, políticas de plataforma e escopo do acesso. Método adaptado de ComposioHQ/awesome-claude-skills/competitive-ads-extractor.
