@@ -203,3 +203,8 @@ Adaptada de:
 - https://github.com/googleapis/release-please
 
 Preserva consumer-impact versioning, contribution-time change declaration, release PRs, changelog/version automation e artifact publication, sem exigir Node.js, Conventional Commits ou qualquer registry específico.
+
+
+## Changelog verificável e comunicação de release (ComposioHQ, 2026-10-15)
+
+Ao converter commits em notas públicas, definir intervalo explícito de SHAs/tags e o público; deduplicar commits de merge e refactors sem efeito externo; classificar novidades, correções, alterações incompatíveis, segurança e migrações. Conferir cada nota contra diff, issues e release artifact disponível, distinguindo o que foi enviado do que foi somente mesclado. Redigir benefício e impacto em linguagem do usuário, com versões, ações necessárias e rollback quando aplicável. Nunca inventar changelog nem afirmar lançamento sem confirmação do release. Método adaptado de ComposioHQ/awesome-claude-skills/changelog-generator.
