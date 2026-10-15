@@ -149,3 +149,16 @@ Ao auditar interfaces geradas com IA, evitar inferir a ferramenta criadora pela 
 6. Para revisão do runtime, inspecionar navegação, estados e acessibilidade; screenshot isolada não prova comportamento.
 
 Proveniência metodológica: `MengTo/Skills`, `agent-skills/ui/audit-ai-design-slop` e `no-ai-design-slop` (2026-10-15), absorvidos como gate adicional, não skill separada.
+
+## Auditoria de originalidade com referências externas
+
+Quando uma interface foi inspirada em páginas, campanhas ou capturas de terceiros, separar **gramática visual comum** (grid, espaçamento, padrões de navegação) de **elementos distintivos potencialmente copiados** (marca, textos, claims, personagens, ativos protegidos, números, composição muito específica e movimentos característicos).
+
+1. Manter inventário de referências e versões/capturas, com origem e data.
+2. Comparar conteúdo verbal, marca, iconografia, assets, layout, interação e sequência de movimento, com trechos evidenciados.
+3. Classificar como similaridade comum, atenção ou indício concreto; não concluir plágio/infração com base em impressão estética.
+4. Para cada risco, propor substituição concreta que preserve função e melhore originalidade: textos e números próprios, assets autorizados, variação estrutural justificada e identidade autônoma.
+5. Revalidar a peça após alteração; registrar o que foi observado e o que não pôde ser inspecionado.
+6. Não emitir veredito jurídico definitivo. Encaminhar casos de propriedade intelectual de alto impacto a revisão especializada.
+
+Origem metodológica: `MengTo/Skills/agent-skills/codex/audit-reference-originality/SKILL.md` (2026-10-15). Não executar ferramentas específicas de Codex sem suporte real.
