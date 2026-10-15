@@ -281,3 +281,19 @@ Data: 2026-10-15. Fonte: browser-act/skills branch main, 20 SKILL.md lidos indiv
 - Pesquisa de vagas e reputação: métodos parciais para síntese baseada em fontes; dependência de plataformas muda com tempo.
 
 **Resultado do lote 6:** 20 avaliações individuais registradas, 10 `ABSORB_METHOD_ONLY` e 10 `KEEP_EXTERNAL_REFERENCE`; 0 scripts importados, 0 novas skills, 0 owners modificados. Metodologias absorvidas **apenas neste registro de avaliação**, não implementadas em outros SKILL.md. Total aprofundado BrowserAct: **60/103**, faltam **43**. Próximo checkpoint: itens 61–80.
+
+
+## Implementação retrospectiva, 2026-10-15
+
+As melhorias metodológicas adotadas foram publicadas nos seguintes owners canônicos e relidas após as alterações:
+
+- `skills/first-customer-research/SKILL.md`: qualificação de empresas e canais públicos.
+- `skills/go-to-market-strategy/SKILL.md`: comparação de ofertas e oportunidades competitivas.
+- `skills/seo-research-audit/SKILL.md`: segmentação e registro observável de SERPs.
+- `skills/niche-research/SKILL.md`: amostragem e interpretação de sinais sociais e avaliações.
+- `skills/signal-intelligence-digest/SKILL.md`: evidências de lançamentos e anúncios.
+- `stacks/social-growth-engine/STACK.md`: comparação observacional de comunicação social.
+- `stacks/research-and-synthesize/STACK.md`: método de coleta com escopo e deduplicação.
+- `stacks/arsenal-autopilot/STACK.md` e `stacks/evaluate-and-import-skill/STACK.md`: avaliação deve publicar e verificar toda melhoria aprovada.
+
+Este registro descreve implementação em instruções operacionais do Arsenal, não integração ou execução de scripts externos. Capacidades duplicadas ou não portáveis não geraram novas skills. O inventário 61–80 ainda está em avaliação e não está finalizado.
