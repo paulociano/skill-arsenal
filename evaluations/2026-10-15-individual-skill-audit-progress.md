@@ -3,7 +3,7 @@
 Data: 2026-10-15. **Estado: PARCIAL, não concluído.**
 
 ## Inventário com fonte verificável
-Foram localizados **1719** SKILL.md nas árvores recursivas dos 12 repositórios e criadas fichas **individuais de descoberta** por caminho. **10 skills** (`slavingia/skills`) tiveram o conteúdo aberto e uma decisão individual documentada nesta rodada; **1709** permanecem sem leitura individual e, portanto, sem avaliação completa. Nas fichas, flags baseadas somente no caminho são **hipóteses**, não aprovação nem decisão real.
+Foram localizados **1719** SKILL.md nas árvores recursivas dos 12 repositórios e criadas fichas **individuais de descoberta** por caminho. **50 skills** tiveram seus SKILL.md abertos e decisões documentais individuais registradas: 10 slavingia, 11 antfu, 23 MiniMax, 1 multica/Karpathy e 5 BrowserAct. **1669** permanecem sem leitura individual de SKILL.md. A leitura das 50 não equivale a auditoria integral dos arquivos associados, scripts, referências e execução; a segurança permanece condicionada a revisão por adoção. Nas fichas, flags baseadas somente no caminho são **hipóteses**, não aprovação nem decisão real.
 
 | Repositório | Arquivos SKILL.md | Inventário |
 |---|---:|---|
@@ -33,3 +33,13 @@ Foram localizados **1719** SKILL.md nas árvores recursivas dos 12 repositórios
 6. Para fintech, carteiras, trading e ações de terceiros, revisão mais rigorosa e nenhuma ação externa durante avaliação.
 
 Este arquivo é um checklist de progresso, não uma afirmação de auditoria exaustiva. Não foram executados scripts ou instaladores externos.
+
+## Continuação registrada em 2026-10-15
+
+- `slavingia/skills`: 10/10 SKILL.md lidos e decisões individuais registradas.
+- `antfu/skills`: 11/11 SKILL.md lidos; guias de frameworks e convenções mantidos como referência contextual; não instalar em massa.
+- `MiniMax-AI/skills`: 23/23 SKILL.md lidos; ferramentas de API/CLI não portáveis e dependências de mídia identificadas. `shader-dev` permanece candidata a aprofundamento dos arquivos de referência, sem adoção automática.
+- `multica-ai/andrej-karpathy-skills`: 1/1 SKILL.md lido; metodologia de código enxuto já coberta pelo Arsenal.
+- `browser-act/skills`: 5/103 SKILL.md lidos; dependência do browser-act CLI e de payload dinâmico exige revisão mais profunda, sem execução.
+
+Para as 50 entradas, trata-se de avaliação individual do documento principal e não revisão exaustiva de dependências transitivas. As 1.669 restantes continuam com triagem apenas por nome/caminho. Fontes agregadoras VoltAgent e 30-seconds-of-code permanecem fora desse denominador por não conterem SKILL.md na própria árvore.
