@@ -230,3 +230,9 @@ Adaptada principalmente de:
 - https://github.com/trekhleb/promote-your-next-startup
 
 Preserva diagnosis-before-tactics, stage-aware roadmap, adopter/buyer split, first-user channels, launch como processo e ligação entre activation, sales, pricing e economics. Remove dependência de arquivos locais, instaladores e runtimes de agentes específicos.
+
+## Comparação de ofertas e análise de listings (BrowserAct, 2026-10-15)
+
+Quando GTM depender de competidores de e-commerce, estruturar benchmark por entidade e variante: origem e data; ASIN/SKU/GTIN/ID; mercado, moeda, condição, frete e preço total quando possível; proposta de valor, evidências, texto, imagens, reviews e diferenciais. Comparar apenas ofertas equivalentes. Distinguir preço pedido de preço transacionado; em anúncios concluídos, verificar venda confirmada e sinalizar Best Offer sem preço final visível. Rankings, badges, avaliações e engajamento não provam receita ou conversão.
+
+Produzir quadro: **o que concorrente demonstra / lacuna apoiada por fonte / oportunidade para nosso produto, posicionamento, prova, oferta ou distribuição / hipótese a testar / prioridade**. Não sugerir editar o listing concorrente; traduzir evidência em próximos testes do usuário. Manter hipótese e observação separadas. Proveniência: BrowserAct amazon-competitor-analyzer, amazon-listing-competitor-analysis-skill, ebay-sold-listings-search, ecommerce-product-detail.
