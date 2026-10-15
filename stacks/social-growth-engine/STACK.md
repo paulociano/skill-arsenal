@@ -62,3 +62,7 @@ A stack é um router. Em um pedido pequeno, use somente as etapas necessárias. 
 ## Origem metodológica
 
 Combina o diagnóstico de crescimento de social-media-skills/skills com o ciclo de planejamento de Spotlight-Revenue/social-content-planner, adaptado para as ferramentas reais do ChatGPT e para owners já existentes no Arsenal.
+
+## Benchmark observacional de conteúdo e anúncios (BrowserAct, 2026-10-15)
+
+No diagnóstico e pesquisa, aceitar comparáveis públicos de perfis, hashtags, anúncios e comentários somente com fonte, janela temporal, canal e amostra explícita. Classificar criativos por **audience/offer/hook/proof/CTA**, separar material orgânico de patrocinado, mapear objeções recorrentes e converter padrões em hipóteses criativas testáveis. Taxa de reação de terceiros não demonstra conversão nem causalidade. Nunca executar automação de DMs, comentários em massa, aquecimento de contas ou promoção encoberta; ações externas continuam exigindo autorização específica. Proveniência: BrowserAct facebook-ads-library-search, instagram-profile-posts, instagram-post-comments, reddit-warmup (rejeitado como implementação).
