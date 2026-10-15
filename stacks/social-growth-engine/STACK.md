@@ -76,3 +76,8 @@ Em relacionamento, permitir somente rascunho e respostas individualizadas com co
 ## Operação de publicação multiplataforma (BrowserAct 81–100, 2026-10-15)
 
 Adaptar o ciclo tópico → referências de estilo → hipótese criativa → roteiro/legenda/asset → QA factual/visual → revisão humana → publicação autorizada → análise. A publicação em Xiaohongshu, TikTok, YouTube ou X exige integração disponível, autorização do usuário, revisão final de mídia/copy e confirmação do status real; não instalar automações de browser nem alegar post publicado sem recibo. Benchmark de vídeos por formato, duração, promessa, prova, gancho e CTA; normalizar diferenças de métricas e janelas, verificar direitos de música/imagens e não duplicar formatos sem fit de público. Proveniência metodológica: BrowserAct xiaohongshu-auto-posting, tiktok-hashtag-videos, tiktok-video-detail, youtube-api-skill.
+
+
+## Benchmark por maturidade do canal de vídeo (BrowserAct 101–103, 2026-10-15)
+
+Ao comparar canais YouTube, examinar amostras separadas de vídeos recentes, mais vistos e antigos. Registrar fonte, data de publicação, duração, views/likes/comentários disponíveis e momento da captura; evitar comparar contagem cumulativa de vídeo antigo com lançamento recente sem normalizar tempo de exposição. Inscritos não são visualizações nem taxa de conversão, e ordenação por Popular não explica causalmente crescimento. Converter achados em hipóteses para frequência, formato e distribuição, com limites da amostra. Fonte: browser-act/skills youtube-video-api-skill, incorporada como processo analítico, sem chamada à API proprietária.
