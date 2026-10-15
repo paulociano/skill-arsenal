@@ -46,3 +46,9 @@ Pesquisa indexada na web não equivale a varredura completa de feed social. Decl
 Separação facts/news vs discourse, janela temporal explícita e source-health awareness adaptadas de https://github.com/mvanhorn/last30days-skill, sem importar scripts, cookies, APIs ou métricas proprietárias.
 
 Origem local: [niche-research.docx](../niche-research.docx).
+
+## Pesquisa social com amostragem e reputação (BrowserAct, 2026-10-15)
+
+Quando pesquisar mercado/reações de plataformas como Reddit, Instagram, Threads, Facebook, YouTube, Trustpilot e Product Hunt, especificar plataforma, busca, período, conjunto realmente observado e viés de acesso/paginação. Separar posts, comentários, anúncios, perfis e avaliações verificadas; não converter likes/upvotes em demanda ou qualidade comprovada. Para reclamações e reviews, registrar nota, data, variante, verificação, resposta empresarial e recorrência apenas quando observáveis. Deduplicar republicações e respeitar privacidade; agregar dados de pessoas em vez de montar dossiês.
+
+Incluir sinais de launch e concorrência em backlog de hipóteses testáveis. Não automatizar aquecimento de contas, falsa participação orgânica ou mensagens/replies em massa. Proveniência: BrowserAct producthunt-launches, reddit-competitor-analysis-api-skill, trustpilot-reviews, instagram-post-comments, instagram-hashtag-posts, threads-keyword-search e outras interfaces sociais.
