@@ -189,3 +189,15 @@ Esses recursos são candidatos, não etapas obrigatórias em toda execução.
 ## Referências internas
 - `references/CAPABILITY-LEDGER.md` — schema de comparação, ownership e prova.
 - `references/ACCEPTANCE-CASES.md` — should-trigger, near-miss e critérios de conclusão para regressão do Autopilot.
+
+## Regra permanente: avaliação com implementação obrigatória (2026-10-15)
+
+Ao avaliar skills ou repositórios, **não encerrar apenas documentando recomendações**. Para toda capacidade aprovada como incremental e portátil:
+1. localizar o owner canônico pelo índice, ler a implementação atual e escolher UPDATE_EXISTING ou CREATE_NEW;
+2. aplicar a melhoria diretamente no SKILL.md/STACK.md correspondente e criar arquivos auxiliares apenas se justificáveis;
+3. atualizar o índice quando surgir owner novo ou roteamento mudar; registrar na avaliação **arquivos alterados, decisão e limitações reais**;
+4. publicar por commit na branch canônica, reler arquivos publicados e verificar links, comportamento descrito e portabilidade.
+
+`ABSORB_METHOD_ONLY` deve significar **metodologia efetivamente incorporada ao owner**, não somente registrada em evaluations/. Quando não houver melhoria segura, compatível e verificável, usar KEEP_EXTERNAL_REFERENCE ou REJECT com motivo, sem implementação fictícia. Não importar código externo não auditado nem criar duplicatas para atingir cotas. Se a escrita for bloqueada, declarar falha, o que ficou pendente e não usar termos como implementado.
+
+Esta regra se aplica também a revisões futuras de catálogos e a correções retrospectivas de avaliações que identificaram ganhos sem alterar os owners.
