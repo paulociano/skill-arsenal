@@ -111,3 +111,15 @@ web-design-engineer, scroll-storytelling, interaction-polish, motion-asset-engin
 ## Origem metodológica
 
 Adaptada de rbaumier/skills, greensock/gsap-skills, Motion, react-spring, Theatre.js, MengTo/Skills, podo/design-agent-skills e LottieFiles/motion-design-skill. Continuidade de morph interruptível e fallback funcional refinados a partir de KickNext/morphnext. Preserva função, personalidade e coreografia portáveis, removendo presets rígidos e dependências específicas.
+
+## Motion semântico e orçamento de renderização
+
+Para efeitos ricos inspirados em motion/Three.js, preservar intenção antes de aparência:
+1. Vincular estados animados a estados reais de produto (loading, selected, processing, focus, success, failure), sem glow/loop permanente que simule atividade inexistente.
+2. Escolher CSS/SVG antes de canvas/WebGL quando isso atingir o efeito; explicitar custo de camadas, draw calls, memória, DPR, frame-time e fallback.
+3. Pausar simulações fora do viewport, ao ocultar a página e quando reduced-motion exigir, limpando rAF/listeners/observers na desmontagem.
+4. Para scroll, manter um único controlador do progresso, sem disputa entre biblioteca de smooth scroll e scroll nativo; garantir navegação por teclado e restauração.
+5. Para emissores de cursor/partículas, basear espaçamento em distância percorrida e reciclar pool em vez de alocação sem limite.
+6. Verificar o resultado no dispositivo-alvo e separar captura visual de evidência de performance; não alegar medição que não ocorreu.
+
+Origem: metodologias analisadas individualmente em `MengTo/Skills/agent-skills/web-design` (2026-10-15). Componentes terceiros e efeitos WebGL não são dependências obrigatórias.
