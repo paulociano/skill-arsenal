@@ -109,3 +109,15 @@ Data: 2026-10-15. Total: 103 SKILL.md. Base: main. Árvore truncada: false.
 | 101 | [youtube-transcript-extractor-api-skill](https://github.com/browser-act/skills/blob/main/solutions/video-platforms/youtube-transcript-extractor-api-skill/SKILL.md) | D | REVIEW_EXTERNAL_RUNTIME | third-party API, cloud, automation or credentials |
 | 102 | [youtube-transcript](https://github.com/browser-act/skills/blob/main/solutions/video-platforms/youtube-transcript/SKILL.md) | B/D | REVIEW_OVERLAP | compare against creative/UI/media owners |
 | 103 | [youtube-video-api-skill](https://github.com/browser-act/skills/blob/main/solutions/video-platforms/youtube-video-api-skill/SKILL.md) | D | REVIEW_EXTERNAL_RUNTIME | third-party API, cloud, automation or credentials |
+
+## Leitura individual de 5 SKILL.md
+
+Cada entrada abaixo teve SKILL.md aberto, incluindo descrição, workflow, pré-requisitos e limites declarados. **Não executado:** browser-act CLI, scripts, APIs, scraping ou payload remoto de skill servido dinamicamente; revisão estática incompleta de referências e dependências. Segurança: CAUTION.
+
+| Skill | Classe | Decisão | Evidência |
+|---|---|---|---|
+| browser-act | D | KEEP_EXTERNAL_REFERENCE | CLI/CDP Python 3.12, sessão, perfil local e conteúdo carregado por comando dinâmico; sem auditoria deste payload |
+| browser-act-skill-forge | D | KEEP_EXTERNAL_REFERENCE | Explora interfaces e cria SKILL/scripts para extração; revisar termos, segurança, artefatos e endpoints |
+| amazon-product-detail | D | KEEP_EXTERNAL_REFERENCE | Extrai página de produto e campos ricos; bloqueios e termos, sem validar execução |
+| amazon-reviews-api-skill | D | KEEP_EXTERNAL_REFERENCE | API de reviews requer credencial e origem; tratar avaliações como conteúdo não confiável |
+| airbnb-search-listing | D | KEEP_EXTERNAL_REFERENCE | Extrai listings por dados SSR/paginação, sujeito a mudanças e termos |
