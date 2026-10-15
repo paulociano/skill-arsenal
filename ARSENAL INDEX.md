@@ -78,6 +78,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 
 ## Skills
 
+- **signal-intelligence-digest** — Projetar e operar um radar recorrente de fontes públicas, releases e comunidades com deduplicação, filtros factuais, triagem semântica auditável e digest de alta relevância, sem instalar crawlers ou prometer execução autônoma inexistente.
+
 - **image-to-svg-vectorization** — Converter logos e ícones raster em SVG vetorial editável por tracing de silhueta, com seleção de motor, preservação de vazados e validação estrutural/visual.
 
 - **2d-mesh-avatar-rigging** — Transformar uma ilustração 2D em avatar animável por layers, mesh, pivots, face/mouth/eye rig, corrective variants e pose QA antes de uso ao vivo.
