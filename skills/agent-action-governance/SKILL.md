@@ -173,3 +173,7 @@ Quando ferramentas de bancos devolvem parâmetros de conexão, tratá-los como m
 ## Faturas e documentos com estados mutáveis (ComposioHQ 532–631)
 
 Antes de criar ou alterar fatura, verificar IDs atuais de cliente, item e detalhe tributário e distinguir rascunho, emissão, pagamento e estorno. APIs com sync token exigem leitura imediatamente anterior à atualização e tratamento explícito de conflito, em vez de sobrescrita. Em assinaturas eletrônicas, confirmar versão do documento, papéis exclusivos, ordem coerente de signatários, origem do arquivo e webhook antes de enviar; documento criado não significa assinado. Fontes: QuickBooks e PandaDoc; ações financeiras ou contratuais requerem autorização específica.
+
+## Roteamento multiorganização em contabilidade (ComposioHQ 732–831, 2026-10-15)
+
+Em operações financeiras conectadas, enumerar e confirmar o tenant/organization ID, não aceitar silenciosamente a primeira organização disponível. Conferir conta bancária, plano de contas, identificadores atuais de fatura, itens e fornecedor, moeda e datas; verificar limite de lote e paginação. Diferenciar proposta de pagamento, registro, autorização e efetivação. Se uma atualização aparentemente parcial exigir substituição integral, reler e preservar campos existentes; confirmar efeitos e não repetir automaticamente após erro ambíguo. Base metodológica: Xero e Zoho Books, ComposioHQ 732–831. Não executar transações sem autorização específica.
