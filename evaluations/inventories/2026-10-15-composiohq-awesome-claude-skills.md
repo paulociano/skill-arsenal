@@ -870,3 +870,18 @@ Data: 2026-10-15. Total: 864 SKILL.md. Base: master. Árvore truncada: false.
 | 862 | [twitter-algorithm-optimizer](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/twitter-algorithm-optimizer/SKILL.md) | B/D | REVIEW_CONTENT | content and dependency verification needed |
 | 863 | [video-downloader](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/video-downloader/SKILL.md) | B/D | REVIEW_OVERLAP | compare against creative/UI/media owners |
 | 864 | [webapp-testing](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/webapp-testing/SKILL.md) | B/D | REVIEW_OVERLAP | overlap likely with existing quality/security capabilities |
+
+
+## Revisão individual e implementação: primeiro lote verificado (2026-10-15)
+
+Foram lidos individualmente cinco arquivos SKILL.md da branch master em ComposioHQ/awesome-claude-skills: competitive-ads-extractor, lead-research-assistant, content-research-writer, meeting-insights-analyzer e skill-creator. O catálogo também contém links externos e integrações; o total de entradas do inventário é **triagem por caminho**, não leitura profunda de cada skill. Não houve execução de instaladores, scripts ou integrações de terceiros.
+
+| Fonte | Classe | Decisão após leitura | Implementação ou justificativa |
+|---|---|---|---|
+| [competitive-ads-extractor](https://github.com/ComposioHQ/awesome-claude-skills/tree/master/competitive-ads-extractor) | B | IMPLEMENTED_IN_EXISTING | Registrar anúncios públicos por origem, creative, hook, promessa, CTA e período, separando hipótese de resultado não observável. Implementado em `stacks/social-growth-engine/STACK.md`, commit `340bb477d94d97aeb8c0b98141393296fdc98149`. |
+| [lead-research-assistant](https://github.com/ComposioHQ/awesome-claude-skills/tree/master/lead-research-assistant) | B | IMPLEMENTED_IN_EXISTING | ICP, timing, sinais verificáveis e priorização explicável, sem inferir chance de venda nem automatizar contatos. Implementado em `skills/first-customer-research/SKILL.md`, commit `fa371409964875359be49bbc2ed0b66a0b3351e1`. |
+| [content-research-writer](https://github.com/ComposioHQ/awesome-claude-skills/tree/master/content-research-writer) | B | ALREADY_COVERED | Outline, pesquisa e citações, revisão iterativa e voz já cobertos por writing-quality e research-and-synthesize. Exemplos de estatísticas no documento não constituem dados verificados. |
+| [meeting-insights-analyzer](https://github.com/ComposioHQ/awesome-claude-skills/tree/master/meeting-insights-analyzer) | A/B | IMPLEMENTED_IN_EXISTING | Diagnóstico baseado em transcript, speaker/timecode, limites da inferência de comportamento e privacidade. Implementado em `skills/meeting-knowledge-capture/SKILL.md`, commit `41736857ae04099a38716470107f07c76813b5e5`. |
+| [skill-creator](https://github.com/ComposioHQ/awesome-claude-skills/tree/master/skill-creator) | B | ALREADY_COVERED | Metadados, progressive disclosure e recursos auxiliares já pertencem ao ciclo de criação do Arsenal; sem ganho para novo owner. |
+
+**Resultado do lote:** 5 arquivos avaliados individualmente, 3 melhorias efetivamente incorporadas em owners canônicos, 2 sobreposições, 0 novas skills. Sem alegação de instalação do Composio MCP Gateway ou acesso a 1.000 integrações. As demais entradas do inventário continuam em triagem, ainda não avaliadas individualmente.
