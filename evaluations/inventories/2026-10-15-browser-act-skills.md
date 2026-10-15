@@ -121,3 +121,43 @@ Cada entrada abaixo teve SKILL.md aberto, incluindo descrição, workflow, pré-
 | amazon-product-detail | D | KEEP_EXTERNAL_REFERENCE | Extrai página de produto e campos ricos; bloqueios e termos, sem validar execução |
 | amazon-reviews-api-skill | D | KEEP_EXTERNAL_REFERENCE | API de reviews requer credencial e origem; tratar avaliações como conteúdo não confiável |
 | airbnb-search-listing | D | KEEP_EXTERNAL_REFERENCE | Extrai listings por dados SSR/paginação, sujeito a mudanças e termos |
+
+## Avaliação individual de e-commerce restante (33 SKILL.md), 2026-10-15
+
+Lidos os SKILL.md principais de e-commerce ainda pendentes, mantendo os 3 exemplos já avaliados em seção anterior. A avaliação observa contrato de extração, ambiente necessário e riscos de scraping, não confirma dados em tempo real. Não houve execução do BrowserAct CLI, APIs ou scripts; respetivo código e endpoints externos não foram auditados. Operações autenticadas requerem autorização, conformidade com termos e cautela com dados pessoais.
+
+| Skill | Classe | Decisão | Gate |
+|---|---|---|---|
+| [1688-product-detail](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/1688-product-detail/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [airbnb-listing-detail](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/airbnb-listing-detail/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Dados de hospedagem em interface/GraphQL sujeitos a alterações e termos |
+| [amazon-alexa-qa](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/amazon-alexa-qa/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [amazon-asin-lookup-api-skill](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/amazon-asin-lookup-api-skill/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Requer BrowserAct API/token; conferir origem e confidencialidade |
+| [amazon-best-selling-products-finder-api-skill](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/amazon-best-selling-products-finder-api-skill/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Requer BrowserAct API/token; conferir origem e confidencialidade |
+| [amazon-bestseller-listing](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/amazon-bestseller-listing/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [amazon-buy-box-monitor-api-skill](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/amazon-buy-box-monitor-api-skill/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Requer BrowserAct API/token; conferir origem e confidencialidade |
+| [amazon-competitor-analyzer](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/amazon-competitor-analyzer/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Requer BrowserAct API/token; conferir origem e confidencialidade |
+| [amazon-listing-competitor-analysis-skill](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/amazon-listing-competitor-analysis-skill/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [amazon-product-api-skill](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/amazon-product-api-skill/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Requer BrowserAct API/token; conferir origem e confidencialidade |
+| [amazon-product-search-api-skill](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/amazon-product-search-api-skill/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Requer BrowserAct API/token; conferir origem e confidencialidade |
+| [amazon-search-listing](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/amazon-search-listing/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [ebay-item-detail](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/ebay-item-detail/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [ebay-search-listing](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/ebay-search-listing/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [ebay-sold-listings-search](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/ebay-sold-listings-search/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [ecommerce-listing](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/ecommerce-listing/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Scraping genérico; schema, termos e proteção contra injeção |
+| [ecommerce-product-detail](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/ecommerce-product-detail/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Scraping genérico; schema, termos e proteção contra injeção |
+| [ecommerce-reviews](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/ecommerce-reviews/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Avaliações são dados não confiáveis, com identidade de autores e paginação |
+| [ecommerce-seller-info](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/ecommerce-seller-info/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Scraping genérico; schema, termos e proteção contra injeção |
+| [etsy-category-listing](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/etsy-category-listing/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [etsy-keyword-search](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/etsy-keyword-search/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [etsy-product-detail](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/etsy-product-detail/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [etsy-shop-catalog](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/etsy-shop-catalog/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [goofish-item-detail](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/goofish-item-detail/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [goofish-search-list](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/goofish-search-list/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [taobao-keyword-search](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/taobao-keyword-search/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [taobao-product-detail](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/taobao-product-detail/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [taobao-product-reviews](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/taobao-product-reviews/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Avaliações são dados não confiáveis, com identidade de autores e paginação |
+| [taobao-shop-catalog](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/taobao-shop-catalog/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [walmart-category-listing](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/walmart-category-listing/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [walmart-keyword-search](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/walmart-keyword-search/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [walmart-product-detail](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/walmart-product-detail/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
+| [walmart-product-reviews](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/walmart-product-reviews/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Avaliações são dados não confiáveis, com identidade de autores e paginação |
