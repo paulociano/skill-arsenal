@@ -374,3 +374,20 @@ Revisão estática de cada um dos 20 arquivos originais de browser-act/skills (s
 O status IMPLEMENTED_IN_EXISTING refere-se à adoção de **metodologia operacional** nos arquivos acima, não à execução comprovada das integrações externas. Novas skills: 0, porque owners canônicos já cobrem os métodos úteis. Os casos não portáveis permanecem referências com dependências e riscos declarados.
 
 **Checkpoint:** 100/103 avaliações individuais BrowserAct concluídas; **3 restantes** (itens 101–103).
+
+
+## Encerramento: leitura individual e implementação dos itens 101–103 (2026-10-15)
+
+Fonte canônica externa: browser-act/skills, três arquivos SKILL.md lidos na íntegra e comparados aos owners existentes. Avaliação estática documental; APIs, scripts e extrações não executados.
+
+| # | Skill | Classe | Decisão | Parecer, limitações e melhoria publicada |
+|---:|---|---|---|---|
+| 101 | [youtube-transcript-extractor-api-skill](https://github.com/browser-act/skills/blob/main/solutions/video-platforms/youtube-transcript-extractor-api-skill/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração por URL do vídeo de transcript, título, canal e likes com Python, API proprietária e BROWSERACT_API_KEY. A funcionalidade depende de credencial e runtime não portátil; sem novo owner. Alegações de eficácia/CAPTCHA não verificadas. |
+| 102 | [youtube-transcript](https://github.com/browser-act/skills/blob/main/solutions/video-platforms/youtube-transcript/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Método útil de verificar idiomas, origem manual/automática, segmentos e timestamps; resumos e capítulos na forma solicitada, cobertura em vídeos longos e indicação de ausência de legenda. Adaptação publicada em `stacks/research-and-synthesize/STACK.md`, commit `1b8283f0112eac5179ee8dedbdf66378a1840dfe`. Scripts de navegador não importados. |
+| 103 | [youtube-video-api-skill](https://github.com/browser-act/skills/blob/main/solutions/video-platforms/youtube-video-api-skill/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Distinção entre vídeos Latest, Popular e Earliest, observando data, duração, views e comentários e evitando comparação temporal distorcida. Método publicado em `stacks/social-growth-engine/STACK.md`, commit `9c2320cfcb64932a5f3d7231cd6d6fe9bf6f478d`. Template API não importado. |
+
+### Status de conclusão do inventário
+
+**103/103 SKILL.md enumerados no inventário BrowserAct receberam avaliação individual** nos lotes documentados nesta página. Este indicador é cobertura de revisão **documental do SKILL.md**, não auditoria integral de scripts auxiliares, comprovação de funcionamento, autorização de scraping ou instalação do ecossistema.
+
+Implementações incrementais aprovadas foram incorporadas aos owners canônicos existentes ao longo dos lotes, conforme os commits registrados; nenhuma nova skill foi necessária para estes três itens. Métodos com requisitos externos permanecem referências, não capacidades nativas supostamente ativas. O inventário BrowserAct está fechado; o próximo conjunto do roadmap histórico pode ser selecionado somente após consulta atual ao índice e checkpoint.
