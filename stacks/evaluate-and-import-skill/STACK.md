@@ -36,3 +36,7 @@ Prefira melhorar uma skill existente a criar uma duplicata quase equivalente.
 Para uma única skill ou fonte simples, execute esta stack diretamente.
 
 Quando houver múltiplos repositórios, ecossistemas grandes, overlap significativo ou necessidade de consolidar várias fontes em owners canônicos, escale para `arsenal-autopilot`. O Autopilot usa esta stack como componente, adicionando capability ledger, resolução de ownership, prova de valor incremental e política de lote.
+
+## Critério obrigatório de conclusão: implementar antes de declarar concluído (2026-10-15)
+
+Para qualquer candidata A/B útil, diferenciar avaliação, decisão, implementação e verificação. Melhorias aprovadas exigem alteração concreta de owner existente ou criação justificada de novo owner; `ABSORB_METHOD_ONLY` só é permitido quando a incorporação foi publicada. Registrar os caminhos e commits reais em `evaluations/`. Se a fonte depende de runtime inacessível ou falha em segurança, manter referência/rejeitar sem fingir instalação. Nunca encerrar como finalizada uma avaliação com melhoria adotada ainda só em recomendações. Publicar e reler os arquivos, preservando mudanças concorrentes.
