@@ -136,3 +136,16 @@ Metodologia adaptada, sem copiar código ou depender de runtimes terceiros:
 - https://github.com/EnchStyle/ui-ux-audit-skill — cobertura responsiva orientada a medições; não assumir Playwright disponível.
 - https://github.com/scottkw/ui-audit-skill — ciclo diagnóstico/correção/reauditoria e evidências duráveis.
 - https://github.com/meshcode-ai/skills-design — critérios de hierarquia, tokens e consistência visual, sem importar pontuação A–F como padrão.
+
+## Gate de decisões genéricas de IA em UI
+
+Ao auditar interfaces geradas com IA, evitar inferir a ferramenta criadora pela aparência. Um efeito (gradiente, glass, serif, cards, dark mode) **não é** problema por si só: examinar se a decisão é coerente com o produto, repetida sem propósito, incompatível com o sistema local ou prejudica tarefa, hierarquia ou acessibilidade.
+
+1. Inspecionar evidência real: captura, layout e código quando disponíveis.
+2. Descrever defeitos observáveis separadamente de preferências subjetivas de direção artística.
+3. Aplicar teste de remoção: retirar/simplificar um elemento melhora leitura, função ou identidade sem perder informação importante?
+4. Priorizar a menor correção com impacto mensurável; preservar deliberadamente identidade, tipos, cor e ritmo estabelecidos.
+5. Não dar nota numérica de "AI slop" sem critérios verificáveis, nem redesenhar tudo quando foi pedida apenas auditoria.
+6. Para revisão do runtime, inspecionar navegação, estados e acessibilidade; screenshot isolada não prova comportamento.
+
+Proveniência metodológica: `MengTo/Skills`, `agent-skills/ui/audit-ai-design-slop` e `no-ai-design-slop` (2026-10-15), absorvidos como gate adicional, não skill separada.
