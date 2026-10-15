@@ -280,4 +280,4 @@ Data: 2026-10-15. Fonte: browser-act/skills branch main, 20 SKILL.md lidos indiv
 - Deep crawl: metodologia para `research-and-synthesize`; preservar controles de escopo, provenance e limites.
 - Pesquisa de vagas e reputação: métodos parciais para síntese baseada em fontes; dependência de plataformas muda com tempo.
 
-**Resultado do lote 6:** 20 avaliações individuais registradas, 9 `ABSORB_METHOD_ONLY` e 11 `KEEP_EXTERNAL_REFERENCE`; 0 scripts importados, 0 novas skills, 0 owners modificados. Metodologias absorvidas **apenas neste registro de avaliação**, não implementadas em outros SKILL.md. Total aprofundado BrowserAct: **60/103**, faltam **43**. Próximo checkpoint: itens 61–80.
+**Resultado do lote 6:** 20 avaliações individuais registradas, 10 `ABSORB_METHOD_ONLY` e 10 `KEEP_EXTERNAL_REFERENCE`; 0 scripts importados, 0 novas skills, 0 owners modificados. Metodologias absorvidas **apenas neste registro de avaliação**, não implementadas em outros SKILL.md. Total aprofundado BrowserAct: **60/103**, faltam **43**. Próximo checkpoint: itens 61–80.
