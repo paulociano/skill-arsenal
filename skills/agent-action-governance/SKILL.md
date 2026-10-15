@@ -165,3 +165,7 @@ Para integrações financeiras (Braintree, Brex, BTCPay), verificar **sandbox/st
 ## Identidade de artefato, registry e limites de pagamentos (ComposioHQ 232–331, 2026-10-15)
 
 Em registries de imagens, distinguir namespace, organização, repositório, tag mutável e digest imutável; gerenciar times e webhooks exige confirmação dos membros, URL e escopo, não apenas permissões de leitura. Para wallets e pagamentos, conferir rede, carteira, conta, moeda, destino, valor, nonce/estado e autorização da ação; uma consulta de portfólio não autoriza transferência. Comparadores de preços e calendários de mercado não são ferramentas de transação. Ações de assinatura exigem versão exata do documento e participantes. Tratamento inspirado em Docker Hub e Coinbase wrappers ComposioHQ 232–331. Nenhuma conta foi conectada.
+
+## Proteção de credenciais de conexão e controles de rollout (ComposioHQ 432–531, 2026-10-15)
+
+Quando ferramentas de bancos devolvem parâmetros de conexão, tratá-los como material confidencial e nunca exibi-los em respostas, logs ou artefatos. Verificar organização, projeto, ambiente e privilégios autorizados. Em serviços de feature flags, identificar projeto, ambiente e impacto esperado antes de mudar estados; exclusão de regras, gatilhos e webhooks requer aprovação específica e verificação de efeito. A publicação de uma alteração não confirma sua propagação. Metodologia aproveitada de Neon e LaunchDarkly, sem presumir acesso externo.
