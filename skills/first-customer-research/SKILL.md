@@ -74,3 +74,8 @@ Metodologia inspirada em `Kappaemme-git/codex-first-customer-finder-skill`, remo
 Quando a pesquisa envolver estabelecimentos, marketplaces ou perfis empresariais, executar o percurso: **identidade da empresa → site oficial → sinal atual de dor/fit → canal empresarial publicamente indicado → verificação cruzada**. Para cada candidato, registrar nome, região, domínio, fonte, data do sinal, verificação, confiança da identidade e possíveis homônimos. Mapas, buscadores, páginas sociais e diretórios servem para descoberta, não validação final isolada. Não inferir email pessoal, extrair contatos privados, vincular perfis homônimos sem evidência ou automatizar outreach. Contribuição pública no GitHub não significa consentimento comercial.
 
 Origens adaptadas: BrowserAct google-maps-contact-extract, business-contact-social-links-skill, industry-key-contact-radar-api-skill, github-project-contributor-finder-api-skill, youtube-channel-business-email.
+
+
+## Qualificação explicável e estratégia de contato (ComposioHQ, 2026-10-15)
+
+Para listas de leads, definir ICP e desqualificadores antes da busca. Para cada empresa, distinguir evidência de fit (setor, tamanho, stack verificada), dor atual, timing (contratação, expansão, mudança), capacidade potencial de compra quando observável e contato empresarial explicitamente público. Pontuação 1–10, quando pedida, é priorização heurística com justificativa e confiança, nunca probabilidade de compra. Separar sinais corroborados de inferências; não preencher quotas com falsos positivos. Entregar uma hipótese de abordagem personalizada que reflita problema observável e sem envio automático. Adaptada de ComposioHQ/awesome-claude-skills/lead-research-assistant, sem diretório local obrigatório ou data brokers.
