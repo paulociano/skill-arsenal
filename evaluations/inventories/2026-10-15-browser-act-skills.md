@@ -335,3 +335,42 @@ Este registro descreve implementação em instruções operacionais do Arsenal, 
 A incorporação consiste em comportamento de pesquisa e análise nos owners existentes, **não** em habilitação técnica de scrapers, contas ou endpoints privados. Nenhuma skill redundante criada. Proteção de dados, condições de plataforma, acesso legítimo e veracidade da representação são requisitos.
 
 **Checkpoint:** 80/103 itens de BrowserAct avaliados individualmente, 23 pendentes (itens 81–103). Próximo lote: 81–100, seguido dos últimos três.
+
+
+## Avaliação individual e implementação, lote 8 (itens 81–100), 2026-10-15
+
+Revisão estática de cada um dos 20 arquivos originais de browser-act/skills (social-listening e video-platforms). Verificados propósitos, pré-requisitos, entradas/saídas, ferramentas, paginação e limites declarados; não executados scraping, automação de publicações, scripts, API proprietária ou login. As classes A/B/D combinadas indicam mérito do método com dependência externa técnica.
+
+| # | Skill | Classe | Decisão | Justificativa e limites |
+|---:|---|---|---|---|
+| 81 | [x-tweet-search-by-query](https://github.com/browser-act/skills/blob/main/solutions/social-listening/x-tweet-search-by-query/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Consulta avançada no X com paginação e contexto de query; registrar condições e parcialidade. |
+| 82 | [x-tweet-search](https://github.com/browser-act/skills/blob/main/solutions/social-listening/x-tweet-search/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Busca X por URL, handle ou termo, reconhecendo duplicação, proveniência e modos. |
+| 83 | [xiaohongshu-auto-posting](https://github.com/browser-act/skills/blob/main/solutions/social-listening/xiaohongshu-auto-posting/SKILL.md) | A/D | IMPLEMENTED_IN_EXISTING | Aproveitar workflow editorial e QA, nunca replicar postagem automática em conta sem autorização, mídia e integração. |
+| 84 | [xiaohongshu-note-detail](https://github.com/browser-act/skills/blob/main/solutions/social-listening/xiaohongshu-note-detail/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Notas Xiaohongshu com comentários e metadados; contexto cultural, data e engajamento observável. |
+| 85 | [xiaohongshu-search-full](https://github.com/browser-act/skills/blob/main/solutions/social-listening/xiaohongshu-search-full/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Pesquisa profunda XHS por termo e campos; filtros e resultados não formam censo e exigem login. |
+| 86 | [xiaohongshu-search](https://github.com/browser-act/skills/blob/main/solutions/social-listening/xiaohongshu-search/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Versão simples redundante de busca Xiaohongshu; DOM/auth externos e ganho já coberto pela variante completa. |
+| 87 | [xiaohongshu-user-profile](https://github.com/browser-act/skills/blob/main/solutions/social-listening/xiaohongshu-user-profile/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Scraper de perfil XHS e feed, risco de identidade e coleta de pessoas; nenhuma capacidade nova. |
+| 88 | [zhihu-search-api-skill](https://github.com/browser-act/skills/blob/main/solutions/social-listening/zhihu-search-api-skill/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Busca Zhihu por BrowserAct API e chave; contexto idioma/data útil mas runtime externo. |
+| 89 | [douyin-video-search](https://github.com/browser-act/skills/blob/main/solutions/video-platforms/douyin-video-search/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Busca de vídeos Douyin por tema e metadados; viés de ranking e autenticidade dos sinais. |
+| 90 | [tiktok-hashtag-videos](https://github.com/browser-act/skills/blob/main/solutions/video-platforms/tiktok-hashtag-videos/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | TikTok por hashtag, paginado; separar tendência algorítmica de relevância do público. |
+| 91 | [tiktok-profile-videos](https://github.com/browser-act/skills/blob/main/solutions/video-platforms/tiktok-profile-videos/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Vídeos de perfil TikTok em janela comparável, com métricas condicionadas à disponibilidade. |
+| 92 | [tiktok-search-videos](https://github.com/browser-act/skills/blob/main/solutions/video-platforms/tiktok-search-videos/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Pesquisa de vídeos TikTok por palavras; dados de plataforma sujeitos a localização e personalização. |
+| 93 | [tiktok-video-detail](https://github.com/browser-act/skills/blob/main/solutions/video-platforms/tiktok-video-detail/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Detalhe de vídeo: hashtags, áudio, engajamento e mídia; não inferir conversão, checar direitos. |
+| 94 | [youtube-api-skill](https://github.com/browser-act/skills/blob/main/solutions/video-platforms/youtube-api-skill/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | API proprietária para busca de vídeos/métricas, chave e scripts; métodos gerais de benchmark já absorvidos. |
+| 95 | [youtube-batch-transcript-extractor-api-skill](https://github.com/browser-act/skills/blob/main/solutions/video-platforms/youtube-batch-transcript-extractor-api-skill/SKILL.md) | A/D | IMPLEMENTED_IN_EXISTING | Transcrições múltiplas: deduplicar por video_id, registrar idiomas, fontes e lacunas; depende de API se executado literalmente. |
+| 96 | [youtube-channel-api-skill](https://github.com/browser-act/skills/blob/main/solutions/video-platforms/youtube-channel-api-skill/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Dados de canal YouTube via API proprietária; métricas de inscritos não significam impacto comercial. |
+| 97 | [youtube-comments-api-skill](https://github.com/browser-act/skills/blob/main/solutions/video-platforms/youtube-comments-api-skill/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Comentários YouTube como sinais de audiência; contexto, vieses, privacidade e inconsistência de paginação. |
+| 98 | [youtube-influencer-finder-api-skill](https://github.com/browser-act/skills/blob/main/solutions/video-platforms/youtube-influencer-finder-api-skill/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Busca de influencers YouTube pela API externa; qualificação requer verificação, consentimento e cuidado com contatos. |
+| 99 | [youtube-search-api-skill](https://github.com/browser-act/skills/blob/main/solutions/video-platforms/youtube-search-api-skill/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Busca YouTube pela API BrowserAct redundante de pesquisa disponível, sem portabilidade de scripts. |
+| 100 | [youtube-transcript-analysis-api-skill](https://github.com/browser-act/skills/blob/main/solutions/video-platforms/youtube-transcript-analysis-api-skill/SKILL.md) | A/D | IMPLEMENTED_IN_EXISTING | Análise estruturada de transcrições e posicionamento; matriz de claims com timestamp e validação independente. |
+
+### Melhorias concretamente publicadas no mesmo lote
+
+- `skills/niche-research/SKILL.md`: protocolo de pesquisa de vídeo e discussão social (commit `5c95d657c340fadf12e7e76046c1022cb5653125`).
+- `stacks/social-growth-engine/STACK.md`: fluxo multiplataforma com QA e autorização de publicação (commit `a57cfb9f0aea1ebdea57c4e9d4d4712d97770653`).
+- `skills/signal-intelligence-digest/SKILL.md`: radar de vídeo/tópico com proveniência, idioma e região (commit `f79227db8deddff6bd74bb65f44992584c1102df`).
+- `stacks/research-and-synthesize/STACK.md`: matriz de evidências de transcrições por vídeo, claim e timecode (commit `9a1ffc0898a1af6bec0a47e9c32e45e19f290aa4`).
+
+O status IMPLEMENTED_IN_EXISTING refere-se à adoção de **metodologia operacional** nos arquivos acima, não à execução comprovada das integrações externas. Novas skills: 0, porque owners canônicos já cobrem os métodos úteis. Os casos não portáveis permanecem referências com dependências e riscos declarados.
+
+**Checkpoint:** 100/103 avaliações individuais BrowserAct concluídas; **3 restantes** (itens 101–103).
