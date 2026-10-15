@@ -112,3 +112,8 @@ Proveniência complementar: https://github.com/AgriciDaniel/claude-seo (seo-geo)
 Para pesquisar SERPs, separar resultados **orgânicos, patrocinados, perguntas relacionadas, recursos especiais e respostas geradas por IA**, preservando consulta exata, país/local, idioma, dispositivo se observável, data, URL, posição visível e limitações da amostra. Resultados patrocinados não são ranking orgânico; total aproximado de resultados não é tamanho real de mercado. AI Overviews devem ter claims checadas em fontes primárias e não representar autoridade independente. Gerar oportunidades de SEO por intenção, relevância, lacuna factual e diferenciação comprovável, sem inventar volume ou dificuldade de keyword.
 
 Proveniência: BrowserAct google-search-serp e amazon-search-listing (separação orgânico/patrocinado). Não requer o CLI externo.
+
+
+## SEO técnico via fontes Ahrefs ou equivalentes (ComposioHQ, 2026-10-15)
+
+Quando ferramentas de SEO estiverem conectadas e autorizadas, coletar backlinks, keywords, histórico, posições e métricas com origem, janela, país e definição do provedor. Descobrir capacidades e schema do conector realmente disponível antes de consultar; nunca presumir Rube MCP, Ahrefs ou credenciais ativas. Ausência de integração significa métricas não disponíveis, não zero. Separar observação de índice proprietário de efeito causal ou sucesso de aquisição; priorizar correções técnicas e hipóteses verificáveis. Método inspirado em ComposioHQ/awesome-claude-skills/composio-skills/ahrefs-automation.
