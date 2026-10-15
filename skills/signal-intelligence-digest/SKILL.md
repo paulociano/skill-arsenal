@@ -50,3 +50,10 @@ Quando o usuário pedir monitoramento contínuo de novidades de IA, concorrentes
 
 ## Proveniência
 Adaptada de https://github.com/coleam00/skills/tree/main/.claude/skills/build-signal-engine (consulta de 2026-10-15). Preserva entrevista orientada à ação, ingestão progressiva, filtros em código, decisão em dois níveis, casos rotulados e semana de validação. Não assume AskUserQuestion/Claude Code, OpenRouter/Jev, cron, SQLite nem APIs externas instaladas.
+
+
+## Evidência de lançamentos e anúncios (BrowserAct, 2026-10-15)
+
+Em radares de Product Hunt, bibliotecas públicas de anúncios e notícias, registrar origem, URL, data do evento, data da coleta, entidade, novidade verificável e consequência para a decisão. Votos, reações e existência de anúncio não demonstram receita, conversão ou retorno financeiro. Deduplicar por identificador canônico e distinguir amostra observada de cobertura completa. Quando acesso ou ferramenta não estiver disponível, declarar a lacuna sem substituir por estimativas inventadas.
+
+Proveniência: browser-act/skills, producthunt-launches, facebook-ads-library-search, google-news-api-skill e webcrawler-deep-crawl. Trata-se de método, sem dependência de scripts ou credenciais BrowserAct.
