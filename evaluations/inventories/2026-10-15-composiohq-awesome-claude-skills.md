@@ -1892,3 +1892,56 @@ Foram abertos os 100 SKILL.md da branch master de ComposioHQ/awesome-claude-skil
 **Melhorias publicadas:** `skills/ai-workflow-automation-engineering/SKILL.md` (ciclo de arquivos, webhooks, RH e status de aprovação; commit `e6fe61fa49acf5fc2fa87f673c74d57f916b3fe1`), `skills/agent-action-governance/SKILL.md` (confirmação de tenant, registros contábeis e autorização; commit `87974165fce6cacecd4cd797d34320003c20777c`). Toggl já estava coberto no fluxo anterior e não motivou outra skill.
 
 **Checkpoint:** 835/864 avaliações individuais concluídas, 29 pendentes. Lote final previsto: itens 832–864.
+
+
+## Lote 15: fechamento das 29 entradas pendentes, itens 832–864 (2026-10-15)
+
+Os 33 SKILL.md originais numerados de 832 a 864 foram abertos e revisados. Destes, quatro (840, 852, 854, 856) já haviam sido avaliados nas cinco análises iniciais e são **reconciliações**, não novas avaliações. Os outros 29 são a conclusão do backlog de 835 para 864. Entre os 29, seis são wrappers dependentes de Rube MCP (832–837); as demais fontes são metodologias ou técnicas, com restrições de runtime. Não confundir método Claude-specific com capacidade nativa do ChatGPT.
+
+| # | SKILL.md | Classe | Decisão | Parecer individual |
+|---:|---|---|---|---|
+| 832 | [zoho_inventory-automation](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/zoho_inventory-automation/SKILL.md) | D | KEEP_EXISTING_OR_EXTERNAL | Zoho Inventory: organizações, estoques, remessas e movimentações dependem de conta e IDs; não instalar gateway. |
+| 833 | [zoho_invoice-automation](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/zoho_invoice-automation/SKILL.md) | D | KEEP_EXISTING_OR_EXTERNAL | Zoho Invoice: faturas, despesas e clientes exigem organização e autorização; método financeiro já coberto. |
+| 834 | [zoho_mail-automation](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/zoho_mail-automation/SKILL.md) | D | KEEP_EXISTING_OR_EXTERNAL | Zoho Mail: envios e pastas exigem mailbox, destinatário e confirmação; sem conexão. |
+| 835 | [zoominfo-automation](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/zoominfo-automation/SKILL.md) | D | KEEP_EXISTING_OR_EXTERNAL | ZoomInfo: enriquecimento de contatos pede proveniência, correspondência e privacidade. |
+| 836 | [zylvie-automation](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/zylvie-automation/SKILL.md) | D | KEEP_EXISTING_OR_EXTERNAL | Zylvie: serviço de comércio exige revisão de preço, produto e efeitos externos. |
+| 837 | [zyte-api-automation](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/zyte-api-automation/SKILL.md) | D | KEEP_EXISTING_OR_EXTERNAL | Zyte API: coleta web depende de acesso autorizado, limites de crédito e qualidade de extração. |
+| 838 | [connect-apps](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/connect-apps/SKILL.md) | B/D | KEEP_EXISTING_OR_EXTERNAL | Conectar apps: onboarding Claude/Rube não substitui plugins e conexões efetivas do ChatGPT. |
+| 839 | [connect](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/connect/SKILL.md) | D | KEEP_EXISTING_OR_EXTERNAL | Connect: fluxo de autenticação/ações do runtime Claude é específico; preservar apenas gates já cobertos. |
+| 840 | [content-research-writer](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/content-research-writer/SKILL.md) | B | ALREADY_EVALUATED_INITIAL | Metodologia de pesquisa e escrita previamente avaliada no lote inicial; não duplicar. |
+| 841 | [developer-growth-analysis](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/developer-growth-analysis/SKILL.md) | B/D | KEEP_EXISTING_OR_EXTERNAL | Análise de histórico Claude Code requer dados específicos do produto; metodologia de retrospectiva já existente. |
+| 842 | [docx](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/document-skills/docx/SKILL.md) | D | KEEP_EXISTING_OR_EXTERNAL | DOCX: procedimentos técnicos de Claude/Office; usar ferramentas de documentos realmente disponíveis. |
+| 843 | [pdf](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/document-skills/pdf/SKILL.md) | D | KEEP_EXISTING_OR_EXTERNAL | PDF: scripts e ferramentas dependem de ambiente; priorizar recursos PDF existentes. |
+| 844 | [pptx](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/document-skills/pptx/SKILL.md) | D | KEEP_EXISTING_OR_EXTERNAL | PPTX: geração e edição dependem de pipeline próprio; preservar validação visual, já coberta. |
+| 845 | [xlsx](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/document-skills/xlsx/SKILL.md) | D | KEEP_EXISTING_OR_EXTERNAL | XLSX: modelos, fórmulas e formatação dependem de runtime; já existem orientações nativas. |
+| 846 | [domain-name-brainstormer](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/domain-name-brainstormer/SKILL.md) | B | KEEP_EXISTING_OR_EXTERNAL | Ideias de domínio são úteis; disponibilidade exige consulta real e não promessa. |
+| 847 | [file-organizer](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/file-organizer/SKILL.md) | B | IMPLEMENTED_IN_EXISTING | Organização de arquivos: hash, conflito, plano reversível e aprovação; incorporado à stack. |
+| 848 | [image-enhancer](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/image-enhancer/SKILL.md) | D | KEEP_EXISTING_OR_EXTERNAL | Aprimoramento de imagens exige modelo ou editor, sem garantia de preservação de informação. |
+| 849 | [internal-comms](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/internal-comms/SKILL.md) | B | KEEP_EXISTING_OR_EXTERNAL | Comunicados internos: metodologia de clareza já aplicável; sem skill específica nova. |
+| 850 | [invoice-organizer](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/invoice-organizer/SKILL.md) | B | IMPLEMENTED_IN_EXISTING | Notas fiscais: extração, classificação e revisão humana reversível; incorporado à stack. |
+| 851 | [langsmith-fetch](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/langsmith-fetch/SKILL.md) | D | KEEP_EXISTING_OR_EXTERNAL | LangSmith Fetch: rastreamento depende de acesso LangSmith e ferramentas de logs reais. |
+| 852 | [lead-research-assistant](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/lead-research-assistant/SKILL.md) | B | ALREADY_EVALUATED_INITIAL | Pesquisa de leads previamente avaliada no lote inicial e implementada em owner próprio. |
+| 853 | [mcp-builder](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/mcp-builder/SKILL.md) | D | KEEP_EXISTING_OR_EXTERNAL | MCP Builder: engenharia técnica de servidor exige SDK, runtime e testes; não declarar plugin criado. |
+| 854 | [meeting-insights-analyzer](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/meeting-insights-analyzer/SKILL.md) | B | ALREADY_EVALUATED_INITIAL | Meeting Insights já avaliado inicialmente e implementado em meeting-knowledge-capture. |
+| 855 | [raffle-winner-picker](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/raffle-winner-picker/SKILL.md) | B | KEEP_EXISTING_OR_EXTERNAL | Sorteio: garantir lista elegível, método aleatório verificável e regras locais; prompt isolado. |
+| 856 | [skill-creator](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/skill-creator/SKILL.md) | B | ALREADY_EVALUATED_INITIAL | Skill Creator já avaliado inicialmente; método de revisão/adoção já presente. |
+| 857 | [skill-share](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/skill-share/SKILL.md) | D | KEEP_EXISTING_OR_EXTERNAL | Skill Share depende de Slack/Rube; publicação de skill deve usar fonte oficial GitHub. |
+| 858 | [slack-gif-creator](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/slack-gif-creator/SKILL.md) | D | KEEP_EXISTING_OR_EXTERNAL | GIF para Slack: validadores e scripts específicos; valor depende de ferramenta de renderização. |
+| 859 | [tailored-resume-generator](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/tailored-resume-generator/SKILL.md) | B | KEEP_EXISTING_OR_EXTERNAL | Currículo por vaga: evidências reais, não inventar qualificações; método aplicável sem owner novo. |
+| 860 | [template-skill](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/template-skill/SKILL.md) | C | KEEP_EXISTING_OR_EXTERNAL | Template inicial genérico de 140 caracteres, insuficiente para skill utilizável. |
+| 861 | [theme-factory](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/theme-factory/SKILL.md) | B | KEEP_EXISTING_OR_EXTERNAL | Temas de apresentação: adaptar à identidade aprovada, render/QA e stack visual existente. |
+| 862 | [twitter-algorithm-optimizer](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/twitter-algorithm-optimizer/SKILL.md) | B/D | KEEP_EXISTING_OR_EXTERNAL | Otimização X/Twitter depende de algoritmo mutável; não afirmar alcance garantido. |
+| 863 | [video-downloader](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/video-downloader/SKILL.md) | D | KEEP_EXISTING_OR_EXTERNAL | Download de vídeos pede fonte autorizada, licença e ferramenta existente; não presumir executável. |
+| 864 | [webapp-testing](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/webapp-testing/SKILL.md) | D | KEEP_EXISTING_OR_EXTERNAL | Testes de webapp com Playwright requerem browser/servidor; recon/QA já cobertos. |
+
+**Implementação do fechamento:** `stacks/ai-workspace-operating-cycle/STACK.md` recebeu gates de inventário, comparação por hash, movimentação reversível, confirmação e extração prudente de comprovantes, commit `3bcadaf48ec3f9cd15ccfb12d4ea601557eb4f75`. Os quatro itens já avaliados preservam os owners e commits documentados nas avaliações iniciais.
+
+### Auditoria final do inventário
+
+- **864/864 posições-base conciliadas:** 830 avaliações detalhadas já registradas nos lotes 2–14, cinco avaliações iniciais (incluindo item 5) e 29 novas do lote 15. Quatro dos 33 itens finais foram reconciliados com o grupo inicial, evitando contagem dupla.
+- **Qualidade estrutural:** índices-base consecutivos de 1 a 864, sem numeração ausente; os 830 registros anteriores de lote possuíam IDs únicos; 33 registros finais foram documentados nesta seção, incluindo quatro de referência.
+- **Duplicações por grafia:** 26 agrupamentos com nome equivalente após normalizar sublinhado em hífen na lista-base; exigem cautela com identidade real de toolkit antes de fundir qualquer implementação. São aliases aparentes, não prova de 26 duplicatas de conteúdo.
+- **Autoridade:** GitHub canônico do Arsenal foi usado para índice, owners, commits e inventário; Drive/Notion não utilizados. Sem fingir ativação de MCP, imports, scripts Claude ou acessos externos.
+- **Escopo da auditoria:** completude do catálogo documentado nesta data e dos registros de avaliação, não prova de atualização permanente do repositório terceiro nem testes de execução dos 864 arquivos.
+
+**Checkpoint final: 864/864 avaliadas ou conciliadas, zero posições-base pendentes neste inventário.**
