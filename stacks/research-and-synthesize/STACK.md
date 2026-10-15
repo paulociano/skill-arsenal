@@ -51,3 +51,8 @@ Proveniência metodológica: BrowserAct webcrawler-deep-crawl, ecommerce-listing
 ## Pesquisa audiovisual e transcrições em lote (BrowserAct 81–100, 2026-10-15)
 
 Em vídeos fornecidos ou encontrados, registrar video_id/URL, canal, título, data e idioma, verificar disponibilidade de transcript/caption e atribuir cada alegação ao material e tempo de fala quando possível. Em lotes, deduplicar por vídeo, separar transcript bruto, extração de afirmações, síntese temática e checagem independente; não tratar fala do apresentador ou comentários como prova externa. Registrar vídeos sem legenda, erros automáticos, recortes e quotas não verificadas. Entregar matriz vídeo → claim → trecho/timecode → evidência adicional → confiança. Não usar scripts proprietários BrowserAct sem conector realmente disponível. Proveniência: BrowserAct youtube-batch-transcript-extractor-api-skill, youtube-comments-api-skill, youtube-transcript-analysis-api-skill.
+
+
+## Checagem de idioma e cobertura de transcrição (BrowserAct 101–103, 2026-10-15)
+
+Ao receber URL de vídeo, verificar se há legenda/transcrição acessível, idioma e origem (manual versus automática). Preservar trechos segmentados com timestamps e preferir resumo/chapters no formato solicitado; não produzir por padrão transcrição integral, blog, thread e citações ao mesmo tempo. Para texto longo, separar por blocos temporais, resumir sem duplicar sobreposições e validar se início/meio/fim estão representados. Marcar lacunas e distinguir ausência de legenda de falha de acesso. Não atribuir falas ou times falsos nem reproduzir texto protegido extensamente. Metodologia adaptada de browser-act/skills youtube-transcript, sem instalar browser-act ou executar scripts externos.
