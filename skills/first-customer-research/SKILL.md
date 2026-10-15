@@ -68,3 +68,9 @@ Use `niche-research` para pesquisa temática, `customer-interview` para validaç
 
 ## Origem adaptada
 Metodologia inspirada em `Kappaemme-git/codex-first-customer-finder-skill`, removendo dependência de scripts locais, workspace/state obrigatório e artefatos específicos.
+
+## Qualificação de empresas por fontes públicas (BrowserAct, 2026-10-15)
+
+Quando a pesquisa envolver estabelecimentos, marketplaces ou perfis empresariais, executar o percurso: **identidade da empresa → site oficial → sinal atual de dor/fit → canal empresarial publicamente indicado → verificação cruzada**. Para cada candidato, registrar nome, região, domínio, fonte, data do sinal, verificação, confiança da identidade e possíveis homônimos. Mapas, buscadores, páginas sociais e diretórios servem para descoberta, não validação final isolada. Não inferir email pessoal, extrair contatos privados, vincular perfis homônimos sem evidência ou automatizar outreach. Contribuição pública no GitHub não significa consentimento comercial.
+
+Origens adaptadas: BrowserAct google-maps-contact-extract, business-contact-social-links-skill, industry-key-contact-radar-api-skill, github-project-contributor-finder-api-skill, youtube-channel-business-email.
