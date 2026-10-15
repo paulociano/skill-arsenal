@@ -78,3 +78,7 @@ Workflow original do Arsenal, enriquecido com princípios de content operations 
 ## Gate de publicação por canal e versão (ComposioHQ 182–231, 2026-10-15)
 
 Em conteúdo mantido em CMS, separar aprovação editorial, gravação da revisão e publicação real. Conferir asset, locale, data, permissões, identidade do espaço e versão para evitar sobrescrever alterações de colaboradores. Em campanhas por segmento, revisar audiência autorizada, consentimento, exclusões, frequência, mensagem e confirmação do provedor; um comando aceito não equivale a entrega. Para transcrição e localização, registrar língua de origem, versão e revisão humana antes de substituir texto publicado. Fonte metodológica: Contentful, Customer.io, Crowdin e Deepgram via catálogo ComposioHQ, sem assumir esses conectores ativos.
+
+## Referências e localização em CMS (ComposioHQ 532–631)
+
+Para conteúdo Prismic ou CMS equivalentes, identificar ref/revisão e idioma antes de consultar, editar ou publicar. Diferenciar referência de conteúdo, ref de integração e versão publicada; usar cursor quando paginação profunda por índice não cobre tudo. Em envio de campanhas, identificar unicamente audiência, IDs de eventos, opt-in e estado efetivo de entrega. Métodos de Prismic e Omnisend, sem pressupor seus conectores.
