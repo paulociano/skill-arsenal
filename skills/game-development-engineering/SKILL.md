@@ -152,3 +152,16 @@ Preferir uma pirâmide adaptada a jogos:
 ## Provenance
 
 Consolidada de padrões recorrentes em Unity Technologies samples, Godot demo projects, Bevy, Fyrox, Stride, Flax e Defold. Preserva vertical slices, version grounding, separação de clocks, scene/component/ECS trade-offs e runtime validation sem assumir uma engine específica.
+
+## Contratos de conteúdo jogável e integridade transacional
+
+Para jogos orientados a dados e inventários, incluindo Three.js:
+
+1. Definir item, inimigo, nível, encontro e ação de combate como **conteúdo versionado** separado do estado de execução. IDs estáveis, transições explícitas e migração de saves evitam duplicações e referências órfãs.
+2. Tratar transferência, equipar, dividir pilha, coletar e descartar inventário como **transações atômicas**: checar origem, capacidade, compatibilidade e persistência antes de aplicar; sob erro, nenhuma cópia ou perda silenciosa.
+3. Fazer movesets declararem startup, active window, recovery, interruptibilidade, hitbox/contact, cooldown, custo e telegraph. A animação apresenta o resultado; a simulação determina acertos.
+4. Para inimigos, manter percepção, decisão, movimento, combate e render separados. Fixtures reproduzíveis devem cobrir aggro, leash, interrupção, rota bloqueada e retorno.
+5. Para editores de fase, separar rascunho reversível de dado publicado, com schema versionado, import/export validado, undo e proteção de rotas de edição. Nunca deixar uma edição visual mutar a sessão de produção implicitamente.
+6. Demonstrar o caminho do jogador com evidência runtime quando disponível: entrar, agir, receber feedback, ganhar recompensa, modificar inventário, salvar e continuar. Uma compilação verde não substitui o percurso jogável.
+
+**Proveniência:** metodologias de `MengTo/Skills` (`build-game-inventory`, `build-threejs-enemy-systems`, `design-action-combat`, `build-game-map-editor`, `test-playable-web-games`), avaliadas em 2026-10-15. Não presume Three.js, navegador, sessões de teste ou ferramentas instaladas.
