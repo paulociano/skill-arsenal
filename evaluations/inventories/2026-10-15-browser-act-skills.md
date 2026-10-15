@@ -297,3 +297,41 @@ As melhorias metodológicas adotadas foram publicadas nos seguintes owners canô
 - `stacks/arsenal-autopilot/STACK.md` e `stacks/evaluate-and-import-skill/STACK.md`: avaliação deve publicar e verificar toda melhoria aprovada.
 
 Este registro descreve implementação em instruções operacionais do Arsenal, não integração ou execução de scripts externos. Capacidades duplicadas ou não portáveis não geraram novas skills. O inventário 61–80 ainda está em avaliação e não está finalizado.
+
+
+## Avaliação individual e implementação, lote 7 (itens 61–80), 2026-10-15
+
+20 arquivos SKILL.md lidos diretamente de browser-act/skills, soluções de social-listening, em 2026-10-15. Revisão de objetivo, dependências, entradas/saídas, paginação e riscos no documento; não houve execução nem auditoria de scripts ou conectores BrowserAct. Tratar alegações de funcionamento como não testadas.
+
+| # | Skill | Classe | Decisão | Evidência, limitação e motivo |
+|---:|---|---|---|---|
+| 61 | [facebook-page-posts](https://github.com/browser-act/skills/blob/main/solutions/social-listening/facebook-page-posts/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Série de conteúdo público institucional e engajamento; preservar janela e contexto, não confundir reação com alcance. |
+| 62 | [facebook-page-profile-posts](https://github.com/browser-act/skills/blob/main/solutions/social-listening/facebook-page-profile-posts/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Inclui perfis pessoais e dados ricos, login e GraphQL; riscos de privacidade, identidade e coleta excessiva. |
+| 63 | [instagram-hashtag-posts](https://github.com/browser-act/skills/blob/main/solutions/social-listening/instagram-hashtag-posts/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Hashtags como amostra ranqueada, não universo de conversa; classificar autoria, data e assunto. |
+| 64 | [instagram-place-posts](https://github.com/browser-act/skills/blob/main/solutions/social-listening/instagram-place-posts/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Posts por local com geotag; lugar publicado não demonstra residência e exige minimização de dados. |
+| 65 | [instagram-post-comments](https://github.com/browser-act/skills/blob/main/solutions/social-listening/instagram-post-comments/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Comentário, reply count e contexto original podem informar objeções; preservar threads e vieses de visibilidade. |
+| 66 | [instagram-profile-meta](https://github.com/browser-act/skills/blob/main/solutions/social-listening/instagram-profile-meta/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Biografia e contagem de seguidores são sinais superficiais; scraper de perfil não agrega owner novo, checar homônimos. |
+| 67 | [instagram-profile-posts](https://github.com/browser-act/skills/blob/main/solutions/social-listening/instagram-profile-posts/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Calendário de publicações e sinais de engajamento para benchmarking, com comparabilidade temporal e amostral. |
+| 68 | [reddit-competitor-analysis-api-skill](https://github.com/browser-act/skills/blob/main/solutions/social-listening/reddit-competitor-analysis-api-skill/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Pesquisa de menções e comentários Reddit, dependente de API BrowserAct; apenas análise ética, não dados brutos invasivos. |
+| 69 | [reddit-warmup](https://github.com/browser-act/skills/blob/main/solutions/social-listening/reddit-warmup/SKILL.md) | C/D | REJECT_AUTOMATION | Workflow de contas/karma e promoção encoberta não é modelo aceitável de participação autêntica. Apenas guardrails incorporados. |
+| 70 | [threads-keyword-search](https://github.com/browser-act/skills/blob/main/solutions/social-listening/threads-keyword-search/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Busca por termo/hashtag Threads com SSR e cobertura parcial; registrar query, janela e ranking. |
+| 71 | [threads-profile-search](https://github.com/browser-act/skills/blob/main/solutions/social-listening/threads-profile-search/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Descoberta de perfis Threads e métricas de seguidores exige validação de identidade, não justifica importação. |
+| 72 | [threads-user-posts](https://github.com/browser-act/skills/blob/main/solutions/social-listening/threads-user-posts/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Posts de Threads por perfil: preservar URL canônica, data e contexto, sem alegar exaustividade. |
+| 73 | [trustpilot-company-info](https://github.com/browser-act/skills/blob/main/solutions/social-listening/trustpilot-company-info/SKILL.md) | B/D | ALREADY_IMPLEMENTED | Duplicata transversal do item 51, previamente absorvida em pesquisa de nicho; não contar owner adicional. |
+| 74 | [trustpilot-reviews](https://github.com/browser-act/skills/blob/main/solutions/social-listening/trustpilot-reviews/SKILL.md) | A/D | IMPLEMENTED_IN_EXISTING | Reviews Trustpilot com filtros por nota, verificação, data/idioma e resposta; risco de viés, base pequena e falsa causalidade. |
+| 75 | [wechat-article-search-api-skill](https://github.com/browser-act/skills/blob/main/solutions/social-listening/wechat-article-search-api-skill/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Busca e coleta de artigos WeChat via API proprietária; direitos autorais, recência e barreiras de acesso. |
+| 76 | [x-dm-auto-chat](https://github.com/browser-act/skills/blob/main/solutions/social-listening/x-dm-auto-chat/SKILL.md) | D | REJECT_AUTOMATION | Leitura e respostas automáticas de DMs X, desbloqueio e outreach; risco de consentimento, privacidade e spam. Somente rascunhos autorizados. |
+| 77 | [x-keyword-comment](https://github.com/browser-act/skills/blob/main/solutions/social-listening/x-keyword-comment/SKILL.md) | D | REJECT_AUTOMATION | Respostas em lote por keyword no X e persona de marca; risco de spam e representação não autêntica. |
+| 78 | [x-tweet-by-conversation](https://github.com/browser-act/skills/blob/main/solutions/social-listening/x-tweet-by-conversation/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Thread de X com replies aninhadas; preservar raiz, reply-to, faltas e incerteza do contexto. |
+| 79 | [x-tweet-by-handle](https://github.com/browser-act/skills/blob/main/solutions/social-listening/x-tweet-by-handle/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Tweets por handle e modos timeline/replies/mídia; observar janela e distinguir conteúdo original de resposta. |
+| 80 | [x-tweet-by-url](https://github.com/browser-act/skills/blob/main/solutions/social-listening/x-tweet-by-url/SKILL.md) | B/D | IMPLEMENTED_IN_EXISTING | Tweets via URL de busca/status/lista; normalizar IDs e deduplicar com procedência e escopo. |
+
+### Alterações efetivamente publicadas
+
+- [niche-research](../../skills/niche-research/SKILL.md): protocolo de amostragem, contexto, relações de conversa, evidência social e avaliação Trustpilot por filtros; commit `fc2ac5d5dba04ff9a79df6f01b307ccc3cb0d14c`.
+- [social-growth-engine](../../stacks/social-growth-engine/STACK.md): benchmark de conteúdos e gate de integridade, barrando contas aquecidas artificialmente, postagens disfarçadas e respostas/DMs em massa; commit `61c451f84b3a63289469db3aafeeff005b715041`.
+- [signal-intelligence-digest](../../skills/signal-intelligence-digest/SKILL.md): rastreamento de menções por entidade/tópico, identificadores canônicos e deduplicação; commit `dd9564b06db8d652a2d8d36ebce7cd06b92ebc0a`.
+
+A incorporação consiste em comportamento de pesquisa e análise nos owners existentes, **não** em habilitação técnica de scrapers, contas ou endpoints privados. Nenhuma skill redundante criada. Proteção de dados, condições de plataforma, acesso legítimo e veracidade da representação são requisitos.
+
+**Checkpoint:** 80/103 itens de BrowserAct avaliados individualmente, 23 pendentes (itens 81–103). Próximo lote: 81–100, seguido dos últimos três.
