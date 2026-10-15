@@ -57,3 +57,7 @@ Adaptada de https://github.com/coleam00/skills/tree/main/.claude/skills/build-si
 Em radares de Product Hunt, bibliotecas públicas de anúncios e notícias, registrar origem, URL, data do evento, data da coleta, entidade, novidade verificável e consequência para a decisão. Votos, reações e existência de anúncio não demonstram receita, conversão ou retorno financeiro. Deduplicar por identificador canônico e distinguir amostra observada de cobertura completa. Quando acesso ou ferramenta não estiver disponível, declarar a lacuna sem substituir por estimativas inventadas.
 
 Proveniência: browser-act/skills, producthunt-launches, facebook-ads-library-search, google-news-api-skill e webcrawler-deep-crawl. Trata-se de método, sem dependência de scripts ou credenciais BrowserAct.
+
+## Monitoramento social por entidade e tópico (BrowserAct, lote 61–80, 2026-10-15)
+
+Quando fontes acessíveis trouxerem menções no Reddit, Threads, Facebook, Instagram, X ou reviews da Trustpilot, guardar ID/URL canônico, termo/entidade, autor apenas se empresarial e necessário, data do post, data de coleta, tipo de evento e contexto da conversa. Deduplicar reposts e comentários derivados; distinguir variação no volume observado de mudança real na comunidade. Priorizar sinais com resposta acionável (reclamação verificável recorrente, novo lançamento, mudança de posicionamento), contrastando fontes e marcando cobertura parcial. Não contornar autenticação, usar sessões de terceiros ou interpretar restrições da plataforma como ausência de menções.
