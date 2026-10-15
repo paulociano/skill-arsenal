@@ -74,3 +74,7 @@ social-growth-engine usa esta stack na etapa de produção. Para SEO, combinar c
 ## Origem metodológica
 
 Workflow original do Arsenal, enriquecido com princípios de content operations de shalintripathi/saas-marketing-agents, adaptados sem exigir multiagentes, arquivos específicos ou infraestrutura externa.
+
+## Gate de publicação por canal e versão (ComposioHQ 182–231, 2026-10-15)
+
+Em conteúdo mantido em CMS, separar aprovação editorial, gravação da revisão e publicação real. Conferir asset, locale, data, permissões, identidade do espaço e versão para evitar sobrescrever alterações de colaboradores. Em campanhas por segmento, revisar audiência autorizada, consentimento, exclusões, frequência, mensagem e confirmação do provedor; um comando aceito não equivale a entrega. Para transcrição e localização, registrar língua de origem, versão e revisão humana antes de substituir texto publicado. Fonte metodológica: Contentful, Customer.io, Crowdin e Deepgram via catálogo ComposioHQ, sem assumir esses conectores ativos.
