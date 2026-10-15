@@ -161,3 +161,18 @@ Lidos os SKILL.md principais de e-commerce ainda pendentes, mantendo os 3 exempl
 | [walmart-keyword-search](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/walmart-keyword-search/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
 | [walmart-product-detail](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/walmart-product-detail/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração específica do marketplace; seletor e paginação frágeis |
 | [walmart-product-reviews](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/walmart-product-reviews/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Avaliações são dados não confiáveis, com identidade de autores e paginação |
+
+
+## Leitura individual adicional de 5 SKILL.md (lote 2)
+
+Fonte: browser-act/skills, branch main, 2026-10-15. Cada um dos cinco arquivos abaixo foi lido individualmente (objetivo, componentes, requisitos, sucesso e limitações). Revisão estática: scripts Python, seletoras, endpoints e execução real **não foram auditados ou testados**. Classificações abaixo são decisões documentais, não provas de funcionamento. Segurança: CAUTION.
+
+| Skill | Classe | Decisão | Fundamentação / adaptação |
+|---|---|---|---|
+| [1688-product-detail](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/1688-product-detail/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Extração de preço em tiers, variantes, imagens e métricas do fornecedor por DOM/tráfego de página; depende do browser-act, scripts locais e estrutura interna mutável de 1688. Capacidade vertical útil, sem runtime portátil comprovado. |
+| [airbnb-listing-detail](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/airbnb-listing-detail/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Consulta detalhes de imóvel via GraphQL interno e scripts; endpoint não oficial pode variar e dados de preço exigem datas. Não confundir resultado estático com disponibilidade/valor confirmado. |
+| [amazon-alexa-qa](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/amazon-alexa-qa/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Automatiza perguntas ao Rufus/Alexa de compras usando conta autenticada, DOM e shell; respostas de outro agente não são evidência factual e contexto entre perguntas pode contaminar comparação. Não importar automação de conta nem paralelismo para contornar limites. |
+| [amazon-asin-lookup-api-skill](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/amazon-asin-lookup-api-skill/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Lookup por ASIN via template API BrowserAct, Python e BROWSERACT_API_KEY; sem equivalência de runtime nativo e com possível custo/credencial. Conceito de enriquecimento por identificador pode ser incorporado a pesquisa de produto sem novo owner. |
+| [amazon-best-selling-products-finder-api-skill](https://github.com/browser-act/skills/blob/main/solutions/ecommerce/amazon-best-selling-products-finder-api-skill/SKILL.md) | D | KEEP_EXTERNAL_REFERENCE | Descoberta de produtos por keyword, mercado e limite via API proprietária e script com chave. Dados de vendas estimadas e badges precisam proveniência e recência; não criar skill redundante de busca de produtos. |
+
+**Resultado do lote 2:** cinco fontes avaliadas individualmente; zero novas skills e zero importações de scripts. Manter referência externa; reavaliar somente mediante necessidade real, conector disponível, verificação de termos, segurança e testes. Próxima triagem individual sugerida: amazon-bestseller-listing, amazon-buy-box-monitor-api-skill, amazon-competitor-analyzer, amazon-listing-competitor-analysis-skill e amazon-product-api-skill (itens 9–13).
