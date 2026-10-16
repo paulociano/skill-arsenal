@@ -125,3 +125,7 @@ Essas categorias podem coexistir no mesmo sistema. Não tratar interface OpenAI-
 Adaptada de Edge0-AI/Edge0. Preserva SSD expert offload, active-set memory budgeting, prerouter/prefetch, adapter separation, backend isolation e matched-quality benchmarking sem presumir Edge0 models, MLX, Vulkan ou hardware específico.
 
 A seleção de runtime foi refinada a partir de Ollama, llama.cpp, vLLM e Hugging Face Transformers, preservando diferenças entre convenience layer, embedded inference, serving de alto throughput e framework de modelos sem importar seus runtimes.
+
+## Treino e inferência com pesos transmitidos por camadas (AirLLM, 2026-10-15)
+
+Quando avaliar execução de modelos muito maiores que a VRAM, estimar separadamente pico de VRAM, RAM host, espaço dos checkpoints originais e convertidos, velocidade do armazenamento, transferência por token e latência total. Distinguir inferência sem quantização de opção de compressão posterior; limites e ganhos declarados por fornecedor não são benchmarks reproduzidos. Para fine-tuning, separar pesos-base congelados em streaming, adapters residentes e estado de otimizador; validar o suporte ao modelo exato, versões de Transformers/CUDA e retenção dos checkpoints antes de configurar descarte de originais. Benchmarks devem medir qualidade e latência matched-task, não apenas memória mínima demonstrada. Referência: https://github.com/lyogavin/airllm (README, 2026-10-15); nenhuma GPU ou dependência foi executada.
