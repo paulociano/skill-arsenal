@@ -109,3 +109,7 @@ Separação source/note/transformation, context selection e busca full-text+vect
 Context graph compartilhado entre agente, canvas e workflow, com context packing seletivo, refinado a partir de `joyedz/melda`. O runtime do projeto não é dependência do Arsenal.
 
 Origem local: [kb-retriever.docx](../kb-retriever.docx).
+
+## Localizadores de busca multimodal híbrida (DigUp, 2026-10-15)
+
+Quando uma base tiver PDFs, imagens, áudio, vídeo e código, representar hits com **arquivo + versão/indexador + modalidade + trecho/página/timestamp/linha** sempre que disponíveis. Combinar semantic recall com correspondência literal para IDs, números de fatura, símbolos e mensagens de erro: proximidade vetorial não prova acerto de string exata. Indexar apenas fontes autorizadas e excluir por padrão segredos, pastas ocultas, caches, artefatos gerados e repositórios não selecionados. Separar corpus de código quando o escopo exigir opt-in explícito. Indexação incremental precisa controlar versão do modelo de embedding, reindex quando o espaço vetorial mudar e testes de regressão de ranking sobre consultas representativas. Os localizadores só devem ser exibidos quando retornados/validados pelo índice real. Padrões adaptados de https://github.com/ARahim3/DigUp, sem presumir o aplicativo ou EmbeddingGemma 2 disponível.
