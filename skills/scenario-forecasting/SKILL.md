@@ -59,3 +59,9 @@ decision-analysis, product-metrics-diagnostics, financial/business analysis, exp
 ## Origem metodológica
 
 Adaptada de StatsForecast, MLForecast, Darts, sktime, GluonTS e Prophet, preservando baseline, backtesting, probabilistic forecasting e covariates sem exigir uma biblioteca específica.
+
+## Simulações de decisões com evidência aprovada (Scenario Lab, 2026-10-15)
+
+Quando o problema exigir **ações e reações de múltiplos agentes ou organizações**, e não apenas extrapolação de séries, estruturar uma simulação condicional: (1) delimitar atores, horizonte, estados, opções e **resultados possíveis explicitamente excluídos** pelo modelo; (2) montar pacote de evidências com origem e data, separar fatos das hipóteses de comportamento e obter aprovação das premissas; (3) definir transições, utilidades e penalidades por consequências de segunda ordem, evitando recompensas que só favoreçam o benefício imediato; (4) explorar ramos com seeds/iterações e critérios documentados; (5) agrupar famílias de resultados sem tratar score interno ou frequência de ramos como probabilidade calibrada do mundo real; (6) testar replay histórico e cenários adversariais, discriminando regressão técnica de validade preditiva externa; (7) versionar evidence packet, domain rules, assumptions e resultados para revisão quando fatos mudarem.
+
+Se um cenário terminal relevante (como escalada total) não estiver no espaço de estados, dizer que **a simulação não consegue encontrá-lo**, não que o considera improvável. Replays com evidências divergentes ou resultados muito concentrados devem reduzir confiança e motivar revisão. A implementação específica de MCTS/CLI não é requisito para aplicar essa metodologia. Referência: https://github.com/YSLAB-ai/scenario-lab (README e docs/limitations.md, versão experimental v0.1.0). Não apresentar simulação como previsão factual, aconselhamento de risco ou decisão profissional automatizada.
