@@ -225,3 +225,15 @@ Quando o armazenamento durável for Markdown de projeto, complementar a memória
 Quando experiências de múltiplos agentes ou usuários forem candidatas à mesma memória ou skill, isole inicialmente a evidência por origem e escopo; deduplique por equivalência semântica e versione propostas de mudança como diffs revisáveis. Teste cada proposta com exemplos que demonstram ganho e contraexemplos que expõem regressão, verifique conflitos com instruções existentes e mantenha rollback. Compartilhar conhecimento entre pessoas não transfere automaticamente autorização para ler históricos, segredos ou preferências privadas. Somente promova a um owner canônico após aprovação e evidência; nunca habilite daemon de autosscrita, hooks ou sincronização cross-device sem runtime real e consentimento.
 
 Origem complementar: https://github.com/AMAP-ML/SkillClaw (ciclo de evolução coletiva adaptado sem instalador, daemon ou captura silenciosa).
+
+## Admission e reutilização de regras verificadas
+
+Para domínios com verificador independente (álgebra exata, compiladores, regras formais, restrições de negócio e equivalentes), tratar memória de regras como um registro de **candidaturas testadas**, não como autoconfirmação do agente:
+
+1. Capturar a proposição, contexto, escopo, hipótese e origem do exemplo gerador.
+2. Antes de admitir, validar por verificador independente do modelo que propôs a regra; guardar versão do verificador, artefato de prova/teste, data e resultado.
+3. Em erro, persistir o subobjetivo residual e o contraexemplo, com limite de tentativas e reparo localizado. Não promover uma regra só porque uma resposta final pareceu plausível.
+4. Congelar regras promovidas para benchmarks e revalidar cada aplicação no novo contexto, incluindo condições e expiração; distinguir lembrança de prova.
+5. Medir erro rejeitado, reparo correto, falsos aceites e ganho sobre baseline sem memória; publicar resultados negativos. Se o domínio não tem checker confiável, classificar como memória heurística, nunca como formalmente verificada.
+
+**Proveniência:** https://github.com/1105216375-alt/resimind (arquitetura de ciclo verificar → reparar → admitir → reutilizar). Não assumir MCP ResiMind, Lean, runtime Python instalado ou ganho empírico geral. O escopo algébrico publicado pelo projeto é limitado e sua evidência experimental não prova melhoria universal.
