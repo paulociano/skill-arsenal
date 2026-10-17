@@ -33,3 +33,14 @@ Use `web-design-engineer` para implementar a direção escolhida. Consulte `gsap
 
 [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill).
 Motor: Python 3, scripts e datasets da mesma revisão. Instalador upstream: CLI Node, não necessário para consulta documental. Atualizações de catálogo e serviços externos são operações separadas. A adaptação não importa bases, executáveis ou afirmações de desempenho do upstream.
+
+## Seleção contextual e saída auditável (UI UX Pro Max v2)
+
+Quando consultar o upstream, considerar seus grupos **categoria de produto, estrutura de página, estilo, paleta, tipografia e stack** como dimensões independentes. A combinação é recomendação inicial, não sistema comprovadamente correto:
+1. Verificar se o resultado reflete produto, missão do usuário, marca, conteúdo, densidade de dados e padrões esperados na plataforma.
+2. Explicitar **por quê** pattern, type roles e color roles funcionam juntos; rejeitar combinações de catálogo quando prejudicarem hierarquia, legibilidade ou identidade.
+3. Separar restrição comprovada (contraste medido, foco, reflow) de antipattern por gosto (banimento de cor/fonte/estilo). Não tratar contagem de regras e estilos do README como evidência de qualidade.
+4. Entregar um contrato pequeno: escolha, alternativas descartadas, tokens semânticos sugeridos, componentes/states e validação planejada. Somente persista como DESIGN.md após checar owner canônico.
+5. Caso o motor Python não seja executado, rotular decisões como **síntese documental**, nunca como ranking/resultado do mecanismo BM25.
+
+Proveniência: [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill), README v2 consultado em 2026-10-17. Nenhum CLI, instalador, dataset ou ferramenta do upstream foi executado.
