@@ -115,3 +115,14 @@ Adaptada de amaancoderx/npxskillui e enriquecida com o contrato vivo downstream-
 Interoperabilidade design↔code, inspeção estrutural de arquivos, lint e extração de tokens refinados a partir de `penpot/penpot` e `open-pencil/open-pencil`, sem instalar seus editores, CLIs ou MCPs.
 
 Origem local: design-system-extraction.docx.
+
+## Catálogos de DESIGN.md como referências, não como autoridade
+
+Para inspiração estruturada em interfaces, [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) reúne estudos DESIGN.md de produtos reais. Usar como **índice de referências candidatas**, não como cópia canônica da marca nem da implementação atual:
+1. Escolher apenas 1–3 exemplos relacionados ao público, objetivo e contexto; conferir os arquivos da marca/repo original quando claims específicos forem importantes.
+2. Extrair linguagem abstrata (roles tipográficos, grids, padrões de seção, tokens semânticos, densidade e interação), distinguindo observação, interpretação do autor do catálogo e adaptação proposta.
+3. Mapear esses padrões para tokens/componentes do projeto, reconciliando com CSS/DOM/runtime quando já houver interface existente.
+4. Não copiar identidade, logos, assets, tipografia licenciada ou tokens da marca como se fossem próprios; não substituir DESIGN.md canônico sem comparar a implementação.
+5. Conferir consistência de pelo menos duas telas/estados e registrar divergências em vez de perpetuar um documento desatualizado.
+
+O catálogo não fornece verificação automática do produto atual. Não exige baixar sua coleção inteira.
