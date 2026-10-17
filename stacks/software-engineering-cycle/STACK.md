@@ -231,3 +231,16 @@ Exemplos:
 A avaliação 2026-10-06 de affaan-m/ECC acrescentou o ciclo explícito plan/test/implement/review/verify/remember/improve, revisão independente, context-budget como princípio, memória/handoffs portáveis e aprendizagem project-scoped. O Arsenal reutiliza esses princípios através de owners existentes em vez de importar a coleção inteira de agents/skills/hooks do ECC.
 
 Stack construída do lote 2026-10-03 de 16 repositórios de software engineering, com maior peso em Hypothesis, Testcontainers, OpenTelemetry Collector, Temporal, Backstage, Trivy, Renovate, Semgrep, Bazel/Pants, Dagger e Argo CD. Charlytoc/ai-todo-app contribuiu para draft-first. addyosmani/factory acrescentou o modo software factory com queue durável, verifier independente, back-pressure e merge humano. O lote 2026-10-05 acrescentou roteamento explícito para auditoria web autorizada e engenharia PWA. A expansão de release/quality do mesmo dia adicionou release engineering, progressive delivery e resilience engineering como owners separados.
+
+## Entrega em fases com orçamento de contexto (GSD Core)
+
+Para projetos de software grandes e multi-sessão com fases de entrega reais, especializar o fluxo geral em **Discuss → Plan → Execute → Verify → Ship**, mantendo fronteiras de responsabilidade:
+1. **Discuss:** resolver decisões materiais e critérios de aceite antes da decomposição, sem interminável entrevista quando o escopo for claro.
+2. **Plan:** decompor em incrementos verificáveis com dependências, riscos, contratos, artefatos e orçamento de contexto; evitar plano de execução que não caiba nas ferramentas e sessão disponíveis.
+3. **Execute:** trabalhar somente a fronteira desbloqueada; usar paralelismo apenas para tarefas independentes com ownership de arquivos/estado e possibilidade real de reconciliação. Não alegar subagentes de contexto novo inexistentes.
+4. **Verify:** comparar diffs/outputs aos critérios de aceite, reproduzir caminhos críticos e emitir plano de correção para falhas; não confundir build bem sucedido com produto funcional.
+5. **Ship:** publicar via PR/commit/deploy somente quando solicitado ou autorizado pelo contexto operacional; registrar versão, evidência, estado e próxima fronteira para retomada.
+
+Use wayfinder e ai-workspace-operating-cycle quando o trabalho atravessar sessões. Artefatos como CONTEXT.md/STATE.md são opcionais e devem coexistir com a fonte canônica do projeto, não substituí-la. Para mudança pequena, não impor o ritual completo.
+
+**Proveniência:** [gsd-build/get-shit-done](https://github.com/gsd-build/get-shit-done) migrou para [open-gsd/gsd-core](https://github.com/open-gsd/gsd-core). Metodologia adaptada da documentação GSD Core consultada em 2026-10-17; sem importar instalador, hooks, slash commands ou promessa de sessões/subagentes autônomos do projeto de origem.
