@@ -243,3 +243,14 @@ Inspirado em https://github.com/feder-cr/git-ai (2026-10-18). Não presume servi
 ## Harness experimental Propose–Probe–Compose (Harness²)
 
 Para projetar infraestrutura de agentes, discriminar prompt, guardrails, memória, tool guidance, skills, scripts, plugins e subagentes. Fixar permissões e partes imutáveis, estabelecer baseline e comparar pequenas variantes sob o mesmo contrato, dataset, versão e budget. Ciclo propose, probe, compare e compose: adotar apenas melhorias apoiadas por resultado e inspeção de efeitos colaterais; não confundir diferença numa tarefa com generalização. Paralelismo explora hipóteses, refinamento sequencial aprofunda uma hipótese; ambos precisam de limites. Lições persistentes exigem evidência em tarefas independentes, sem autocorreção irrestrita de instruções ou guardrails. Fonte: https://github.com/google-research/harness2 (2026-10-18). Benchmarks do autor não foram reproduzidos; não executar Codex/OpenCode com sandbox desativado ou rede irrestrita.
+
+## Contexto econômico com fidelidade verificável (Caveman e billion-context)
+
+Para tarefas em que logs, JSON, resultados de testes, páginas e sessões longas consomem orçamento de contexto:
+1. reduzir **input de ferramenta** na fonte, mantendo códigos de erro, caminhos, stack frames determinantes, contagens, negações e evidência mínima; permitir expandir o trecho original;
+2. manter código, comandos, diffs, valores, unidades e payloads técnicos exatos; concisão editorial não autoriza reescrevê-los ou perder ressalvas de segurança;
+3. separar record completo persistente de views resumidas hierarquicamente; guardar âncoras/intervalos e permitir recuperar trechos antes de decidir;
+4. medir custo de compressão + erro de resposta + cache-hit/latência no workload real, comparando baseline com e sem redução, em vez de aceitar percentuais promocionais;
+5. preferir redução de outputs ou compaction nativa ao proxy com acesso a prompts, tokens e streams; interceptação MITM, instalação de certificados, alteração de base URL e injeção de tools exigem threat model e autorização específicos. Não instalar proxy ou desabilitar verificações TLS para economizar tokens.
+
+Fontes documentais: https://github.com/JuliusBrussee/caveman e https://github.com/ranxianglei/billion-context (2026-10-18). Só a metodologia portátil foi incorporada, não métricas universais nem runtime de terceiros.
