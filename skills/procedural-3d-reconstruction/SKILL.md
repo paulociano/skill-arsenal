@@ -53,3 +53,7 @@ Usar leitura e escrita de arquivos e execução de código pelo terminal dispon�
 Adaptada de img2threejs/img2threejs v2.0.0.
 
 Origem local: [procedural-3d-reconstruction.docx](../procedural-3d-reconstruction.docx).
+
+## Blender como runtime editável de cenas (blender-ai-mcp-addon)
+
+Se o projeto usa Blender, tratar a cena como estado observável e mutável, e não apenas script gerador: (1) inspecionar objects, hierarquia, transform, materiais e câmera antes de alterar; (2) especificar operações pequenas, ordem, snapshot/undo e resultado visual esperado; (3) para workflows de agentes, separar manager, executor e reviewer com checks após cada mutação e limite de retries; (4) validar screenshots reais de mais de uma perspectiva e reabrir arquivo/export final; (5) exigir aprovação antes de executar Python arbitrário, imports remotos, apagar objetos ou exportar dados externos. Código Python do addon não equivale a sandbox, mesmo com validação. Usar integração MCP somente se realmente instalada e autenticada; caso contrário, entregar scripts Blender e instruções de testes, sem afirmar execução na UI. Fonte: https://github.com/LiCinCan/blender-ai-mcp-addon (2026-10-18), Windows/Blender 4.2+ e serviços opcionais externos.
