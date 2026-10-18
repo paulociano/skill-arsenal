@@ -178,3 +178,16 @@ Evals de trajetória, CI e separação entre task/tool/final-answer quality refi
 Precommit e settlement de previsões adaptados de [dealerdefi/FLYON](https://github.com/dealerdefi/FLYON) e DefiLeoo/YOINK, preservando claims verificáveis, fonte/teste pré-definidos, settlement separado, calibration/Brier e ledger auditável sem incorporar lógica financeira ou blockchain write capability ou on-chain.
 
 Origem local: [llm-observability-evaluation.docx](../llm-observability-evaluation.docx).
+
+## Regressões derivadas de traces de produção (Tracely)
+
+Quando houver traces reais, instrumento e autorização para usar os dados:
+
+1. Vincular spans hierárquicos (agente, conversa, turno, chamada de modelo/ferramenta) às versões de prompt, modelo e aplicação. Aplicar mascaramento, retenção e escopo antes de gerar fixtures.
+2. Detectar falhas por verificações determinísticas e judges separados; agrupar por assinatura/semântica com contagem, taxa e amostras, sem confundir clustering com diagnóstico causal.
+3. Promover falhas representativas a casos de regressão versionados com input, respostas gravadas de ferramentas/modelos e assertions. Antes de usar em gate, provar contrato fail-to-pass: falha no baseline defeituoso e passa no candidato corrigido.
+4. Separar replay hermético e offline de avaliações com modelo real. Reprodução determinística não testa drift, variabilidade de provider ou rede e pode mascarar uma falha quando substitui o componente efetivamente alterado.
+5. Calibrar julgadores com labels humanos; definir thresholds e severidade antes de bloquear PR. Executar gates inicialmente em modo advisory quando falso positivo/cobertura forem incertos.
+6. Alertas para Slack/email/webhook são ações externas: exigir conector real, autorização, minimização de dados e responsável. Sem CI ou traces conectados, fornecer metodologia e contrato, não alegar monitoramento ativo.
+
+Padrão adaptado de https://github.com/jwuthri-cloud/Tracely-ai (2026-10-18), sem presumir instalação do produto nem disponibilidade de OTLP, ClickHouse, filas ou MCP.
