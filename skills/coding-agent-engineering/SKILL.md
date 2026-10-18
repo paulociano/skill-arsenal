@@ -239,3 +239,7 @@ Quando diversos agentes alterarem concorrentemente a mesma branch ou codebase:
 5. Medir taxa de conflitos, espera, reverts e throughput antes de trocar Git convencional por infraestrutura especializada.
 
 Inspirado em https://github.com/feder-cr/git-ai (2026-10-18). Não presume servidor Graft, gRPC, banco/object storage, auto-merge ou disponibilidade desse sistema no ChatGPT.
+
+## Harness experimental Propose–Probe–Compose (Harness²)
+
+Para projetar infraestrutura de agentes, discriminar prompt, guardrails, memória, tool guidance, skills, scripts, plugins e subagentes. Fixar permissões e partes imutáveis, estabelecer baseline e comparar pequenas variantes sob o mesmo contrato, dataset, versão e budget. Ciclo propose, probe, compare e compose: adotar apenas melhorias apoiadas por resultado e inspeção de efeitos colaterais; não confundir diferença numa tarefa com generalização. Paralelismo explora hipóteses, refinamento sequencial aprofunda uma hipótese; ambos precisam de limites. Lições persistentes exigem evidência em tarefas independentes, sem autocorreção irrestrita de instruções ou guardrails. Fonte: https://github.com/google-research/harness2 (2026-10-18). Benchmarks do autor não foram reproduzidos; não executar Codex/OpenCode com sandbox desativado ou rede irrestrita.
