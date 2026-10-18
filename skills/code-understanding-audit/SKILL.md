@@ -173,3 +173,16 @@ Impact mapping, cross-service linking e separação entre índice reconstruível
 Busca estrutural e empacotamento de contexto refinados a partir de https://github.com/ast-grep/ast-grep, https://github.com/semgrep/semgrep e https://github.com/yamadashy/repomix, sem exigir esses CLIs.
 
 Origem local: [code-understanding-audit.docx](../code-understanding-audit.docx).
+
+## Reconhecimento estático eficiente de binários e pacotes (leanrea)
+
+Para artefatos distribuídos sem fonte e com análise autorizada:
+
+1. Trabalhar numa cópia, identificando versão, hash, plataforma e tipo por assinatura/magic bytes, não apenas pela extensão.
+2. Fazer um inventário de menor custo primeiro: metadados, dependências, símbolos, imports/exports e strings. Agrupar probes independentes, limitar saída e registrar origem; não despejar bundles minificados ou disassembly inteiro no contexto.
+3. Roteamento por formato: Electron/ASAR → entrypoint, preload, IPC e módulos nativos; Mach-O/ELF/PE → símbolos e bibliotecas; Go → build info; .NET/APK/WASM → descompiladores especializados se realmente disponíveis; SQLite → cópia consistente (inclusive WAL) e consultas read-only; pcap/HAR → inventário de tráfego com dados sensíveis protegidos.
+4. Em árvores extraídas, não ignorar caminhos ocultos relevantes; preferir pequenos trechos em torno de strings e referências. Comparar inventários entre versões antes do diff completo.
+5. Classificar evidência como observado, inferido ou desconhecido, com caminho, símbolo, offset ou localização. Busca negativa parcial não demonstra ausência de funcionalidade; leitura estática não é execução verificada.
+6. Escalar para instrumentação dinâmica só com autorização e isolamento; não instalar ou executar ferramentas simplesmente porque aparecem na referência.
+
+Síntese de https://github.com/aicodeking/leanrea/blob/main/leanrea/SKILL.md (2026-10-18). Sem executar a ferramenta nem extrapolar benchmarks de Claude Code para o ChatGPT.
