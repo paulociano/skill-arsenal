@@ -241,3 +241,9 @@ Para domínios com verificador independente (álgebra exata, compiladores, regra
 ## Memória por cena e versão (Hy-Memory)
 
 Em sistemas de memória, separar Chat (fatos, episódios, resumos e intenções), Working (fatos e experiências extraídos de tool traces) e Coding (decisões e revisões vinculadas a commits/branches). Resolver contradições com origem e timestamp antes de promover novas memórias. Vincular procedimentos a condições de validade, versões de código e resultados verificáveis; um reparo de uma versão não é regra permanente. Testar retrieval com fatos desatualizados, mudanças de versão e experiências intercaladas. Manter expansão seletiva e controle de sensibilidade. Fonte: https://github.com/Tencent-Hunyuan/Hy-Memory (2026-10-18). Sem instalar SDK, MemHub ou modelo externo.
+
+## Memória ancorada em símbolos de código (Graphicle)
+
+Em projetos de software, quando uma memória descreve comportamento de função/classe específica, vincule a afirmação ao identificador de símbolo, arquivo, intervalo observado e versão/commit da evidência. A cada alteração do símbolo, marque a memória associada como **potentially stale** e revalide-a antes de recuperar como descrição corrente; alterações em outras partes do arquivo não devem invalidar tudo automaticamente. Preserve decisões históricas como fatos de época, não como afirmações do código atual. Combine evidência de grafo de chamadas/imports com trechos citados e orçamento de contexto explícito. A associação automática por nome pode apontar ao símbolo errado: confirme definições e resoluções ambíguas. Só habilite captura de sessões, hooks Git, alterações em AGENTS.md ou servidores MCP após autorização e inspeção de arquivos afetados. Ferramentas de indexação como Graphicle são opcionais, não presumidas instaladas.
+
+Proveniência: https://github.com/Graphicle-AI/graphicle (README consultado em 2026-10-18). Metodologia absorvida; sem importar binário, hooks ou servidor.
