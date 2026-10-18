@@ -129,3 +129,19 @@ A seleção de runtime foi refinada a partir de Ollama, llama.cpp, vLLM e Huggin
 ## Treino e inferência com pesos transmitidos por camadas (AirLLM, 2026-10-15)
 
 Quando avaliar execução de modelos muito maiores que a VRAM, estimar separadamente pico de VRAM, RAM host, espaço dos checkpoints originais e convertidos, velocidade do armazenamento, transferência por token e latência total. Distinguir inferência sem quantização de opção de compressão posterior; limites e ganhos declarados por fornecedor não são benchmarks reproduzidos. Para fine-tuning, separar pesos-base congelados em streaming, adapters residentes e estado de otimizador; validar o suporte ao modelo exato, versões de Transformers/CUDA e retenção dos checkpoints antes de configurar descarte de originais. Benchmarks devem medir qualidade e latência matched-task, não apenas memória mínima demonstrada. Referência: https://github.com/lyogavin/airllm (README, 2026-10-15); nenhuma GPU ou dependência foi executada.
+
+
+## Fronteira entre treinamento e inferencia: MiniMind (2026-10-18)
+
+Para avaliar treinamento ou adaptacao de modelos pequenos, separar o experimento de treino do runtime de inferencia:
+1. Definir objetivo, idioma, hardware, orcamento e baseline de qualidade.
+2. Separar tokenizer, pretreino, SFT, preferencia (DPO/RLAIF) e treinamento de uso de ferramentas; manter checkpoints de cada fase.
+3. Documentar licencas/proveniencia, limpeza, deduplicacao, holdout e formatos de dialogo/tool call.
+4. Fixar arquitetura, seeds, configuracao, versoes e GPU; medir custo/tempo reais, nao extrapolar benchmark publicado.
+5. Avaliar tarefas do dominio por fase, incluindo regressao, latencia, memoria e tool use.
+6. Comparar treino do zero com reutilizacao/quantizacao/adapters de modelos existentes antes de recomendar investimento.
+7. So declarar treino executado se houver GPU, dados, logs e checkpoints verificados; caso contrario, entregar plano experimental.
+
+MiniMind e uma referencia didatica PyTorch com modelo de 64M parametros e variante MoE. Custos e duracoes do autor nao sao garantias. Este owner continua responsavel por inferencia; para um projeto extensivo de treinamento, estruturar experimento proprio em vez de confundir etapas.
+
+Proveniencia: https://github.com/jingyaogong/minimind (README da branch master, consultado em 2026-10-18). Metodologia absorvida, sem copiar scripts/datasets/checkpoints.
