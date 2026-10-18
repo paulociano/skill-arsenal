@@ -123,3 +123,7 @@ Para efeitos ricos inspirados em motion/Three.js, preservar intenção antes de 
 6. Verificar o resultado no dispositivo-alvo e separar captura visual de evidência de performance; não alegar medição que não ocorreu.
 
 Origem: metodologias analisadas individualmente em `MengTo/Skills/agent-skills/web-design` (2026-10-15). Componentes terceiros e efeitos WebGL não são dependências obrigatórias.
+
+## Vocabulário de movimento ancorado em demonstração (motion-prompt)
+
+Quando o pedido de animação for vago, identificar um efeito por nome, amostra visual e função antes de selecionar código. Descrever sujeito, câmera versus zoom, eixo, direção, amplitude, duração, easing, stagger e interrupção. Usar demonstração apenas como referência, não equivalência garantida. Adaptar ao projeto e verificar acessibilidade, reduced motion, layout, responsividade e mudanças de estado. Escolher poucos efeitos com propósito. Fonte: https://github.com/showheyohtaki/motion-prompt (2026-10-18); galeria e skill Node permanecem externas.
