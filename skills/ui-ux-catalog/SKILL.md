@@ -44,3 +44,7 @@ Quando consultar o upstream, considerar seus grupos **categoria de produto, estr
 5. Caso o motor Python não seja executado, rotular decisões como **síntese documental**, nunca como ranking/resultado do mecanismo BM25.
 
 Proveniência: [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill), README v2 consultado em 2026-10-17. Nenhum CLI, instalador, dataset ou ferramenta do upstream foi executado.
+
+## Catálogos interativos de componentes (Lucian)
+
+Quando for útil consultar exemplo de UI, avaliar código e comportamento do componente, não só screenshot: estados default/disabled/loading/error, input por teclado/toque, foco, responsividade, dark/light e reduced motion. Mapear tokens e escopo CSS/JS para o design system vigente; testar a versão portada com dados reais e não copiar efeitos que quebrem acessibilidade. Inspecionar scripts antes de incorporar; preservar atribuição e licença da fonte. Fonte: https://github.com/Seokwoooo/lucian-uxui-prompt (2026-10-18). A galeria anunciada de 400 exemplos não foi testada aqui.
