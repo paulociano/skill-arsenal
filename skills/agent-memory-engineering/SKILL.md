@@ -237,3 +237,7 @@ Para domínios com verificador independente (álgebra exata, compiladores, regra
 5. Medir erro rejeitado, reparo correto, falsos aceites e ganho sobre baseline sem memória; publicar resultados negativos. Se o domínio não tem checker confiável, classificar como memória heurística, nunca como formalmente verificada.
 
 **Proveniência:** https://github.com/1105216375-alt/resimind (arquitetura de ciclo verificar → reparar → admitir → reutilizar). Não assumir MCP ResiMind, Lean, runtime Python instalado ou ganho empírico geral. O escopo algébrico publicado pelo projeto é limitado e sua evidência experimental não prova melhoria universal.
+
+## Memória por cena e versão (Hy-Memory)
+
+Em sistemas de memória, separar Chat (fatos, episódios, resumos e intenções), Working (fatos e experiências extraídos de tool traces) e Coding (decisões e revisões vinculadas a commits/branches). Resolver contradições com origem e timestamp antes de promover novas memórias. Vincular procedimentos a condições de validade, versões de código e resultados verificáveis; um reparo de uma versão não é regra permanente. Testar retrieval com fatos desatualizados, mudanças de versão e experiências intercaladas. Manter expansão seletiva e controle de sensibilidade. Fonte: https://github.com/Tencent-Hunyuan/Hy-Memory (2026-10-18). Sem instalar SDK, MemHub ou modelo externo.
