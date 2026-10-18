@@ -215,3 +215,16 @@ Consolidada de `Aider-AI/aider`, `continuedev/continue`, `charmbracelet/crush` e
 **Modo de aprendizagem opcional (VibeWise):** quando o objetivo explícito incluir aprender engenharia enquanto IA implementa, pedir primeiro a hipótese arquitetural do usuário, explorar um caso de borda relevante, mapear trade-offs e distinguir checkpoint de design, autorização de implementação e explicação pós-diff. Se o usuário pediu execução direta com contexto suficiente, implementar sem transformar cada passo em entrevista. Fonte: https://github.com/nykooi1/vibe-wise.
 
 **Operação multiagente observável (Agent Office):** para vários workers, explicitar owner, task/issue, branch ou worktree isolada, estado (working, blocked, waiting approval, done, failed), handoff e links de PR/checks; permitir identificar imediatamente quem precisa de decisão humana. Uma UI 3D não é requisito. Worker não recebe privilégios globais, não pode assumir credenciais de outro, nem remover worktree/branch com trabalho não publicado sem preflight e aprovação. Antes de qualquer ação externa, seguir `agent-action-governance`. Fonte: https://github.com/AgentSystemLabs/agent-office; nenhuma CLI local é presumida instalada.
+
+
+## Padroes portaveis do OpenClaude (Twigpine, 2026-10-18)
+
+Quando avaliar ou construir uma CLI de coding agent com multiplos provedores:
+- separar sessao, prompt, configuracao do provedor e identidade do projeto; retomar ou bifurcar conversa nao cria isolamento de filesystem, branch ou worktree;
+- testar selecao de provedor por ferramentas, streaming, contexto e autenticacao reais, nao por suposta paridade de APIs;
+- considerar interfaces nao interativas para automacao, com resultados, erros e estados explicitos;
+- distinguir processos longos running, exited, failed, killed e stale; desaparecimento de processo nao prova sucesso;
+- documentar escopo e armazenamento de credenciais; nunca assumir carregamento automatico de .env;
+- nao presumir CLI, shell, workers ou MCP instalados no ChatGPT.
+
+Proveniencia: https://github.com/Twigpine/openclaude (README da branch main, consultado em 2026-10-18). Apenas metodologia foi absorvida, sem executar a CLI.
