@@ -82,3 +82,19 @@ Complementa `graph-engineering`, `handoff`, `code-review`, `agent-choice-audit` 
 
 ## Origem adaptada
 Metodologia inspirada também em https://github.com/builderz-labs/mission-control (plano de controle, receipts, custo e approvals), e em `herdrdev/herdr`, `stablyai/orca`, `chaseai-yt/claudex-loop`, block/buzz, proliferate-ai/proliferate, donvito/codex-astra-luna-orchestrator, rizqinrr/viserys-agent, unstablebuild/rune e DannyMac180/astra-advisor. Foram preservados isolamento por tarefa, papéis contratuais, reviewer independente e continuidade de workspace, sem depender de perfis/modelos/CLIs específicos.
+
+
+## Orquestracao pedagogica por agentes: OpenMAIC (2026-10-18)
+
+Quando o objetivo for projetar uma experiencia educacional interativa com professores e colegas de IA, reutilizar o rigor de coordenacao multiagente sem pressupor agentes independentes no ChatGPT:
+- definir objetivo de aprendizagem, publico, pre-requisitos e criterios de dominio antes de gerar aulas;
+- separar os papeis pedagogicos de exposicao, pergunta socratica, simulacao, feedback e avaliacao, com contratos por etapa;
+- usar checkpoints de entendimento (quiz, aplicacao, exercicio, projeto), feedback formativo e adaptacao da proxima atividade ao erro observado;
+- tratar slide, quadro, voz, simulacao e projeto como modalidades opcionais, somente quando o runtime oferecer suporte real;
+- persistir progresso, materiais de origem, versao do curso e estado de avaliacao quando houver armazenamento conectado;
+- exportar e validar artefatos somente com ferramenta real; narrativas de personagens nao provam varios agentes ativos;
+- revisar factualidade, acessibilidade, seguranca de conteudo de alunos e respostas do sistema antes de implantar.
+
+Usar esta secao em desenho de plataformas educacionais multiagentes. Para tutoria em conversa comum, aplicar os passos pedagogicos diretamente sem ativar a skill de workers.
+
+Proveniencia: https://github.com/THU-MAIC/OpenMAIC (README da branch main, consultado em 2026-10-18). A plataforma externa depende de servidor, banco e modelos; sua orquestracao completa nao foi instalada.
