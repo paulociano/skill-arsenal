@@ -118,3 +118,7 @@ Adaptada metodologicamente de Ar9av/PaperOrchestra e do paper PaperOrchestra (So
 Checagem de metadata, retratação/correção e contradições refinada a partir de https://github.com/Future-House/paper-qa.
 
 Origem local: [academic-paper-orchestration.docx](../academic-paper-orchestration.docx).
+
+## Campanhas experimentais com agentes (AI-Scientist-v3)
+
+Separar contrato imutável da tarefa, investigação aberta, baselines/ablations, avaliação final selada, análise post-hoc e paper. Na investigação registrar sucessos, fracassos, seeds, custos e alterações de hipótese. Comparar controles e ablations com budgets equivalentes. Não acessar o holdout de avaliação final enquanto se buscam melhorias; depois do unseal, novas hipóteses são exploração e exigem nova validação independente. Manter árvore de artefatos com inputs, versões, execuções, tabelas, figuras e claims ligados por provenance. A falha de fase deve aparecer como incompleta/degradada, nunca ser encoberta na redação. Não replicar os agentes headless com permissões irrestritas, montagem de chaves ou execução host sem sandbox. Sem runtime/dados, elaborar protocolo sem inventar experimentos. Fonte: https://github.com/SakanaAI/AI-Scientist-v3 (2026-10-18).
