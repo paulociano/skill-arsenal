@@ -106,3 +106,14 @@ Origem local: shader-graphics-engineering.docx.
 ## Biblioteca WebGPU declarativa como alternativa
 
 Quando o alvo for frontend com efeitos GPU reutilizáveis, considerar o padrão de `shader-effects-inc/shaders` como referência externa: canvas com camadas declarativas, geradores, pós-efeitos, máscaras e composição. Separar geração de imagem de transformação aplicada a camadas prévias; validar ordem, blend, custo de overdraw e fallback para WebGPU ausente. Conferir versão, API, framework, SSR, licença e suporte real antes de instalar dependências. Preservar HTML acessível para conteúdo e controles, respeitar reduced-motion, qualidade móvel e desligamento de efeitos não essenciais. Não exigir conta, editor, MCP ou CLI, nem assumir presets pagos. A biblioteca não substitui implementação GLSL/WebGL apropriada a projetos existentes. Fonte: https://github.com/shader-effects-inc/shaders/tree/main/skills/shaders.
+
+## Referência de oceano e atmosfera em WebGPU (web-ocean)
+
+Quando a tarefa exigir oceano visualmente realista, e não apenas efeito decorativo:
+1. Definir hardware, frame time, resolução, qualidade mínima e fallback para ausência de WebGPU antes de escolher FFT/WGSL.
+2. Construir um baseline com malha e displacement simples; adotar espectro de ondas FFT em escalas e LOD quando as melhorias visuais justificarem buffers, compute passes e complexidade.
+3. Validar separadamente normals/slope aliasing, iluminação especular, reflexos, espuma, atmosfera, nuvens, HDR e tone mapping, mantendo câmeras e parâmetros reproduzíveis para comparação.
+4. Medir FPS, tempo de GPU e memória no hardware-alvo; reutilizar buffers, limitar alocações por frame, compor quality tiers e verificar resize, perda de device e comportamento em dispositivos fracos.
+5. Quando revisão visual automatizada existir, usar capturas sob vistas fixas e crítico independente como complemento, nunca substituir inspeção visual e runtime.
+
+Referência técnica: https://github.com/Noniv/web-ocean (2026-10-18). Não importar shaders sem auditoria nem transferir benchmarks do projeto original para outra cena.
