@@ -83,3 +83,7 @@ work-delivery-flow, project-health-review, product-metrics-diagnostics, scenario
 ## Origem metodológica
 
 Evolui a síntese anterior de Superset, Metabase, Grafana, Dash, Streamlit, Evidence e Observable Framework com padrões de gestão à vista, project health e operational dashboards observados em borghei/Claude-Skills, alirezarezvani/claude-skills, SkillMedev/skills, KirKruglov/claude-skills-kit e synthesisengineering.
+
+## Interfaces operacionais para especialistas e vistas coordenadas
+
+Em ferramentas B2B usadas o dia inteiro, otimizar **tempo até ação** em vez de maximizar espaço vazio. Distinguir filtros persistentes de escopo de trabalho e busca transitória; preservar seleção e contexto durante drill-down, expor estado e ação em linha, oferecer atalhos acessíveis sem torná-los exclusivos e dimensionar densidade por expertise/dispositivo. Quando tabela e mapa, gráfico, diagrama ou timeline forem ambos necessários, usar um **estado de seleção compartilhado**: selecionar em qualquer vista destaca o mesmo item na outra, com identidade, legenda e cores semânticas consistentes; no mobile alternar vistas sem perder seleção. Validar seleção cruzada, filtragem, rolagem até item, teclado e casos de dados vazios; não adicionar segunda vista só por decoração. Referência: https://github.com/dembrandt/dembrandt-skills (coordinated-data-views e operational-expert-tool-ui), avaliação 2026-10-17.

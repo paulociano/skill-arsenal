@@ -78,3 +78,7 @@ Grounding por referências, separação entre style lock do projeto e memória d
 ## Bibliotecas de referências
 
 Quando precisar de fontes de inspiração, fluxos reais ou templates, consultar [bibliotecas de referências de design](references/design-reference-libraries.md). Escolher fontes pela pergunta de design e registrar exemplos específicos; distinguir conceito, screenshot, produto e template antes de derivar decisões.
+
+## Referências premiadas com evidência de design e motion
+
+Quando referências de sites premiados forem úteis, usar fonte observável como Awwwards (ou screenshots/DOM autorizados) para selecionar **2–5 candidatos por objetivo**, não por prestígio. Para cada candidato registrar URL, data, viewport, captura, paleta, tipografia, estrutura de seções, tecnologias observadas e o que não foi verificável. Comparar **sinais compartilhados vs. exceções** e converter em um brief com tese visual, plano de interação e evidências por decisão. Motion exige registro/captura própria: não inferir easing, duração, ScrollTrigger ou comportamento 3D de imagem estática. Investigar no máximo a estrutura e motion relevantes para o objetivo; respeitar reduced motion, teclado, touch, acessibilidade de conteúdo e custo de runtime. Não presumir que `awwwards-mcp`, índice FTS5, crawl, captura de pose 3D ou Playwright estejam instalados. Fonte: https://github.com/INSANE0777/Awwwards-mcp (avaliação 2026-10-17).

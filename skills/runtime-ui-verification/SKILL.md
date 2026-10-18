@@ -145,3 +145,7 @@ Separação observe/act/extract e isolamento de credenciais refinados a partir d
 Component-state coverage e governança de visual baselines foram reforçadas a partir de Storybook, BackstopJS e ferramentas de visual regression, sem exigir qualquer runner específico.
 
 Origem local: [runtime-ui-verification.docx](../runtime-ui-verification.docx).
+
+## Matriz responsiva sincronizada (Responsively)
+
+Quando a mudança depender de breakpoints, criar uma **matriz de casos com pelo menos um viewport estreito, um intermediário e um largo**, acrescida de devices específicos do produto quando necessário. Para cada rota e fluxo crítico: repetir as mesmas ações e verificar navegação, entrada de texto, scroll, overlay, foco, touch, conteúdo cortado, containers com overflow e estados carregando/erro. Se o navegador suportar, executar a ação sincronizada em múltiplos viewports; caso contrário, reproduzir sequencialmente com dados/condições equivalentes. Capturas devem identificar device, viewport, zoom, estado, URL e passo. Uma captura bonita em desktop não certifica a versão mobile; cada dispositivo recebe PASS/FAIL/UNKNOWN e uma regressão descoberta volta para o mesmo caso após correção. O aplicativo Responsively e seu MCP são **ferramentas locais opcionais**, não recursos automaticamente disponíveis no ChatGPT. Fonte: https://github.com/responsively-org/responsively-app (2026-10-17).

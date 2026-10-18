@@ -126,3 +126,7 @@ Para inspiração estruturada em interfaces, [VoltAgent/awesome-design-md](https
 5. Conferir consistência de pelo menos duas telas/estados e registrar divergências em vez de perpetuar um documento desatualizado.
 
 O catálogo não fornece verificação automática do produto atual. Não exige baixar sua coleção inteira.
+
+## Extração quantitativa e qualidade dos tokens (Dembrandt)
+
+Quando houver DOM/computed styles, fazer inventário por **papel semântico, frequência, páginas e estados** (cores, fontes, spacing, bordas, sombras, breakpoints e motion). Rastrear a escolha de cada token à evidência e atribuir confiança: repetição global não equivale a cor incidental de um componente. Conferir os pares reais foreground/background e variantes light/dark e mobile, com resultado de contraste contextual e limitações. Exportar em formato interoperável W3C Design Tokens/DTCG quando apropriado, mantendo `DESIGN.md` como resumo e os valores de produção como autoridade. Em múltiplas páginas, reconciliar tokens globais, variações de tema e exceções, sem fazer média que destrua diferenças deliberadas. Um extrator automático não demonstra sozinho acessibilidade ou completude; se Dembrandt/Chromium/MCP não estiver disponível, use as fontes realmente acessíveis e marque cobertura parcial. Fonte: https://github.com/dembrandt/dembrandt (2026-10-17).

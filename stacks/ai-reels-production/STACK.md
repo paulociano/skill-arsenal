@@ -191,3 +191,7 @@ Quando a fonte for um vídeo de referência estética, antes de gerar cenas:
 5. Inspecionar flicker, coerência de personagens/cenários, início/fim de corte, áudio, clipping e legibilidade antes do master. Não reaproveitar áudio, pessoas, frames ou assets protegidos da referência sem direitos. Estilo pode inspirar direção, não justifica réplica confundível.
 
 Fonte: https://github.com/edenfunf/reelmimic. O aplicativo exige ferramentas e modelos locais específicos; não faz parte do runtime nativo do ChatGPT.
+
+## Modo anúncio de lançamento de produto (Brag)
+
+Quando a solicitação for um vídeo curto de lançamento de site/app, antes do roteiro localizar **produto real em uso**, sua promessa verificável, público, identidade e 2–3 momentos demonstráveis (entrada → ação central → resultado). Estruturar 15–25 segundos em hook curto, revelação, highlights e fechamento, com texto legível pelo tempo suficiente; evitar métricas, depoimentos e funcionalidades inventadas. Reutilizar screenshots ou assets autorizados e evitar `.env`, segredos, dados reais de clientes e áreas privadas. Planejar áudio/SFX licenciados e verificar frames estáveis e transições antes de renderizar. Se o runtime de vídeo/áudio não estiver conectado, entregar storyboard e copy com limitação declarada, não prometer MP4. `brag`, `brag-slim`, Hyperframes e FFmpeg são opcionais e não estão implícitos na stack. Fonte: https://github.com/latent-spaces/brag (2026-10-17).
