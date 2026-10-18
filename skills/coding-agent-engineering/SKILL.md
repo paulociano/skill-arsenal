@@ -228,3 +228,14 @@ Quando avaliar ou construir uma CLI de coding agent com multiplos provedores:
 - nao presumir CLI, shell, workers ou MCP instalados no ChatGPT.
 
 Proveniencia: https://github.com/Twigpine/openclaude (README da branch main, consultado em 2026-10-18). Apenas metodologia foi absorvida, sem executar a CLI.
+
+## Controle de versão em fluxos de muitos agentes (git-ai)
+
+Quando diversos agentes alterarem concorrentemente a mesma branch ou codebase:
+1. Separar identidades, escopos de escrita e políticas por agente, mantendo histórico verificável de changesets e autoria.
+2. Conferir head atual antes de aterrissar mudanças; usar branch/PR convencional por padrão e considerar CAS de refs, batching e resolução concorrente somente se houver pressão mensurada.
+3. Tratar resolução automática por LLM como proposta que requer inspeção semântica, aprovação proporcional e testes; merge sem conflito textual não demonstra comportamento correto.
+4. Testar o commit efetivamente publicado e vincular falhas a uma mudança por evidência, sem auto-revert indiscriminado.
+5. Medir taxa de conflitos, espera, reverts e throughput antes de trocar Git convencional por infraestrutura especializada.
+
+Inspirado em https://github.com/feder-cr/git-ai (2026-10-18). Não presume servidor Graft, gRPC, banco/object storage, auto-merge ou disponibilidade desse sistema no ChatGPT.
