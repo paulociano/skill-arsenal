@@ -191,3 +191,7 @@ Quando houver traces reais, instrumento e autorização para usar os dados:
 6. Alertas para Slack/email/webhook são ações externas: exigir conector real, autorização, minimização de dados e responsável. Sem CI ou traces conectados, fornecer metodologia e contrato, não alegar monitoramento ativo.
 
 Padrão adaptado de https://github.com/jwuthri-cloud/Tracely-ai (2026-10-18), sem presumir instalação do produto nem disponibilidade de OTLP, ClickHouse, filas ou MCP.
+
+## Filtragem determinística de linhas e recall (trim-1)
+
+Para contexto longo e denso, comparar filtros query-aware que preservam as linhas literais e sua ordem contra a entrada integral. Manter original recuperável e identificador, inserir marcador para cortes e não fazer recompacting invisível. Fixar pergunta e medir evidence recall, falsos descartes, task success, retries, custo de sessão e latência, além de bytes. Usar níveis conservative/balanced/aggressive só sob trade-offs medidos; falhar fechado em dados pequenos, sem query, baixa economia, limites de tamanho ou risco de ocultar erro raro, negação, número ou segurança. Se evidência não sobreviver, recuperar o original. Não afirmar que bytes poupados equivalem a tokens/custo poupados. Fonte: https://github.com/caveman-ai/trim-1 (2026-10-18). Modelo Go não instalado nem testado.
