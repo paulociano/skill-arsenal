@@ -115,3 +115,9 @@ Adaptada de MiniMax-AI/skills, especialmente `flutter-dev` e `react-native-dev`.
 Realtime voice/tool lifecycle adaptado de [davidmokos/expo-gpt-live](https://github.com/davidmokos/expo-gpt-live), preservando princípios e não versões específicas de APIs/modelos.
 
 Origem local: [crossplatform-mobile-engineering.docx](../crossplatform-mobile-engineering.docx).
+
+## Design system compartilhado React e React Native (Tamagui)
+
+Se o projeto já usa ou avalia um kit universal como Tamagui, compare custo de manter componentes/tokens compartilhados com requisitos reais de web, iOS e Android. Distinga API comum de comportamento idêntico: semântica HTML, acessibilidade, hover/focus, teclado, medidas responsivas e primitives nativas ainda exigem validações por plataforma. Quando houver compilador que transforma estilos em CSS/Views otimizados, verifique artefatos de produção e bundle/performance com e sem compilação; não presuma que todo componente será otimizado. Adote gradualmente quando a economia de manutenção superar migração e lock-in, preservando tokens semânticos e contratos canônicos. Não incluir Tamagui automaticamente em projetos existentes nem executar starter/instalador sem necessidade.
+
+Referência: https://github.com/tamagui/tamagui (README consultado em 2026-10-18). Metodologia de seleção absorvida, sem dependência obrigatória.
