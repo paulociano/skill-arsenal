@@ -111,3 +111,14 @@ Tratar áudio como sistema de feedback e mix em tempo real, com roteamento, prio
 ## Provenance
 
 Consolidada de FMOD for Unity, Unity Native Audio Plugin SDK e práticas de mixers/event systems. O Arsenal absorve routing, event lifecycle, spatialization e profiling sem presumir FMOD, Wwise ou plugin nativo disponível.
+
+## QA perceptual e síntese procedural orientada por evidências (earshot)
+
+Ao validar SFX, trilhas ou áudio sincronizado com vídeo:
+1. Fixar cena, contexto e referência; medir LUFS, true peak, envelope, espectro, duração, onset e sincronização com cortes/frames quando ferramentas estiverem disponíveis.
+2. Revisar versões A/B e fazer escuta humana. Classificações, similaridade semântica e espectrogramas são pistas, não oráculos de emoção, realismo ou qualidade percebida.
+3. Para síntese por código, manter receita, seed, parâmetros e render reproduzíveis, registrar licença/proveniência, medir clipping, aliasing, clicks, transientes e caudas truncadas.
+4. Testar mix completo, headroom, concorrência e dispositivos-alvo; registrar diferenças objetivas e avaliação auditiva, sem confundir score de arquivo isolado com experiência do jogo.
+5. Não pressupor CLI, MCP, modelos de áudio, dataset de SFX ou capacidade de escuta que não estejam realmente acessíveis.
+
+Metodologia inspirada em https://github.com/Leonxlnx/earshot (2026-10-18), sem importar sua infraestrutura ou banco de efeitos.
