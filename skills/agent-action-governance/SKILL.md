@@ -181,3 +181,17 @@ Em operações financeiras conectadas, enumerar e confirmar o tenant/organizatio
 ## Entrega ambígua em agentes remotos (Shipyard, 2026-10-15)
 
 Em filas de comandos para agentes ou máquinas remotas, diferenciar claramente (a) conexão indisponível antes do envio, quando enfileirar pode ser seguro, (b) entrega confirmada, (c) falha após possível entrega, quando o efeito é **incerto**, e (d) falha terminal. Persistir identificador idempotente e estado antes do transporte, preservar ordem por sessão e nunca reenviar automaticamente um comando que pode ter sido executado; reconciliar e pedir intervenção conforme impacto. Configuração trazida pelo repositório, kits e plugins deve ser tratada como código não confiável, aprovada por hash/versão, com revogação efetiva de clientes pareados e controle de identidade. Padrões de https://github.com/cosscom/shipyard (security model e offline queue). Não pressupor daemon Berth, shell remoto ou capacidade de execução persistente no ChatGPT.
+
+## Perfis autenticados, browser clouds e limites de confiança (2026-10-19)
+
+Em automações de browser com sessão autenticada, browser cloud, sync de cookies, proxies, perfil persistente ou takeover humano:
+
+- Distinguir isolamento de processo/browser de isolamento de identidade, rede, perfil, credenciais e tenant. Um browser separado não garante fronteira de segurança suficiente.
+- Exigir autorização para importar perfil local, sincronizar cookies, compartilhar sessão/URL de takeover, enviar dados a um serviço de automação ou trocar proxy/identidade; não presumir autorização por uma aprovação passada.
+- Aplicar domínio/ação permitidos, session ownership e stop condition. No takeover, suspender ações automatizadas até devolução explícita de controle.
+- Dar preferência a autenticação do próprio serviço/conector em vez de extração de cookies. Não promover contorno de controles anti-bot, CAPTCHA ou bloqueio de acesso como default operacional.
+- Traces, screenshots, HAR e logs são superfícies de dados sensíveis: minimizar, sanitizar, definir retenção e proibir publicação de tokens, cookies ou dados de terceiros.
+- Verificar efeito externo separadamente do resultado visual, especialmente para checkout, mensagens, cadastro, publicação e alterações de conta.
+- Adaptar às ferramentas efetivamente conectadas; BrowserAct e Browserbase não estão automaticamente instalados porque uma skill foi lida.
+
+Fontes metodológicas: https://github.com/browser-act/skills/tree/main/browser-act e https://github.com/browserbase/skills . Adoção apenas das fronteiras de autorização, isolamento e evidência, não dos recursos de stealth ou scripts de sincronização.
