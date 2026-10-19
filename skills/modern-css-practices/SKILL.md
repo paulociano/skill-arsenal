@@ -30,3 +30,16 @@ Escrita, revisão ou modernização de CSS em interfaces web, quando o alvo de b
 
 ## Resultado
 Diff mínimo de estilos, justificativa de responsividade, fallbacks e evidências de teste quando disponíveis.
+
+## Revisão contextual de micro-padrões CSS
+
+Ao modernizar CSS legado, avaliar cada técnica no componente concreto, em vez de importar uma coleção de snippets como defaults:
+1. Checar `box-sizing`, estilos base e herança antes de acrescentar novo reset, evitando sobrescrever componentes e estilos nativos de formulário.
+2. Preferir `aspect-ratio` e `object-fit` para imagens quando preservarem geometria, além de `margin-inline` e outras propriedades lógicas para layout independente da direção.
+3. Usar `:is()` com atenção à especificidade efetiva; escolher `:where()` quando intencionalmente se deseja zero especificidade.
+4. Proteger foco visível: `all: unset`, remoção de `outline` ou controles construídos com CSS não podem apagar acessibilidade por teclado.
+5. Verificar se conteúdo gerado por `::before`/`::after` precisa ser lido, copiado ou exposto a tecnologia assistiva. Nunca substituir texto semântico essencial por conteúdo CSS.
+6. Tratar hacks como padding para aspect ratio, seletores globais de espaçamento ou expansão no `:hover` como alternativas históricas, não melhores práticas universais. Preferir APIs modernas, sem perder fallback para browsers-alvo.
+7. Validar no navegador sempre que o comportamento de layout, cascata, hover/focus ou leitor de tela for determinante.
+
+**Origem (B, método absorvido seletivamente):** https://github.com/AllThingsSmitty/css-protips. É um catálogo de dicas, não um runtime nem uma Agent Skill.
