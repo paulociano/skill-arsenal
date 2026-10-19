@@ -127,3 +127,17 @@ Origem: metodologias analisadas individualmente em `MengTo/Skills/agent-skills/w
 ## Vocabulário de movimento ancorado em demonstração (motion-prompt)
 
 Quando o pedido de animação for vago, identificar um efeito por nome, amostra visual e função antes de selecionar código. Descrever sujeito, câmera versus zoom, eixo, direção, amplitude, duração, easing, stagger e interrupção. Usar demonstração apenas como referência, não equivalência garantida. Adaptar ao projeto e verificar acessibilidade, reduced motion, layout, responsividade e mudanças de estado. Escolher poucos efeitos com propósito. Fonte: https://github.com/showheyohtaki/motion-prompt (2026-10-18); galeria e skill Node permanecem externas.
+
+## React View Transitions: continuidade espacial (Vercel, 2026-10-19)
+
+Em projetos React/Next.js que suportem a API na versão realmente instalada, considerar View Transitions nativas antes de introduzir uma nova biblioteca de animação. Usar somente para comunicar continuidade, não como padrão decorativo de toda navegação:
+
+1. Inventariar relações list→detail, mudanças de posição em listas, enter/exit e revelações assíncronas; escolher transitions por propósito.
+2. Para shared elements, exigir identidade estável e nome único por elemento; verificar que origem e destino participam da mesma transição. Não usar o mesmo identificador em duas instâncias simultaneamente montadas.
+3. Separar animação de navegação da revelação posterior por Suspense; tipos de direção usados na rota não necessariamente persistem para o conteúdo carregado depois.
+4. Utilizar `default="none"` deliberadamente em boundaries cujo background update não deveria animar; checar também `share` e `update` para evitar desabilitar acidentalmente a transição desejada.
+5. Reservar slide direcional para hierarquia e sequências ordenadas; tabs e transições laterais não devem simular profundidade inexistente.
+6. Validar compatibilidade exata entre React, Next.js e browser antes de recomendar `<ViewTransition>`, `addTransitionType` ou `transitionTypes`. APIs experimentais/canary não são defaults portáveis.
+7. Respeitar reduced-motion, navegação por teclado, history/back-forward, estados de erro, fallback sem animação e interrupções.
+
+**Fonte:** https://github.com/vercel-labs/agent-skills/tree/main/skills/react-view-transitions . Adaptada como decisão de motion independente do runtime Vercel ou de uma versão presumida do React.
