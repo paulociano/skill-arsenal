@@ -130,3 +130,20 @@ O catálogo não fornece verificação automática do produto atual. Não exige 
 ## Extração quantitativa e qualidade dos tokens (Dembrandt)
 
 Quando houver DOM/computed styles, fazer inventário por **papel semântico, frequência, páginas e estados** (cores, fontes, spacing, bordas, sombras, breakpoints e motion). Rastrear a escolha de cada token à evidência e atribuir confiança: repetição global não equivale a cor incidental de um componente. Conferir os pares reais foreground/background e variantes light/dark e mobile, com resultado de contraste contextual e limitações. Exportar em formato interoperável W3C Design Tokens/DTCG quando apropriado, mantendo `DESIGN.md` como resumo e os valores de produção como autoridade. Em múltiplas páginas, reconciliar tokens globais, variações de tema e exceções, sem fazer média que destrua diferenças deliberadas. Um extrator automático não demonstra sozinho acessibilidade ou completude; se Dembrandt/Chromium/MCP não estiver disponível, use as fontes realmente acessíveis e marque cobertura parcial. Fonte: https://github.com/dembrandt/dembrandt (2026-10-17).
+
+## Reconstrução de contrato de design sem deriva documental
+
+Ao produzir `DESIGN.md` a partir de um produto existente:
+
+1. Escolher uma aplicação e uma família coerente de superfícies antes de investigar tokens.
+2. Traçar rota/layout → composição → componentes → variants → tokens aplicados; nomes parecidos ou arquivos próximos não comprovam uso efetivo.
+3. Identificar documentos atuais que realmente governam a superfície; não promover drafts ou padrões acidentais a decisões.
+4. Separar claramente **regra documentada**, **padrão observado**, **exceção justificada**, **divergência** e **proposta**.
+5. Documentar owners, fontes de evidência, estados e exceções sem copiar todos os valores do repositório.
+6. Validar o DESIGN.md contra componentes e visuais representativos; não modificar o produto quando a tarefa for somente documentação.
+
+Para auditorias contra o contrato, cada finding precisa de três provas: **contrato aplicável**, **caminho de execução até a superfície**, **correção determinada pela evidência**. Contradições percebidas em hierarquia, clareza e usabilidade exigem evidência visual ou de uso; suspeitas vindas apenas de busca textual não são findings.
+
+A distinção entre auditoria read-only, design handoff e implementação deve ser explícita. O usuário pode solicitar implementação, mas isso inicia uma etapa separada de mudança com validação.
+
+**Origem adaptada:** https://github.com/ibelick/ui-skills/blob/main/skills/create-design-md/SKILL.md e https://github.com/ibelick/ui-skills/blob/main/skills/improve-ui/SKILL.md
