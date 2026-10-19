@@ -149,3 +149,16 @@ Origem local: [runtime-ui-verification.docx](../runtime-ui-verification.docx).
 ## Matriz responsiva sincronizada (Responsively)
 
 Quando a mudança depender de breakpoints, criar uma **matriz de casos com pelo menos um viewport estreito, um intermediário e um largo**, acrescida de devices específicos do produto quando necessário. Para cada rota e fluxo crítico: repetir as mesmas ações e verificar navegação, entrada de texto, scroll, overlay, foco, touch, conteúdo cortado, containers com overflow e estados carregando/erro. Se o navegador suportar, executar a ação sincronizada em múltiplos viewports; caso contrário, reproduzir sequencialmente com dados/condições equivalentes. Capturas devem identificar device, viewport, zoom, estado, URL e passo. Uma captura bonita em desktop não certifica a versão mobile; cada dispositivo recebe PASS/FAIL/UNKNOWN e uma regressão descoberta volta para o mesmo caso após correção. O aplicativo Responsively e seu MCP são **ferramentas locais opcionais**, não recursos automaticamente disponíveis no ChatGPT. Fonte: https://github.com/responsively-org/responsively-app (2026-10-17).
+
+## Comparação visual com referência aprovada e evidência local
+
+Quando screenshots forem critério de aceite:
+1. Registrar a **referência aprovada** como alvo, distinguindo-a de um baseline histórico que pode estar errado.
+2. Fixar viewport, DPR, tema, rota, dados, estado, fontes, assets, timestamp/câmera quando relevantes. Capturas incomparáveis não permitem score de regressão.
+3. Comparar primeiro landmarks locais: recorte, texto, bordas, sombras, vazamento de efeitos, detalhes nas quatro direções e componentes adjacentes.
+4. Usar diffs de pixels, MAE/RMSE, heatmaps de bordas ou densidade somente como telemetria para localizar diferenças. Um score melhor não prova que o design está correto; imagens vazias podem gerar métricas enganosas.
+5. Classificar cada divergência como candidato melhor, baseline melhor, ambos incorretos ou evidência insuficiente; não aceitar apenas por semelhança global.
+6. Nunca ocultar detalhes, trocar crop ou atualizar a referência para forçar um teste verde. Documentar divergências aprovadas pelo usuário.
+7. Repetir inspeção visual após a correção, combinando com verificações de interação, rede e estado quando aplicáveis.
+
+**Origem (A/B, adaptado):** https://github.com/dzhng/skills/blob/main/skills/visual/compare-screenshots/SKILL.md. Não pressupõe subagentes nem executa pacotes `pixelmatch` de terceiros.
