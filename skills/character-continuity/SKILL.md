@@ -63,3 +63,15 @@ Os traços invariantes permanecem reconhecíveis nas cenas necessárias e qualqu
 
 ## Origem adaptada
 Metodologia consolidada de GenielabsOpenSource/style-consistency-ai, kart-io/picture-skills, jmilinovich/comicgen e StoryFox. Foram preservados atlas, closest-reference, character sheets, delta prompting e continuity checks; dependências específicas de modelos, APIs, scripts, Claude Code e treinamento foram removidas.
+
+## Identidade treinada por provedor externo
+
+Quando uma plataforma oferecer treinamento de identidade reutilizável a partir de fotografias:
+
+1. Diferenciar referência de rosto, atlas visual de personagem ilustrado e treinamento de modelo biométrico; usar o mecanismo mais leve que atenda à consistência.
+2. Exigir direito de uso e consentimento adequado das pessoas retratadas, esclarecer armazenamento, finalidade e eventuais custos antes de enviar imagens ou solicitar treinamento.
+3. Verificar disponibilidade concreta do conector, operação e modelo, em vez de assumir a CLI e flags de um fornecedor como ferramentas existentes.
+4. Se treino externo realmente for escolhido, registrar o identificador de referência de forma segura, variantes autorizadas e critérios de teste de consistência entre ângulos, cenas e vídeos.
+5. Falhas ou ausência de suporte exigem fallback explícito para imagens mestre/atlas. Nunca declarar um personagem treinado ou pronto sem confirmação do backend.
+
+**Origem metodológica:** https://github.com/higgsfield-ai/skills/blob/main/higgsfield-soul-id/SKILL.md; comandos de instalação por `curl | sh` deliberadamente não incorporados.
