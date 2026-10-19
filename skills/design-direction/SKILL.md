@@ -82,3 +82,19 @@ Quando precisar de fontes de inspiração, fluxos reais ou templates, consultar 
 ## Referências premiadas com evidência de design e motion
 
 Quando referências de sites premiados forem úteis, usar fonte observável como Awwwards (ou screenshots/DOM autorizados) para selecionar **2–5 candidatos por objetivo**, não por prestígio. Para cada candidato registrar URL, data, viewport, captura, paleta, tipografia, estrutura de seções, tecnologias observadas e o que não foi verificável. Comparar **sinais compartilhados vs. exceções** e converter em um brief com tese visual, plano de interação e evidências por decisão. Motion exige registro/captura própria: não inferir easing, duração, ScrollTrigger ou comportamento 3D de imagem estática. Investigar no máximo a estrutura e motion relevantes para o objetivo; respeitar reduced motion, teclado, touch, acessibilidade de conteúdo e custo de runtime. Não presumir que `awwwards-mcp`, índice FTS5, crawl, captura de pose 3D ou Playwright estejam instalados. Fonte: https://github.com/INSANE0777/Awwwards-mcp (avaliação 2026-10-17).
+
+## Gate de especificidade visual e autocritica (Anthropic frontend-design, 2026-10-19)
+
+Em projetos visuais novos ou redesenhos substanciais, executar uma checagem curta **antes de implementar**:
+
+1. Derivar a assinatura visual do assunto, do publico, do conteudo real e da tarefa principal. O hero deve mostrar primeiro a caracteristica mais propria desse universo, podendo ser texto, imagem, demonstracao ou interacao, e nao necessariamente uma metrica com gradiente.
+2. Formular em dois passes uma proposta compacta: 4–6 cores nomeadas quando fizer sentido, papeis tipograficos e escala, gramática de layout/alinhamento, wireframe textual minimo e postura de movimento. Revisar a proposta perguntando: "Se eu trocasse o nome deste produto pelo de um concorrente, esta pagina permaneceria praticamente igual?" Se sim, revisar antes de codar.
+3. Testar cada marca estrutural (borda, rotulo, numero, separador e card): ela codifica hierarquia, agrupamento ou sequencia real? Numerar somente sequencias reais; evitar metadados decorativos repetidos.
+4. Fazer uma **checagem de defaults gerativos** sem transformar tendencias em proibicoes: repeticao de cards identicos, sombras e raios universais, fundos escuros com acento neon sem motivo, tons creme/terracota como receita, serif editorial deslocada do dominio, caps tracking em todos os rotulos, setas ornamentais e realce isolado de uma palavra no titulo. Qualquer escolha pode permanecer quando houver razao do briefing.
+5. Concentrar ousadia em um elemento principal reconhecivel; reduzir ornamentos concorrentes. Usar animacao automatica apenas para comunicar um momento intencional; preferir motion reativo a acoes e estados a revelacoes repetitivas em todas as secoes.
+6. Revisar microcopy sob a perspectiva do usuario: nomear tarefas e controles de forma direta, manter verbo da acao coerente com feedback de sucesso, e tornar estados vazios e erros orientados a recuperacao.
+7. Durante build, revisar conflitos de especificidade CSS e espacamento entre seletores; depois conferir mobile, foco visivel, reduced motion, contraste, conteudo longo e render real quando disponivel. Capturas isoladas nao comprovam funcionamento.
+
+**Regra de ownership:** este gate complementa design-direction; a implementacao, a tipografia efetiva e o QA de runtime pertencem a web-design-engineer e aos owners especializados. Nao criar um novo owner frontend-design para o mesmo ciclo.
+
+**Fonte:** https://github.com/anthropics/claude-code/blob/main/plugins/frontend-design/skills/frontend-design/SKILL.md (consulta 2026-10-19). Metodo absorvido sem executar Claude Code, instalar plugin ou assumir screenshots/browser externos.
