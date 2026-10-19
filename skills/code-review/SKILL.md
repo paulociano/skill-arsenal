@@ -92,3 +92,15 @@ Em revisões com múltiplos arquivos, construir inventário a partir do diff/esc
 Separar julgamento do finding de sua localização: confirmar caminho, símbolo, lado/revisão do diff e trecho atual antes de entregar. Reabrir a fonte para tentar refutar o defeito e verificar consequência; remover duplicatas e observações sem impacto sustentado. Ausência de findings não prova ausência de defeitos.
 
 Método refinado a partir de [alibaba/open-code-review](https://github.com/alibaba/open-code-review). Não exige CLI, subagentes ou envio de código a provedor externo; alegações de custo/precisão da fonte precisam de avaliação no workload real.
+
+## Controle explícito de scope creep (2026-10-19)
+
+Em PRs/diffs maiores que o objetivo declarado, acrescentar inspeção de **escopo**, separada de qualidade do código:
+
+1. Congelar uma frase de intenção do usuário/issue/PR antes de classificar arquivos.
+2. Inventariar subsistemas tocados, dependências novas, API pública renomeada, alterações em config/CI/build, hunks grandes e formatação incidental.
+3. Tratar correspondência de palavras entre paths e intenção como triagem fraca, não prova de pertinência; examinar a relação semântica com o comportamento solicitado.
+4. Para cada item suspeito, decidir **KEEP** (necessário), **SPLIT** (independente) ou **JUSTIFY** (mudança transversal exigida por invariante). Nomear arquivo, trecho, risco e destino.
+5. Não reverter, editar, reestagiar nem dividir commits apenas para satisfazer a auditoria. Escopo correto não prova correção, segurança ou testes suficientes.
+
+Fonte: https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/agent_skills/scope-creep-detector . Método adaptado sem executar o script `scope_creep.py` ou assumir Git local disponível.
