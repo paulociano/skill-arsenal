@@ -109,3 +109,16 @@ Avaliar portfólios como sistemas de exposição, risco e objetivos, distinguind
 ## Provenance
 
 Consolidada de Riskfolio-Lib, PyPortfolioOpt, QuantStats, backtesting/portfolio libraries e workflows de wealth-management/portfolio-rebalance de open-financial-agents.
+
+## Revisão longitudinal de tese e evidência
+
+Quando o usuário fornecer duas fotografias temporais de pesquisa ou carteira, comparar apenas observações realmente comparáveis:
+
+1. Identificar ativo, fonte, revisão, data/hora, moeda, janela, metodologia de score e premissas de cada snapshot.
+2. Classificar alterações em fatos verificáveis, opinião de analistas, inferências, tese, riscos e lacunas de dados; não confundir mudança de preço com validação de uma tese.
+3. Tornar explícitas alterações de metodologia, cobertura, versão ou universo que impeçam comparação direta; nesses casos, registrar `não comparável` em vez de fabricar deltas.
+4. Para notícia ou relatório, separar evento reportado, ativo afetado, mecanismo causal hipotético, evidência contrária e próximos checkpoints.
+5. Informar o que mudou, o que continua incerto, qual premissa da tese precisa ser revisitada e qual evidência futura discriminaria as hipóteses.
+6. Não tratar scores proprietários como equivalentes e não trocar chamadas pagas por dados de demonstração. Um provider como AlphaGBM depende de acesso real, autorização de consumo e backend disponível. Nunca executar trades a partir da revisão.
+
+**Origem adaptada:** https://github.com/AlphaGBM/skills/blob/main/skills/core/alphagbm-investment-review/SKILL.md e https://github.com/AlphaGBM/skills/blob/main/skills/core/alphagbm-news-impact/SKILL.md.
