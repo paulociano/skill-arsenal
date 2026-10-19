@@ -125,3 +125,17 @@ Boas propriedades:
 Consolidada de Hypothesis e Testcontainers. Absorve property-based testing, shrinking e dependências reais descartáveis sem exigir Python, Java, Docker ou bibliotecas específicas.
 
 Playwright acrescentou princípios de browser isolation, auto-wait/web-first assertions, locators orientados à superfície do usuário e traces de falha. Schemathesis reforçou schema-derived/property/stateful API testing; Pact reforçou consumer/provider contracts; WireMock, MockServer e Karate reforçaram service virtualization e fault-aware integration testing. A skill continua framework-agnostic e não exige essas ferramentas.
+
+## Gate de qualidade para testes gerados por agentes (2026-10-19)
+
+Depois de criar ou modificar testes com auxílio de IA, fazer revisão separada da produção, focada em **capacidade de detectar regressão**:
+
+1. Para cada teste, declarar comportamento/invariante que deveria falhar se o sistema estivesse errado; remover testes tautológicos ou que apenas confirmem mocks.
+2. Preferir mocks nos limites externos; não mockar o próprio estado, algoritmo ou unidade sob teste a ponto de tornar o resultado predeterminado.
+3. Inspecionar assertions de efeitos observáveis, estados de erro, concorrência, permissões e casos negativos relevantes; evitar assertions de detalhes internos sem contrato.
+4. Consolidar casos duplicados por parametrização quando isso preservar clareza; não otimizar contagem de testes como objetivo.
+5. Se possível, fazer teste de sensibilidade seguro (mutação local ou defeito controlado) e confirmar que a suíte falha; sem execução, registrar apenas a hipótese.
+6. Preservar regressões de defeitos reais e comparar o teste à spec, não à implementação atual potencialmente incorreta.
+7. Separar **teste escrito**, **teste executado**, **teste aprovado** e **defeito efetivamente detectável**; não inferir os últimos estados dos primeiros.
+
+**Proveniência:** [amElnagdy/guard-skills](https://github.com/amElnagdy/guard-skills), especialmente a metodologia `test-guard` descrita no README consultado em 2026-10-19. Adaptação apenas metodológica, sem instalar Skills CLI, executar código externo ou pressupor agente independente.
