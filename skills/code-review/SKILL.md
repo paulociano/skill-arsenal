@@ -104,3 +104,19 @@ Em PRs/diffs maiores que o objetivo declarado, acrescentar inspeção de **escop
 5. Não reverter, editar, reestagiar nem dividir commits apenas para satisfazer a auditoria. Escopo correto não prova correção, segurança ou testes suficientes.
 
 Fonte: https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/agent_skills/scope-creep-detector . Método adaptado sem executar o script `scope_creep.py` ou assumir Git local disponível.
+
+## Triagem adversarial e quality gate por evidência (2026-10-19)
+
+Para revisões de alto risco, executar uma segunda passagem tentando **refutar** cada achado material antes de publicá-lo:
+
+1. Definir inventário do escopo e fronteiras de confiança; registrar arquivos/fluxos inspecionados, excluídos e pendentes.
+2. Formular hipótese de falha e caminho de execução ou entrada que a alcança; separar possibilidade teórica de caminho demonstrado.
+3. Procurar controles compensatórios, validações em callers, testes, permissões e condições que invalidem a hipótese.
+4. Quando viável e autorizado, propor teste mínimo de reprodução; não declarar execução ou exploração sem evidência real.
+5. Deduplicar por causa raiz e graduar P0–P3 por impacto, explorabilidade/probabilidade e alcance, sem inflar severidade por padrão de estilo.
+6. Entregar finding com **alvo e versão/commit, localizador, evidência, condição de disparo, impacto, confiança, correção mínima, teste de regressão e status de verificação**.
+7. Aplicar gate: **confirmado**, **provável**, **não verificado** ou **refutado**; não apresentar suspeita como vulnerabilidade comprovada. Registrar ausência de cobertura explicitamente.
+
+Em codebases com dívida técnica, procurar sinais estruturais além de lint: responsabilidades misturadas, acoplamento crescente, abstrações sem benefício, invariantes implícitas e caminhos de mudança com alto blast radius. Cada recomendação de refatoração precisa indicar custo de manutenção observado e teste de preservação de comportamento; não prescrever reescrita baseada apenas em preferência arquitetural.
+
+**Proveniência e limites:** metodologia inspirada em [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) (auditoria em fases e verificação independente) e [hyhmrright/brooks-lint](https://github.com/hyhmrright/brooks-lint) (diagnóstico de deterioração de engenharia). Apenas princípios portáveis foram absorvidos; nenhum instalador, scanner, agente externo ou modo auto-fix é assumido disponível. A descrição dos projetos foi verificada no GitHub em 2026-10-19; esta adaptação não equivale a benchmark ou validação experimental das ferramentas originais.
