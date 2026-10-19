@@ -66,3 +66,15 @@ Use `brand-logo-exploration` para logos, `voice-builder` para aprofundar voz e `
 
 ## Origem adaptada
 Metodologia inspirada em `arnabbagxd/Brand-building-skills`, condensando brand strategy, positioning e voice em uma skill estratégica menor e baseada em evidência.
+
+## Verificação intercultural de nomes
+
+Quando o trabalho incluir naming para mais de um idioma ou mercado:
+
+1. Fixar promessa da marca, tom esperado, público, língua de origem e mercados-alvo antes de gerar nomes.
+2. Avaliar significado literal e gírias locais, pronúncia, escrita após escuta, conotações, associação indesejada, memorabilidade e diferenciação em cada idioma.
+3. Distinguir afirmação cultural verificada de inferência; para conotações desconhecidas, consultar falantes nativos ou fontes atuais antes de aprovar.
+4. Tratar disponibilidade de domínio, marca registrada e perfis sociais como verificações independentes; não presumir registro ou exclusividade apenas por busca superficial.
+5. Preservar autenticidade linguística quando isso fizer parte do posicionamento, sem impor anglicização genérica.
+
+**Origem adaptada:** https://github.com/alirezarezvani/claude-skills/blob/main/marketing-skill/skills/business-name-fit/SKILL.md.
