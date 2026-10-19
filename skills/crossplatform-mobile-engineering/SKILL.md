@@ -121,3 +121,15 @@ Origem local: [crossplatform-mobile-engineering.docx](../crossplatform-mobile-en
 Se o projeto já usa ou avalia um kit universal como Tamagui, compare custo de manter componentes/tokens compartilhados com requisitos reais de web, iOS e Android. Distinga API comum de comportamento idêntico: semântica HTML, acessibilidade, hover/focus, teclado, medidas responsivas e primitives nativas ainda exigem validações por plataforma. Quando houver compilador que transforma estilos em CSS/Views otimizados, verifique artefatos de produção e bundle/performance com e sem compilação; não presuma que todo componente será otimizado. Adote gradualmente quando a economia de manutenção superar migração e lock-in, preservando tokens semânticos e contratos canônicos. Não incluir Tamagui automaticamente em projetos existentes nem executar starter/instalador sem necessidade.
 
 Referência: https://github.com/tamagui/tamagui (README consultado em 2026-10-18). Metodologia de seleção absorvida, sem dependência obrigatória.
+
+## Heurísticas React Native/Expo por custo medido (Vercel, 2026-10-19)
+
+Em trabalho React Native/Expo, organizar inspeções específicas por impacto: listas grandes, scroll e imagens primeiro; animação e navegação depois; estado/render e arquitetura conforme evidência.
+
+- Listas: medir jank e memória, escolher virtualização apropriada (FlashList somente se instalada/adequada), item types estáveis, células baratas e imagens dimensionadas/cacheadas; não espalhar `memo` e `useCallback` sem perfil.
+- Animação/gestos: separar cálculos frequentes de render JS quando possível, preferir transform/opacity e validar Reanimated/gestures na versão e no device reais.
+- Platform ergonomics: safe areas, content insets, teclado, back behavior, menus, modais e navegação nativa onde melhor servir o fluxo. Não substituir acessibilidade por conveniência de API.
+- Monorepo: dependências nativas devem ser resolvíveis pelo pacote de app, sem cópias divergentes e sem transformar organização da pasta em requisito universal.
+- React Compiler, `expo-image`, Galeria, NativeWind e outras libs mencionadas por guias externos dependem de versão e disponibilidade; não adotar automaticamente.
+
+**Fonte:** https://github.com/vercel-labs/agent-skills/tree/main/skills/react-native-skills . Checklist contextual, sem instalar agentes ou pacotes.
