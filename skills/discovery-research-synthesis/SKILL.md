@@ -62,3 +62,15 @@ Combina com `kb-retriever` para localizar evidências, `jtbd-framing` para uma l
 Adaptada de [rampstackco/claude-skills · discovery-research-synthesis](https://github.com/rampstackco/claude-skills/tree/main/skills/discovery-research-synthesis).
 
 Origem local: [discovery-research-synthesis.docx](../discovery-research-synthesis.docx).
+
+## Entrevista comportamental sem validação de cortesia
+
+Em discovery e validação inicial, não confundir elogios, declarações de intenção e ideias de funcionalidades com evidências de necessidade ou compra.
+
+1. Perguntar sobre a **última ocorrência concreta** do problema, a solução improvisada ou ferramenta usada, frequência observada e custos reais em dinheiro, tempo e esforço.
+2. Perguntar pelas alternativas atuais e pelos motivos de adoção ou abandono, evitando induzir resposta positiva para a solução idealizada.
+3. Registrar separadamente comportamento passado, opinião, intenção futura e compromisso verificável (por exemplo retorno agendado ou piloto aceito).
+4. Não tratar todo entrevistado como representante da população nem transformar compromisso em venda realizada.
+5. Atualizar o mapa de premissas e incluir evidência contrária; não forçar nota universal `7/7` ou porcentagem de fala quando não há transcrição confiável.
+
+**Origem adaptada:** https://github.com/wondelai/skills/blob/main/plugins/product-strategy/skills/mom-test/SKILL.md.
