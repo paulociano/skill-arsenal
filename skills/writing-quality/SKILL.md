@@ -101,3 +101,11 @@ Checks são sinais, não proibições universais.
 Síntese própria do Arsenal, complementada por Anbeeld/WRITING.md, proselint, write-good, alex, textlint/retext, 18F Content Guide e práticas de technical writing.
 
 Origem local: writing-quality.docx.
+
+## Revisão editorial de documentação técnica (Vercel, 2026-10-19)
+
+Quando o texto for documentação técnica, classificar explicitamente tutorial, how-to, referência, explicação ou troubleshooting antes de auditar. Revisar se títulos correspondem à tarefa do leitor, pré-requisitos e passos produzem resultados verificáveis, exemplos/código são completos e versionados, placeholders não confundem comandos reais, números e unidades são coerentes, e claims de custos/pricing têm fonte e ressalvas. Oferecer findings com evidência e localização, sem reescrever silenciosamente.
+
+A especificação de voz da Vercel é uma **referência organizacional**, não uma política universal: não copiar banimentos de palavras, preferências de markdown ou imposições de TypeScript como regra global. Preserve a voz do projeto e estilos explicitamente aprovados.
+
+Fonte: https://github.com/vercel-labs/agent-skills/tree/main/skills/writing-guidelines ; conteúdo externo atualizado: https://raw.githubusercontent.com/vercel-labs/writing-guidelines/main/command.md . Nenhum WebFetch obrigatório nem template Vercel foi instalado.
