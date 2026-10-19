@@ -247,3 +247,18 @@ Em sistemas de memória, separar Chat (fatos, episódios, resumos e intenções)
 Em projetos de software, quando uma memória descreve comportamento de função/classe específica, vincule a afirmação ao identificador de símbolo, arquivo, intervalo observado e versão/commit da evidência. A cada alteração do símbolo, marque a memória associada como **potentially stale** e revalide-a antes de recuperar como descrição corrente; alterações em outras partes do arquivo não devem invalidar tudo automaticamente. Preserve decisões históricas como fatos de época, não como afirmações do código atual. Combine evidência de grafo de chamadas/imports com trechos citados e orçamento de contexto explícito. A associação automática por nome pode apontar ao símbolo errado: confirme definições e resoluções ambíguas. Só habilite captura de sessões, hooks Git, alterações em AGENTS.md ou servidores MCP após autorização e inspeção de arquivos afetados. Ferramentas de indexação como Graphicle são opcionais, não presumidas instaladas.
 
 Proveniência: https://github.com/Graphicle-AI/graphicle (README consultado em 2026-10-18). Metodologia absorvida; sem importar binário, hooks ou servidor.
+
+## Compressão incremental hierárquica e recuperação reversível
+
+Para sessões longas em **agentes cujo runtime permita controlar o contexto**, considerar compressão seletiva em camadas sem confundi-la com memória durável:
+
+1. Preservar o registro bruto autorizado como evidência; resumo não substitui arquivo ou trace canônico.
+2. Compactar apenas intervalos estáveis/consumidos, mantendo identificadores, provenance, decisions, invariants e referências para restauração exata.
+3. Produzir sumários incrementais e hierárquicos; evitar reescrever indiscriminadamente o prefixo estável do prompt quando caching for relevante.
+4. Manter operações conceituais separadas: `compress` (resumir range), `decompress` (restaurar referência original), `search_context` (localizar conteúdo inclusive comprimido) e `status` (visibilidade de uso e cobertura).
+5. Fazer retrieval progressivo sob demanda: índice curto → resumo → trecho completo → evidência bruta. Se a fonte completa não puder ser restaurada, assinalar a perda de fidelidade em vez de fingir reversibilidade.
+6. Avaliar retenção factual, recall em tarefas intercaladas, custo em tokens, taxa de acerto de citações, impacto em cache e falhas por janela de contexto, sempre contra baseline comparável; alegações de economia do fornecedor não são benchmark próprio.
+7. Tratar a camada proxy como um novo limite de confiança: ler a política de credenciais, logs, TLS, rede e retenção antes de redirecionar tráfego do modelo. Não usar MITM, alterar certificados, instalar daemons nem interceptar fluxos sem revisão explícita.
+8. No ChatGPT, **não presumir acesso ao stream interno, base URL do modelo, callbacks de compactação ou implementação automática de compress/decompress**. O equivalente portátil é snapshot/handoff com fonte versionada, busca seletiva nos arquivos acessíveis e expansão sob demanda. Em clientes CLI compatíveis, qualquer runtime externo requer validação e instalação separadas.
+
+**Origem e limite:** arquitetura conceitual de https://github.com/ranxianglei/billion-context (README, consultado em 2026-10-19). O projeto é um proxy TypeScript com `acp-kernel` e integrações para agentes de código; seu runtime não foi instalado nem validado nesta skill. A fonte divulga economia de até 5× e sessões com bilhões de tokens cumulativos, claims que dependem da metodologia e do ambiente e não devem ser universalizados. A licença contém condição adicional de atribuição visível ao incorporar o software, exigindo revisão antes de redistribuir código.
