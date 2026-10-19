@@ -87,3 +87,16 @@ Não usar `NO-GO` como default absoluto nem inferir “entusiasmo alto”/estado
 Mapa de assumptions e estrutura outcome→opportunity→solution→experiment adaptados de https://github.com/phuryn/pm-skills. Fórmulas de priorização da fonte não foram adotadas como verdade automática; usar evidência e experimento conforme `experiment-design`.
 
 Origem local: [idea-refine.docx](../idea-refine.docx).
+
+## Descoberta orientada a evidência e portfólio de projetos
+
+Quando o usuário quer escolher o que construir, usar a menor versão aplicável do seguinte loop:
+
+1. Enunciar um **outcome observável** e separar oportunidades na linguagem do usuário (dor, desejo, trabalho a realizar) de funcionalidades propostas.
+2. Montar uma Opportunity Solution Tree simplificada: `outcome → opportunities → solutions alternativas → experimentos`. Evidência de entrevistas, tickets ou métricas deve acompanhar cada oportunidade; hipóteses não validadas permanecem rotuladas.
+3. Formular as poucas premissas que sustentam a decisão, incluindo valor, distribuição, viabilidade e factibilidade; não adotar pontuações ou matrizes de risco numéricas sem escalas consistentes.
+4. Para premissas críticas, formular `falha se...`, a evidência mais barata que pode falsificá-las e um critério explícito para matar, pivotar ou reduzir a ideia. Representar também os argumentos favoráveis.
+5. Quando a meta for **aprendizado em programação ou portfólio**, e não mercado, formular o exercício com objetivo, histórias de usuário mínimas, restrições técnicas, casos de erro, desafios opcionais e níveis progressivos. Não vender um exercício didático como oportunidade comercial validada.
+6. Fechar com o menor slice testável, aceitação observável e próximo passo, sem converter listas de app-ideas em produto automaticamente.
+
+**Origens adaptadas:** https://github.com/phuryn/pm-skills/blob/main/pm-product-discovery/skills/opportunity-solution-tree/SKILL.md ; https://github.com/phuryn/pm-skills/blob/main/pm-execution/skills/strategy-red-team/SKILL.md ; https://github.com/florinpop17/app-ideas.
