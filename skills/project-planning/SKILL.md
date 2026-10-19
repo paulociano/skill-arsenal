@@ -59,3 +59,18 @@ Sintetiza práticas observadas em britt/agent-skills, borghei/Claude-Skills, jan
 Em ideias de novos produtos, SaaS e mudanças de funcionalidades ainda não aprovadas, faça primeiro uma revisão curta da necessidade e dos riscos antes de especificar implementação. Distinga demanda e comprador, alternativa atual, distribuição/aquisição, diferencial verificável, custo de manutenção e hipótese de falha mais provável. Dê um veredito operacional: `construir pequeno`, `validar primeiro`, `pivotar primeiro` ou `não construir ainda`, com um teste barato e observável para reduzir a incerteza dominante. Para produto interno, portfólio ou aprendizado, avalie propósito e escopo, não imponha arbitrariamente critérios de tração comercial. Não bloqueie implementação rotineira já decidida e não transforme esse gate em questionário longo. Evidência insuficiente deve ser marcada como hipótese.
 
 Origem complementar: https://github.com/bin1874/before-you-build-skill; metodologia absorvida sem `npx`, install ou Case Memory externo.
+
+## Pipeline RPI com decisões persistentes
+
+Para mudanças complexas em software, use *research → design → implement* somente na profundidade exigida:
+
+1. **Research**: perguntas ainda abertas, mapa de componentes e dependências, evidência citada por arquivo/commit; não começar a implementar de suposições.
+2. **Design**: escolher a forma proporcional ao risco: discussão de trade-offs, PRD, desenho técnico ou TDD. Registrar decisões e alternativas rejeitadas.
+3. **Implementation outline**: decompor em slices testáveis, arquivos/owners, dependências, riscos e critérios de aceite.
+4. **Implement**: mudar apenas escopo acordado, testar, revisar e registrar diferenças entre design e entrega.
+5. **Continuity**: persistir artefatos em pasta de tarefa definida pelo projeto com origem/revisão dos repositórios, pontos resolvidos, pendências e próximo passo. Retomar a partir da última decisão válida, sem recriar documentos existentes.
+6. Separar criação de documento, iteração e implementação; manter handoff autocontido quando mudar de sessão.
+
+Não exigir subagentes, comandos `/rpi` ou `$rpi`, nem diretório `.agents/artifacts` quando o runtime ou projeto não os comportar. Não interromper tarefas claras apenas para perguntar qual formato de fluxo o usuário deseja.
+
+**Origem adaptada:** https://github.com/humanlayer/skills/blob/main/plugins/rpi/skills/rpi/SKILL.md
