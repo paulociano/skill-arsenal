@@ -46,3 +46,16 @@ Entregue:
 
 ## Origem adaptada
 Metodologia inspirada em `mattpocock/skills`, especialmente `codebase-design` e `improve-codebase-architecture`, sem dependência de subagentes, Tailwind, Mermaid ou comandos locais específicos.
+
+## Composição de interfaces React (Vercel, 2026-10-19)
+
+Quando a API de um componente React acumular props booleanas e combinações inválidas, avaliar uma refatoração para variantes explícitas e compound components. O critério é reduzir o número de estados implícitos e a complexidade que vaza para callers, não eliminar booleanos sempre.
+
+- Definir primeiro estados permitidos, slots, ownership do estado e contrato acessível.
+- Usar compound components/contexto quando subcomponentes realmente compartilham contrato e ciclo de vida; não criar provider para componente trivial.
+- Isolar provider/interface de estado e ações para que consumidores não dependam dos detalhes da implementação, quando houver valor concreto de testabilidade ou reutilização.
+- Preferir children/composição ou variantes explícitas quando render props ou muitos switches escondem o comportamento; preservar ergonomia de tipagem e depuração.
+- Validar versão React antes de recomendar APIs 19+ e migração de `forwardRef`/contexto; não tratar heurística de versão futura como obrigação universal.
+- Testar combinações válidas, accessibility names/roles, rerenders e regressões dos consumers antes de declarar melhoria.
+
+**Fonte:** https://github.com/vercel-labs/agent-skills/tree/main/skills/composition-patterns . Owner é arquitetura de código; não criar skill paralela específica de composição.
