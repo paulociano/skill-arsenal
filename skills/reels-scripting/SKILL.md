@@ -33,3 +33,9 @@ Usar vídeo acessível, frames ou transcrição e a skill watch-video conforme a
 [GitHub · charlie947/social-media-skills · reels-scripting](https://github.com/charlie947/social-media-skills/tree/main/skills/reels-scripting)
 
 Origem local: [reels-scripting.docx](../reels-scripting.docx).
+
+## Primeiro quadro e hipótese visual (lote 30 repositórios, 2026-10-19)
+
+Antes de fechar o roteiro, propor um primeiro quadro com ação visual concreta, assunto imediatamente identificável e texto curto legível sem som; evitar intro de logo ou cartela parada quando a narrativa depende de retenção inicial. Descrever o que aparece em 0–3 s, como o movimento se conecta à promessa, a sequência de beats e o payoff. Se a peça usa personagens recorrentes, fazer a ação deles avançar a explicação em vez de decoração repetida. Entregar variante de primeiro quadro estático quando o objetivo ou acessibilidade pedir. Tratar evidências observacionais de outros criadores como hipóteses, não garantia de viralização; nunca copiar imagens, marcas ou roteiros protegidos.
+
+Fonte metodológica: https://github.com/Ootto-AI/claude-content-skills/tree/main/skills/virality . Resultados numéricos divulgados pelo autor não foram auditados independentemente.
