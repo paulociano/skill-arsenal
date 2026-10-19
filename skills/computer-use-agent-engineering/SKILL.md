@@ -162,3 +162,17 @@ Consolidada de [trycua/cua](https://github.com/trycua/cua), [simular-ai/Agent-S]
 ## Superfícies virtuais para agentes visuais (yomado)
 
 Em desktop nativo, display virtual só deve ser considerado após verificar SO, permissões, ferramenta de screenshot/input real e janelas selecionadas. Dar nome ao workspace, registrar estado/geometria original e demonstrar screenshot fresco mais ação concreta antes de avançar. Display na mesma sessão não isola foco, teclado, mouse, clipboard, filesystem nem contas. Coordenar interferência com humano/outros agentes e restaurar janelas ao terminar, inclusive falhas. Testar separadamente fechamento, múltiplos displays e monitor desligado; uma demo limitada não prova estabilidade desassistida. Fonte: https://github.com/chekusu/yomado (2026-10-18), protótipo macOS com APIs privadas, não presente neste runtime.
+
+## Diagnóstico por trace em automações de navegador (Browserbase, 2026-10-19)
+
+Quando houver um navegador realmente controlável e captura autorizada de eventos, usar traces como evidência complementar à trajetória de ações:
+
+1. **Capture**: isolar run id, URL/origin e janela temporal; observar eventos de network, console, runtime, navegação, DOM e screenshot sem instalar automaticamente CDP listeners ou abrir portas de depuração.
+2. **Correlate**: associar ação, target, request/response, mudança DOM, screenshot, falha, retry e postcondition por timestamp e identificador de sessão.
+3. **Bisect**: segmentar o trace por páginas/estados, buscar primeiro eventos pertinentes à falha e diferenciar erro de interface, erro de rede, auth e target desatualizado.
+4. **Hypothesis**: ancorar causa provável em evidências, separar observação e inferência, reproduzir no mesmo estado e verificar depois da correção. Ausência de evento não demonstra ausência de bug quando trace é parcial.
+5. **Derived API**: só em sistemas autorizados, extrair endpoints observados em traces, com path templating e esquema amostral; toda OpenAPI gerada é **observacional/incompleta**, não contrato oficial nem permissão de invocar interfaces não documentadas.
+6. **Privacy**: mascarar cookies, auth headers, request/response bodies, dados pessoais e tokens antes de persistir/exportar; traces e dumps podem conter credenciais mesmo quando o script não pretende coletá-las.
+7. **Portabilidade**: não presumir Node, `browse`, Browserbase, Stagehand, CDP, browser remoto, proxies ou capacidade de interceptar tráfego no ChatGPT. Sem observação real, entregar plano de instrumentação e marcar execução como não verificada.
+
+Fontes: https://github.com/browserbase/skills/tree/main/skills/browser-trace e https://github.com/browserbase/skills/tree/main/skills/browser-to-api . Princípios adaptados, sem copiar scripts ou instalar serviços.
