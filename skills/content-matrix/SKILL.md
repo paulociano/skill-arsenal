@@ -160,3 +160,11 @@ Metodologia de hooks e repurposing enriquecida a partir de:
 - https://github.com/rediumvex/viral-hooks-skill
 
 Adaptada para evitar scores preditivos, dependências específicas de agentes e fórmulas tratadas como garantias de performance.
+
+## Laboratório de hooks com hipótese explícita (lote 30 repositórios, 2026-10-19)
+
+Quando a tarefa pede alternativas de abertura, produzir até 10 hooks distribuídos entre curiosidade legítima, tensão/risco real, desejo concreto, prova documentada e contraste sustentado (2 por família quando pertinente). Cada opção deve conter: texto, público, promessa entregável, prova necessária, encaixe no formato e motivo editorial de seleção. A ausência de dados de prova não autoriza inventar estatísticas ou depoimentos: trocar por observação verificável, pergunta ou demonstração. Não usar medo fabricado nem urgência falsa. Para adaptar a outro canal, conservar afirmações verificadas e reconstruir ritmo, abertura e CTA, em vez de copiar a legenda.
+
+Em copy de oferta, passar por Research (necessidades/linguagem com fonte), Mechanism (como a solução funciona, sem inventar diferencial), Brief (audiência, objeções, ação, provas) e Copy (texto + revisão). Este é um processo, não um requisito de ferramenta externa. Em finanças, nunca prometer retorno, prazo ou economia sem fundamento.
+
+Fontes metodológicas: https://github.com/coleschaffer/copywritingskills-rmbc ; https://github.com/namddp/social-media-agent-skills ; https://github.com/inklate/social-skills .
