@@ -164,3 +164,20 @@ Inspirado na fábrica demonstrativa `PromtEngineer/software-factory`:
 7. **Limites**: não equiparar relato de benchmark do projeto a garantia de qualidade; preservar independência do teste. Quando o usuário não dispõe de runtime isolado, executar apenas as etapas comprovadamente suportadas.
 
 **Proveniência complementar:** https://github.com/PromtEngineer/software-factory (README, src/factory.ts, src/upstash.ts, src/integrate.ts, src/score.ts descritos no projeto; avaliação de 2026-10-15). Tecnologia de referência: Node 22+, Claude Code, Upstash Box, GitHub e Context7. Esses componentes não são pressupostos como instalados, e nenhum script do projeto foi executado na avaliação.
+
+## Loop de melhoria por controle mensurável
+
+Quando a fábrica automatizar manutenção **recorrente e incremental** de um codebase, desenhar explicitamente um feedback loop:
+
+- **Set point:** propriedade e escopo a melhorar, com alvo observável, por exemplo reduzir ocorrências de uma regra legada.
+- **Sensor:** medição repetível (lint, teste, AST, telemetria ou consulta), com versão, baseline e falhas detectáveis.
+- **Controller:** seleção do menor incremento útil com prioridade, orçamento de mudança e back-pressure.
+- **Actuator:** agente ou script executando a mudança sob charter de permissões, padrão exemplar e gates de teste.
+- **Disturbances:** alterações concorrentes, mudanças de dependências e outros elementos que alteram a medição.
+- **Dampener opcional:** quality gate que impede regressão em PRs mesmo antes do objetivo final.
+
+Validar sensor e controller isolados antes de automatizar. Exigir PR/revisão humana para efeitos relevantes, controle de credenciais, idempotência e parada em caso de medição inconsistente. Uma automação agendada só existe se runner, credenciais, workflows e permissões estiverem realmente provisionados e testados.
+
+Não instalar um agente headless ou escrever GitHub Actions apenas porque o padrão externo os sugere; adaptar ao runtime real e ao escopo do repositório.
+
+**Origem adaptada:** https://github.com/humanlayer/skills/blob/main/plugins/design-control-loop/skills/design-control-loop/SKILL.md
