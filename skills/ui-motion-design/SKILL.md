@@ -141,3 +141,20 @@ Em projetos React/Next.js que suportem a API na versão realmente instalada, con
 7. Respeitar reduced-motion, navegação por teclado, history/back-forward, estados de erro, fallback sem animação e interrupções.
 
 **Fonte:** https://github.com/vercel-labs/agent-skills/tree/main/skills/react-view-transitions . Adaptada como decisão de motion independente do runtime Vercel ou de uma versão presumida do React.
+
+## Diagnóstico de jank por mecanismo de renderização
+
+Ao investigar animações lentas ou travadas, separar trabalho de **layout**, **paint** e **compositing** antes de trocar de biblioteca. Aplique apenas quando o caso envolver motion real ou revisão de performance:
+
+1. Reproduzir a transição no runtime, identificar duração, área afetada, scroll, input e condição de interrupção. Não declarar jank a partir do código sem evidência.
+2. Preferir transform/opacity quando reproduzirem a intenção; para mudanças de layout isoladas, considerar FLIP e medir posições uma vez, evitando leituras/escritas de layout intercaladas no mesmo frame.
+3. Para animação dirigida por scroll, considerar CSS Scroll/View Timelines onde suportadas e IntersectionObserver para visibilidade; evitar loops que consultam continuamente scrollTop/scrollY.
+4. Verificar camadas compositoras e `will-change`: promover apenas quando necessário, durante a animação, sem multiplicar layers grandes.
+5. Tratar blur, filters, masks e backgrounds animados como potencial custo de paint, sobretudo em superfícies extensas; testar alternativas menos custosas.
+6. Evitar loops rAF sem critério de parada e colisão entre bibliotecas que medem ou alteram layout simultaneamente.
+7. Preservar a biblioteca já adotada quando apropriada. Não migrar Motion, GSAP, CSS ou WAAPI somente para satisfazer uma regra estilística de fonte externa.
+8. Validar em runtime com profiling quando disponível, incluindo viewport estreito, reduced motion e possibilidade de interromper/reverter.
+
+Regras absolutas da fonte externa são **heurísticas condicionais**, não proibições universais: transições de layout ou paint podem ser adequadas em superfícies pequenas e isoladas quando medidas e justificadas.
+
+**Origem adaptada:** https://github.com/ibelick/ui-skills/blob/main/skills/fixing-motion-performance/SKILL.md
