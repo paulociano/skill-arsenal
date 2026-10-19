@@ -121,3 +121,16 @@ Quando ferramentas de SEO estiverem conectadas e autorizadas, coletar backlinks,
 ## Precisão do Search Console e limites de analytics (ComposioHQ 332–431, 2026-10-15)
 
 Distinguir propriedades URL-prefix (protocolo e barra final) de propriedades de domínio (`sc-domain:`), registrar propriedade, país, dispositivo e intervalo temporal. Métricas recentes podem estar incompletas e mudar; jamais tratar ausência de linhas ou dados atrasados como queda confirmada. Paginar com o mecanismo e limites reais da API; o conjunto de linhas mais clicadas não é amostra aleatória e não deve servir como censo de keywords. Para GA4, validar a compatibilidade dimensão/métrica e o ID de propriedade antes do relatório; integração chamada Google Ads pode, no provedor, expor Google Analytics em vez de anúncios. Fonte metodológica: ComposioHQ google-search-console(-alias) e googleads-automation; requer conexão para coleta.
+
+## Auditoria AEO e citações em mecanismos de resposta
+
+Se o objetivo explícito envolver ser citado em respostas de IA (AEO/GEO), criar um ramo específico, sem prometer resultados de modelos externos:
+
+1. Selecionar perguntas reais, mercado e URLs relevantes; registrar data e produto consultado. Comparar respostas de sistemas de IA apenas quando puder observá-las de fato.
+2. Auditar conteúdo quanto a autoria, evidência primária, afirmações verificáveis, datas, estrutura clara, navegação, crawlability e dados estruturados válidos quando cabíveis.
+3. Verificar permissões reais de crawling/bots no momento da análise. Não supor que um bot bloqueado seja sempre o único motivo para ausência de citações; o comportamento difere entre produtos e superfícies.
+4. Organizar um ledger de citação por URL, pergunta, sistema, resposta observada, data e tipo de menção (citação com link, menção sem link ou ausência).
+5. Separar sinais observados de supostas regras internas de ranqueamento. Não inventar pontuações E-E-A-T, contagens de citação, posição ou causalidade.
+6. Recomendar melhorias de utilidade e rastreabilidade, validar schema e conteúdo, monitorar amostras ao longo do tempo; não declarar que reescrita garantirá citação.
+
+**Origem adaptada:** https://github.com/alirezarezvani/claude-skills/blob/main/marketing-skill/skills/aeo/SKILL.md.
