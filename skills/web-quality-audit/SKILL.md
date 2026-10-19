@@ -131,3 +131,9 @@ Inspirado em Aboudjem/ui-ux-suite e thedaviddias/Front-End-Checklist, complement
 Ferramentas externas (CLI, MCP, installers) são opcionais e só podem ser usadas quando efetivamente disponíveis e revisadas. Não executar instaladores de repositórios avaliados. Uma lista de 386 regras não significa que todas se aplicam a cada página.
 
 Fontes de metodologia: https://github.com/Aboudjem/ui-ux-suite e https://github.com/thedaviddias/Front-End-Checklist.
+
+## Regras de interface versionadas e revisão por evidência (Vercel, 2026-10-19)
+
+Para auditorias de UI, usar guidelines externas atualizadas como **referência de checks** somente após identificar a revisão/URL da fonte, e reportar achados por `file:line` quando houver código acessível, ou por rota/elemento/estado quando não houver. Agrupar por categoria: semântica e acessibilidade, foco, formulários, animação/reduced-motion, tipografia, imagens, performance de rendering, navegação/URL state, dark mode, toque e internacionalização. Separar violações normativas de convenções opinativas de uma marca. Não aplicar restrições editoriais/visuais da Vercel universalmente.
+
+Referência viva a consultar quando necessário: https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md ; entrada de skill: https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines . Não presumir WebFetch ou uma versão das guidelines acessível no runtime.
