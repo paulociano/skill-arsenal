@@ -181,3 +181,16 @@ Validar sensor e controller isolados antes de automatizar. Exigir PR/revisão hu
 Não instalar um agente headless ou escrever GitHub Actions apenas porque o padrão externo os sugere; adaptar ao runtime real e ao escopo do repositório.
 
 **Origem adaptada:** https://github.com/humanlayer/skills/blob/main/plugins/design-control-loop/skills/design-control-loop/SKILL.md
+
+## Ratchet de arquivos grandes sem automação cega
+
+Quando o usuário pedir limitar complexidade por tamanho de arquivo, medir antes de impor um novo hook:
+
+1. Identificar arquivos-fonte oversized usando o tokenizer real quando disponível; uma aproximação bytes/4 serve só para triagem, nunca para declarar tokenização exata.
+2. Separar código autoral de vendored/gerado e ler o contrato de qualidade do repositório.
+3. Para cada arquivo prioritário, encontrar limites semânticos (responsabilidade, módulo, estado, API), não dividir mecanicamente por linhas; confirmar que a extração preserva comportamento com testes existentes.
+4. Estabelecer orçamento ou baseline por arquivo, com exceções justificadas e registradas, e priorizar evitar crescimento do débito enquanto a migração acontece.
+5. Tratar pre-commit hooks, dependências e scripts como mudanças de infraestrutura sujeitas à aprovação explícita, especialmente quando bloqueiam commits de outros desenvolvedores.
+6. Verificar que o controle realmente recusa uma regressão em ensaio seguro, desfazer os probes e registrar impacto sobre CI, contributors e arquivos legados.
+
+**Origem (A/D, adaptado):** https://github.com/dzhng/skills/blob/main/skills/engineering/ratchet-files/SKILL.md. Não instalar por padrão Node, scripts ou hooks da origem.
