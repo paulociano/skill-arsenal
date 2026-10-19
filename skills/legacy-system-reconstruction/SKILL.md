@@ -146,3 +146,18 @@ Usar leitura e escrita de arquivos e execução de código pelo terminal dispon�
 Adaptada metodologicamente de sandeco/reversa.
 
 Origem local: [legacy-system-reconstruction.docx](../legacy-system-reconstruction.docx).
+
+## Contratos de evolução e rastreabilidade bidirecional (Reversa, revisão 2026-10-19)
+
+Aplicar somente quando a tarefa passar da documentação legada à evolução verificável:
+
+1. Registrar, por funcionalidade, a cadeia **evidência original → regra/invariante → requisito e spec → plano de implementação → código → teste → bug/regressão**. O sentido inverso importa: uma implementação deve apontar para a decisão/spec que a autorizou, e cada spec deve apontar para evidência, não só para prosa gerada.
+2. Fazer um diagnóstico/briefing curto antes da orquestração; escolher módulos prioritários e uma unidade estável de feature. Gerar IDs de specs, registrar revisão do repositório, responsáveis e lacunas. Evitar equipes fictícias de agentes quando uma análise sequencial do ChatGPT resolve o caso.
+3. Na **descoberta**, manter código original intocado; armazenar inventário, findings e specs em área separada, sob versionamento e sem credenciais. Registrar checkpoints/handoff para retomada, mas não alegar processos autônomos ou estado persistente quando não existem.
+4. Antes de implementar, produzir **requirements → actions → acceptance tests** vinculados à spec. Distinguir aprovação de requisitos, autorização de escrita e verificação final. Só editar código em fase posterior expressamente solicitada.
+5. **Caracterização/paridade:** capturar entradas, saídas, efeitos e erros do comportamento anterior quando observáveis. Estabelecer oráculo e testes de regressão antes de modernizar ou refatorar. Se não houver oráculo, classificar equivalência como não demonstrada.
+6. Depois da implementação, acrescentar um **addendum/sync** com comportamento realmente entregue, bugs conhecidos e testes observados; não reescrever silenciosamente a especificação de origem nem declarar que uma inferência antiga foi confirmada.
+7. Para migração, fazer triagem regra a regra (PRESERVE/MIGRATE/DISCARD/HUMAN DECISION), escolher estratégia de corte explícita e conectar testes de paridade ao plano. Em defeitos, manter triagem/diagnóstico separados de correção e rastrear BUG ↔ SPEC ↔ CODE ↔ TEST.
+8. Separar modos: descoberta read-only, evolução com escrita controlada, migração e documentação derivada. A promessa de imutabilidade se limita à fase de descoberta; ferramentas/instaladores externos não substituem permissões e backups verificáveis.
+
+**Fonte e portabilidade:** https://github.com/sandeco/reversa (README consultado em 2026-10-19). Origem de padrões de pipeline reverso, sync por addendum, trilha causal de bugs, gates de caracterização e distinção entre discovery e forward. O projeto externo usa Node.js 18+, `npx reversa install`, múltiplos agentes e comandos `/reversa*`; nada disso é pré-requisito nem deve ser anunciado como instalado ou executado no ChatGPT. O modo externo `/reversa-forward-autonomous` modifica código deliberadamente e exige cautela específica. A metodologia já integrava esta skill; este bloco incorpora os detalhes incrementais relevantes da versão inspecionada.
