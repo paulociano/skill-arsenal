@@ -158,3 +158,16 @@ Ao investigar animações lentas ou travadas, separar trabalho de **layout**, **
 Regras absolutas da fonte externa são **heurísticas condicionais**, não proibições universais: transições de layout ou paint podem ser adequadas em superfícies pequenas e isoladas quando medidas e justificadas.
 
 **Origem adaptada:** https://github.com/ibelick/ui-skills/blob/main/skills/fixing-motion-performance/SKILL.md
+
+## Coreografia por ações e determinismo de quadros
+
+Para animações de objetos/personagens, identidades animadas ou cenas renderizadas quadro a quadro, além de transições usuais de UI:
+
+1. Decompor o movimento em preparação, aceleração, ápice/contato, eventual overshoot e acomodação. Cada fase deve ter propósito visual, duração relativa, trajetória, direção e ponto de apoio claros.
+2. Estabelecer pose e timing legíveis sem motion blur, partículas ou brilhos. Acrescentar squash/stretch, follow-through e ações secundárias apenas onde o peso, a força ou a narrativa justificarem.
+3. Proteger silhueta, continuidade de posição/velocidade e âncoras de contato; evitar easing idêntico para propriedades que representam movimentos distintos.
+4. Em renderização off-line, paralela ou fora de ordem, calcular cada estado como função determinística do frame, parâmetros e inputs fixados; seedar qualquer aleatoriedade e não depender de frames previamente renderizados.
+5. Ajustar movimentos às dimensões do objeto e viewport, testar início, impacto, repouso e limites intermediários, e preservar fallback estático e reduced-motion.
+6. Não transformar os 12 princípios clássicos de animação em obrigações para todo botão: microinterações devem permanecer proporcionais à frequência e ao contexto.
+
+**Origem (A/B, método absorvido):** https://github.com/vibe-motion/skills/blob/main/disney-animation-rule-skill/SKILL.md. Renderizadores e dependências de Remotion/Three.js permanecem externos e opcionais.
