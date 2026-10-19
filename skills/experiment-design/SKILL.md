@@ -75,3 +75,20 @@ Tiers de otimização, refusal contract e run accounting adaptados de https://gi
 Integridade de exposure, SRM, variance reduction, sequential testing e distinção entre experimentação e feature rollout reforçados a partir de https://github.com/growthbook/growthbook e https://github.com/PostHog/posthog, sem exigir essas plataformas.
 
 Origem local: [experiment-design.docx](../experiment-design.docx).
+
+## Desenho de experimentos antes da coleta: replicação e confundimento
+
+Quando a tarefa for desenhar um estudo ou experimento com unidades, tratamentos e dados ainda não coletados, ampliar o workflow além do A/B test de produto:
+
+1. Definir estimando, hipótese, unidade experimental, população, tratamento, controle e principais fontes de confundimento.
+2. Escolher estrutura compatível: aleatorização simples, blocos/estratos, clusters, medidas repetidas/crossover, fatorial completo ou fracionário, screening ou superfície de resposta, quando necessários.
+3. Preservar independência na unidade correta: várias medições da mesma unidade **não** constituem replicações independentes (pseudorreplicação).
+4. Aleatorizar no nível de atribuição permitido, bloquear fontes conhecidas de variação e registrar seed, plano de alocação, ordem dos runs e versões de ferramentas quando determinantes.
+5. Definir efeitos/interações identificáveis, riscos de carryover, contaminação e aliasing antes da coleta. Estudos com clusters exigem análise e amostragem que respeitem agrupamento.
+6. Planejar análise, poder/tamanho de amostra e paradas intermediárias de modo coerente com o desenho; não inventar cálculos quando faltarem parâmetros.
+7. Exportar protocolo verificável: tabela de alocação, exclusões, medições, critérios de decisão e ameaças à validade.
+8. Se forem necessários scripts de DOE, verificar runtime e dependências reais antes de executar; não assumir que o pacote `pydoe` ou wrappers externos estejam instalados.
+
+Não aplicar regras de experimentos científicos de laboratório automaticamente a feature flags ou otimização de UX: selecionar o ramo adequado à pergunta.
+
+**Origem adaptada:** https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/experimental-design/SKILL.md
