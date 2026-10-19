@@ -78,6 +78,11 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 
 ## Skills
 
+- **react-next-performance** — Auditar e otimizar React/Next.js por waterfall, bundle, cache, server/client boundaries, re-renders e evidência de performance versionada.  
+  `skills/react-next-performance/SKILL.md`
+- **vercel-platform-optimization** — Auditar custos e desempenho de projetos Vercel a partir de métricas, uso, cache e investigação seletiva sem executar mudanças de deploy ou billing.  
+  `skills/vercel-platform-optimization/SKILL.md`
+
 - **python-interactive-prototyping** — Construir protótipos Python interativos escolhendo entre demos de funções/modelos no estilo Gradio e notebooks reativos/reproduzíveis no estilo marimo, com contratos de estado, segurança e teste de runtime.
 - **synthetic-test-data-engineering** — Gerar dados sintéticos e fixtures reproduzíveis para desenvolvimento, demos e testes de apps, com schemas, seeds, relacionamentos, distribuições, casos extremos, privacidade e validação.
 
