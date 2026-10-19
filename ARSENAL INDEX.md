@@ -78,6 +78,9 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 
 ## Skills
 
+- **obsidian-vault-authoring** — Criar e validar Obsidian Markdown, Bases, JSON Canvas e templates de vault preservando links, propriedades e sintaxe sem depender de Obsidian CLI.  
+  `skills/obsidian-vault-authoring/SKILL.md`
+
 - **react-next-performance** — Auditar e otimizar React/Next.js por waterfall, bundle, cache, server/client boundaries, re-renders e evidência de performance versionada.  
   `skills/react-next-performance/SKILL.md`
 - **vercel-platform-optimization** — Auditar custos e desempenho de projetos Vercel a partir de métricas, uso, cache e investigação seletiva sem executar mudanças de deploy ou billing.  
