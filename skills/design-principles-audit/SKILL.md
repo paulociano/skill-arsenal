@@ -166,3 +166,16 @@ Origem metodológica: `MengTo/Skills/agent-skills/codex/audit-reference-original
 ## Evidência de analytics de experiência (ComposioHQ 432–531, 2026-10-15)
 
 Em auditorias apoiadas por Clarity ou analytics similares, registrar janela de coleta, dimensão, filtros, população e defasagem. Respeitar limites do conector (referência Clarity: exportação de 1 a 3 dias e até três dimensões), sem alegar acesso a mapas de calor ou gravações quando só há tabelas. Não atribuir causalidade a métricas de cliques e abandono sem contexto ou evidência complementar. Referências: microsoft-clarity e microsoft_clarity, ComposioHQ 432–531.
+
+## Gate de evidência para auditoria de interface existente
+
+Em revisões de UI orientadas por conformidade, use um funil de falsificação antes de registrar uma falha:
+
+1. Delimite uma jornada ou superfície real; trace seus owners, estados responsivos e variants.
+2. Diferencie **violação verificável** de hipótese heurística. Heurísticas de legibilidade, consistência e densidade ajudam a investigar, mas não substituem contrato, runtime ou teste visual.
+3. Para violação verificável, exija contrato aplicável, ocorrência na superfície executada e uma correção inequívoca; reabra as fontes e procure contraevidência.
+4. Descarte candidatos sem prova, exceções deliberadas, soluções ambíguas e múltiplos sintomas da mesma causa.
+5. Priorize poucos findings de alto impacto e confiança, apresentando evidência, impacto, fix concreto e forma de reteste.
+6. Separe revisão read-only de mudança efetiva. Quando a tarefa pede implementação, use a auditoria para alimentar o build, sem herdar a proibição de escrita de uma skill originalmente apenas auditora.
+
+**Origem adaptada:** https://github.com/ibelick/ui-skills/blob/main/skills/improve-ui/SKILL.md
