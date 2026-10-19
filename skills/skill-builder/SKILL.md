@@ -111,3 +111,18 @@ Ledger de extração, portable contract e proof-oriented demos adaptados de http
 Captura por dry-run antes de codificar a skill refinada a partir dos exemplos de `dry-run-workflow-for-agent-skills` em [zazencodes/zazencodes-season-3](https://github.com/zazencodes/zazencodes-season-3), preservando preview/sandbox e removendo dependências específicas do agente.
 
 Origem local: [skill-builder.docx](../skill-builder.docx).
+
+## Validação formal de Agent Skills e portabilidade
+
+Ao publicar ou auditar uma Agent Skill, conferir a especificação aberta atual em https://agentskills.io/specification quando compatibilidade formal importar:
+
+- A pasta contém `SKILL.md` com YAML frontmatter e `name`/`description` não vazios.
+- `name` corresponde à pasta, tem 1–64 caracteres, usa letras minúsculas ASCII, dígitos e hífens; não começa/termina com hífen nem contém hífens consecutivos.
+- `description` tem até 1024 caracteres e explica capacidade **e trigger**.
+- `compatibility`, quando declarada, deve informar dependências reais e ter até 500 caracteres; metadados opcionais não podem prometer ferramentas disponíveis universalmente.
+- `allowed-tools` é experimental e pode variar entre hosts. Não tratar esse campo como concessão efetiva de permissão.
+- Usar progressive disclosure: índice com metadados, instruções focadas e `references/`/`scripts/`/`assets/` sob demanda.
+- Executáveis dependem do host. Não confundir conformidade de formato com segurança, instalação ou sucesso operacional.
+- Stacks do Arsenal continuam sendo convenção local, **não** Agent Skills nativas.
+
+**Origem normativa consultada:** https://github.com/agentskills/agentskills/blob/main/docs/specification.mdx
