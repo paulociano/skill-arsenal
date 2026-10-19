@@ -130,3 +130,16 @@ Metodologia consolidada principalmente de:
 Foram removidas dependências específicas de CLI, APIs externas e runtimes não disponíveis por padrão.
 
 Controle espacial e integração com fluxo de pintura refinados a partir de `Acly/krita-ai-diffusion`; composição de pipelines visuais por nós considerada a partir do ecossistema ComfyUI/InvokeAI. Esses runtimes permanecem referências externas, não dependências nativas.
+
+## Miniaturas e capas com promessa verificável
+
+Para thumbnails de vídeo e capas de Reels/Shorts/Instagram, tratar o formato como um problema de comunicação em tamanho reduzido:
+
+1. Definir assunto e promessa **verdadeira** do conteúdo, proporção final e elemento focal, sem insinuar acontecimento inexistente.
+2. Comparar conceitos com hierarquia simples, expressão/ação pertinente e espaço negativo para título quando necessário; rejeitar excesso de personagens ou claims simultâneos.
+3. Tratar referências de estilo como orientação de ritmo/composição, nunca autorização para reproduzir rosto, marca ou composição protegida.
+4. Preservar logo/identidade e texto literal autorizado; quando renderização tipográfica falhar, considerar overlay determinístico separado.
+5. Inspecionar o resultado em tamanho pequeno, em crop mobile e com contrastes reais, evitando declarar a capa pronta a partir apenas do prompt.
+6. Produção por fornecedor externo depende de modelo/conector realmente disponível, autorização de uso e validação de saída; não replicar comandos `higgsfield` inexistentes.
+
+**Origem adaptada:** https://github.com/higgsfield-ai/skills/blob/main/higgsfield-youtube-thumbnail/SKILL.md.
