@@ -86,3 +86,16 @@ Ao comparar canais YouTube, examinar amostras separadas de vídeos recentes, mai
 ## Biblioteca de anúncios concorrentes e hipótese criativa (ComposioHQ, 2026-10-15)
 
 Para anúncios públicos de concorrentes, registrar anunciante, biblioteca, URL/ID, captura quando autorizada, período efetivamente visto, promessa, problema, público presumido, prova, formato visual e CTA. Agrupar por mensagem e formato; transformar recorrências em variantes de teste para a própria marca. **Frequência ou permanência de um anúncio não comprova desempenho, ROI ou taxa de conversão**; diferenciar observação de hipótese e não inventar dados ou screenshots ausentes. Respeitar direitos sobre criativos, políticas de plataforma e escopo do acesso. Método adaptado de ComposioHQ/awesome-claude-skills/competitive-ads-extractor.
+
+## Scheduler externo e publicação operacional (Postiz, 2026-10-19)
+
+Se o usuário precisa publicar em múltiplos canais, o calendário editorial deve ter uma camada operacional separada da criação de conteúdo:
+
+1. Definir para cada peça: asset/version, canal, conta, formato, copy/CTA, timezone, data/hora, aprovação e responsável; variantes por canal exigem QA individual.
+2. Distinguir draft → approved → scheduled → publishing → published e failed/cancelled, guardando evidência da plataforma. Estado no scheduler não equivale a post comprovadamente publicado; reconciliar com URL/ID remoto quando disponível.
+3. Validar formato, dimensões, duração, mídia e restrições de cada rede antes do agendamento; a aceitação pela API do scheduler não elimina regras de provedores nem garante entrega.
+4. Para publicação automatizada, exigir canal autorizado e integração realmente disponível, credenciais protegidas, limites/rate limits, tratamento de erros/retries, deduplicação para evitar posts duplicados e trilha de auditoria.
+5. Separar analytics por rede e janela comparável, e distinguir métricas do scheduler das métricas oficiais do provedor.
+6. Postiz é uma opção externa de scheduler/API/Cloud ou self-hosted; não assumir que está conectado, nem instalar/deployar sua stack. Self-hosting implica infraestrutura, apps de desenvolvedor e aprovações das plataformas; operação Cloud depende de serviço/limites vigentes.
+
+Proveniência: [gitroomhq/postiz-app](https://github.com/gitroomhq/postiz-app), princípios provider-neutral absorvidos; não dependem de NestJS, NextJS, Prisma, Temporal, API Postiz ou infraestrutura própria.
