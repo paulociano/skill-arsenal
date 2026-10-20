@@ -139,3 +139,18 @@ Depois de criar ou modificar testes com auxílio de IA, fazer revisão separada 
 7. Separar **teste escrito**, **teste executado**, **teste aprovado** e **defeito efetivamente detectável**; não inferir os últimos estados dos primeiros.
 
 **Proveniência:** [amElnagdy/guard-skills](https://github.com/amElnagdy/guard-skills), especialmente a metodologia `test-guard` descrita no README consultado em 2026-10-19. Adaptação apenas metodológica, sem instalar Skills CLI, executar código externo ou pressupor agente independente.
+
+## Regressão cumulativa sob requisitos evolutivos (SlopCodeBench, 2026-10)
+
+Quando funcionalidades forem adicionadas em etapas (especialmente por coding agents), **não redefinir sucesso como apenas passar nos testes do requisito mais recente**:
+
+1. Preservar suíte dos comportamentos já aceitos em cada etapa, vinculada à versão da especificação. Não reescrever assertions antigas para acomodar involuntariamente bugs novos.
+2. Executar testes direcionados à mudança, depois regressões dos contratos anteriores afetados e, no gate apropriado, a suíte integrada completa. Registrar explicitamente os checks não executados.
+3. Relatar **Core** (casos exigidos pela etapa) separadamente de **Strict** (Core + outras categorias relevantes + regressões). Sucesso parcial não autoriza claim de compatibilidade integral.
+4. Incluir cenário cumulativo atravessando estados, persistência, permissões ou APIs afetadas quando houver risco. Verificar também o resultado **final da sequência**.
+5. Distinguir **testes falhos**, **bugs distintos** e **sinais estáticos de qualidade**: muitas falhas podem ter uma causa, e lint/complexidade não substituem teste funcional.
+6. Em comparações, fixar catálogo, versões, runner, categorias, ambiente e denominadores; relatar variação de repetições e interrupções quando houver.
+
+**Aceite:** requisito novo funcionando com regressão antiga ainda falhando é resultado **parcial**, não concluído. Sem suíte executável ou evidência fresca, limitar a conclusão ao desenho dos testes.
+
+**Proveniência:** [artigo SlopCodeBench](https://arxiv.org/abs/2603.24755) e [HumanLayer, 2026-10-15](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-new-models-on-slop-code-bench.md). Metodologia cumulativa, sem exigir runner original.
