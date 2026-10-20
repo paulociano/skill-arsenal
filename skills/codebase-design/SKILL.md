@@ -59,3 +59,17 @@ Quando a API de um componente React acumular props booleanas e combinações inv
 - Testar combinações válidas, accessibility names/roles, rerenders e regressões dos consumers antes de declarar melhoria.
 
 **Fonte:** https://github.com/vercel-labs/agent-skills/tree/main/skills/composition-patterns . Owner é arquitetura de código; não criar skill paralela específica de composição.
+
+## Tipos de props React aderentes aos callers reais (HumanLayer, 2026-10)
+
+Ao refatorar componentes React com props opcionais excessivas, estados artificiais e callbacks inertes:
+
+1. Mapear **call sites reais de produção** e consumidores de APIs públicas; separar rotas/componentes efetivos de stories, fixtures e mocks. Verificar usos dinâmicos e consumidores externos antes de concluir que uma prop é desnecessária.
+2. Classificar props pelo contrato: obrigatória nos estados válidos de produção; opcional quando ausência é legítima; removível apenas quando compatibilidade permitir. **Nullable não é sinônimo de optional.**
+3. Se uma ação sempre é exibida, evitar callback opcional que deixe a affordance inerte. Restringir uniões para impedir estados impossíveis sem inventar obrigatoriedade em componentes intencionalmente reutilizáveis.
+4. Fazer stories, mocks e testes respeitarem o contrato em vez de relaxar a API para facilitar exemplos. Usar builders/fixtures quando necessário.
+5. Atualizar filhos e variantes compartilhadas; executar typecheck no pacote e **nos consumidores reais**, revisar compatibilidade pública e testar comportamento/acessibilidade. Não eliminar fallbacks de estados legítimos.
+
+**Critério:** um tipo mais estrito deve representar melhor o comportamento suportado, não apenas diminuir a quantidade de parâmetros opcionais.
+
+**Origem adaptada:** [HumanLayer / narrow-react-prop-types](https://github.com/humanlayer/skills/blob/main/plugins/narrow-react-prop-types/skills/narrow-react-prop-types/SKILL.md). Método incorporado sem instalar CI, alterar frameworks ou assumir Bun/Storybook.
