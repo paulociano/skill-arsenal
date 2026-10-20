@@ -194,3 +194,16 @@ Quando o usuário pedir limitar complexidade por tamanho de arquivo, medir antes
 6. Verificar que o controle realmente recusa uma regressão em ensaio seguro, desfazer os probes e registrar impacto sobre CI, contributors e arquivos legados.
 
 **Origem (A/D, adaptado):** https://github.com/dzhng/skills/blob/main/skills/engineering/ratchet-files/SKILL.md. Não instalar por padrão Node, scripts ou hooks da origem.
+
+## Back-pressure por loop e feedback persistente (HumanLayer, 2026-10)
+
+Em automações recorrentes de coding agents, complementar o limite global da review queue com **limite por loop**:
+
+1. Identificar cada loop por ID/label estável e definir teto de PRs abertos pendentes de revisão. **Um PR aberto por loop** é ponto de partida prudente, ajustável pelo charter e capacidade humana, não regra universal.
+2. Antes da execução agendada, consultar **estado remoto atual**, inclusive PRs do mesmo loop; ao atingir o teto, registrar estado explícito de back-pressure e não criar novo branch/PR. Diferenciar de falha do sensor, falta de trabalho e sucesso do agente.
+3. Reprocessar feedback no PR existente quando autorizado, em vez de criar PRs duplicados. Overrides manuais devem ser explícitos, auditáveis e sujeitos às mesmas políticas de permissão, escopo e validação.
+4. Manter registro curto/versionado de **feedback permanente**: exclusões de escopo, falsos positivos conhecidos e critérios de reviewers. Não confundir com logs efêmeros, instrução de execução isolada, tokens ou regras já descritas na skill.
+5. Se comentários em PR ou issues dispararem agentes, exigir autorização do autor/ator, validação do alvo e branch, proteção contra prompt injection e limites de segredos/escrita. Marcador em comentário ou label **não é** autorização suficiente.
+6. Validar sensor, controller e actuator isoladamente, depois testar workflow e bloqueio de PRs pendentes. Agendamento, CI e GitHub Actions só existem operacionalmente quando configurados e verificados no repositório de destino.
+
+**Origem metodológica:** [HumanLayer / build-iterated-agentic-loop](https://github.com/humanlayer/skills/blob/main/plugins/build-iterated-agentic-loop/skills/build-iterated-agentic-loop/SKILL.md) e [design-control-loop](https://github.com/humanlayer/skills/blob/main/plugins/design-control-loop/skills/design-control-loop/SKILL.md). Absorvidos back-pressure, feedback e verificação; sem instalar CLI, scripts, workflows, secrets ou handlers de comentários.
