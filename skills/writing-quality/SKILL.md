@@ -109,3 +109,19 @@ Quando o texto for documentação técnica, classificar explicitamente tutorial,
 A especificação de voz da Vercel é uma **referência organizacional**, não uma política universal: não copiar banimentos de palavras, preferências de markdown ou imposições de TypeScript como regra global. Preserve a voz do projeto e estilos explicitamente aprovados.
 
 Fonte: https://github.com/vercel-labs/agent-skills/tree/main/skills/writing-guidelines ; conteúdo externo atualizado: https://raw.githubusercontent.com/vercel-labs/writing-guidelines/main/command.md . Nenhum WebFetch obrigatório nem template Vercel foi instalado.
+
+## Fluxo de manuscritos longos e revisão reversível (NEO, 2026-10)
+
+**Trigger restrito:** livro, romance, contos, roteiro, capítulos ou outra obra autoral longa cujo trabalho exige continuidade entre sessões e reestruturação frequente. Não impor cartões, metas de palavras ou escrita criativa a e-mails, textos curtos, documentação factual ou tarefas de revisão pontual.
+
+1. **Unidade narrativa:** manter um mapa leve de livro → partes → capítulos → cenas/seções, com IDs/títulos estáveis quando houver material existente. A estrutura nasce do texto e pode ser rearranjada; não exigir outline fechado de quem prefere descobrir a narrativa escrevendo.
+2. **Duas superfícies, uma fonte:** relacionar notas/cartões de cenas ao trecho real do manuscrito; cartões sem texto são hipóteses/ideias, não capítulos escritos. Ao reorganizar, mover texto, contexto e referências juntos, preservando ordem e continuidade; evitar versões paralelas silenciosas.
+3. **Rascunho sem bloqueios:** se faltar nome, data, pesquisa ou detalhe, marcar um placeholder explícito (por exemplo, `[[PENDENTE: conferir localização]]`) e incluí-lo em uma fila de revisão por capítulo. Não inventar informação para preencher a lacuna e não forçar pesquisa durante uma sessão cujo objetivo seja produzir texto.
+4. **Cortes recuperáveis:** antes de eliminar ou substituir uma passagem substancial, preservar original, posição/cena, versão e motivo numa seção/artefato de descartes recuperáveis (padrão de *Darlings*). Distinguir texto publicado, trecho retirado e sugestão alternativa; nunca apresentar geração de IA como substituição automaticamente aceita.
+5. **Ciclos separados:** produzir → organizar → revisar → preparar export. Feedback estrutural, metas/sprints e revisão estilística entram em checkpoints escolhidos pelo autor, sem interrupções compulsórias no meio da redação.
+6. **Continuidade editorial:** quando apropriado, verificar personagens, cronologia, pontos de vista, cenas, arcos, repetições e referências cruzadas após mover capítulos. Scripts exigem cenas, diálogos e formatação próprias; não presumir que EPUB e roteiro compartilham um formato.
+7. **Saída e recuperação:** entregar o manuscrito mestre em formato acessível/editável e conferir ordem, notas pendentes, texto perdido/duplicado e integridade dos exports solicitados. Arquivo gerado não é sinônimo de export visual revisado. Para projetos longos, manter checkpoints/versionamento **apenas se uma capacidade real de arquivos ou app estiver disponível**; uma conversa isolada não garante backup automático ou persistência externa.
+
+**Aceite mínimo:** mudanças reversíveis; nenhum trecho autoral apagado sem autorização; pendências localizáveis; estrutura coerente; distinção entre texto mestre e versão exportada; continuidade verificada no escopo editado.
+
+**Proveniência:** [hughhowey/neo](https://github.com/hughhowey/neo), sobretudo [README](https://github.com/hughhowey/neo/blob/main/README.md), [CONTRIBUTING](https://github.com/hughhowey/neo/blob/main/CONTRIBUTING.md) e [AGENTS](https://github.com/hughhowey/neo/blob/main/AGENTS.md). Adaptação de princípios de trabalho autoral (*index cards*, *Darlings*, placeholders, edição recuperável); não pressupõe aplicativo NEO instalado, suas APIs, Electron, autosave, sincronização ou geração de capa.
