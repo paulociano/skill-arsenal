@@ -195,3 +195,18 @@ Fonte: https://github.com/edenfunf/reelmimic. O aplicativo exige ferramentas e m
 ## Modo anúncio de lançamento de produto (Brag)
 
 Quando a solicitação for um vídeo curto de lançamento de site/app, antes do roteiro localizar **produto real em uso**, sua promessa verificável, público, identidade e 2–3 momentos demonstráveis (entrada → ação central → resultado). Estruturar 15–25 segundos em hook curto, revelação, highlights e fechamento, com texto legível pelo tempo suficiente; evitar métricas, depoimentos e funcionalidades inventadas. Reutilizar screenshots ou assets autorizados e evitar `.env`, segredos, dados reais de clientes e áreas privadas. Planejar áudio/SFX licenciados e verificar frames estáveis e transições antes de renderizar. Se o runtime de vídeo/áudio não estiver conectado, entregar storyboard e copy com limitação declarada, não prometer MP4. `brag`, `brag-slim`, Hyperframes e FFmpeg são opcionais e não estão implícitos na stack. Fonte: https://github.com/latent-spaces/brag (2026-10-17).
+
+## Referência de execução: ai-video-cut
+
+O projeto https://github.com/adrianoz1/ai-video-cut fornece um exemplo de automação por etapas (`yt-dlp` → FFmpeg/audio → transcrição API → JSON/SRT → seleção LLM → legendas/crop 9:16 → clipes). **É implementação externa opcional, não runtime habilitado no ChatGPT.**
+
+Para considerar essa implementação num projeto real:
+- confirmar direito de baixar/processar/publicar o vídeo-fonte, inclusive Reels que exigem sessão/cookies;
+- preferir chave API por variável de ambiente/secret manager, nunca argumentos de CLI que podem aparecer em histórico/process list;
+- observar custo de API, limites de upload e segmentação, retries e versionamento de modelos;
+- preservar timecodes globais, deduplicar highlights e usar contract JSON/SRT verificável;
+- separar crop 9:16 estático de reframing inteligente: verificar manualmente cenas com pessoas, tela, gestos ou múltiplos sujeitos;
+- verificar saída real e dependências (`yt-dlp`, FFmpeg, Python, jq); não executar scripts por simples avaliação;
+- tratar palavras como 'viral' no README como heurística editorial não calibrada.
+
+**Should-trigger:** usuário quer montar pipeline local para transformar vídeos autorizados do YouTube em vários Shorts com legendas. **Near-miss:** criação de roteiro de Reel inteiramente novo sem footage original.
