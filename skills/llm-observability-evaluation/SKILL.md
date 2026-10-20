@@ -195,3 +195,17 @@ Padrão adaptado de https://github.com/jwuthri-cloud/Tracely-ai (2026-10-18), se
 ## Filtragem determinística de linhas e recall (trim-1)
 
 Para contexto longo e denso, comparar filtros query-aware que preservam as linhas literais e sua ordem contra a entrada integral. Manter original recuperável e identificador, inserir marcador para cortes e não fazer recompacting invisível. Fixar pergunta e medir evidence recall, falsos descartes, task success, retries, custo de sessão e latência, além de bytes. Usar níveis conservative/balanced/aggressive só sob trade-offs medidos; falhar fechado em dados pequenos, sem query, baixa economia, limites de tamanho ou risco de ocultar erro raro, negação, número ou segurança. Se evidência não sobreviver, recuperar o original. Não afirmar que bytes poupados equivalem a tokens/custo poupados. Fonte: https://github.com/caveman-ai/trim-1 (2026-10-18). Modelo Go não instalado nem testado.
+
+## Evals de trajetória com regras de negócio e ferramentas (LangChain Agent Evaluation System, 2026-10-19)
+
+Para agentes que executam ferramentas com impacto de negócio, não aceitar uma resposta final aparentemente correta como prova de execução correta:
+
+1. **Contrato por caso** — definir input, regra de negócio, estado inicial, resposta esperada, ferramentas esperadas e invariantes das ações (ex.: identificar cliente, validar janela de elegibilidade, calcular somente itens solicitados, não efetivar ação indevida).
+2. **Evidências separadas** — preservar uma única execução por cenário, com output estruturado, argumentos das tool calls e trace dos passos; reutilizar o mesmo run para todos os eixos quando possível, evitando diferenças estocásticas entre métricas.
+3. **Sete eixos candidatos** — task completion, step efficiency, plan quality, plan adherence, argument correctness, tool correctness e answer correctness; escolher apenas os que mensuram o risco real, somando safety e invariantes determinísticos quando necessário.
+4. **Oráculos** — comparar nomes e argumentos de ferramentas com expectativas verificáveis; complementar juiz LLM com asserts de política de negócios. Tool selection correta não prova valores corretos, e um ticket simulado não prova que a operação externa ocorreu.
+5. **Datas e estado** — alinhar relógio do teste, fixtures e outcomes esperados. Data atual dinâmica com registros congelados pode invalidar o dataset; congelar tempo ou regenerar expectativas explicitamente.
+6. **Diagnóstico** — reportar score por cenário/eixo e causas das falhas; sucesso do runner não significa aprovação de todos os testes. Não copiar limiares de demo para produção sem calibração.
+7. **Gates** — para ações financeiras, refunds ou mudanças irreversíveis, reforçar a regra no próprio serviço/tool, não apenas no prompt, e bloquear execução com argumento inválido. Verificar idempotência e efeito real em teste autorizado.
+
+Proveniência: [Mohamad-Hachem/LangChain_Agent_Evaluation_System](https://github.com/Mohamad-Hachem/LangChain_Agent_Evaluation_System), laboratório didático LangChain + DeepEval com oito cenários e sete métricas. Métodos absorvidos sem instalar LangChain, DeepEval, Streamlit ou usar modelos/API keys do repositório. Seus dados em memória e tickets simulados não constituem validação de integração financeira.
