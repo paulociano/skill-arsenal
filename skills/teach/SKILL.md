@@ -117,3 +117,19 @@ explanation-architecture, eli5, visual-explanation-sketch e writing-quality.
 mattpocock/teach, build-your-own-x, TheAlgorithms, freeCodeCamp, amosblomqvist/learn e arquitetura explicativa do Arsenal. De amosblomqvist/learn foram absorvidos fundamentos seguros primeiro, descoberta motivada e probing adaptativo, removendo dependências de pi, tmux, subagents, popup UI e quiz extensions.
 
 Origem local: teach.docx.
+
+## Trilhas de estudo técnicas com fontes externas
+
+Quando a missão for aprender programação, computação, engenharia ou ML de forma estruturada:
+1. Partir da competência-alvo e diagnosticar pré-requisitos reais; não copiar um roadmap inteiro como plano obrigatório.
+2. Construir um grafo pequeno de dependências, distinguindo fundamentos duráveis, ferramentas específicas e extensões opcionais.
+3. Definir marcos com entregáveis observáveis: explicar um mecanismo, resolver um exercício novo e construir um projeto verificável.
+4. Intercalar fundamentos e implementação. Para computação, usar currículos como OSSU como checklist de cobertura; usar roadmap.sh para descobrir caminhos, não como certificação de domínio.
+5. Escolher materiais de leitura gratuitos via catálogos como free-programming-books, verificando idioma, acesso, licença, atualidade e adequação ao nível na fonte original.
+6. Usar a prática de reconstrução de build-your-own-x e exercícios de TheAlgorithms/ML-From-Scratch como instrumentos didáticos, jamais presumindo que código antigo seja adequado à produção.
+7. Revisar progresso por evidência: lacunas demonstradas, explicação sem consulta, exercícios de transferência e projeto funcionando. Ajustar sequência e espaçamento em vez de marcar tópicos vistos como aprendidos.
+
+**Should-trigger:** criar uma trilha de seis meses para aprender backend/IA do nível atual com projetos, fontes e checkpoints.
+**Near-miss:** pedido de implementar uma API agora sem intenção de aprendizagem; priorizar a skill de engenharia.
+
+Fontes de descoberta: https://github.com/nilbuild/developer-roadmap, https://github.com/ossu/computer-science e https://github.com/EbookFoundation/free-programming-books. Links de terceiros são referências mutáveis, não conteúdo instalado ou validado automaticamente.
