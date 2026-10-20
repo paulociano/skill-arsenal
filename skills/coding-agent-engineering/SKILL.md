@@ -254,3 +254,19 @@ Para tarefas em que logs, JSON, resultados de testes, páginas e sessões longas
 5. preferir redução de outputs ou compaction nativa ao proxy com acesso a prompts, tokens e streams; interceptação MITM, instalação de certificados, alteração de base URL e injeção de tools exigem threat model e autorização específicos. Não instalar proxy ou desabilitar verificações TLS para economizar tokens.
 
 Fontes documentais: https://github.com/JuliusBrussee/caveman e https://github.com/ranxianglei/billion-context (2026-10-18). Só a metodologia portátil foi incorporada, não métricas universais nem runtime de terceiros.
+
+## Avaliação longitudinal de coding agents (SlopCodeBench, 2026-10)
+
+Ao escolher modelos, prompts ou harnesses para manter software que evolui, avaliar **trajetórias**, não só tickets isolados:
+
+1. Montar problemas representativos com especificação inicial e checkpoints incrementais (features, edge cases, correções). Cada checkpoint parte **do código produzido no anterior**, não de solução limpa.
+2. Congelar o contrato de medição: versões do modelo, esforço, runner, prompt, catálogo, dependências, seed, orçamento, configuração de testes e política de aprovação. Registrar erros de execução separadamente.
+3. Em cada checkpoint medir pelo menos **Core** (comportamento exigido no requisito atual) e **Strict** (todas as categorias exigidas, inclusive regressões). Contar também problemas cujo **último checkpoint** passa integralmente; taxa de checkpoints não é taxa de projetos completos.
+4. Ao final, avaliar os artefatos realmente deixados no workspace: diff, testes, duplicação, funções de complexidade concentrada e arquivos temporários/scratch. Comparar análise integral com análise filtrada por **regras fixas pré-declaradas**; não ocultar resíduos ad hoc. Métricas estáticas são proxies de risco, não bugs comprovados nem nota universal de manutenibilidade.
+5. Medir custo, tempo, retries e taxa de regressão juntos. Ao comparar esforço Medium/High/Extra High, usar tarefas pareadas e repetições suficientes quando possível; **uma campanha por configuração não demonstra causalidade nem ranking universal**.
+6. Promover um harness/modelo somente se melhorar o contrato da aplicação sem piorar injustificadamente segurança, regressões, revisão ou custo. Benchmarks públicos não substituem workloads locais.
+7. Se o runtime não estiver disponível, fornecer protocolo/matriz, **não afirmar que a campanha foi executada**. Rodar código externo apenas em ambiente autorizado e isolado.
+
+**Handoff por checkpoint:** requisito novo, comportamentos preservados, Core executado, Strict executado, falhas restantes, diff/arquivos residuais, custo observado, evidência de execução e próximo risco.
+
+**Proveniência:** [HumanLayer, estudo de outubro de 2026](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-new-models-on-slop-code-bench.md) e [SlopCodeBench](https://arxiv.org/abs/2603.24755). A publicação relata 36 problemas e 196 checkpoints por configuração, uma campanha por setting; métricas de qualidade comparáveis cobrem 28 problemas. Método absorvido sem instalar runner, executar benchmarks ou presumir acesso a modelos específicos.
