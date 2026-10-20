@@ -179,3 +179,20 @@ Em revisões de UI orientadas por conformidade, use um funil de falsificação a
 6. Separe revisão read-only de mudança efetiva. Quando a tarefa pede implementação, use a auditoria para alimentar o build, sem herdar a proibição de escrita de uma skill originalmente apenas auditora.
 
 **Origem adaptada:** https://github.com/ibelick/ui-skills/blob/main/skills/improve-ui/SKILL.md
+
+## Auditoria de fluxo profundo e interfaces sem interrupções (NEO, 2026-10)
+
+**Trigger restrito:** produtos cujo trabalho principal exige atenção sustentada, como editores de texto, código, estudo, composição ou criação longa. Não aplicar minimalismo extremo a sistemas de emergência, conformidade, transações críticas ou situações que precisam de alertas visíveis.
+
+Ao auditar um fluxo de concentração:
+
+1. **Tarefa primária e custo de interrupção:** observar quantos modais, notificações, badges, correções automáticas e decisões secundárias interrompem o usuário durante a atividade central. Distinguir ajuda solicitada de interferência não solicitada.
+2. **Progressive disclosure reversível:** oferecer modo simples/foco sem ocultar dados que a pessoa já produziu. Mostrar ferramentas no momento apropriado, inclusive por teclado/foco e toque; **hover sozinho não satisfaz descoberta nem acessibilidade**.
+3. **Feedback sem perturbação:** operações frequentes devem ter feedback discreto e significativo (salvo, pendente, erro recuperável). Falha de salvamento, conflito real ou risco de perda de dados têm precedência sobre a estética e precisam de aviso perceptível.
+4. **Erros e ações destrutivas:** inspecionar o caminho de recuperação para exclusão, reordenação, importação e sincronização. Preferir undo, rascunho recuperável e versões; não confundir ausência de aviso com tolerância a perda silenciosa.
+5. **Modelo mental e portabilidade:** manter o objeto principal reconhecível enquanto é editado (um manuscrito parece uma obra, por exemplo). Distinguir apresentação/decoração efêmera do conteúdo persistido, e testar export/import round-trip quando a precisão do documento for material.
+6. **Aceite no runtime:** testar teclado, leitor de tela quando relevante, touch, estado de foco, texto longo, interrupção de sessão, retorno ao contexto, conflitos de salvamento e recuperação. Medir, quando houver dados, interrupções por tarefa, sucesso em retomada, perda de trabalho e descobribilidade, não apenas cliques ou beleza.
+
+**Trade-off:** “menos controles” não é objetivo em si; o objetivo é **menos trabalho incidental e menor risco de erro** sem prejudicar recursos avançados legítimos. Não copiar literalmente visibilidade apenas em hover, atalhos, limite de recursos ou visuais do NEO como regras universais.
+
+**Proveniência:** [hughhowey/neo](https://github.com/hughhowey/neo), [CONTRIBUTING.md](https://github.com/hughhowey/neo/blob/main/CONTRIBUTING.md) e [AGENTS.md](https://github.com/hughhowey/neo/blob/main/AGENTS.md). O padrão é uma lente de auditoria, não uma certificação de usabilidade do aplicativo original; nada do runtime Electron foi instalado ou testado.
