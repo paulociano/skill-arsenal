@@ -137,3 +137,16 @@ Fontes de metodologia: https://github.com/Aboudjem/ui-ux-suite e https://github.
 Para auditorias de UI, usar guidelines externas atualizadas como **referência de checks** somente após identificar a revisão/URL da fonte, e reportar achados por `file:line` quando houver código acessível, ou por rota/elemento/estado quando não houver. Agrupar por categoria: semântica e acessibilidade, foco, formulários, animação/reduced-motion, tipografia, imagens, performance de rendering, navegação/URL state, dark mode, toque e internacionalização. Separar violações normativas de convenções opinativas de uma marca. Não aplicar restrições editoriais/visuais da Vercel universalmente.
 
 Referência viva a consultar quando necessário: https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md ; entrada de skill: https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines . Não presumir WebFetch ou uma versão das guidelines acessível no runtime.
+
+## Integridade de internacionalização
+
+Quando a superfície tiver múltiplos locales ou houver alteração em traduções:
+1. Identificar framework, locale de origem, namespaces, fallback e catálogos por aplicação; não misturar catálogos de apps de um monorepo.
+2. Comparar chaves lógicas por locale: ausentes, valores idênticos à origem e órfãs. Valores idênticos são candidatos à revisão, não tradução comprovadamente errada; manter marcas, números, URLs e placeholders em grupo explícito de provável equivalência.
+3. Respeitar regras de plural de cada locale e estrutura ICU/gettext; verificar placeholders e variáveis sem exigir igualdade literal entre formas plurais de idiomas diferentes.
+4. Procurar strings visíveis hardcoded no diff por padrão; varredura completa somente quando o escopo justificar. Catálogo inline exige análise do código, não arquivo de origem fictício.
+5. Reportar locale/namespace/chave/localizador e evidência. Locale inteiro ausente é um achado próprio.
+6. Se autorizado a preencher chaves, preservar formato e marcar conteúdo provisório como pendente; copiar origem não significa traduzir. Reexecutar comparação após escrita.
+
+**Aceite:** chave copiada da origem deixa de ser ausente e permanece pendente de tradução; nome de marca idêntico não vira bug confirmado. Página monolíngue sem requisito de localização não exige catálogos.
+**Proveniência:** metodologia de https://github.com/mgiovani/cc-arsenal/blob/main/skills/i18n-check/SKILL.md (2026-10-21), sem importar scripts ou instalador de uv.
