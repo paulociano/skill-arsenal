@@ -283,3 +283,16 @@ Ao construir ou avaliar a interface de um coding agent:
 
 **Aceite:** worker encerrado com teste falho não aumenta tarefas aceitas; edição negada aparece como negada, sem claim de arquivo alterado. Uma mudança comum em app não exige construir painel de agentes.
 **Proveniência:** READMEs de https://github.com/hellosverre/claude-skins , https://github.com/data-goblin/claude-code-filetree , https://github.com/JohnnyVizz/claude-kit/tree/main/plugins/savvy-progress e https://github.com/anthropics/claude-code-playground/tree/main/claude-code/mods/replay-theater (2026-10-21); inspeção parcial de savvy-progress/hooks/register.tsx. Métodos adaptados, sem importar mods, ferramentas MCP ou APIs de UI do Claude Code.
+
+## Agent Canvas e backend intercambiável (OpenHands)
+
+Quando uma equipe coordenar múltiplos coding agents, separar **control plane** (UI, filas, automações, aprovações, observabilidade) de **execution plane** (agente e sandbox). Um frontend não garante isolamento, e escolher um modelo não equivale a conceder ferramentas.
+
+- Registrar por execução o backend escolhido, protocolo/versão, workspace, principal, grants, limites de custo e caminho de artefatos.
+- Uma camada compatível com ACP ou adaptadores equivalentes pode alternar agentes, mas validar diferenças em tool schema, cancelamento, sessão, arquivos, feedback de erro e retomada antes de declarar paridade.
+- Para execução local sem sandbox, explicitar acesso potencial ao filesystem do host. Em Docker/VM, montar somente o workspace necessário, isolar credenciais/rede e verificar quais serviços continuam fora do sandbox.
+- Para automações via cron/webhook, conservar estado, idempotency key, revalidação de target, traces e filas de aprovação. Não inferir persistência ou execução contínua no ChatGPT apenas a partir da arquitetura do OpenHands.
+- Para múltiplos workers simultâneos, aplicar worktrees/branches ou diretórios distintos, lock/claim da unidade de trabalho e integração explícita. Sessões diferentes podem continuar compartilhando arquivos montados.
+- Testar um cenário de leitura, um patch, falha de tool, interrupção/retomada e tentativa de ação proibida em cada backend antes de habilitar ações de escrita.
+
+**Fonte de arquitetura:** https://github.com/OpenHands/OpenHands (Agent Canvas, README consultado em 2026-10-21). OpenHands, Node, Docker, ACP e servidores de agente permanecem runtimes externos e opcionais; não são ferramentas nativas desta skill.
