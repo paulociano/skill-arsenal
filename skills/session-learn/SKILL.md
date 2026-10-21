@@ -138,3 +138,16 @@ Adaptada de Mark393295827/third-brain-v7-skills · session-learn (V8.1).
 Validade temporal, supersession e provenance por episódio refinados a partir de https://github.com/getzep/graphiti.
 
 Origem local: [session-learn.docx](../session-learn.docx).
+
+## Correções no momento e escrita concorrente
+
+Ao capturar uma correção como candidata a aprendizado:
+1. Excluir redirecionamento pontual, confirmação vaga, pergunta e conteúdo sensível; preservar a evidência mínima que demonstra uma regra reutilizável. Confiança de um classificador é sinal auxiliar, nunca autorização para persistir.
+2. Consolidar repetições na mesma proposta com origem e contagem, sem criar fila de duplicatas. Quando houver revisão interativa disponível, oferecer texto e escopo concretos enquanto o contexto ainda está presente; preservar autorização permanente já concedida, sem pedir nova confirmação para cada gravação coberta.
+3. Encaminhar correção do workflow ao owner da skill existente; não espalhá-la simultaneamente em regra global, regra de projeto e cópias divergentes.
+4. Reler o destino imediatamente antes de escrever e preservar alterações concorrentes. Em API versionada usar SHA/ETag/CAS; em arquivo compartilhado usar lock ou mecanismo equivalente quando disponível. Reler sozinho não garante atomicidade; conflito exige reconciliar, nunca sobrescrever silenciosamente.
+5. Se houver seção marcada, validar delimitadores e interromper atualização se estiverem ambíguos. Confirmar persistência e distinguir regra salva de regra efetivamente carregada pela sessão atual.
+6. Não instalar capturador em background, ampliar retenção de históricos ou enviar prompts para classificador externo como consequência implícita desta metodologia.
+
+**Aceite:** duas correções equivalentes geram uma proposta; instrução “neste relatório” não vira preferência global. Rejeição de SHA leva à releitura e merge do delta, não retry cego.
+**Proveniência:** https://github.com/BayramAnnakov/claude-reflect/tree/main/mod (README, 2026-10-21). A fonte documenta risco de perda em saves simultâneos; a adaptação exige controle de concorrência sem presumir hooks ou autoaprendizagem nativos.
