@@ -186,3 +186,18 @@ Para artefatos distribuídos sem fonte e com análise autorizada:
 6. Escalar para instrumentação dinâmica só com autorização e isolamento; não instalar ou executar ferramentas simplesmente porque aparecem na referência.
 
 Síntese de https://github.com/aicodeking/leanrea/blob/main/leanrea/SKILL.md (2026-10-18). Sem executar a ferramenta nem extrapolar benchmarks de Claude Code para o ChatGPT.
+
+## Memória persistente e diff estrutural de achados (REAgraph)
+
+Quando uma investigação autorizada cruzar sessões ou comparar versões de artefatos, use um ledger persistente de descobertas antes de repetir probes:
+
+1. Identifique cada artefato por hash, versão, plataforma e escopo da análise. Preserve os localizadores e a proveniência de cada achado.
+2. Registre nós e relações com estado epistêmico (observado/extraído, inferido, ambíguo, não verificado). Mescle achados repetidos por identidade estável e promova confiança apenas quando houver nova evidência observável.
+3. Para comparação de builds, não use endereços, offsets ou IDs temporários como única identidade. Alinhe símbolos, papéis e vizinhança estrutural; diferencie adição, remoção, alteração de relações e mera relocação. Em empates, abstenha-se em vez de afirmar correspondência.
+4. Resuma o subgrafo necessário para a pergunta em vez de recarregar todo o corpus. Reutilize análises previamente verificadas apenas quando hash e escopo forem compatíveis; invalide o cache quando mudarem.
+5. Ao comparar fonte e artefato distribuído, reporte elementos sem correspondência como **não explicados**, não como automaticamente maliciosos. Atribua cobertura e confiança; ausência de achado não comprova ausência do comportamento.
+6. Verifique manualmente amostras de alinhamentos e mudanças de alto risco antes de declarar equivalência, regressão ou integridade.
+
+**Portabilidade e segurança:** REAgraph é referência técnica, não runtime nativo do ChatGPT. Só invoque seu CLI/MCP se efetivamente disponível e autorizado. Não instale dependências, não execute binários desconhecidos, não acione REA, Docker, npx, servidores ou cache remoto como efeito implícito. Dados privados não devem ser publicados em cache compartilhado. Não extrapole benchmarks sintéticos ou exemplos específicos para precisão universal.
+
+Origem complementar: https://github.com/Graphify-Labs/REAgraph (README, 2026-10-21). O Graphify já fundamenta as regras de grafo de evidência desta skill; portanto não criar owner duplicado.
