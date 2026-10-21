@@ -54,3 +54,16 @@ Usar um decision engine tipado somente para triagem repetitiva com opções expl
 - [Jev Skills](https://github.com/n23eos/jev-skills) e [jev-code](https://github.com/FrancoisChastel/jev-code): limites de decisões tipadas e integração opcional.
 - NVlabs/SoL-Pi: action fusion, observation handles, evidence-preserving reduction e compaction em pontos de conclusão, absorvidos como metodologia sem depender do runtime Pi.
 - DannyMac180/astra-advisor: cost receipts com cobertura explícita e distinção entre same-token repricing e economia real; model/effort snapshots específicos não são tratados como capacidades permanentes.
+
+## Custo de cache, verificadores laterais e trabalho ocioso
+
+Quando o desperdício suspeito depender de cache ou chamadas auxiliares:
+1. Medir input não cacheado, cache read, cache write, output e chamadas de revisão/telemetria separadamente, conforme dados reais expostos. Um prompt curto pode reenviar um prefixo grande.
+2. Tratar warm/cold calculado por relógio como estimativa: TTL, provedor, mudança de prefixo, retomada e compactação podem mudar o resultado. Só um recibo de uso confirma o que aquela chamada leu/escreveu; teste com relógio simulado não prova retenção no servidor.
+3. Comparar custo total de manter cache ativo (todos os pings, input, writes, output e retries) com a regravação evitável, ponderada pela chance de retorno na janela. “Write custa N vezes um read” não equivale a N vezes de economia total.
+4. Não iniciar pings pagos, loops ociosos ou configuração persistente apenas para economizar. Se esse experimento for explicitamente autorizado e suportado, definir prazo, limite de chamadas/custo, cancelamento, recibos e condição de parada quando não houver cache read útil.
+5. Incluir revisores em background no orçamento: prefixo pode usar cache, mas instruções próprias e respostas continuam tendo custo. Ocultar chamadas ou dobrar cartões na interface não reduz consumo por si só.
+6. Identificar tabela de preços, data e TTL usados no cálculo; valor equivalente de API numa assinatura não é cobrança adicional observada nem prova do peso na quota. Não reutilizar preços ou flags do Claude Code como configuração do Codex.
+
+**Aceite:** ping que lê cache prova apenas aquela leitura, não economia líquida. Sem métricas de cache, reportar desconhecido, não warm confirmado. Pedido genérico de concisão não ativa keepwarm.
+**Proveniência:** https://github.com/karanb192/cache-tax (README, 2026-10-21) e https://code.claude.com/docs/en/interactive-mode#you-should-know-suggestions (consultada em 2026-10-21). Sem instalar mod, manter sessão ativa, enviar transcript a forks ou adotar preços do README.
