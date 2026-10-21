@@ -150,3 +150,23 @@ Para incidente ativo ou degradação, separar **triagem de saúde** (estado atua
 - Dashboards devem incluir unidade, janela, fonte, população, ausência de dados e rota operacional. A visualização nunca substitui validação de consultas, SLO e evidência bruta.
 
 **Proveniência e fronteira técnica (2026-10-21):** https://github.com/BetterStackHQ/codex-plugin/tree/main/skills/investigate-incident, `logs-query`, `health-check`, `uptime-monitors`; https://github.com/BetterStackHQ/collector e https://github.com/BetterStackHQ/opentelemetry-demo. Absorvida a metodologia de drill-down, hipóteses, query/schema-first e zero-code assessment; SQL, MCP, conectores, scripts, runtime e instrumentação eBPF específicos da Better Stack permanecem opcionais e dependem de instalação/conta/permissões reais. Não usar comandos de instalação remota pipe-to-shell como parte da avaliação.
+
+
+## Operação conectada: backend de observabilidade realmente disponível
+
+Se o usuário pedir inspeção ou auditoria real e um conector autorizado (por exemplo Better Stack) estiver **efetivamente disponível na sessão**, passar do playbook genérico para consulta de dados atuais. Nunca usar esta seção para presumir conexão.
+
+1. **Descobrir escopo somente leitura:** listar monitores, incidentes abertos/reconhecidos e fontes com os recursos reais do conector; identificar team/serviço/ambiente antes de correlacionar. Não transferir dados de outra equipe ou interpretar uma fonte de demo/onboarding como produção.
+2. **Normalizar entidades:** monitor, incidente, fonte, serviço e aplicação não são sinônimos. Vincular por ID/serviço/URL e período comprovados. Verificar data da última checagem, instante de abertura/ack/resolução e diferença de timezone. Monitor `Up` e incidente `Active` podem coexistir; reportar a divergência e a possibilidade de incidente de amostra, atraso na resolução ou outro tipo de sinal, sem afirmar outage atual.
+3. **Verificar capacidade de dados antes de diagnosticar:** a existência de um source não prova que há logs/spans/metrics relevantes. Descobrir schemas/campos e ajuda de consulta do backend; executar somente query limitada em tempo/linhas e apropriada à origem. Se não houver sinal, dizer `insuficiente para causa raiz` e manter a investigação no plano.
+4. **Explicar resultado por evidência:** separar observação de inferência, anexar IDs/horários, cobertura e limite de recência. Confirmar impacto ao usuário por múltiplos sinais; não converter contagem de incidentes em disponibilidade nem status atual em SLA histórico.
+5. **Direitos e aprovação:** leitura primeiro. Não criar/pausar monitor, reconhecer/resolver incidente, alterar alertas, escalar, publicar status ou executar correção de produção sem autorização específica, mesmo que o plugin exponha essas ferramentas.
+6. **Fallback:** se o conector estiver ausente, desconectado, sem acesso ou retornar erro, informar essa condição e usar apenas metodologia/consulta externa explicitamente autorizada; não simular um resultado atual.
+
+### Aceitação negativa obrigatória
+- **should-trigger:** pedido de estado operacional com conector conectado → consultas reais read-only, identificação de fontes e resultado com carimbo temporal.
+- **near-miss:** usuário pede somente plano de observabilidade → não consultar conta, não alterar nada.
+- **contradição de sinais:** monitor online + incidente ativo → não declarar indisponibilidade, reconciliar e qualificar.
+- **cobertura parcial:** somente fonte onboarding/demo → não apresentar como saúde da aplicação de produção.
+
+**Proveniência:** reavaliação do `BetterStackHQ/codex-plugin` com plugin Better Stack efetivamente acessível no ChatGPT em 2026-10-21. O backend é opcional, e este contrato é portátil para outras plataformas de observabilidade com ferramentas reais. Ver `evaluations/2026-10-21-arsenal-evolution-run-001.md`.
