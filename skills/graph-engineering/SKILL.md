@@ -109,3 +109,16 @@ Adaptada de Mark393295827/third-brain-v7-skills · graph-engineering (V8.1).
 Coordenação multiworker e record persistente adaptados de [eliasstravik/herdr-projects](https://github.com/eliasstravik/herdr-projects), sem importar o plugin ou seus comandos.
 
 Origem local: [graph-engineering.docx](../graph-engineering.docx).
+
+## Contrato portátil e proteção efetiva
+
+Ao portar um workflow entre runtimes, separar contrato conceitual, instrução ao modelo e mecanismo realmente imposto pelo executor. Para cada capacidade exigida, registrar disponível, apenas orientativa, ausente ou não verificada.
+- Requisito obrigatório ausente bloqueia o nó; recurso opcional pode usar fallback documentado, como execução sequencial, com degradação registrada.
+- Declarar limites de turnos/retries/replanejamento no controlador que os pode impor; campo YAML ou texto de prompt sozinho não prova enforcement.
+- Validar handoff contra contrato antes de liberar dependentes. Estado deve distinguir aprovado, rejeitado, bloqueado e escalado.
+- Não anunciar detecção automática de repetição, circuit breaker de custo, sandbox, whitelist ou retomada durável apenas porque o protocolo os descreve. Exigir implementação e evidência no runtime alvo.
+- Preferir DAG fixo quando as dependências já forem conhecidas. Gerente dinâmico ou conversa full mesh requer justificativa e limites de expansão.
+- Falhas recorrentes em vários nós da mesma wave podem indicar erro de contrato/planejamento: reavaliar causa compartilhada antes de repetir todos os nós ou afrouxar critérios de aceite.
+
+**Aceite:** runtime sem paralelismo aceita fallback sequencial se opcional; sandbox obrigatório ausente bloqueia execução. Um pipeline simples não justifica instalar sistema de squads.
+**Proveniência:** https://github.com/gutomec/ai-public-arsenal/blob/main/skills/squads/SQUAD_PROTOCOL_V4.md e skills/aiox-autopilot/SKILL.md (2026-10-21). O protocolo v4 distingue propostas de proteções implementadas; não importar promessa de deploy irrestrito, scores arbitrários ou ferramentas squad_* inexistentes.
