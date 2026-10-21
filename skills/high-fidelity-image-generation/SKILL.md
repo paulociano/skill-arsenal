@@ -143,3 +143,16 @@ Para thumbnails de vídeo e capas de Reels/Shorts/Instagram, tratar o formato co
 6. Produção por fornecedor externo depende de modelo/conector realmente disponível, autorização de uso e validação de saída; não replicar comandos `higgsfield` inexistentes.
 
 **Origem adaptada:** https://github.com/higgsfield-ai/skills/blob/main/higgsfield-youtube-thumbnail/SKILL.md.
+
+## Experimentos reproduzíveis com difusão (AUTOMATIC1111)
+
+Quando o backend real expuser geração por difusão com parâmetros explícitos, tratar a exploração como experimento reprodutível, não como sequência de prompts não rastreados:
+
+1. Fixar checkpoint/modelo e sua licença, VAE quando aplicável, resolução, seed, sampler, steps, guidance e versão/extensões; registrar esses dados junto do asset. Não assumir que seeds garantem pixels idênticos entre máquinas ou versões.
+2. Separar variantes por dimensão testada: prompt, seed, sampler, denoising strength, guidance, upscale ou máscara. Usar uma matriz pequena de comparação e selecionar por critérios visuais observáveis.
+3. Em img2img/inpainting, delimitar máscara e força de alteração e comparar regiões protegidas com a imagem-base. Outpainting e upscale exigem QA de costuras, identidade, anatomia e artefatos.
+4. Preservar proveniência dos parâmetros em metadados ou sidecar quando suportado; remover metadados sensíveis antes de publicar.
+5. Tratar LoRA, embeddings, checkpoints, scripts e extensões como componentes de terceiros sujeitos a licença, provenance, supply-chain e revisão antes de execução. Não habilitar execução arbitrária de código ou UI exposta à rede por conveniência.
+6. Na ferramenta nativa do ChatGPT, que não expõe necessariamente seed/sampler/ControlNet/LoRA, preservar apenas controle de variantes, referências, invariantes e inspeção visual. Não alegar execução do AUTOMATIC1111.
+
+**Referência técnica:** https://github.com/AUTOMATIC1111/stable-diffusion-webui (README, 2026-10-21). A interface Gradio, modelos e GPU não são dependências do Arsenal.
