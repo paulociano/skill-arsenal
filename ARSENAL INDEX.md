@@ -78,6 +78,9 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 
 ## Skills
 
+- **diffusion-finetuning-planning** — Planejar, revisar e validar fine-tuning/LoRA de modelos de difusão de imagem e vídeo com dataset, captions, hardware, checkpoints e QA, sem pressupor execução de treino disponível.  
+  `skills/diffusion-finetuning-planning/SKILL.md`
+
 - **obsidian-vault-authoring** — Criar e validar Obsidian Markdown, Bases, JSON Canvas e templates de vault preservando links, propriedades e sintaxe sem depender de Obsidian CLI.  
   `skills/obsidian-vault-authoring/SKILL.md`
 
