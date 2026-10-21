@@ -201,3 +201,14 @@ Quando uma investigação autorizada cruzar sessões ou comparar versões de art
 **Portabilidade e segurança:** REAgraph é referência técnica, não runtime nativo do ChatGPT. Só invoque seu CLI/MCP se efetivamente disponível e autorizado. Não instale dependências, não execute binários desconhecidos, não acione REA, Docker, npx, servidores ou cache remoto como efeito implícito. Dados privados não devem ser publicados em cache compartilhado. Não extrapole benchmarks sintéticos ou exemplos específicos para precisão universal.
 
 Origem complementar: https://github.com/Graphify-Labs/REAgraph (README, 2026-10-21). O Graphify já fundamenta as regras de grafo de evidência desta skill; portanto não criar owner duplicado.
+
+## Caso reproduzível e paridade de artefatos
+
+Para investigação autorizada de artefatos sem fonte completa, registrar a ação de entrada que interessa e a menor observação capaz de distinguir hipóteses rivais. Preservar evidência bruta separada da derivada, com hash, versão, ambiente, comandos, offsets/localizadores e timeline; remover secrets das cópias compartilhadas sem substituir o original protegido.
+
+Se houver dump, não aceitá-lo apenas por existir: validar headers, mapeamentos, imports/relocations e símbolos conforme formato e objetivo, e confirmar que um consumidor apropriado consegue lê-lo. Checks inaplicáveis devem ser identificados. Sem ferramentas disponíveis, registrar validação pendente.
+
+Para reconstrução, criar fixture/reprodutor mínimo e localizar a primeira divergência; comparar casos nominal, vazio/default, borda, repetido e entre versões quando aplicáveis. Separar partida fria de reutilização de estado. Sem baseline e execuções repetidas, não chamar resultado de estável.
+
+**Aceite:** string isolada não comprova cadeia de chamadas; dump não aberto por consumidor continua não validado. Código-fonte completo com pergunta simples permanece no walkthrough convencional.
+**Proveniência:** https://github.com/manyuegong33/r0crawl_skills/blob/main/SKILL.md e skills/reconstruction-and-parity/SKILL.md (2026-10-21). Absorção metodológica; sem importar módulos de evasão, hooks, anti-cheat, scripts ou presumir Frida/IDA/Ghidra.
