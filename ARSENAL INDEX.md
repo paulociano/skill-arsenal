@@ -20,6 +20,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/application-build-audit-loop/STACK.md`
 - **architectural-design-cycle** — Conduzir projetos arquitetônicos e de interiores do briefing à planta técnica, CAD paramétrico, maquete 3D, BIM/IFC, desempenho ambiental e análise estrutural preliminar, carregando somente os owners necessários.  
   `stacks/architectural-design-cycle/STACK.md`
+- **arsenal-evolution-engine** — Reavaliar decisões e fontes já conhecidas quando novas ferramentas, necessidades, evidências ou combinações desbloquearem ganho; priorizar, testar e evoluir owners do Arsenal sem autoedição cega.  
+  `stacks/arsenal-evolution-engine/STACK.md`
 - **arsenal-autopilot** — Evoluir o Skill Arsenal a partir de uma ou mais fontes externas, detectando capacidades, overlap e ownership, avaliando segurança e portabilidade, adotando apenas valor incremental e publicando mudanças verificadas com trilha de auditoria.  
   `stacks/arsenal-autopilot/STACK.md`
 - **brand-creation-system** — Conduzir uma marca da estratégia à identidade visual, logo, guidelines, assets e governança, usando apenas as etapas necessárias e mantendo decisão humana nos gates de direção.  
