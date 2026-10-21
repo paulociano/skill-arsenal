@@ -270,3 +270,16 @@ Ao escolher modelos, prompts ou harnesses para manter software que evolui, avali
 **Handoff por checkpoint:** requisito novo, comportamentos preservados, Core executado, Strict executado, falhas restantes, diff/arquivos residuais, custo observado, evidência de execução e próximo risco.
 
 **Proveniência:** [HumanLayer, estudo de outubro de 2026](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-new-models-on-slop-code-bench.md) e [SlopCodeBench](https://arxiv.org/abs/2603.24755). A publicação relata 36 problemas e 196 checkpoints por configuração, uma campanha por setting; métricas de qualidade comparáveis cobrem 28 problemas. Método absorvido sem instalar runner, executar benchmarks ou presumir acesso a modelos específicos.
+
+## Interface observável sem confundir atividade e resultado
+
+Ao construir ou avaliar a interface de um coding agent:
+- Mostrar progresso por **tarefas aceitas / tarefas planejadas**, com mudança de escopo explícita. Contexto consumido, tempo e passos declarados pelo worker são sinais de atividade; nunca substituem aceite.
+- Reservar ao coordenador a mudança do plano/fase/estado global; workers reportam somente seu escopo, com identidade resolvida pelo runtime. Validar e limitar os valores recebidos mesmo quando há schema de ferramenta.
+- Separar árvore de arquivos, seleção humana, arquivos lidos e arquivos efetivamente alterados. Seleção pode esclarecer uma referência como “este arquivo”, mas não concede autorização para editar ou executar. Atualizar a view a partir do cwd/worktree correto, sem capturar foco ou scroll contra a escolha do usuário.
+- Em replay de edições, registrar tentativa, autorização, resultado da ferramenta e diff final separadamente: evento de tool.call pode incluir operação recusada ou falha. Rotular previews truncados e manter acesso ao diff completo. Timeline em memória não é histórico durável nem rollback.
+- Folding, temas e animação são camadas de apresentação: não alegar economia de tokens por ocultar saída visualmente se o contexto do modelo permanece igual. Manter erros, estados e dados copiáveis, reduced motion, fallback nativo e capacidade de expandir o original.
+- Se extensões disputarem a mesma região da UI, testar composição e fallback; não depender de botão de aprovação que pode estar oculto. Um painel visual não implementa policy, sandbox ou verificação.
+
+**Aceite:** worker encerrado com teste falho não aumenta tarefas aceitas; edição negada aparece como negada, sem claim de arquivo alterado. Uma mudança comum em app não exige construir painel de agentes.
+**Proveniência:** READMEs de https://github.com/hellosverre/claude-skins , https://github.com/data-goblin/claude-code-filetree , https://github.com/JohnnyVizz/claude-kit/tree/main/plugins/savvy-progress e https://github.com/anthropics/claude-code-playground/tree/main/claude-code/mods/replay-theater (2026-10-21); inspeção parcial de savvy-progress/hooks/register.tsx. Métodos adaptados, sem importar mods, ferramentas MCP ou APIs de UI do Claude Code.
