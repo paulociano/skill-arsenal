@@ -201,3 +201,14 @@ Ao avaliar skills ou repositórios, **não encerrar apenas documentando recomend
 `ABSORB_METHOD_ONLY` deve significar **metodologia efetivamente incorporada ao owner**, não somente registrada em evaluations/. Quando não houver melhoria segura, compatível e verificável, usar KEEP_EXTERNAL_REFERENCE ou REJECT com motivo, sem implementação fictícia. Não importar código externo não auditado nem criar duplicatas para atingir cotas. Se a escrita for bloqueada, declarar falha, o que ficou pendente e não usar termos como implementado.
 
 Esta regra se aplica também a revisões futuras de catálogos e a correções retrospectivas de avaliações que identificaram ganhos sem alterar os owners.
+
+
+## Reabertura de avaliações antigas: Evolution Engine
+
+Quando a entrada vier de uma **avaliação já registrada** cuja decisão pode ter mudado por novo conector, runtime, necessidade, benchmark, segurança ou composição de capacidades, usar antes `stacks/arsenal-evolution-engine/STACK.md` para:
+- identificar o gatilho e o delta verificável em relação à decisão anterior;
+- formar hipótese, baseline e near-miss;
+- recuperar somente owners e avaliações relevantes;
+- impedir a reabertura repetitiva sem evidência nova.
+
+Este Autopilot continua dono da **adaptação, segurança, materialização e publicação** depois que o Evolution Engine seleciona uma mudança incremental justificada. Não importar catálogos históricos em massa nem transformar revisões vazias em commits.
