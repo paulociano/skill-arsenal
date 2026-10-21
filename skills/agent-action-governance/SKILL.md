@@ -195,3 +195,16 @@ Em automações de browser com sessão autenticada, browser cloud, sync de cooki
 - Adaptar às ferramentas efetivamente conectadas; BrowserAct e Browserbase não estão automaticamente instalados porque uma skill foi lida.
 
 Fontes metodológicas: https://github.com/browser-act/skills/tree/main/browser-act e https://github.com/browserbase/skills . Adoção apenas das fronteiras de autorização, isolamento e evidência, não dos recursos de stealth ou scripts de sincronização.
+
+## Limites da medição de impacto e da interceptação
+
+No preflight de impacto já definido nesta skill:
+- Inspecionar a linha/ação completa e o cwd efetivo; preview da primeira operação reconhecida não cobre wrappers, scripts, aliases, substituições de shell ou efeitos seguintes. Se o parser não resolve o comando, registrar escopo desconhecido em vez de concluir segurança.
+- Executar probes por argumentos estruturados quando possível; nomes iniciados por hífen, globs, links e mudanças de diretório precisam ser tratados como dados. Contagens e tamanhos aproximados devem ser rotulados.
+- “Status de migração” pode carregar código do projeto e acessar banco/rede; revisar esses efeitos antes do probe. Não assumir leitura inofensiva apenas pelo nome status.
+- Medição de commits remotos baseada em ref local pode estar desatualizada; registrar freshness e não alegar lista exata sem evidência suficiente.
+- Uma UI que intercepta somente Bash não cobre edições, APIs ou outras ferramentas. Botão oculto, erro, interrupção ou timeout não pode produzir aprovação por ausência de resposta; o gate deve ter fallback seguro imposto pelo runtime.
+- Preview não é sandbox. Após aprovação válida, revalidar comando/alvo/estado e verificar efeito; preservar autorização já existente quando continuar aplicável.
+
+**Aceite:** preview parcial de uma linha composta não autoriza silenciosamente seus efeitos restantes; probe de migração com código não revisado fica pendente. Comando simples de leitura não exige confirmação extra por esta seção.
+**Proveniência:** aprofundamento da fonte Blast Radius já presente nesta skill: https://github.com/anthropics/claude-code-playground/tree/main/claude-code/mods/blast-radius (README e limitações, 2026-10-21). Não instalar o mod nem alegar cobertura universal do classificador.
