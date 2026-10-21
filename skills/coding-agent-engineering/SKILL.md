@@ -296,3 +296,19 @@ Quando uma equipe coordenar múltiplos coding agents, separar **control plane** 
 - Testar um cenário de leitura, um patch, falha de tool, interrupção/retomada e tentativa de ação proibida em cada backend antes de habilitar ações de escrita.
 
 **Fonte de arquitetura:** https://github.com/OpenHands/OpenHands (Agent Canvas, README consultado em 2026-10-21). OpenHands, Node, Docker, ACP e servidores de agente permanecem runtimes externos e opcionais; não são ferramentas nativas desta skill.
+
+
+## Diagnóstico de falhas no roteamento de skills e na execução do plano
+
+Quando uma sessão de agente de programação usa um sistema de skills/planos e o resultado desvia do fluxo esperado, não corrigir apenas o prompt final. Investigar a trajetória observável:
+
+1. Reconstruir uma linha do tempo com requisito, skill elegível, trigger efetivo, contexto entregue, ferramentas chamadas, alterações, testes, revisões e decisões do usuário; não atribuir causalidade a passos internos não observados.
+2. Classificar o desvio: **skill não disparou**, **skill indevida disparou**, **design não aprovado**, **plano deficiente**, **implementação divergiu**, **teste/oracle inadequado**, **review não ocorreu**, **verificação ou entrega não comprovada**.
+3. Localizar a primeira transição em que evidência e contrato divergiram. Distinguir falta de ferramenta, instrução conflitante, contexto insuficiente, design ambíguo e falha do agente.
+4. Aplicar a menor correção possível no owner adequado (roteador, description, checklist, teste, plano ou autorização), evitando adicionar gatilhos globais obrigatórios a toda tarefa.
+5. Criar um par de casos de regressão: **should-trigger** para o caso perdido e **near-miss** para tarefa simples que não deve ganhar cerimônia. Comparar resultado observável antes/depois.
+6. Quando houver sessão compartilhável, preservar evidência mínima (timestamps e trechos relevantes), remover segredos/PII e não exportar transcrições ou logs a terceiros sem autorização.
+
+Para fluxos longos com tarefas independentes, compare **execução inline com revisão final** versus **worker de contexto fresco por tarefa + revisão de spec e qualidade por tarefa + revisão de integração final**. Escolher pelo risco, independência e custo; só delegar se houver ferramenta real de subagentes. O plano aprovado limita decisões; mudanças irreversíveis, escopo ou efeitos externos continuam sujeitos a policy e aprovações.
+
+**Proveniência:** https://github.com/obra/superpowers/tree/main/skills/diagnosing-superpowers, `subagent-driven-development`, `using-superpowers` e README (2026-10-21). Metodologia adaptada sem hooks, agentes delegados, transcript APIs ou runtime Superpowers presumidos.
