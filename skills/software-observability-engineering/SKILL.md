@@ -127,3 +127,26 @@ Combinar janelas longas e curtas para alertar consumo sustentado e rápido do or
 Probes externos complementam métricas internas; status page não demonstra sozinha cumprimento contratual. Preservar fonte, consulta, período e incidentes usados em relatórios. Encaminhar matriz de controles e provas a saas-compliance-evidence.
 
 Fontes: [SLO Generator](https://github.com/google/slo-generator), [Pyrra](https://github.com/pyrra-dev/pyrra), [Sloth](https://github.com/slok/sloth), [Alertmanager](https://github.com/prometheus/alertmanager) e [Blackbox Exporter](https://github.com/prometheus/blackbox_exporter). Revisões em ../../evaluations/2026-10-05-saas-sla-compliance-repositories.md.
+
+
+## Playbook de incidentes orientado a evidências
+
+Para incidente ativo ou degradação, separar **triagem de saúde** (estado atual) de **investigação de causa** (timeline e hipóteses). O padrão aproveitado da skill `investigate-incident` da Better Stack é:
+
+1. Delimitar serviço, sintoma, instante inicial, severidade, regiões/clientes afetados, monitor, incidentes anteriores e responsável de plantão. Não confundir status de monitor com impacto real.
+2. Observar janela ampla para encontrar anomalias e reduzir progressivamente a janela e o tamanho dos buckets; picos breves desaparecem em agregações longas. Usar métricas primeiro para localizar mudanças e depois logs/spans/erros para reconstruir a sequência.
+3. Comparar baseline anterior e janela problemática com mesmo filtro, população, timezone e granularidade; verificar deploys, configurações, dependências e mudanças externas **anteriores** ao sintoma.
+4. Formular ao menos duas hipóteses rivais e buscar observações que possam refutá-las. Correlação temporal não prova causa raiz; para atribuição, exigir precedência temporal, mecanismo plausível e contraprova das alternativas.
+5. Uma consulta vazia filtrada não significa ausência de erros: validar campos e fontes, ampliar filtros com segurança e informar cobertura/limites. A consulta deve ter janela temporal, limite e custo previsível; descobrir schema e sintaxe do backend real antes de compor SQL.
+6. Reportar `o que falhou / desde quando / quem é afetado / evidência e fonte / hipótese e confiança / lacunas / mitigação proposta / owner / próximo check`. Separar fatos confirmados de inferências.
+7. **Read-only por padrão**. Acknowledge, comentários, alteração de alertas/monitores, escalonamento, rollback, publicação e automações são efeitos externos e exigem grants e aprovação correspondentes. Verificar consequência depois de cada ação autorizada.
+
+### Validação de monitoramento e eBPF
+
+- Classificar sinal por origem: probe externo, métrica interna, log, trace, instrumentação por eBPF ou sintético. Nenhuma origem isolada garante cobertura completa.
+- Para eBPF/auto-instrumentação zero-code, inspecionar previamente suporte de kernel, permissões/capabilities, requisitos de CPU/memória, compatibilidade de protocolo e visibilidade de tráfego; evitar afirmar que coletará transações criptografadas ou todos os serviços sem teste.
+- Testar em ambiente controlado um request bem-sucedido, erro, latência artificial, restart e perda de conexão do coletor. Conferir cardinalidade, sampling, backpressure, filas, custo, privacidade e dados realmente exportados.
+- Monitores de disponibilidade, heartbeat de jobs e verificações de jornada são contratos diferentes. Um monitor recém-criado pode iniciar verificações e notificações imediatamente, logo sua criação requer revisão de endpoint, região, frequência, escalonamento e aprovação.
+- Dashboards devem incluir unidade, janela, fonte, população, ausência de dados e rota operacional. A visualização nunca substitui validação de consultas, SLO e evidência bruta.
+
+**Proveniência e fronteira técnica (2026-10-21):** https://github.com/BetterStackHQ/codex-plugin/tree/main/skills/investigate-incident, `logs-query`, `health-check`, `uptime-monitors`; https://github.com/BetterStackHQ/collector e https://github.com/BetterStackHQ/opentelemetry-demo. Absorvida a metodologia de drill-down, hipóteses, query/schema-first e zero-code assessment; SQL, MCP, conectores, scripts, runtime e instrumentação eBPF específicos da Better Stack permanecem opcionais e dependem de instalação/conta/permissões reais. Não usar comandos de instalação remota pipe-to-shell como parte da avaliação.
