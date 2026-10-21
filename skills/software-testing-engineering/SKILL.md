@@ -154,3 +154,16 @@ Quando funcionalidades forem adicionadas em etapas (especialmente por coding age
 **Aceite:** requisito novo funcionando com regressão antiga ainda falhando é resultado **parcial**, não concluído. Sem suíte executável ou evidência fresca, limitar a conclusão ao desenho dos testes.
 
 **Proveniência:** [artigo SlopCodeBench](https://arxiv.org/abs/2603.24755) e [HumanLayer, 2026-10-15](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-new-models-on-slop-code-bench.md). Metodologia cumulativa, sem exigir runner original.
+
+## Espelho local de CI com cobertura explícita
+
+Quando Actions estiver indisponível ou o pedido for reproduzir CI localmente:
+1. Ler o workflow e job solicitados; extrair comandos, ordem, dependências, condições, working-directory, env, versões, serviços, actions e matriz. Não inferir checks obrigatórios apenas do trigger: confirmar branch protection/required checks quando acessíveis.
+2. Inspecionar comandos antes de executar; limitar ao escopo de verificação autorizado. Não reproduzir deploy, release, publicação ou mutações remotas por estarem no YAML.
+3. Executar comandos correspondentes na ordem/dependências reais. Validar actions reutilizáveis separadamente; não tratá-las como comandos locais conhecidos.
+4. Registrar versões reais; divergência da versão do runner, serviços ausentes, secrets indisponíveis e combinações de matriz não executadas impedem alegar paridade completa. Verificar presença de secrets sem revelar valores; nunca usar valores fictícios para obter PASS.
+5. Emitir tabela por job/step: PASS, FAIL, SKIPPED ou NOT REPLICATED, com comando, evidência e motivo. Interromper a cadeia dependente após falha, preservando checks independentes quando apropriado.
+6. Distinguir checks locais aprovados de CI remoto aprovado. Nenhum resultado local prova merge gate verde sem observar o gate real.
+
+**Aceite:** matriz com três versões e uma execução local deve reportar duas combinações não verificadas. Pedido para criar pipeline novo não ativa este espelho.
+**Proveniência:** adaptação metodológica de https://github.com/mgiovani/cc-arsenal/blob/main/skills/ci-local/SKILL.md (2026-10-21); sem instalar ferramentas ou usar fallback de versão como equivalência.
