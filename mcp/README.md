@@ -39,3 +39,42 @@ Criar adaptador/gateway real com discovery MCP, contrato de schema, policy enfor
 - `skills/ai-workflow-automation-engineering/SKILL.md`
 - `skills/agent-action-governance/SKILL.md`
 - `skills/mcp-agent-behavior-testing/SKILL.md`
+
+
+## Fase 2: servidor MCP local funcional (somente leitura)
+
+`mcp/catalog_server.py` expõe um servidor MCP **stdio** JSON-RPC 2.0, usando só Python da biblioteca padrão. Ele implementa `initialize`, `ping`, `tools/list`, `tools/call` e notificações sem resposta. Ferramentas:
+- `arsenal_list_integrations`: enumera candidatos declarados no catálogo (não descobre instalações reais).
+- `arsenal_get_integration`: lê um registro por ID exato.
+- `arsenal_client_compatibility`: consulta matriz de compatibilidade declarativa.
+
+Nenhuma ferramenta pode executar comandos, ler arquivos arbitrários, acessar redes, modificar o repositório ou transmitir tokens. Ferramentas desconhecidas e entradas extras falham fechadas. O servidor anuncia capacidades de **leitura**, sem prometer executar o MCP de terceiros ou conceder autorização por listar um item.
+
+### Configuração Codex CLI (na cópia clonada do Arsenal)
+
+Exige Python 3.9+ e Codex CLI instalado. Substitua `/CAMINHO/skill-arsenal` pelo caminho absoluto do clone local.
+
+```sh
+codex mcp add arsenal-catalog -- python /CAMINHO/skill-arsenal/mcp/catalog_server.py
+codex mcp list
+```
+
+No Windows, use o executável Python instalado e o caminho absoluto correspondente:
+
+```powershell
+codex mcp add arsenal-catalog -- python "C:\\Users\\ph_gr\\Skill-Arsenal\\mcp\\catalog_server.py"
+codex mcp list
+```
+
+O comando **registra** o servidor na configuração local do Codex, não conecta automaticamente GitHub, PostgreSQL ou Filesystem. Para desativar: `codex mcp remove arsenal-catalog`.
+
+### Testes
+
+```sh
+python scripts/validate_mcp_catalog.py
+python -m unittest discover -s tests -p 'test_mcp_catalog.py' -v
+```
+
+O workflow `.github/workflows/mcp-catalog.yml` executa esses dois comandos no GitHub Actions. Além dos checks do catálogo, os testes cobrem handshake, anúncio de tools read-only, leitura de registros, rejeição de comandos desconhecidos e round-trip stdio. Não afirmam compatibilidade real com uma instalação Codex local, nem com MCPs externos.
+
+**Limites:** não existe autenticação externa, bridge HTTP, proxy para servidores terceiros, gateway com política de escrita ou discovery do runtime nesta fase. Qualquer habilitação futura de ferramentas com efeitos exige revisão de governança e aprovação apropriada.
