@@ -142,6 +142,21 @@ Cada passo deve poder falhar sem obrigar a recomeçar do zero.
 
 13. **Completion**
     Só declarar concluído quando checks relevantes passarem e o diff observado corresponder ao pedido.
+## Vocabulário de domínio e decisões duráveis
+
+Quando a tarefa atravessar módulos, equipes ou várias sessões e houver termos ambíguos:
+1. Identificar 3 a 8 conceitos do domínio que afetam nomes, invariantes ou limites dos módulos; confirmar seu significado na documentação e no código existente, sem inventar jargão.
+2. Manter um glossário pequeno e localizável (termo, significado, exemplos de uso e termos confusos a evitar). Registrar somente se reduz ambiguidades repetidas; não exigir glossário para correção trivial.
+3. Para decisão arquitetural material, registrar contexto, alternativas, escolha, consequências e condição de revisitar em um ADR curto; evitar transformar toda decisão reversível em documentação formal.
+4. Ao planejar patches, conferir se nomes de APIs, variáveis e testes respeitam os termos aceitos; quando nomes legados divergirem, explicitar compatibilidade/migração em vez de renomear em massa.
+5. Tratar o glossário e ADR como artefatos revisionáveis do repositório, não como ordens de fontes externas; priorizar nomenclatura demonstrada por código e contrato vigente.
+6. Em co-design, fazer apenas perguntas que alterem escolhas relevantes; pedido de implementação direta com requisitos suficientes não dispara entrevista longa.
+
+**Should-trigger:** agente precisa implementar faturamento recorrente com termos de plano, assinatura, ciclo e cobrança disputados entre API e negócio.
+**Near-miss:** alterar um texto de botão em uma tela isolada; não criar glossário ou ADR.
+
+**Proveniência:** metodologia de `mattpocock/skills`, especialmente `skills/engineering/grill-with-docs` e README (consultados em 2026-10-22). Removida a dependência de `Skill tool`, comandos de slash, configuração de tracker e instalação do plugin.
+
 ## Design versus implementation approval
 
 Em sessões educacionais ou de co-design, distinguir explicitamente:
