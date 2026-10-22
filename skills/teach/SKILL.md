@@ -118,6 +118,23 @@ mattpocock/teach, build-your-own-x, TheAlgorithms, freeCodeCamp, amosblomqvist/l
 
 Origem local: teach.docx.
 
+## Seleção de projetos e bibliotecas de referência
+
+Quando a trilha precisar de um projeto aplicado, usar catálogos como *project-based-learning* e *build-your-own-x* para descobrir candidatos, não para instalar código ou definir currículo por popularidade.
+
+1. Escolher primeiro a competência observável e a lacuna diagnosticada; só depois procurar um projeto.
+2. Comparar 2 a 3 candidatos pelo escopo mínimo, pré-requisitos, linguagem, progressão, qualidade das explicações, testabilidade, manutenção e carga de dependências.
+3. Distinguir **reconstrução de fundamentos** (ex.: criar um servidor HTTP simples) de **aplicação ponta a ponta** (ex.: construir e publicar uma API). Selecionar a modalidade que melhor revela o conceito-alvo.
+4. Fatiar o projeto em checkpoints: modelo mental e desenho próprio, implementação mínima, testes e casos de falha, explicação dos trade-offs e transferência para um desafio diferente.
+5. Preservar autoria cognitiva: o aprendiz decide uma abordagem antes de receber solução de referência quando sua experiência permitir. Não converter um tutorial passo a passo em simples cópia e colagem.
+6. Quando precisar de biblioteca ou framework Python, usar *awesome-python* só para gerar candidatos. Verificar no repositório primário documentação, licença, manutenção, compatibilidade com o ambiente, histórico de segurança e custo de operação. Não concluir qualidade por estrelas, ranking ou presença no catálogo.
+7. Verificar links e instruções externas na fonte atual ao usar; tratar tutoriais legados como evidência pedagógica, não arquitetura ou dependência pronta para produção.
+
+**Should-trigger:** desenhar trilha de backend com três projetos crescentes, critérios de avaliação e seleção explícita de bibliotecas.
+**Near-miss:** pedido para escolher agora uma dependência de produção; aplicar análise técnica e segurança da dependência em vez de currículo de aprendizagem.
+
+Fontes de descoberta: https://github.com/codecrafters-io/build-your-own-x, https://github.com/practical-tutorials/project-based-learning e https://github.com/vinta/awesome-python. São índices externos mutáveis, não ferramentas instaladas.
+
 ## Trilhas de estudo técnicas com fontes externas
 
 Quando a missão for aprender programação, computação, engenharia ou ML de forma estruturada:
