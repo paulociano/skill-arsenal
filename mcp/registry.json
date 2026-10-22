@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "description": "Catálogo declarativo de integrações candidatas; não comprova instalação, autorização ou disponibilidade.",
+  "tools": [
+    {
+      "id": "github",
+      "label": "GitHub",
+      "kind": "provider",
+      "protocols": [
+        "native_connector",
+        "mcp"
+      ],
+      "capabilities": [
+        "repo.read",
+        "repo.write"
+      ],
+      "effects": [
+        "read",
+        "remote_write"
+      ],
+      "credentials": "oauth_or_token",
+      "verification": "unverified_per_runtime",
+      "docs": "https://github.com/modelcontextprotocol/servers"
+    },
+    {
+      "id": "filesystem",
+      "label": "Filesystem",
+      "kind": "local",
+      "protocols": [
+        "mcp_stdio"
+      ],
+      "capabilities": [
+        "files.read",
+        "files.write"
+      ],
+      "effects": [
+        "read",
+        "local_write"
+      ],
+      "credentials": "filesystem_scope",
+      "verification": "unverified_per_runtime",
+      "docs": "https://github.com/modelcontextprotocol/servers"
+    },
+    {
+      "id": "postgres",
+      "label": "PostgreSQL",
+      "kind": "database",
+      "protocols": [
+        "mcp_stdio",
+        "mcp_remote"
+      ],
+      "capabilities": [
+        "database.query"
+      ],
+      "effects": [
+        "read",
+        "remote_write"
+      ],
+      "credentials": "database_scoped_secret",
+      "verification": "unverified_per_runtime",
+      "docs": "https://modelcontextprotocol.io/"
+    }
+  ]
+}
