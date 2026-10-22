@@ -56,7 +56,7 @@ def exchange(entry, tool=None, arguments=None, timeout=8):
     thread.start()
 
     def send(payload):
-        line = json.dumps(payload, ensure_ascii=False) + "\\n"
+        line = json.dumps(payload, ensure_ascii=False) + "\n"
         if len(line.encode("utf-8")) > MAX_BYTES:
             raise ValueError("Request too large")
         proc.stdin.write(line)
@@ -98,7 +98,8 @@ def exchange(entry, tool=None, arguments=None, timeout=8):
             answers[3] = receive(3)
         return answers
     finally:
-        proc.kill()
+        if proc.poll() is None:
+            proc.kill()
         proc.communicate(timeout=timeout)
 
 def messages(tool=None, arguments=None):
