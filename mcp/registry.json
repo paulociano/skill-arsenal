@@ -8,7 +8,7 @@
       "kind": "provider",
       "protocols": [
         "native_connector",
-        "mcp"
+        "mcp_remote"
       ],
       "capabilities": [
         "repo.read",
