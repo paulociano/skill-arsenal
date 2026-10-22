@@ -8,6 +8,8 @@ import json
 import pathlib
 import subprocess
 import sys
+import queue
+import threading
 
 from catalog_server import error, success
 
@@ -38,24 +40,66 @@ def configuration(path=CONFIG):
     return raw["servers"]
 
 
-def exchange(entry, messages, timeout=8):
-    payload = "".join(json.dumps(m, ensure_ascii=False) + "\n" for m in messages)
-    if len(payload.encode("utf-8")) > MAX_BYTES:
-        raise ValueError("Request too large")
-    # No shell. Child starts only from a trusted, operator-owned config.
-    process = subprocess.run(entry["argv"], input=payload, capture_output=True,
-                             text=True, timeout=timeout, check=False)
-    if process.returncode != 0 or len(process.stdout.encode("utf-8")) > MAX_BYTES:
-        raise ValueError("Downstream server failed")
-    answers = {}
-    for line in process.stdout.splitlines():
-        obj = json.loads(line)
-        if isinstance(obj, dict) and "id" in obj:
-            if obj["id"] in answers:
-                raise ValueError("Duplicate response id")
-            answers[obj["id"]] = obj
-    return answers
+def exchange(entry, tool=None, arguments=None, timeout=8):
+    """Handshake and inspect tool contract before any tools/call in same process."""
+    proc = subprocess.Popen(entry["argv"], stdin=subprocess.PIPE,
+                            stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
+                            text=True, bufsize=1)
+    inbox = queue.Queue()
+    def reader():
+        try:
+            for line in proc.stdout:
+                inbox.put(line)
+        finally:
+            inbox.put(None)
+    thread = threading.Thread(target=reader, daemon=True)
+    thread.start()
 
+    def send(payload):
+        line = json.dumps(payload, ensure_ascii=False) + "\\n"
+        if len(line.encode("utf-8")) > MAX_BYTES:
+            raise ValueError("Request too large")
+        proc.stdin.write(line)
+        proc.stdin.flush()
+
+    def receive(expected):
+        try:
+            while True:
+                line = inbox.get(timeout=timeout)
+                if line is None or len(line.encode("utf-8")) > MAX_BYTES:
+                    raise ValueError("Closed or oversized downstream response")
+                item = json.loads(line)
+                if isinstance(item, dict) and item.get("id") == expected:
+                    return item
+        except queue.Empty as exc:
+            raise ValueError("Downstream timeout") from exc
+
+    try:
+        outgoing = messages()
+        send(outgoing[0])
+        init = receive(1)
+        if "result" not in init:
+            raise ValueError("MCP handshake failed")
+        send(outgoing[1])
+        send(outgoing[2])
+        listing = receive(2)
+        if "result" not in listing:
+            raise ValueError("MCP tools/list failed")
+        answers = {1: init, 2: listing}
+        if tool is not None:
+            definitions = listing["result"].get("tools", [])
+            matching = [t for t in definitions if isinstance(t, dict) and t.get("name") == tool]
+            if (tool not in entry["read_tools"] or len(matching) != 1
+                    or not isinstance(matching[0].get("inputSchema"), dict)
+                    or matching[0].get("annotations", {}).get("readOnlyHint") is not True
+                    or matching[0].get("annotations", {}).get("destructiveHint") is not False):
+                raise PermissionError("Read-only tool contract not verified")
+            send(messages(tool, arguments)[3])
+            answers[3] = receive(3)
+        return answers
+    finally:
+        proc.kill()
+        proc.communicate(timeout=timeout)
 
 def messages(tool=None, arguments=None):
     out = [
@@ -72,7 +116,7 @@ def messages(tool=None, arguments=None):
 
 
 def discover(entry):
-    responses = exchange(entry, messages())
+    responses = exchange(entry)
     init, listing = responses.get(1, {}), responses.get(2, {})
     if "result" not in init or "result" not in listing:
         raise ValueError("MCP handshake failed")
@@ -92,7 +136,7 @@ def proxy_call(entry, tool, arguments):
     allowed = discover(entry)
     if tool not in allowed:
         raise PermissionError("Tool not approved and confirmed read-only")
-    responses = exchange(entry, messages(tool, arguments))
+    responses = exchange(entry, tool, arguments)
     if "result" not in responses.get(1, {}) or "result" not in responses.get(2, {}):
         raise ValueError("Handshake failed")
     # Recheck tool metadata on the exact process carrying the call.
