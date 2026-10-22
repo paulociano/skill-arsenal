@@ -2,3 +2,5 @@ Thumbs.db
 Desktop.ini
 *.tmp
 ~$*
+# Local MCP gateway runtime configuration (never commit)
+mcp/gateway.local.json

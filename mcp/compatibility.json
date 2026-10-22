@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "legend": {
+    "supported": "capacidade do tipo de cliente, sujeita a configuração e autorização",
+    "conditional": "depende de produto, plano, ambiente, permissões ou ponte",
+    "unsupported": "não disponível diretamente",
+    "untested": "nenhum teste de execução foi realizado neste repositório"
+  },
+  "clients": [
+    {
+      "id": "chatgpt_web",
+      "label": "ChatGPT (web)",
+      "transports": {
+        "stdio": "unsupported",
+        "remote_http": "conditional",
+        "native_connector": "conditional"
+      },
+      "shell": "unsupported",
+      "tool_writes": "conditional",
+      "status": "untested",
+      "notes": "Não inferir disponibilidade de MCP customizado com base apenas em integração nativa; respeitar plano, workspace e políticas."
+    },
+    {
+      "id": "codex_cli",
+      "label": "Codex CLI",
+      "transports": {
+        "stdio": "supported",
+        "remote_http": "supported",
+        "native_connector": "conditional"
+      },
+      "shell": "conditional",
+      "tool_writes": "conditional",
+      "status": "untested",
+      "notes": "Exige instalação/configuração pelo operador, ambiente de execução e grants adequados."
+    },
+    {
+      "id": "claude_code",
+      "label": "Claude Code",
+      "transports": {
+        "stdio": "supported",
+        "remote_http": "supported",
+        "native_connector": "conditional"
+      },
+      "shell": "conditional",
+      "tool_writes": "conditional",
+      "status": "untested",
+      "notes": "Exige instalação/configuração pelo operador, ambiente de execução e grants adequados."
+    }
+  ],
+  "policy": {
+    "default": "deny",
+    "unknown_effect": "high_risk",
+    "read": "scope_required",
+    "local_write": "approval_or_explicit_policy",
+    "remote_write": "approval_or_explicit_policy",
+    "shell": "explicit_approval_and_sandbox",
+    "secret_handling": "runtime_only_no_prompt_or_logs",
+    "audit": "decision_before_effect",
+    "verification": "read_back_after_effect"
+  }
+}
