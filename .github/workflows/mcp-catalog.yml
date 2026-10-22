@@ -1,0 +1,26 @@
+name: MCP catalog validation
+on:
+  push:
+    branches:
+      - feat/mcp-multiplatform-phase1-20261022
+  pull_request:
+    paths:
+      - 'mcp/**'
+      - 'tests/test_mcp_catalog.py'
+      - 'scripts/validate_mcp_catalog.py'
+      - '.github/workflows/mcp-catalog.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Static catalog checks
+        run: python scripts/validate_mcp_catalog.py
+      - name: MCP stdio contract and denial tests
+        run: python -m unittest discover -s tests -p 'test_mcp_catalog.py' -v
