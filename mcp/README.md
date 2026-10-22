@@ -78,3 +78,39 @@ python -m unittest discover -s tests -p 'test_mcp_catalog.py' -v
 O workflow `.github/workflows/mcp-catalog.yml` executa esses dois comandos no GitHub Actions. Além dos checks do catálogo, os testes cobrem handshake, anúncio de tools read-only, leitura de registros, rejeição de comandos desconhecidos e round-trip stdio. Não afirmam compatibilidade real com uma instalação Codex local, nem com MCPs externos.
 
 **Limites:** não existe autenticação externa, bridge HTTP, proxy para servidores terceiros, gateway com política de escrita ou discovery do runtime nesta fase. Qualquer habilitação futura de ferramentas com efeitos exige revisão de governança e aprovação apropriada.
+
+
+## Fase 3 experimental: gateway local read-only
+
+`mcp/gateway_server.py` permite a um cliente MCP (Codex CLI ou Claude Code) descobrir e invocar ferramentas de **um servidor stdio explicitamente configurado por um operador**. Nenhum servidor externo é habilitado automaticamente. O gateway **não** lê o catálogo para executar ferramentas e não expõe writes, HTTP remoto ou tokens.
+
+### Ativação intencional
+
+1. Crie localmente (não faça commit) o arquivo `mcp/gateway.local.json` com este exemplo de **teste**. Substitua `/usr/bin/python3` e `/absolute/path/to/skill-arsenal` pelos caminhos absolutos reais. Use somente comandos revisados e confiáveis:
+
+```json
+{
+  "version": 1,
+  "servers": {
+    "demo": {
+      "argv": ["/usr/bin/python3", "/absolute/path/to/skill-arsenal/mcp/catalog_server.py"],
+      "read_tools": ["arsenal_list_integrations"]
+    }
+  }
+}
+```
+
+2. Execute os testes (`python -m unittest discover -s tests -p 'test_mcp_*.py' -v`) e cadastre apenas se confiar no ambiente:
+
+```sh
+codex mcp add arsenal-gateway -- python /absolute/path/to/skill-arsenal/mcp/gateway_server.py
+codex mcp list
+```
+
+3. Para remover a integração, `codex mcp remove arsenal-gateway`. Sem `gateway.local.json` válido, `tools/list` fica vazio e `tools/call` nega execução.
+
+As ferramentas aparecem como `<alias>__<tool>` (por exemplo `demo__arsenal_list_integrations`). A lista final é a interseção de `read_tools` da configuração e `tools/list` do servidor downstream, com anotações `readOnlyHint=true` e `destructiveHint=false`. **Anotações MCP são declarações do provedor, não provas de inocuidade.** Configure somente servidores sob seu controle, com privilégios mínimos e sem acesso a dados ou recursos que não devam ser expostos. Mesmo ferramentas supostamente read-only podem enviar dados, produzir efeitos secundários ou ler segredos. Não instale wrappers de terceiros apenas por estarem no catálogo.
+
+O executável downstream precisa de caminho absoluto; não há `shell=True`, autoexecução de catálogo nem expansão de comandos vindos do modelo. O adaptador abre um novo processo downstream em cada discovery/call, exige suporte ao protocolo MCP JSON-RPC por linha e timeout, portanto pode ser incompatível com servidores que necessitem sessão persistente.
+
+**Status de segurança:** protótipo local experimental, não solução de produção. O registro no stderr apenas informa ferramenta/servidor antes da chamada; **não é trilha durável e não constitui enforcement transacional**. Ainda faltam validação completa de schemas de argumentos, binding de identidade/target, credenciais segregadas, autorização robusta para writes, verificação externa dos efeitos e transporte remoto autenticado. Não conectar servidores com operações sensíveis.
