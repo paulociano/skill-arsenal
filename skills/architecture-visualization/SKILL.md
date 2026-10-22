@@ -146,3 +146,15 @@ Disciplina editorial, seleção de gramática, orçamento de complexidade, stati
 inkboard/system-atlas acrescentou source spec único → interactive atlas + generated SYSTEM.md, progressive disclosure e question tracking por ID. Qiuner/birdview acrescentou architecture + reviewed constraints + declared change scope + coverage + verification no mesmo viewer. coldteadotai/pr-lens acrescentou blast radius visual de PR, data-flow/payload views e walkthroughs de mudança. O Arsenal absorve os padrões sem exigir seus renderers.
 
 Origem local: [architecture-visualization.docx](../architecture-visualization.docx).
+
+## Seleção de compiladores Mermaid (Pele / Ondine)
+
+Ao entregar diagramas Mermaid em documentação ou aplicações, distinguir **fonte semântica**, **compilação SVG** e **mount/runtime**:
+
+- [Pele](https://github.com/obsidianmd/pele): renderer TypeScript de Mermaid para SVG com API síncrona, montagem responsiva e registro seletivo de tipos; candidato quando a aplicação realmente usa JS/TS e precisa renderização no cliente. Sua documentação afirma suporte aos tipos Mermaid 12.1.0, com semântica/layout próprios. Confirmar compatibilidade no caso real.
+- [Ondine](https://github.com/wevm/ondine): compilador Rust de diagramas Mermaid com CLI, integração Vite/remark e SVG gerado no build; candidato quando se deseja evitar o peso de parser/layout no cliente e publicar conteúdo estático.
+- Preservar texto-fonte Mermaid versionado, verificar diagramas representativos (labels, conexões, tamanhos, responsividade, temas e acessibilidade) e ter fallback legível se a compilação falhar.
+- Tratar entrada Mermaid não confiável como dados: avaliar sanitização, URLs e limites de complexidade antes de inserir SVG/HTML; não inferir segurança do renderer pela mera ausência de dependências.
+- Esses são **backends opcionais**, não ferramentas nativas garantidas do ChatGPT. Não executar instaladores ou migrar um app sem ambiente e contrato de projeto verificados.
+
+Referências avaliadas em 2026-10-22: https://github.com/obsidianmd/pele e https://github.com/wevm/ondine.
