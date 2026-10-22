@@ -159,3 +159,15 @@ Pipeline tema→roteiro→assets→voz→legendas→música→composição adapt
 Shot ledger, storyboard→filming→continuity review→rework queue e roteamento de modelo por shot refinados a partir de `LudwigKienle/ai-video-production-editor`, `headline-design/seq` e `openslop/openslop`, sem importar seus providers, plugins ou runtimes.
 
 Origem local: [video-editing-pipeline.docx](../video-editing-pipeline.docx).
+## Editor conversacional local: lições de editonny
+
+O projeto [editonny](https://github.com/soumatheusgomes/editonny) descreve um editor guiado por instruções em linguagem natural para cortar pausas e erros, gerar legendas, corrigir áudio, reframar e inserir cenas de motion. Seu workflow depende de engine/renderer, transcrição, ferramentas locais e integração com Claude Code/Codex: **não declarar esse runtime disponível por padrão**.
+
+Quando o usuário pedir edição conversacional de footage, reaproveitar a metodologia sem instalar o software:
+1. Converter o pedido informal em operações auditáveis sobre segmentos, fala, legendas, áudio e composição.
+2. Manter instrução editorial separada de EDL/timestamps e registrar source-to-output mapping.
+3. Para motion baseado na fala, especificar cenas e cue points ligados ao transcript, sem alterar conteúdo factual do áudio.
+4. Usar preview representativo e inspeção audiovisual antes de batch render, principalmente em cortes automáticos, captions e reformatação vertical.
+5. Preservar material original; explicitar se apenas o plano foi produzido ou se mídia final foi de fato renderizada/validada.
+
+Adoção metodológica, não instalação de skill/scripts de terceiros. Fonte revisada em 2026-10-22.
