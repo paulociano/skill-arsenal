@@ -165,3 +165,125 @@ Somente leituras documentais; nenhum `npx`, `uv`, extensão, script, CLI ou cone
 - Branch: `eval/github-top100-stars-20261022`.
 - Sem nova skill ou mudança material de description: índice preservado.
 - Critérios de aceitação: seção de glossário/ADR presente, includes should-trigger e near-miss, sem dependência externa obrigatória; read-after-write, diff contra master e 100 entradas da triagem preservadas.
+
+
+## Aprofundamento 2: fechamento da leitura do Top 100 (2026-10-22)
+
+Foram solicitados os 100 READMEs da captura original. **96 retornaram conteúdo e 4 falharam**: `sindresorhus/awesome`, `nilbuild/developer-roadmap`, `torvalds/linux` e `vercel/next.js`. Trata-se de avaliação documental em nível README, não auditoria de 100 codebases, dependências, licenças ou scripts. A/B/C/D da tabela inicial permanece classificação operacional preliminar quando não houve análise de subarquivos.
+
+| Rank | Repositório | README | Decisão pós-triagem | Owner sugerido |
+|---:|---|---|---|---|
+| 1 | `codecrafters-io/build-your-own-x` | Lido | ALREADY_COVERED | `teach` |
+| 2 | `sindresorhus/awesome` | Falhou | LIMITED_NO_README | `arsenal-autopilot` |
+| 3 | `public-apis/public-apis` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 4 | `freeCodeCamp/freeCodeCamp` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 5 | `EbookFoundation/free-programming-books` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 6 | `openclaw/openclaw` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 7 | `donnemartin/system-design-primer` | Lido | ALREADY_COVERED | `system-design-engineering` |
+| 8 | `nilbuild/developer-roadmap` | Falhou | LIMITED_NO_README | `teach` |
+| 9 | `jwasham/coding-interview-university` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 10 | `morluto/rea` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 11 | `vinta/awesome-python` | Lido | ALREADY_COVERED | `teach` |
+| 12 | `awesome-selfhosted/awesome-selfhosted` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 13 | `obra/superpowers` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 14 | `mattpocock/skills` | Lido | UPDATE_EXISTING | `coding-agent-engineering` |
+| 15 | `practical-tutorials/project-based-learning` | Lido | ALREADY_COVERED | `teach` |
+| 16 | `affaan-m/ECC` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 17 | `996icu/996.ICU` | Lido | KEEP_EXTERNAL_REFERENCE | `research-and-synthesize` |
+| 18 | `deepseek-ai/deepseek-harness` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 19 | `NousResearch/hermes-agent` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 20 | `torvalds/linux` | Falhou | LIMITED_NO_README | `software-engineering-cycle` |
+| 21 | `trimstray/the-book-of-secret-knowledge` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 22 | `react/react` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 23 | `TheAlgorithms/Python` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 24 | `multica-ai/andrej-karpathy-skills` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 25 | `anomalyco/opencode` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 26 | `vuejs/vue` | Lido | LEGACY_REFERENCE | `software-engineering-cycle` |
+| 27 | `ossu/computer-science` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 28 | `n8n-io/n8n` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 29 | `DigitalPlatDev/FreeDomain` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 30 | `tensorflow/tensorflow` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 31 | `yt-dlp/yt-dlp` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 32 | `trekhleb/javascript-algorithms` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 33 | `massgravel/Microsoft-Activation-Scripts` | Lido | DO_NOT_IMPORT | `skill-security-review` |
+| 34 | `ultraworkers/claw-code` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 35 | `microsoft/vscode` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 36 | `firecrawl/firecrawl` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 37 | `microsoft/markitdown` | Lido | UPDATE_EXISTING | `software-engineering-cycle` |
+| 38 | `ohmyzsh/ohmyzsh` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 39 | `avelino/awesome-go` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 40 | `Significant-Gravitas/AutoGPT` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 41 | `jackfrued/Python-100-Days` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 42 | `CyC2018/CS-Notes` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 43 | `getify/You-Dont-Know-JS` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 44 | `ollama/ollama` | Lido | KEEP_EXTERNAL_REFERENCE | `local-llm-inference-engineering` |
+| 45 | `521xueweihan/HelloGitHub` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 46 | `anthropics/skills` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 47 | `flutter/flutter` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 48 | `github/gitignore` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 49 | `twbs/bootstrap` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 50 | `f/prompts.chat` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 51 | `DietrichGebert/ponytail` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 52 | `huggingface/transformers` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 53 | `AUTOMATIC1111/stable-diffusion-webui` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 54 | `msitarzewski/agency-agents` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 55 | `jlevy/the-art-of-command-line` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 56 | `langgenius/dify` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 57 | `Snailclimb/JavaGuide` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 58 | `open-webui/open-webui` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 59 | `langflow-ai/langflow` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 60 | `clash-verge-rev/clash-verge-rev` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 61 | `Genymobile/scrcpy` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 62 | `anthropics/claude-code` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 63 | `langchain-ai/langchain` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 64 | `airbnb/javascript` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 65 | `farion1231/cc-switch` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 66 | `x1xhlol/system-prompts-and-models-of-ai-tools` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 67 | `vercel/next.js` | Falhou | LIMITED_NO_README | `software-engineering-cycle` |
+| 68 | `yangshun/tech-interview-handbook` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 69 | `Shubhamsaboo/awesome-llm-apps` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 70 | `github/spec-kit` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 71 | `iptv-org/iptv` | Lido | DO_NOT_IMPORT | `skill-security-review` |
+| 72 | `Comfy-Org/ComfyUI` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 73 | `ytdl-org/youtube-dl` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 74 | `ripienaar/free-for-dev` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 75 | `microsoft/PowerToys` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 76 | `golang/go` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 77 | `nextlevelbuilder/ui-ux-pro-max-skill` | Lido | ALREADY_COVERED | `ui-ux-catalog` |
+| 78 | `garrytan/gstack` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 79 | `labuladong/fucking-algorithm` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 80 | `excalidraw/excalidraw` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 81 | `harry0703/MoneyPrinterTurbo` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 82 | `Graphify-Labs/graphify` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 83 | `ggml-org/llama.cpp` | Lido | KEEP_EXTERNAL_REFERENCE | `local-llm-inference-engineering` |
+| 84 | `krahets/hello-algo` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 85 | `openai/codex` | Lido | KEEP_EXTERNAL_REFERENCE | `coding-agent-engineering` |
+| 86 | `Chalarangelo/30-seconds-of-code` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 87 | `kubernetes/kubernetes` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 88 | `react/react-native` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 89 | `rustdesk/rustdesk` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 90 | `shadcn-ui/ui` | Lido | KEEP_EXTERNAL_REFERENCE | `ui-ux-catalog` |
+| 91 | `electron/electron` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 92 | `Hack-with-Github/Awesome-Hacking` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 93 | `VoltAgent/awesome-design-md` | Lido | KEEP_EXTERNAL_REFERENCE | `ui-ux-catalog` |
+| 94 | `nodejs/node` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 95 | `microsoft/generative-ai-for-beginners` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 96 | `rust-lang/rust` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 97 | `justjavac/free-programming-books-zh_CN` | Lido | KEEP_EXTERNAL_REFERENCE | `teach` |
+| 98 | `godotengine/godot` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+| 99 | `browser-use/browser-use` | Lido | ALREADY_COVERED | `computer-use-agent-engineering` |
+| 100 | `2dust/v2rayN` | Lido | KEEP_EXTERNAL_REFERENCE | `software-engineering-cycle` |
+
+### Resultados concretos
+
+- `microsoft/markitdown`: o README ressalta que opera I/O com privilégios do processo. **UPDATE_EXISTING** em `skills/document-extraction-pipeline/SKILL.md`, adicionando limites de execução, rede, plugins, pastas e tratamento de fontes não confiáveis. Sem instalar MarkItDown.
+- `mattpocock/skills`: incorporado anteriormente nesta branch, com glossário de domínio e ADR em `skills/coding-agent-engineering/SKILL.md`.
+- `vuejs/vue`: o README declara o Vue 2 em fim de vida e aponta `vuejs/core` como versão corrente; popularidade não serve para recomendar runtime legado.
+- `github/spec-kit`, `obra/superpowers`, `browser-use/browser-use`, `deepseek-ai/deepseek-harness`: referências aprofundadas anteriormente, com sobreposição em owners existentes e/ou runtime externo.
+- Os quatro casos sem README mantêm somente classificação inicial fundamentada no ranking e identidade; **não foram avaliados profundamente**.
+
+### Segurança e validade
+
+Nenhum instalador, pacote, script, CLI, agente, plugin ou extensão da lista foi executado. A leitura documental não prova segurança, atualidade de cada dependência, licença redistribuível ou desempenho. Catálogos são radar; código e runtimes precisam de avaliação na fonte específica antes de serem executados. `KEEP_EXTERNAL_REFERENCE` não significa aprovação de segurança.
+
+**Resultado deste lote:** 100/100 identificados e classificados, 96/100 READMEs efetivamente consultados, 4 leituras indisponíveis e dois owners enriquecidos com métodos portáveis e concretos. Não houve criação de skills artificiais. Arquivos alterados na branch: esta avaliação, `skills/coding-agent-engineering/SKILL.md` e `skills/document-extraction-pipeline/SKILL.md`. Índice preservado pois owners e descriptions não mudaram. Validação documental posterior verificará a contagem, a presença dos métodos e o diff da branch.
