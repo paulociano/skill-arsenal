@@ -137,3 +137,31 @@ Fonte canônica do Arsenal: `ARSENAL INDEX.md`; stack: `stacks/arsenal-autopilot
 Esta entrega implementa uma **triagem completa dos 100 nomes**, não 100 auditorias profundas. Nesta etapa não foi identificado um delta comprovado que justifique alterar owners canônicos com segurança, especialmente porque os principais candidatos já têm owners de função no Arsenal. Por isso a decisão conservadora é **KEEP_EXTERNAL_REFERENCE**, até aprofundamento, salvo rejeições explícitas. Não criar skill artificial para satisfazer quantidade.
 
 Arquivos afetados: apenas este registro em `evaluations/`. Nenhuma instalação de terceiros. Validação: conferir que há exatamente 100 linhas classificadas e que a branch alvo contém o documento publicado.
+
+
+## Aprofundamento 1: 2026-10-22
+
+Fontes consultadas diretamente:
+- `mattpocock/skills`: README e `skills/engineering/grill-with-docs/SKILL.md`, que delega a skills internas `grilling` e `domain-modeling`. O método de vocabulário comum e ADR foi extraído do README; não foi executada a cadeia de skills ou instalador.
+- `obra/superpowers`: README; execução de conjunto de skills permanece dependente de instalação e tools de cada agente.
+- `github/spec-kit`: README; fluxos de especificação, bug assessment/fix/test e ideia go/clarify/stop com extensões CLI. Sobreposição significativa com owners existentes, sem delta comprovado.
+- `browser-use/browser-use`: README; execução depende de Python, browser/CDP/cloud/API keys, já coberta como referência por `computer-use-agent-engineering`.
+- `deepseek-ai/deepseek-harness`: README; declara preview, incompatibilidades futuras e arquitetura por plugins. Mantido como referência arquitetural, sem instalar.
+
+### Decisões finais deste aprofundamento
+| Fonte | Classificação | Decisão | Evidência/owner |
+| --- | --- | --- | --- |
+| mattpocock/skills (glossário/ADR) | B | UPDATE_EXISTING | `skills/coding-agent-engineering/SKILL.md`: seção vocabulário e decisões duráveis, com should-trigger e near-miss; absorção metodológica efetiva |
+| obra/superpowers | B/D | KEEP_EXTERNAL_REFERENCE | Workflow composicional já amplamente representado por `software-engineering-cycle`, `tdd`, `code-review` |
+| github/spec-kit | B/D | KEEP_EXTERNAL_REFERENCE | Contracts, diagnóstico/bugfix e check de comportamento já roteados pelo Arsenal; CLI não portátil por pressuposição |
+| browser-use/browser-use | D | KEEP_EXTERNAL_REFERENCE | Owner `computer-use-agent-engineering` já inclui a fonte; sem nova lacuna identificada |
+| deepseek-ai/deepseek-harness | D | KEEP_EXTERNAL_REFERENCE | Preview com breaking changes; não adotar runtime em avaliação estática |
+
+### Revisão de segurança e portabilidade
+Somente leituras documentais; nenhum `npx`, `uv`, extensão, script, CLI ou conexão externa executados. `mattpocock` declara comandos de instalação e habilidades específicas de agente que não foram transportadas; absorvida apenas metodologia de nomenclatura/documentação. Browser agents envolvem credenciais, sessões, navegação e efeitos externos; harnesses de plugins têm superfície extensível privilegiada. **Veredito:** APPROVE para metodologia absorvida; CAUTION para execução de sistemas terceiros. Não é auditoria de supply chain, código nem de todos os 100 repos.
+
+### Evidência da implementação
+- Arquivo alterado: `skills/coding-agent-engineering/SKILL.md`.
+- Branch: `eval/github-top100-stars-20261022`.
+- Sem nova skill ou mudança material de description: índice preservado.
+- Critérios de aceitação: seção de glossário/ADR presente, includes should-trigger e near-miss, sem dependência externa obrigatória; read-after-write, diff contra master e 100 entradas da triagem preservadas.
