@@ -23,4 +23,4 @@ jobs:
       - name: Static catalog checks
         run: python scripts/validate_mcp_catalog.py
       - name: MCP stdio contract and denial tests
-        run: python -m unittest discover -s tests -p 'test_mcp_catalog.py' -v
+        run: python -m unittest discover -s tests -p 'test_mcp_*.py' -v
