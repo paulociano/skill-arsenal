@@ -48,6 +48,22 @@ Quando o comportamento só existe com o app inteiro rodando:
 
 Se houver instrumentação adequada, encadear com `runtime-ui-verification`.
 
+## Contrato de seams e oráculos independentes
+
+Antes do primeiro teste de uma funcionalidade não trivial:
+1. Nomear a interface pública (seam) observada e o risco que ela cobre; preferir uma fronteira pública estável em vez de testar cada colaborador interno.
+2. Dizer o que o teste **não** comprova (por exemplo, autorização, persistência real, contrato externo ou performance). Validar fronteiras materialmente controversas com o responsável pelo projeto; não interromper uma correção simples para solicitar aprovação ritual.
+3. Derivar o resultado esperado de requisito, exemplo conferido ou fixture independente. Não calcular o valor esperado reproduzindo o mesmo algoritmo sob teste.
+4. Preferir asserções sobre efeitos visíveis através da interface pública; mocks são adequados para limites externos, não para comprovar que um método interno foi chamado.
+5. Em cada fatia, registrar RED observável, menor implementação GREEN e risco coberto. Sem execução real, marcar o ciclo como **não verificado**, nunca presumir RED/GREEN.
+6. Em revisão, confirmar que mudanças internas sem alteração de comportamento não quebrariam o teste e que um defeito real na interface o faria falhar. Refatoração ampla é decisão de revisão separada, não parte obrigatória de cada ciclo.
+
+**Should-trigger:** implementar fluxo de checkout com persistência e pagamento, definindo um seam de API e valores esperados independentes.
+
+**Near-miss:** ajustar apenas uma string de interface sem alterar contrato observável; não abrir sessão formal de seams.
+
+**Origem incremental (2026-10-23):** [mattpocock/skills: tdd, tests.md e mocking.md](https://github.com/mattpocock/skills/tree/main/skills/engineering/tdd). Adaptado para o ChatGPT sem Skill tool, exigência universal de entrevista ou execução de ferramenta externa.
+
 ## Referências
 
 [GitHub · mattpocock/skills · tdd](https://github.com/mattpocock/skills/tree/main/skills/engineering/tdd)
