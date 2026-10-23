@@ -70,3 +70,18 @@ Não inferir preferências sensíveis ou criar “world model” pessoal sem nec
 Adaptada de [mizchi/skills · retrospective-codify](https://github.com/mizchi/skills/tree/main/retrospective-codify).
 
 Origem local: [retrospective-codify.docx](../retrospective-codify.docx).
+
+## Retrospectiva de ambiente de agentes (mattpocock/retro, 2026-10-23)
+
+Quando a retrospectiva for sobre uma sessão de programação assistida por agente, auditar **também o ambiente**, não apenas o código entregue:
+
+1. Examinar evidências acessíveis da sessão, logs fornecidos, diffs e configuração real do repositório. Se estiverem ausentes, registrar a lacuna; não presumir acesso a sessões ou logs locais.
+2. Verificar gargalos de navegação, referências a arquivos, padrões repetidos de chamadas caras, falta de informação, instruções sem efeito e excesso de contexto injetado.
+3. Antes de recomendar um check novo, conferir scripts já existentes de lint, typecheck, testes, hooks e CI. Check existente mas não acionado ou quebrado é um problema diferente de check inexistente.
+4. Separar **violações mecânicas** (preferir linter, teste ou gate determinístico) de **decisões de julgamento** (padrões de revisão/documentação). Não adicionar uma regra de texto quando uma verificação objetiva resolve melhor.
+5. Priorizar recomendações por severidade, recorrência e custo, com evidência, owner, ação mínima e como verificar. Para uma única sessão, propor melhorias como candidatas, sem promover automaticamente regras globais.
+6. Alterações em CI, hooks, regras globais e credenciais exigem escopo e aprovação adequados; não executar tooling, instalar pacotes ou editar o ambiente implicitamente.
+
+**Should-trigger:** usuário pede retrospectiva de uma sessão em que o agente repetiu um erro que poderia ter sido pego por typecheck já disponível, mas ausente de CI. **Near-miss:** usuário pede somente revisão do diff atual; usar `code-review`, sem iniciar auditoria do ambiente. **Aceitação:** distinguir check ausente de check desconectado, recomendar conserto verificável e não confundir proposta com execução.
+
+**Fonte metodológica:** https://github.com/mattpocock/skills/blob/main/skills/engineering/retro/SKILL.md. Adaptação sem presumir subagentes, shell, arquivos locais ou acesso a histórico não fornecido.
