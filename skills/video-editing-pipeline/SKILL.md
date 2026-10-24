@@ -171,3 +171,9 @@ Quando o usuário pedir edição conversacional de footage, reaproveitar a metod
 5. Preservar material original; explicitar se apenas o plano foi produzido ou se mídia final foi de fato renderizada/validada.
 
 Adoção metodológica, não instalação de skill/scripts de terceiros. Fonte revisada em 2026-10-22.
+
+## Render local com preflight, revisão e entregáveis isolados (Showtime, 2026-10-24)
+
+Para pipelines automatizados de vídeo por agentes, antes de qualquer render: confirmar runtime, bibliotecas, fontes, espaço livre, downloads/modelos, GPU/CPU, direitos de assets e se dados saem da máquina; custo zero em API não implica custo zero em armazenamento/compute. Separar modo rápido (assumptions declaradas) de modo studio (storyboard, look e aprovação) e revisão lean de quality, sem pular QA de material publicado. Usar pasta única por job com manifest, fontes, timeline, prévia, poster, render final, exports e evidências de QA, sem sobrescrever entregas. Fazer primeiro render parcial de baixo custo; verificar textos na safe area, clipping, sobreposição, áudio sincronizado e legibilidade em 9:16 e 16:9, inclusive quadros intermediários. Validar arquivo final reproduzindo amostras e comparar export com manifest; critic/reviewer não substitui inspeção objetiva.
+
+Referência: https://github.com/FavioVazquez/showtime . A ferramenta requer dependências e downloads locais, e seu CLI/Agent Skills não estão presumidos disponíveis no ChatGPT.
