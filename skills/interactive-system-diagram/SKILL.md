@@ -54,3 +54,7 @@ Use `architecture-visualization` para diagramas gerais e `editable-visual-design
 
 ## Origem adaptada
 Metodologia inspirada em `tt-a1i/archify`, abstraindo schemas, CLI, presets e validadores específicos.
+
+## Reconstrução semântica de diagramas raster (Edit Banana, 2026-10-24)
+
+Quando a fonte é uma figura/imagem estática, segmentar elementos visuais e distinguir texto OCR/extraído, nós, conectores, agrupamentos e relações inferidas. Reconstruir topologia editável em Draw.io XML/SVG/diagrama nativo apenas após verificar rótulos, direção de arestas, contagem de nós, conectividade e agrupamento contra a imagem original. Uma reconstrução visualmente próxima pode estar logicamente errada; registrar ambiguidades e não inventar nós/arestas. Testar edição posterior e render de volta para comparação. Modelos multimodais e SAM 3 são dependências externas, não capacidades presumidas; não enviar documentos confidenciais a demo externa sem autorização. Fonte: https://github.com/BIT-DataLab/Edit-Banana.
