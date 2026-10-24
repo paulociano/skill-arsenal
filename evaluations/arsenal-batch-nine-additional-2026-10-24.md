@@ -8,7 +8,7 @@ Fonte: índice oficial e stack arsenal-autopilot, READMEs e metadados dos reposi
 | https://github.com/Muesli-HQ/muesli | D | KEEP_EXTERNAL_REFERENCE | Transcrição e ditado local macOS com interface/plugin próprios; já existe meeting-to-actions e voz/transcript nativo; o app requer macOS e permissões. |
 | https://github.com/vorssaint/vorssaint-utils | D | KEEP_EXTERNAL_REFERENCE | Utilitários macOS menu bar, fora do âmbito de metodologia de agentes. Permissões de sistema e licença GPL merecem revisão antes de adoção. |
 | https://github.com/pgrundev/pgterm | D | KEEP_EXTERNAL_REFERENCE | Diagnóstico PostgreSQL e SQL TUI com ferramenta externa; skills de observabilidade e banco já cobrem metodologia geral. Sem conexão/consulta a DB. |
-| https://github.com/nyblnet/bento | D | KEEP_EXTERNAL_REFERENCE | Projeto especializado; requer avaliação de execução/caso de uso antes de adicionar metodologia genérica. |
+| https://github.com/nyblnet/bento | A/D | UPDATE_EXISTING skills/web-video-presentation/SKILL.md | Deck HTML autocontido com modelo JSON editável, round-trip, morph com IDs, colaboração/CRDT opcional e QA de portabilidade; a aplicação segue externa. |
 | https://github.com/ChartGPU/ChartGPU | B/D | UPDATE_EXISTING skills/dashboard-design/SKILL.md | WebGPU para grandes séries/streaming com gate explícito de compatibilidade e fallback. |
 | https://github.com/shader-effects-inc/shaders | B/D | UPDATE_EXISTING skills/shader-graphics-engineering/SKILL.md | Component tree GPU, SSR/lifecycle, performance, fallback e QA. |
 | https://github.com/BIT-DataLab/Edit-Banana | A/D | UPDATE_EXISTING skills/interactive-system-diagram/SKILL.md | Reconstrução semântica e QA de topologia para figura raster → diagrama editável. |
