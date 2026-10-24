@@ -59,3 +59,9 @@ Mapear obrigação regulatória somente quando jurisdição, papel da organizaç
 
 ## Origem metodológica
 Síntese adaptada de `facebookresearch/secpriv-skill` e `Clear-Capabilities/agentic-security · privacy-data-flow`. Preserva detector→validator, trust boundaries e data-flow preflight sem exigir scanners, scratchpads, slash commands ou regras jurídicas absolutas das fontes.
+
+## Interpretação de visibilidade de rede local (TapMap, 2026-10-24)
+
+Ao revisar ferramentas de inspeção de conexões por sockets/processos e GeoIP, separar observação de conexão, atribuição a executável e inferência geográfica. Um IP geolocalizado é aproximação de infraestrutura, não localização de pessoa nem evidência de exfiltração; CDN, NAT, VPN, proxies e conexões locais podem distorcer interpretações. Registrar janela de coleta, método, permissões, atualização da base GeoIP, processo/PID, status de assinatura/verificação e confiança; ausência de conexão observada não comprova ausência de tráfego. Avaliar retenção, coleta de paths/processos, exposição do dashboard local, autostart, notificações e integração MQTT como superfícies de privacidade. Usar baseline histórico e novas ocorrências para priorizar investigação, não marcar automaticamente todo país ou ASN incomum como ameaça.
+
+Referência: https://github.com/olalie/tapmap . Ferramenta de visibilidade, não firewall nem detector completo; não foi instalada nem executada.
