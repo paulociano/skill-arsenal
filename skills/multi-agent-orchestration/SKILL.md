@@ -118,3 +118,9 @@ Quando houver runtime real de execução de agentes de código, usar o contrato 
 8. **Falhas:** distinguir timeout, erro do agent, teste falho, sincronização incompleta e merge conflituoso; manter artefatos recuperáveis, limitar retries e nunca declarar sucesso com base apenas em logs.
 
 Referência técnica: https://github.com/mattpocock/sandcastle (README e package.json, consultados em 2026-10-23; pacote `@ai-hero/sandcastle` 0.12.0). Os padrões foram adaptados; a biblioteca não foi instalada, executada nem auditada integralmente.
+
+## Plano de controle, leases e verificação (Ruflo, 2026-10-24)
+
+Para cada unidade de trabalho distribuído, quando o runtime suportar, registrar task_id, owner, input_ref, output_ref, policy_version, attempt, lease/expiry, state e verification_ref. Separar atribuição/observabilidade da execução efetiva. Timeout ou lease expirada não prova ausência de efeito: reconciliar destino e artefatos antes de retry, com idempotency key para ações repetíveis. Não promover worker done a completed-verified sem integração e checagem do resultado final. Avaliar throughput, retrabalho, colisões de ownership, custo e latência contra execução sequencial. Consoles, hooks, MCP e swarms de Ruflo exigem runtime instalado e não podem ser simulados por personas.
+
+Fonte: https://github.com/ruvnet/ruflo . Adaptação metodológica, não integração instalada.
