@@ -89,6 +89,21 @@ Transformar ferramentas dispersas em uma camada de self-service com ownership, p
 - platform team should remove toil, not centralize every decision;
 - templates need upgrade strategy.
 
+
+## Conformidade de geradores parametrizados (DontPanic)
+
+Quando um golden path gerar projetos por presets ou remoção de features, tratar o **artefato gerado** como produto testável, não apenas o template original:
+
+1. Fixar versão/tag de origem e exigir árvore de trabalho limpa para sincronização reproduzível; documentar quem publica o pacote para evitar pipelines concorrentes no mesmo nome.
+2. Declarar cada feature em manifesto: arquivos exclusivos, costuras em arquivos compartilhados, migrations, variáveis de ambiente, dependências e documentação afetada. Remover features sem deixar imports, references ou serviços órfãos.
+3. Após renomear projeto/tenant/roles, verificar mecanicamente todas as variantes do identificador anterior, inclusive SQL e configuração; falhar fechado em ocorrência residual.
+4. Gerar **segredos novos** por projeto, nunca derivar credenciais do nome ou preservar senhas de seed de template público.
+5. Testar uma **matriz por preset** sobre projetos realmente emitidos: install, build, typecheck, lint, unit tests e, nos caminhos críticos, testes de integração/e2e com infraestrutura real. Declarar cobertura ausente no CI, especialmente isolamento multi-tenant e RLS; resposta vazia não prova isolamento correto.
+6. Conferir migrations consolidadas contra banco novo, permissões de roles, services do compose e arquivos estáticos exportados; builds bem-sucedidos podem gerar artefatos incompletos.
+7. Quando a matriz completa for cara, separar checks rápidos obrigatórios e suite profunda acionável, sem apresentar o check rápido como prova total; preservar fallback de revisão humana e release gate.
+
+Este método foi adaptado dos repositórios [marmottajr/dontpanic-create](https://github.com/marmottajr/dontpanic-create) e [marmottajr/dontpanic](https://github.com/marmottajr/dontpanic). Não executar seus scripts, instaladores nem assumir Node, pnpm, Docker ou acesso a banco disponíveis no ChatGPT. Usar ferramentas do projeto-alvo e validar resultado real quando houver runtime autorizado.
+
 ## Integração
 
 `golden-path-capture`, `production-go-live`, `system-design-engineering`, `software-supply-chain-engineering`, `software-observability-engineering`, `project-skill-architecture`.
