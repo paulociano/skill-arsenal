@@ -209,3 +209,9 @@ Para agentes que executam ferramentas com impacto de negócio, não aceitar uma 
 7. **Gates** — para ações financeiras, refunds ou mudanças irreversíveis, reforçar a regra no próprio serviço/tool, não apenas no prompt, e bloquear execução com argumento inválido. Verificar idempotência e efeito real em teste autorizado.
 
 Proveniência: [Mohamad-Hachem/LangChain_Agent_Evaluation_System](https://github.com/Mohamad-Hachem/LangChain_Agent_Evaluation_System), laboratório didático LangChain + DeepEval com oito cenários e sete métricas. Métodos absorvidos sem instalar LangChain, DeepEval, Streamlit ou usar modelos/API keys do repositório. Seus dados em memória e tickets simulados não constituem validação de integração financeira.
+
+## Evolução contrastiva governada (MetaHarness, 2026-10-24)
+
+Para modificar automaticamente prompts, rotas, ferramentas ou harness: congelar baseline, política, dataset, orçamento, critério de promoção e holdout antes de propor variantes. Cada mudança candidata deve citar traces e failures reais, hipótese testável e escopo restrito. Rodar experimento pareado com mesmo workload, contabilizar retries e custo total, verificar casos inéditos e near-misses e aplicar checks independentes de regressão e segurança. Proposer não pode modificar o grader, approvals, limites de ferramenta ou evidência de sucesso. Exigir lineage, versão/SHA do artefato, rollback e revisão humana para efeito sensível. Badges, testes declarados e benchmarks do autor não comprovam ganho na instalação local.
+
+Fonte: https://github.com/ruvnet/metaharness . Darwin/AVO são runtimes externos não executados neste ambiente.
