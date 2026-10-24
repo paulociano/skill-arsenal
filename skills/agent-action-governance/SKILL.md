@@ -208,3 +208,9 @@ No preflight de impacto já definido nesta skill:
 
 **Aceite:** preview parcial de uma linha composta não autoriza silenciosamente seus efeitos restantes; probe de migração com código não revisado fica pendente. Comando simples de leitura não exige confirmação extra por esta seção.
 **Proveniência:** aprofundamento da fonte Blast Radius já presente nesta skill: https://github.com/anthropics/claude-code-playground/tree/main/claude-code/mods/blast-radius (README e limitações, 2026-10-21). Não instalar o mod nem alegar cobertura universal do classificador.
+
+## Sessões remotas de GUI/terminal e revogação (Reminal, 2026-10-24)
+
+Para acesso remoto a máquinas via navegador, separar claramente view-only, controle de janela, desktop inteiro, shell, lançamento de apps e alteração de configurações; cada nível precisa de escopo e autorização específicos. Vincular sessão a dispositivo identificado, titular, expiração, capacidades, telemetria mínima, viewers e revogação testada; trocar PIN por trust persistente amplia privilégios e exige aprovação separada. Tratar relay e criptografia de transporte como propriedades a validar contra implementação e ameaça concreta, não como prova de confiança do endpoint. Proteger QR/session IDs e evitar logs de tela, clipboard e secrets; exigir confirmação antes de comandos destrutivos, alterações de sleep/power e persistência/autostart. No takeover, bloquear controle paralelo não autorizado e auditar transições. Testar reconexão, sessão órfã e revogação após perda do dispositivo.
+
+Referência: https://github.com/harshalgajjar/Reminal . Ferramenta Go/relay externa de alto privilégio, sem instalação/execução nesta conversa; não executar comandos curl|sh ou irm|iex para avaliação.
