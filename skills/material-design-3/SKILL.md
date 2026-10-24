@@ -110,3 +110,9 @@ Não depender do plugin/CLI original. Usar código, screenshots, browser e ferra
 Adaptada de [hamen/material-3-skill](https://github.com/hamen/material-3-skill/blob/14385f2bf3804d8779f8b4db2604211f1e70b4c1/skills/material-3/SKILL.md). Atualização do Arsenal em 2026-09-20: aplicação por plataforma e evidência de auditoria, sem copiar tabelas de valores/versionamento ou exemplos executáveis. [Licença MIT da origem](references/hamen-MIT.txt).
 
 Origem local: [material-design-3.docx](../material-design-3.docx).
+
+## Prototipação navegável → contrato de implementação (m3e-canvas, 2026-10-24)
+
+Quando o design envolver múltiplas telas, não converter diretamente um screenshot em prompt de código. Primeiro declarar telas e estados, componentes com papéis semânticos, tema (color/shape/type/motion), breakpoints, hierarquia, triggers de interação, rotas, transições, scroll, inputs e ações de retorno/erro. Validar navegação clicável em protótipo e comparar estados mobile/desktop, densidade, contraste, teclado, touch e reduced motion. Gerar especificação estruturada/implementável com mapa screen → component → event → outcome, dependências e critérios de aceite; tratar prompt gerado pelo builder como brief, não como evidência de fidelidade funcional. Testar runtime compilado e navegação real na plataforma/versão escolhida.
+
+Referência: https://github.com/lnkiai/m3e-canvas . Editor externo opcional; não confundir o seu preview com app implementado nem assumir paridade de APIs entre web, Flutter e Compose.
