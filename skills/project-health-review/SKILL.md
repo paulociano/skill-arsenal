@@ -72,3 +72,9 @@ work-delivery-flow, dashboard-design, project-planning, project-complexity-manag
 ## Origem metodológica
 
 Adaptada de project-health e status-report patterns em borghei/Claude-Skills, alirezarezvani/claude-skills, janellecipriano/pm-skills, britt/agent-skills, KirKruglov/claude-skills-kit e travisjneuman/.claude.
+
+## Reconciliação de capacidade e rentabilidade do portfólio (Worklenz, 2026-10-24)
+
+Quando houver dados de tasks, timesheets, allocations e orçamento numa ferramenta de projetos, reconciliar identificadores, granularidade e períodos antes de concluir status: planned capacity vs allocated vs recorded time; budget vs actual cost vs forecast; backlog aging vs entregas aceitas; tarefas bloqueadas vs milestones em risco. Não somar horas planejadas e lançadas como se fossem a mesma métrica e não inferir lucro apenas de porcentagem concluída. Registrar owner, cliente/projeto, unidade monetária, datas de corte, fonte de custo/taxa e work in progress; expor lacunas e divergências. Ferramentas com list/board/Gantt ou dashboards são views do mesmo registro, não múltiplas provas independentes. Dados insuficientes geram UNKNOWN, não saúde verde.
+
+Referência: https://github.com/Worklenz/worklenz . Produto externo React/Express/PostgreSQL (AGPL-3.0), com opção self-host/cloud; não instalado nem conectado aqui.
