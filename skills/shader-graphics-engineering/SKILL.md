@@ -117,3 +117,7 @@ Quando a tarefa exigir oceano visualmente realista, e não apenas efeito decorat
 5. Quando revisão visual automatizada existir, usar capturas sob vistas fixas e crítico independente como complemento, nunca substituir inspeção visual e runtime.
 
 Referência técnica: https://github.com/Noniv/web-ocean (2026-10-18). Não importar shaders sem auditoria nem transferir benchmarks do projeto original para outra cena.
+
+## Componentes WebGPU e fallback (Shaders, 2026-10-24)
+
+Em efeitos procedurais declarativos com WebGPU, preservar props/tokens e ordem de camadas como contrato versionável. Distinguir export de árvore do editor de verificação no runtime; conferir suporte ao framework, SSR/hydration, GPU/device loss, animation lifecycle, interações e perf. Testar reduced-motion, contraste, legibilidade sobre o shader e fallback sem GPU, além de mobile. CLI conectado a projeto externo pode sincronizar/escrever código e requer revisão de permissões; não assumir pacote Shaders disponível. Fonte: https://github.com/shader-effects-inc/shaders.
