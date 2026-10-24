@@ -87,3 +87,18 @@ Quando o repositório for grande, derive primeiro um mapa de dependências entre
 Para sincronizar documentação após alterações, compare a revisão-base com a revisão atual, identifique nós e artefatos alterados e percorra dependentes para determinar páginas possivelmente desatualizadas. Atualize só os componentes impactados; se o grafo estiver incompleto ou a mudança for transversal, aumente explicitamente o escopo ou faça rebuild fundamentado. Separe status `verificado`, `inferido` e `não inspecionado`; não apresente documentação gerada como cobertura completa quando faltarem arquivos, linguagens ou testes. O CodeWiki oferece implementação externa de referência, mas não pressupor seu CLI, MCP, Python ou provedor LLM instalado.
 
 Origem complementar: https://github.com/FSoft-AI4Code/CodeWiki (grafo de dependências, artefatos de build e refresh incremental).
+
+
+## Living specs versionadas e ligadas ao código (ThinkRail, 2026-10-24)
+
+Para projetos com vários agentes, workspaces ou sessões, quando requisitos e decisões mudam durante a implementação:
+1. Manter uma especificação durável junto ao repositório com objetivo, comportamento observável, invariantes, não objetivos e owners. Usar Markdown existente; `SPEC.md` e links tipados são uma opção, não formato obrigatório.
+2. Distinguir intenção aprovada de comportamento implementado. A spec orienta a mudança; código, testes e diff demonstram o que existe. Divergências exigem reconciliação, não atualização automática para justificar o código.
+3. Opcionalmente conectar specs por `parent`, `covers` e `references` somente quando links reduzirem ambiguidade; validar targets e evitar duplicação de fatos. Uma árvore documental simples é preferível a um grafo vazio ou complexo.
+4. Ao alterar comportamento, identificar quais invariantes/specs são impactados, atualizar somente esses documentos na mesma mudança e validar a spec contra testes e diff. Planejamento futuro deve ficar marcado como planejado.
+5. Na revisão, apresentar uma tríade verificável: spec/critério → diff/commit → teste/evidência. Feedback ancorado em arquivo/linha deve ser preservado como comentário ou issue, e não confundido com aprovação.
+6. Em sessões ou branches paralelas, separar workspaces quando suportado, registrar branch/base SHA, evitar writers no mesmo checkout e verificar divergência com a branch principal antes da integração. Não alegar worktrees locais quando houver apenas GitHub remoto.
+
+**Should-trigger:** várias sessões alteram módulos relacionados e decisões aprovadas se perdem entre PRs. **Near-miss:** correção isolada de typo; não exigir grafo nem SPEC.md. **Critério de sucesso:** outra sessão localiza a intenção vigente, a relaciona aos arquivos alterados e encontra evidência de validação sem reler o chat inteiro.
+
+**Proveniência:** [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail), README e `goal-and-requirements.md` (consultados em 2026-10-24). Absorvida apenas a metodologia de living specs, navegação vinculada e revisão por etapa; não presume IDE ThinkRail, engine pi, ferramentas `spec_*`, instalador ou daemon no ChatGPT.
