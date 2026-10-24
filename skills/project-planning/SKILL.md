@@ -74,3 +74,7 @@ Para mudanças complexas em software, use *research → design → implement* so
 Não exigir subagentes, comandos `/rpi` ou `$rpi`, nem diretório `.agents/artifacts` quando o runtime ou projeto não os comportar. Não interromper tarefas claras apenas para perguntar qual formato de fluxo o usuário deseja.
 
 **Origem adaptada:** https://github.com/humanlayer/skills/blob/main/plugins/rpi/skills/rpi/SKILL.md
+
+## Continuidade por artefatos de planejamento (Planning with Files, 2026-10-24)
+
+Para execução longa e sujeita a context reset, manter três views persistentes com ownership claro: plano (objetivos, etapas, status, acceptance), achados (evidência, links, decisões) e progresso (feito, bloqueado, próximo passo). Reabrir pela fonte canônica, reconciliar mudanças de arquivos e somente então prosseguir; checkpoints por marco não dependem de hooks. Verificar critérios de conclusão contra artefatos reais e impedir que uma checklist marcada substitua testes. Hooks que reinjetam contexto são opcionais e exigem suporte do host e revisão de segurança. Fonte: https://github.com/OthmanAdi/planning-with-files.
