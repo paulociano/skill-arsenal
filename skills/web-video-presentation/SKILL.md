@@ -95,3 +95,9 @@ Para cada cena, especificar mensagem, fonte, metáfora visual ou gráfico justif
 Reordenação, desenho, controle remoto, gravação em webcam/microfone e HTML→MP4 são módulos **opcionais**, usados só quando o runtime e permissões do usuário permitem testar. Para vídeo, verificar captura, áudio, duração, dimensões, sincronismo e render final; não assumir Puppeteer/ffmpeg. Não replicar a CLI de Claude ou templates proprietários da fonte.
 
 Referência metodológica: https://github.com/sandeco/mira-animator (PolyForm Noncommercial 1.0.0; sem incorporação de código externo).
+
+## Documento de apresentação HTML autocontido e editável (Bento, 2026-10-24)
+
+Para apresentações portáveis em HTML, distinguir página de playback de **documento autocontido com editor e esquema de dados**. Quando requerido, armazenar slides, IDs estáveis, estados, gráficos, fontes e mídia com manifesto/versionamento e validar round-trip: editar dados estruturados → renderizar → salvar arquivo → reabrir → editar novamente. Identificadores compartilhados podem coordenar transições morph, mas requerem continuidade semântica e checks de colisões. Preferir fallback de download quando a File System Access API não existe. Colaboração em arquivo com chave embutida exige explicar que posse do arquivo pode equivaler a acesso e não assumir identidade autenticada; testar merge, conflitos e modo offline real. Atualizações assinadas e CRDT são alegações/implementações externas, não capacidades automaticamente herdadas por um HTML gerado aqui.
+
+Fonte: https://github.com/nyblnet/bento . A publicação de HTML autocontido deve ser verificada no browser; aplicativo Bento não foi instalado.
