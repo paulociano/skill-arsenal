@@ -89,3 +89,16 @@ ui-motion-design, interaction-polish, scroll-storytelling, shader-graphics-engin
 A avaliação 2026-10-06 de Rive incorporou o CLI/RML orientado a agentes, state-machine trace e Data Binding/View Models como padrões de produção verificável, preservando a regra de tecnologia mínima suficiente e sem assumir que o CLI esteja instalado.
 
 Adaptada de airbnb/lottie-web, rive-app/rive-wasm e práticas de SVG/Canvas/WebGL do Arsenal. Preserva a decisão tecnológica e o handoff sem exigir as ferramentas autorais de origem.
+
+## Handoff editável design → motion (Quiver, 2026-10-24)
+
+Quando a arte nasce em Figma/Affinity e será animada em uma ferramenta como Cavalry, tratar **fidelidade de importação** e **editabilidade remanescente** como critérios de aceite separados da aparência do primeiro frame:
+
+1. Inventariar objetos, artboards/frames, grupos, nomes de layers, pivôs/anchors, tipografia (incluindo variável), imagens, gradientes, máscaras, clipping, blur/shadow, blend modes e color space da fonte.
+2. Selecionar transporte documentado (plugin, script, SVG ou export manual) conforme os formatos que o aplicativo de origem e destino realmente suportam. Preservar IDs/hierarquia e evitar converter texto em outlines se a editabilidade for necessária; quando houver flatten/rasterize, registrar perda e fallback.
+3. Comparar composição lado a lado no destino em coordenadas, limites, fontes, cores, z-order, efeitos e bounding boxes; testar também edição de texto, formas, anchors e keyframes no destino, não apenas a importação visual.
+4. Para motion, corrigir transform origin/pivot, operações de alinhamento e estruturas de shapes **antes** do rig ou keyframing. Agrupamento e renomeação em lote não devem destruir semântica nem quebrar referências.
+5. Definir lista de recursos sem suporte/compatibilidade parcial e aplicar conversão explícita: preservar editável quando possível; caso contrário congelar em imagem/shape com aprovação sobre a perda.
+6. Produzir uma cena curta de teste com movimento, exportar um frame e um trecho animado e revisar clipping, fontes, blend, gradientes, composição e cor. Salvar os arquivos fonte e destino versionados para refazer o handoff.
+
+O Quiver (https://github.com/phillip-motion/quiver) implementa um bridge Figma/Affinity → Cavalry e ferramentas de edição de camadas. É **referência opcional** para desktop, não ferramenta integrada ou instalada neste ChatGPT. Sua instalação para Affinity solicita acesso a arquivos e rede: revisar scripts, permissões e destino de dados antes de ativá-los; nunca executar instaladores desconhecidos para avaliar a técnica.
