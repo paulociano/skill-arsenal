@@ -102,3 +102,7 @@ Adaptada de irinabuht12-oss/email-campaigns-claude.
 Audience lifecycle, campaign states, bounces e operação self-hosted adaptados de https://github.com/knadh/listmonk, sem exigir o binário, Docker Compose, PostgreSQL ou configuração da fonte.
 
 Origem local: [email-campaign-engineering.docx](../email-campaign-engineering.docx).
+
+## Pré-envio e rollout de newsletters (MailCheap, 2026-10-24)
+
+Separar rascunho, revisão, agendamento e **envio irreversível**. Antes de liberar uma campanha, verificar consentimento e supressões, remetente e autenticação SPF/DKIM/DMARC, endereço postal quando exigível, unsubscribe funcional, assunto/preheader, clipping, links, HTML/mobile e amostras reais em provedores diferentes. Para lista nova ou reputação incerta, planejar amostra pequena antes de ampliar distribuição; definir previamente sinais de bloqueio (hard bounces, complaints, spam traps) conforme exigências do provedor, não copiar thresholds de outra plataforma sem validação. Distinguir open pixels e scanner clicks de engajamento humano. Ferramentas MCP de newsletters devem solicitar autorização explícita para send e documentar destinatários e volume antes do efeito. Fonte: https://github.com/marclou/mailcheap. Sem integração ou disparo efetuado.
