@@ -181,3 +181,34 @@ Referência: https://github.com/FavioVazquez/showtime . A ferramenta requer depe
 ## Editor local controlado por MCP/JSON-RPC (Concat, 2026-10-24)
 
 Em editores de vídeo controláveis por agentes, definir contrato de comandos por projeto, sequence/timeline, asset, range e output; manter plano EDL separado da ação de edição e verificar cada mutação no estado real da timeline. Desambiguar preview, save, export, publish e operações destrutivas, proteger mídia e voz contra uso não autorizado e exigir aprovação para clonagem/uso de voz de terceiros. Após render, inspecionar áudio/legendas, alinhamento, keyframes, cutouts e resultado do MP4, não somente sucesso da RPC. Concat oferece MCP/JSON-RPC externamente, mas não está instalado/conectado neste ambiente. Fonte: https://github.com/jub0t/concat.
+
+
+## Roteamento para Agent Skills oficiais Remotion (reavaliação 2026-10-24)
+
+A documentação oficial https://www.remotion.dev/docs/ai/skills, atualizada em 2026-10-23, passou a manter um catálogo de Agent Skills em https://github.com/remotion-dev/skills. Isso amplia a avaliação geral de 2026-10-15: quando um projeto Remotion real estiver em escopo, consultar a skill oficial **mais específica**, lendo seu SKILL.md atual como referência de API e práticas, sem instalar automaticamente o pacote.
+
+**Roteador seletivo:**
+- `remotion-create`: inicializar projeto ou composição quando autorizado;
+- `remotion-markup`: React composition, animação, fontes, áudio, tipografia e frames;
+- `remotion-studio`: visualização em Studio; `remotion-render`: export de still ou vídeo;
+- `remotion-captions`: legendas, timestamps e legibilidade;
+- `remotion-maps`: mapas animados, rotas, GeoJSON e integração geoespacial, somente se necessário;
+- `remotion-interactivity`: elementos selecionáveis/editáveis no Studio;
+- `remotion-saas`: integração em produto, multiusuário e arquitetura de render;
+- `remotion-docs`: consulta da documentação/API atual antes de escolher parâmetros;
+- `remotion-upgrade`: migração versionada dos pacotes associados;
+- `remotion-multimedia`: metadados e processamento multimídia via Mediabunny;
+- `remotion-best-practices`: fallback geral, não leitura obrigatória de todas as demais.
+
+**Gates de execução e aceitação:**
+1. Resolver versão real do projeto, composição, assets, contrato de fps/duração/resolução, entradas, fontes e plugin necessário; não usar API documentada para versão diferente sem revisão.
+2. Preservar tempo derivado da timeline/frame da composição e contratos determinísticos. Testar frame inicial, mudanças de cena, legibilidade e frame final; áudio e captions precisam ser conferidos no output.
+3. Editabilidade no Studio é requisito específico diferente de render válido. Conferir seleção e alteração reais de elementos somente quando runtime/UI disponível.
+4. Para mapas, conferir atribuição/licença/projeção, dados de geolocalização e custos/token dos provedores, sem supor Mapbox/Cesium instalados.
+5. Para upgrade, verificar compatibilidade de versões, lockfile e rollback. `npx skills add remotion-dev/skills` e `gh skill install` são comandos da documentação, **não executados aqui**.
+6. Sem Node, Remotion, browser e codecs no ambiente, produzir código/arquitetura reproduzível e apontar que Studio, render, validação e MP4 não ocorreram. Não prometer execução autônoma, Lambda ou SaaS instalado.
+
+**Should trigger:** 'Neste projeto Remotion, crie legendas editáveis e renderize 9:16'; escolher módulos `captions`, `interactivity`, `render` conforme necessidade.
+**Near miss:** 'Corte cinco segundos de um MP4'; FFmpeg segue candidato principal, sem carregar catálogo Remotion.
+
+Proveniência: https://www.remotion.dev/docs/ai/skills e https://github.com/remotion-dev/skills, consultados em 2026-10-24. Nenhuma skill externa foi instalada; apenas o roteamento e os critérios técnicos foram incorporados.
