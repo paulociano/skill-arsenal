@@ -150,3 +150,10 @@ Quando a superfície tiver múltiplos locales ou houver alteração em traduçõ
 
 **Aceite:** chave copiada da origem deixa de ser ausente e permanece pendente de tradução; nome de marca idêntico não vira bug confirmado. Página monolíngue sem requisito de localização não exige catálogos.
 **Proveniência:** metodologia de https://github.com/mgiovani/cc-arsenal/blob/main/skills/i18n-check/SKILL.md (2026-10-21), sem importar scripts ou instalador de uv.
+
+
+## Exploração sistemática orientada por jornadas (Hermes Dogfood, 2026-10-24)
+
+Quando o pedido for testar um web app em uso real, planejar jornadas representativas por persona, tarefa, dado inicial e resultado observável, incluindo happy path, erros, permissões, empty/loading states e fluxos de retorno. Capturar steps reproduzíveis, URL/versão/viewport, estado inicial, evidência visual ou textual e comportamento esperado versus observado. Distinguir bug confirmado, suspeita e limite de ambiente. Após fix, repetir cenário comparável e checar regressões adjacentes. Automatizar interações somente por navegador/controlador realmente disponível, evitando cliques ou submissões em produção sem autorização. Não alegar screenshots ou execução de browser quando houve apenas revisão estática.
+
+**Origem:** https://github.com/NousResearch/hermes-agent/blob/main/skills/software-development/dogfood/SKILL.md. Usa metodologia, não `browser_exec` do Hermes.
