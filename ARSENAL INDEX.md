@@ -33,6 +33,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `stacks/cinematic-presentation/STACK.md`
 - **checkpoint-nao-iniciados** — Lista clientes com status “Não iniciado” em um período informado, agrupando por mês e por líder direto ou responsável do consultor, e entrega o resultado pronto para WhatsApp.  
   `stacks/checkpoint-nao-iniciados/STACK.md`
+- **clean-room-product-reconstruction** — Reconstruir uma alternativa original a um aplicativo de terceiros a partir de fluxos e fontes públicas, com clean-room, matriz de paridade, diferenciação e quality gates.  
+  `stacks/clean-room-product-reconstruction/STACK.md`
 - **creative-web-engineering** — Orquestra direção, estrutura, scroll, motion, microinterações e gráficos criativos para websites contemporâneos de alta expressão com verificação de acessibilidade e performance.  
   `stacks/creative-web-engineering/STACK.md`
 - **content-production** — Planeja, produz, adapta, governa e revisa conteúdo para múltiplos canais mantendo consistência de mensagem e capacidade operacional.  
