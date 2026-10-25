@@ -129,3 +129,16 @@ Consolidada de Temporal durable execution architecture e padrões de workflow or
 ## Atores duráveis como padrão de coordenação
 
 Quando o problema envolve **estado por entidade/identidade** (sala, conversa, documento colaborativo, agente), considerar um ator durável como alternativa à orquestração por workflow. Identificar chave/owner por ator, limites de serialização de chamadas e `await`, acesso concorrente, interleaving intencional, campos persistidos, recuperação após interrupção, isolamento de tenants, schema migration, streaming/WebSocket, backpressure e observabilidade. Serialização por ator não implica transação entre atores nem exactly-once de efeitos externos; preservar idempotência, fencing e segurança de retry nas integrações. Comparar escalabilidade por hot key, armazenamento, latência de cold-start, distribuição e portability. Não presumir runtime/SDK Terse instalado ou garantias que não foram testadas. Referência: https://github.com/TerseAI/durable-actors.
+
+
+## Agentes gerenciados com event log e workers intercambiáveis (Omnara, 2026-10-24)
+
+Para plataformas que executam agentes em máquinas locais/remotas, separar contrato do agente (modelo, tools, política, fontes de máquina e memória), API/control plane, event log durável, workers stateless, executores/máquinas e superfície de acompanhamento humano. Cada turno, chamada de ferramenta, resultado, aprovação e erro deve ter identidade e transição auditável; o log só sustenta recuperação se a persistência for confirmada antes do ack.
+
+Planejar reconexão de máquina, transferência entre executores, deduplicação de turnos, leases e fencing de writes, limites de concorrência, fila, budgets e recuperação em versões novas. Separar aprovação humana pendente da execução automática e herdar as políticas de `agent-action-governance`; acesso a shell, credenciais e rede deve ser minimizado, isolado e vinculado ao ator autorizado.
+
+Conectores MCP, provedores de modelo, dashboard, agendamentos e daemon são integrações a implementar/testar explicitamente, não capacidades implícitas do ChatGPT. Sem infraestrutura real não prometer persistência, execução background, workers ou sandboxes autônomos.
+
+**Should trigger:** 'Desenhe uma plataforma de agentes com aprovação, replay e execução em várias máquinas'. **Near miss:** 'Faça uma consulta pontual em um repositório'.
+
+**Origem:** https://github.com/omnara-ai/omnara. Arquitetura conceitual absorvida; nenhum deploy, chave, máquina ou processo externo instalado.
