@@ -133,3 +133,18 @@ Quando a missão for aprender programação, computação, engenharia ou ML de f
 **Near-miss:** pedido de implementar uma API agora sem intenção de aprendizagem; priorizar a skill de engenharia.
 
 Fontes de descoberta: https://github.com/nilbuild/developer-roadmap, https://github.com/ossu/computer-science e https://github.com/EbookFoundation/free-programming-books. Links de terceiros são referências mutáveis, não conteúdo instalado ou validado automaticamente.
+
+
+## Feedback matemático localizado e pistas graduais (Penmentor, 2026-10-24)
+
+Quando o aluno enviar resolução manuscrita ou imagem de etapas matemáticas:
+1. Ler o enunciado, explicitar trechos ambíguos e acompanhar cada transformação; não inferir símbolos ilegíveis como fato.
+2. Identificar o primeiro erro verificável, distinguir erro originário de etapas subsequentes contaminadas e reconhecer trechos corretos.
+3. Devolver feedback referenciando linha/região visual quando identificável, sem simular marcações que não foram produzidas; se houver ferramenta de edição de imagem, círculos/setas podem ser gerados de fato.
+4. Oferecer pistas em escada: direção mínima → técnica pertinente → próximo passo parcial; preservar agência do aluno e só apresentar solução integral quando solicitada ou pedagogicamente necessária.
+5. Checar domínio com recuperação ativa, 'encontre o erro' e escolha de técnica. Quando uma figura/simulação ajudar, conectar integral, área, derivada ou geometria ao modelo visual com limites explícitos; não afirmar interatividade Manim sem render real.
+6. Verificar contas e equivalências com raciocínio independente ou ferramenta matemática disponível; separar confiança de validade do cálculo.
+
+**Should trigger:** 'Corrija minha resolução fotografada da integral e me dê uma dica sem resolver'. **Near miss:** 'Quanto é 8 vezes 7?'.
+
+**Origem:** https://github.com/AbdullahAlhariri/penmentor. Padrão pedagógico incorporado sem Xournal++, X11, Python, Manim ou CLI de agentes.
