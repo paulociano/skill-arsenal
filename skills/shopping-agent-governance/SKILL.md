@@ -143,3 +143,10 @@ Combina com:
 ## Provenance
 
 Adaptada de `cinderline/northcinder`. Preserva separação entre pesquisa, ranking e compra, neutralidade, unknowns explícitos, seller trust separado, confirmação de oferta e autorização transacional de uso único. Não depende do runtime MCP, adapters de lojas, engine local ou infraestrutura do projeto original.
+
+
+## Monitoramento de preço/estoque com condição normalizada (Hermes, 2026-10-24)
+
+Para acompanhar uma oferta ao longo do tempo, registrar identidade estável do produto, variação exata (cor/tamanho/modelo), vendedor, URL canônica, moeda, região, condição, frete, tributos, taxas e disponibilidade. O gatilho usa **preço total comparável** e data de observação, nunca preço de vitrine isolado. Diferenciar alerta de queda, meta atingida, volta ao estoque e mudança de condições. Na ausência de dado de entrega/tributos, marcar comparação parcial. Deduplicar eventos e não transformar alerta em autorização de checkout. Somente prometer revisitas/alertas se automação real estiver configurada e confirmada; cada execução deve registrar falhas de fonte e data.
+
+**Origem:** https://github.com/NousResearch/hermes-agent/blob/main/skills/productivity/product-price-monitor/SKILL.md. Método incorporado sem serviços de monitoramento ou CLI Hermes.
