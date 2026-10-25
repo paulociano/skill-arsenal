@@ -175,3 +175,14 @@ Separe `observação`, `hipótese`, `achado candidato` e `achado confirmado`. Um
 Quando um framework alegar taxa de sucesso em benchmark, confira definição do denominador, conjunto/versão, seeds, hints, pass@k, isolamento do modelo, vazamento/ajuste sobre casos de teste e independência do verificador; verificação aritmética de JSON versionado não comprova, isoladamente, autenticidade de execução nem generalização para sistemas reais.
 
 Origem metodológica: https://github.com/elder-plinius/T3MP3ST. O repositório de origem é runtime ofensivo com CLI, agentes e scanners, **não** dependência desta skill. Não copiar playbooks operacionais, ferramentas de ataque, acesso a credenciais ou automação de exploração.
+
+
+## Auditoria multietapas com cobertura e refutação (Cloudflare, 2026-10-24)
+
+Para auditorias amplas em código autorizado, acrescentar ao contrato OWASP uma trilha por unidade de superfície: identificador, fronteira de confiança, hipótese, método, teste feito, evidência, lacuna e estado. Antes de anunciar cobertura, reconciliar rotas, dados, privilégios e integrações com as unidades efetivamente examinadas.
+
+Separar as fases: (1) reconhecimento e ledger; (2) investigação orientada por lacunas; (3) validação adversarial de cada candidata, tentando refutá-la; (4) achados estruturados; (5) rechecagem independente de afirmações e referências; (6) relatório derivado dos registros. Usar `confirmed`, `needs_validation` e `rejected` como vereditos distintos. `confirmed` requer fronteira violada e evidência reproduzível; `needs_validation` precisa declarar a prova faltante e não receber severidade especulativa; `rejected` retém o motivo da refutação.
+
+Em reauditorias, reutilizar o histórico como baseline e revalidar fontes alteradas; não transportar conclusões antigas automaticamente. Uma segunda passagem crítica no mesmo modelo pode ajudar, mas não equivale a agente independente. Só executar builds, exploits, fuzzers e scripts do alvo em sandbox real com isolamento, recursos limitados e permissão explícita; sem isso, manter validação pendente.
+
+**Proveniência:** https://github.com/cloudflare/security-audit-skill. Absorção metodológica; sem instalar agentes paralelos, validadores Node ou harness externos. Esta skill continua responsável pela superfície web; para revisão estática usar `secure-code-privacy-review`.
