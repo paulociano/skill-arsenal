@@ -43,3 +43,12 @@ Ao modernizar CSS legado, avaliar cada técnica no componente concreto, em vez d
 7. Validar no navegador sempre que o comportamento de layout, cascata, hover/focus ou leitor de tela for determinante.
 
 **Origem (B, método absorvido seletivamente):** https://github.com/AllThingsSmitty/css-protips. É um catálogo de dicas, não um runtime nem uma Agent Skill.
+
+
+## Estratégia classless-first e cascata de baixa especificidade (Sumi.css, 2026-10-24)
+
+Em sites editoriais, protótipos, ferramentas internas e páginas simples, considerar baseline de HTML semântico estilizado antes de introduzir componentes e classes utilitárias. Avaliar: (1) elemento nativo adequado para cada papel; (2) valores de design via custom properties; (3) seletores de zero especificidade com `:where()` para preservar overrides; (4) color scheme claro/escuro e estados ARIA visíveis; (5) foco por teclado, contraste e redução de movimento; (6) custo de CSS, dependências e build.
+
+A opção classless não deve sobrescrever o design system existente nem forçar estilos globais em aplicações grandes ou componentes encapsulados. Escolher CSS próprio, framework leve ou biblioteca existente pelo custo real de manutenção. Só integrar Sumi.css quando o usuário/projeto pedir ou a validação no projeto justificar, após conferir licença e versão.
+
+**Proveniência:** https://github.com/vladocar/Sumi.css. Metodologia de arquitetura visual absorvida; pacote não instalado nem copiado.
