@@ -62,3 +62,18 @@ Runtime de navegador e biblioteca GSAP compatível com o projeto. Nenhum pacote 
 ## Referências
 
 Atualizada com base no repositório oficial greensock/gsap-skills, preservando apenas orientação portátil e compatível com a versão real do projeto.
+
+
+## Reconstrução de motion a partir de vídeo (Motion2Code, 2026-10-24)
+
+Quando o objetivo for transformar vídeo de motion design em SVG/GSAP editável, em vez de apenas criar animação imaginada:
+1. Inspecionar frames da fonte, cortes, tempo dos beats, texto, cores, geometria e seam entre início e fim. Manter um quadro de evidência por timestamp.
+2. Definir contrato de reprodução controlável por tempo (`seek(t)` determinístico, duração e loop) com um timeline mestre quando apropriado; sincronizar todos os elementos pelo mesmo tempo.
+3. Representar formas vetoriais e texto como objetos editáveis quando a fidelidade permitir, sem mascarar uma reprodução de vídeo como reconstrução por código.
+4. Comparar frames renderizados com os frames originais nos instantes importantes, incluindo transições rápidas, tipografia e seam. Ordenar maiores divergências e iterar; métricas de pixels não substituem revisão perceptual.
+5. Em vídeos que simulam sites, distinguir replay visual de interface realmente funcional; verificar scroll, botões, teclado, mobile, estados e acessibilidade separadamente.
+6. Exigir inspeção no navegador/frames real para afirmar fidelidade, performance ou ausência de saltos. Sem ffmpeg, browser ou GSAP disponíveis, fornecer plano/código não verificado e declarar a lacuna.
+
+**Should trigger:** 'Recrie este motion.mp4 como SVG e GSAP editáveis, comparando os frames'. **Near miss:** 'Anime um botão ao clicar', que segue o fluxo GSAP normal.
+
+**Origem:** https://github.com/lovisdotio/motion2code. Método portátil adaptado, sem instalar scripts Python, Playwright, bibliotecas ou agentes externos.
