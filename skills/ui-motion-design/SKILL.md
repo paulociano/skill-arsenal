@@ -171,3 +171,17 @@ Para animações de objetos/personagens, identidades animadas ou cenas renderiza
 6. Não transformar os 12 princípios clássicos de animação em obrigações para todo botão: microinterações devem permanecer proporcionais à frequência e ao contexto.
 
 **Origem (A/B, método absorvido):** https://github.com/vibe-motion/skills/blob/main/disney-animation-rule-skill/SKILL.md. Renderizadores e dependências de Remotion/Three.js permanecem externos e opcionais.
+
+
+## Continuidade de movimento em ilustrações animadas (Rossark, 2026-10-24)
+
+Quando a interface contém personagens, mascotes, SVGs articulados ou cenas vivas, ampliar a coreografia para além de transições entre estados:
+1. Planejar um clock coerente por objeto/personagem/cena e keyframes que conservem velocidade entre poses; distinguir pausa proposital de congelamento acidental.
+2. Separar partes em pivôs reais (olho, cabeça, articulação, folha, tecido); usar arcos, atraso de fase e follow-through em lugar de deslocamento rígido simultâneo.
+3. Limitar a uma ação narrativa principal e poucos ciclos sutis de idle; manter amplitudes pequenas, diferenças estáveis por elemento e evitar ruído aleatório regenerado a cada frame.
+4. Validar contato entre objetos e continuidade entre primeiro/último frame do loop. Para motion reduzido, manter pose estática legível; pausar clocks quando invisíveis ou em background sempre que o runtime permitir.
+5. Revisar sequência em frames/amostras quando houver render realmente disponível; não declarar 60 fps, timing, suavidade ou contato verificados a partir apenas de código.
+
+Usar tecnologia já compatível com o projeto (CSS/WAAPI, SVG, React Native, SwiftUI ou motor existente). Não copiar automaticamente templates ou dependências da fonte. Para vídeo/ilustração com acting fora de UI, usar owner de animação de assets mais específico.
+
+**Proveniência:** https://github.com/rossark0/rossark-motion-skill, `SKILL.md` e README. Método adaptado, não motor instalado.
