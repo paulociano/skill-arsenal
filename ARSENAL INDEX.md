@@ -263,6 +263,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **presentation-template-adaptation** — Adaptar conteúdo a um deck de referência preservando identidade visual, elementos fixos e capacidade dos layouts.
 - **procedural-3d-reconstruction** — Reconstruir objetos de imagens como modelos procedurais Three.js por estágios e comparação visual com a referência.
 - **procedural-game-content** — Projetar e validar geração procedural de níveis, mapas, cidades, dungeons, terrenos e spawns com seeds reproduzíveis, constraints explícitas, validação de jogabilidade e bounded regeneration.
+- **personal-inbox-triage** — Triar uma caixa de e-mail pessoal ou profissional por conversas, compromissos, prioridade e política de resposta, produzindo fila de decisões e rascunhos sem envios implícitos.  
+  `skills/personal-inbox-triage/SKILL.md`
 - **personal-financial-planning** — Estruturar planejamento financeiro pessoal por fluxo de caixa, reserva, dívidas, patrimônio, metas e cenários, separando fatos, premissas e decisões do usuário sem transformar heurísticas em regras universais.
 - **prioritization-engine** — Priorizar trabalho, oportunidades ou problemas por impacto, urgência, dependências, risco e esforço com critérios explícitos e análise de sensibilidade.
 - **product-lifecycle-transition** — Diagnosticar produtos maduros ou em declínio e decidir entre estender, substituir, colher ou retirar, conectando evidência de mercado, economia, migração, comunicação e critérios de saída.
