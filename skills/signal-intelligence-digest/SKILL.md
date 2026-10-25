@@ -65,3 +65,22 @@ Quando fontes acessíveis trouxerem menções no Reddit, Threads, Facebook, Inst
 ## Fontes de vídeo e tópicos orientais (BrowserAct 81–100, 2026-10-15)
 
 Para radars de vídeos e discussões em X, Zhihu, Xiaohongshu, Douyin, TikTok ou YouTube, registrar chave (canal/conta/consulta), link canônico, idioma, região, período, data da publicação, fonte, método de aquisição e sinal verificável. Agrupar vídeos republicados e transcrições do mesmo conteúdo; separar notícia, tendência, conteúdo promocional e reação. Sinalizar ausência de acesso a feeds autenticados e não interpretar resultados parciais como totais de plataformas. Integração com APIs de terceiros depende de credenciais, custo e consentimento reais, não presumidos. Proveniência: BrowserAct zhihu-search-api-skill, youtube-channel-api-skill, youtube-search-api-skill, tiktok-profile-videos.
+
+
+## Radar de nomes e oportunidades emergentes (new-term-radar, 2026-10-24)
+
+Quando o objetivo é detectar produtos, modelos, repositórios ou consultas ainda pouco visíveis nas ferramentas clássicas de SEO:
+1. **Descoberta precoce**: combine anúncios/fontes primárias, lançamentos Hugging Face, aceleração de estrelas em repositórios GitHub e URLs novas em sitemaps. X, Search Console, Reddit, dados comerciais e serviços pagos são fontes opcionais, somente se realmente acessíveis.
+2. **Identidade do sinal**: registre nome canônico, aliases, primeira observação, URL, tipo (marca/produto/termo genérico), origem e histórico; agrupe clones de modelos e repos relacionados para não contar falsos lançamentos.
+3. **Momentum sem exagero**: compare variação com baseline próprio e idade do sinal, evite concluir tendência por uma única observação ou por popularidade bruta; guarde velocidade e nível separadamente.
+4. **Demanda por tarefa**: além do nome novo, derive quais tarefas concretas resolve e as consultas genéricas associadas, mas marque cada hipótese como inferência até existir evidência de busca real.
+5. **Validação atrasada**: volte a medir depois de alguns dias e em 14 dias para verificar persistência, falsos positivos e valor preditivo de cada fonte. Dados recentes do Google Trends podem estar incompletos; volume de buscas estimado não equivale a tráfego ou receita.
+6. **Prioridade de ação**: ranqueie novidade, evidência de adoção, demanda relevante, concorrência verificável e ação possível. Distinguir oportunidade SEO, ideia de produto e notícia, sem confundi-las.
+
+**Portabilidade e segurança:** não pressuponha MCP server, PyPI, crawler, scheduler, chaves AIsa/GoAnyAPI/TrustMRR, login de redes sociais ou fontes comerciais. Use somente pesquisa e conectores realmente disponíveis. Não envie tokens nem dados de Search Console a terceiros sem autorização. Sem série histórica, reportar snapshot, não 'crescimento comprovado'.
+
+**Should trigger:** "Descubra termos e ferramentas de IA que começaram a aparecer agora e priorize oportunidades de conteúdo".
+
+**Near miss:** "Resuma os releases desta semana", que usa o pipeline geral de curadoria sem estimativa de procura.
+
+Proveniência: https://github.com/zhuyansen/new-term-radar (README consultado em 2026-10-24). Método adaptado, sem execução nem instalação do pacote ou dependências externas.
