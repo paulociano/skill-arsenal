@@ -1,0 +1,12 @@
+# Avaliação: Jakeschincariol/replica-skill (2026-10-25)
+
+- Fonte: https://github.com/Jakeschincariol/replica-skill (branch main), licença declarada MIT.
+- Router canônico: `ARSENAL INDEX.md`; avaliação via `stacks/evaluate-and-import-skill/STACK.md`, revisão conforme `skills/skill-security-review/SKILL.md`.
+- **Classificação: A/D**. A: metodologia específica e útil de reconstrução clean-room + matriz de paridade + diferenciação por reviews. D: scripts Python e fluxo Claude/Claude Code, testes E2E, ambientes de deploy e contas não automaticamente disponíveis.
+- **Decisão: CREATE_NEW** `stacks/clean-room-product-reconstruction/STACK.md`, sem importar 11 skills duplicadas e sem executar scripts externos. O ganho distinto sobre `functional-web-app-builder` e `legacy-system-reconstruction` é a reconstrução observacional de um concorrente **sem acesso à codebase**, com limites explícitos de propriedade intelectual, rastreabilidade tela/fluxo/recurso e paridade funcional quantificada.
+- **Overlaps**: recon → legacy-system-reconstruction (mas ali há codebase própria); architect/build/backend/test/deploy → functional-web-app-builder e owners técnicos; design → design-system-extraction; entrepreneur → pesquisa/posicionamento; brand → brand-strategy. Absorver método em stack, não multiplicar owners.
+- **Diferenciais absorvidos**: mapa de telas Sxx/jornadas Fxx, estados e evidências com confiança; `features.csv` e score ponderado; guardrail clean-room; separação funcionalidade/layout; reviews verificáveis e priorização; aprovação humana antes do go-live.
+- **Portabilidade**: fluxo reescrito para capacidades reais do ChatGPT. Sem pressupor Claude plugins, Playwright, shell, marketplaces, autenticação de terceiro, Stripe ou Vercel. Scripts Python da origem são opcionais, não instalados.
+- **Segurança (CAUTION)**: leitura documental não executou nenhum script. README declara utilitários standard library e testes, mas nenhuma alegação de segurança de todo código foi comprovada; operação futura exige revisão de scripts, termos, licenças, permissões e segredos. Reconhecer o risco de imitação confundível, scraping, ativos proprietários e dados de terceiros.
+- **Validação**: leitura estática de README e SKILL.md selecionados; não foram realizados testes de execução nem verificação de score/paridade do repositório externo.
+- **Registro de publicação**: `stacks/clean-room-product-reconstruction/STACK.md`, `ARSENAL INDEX.md` e este registro em `evaluations/`. Conferir hashes/estado após escrita.
