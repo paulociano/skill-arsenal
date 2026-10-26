@@ -98,3 +98,13 @@ Em projetos visuais novos ou redesenhos substanciais, executar uma checagem curt
 **Regra de ownership:** este gate complementa design-direction; a implementacao, a tipografia efetiva e o QA de runtime pertencem a web-design-engineer e aos owners especializados. Nao criar um novo owner frontend-design para o mesmo ciclo.
 
 **Fonte:** https://github.com/anthropics/claude-code/blob/main/plugins/frontend-design/skills/frontend-design/SKILL.md (consulta 2026-10-19). Metodo absorvido sem executar Claude Code, instalar plugin ou assumir screenshots/browser externos.
+
+## Protocolo de variantes comparáveis (jakubkrehel/skills, 2026-10-26)
+
+Quando uma decisão visual de um componente merecer exploração, criar por padrão três direções nomeadas, distintas num único eixo primário: estrutura, densidade, ênfase, tipografia ou voz. Outras alterações devem ser somente consequências do eixo, sem confundir múltiplas variáveis. Cinco variantes somente quando solicitado.
+
+Comparar no contexto real da página, com vizinhos, tokens e conteúdo plausível; mostrar uma variante em tamanho real por vez. Quando o runtime permitir, seletor e parâmetro de URL tornam cada alternativa compartilhável. Sem runtime, indicar claramente que a comparação é estática. Toda variante deve respeitar acessibilidade (nome, foco, teclado), contraste, zoom, mobile, movimento reduzido, recuperação de erros e proteção para ações destrutivas. Rejeitar a direção que só funciona rompendo esses mínimos.
+
+Entregar matriz neutra de nome, posição no eixo, contexto adequado e trade-off, sem predileção estética implícita. Após a seleção, promover uma direção e remover seletor, alternativas rejeitadas e código temporário, verificando o diff. Não presumir integração automática com Figma, navegador ou Claude Code.
+
+Fonte: https://github.com/jakubkrehel/skills/tree/main/skills/variant .
