@@ -162,3 +162,15 @@ Quando screenshots forem critério de aceite:
 7. Repetir inspeção visual após a correção, combinando com verificações de interação, rede e estado quando aplicáveis.
 
 **Origem (A/B, adaptado):** https://github.com/dzhng/skills/blob/main/skills/visual/compare-screenshots/SKILL.md. Não pressupõe subagentes nem executa pacotes `pixelmatch` de terceiros.
+
+## Laboratórios temporários de componentes (jakubkrehel/skills, 2026-10-26)
+
+Ao examinar um componente isolado, escolher um dos dois protocolos:
+
+**State-machine:** ler branches e hooks reais; enumerar loading, empty, error, populated, disabled e permissions apenas quando alcançáveis pelo código. Criar rota temporária que importe o componente real e injete fixtures plausíveis no ponto de entrada dos dados, sem produção. Permitir trocar estados por seletor sem timers artificiais. Revalidar todos após cada alteração. Estados esperados mas ausentes são lacunas, não estados inventados.
+
+**Break:** ler props, slots e containers para escolher apenas eixos aplicáveis, como conteúdo vazio, strings longas e inquebráveis, listas extensas, tradução, largura reduzida e estados. Renderizar cada caso rotulado na mesma página temporária, usando componente, providers e tokens originais. Registrar somente falhas observadas, com viewport, condição e evidência; nunca tratar previsão como resultado.
+
+Não usar credenciais, dados ou serviços de produção nas fixtures. Sem navegador ou execução, classificar como UNKNOWN e fornecer procedimento de reprodução, não alegar que viu o resultado. Evitar dependência obrigatória de Storybook, Playwright e Claude. Quando corrigir, repetir o cenário idêntico. Manter a rota enquanto fizer parte de um relatório visual solicitado e removê-la, com fixtures e imports, quando for concluída a exploração e solicitada limpeza.
+
+Fonte: https://github.com/jakubkrehel/skills/tree/main/skills/break e https://github.com/jakubkrehel/skills/tree/main/skills/state-machine .
