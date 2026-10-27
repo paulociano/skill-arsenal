@@ -55,7 +55,7 @@ Mapear obrigação regulatória somente quando jurisdição, papel da organizaç
 - não afirmar cobertura completa se parte do diff/flow não foi revisada.
 
 ## Integração
-`code-review`, `behavior-contract-validation`, `web-application-security-audit`, `skill-security-review`, `llm-red-team-evaluation`, `verify-before-claim`.
+`code-review`, `behavior-contract-validation`, `web-application-security-audit`, `security-audit` (auditoria completa de código-fonte com ledger de cobertura e validação independente), `skill-security-review`, `llm-red-team-evaluation`, `verify-before-claim`.
 
 ## Origem metodológica
 Síntese adaptada de `facebookresearch/secpriv-skill` e `Clear-Capabilities/agentic-security · privacy-data-flow`. Preserva detector→validator, trust boundaries e data-flow preflight sem exigir scanners, scratchpads, slash commands ou regras jurídicas absolutas das fontes.
