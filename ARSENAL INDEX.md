@@ -125,6 +125,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **brand-asset-production** — Produzir, nomear, organizar e validar variantes e exports de marca a partir de masters aprovados para digital, social, app e print sem redesenhar silenciosamente a identidade.
 - **brand-guidelines-authoring** — Transformar uma identidade aprovada em guidelines operacionais, humanas e machine-readable com regras de logo, cor, tipografia, voz, aplicações, provenance e fonte de verdade sem criar documentação que deriva do runtime.
 - **brand-identity-system** — Transformar estratégia e referências em uma identidade visual coerente por direções contrastantes, escolha explícita e sistema final de cor, tipografia, imagem, grafismos e aplicações.
+- **change-adoption-management** — Planejar e acompanhar a adoção de uma mudança (novo processo, sistema, método ou reorganização) com ADKAR, mapa de stakeholders, diagnóstico de resistência, comunicação e sustentação pós-lançamento, medindo adoção em vez de atividade.  
+  `skills/change-adoption-management/SKILL.md`
 - **call-evaluation** — Avaliar ligações comerciais de consultoria financeira pelo Card de Ligação, com evidências, rubrica e qualidade do agendamento.
 - **set-continuity** — Manter sets e ambientes recorrentes coerentes em múltiplos shots por bíblia espacial, landmarks, mapa de câmeras, estados narrativos e QA de continuidade.  
   `skills/set-continuity/SKILL.md`
@@ -268,7 +270,11 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **personal-inbox-triage** — Triar uma caixa de e-mail pessoal ou profissional por conversas, compromissos, prioridade e política de resposta, produzindo fila de decisões e rascunhos sem envios implícitos.  
   `skills/personal-inbox-triage/SKILL.md`
 - **personal-financial-planning** — Estruturar planejamento financeiro pessoal por fluxo de caixa, reserva, dívidas, patrimônio, metas e cenários, separando fatos, premissas e decisões do usuário sem transformar heurísticas em regras universais.
+- **privacy-program-governance** — Estruturar e revisar um programa de proteção de dados pessoais: inventário e registro de operações, base legal, minimização, relatório de impacto, direitos dos titulares, incidentes, operadores e transferências, ancorado na lei vigente (LGPD e outras) e sem emitir parecer jurídico.  
+  `skills/privacy-program-governance/SKILL.md`
 - **prioritization-engine** — Priorizar trabalho, oportunidades ou problemas por impacto, urgência, dependências, risco e esforço com critérios explícitos e análise de sensibilidade.
+- **process-mapping-improvement** — Mapear e melhorar processos operacionais com baseline antes de mudar: SIPOC, mapa de fluxo de valor, desperdícios Lean, causa raiz, capacidade e gargalos, SOP e riscos de dependência de uma só pessoa, sem declarar ganho que não foi medido.  
+  `skills/process-mapping-improvement/SKILL.md`
 - **product-lifecycle-transition** — Diagnosticar produtos maduros ou em declínio e decidir entre estender, substituir, colher ou retirar, conectando evidência de mercado, economia, migração, comunicação e critérios de saída.
 - **product-metrics-diagnostics** — Diagnosticar movimentos de métricas por definição, funil, cohort, segmento, drivers e qualidade de dados antes de propor ação.
 - **project-complexity-management** — Diagnosticar focos de complexidade técnica, organizacional e externa e definir intervenções proporcionais às evidências.
@@ -312,9 +318,13 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **saas-pricing-monetization** — Projetar e revisar pricing e monetização de SaaS, APIs e produtos de IA conectando valor, packaging, value metric, usage/credits, entitlements, willingness-to-pay, economics, rollout e aprendizado sem confundir billing infrastructure com estratégia.
 - **scenario-forecasting** — Construir forecasts e cenários com baseline, backtesting, intervalos, premissas e gatilhos de atualização sem transformar projeção em certeza.
 - **scientific-hypothesis-discovery** — Gerar, verificar, comparar e evoluir hipóteses científicas em ciclos rastreáveis, mantendo grounding, hipóteses rivais, deduplicação, evidência acumulada e limites explícitos entre descoberta assistida e prova científica.
+- **customer-success-lifecycle** — Conduzir o ciclo de sucesso do cliente depois da venda: onboarding com critérios de sucesso escritos, sinais antecipados de risco, reuniões de revisão que demonstram resultado, prevenção de saída, renovação e expansão conquistada, sem inventar pesos de health score.  
+  `skills/customer-success-lifecycle/SKILL.md`
 - **discovery-call-coaching** — Preparar e treinar ligações e reuniões de descoberta comercial com SPIN, Gap Selling e funil de dor: desenho de perguntas, mapeamento de situação atual e desejada, quantificação do gap e estrutura da conversa, sem fabricar urgência.  
   `skills/discovery-call-coaching/SKILL.md`
 - **sales-objection-handling** — Tratar objeções comerciais e conduzir o fechamento sem confronto, usando validação, deslocamento e recondução estruturada da conversa.
+- **sales-pipeline-diagnostics** — Diagnosticar a saúde de um funil comercial por etapa: volume, conversão, velocidade, tempo parado, cobertura e qualidade dos negócios, com previsão em faixas e sinalização explícita de qualidade dos dados, sem benchmarks inventados.  
+  `skills/sales-pipeline-diagnostics/SKILL.md`
 - **scroll-storytelling** — Projetar experiências narrativas guiadas por scroll com estágios, pinning, parallax, transições e sincronização DOM/WebGL sem sacrificar acessibilidade ou performance.
 - **social-analytics** — Analisar exports de redes sociais para identificar tendências e desempenho sem extrapolar amostras ou métricas indisponíveis.
 - **social-carousel-engineering** — Projetar carrosséis sociais como narrativa slide a slide, do hook ao CTA, preservando marca, densidade legível, continuidade visual, editabilidade e QA de exportação sem prometer engajamento.
@@ -342,6 +352,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **to-spec** — Converter decisões de uma conversa ou projeto em especificação executável sem reiniciar descoberta já resolvida.
 - **to-tickets** — Decompor specs e planos em tickets verticais pequenos, demonstráveis e com dependências e critérios de aceitação explícitos.
 - **typographic-composition** — Projetar tipografia expressiva e legível em layouts, títulos e peças visuais usando hierarquia, ritmo, line breaks, spacing e forma das palavras sem confundir composição com engenharia de fontes.
+- **training-program-design** — Desenhar, avaliar e melhorar programas de treinamento corporativo: diagnóstico de necessidade, objetivos mensuráveis, trilha e formato, formação de multiplicadores (train the trainer) e avaliação em quatro níveis (Kirkpatrick) ligada a resultado de negócio.  
+  `skills/training-program-design/SKILL.md`
 - **ui-ux-catalog** — Consultar o catálogo UI UX Pro Max para selecionar paletas, tipografia e padrões de interface, verificando pertinência e preservando decisões de design existentes.
 - **value-investing-company-analysis** — Analisar empresas por fundamentos e value investing com dados atuais, cenários de valuation e riscos que podem invalidar a tese.
 - **verify-before-claim** — Verificar afirmações consequenciais de conclusão, correção ou publicação com evidência fresca do escopo afirmado.
