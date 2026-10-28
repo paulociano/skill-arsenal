@@ -312,6 +312,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **saas-pricing-monetization** — Projetar e revisar pricing e monetização de SaaS, APIs e produtos de IA conectando valor, packaging, value metric, usage/credits, entitlements, willingness-to-pay, economics, rollout e aprendizado sem confundir billing infrastructure com estratégia.
 - **scenario-forecasting** — Construir forecasts e cenários com baseline, backtesting, intervalos, premissas e gatilhos de atualização sem transformar projeção em certeza.
 - **scientific-hypothesis-discovery** — Gerar, verificar, comparar e evoluir hipóteses científicas em ciclos rastreáveis, mantendo grounding, hipóteses rivais, deduplicação, evidência acumulada e limites explícitos entre descoberta assistida e prova científica.
+- **discovery-call-coaching** — Preparar e treinar ligações e reuniões de descoberta comercial com SPIN, Gap Selling e funil de dor: desenho de perguntas, mapeamento de situação atual e desejada, quantificação do gap e estrutura da conversa, sem fabricar urgência.  
+  `skills/discovery-call-coaching/SKILL.md`
 - **sales-objection-handling** — Tratar objeções comerciais e conduzir o fechamento sem confronto, usando validação, deslocamento e recondução estruturada da conversa.
 - **scroll-storytelling** — Projetar experiências narrativas guiadas por scroll com estágios, pinning, parallax, transições e sincronização DOM/WebGL sem sacrificar acessibilidade ou performance.
 - **social-analytics** — Analisar exports de redes sociais para identificar tendências e desempenho sem extrapolar amostras ou métricas indisponíveis.
