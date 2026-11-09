@@ -101,3 +101,22 @@ Referência metodológica: https://github.com/sandeco/mira-animator (PolyForm No
 Para apresentações portáveis em HTML, distinguir página de playback de **documento autocontido com editor e esquema de dados**. Quando requerido, armazenar slides, IDs estáveis, estados, gráficos, fontes e mídia com manifesto/versionamento e validar round-trip: editar dados estruturados → renderizar → salvar arquivo → reabrir → editar novamente. Identificadores compartilhados podem coordenar transições morph, mas requerem continuidade semântica e checks de colisões. Preferir fallback de download quando a File System Access API não existe. Colaboração em arquivo com chave embutida exige explicar que posse do arquivo pode equivaler a acesso e não assumir identidade autenticada; testar merge, conflitos e modo offline real. Atualizações assinadas e CRDT são alegações/implementações externas, não capacidades automaticamente herdadas por um HTML gerado aqui.
 
 Fonte: https://github.com/nyblnet/bento . A publicação de HTML autocontido deve ser verificada no browser; aplicativo Bento não foi instalado.
+
+## Deck HTML de arquivo único com descoberta visual de estilo (frontend-slides, 2026-11-09)
+
+Para decks HTML feitos para pessoas sem repertório de design (pitch, aula, palestra, conversão de PPTX):
+
+1. **Uma rodada de perguntas, todas juntas:** finalidade, tamanho aproximado, se o conteúdo já existe e a **densidade** — *falado* (uma ideia por slide, tipo grande, 1–3 bullets, mais slides) ou *de leitura* (slides autossuficientes, grades, tabelas, 4–8 bullets). Em dúvida, plateia ao vivo puxa para falado; circulação assíncrona puxa para leitura. Se o conteúdo excede a densidade, dividir em mais slides em vez de encolher.
+2. **Imagens antes do roteiro:** inspecionar cada imagem fornecida (o que mostra, utilizável ou não, que conceito representa, cores dominantes) e desenhar o roteiro em volta delas (3 telas → 3 slides de feature; logo → abertura e fechamento), confirmando com o usuário.
+3. **Mostrar em vez de perguntar o gosto:** gerar **três prévias reais** do primeiro slide (uma segura, uma ousada, uma curinga desenhada para o contexto), com o logo do usuário quando houver, e deixar escolher ou misturar. **Prévias precisam parecer slides de verdade:** nunca escrever no slide "opção A", nome de template, "seguro/ousado", caminhos de arquivo ou anotações do pedido; só elementos reais do deck (título, seção, data, autor).
+4. **Palco fixo 16:9:** autorar cada slide num palco de 1920×1080 escalado por inteiro para a viewport (com faixas laterais se preciso), sem breakpoints que reorganizem o conteúdo no celular. Trocar slides por `visibility`/`opacity`/`pointer-events`, não por `display: none`, que conflita com classes de layout. Lembrar que `-clamp()`, `-min()` e `-max()` são ignorados silenciosamente: usar `calc(-1 * clamp(...))`. Respeitar `prefers-reduced-motion`. Reflow responsivo só quando o "deck" for na verdade uma página de leitura.
+5. **Arquivo único:** HTML com CSS/JS inline, fontes de Google Fonts ou Fontshare (nunca as do sistema), cores e tipografia em variáveis CSS, seções comentadas; edição de texto inline como recurso padrão depois do primeiro rascunho, sem perguntar antes.
+6. **Ao editar um deck existente:** contar o que já há no slide antes de adicionar; imagem nova num slide cheio vai para um slide novo; acima de 4–6 bullets, criar slide de continuação; reorganizar proativamente e avisar.
+7. **Verificar no render:** sobreposição de painéis e texto estourando o card, em screenshots a 1280×720 e numa viewport de celular. Checar só `scrollHeight` não basta: painéis de grade podem se cobrir sem gerar rolagem.
+8. **Conversão de PPTX:** extrair textos, imagens, ordem e notas do apresentador; confirmar o inventário com o usuário; escolher o estilo pelo passo 3; preservar todo o conteúdo e as notas (como comentários HTML).
+9. **Publicar ou exportar só se o usuário pedir**, depois da entrega.
+
+Quando o ambiente oferecer um tipo nativo de apresentação editável (ex.: artifact de Slides), ele tem preferência para decks que serão editados ou exportados para PPTX; este padrão serve quando a entrega é um HTML autocontido.
+
+Fonte: [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides) (MIT, commit `9906a34`). Absorção metodológica, sem o template pack, os scripts de deploy (Vercel) e PDF nem a dependência de `python-pptx`.
+
