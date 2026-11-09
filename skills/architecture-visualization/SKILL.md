@@ -110,6 +110,17 @@ Quando o objetivo incluir comunicação editorial, documentação executiva ou u
 
 Essa disciplina é complementar à rastreabilidade técnica. Um diagrama bonito que inventa relações continua incorreto; um diagrama tecnicamente correto mas ilegível ainda não está pronto.
 
+## Diagramas de stack com logos oficiais (stack-diagram, 2026-11-09)
+
+Quando o pedido for um diagrama de stack/infra "estilo nuvem" com logos das tecnologias, ler [references/branded-stack-diagrams.md](references/branded-stack-diagrams.md). Regras centrais:
+
+- três tipos de aresta: fluxo principal em cor de destaque, interno neutro, dev/deploy tracejado;
+- logos oficiais e **nunca recoloridos** (logo claro vai em tile escuro); conceitos sem marca ganham pictograma, nunca texto ou emoji;
+- AWS, Google Cloud e Azure com o pacote oficial de ícones do fornecedor e suas regras de agrupamento (sub-redes públicas/privadas na AWS; região dentro da VPC no Google; VNet dentro da região no Azure), aplicadas só dentro da área do fornecedor;
+- **um nó é o tile mais o texto abaixo**: arestas verticais saem da base da caixa do nó, nunca atravessam o nome;
+- HTML autocontido como fonte única, PNG por screenshot em tema claro e escuro, revisão olhando o render;
+- antes de publicar, remover hostnames, IPs e nomes internos e confirmar o conteúdo exato com o usuário.
+
 ## Atlas / twin view pattern
 
 Quando arquitetura precisa ser explorável e durável:
@@ -144,6 +155,8 @@ Layout relativo e posição como parte da linguagem visual: [reladraw/reladraw](
 Disciplina editorial, seleção de gramática, orçamento de complexidade, static-first e mapeamento de marca por papéis semânticos adaptados de [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design), sem instalar plugins, executar scripts ou depender de seus comandos específicos de Claude Code/Codex.
 
 inkboard/system-atlas acrescentou source spec único → interactive atlas + generated SYSTEM.md, progressive disclosure e question tracking por ID. Qiuner/birdview acrescentou architecture + reviewed constraints + declared change scope + coverage + verification no mesmo viewer. coldteadotai/pr-lens acrescentou blast radius visual de PR, data-flow/payload views e walkthroughs de mudança. O Arsenal absorve os padrões sem exigir seus renderers.
+
+[caru-ini/stack-diagram](https://github.com/caru-ini/stack-diagram) (MIT, 2026-11-09) acrescentou política de logos oficiais, ícones e regras de agrupamento de AWS/Google Cloud/Azure, geometria nó = tile + texto e checagem de corredores, HTML como fonte única com renders claro/escuro e o gate de privacidade antes de publicar, sem exigir seus scripts, template ou galeria.
 
 Origem local: [architecture-visualization.docx](../architecture-visualization.docx).
 
