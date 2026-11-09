@@ -190,3 +190,24 @@ Para execuções que exigem auditoria/debrief, retornar recibo compacto com defi
 No debrief, separar falha de desenho do loop, decisão de execução, ambiente/ferramenta e mudança de objetivo. Uma execução só sustenta conclusão sobre aquele caso. Alterar apenas o elemento cuja relação com a falha é sustentada por evidência; não enfraquecer verificador para transformar falha em sucesso.
 
 Adaptado de [Forward-Future/loopy](https://github.com/Forward-Future/loopy), sem instalação, catálogo obrigatório ou publicação externa. Manter os limites finitos e autorizações reais deste Arsenal.
+
+## Catálogo de condições de parada (claude-code-templates, 2026-11-09)
+
+Ao desenhar um loop, escolher explicitamente o tipo de parada; "até ficar bom" não é condição.
+
+| Padrão | Para quando | Uso típico |
+|---|---|---|
+| **Contrato de conclusão** | cada requisito de um contrato escrito *antes* do trabalho tem evidência verificável (teste, saída, diff) | qualquer loop cujo "pronto" seria discutível depois |
+| **Anti-spin** | o contrato passa **ou** um guarda dispara: rodadas sem progresso mensurável, abordagem repetida, ida e volta entre duas soluções, orçamento estourado | builds e correções autônomas |
+| **Sequência de qualidade** | a bateria de cenários passa N vezes **seguidas** (ex.: 5) sem falha nem regressão | fluxos instáveis ou com flakiness |
+| **Construtor + revisor** | um revisor independente (de preferência outro modelo) não tem achados bloqueantes **e** os testes passam | mudanças que vão para produção |
+| **Advogado do diabo** | toda objeção séria foi corrigida ou aceita conscientemente com justificativa registrada | decisões de design e arquitetura |
+| **Aprovação humana** | o usuário aprova, pede revisão ou pula; nada é publicado sem decisão explícita | qualquer ação irreversível ou externa |
+| **Refinador de objetivo** | o estado final verificável do objetivo reescrito é alcançado, ou o limite de rodadas/orçamento estoura | pedidos vagos: reescrever antes com estado final, como verificar, o que não tocar e a condição de parada |
+| **Manutenção incremental** | a sessão termina ou não resta melhoria segura de baixo risco | uma mudança pequena e verificada por rodada, um commit cada |
+| **Orçamento de desempenho** | a métrica cumpre o orçamento em execuções repetidas, sem regressão funcional | otimização (ver checklist de números medidos em `verify-before-claim`) |
+
+Itens que dependem de julgamento humano ou de dados ambíguos saem do loop marcados para revisão, em vez de forçar uma decisão.
+
+Fonte: catálogo `cli-tool/components/loops` de [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) (MIT, 18 loops, 2026-11-09). Absorvidas só as condições de parada; hooks, comandos e notificações referenciados pelos loops não foram importados.
+
