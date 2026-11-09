@@ -128,6 +128,16 @@ Origem: metodologias analisadas individualmente em `MengTo/Skills/agent-skills/w
 
 Quando o pedido de animação for vago, identificar um efeito por nome, amostra visual e função antes de selecionar código. Descrever sujeito, câmera versus zoom, eixo, direção, amplitude, duração, easing, stagger e interrupção. Usar demonstração apenas como referência, não equivalência garantida. Adaptar ao projeto e verificar acessibilidade, reduced motion, layout, responsividade e mudanças de estado. Escolher poucos efeitos com propósito. Fonte: https://github.com/showheyohtaki/motion-prompt (2026-10-18); galeria e skill Node permanecem externas.
 
+## Reconstrução de motion a partir de referência (reanimate, 2026-11-09)
+
+Quando o usuário apontar uma animação de outro site, vídeo, GIF ou Lottie e pedir "igual a essa", ler [references/reference-motion-reconstruction.md](references/reference-motion-reconstruction.md). Núcleo do método:
+
+1. **Declarar a fidelidade** antes de começar: movimento (padrão, ±80 ms, mesma família de easing), pixel (≤ 2 % de divergência) ou misto (clone + adições separadas).
+2. **Capturar referência e clone nas mesmas condições** (viewport, recorte, gatilho, duração, fps); em canvas/WebGL, relógio virtual com aleatório semeado.
+3. **Escrever a especificação de movimento**: uma linha por elemento por propriedade, com números tirados das animações declaradas, de curvas medidas ou da leitura de todos os quadros; nenhuma linha com "?".
+4. **Rodadas de verificação** comparando tempos, curvas e pixels, corrigindo uma causa por vez; parar quando tudo passar ou após 5 rodadas sem progresso, reportando os residuais com números. Nunca afrouxar o limite em silêncio.
+5. **Direitos:** clonar o movimento, não os assets, fontes, shaders ou código de terceiros.
+
 ## React View Transitions: continuidade espacial (Vercel, 2026-10-19)
 
 Em projetos React/Next.js que suportem a API na versão realmente instalada, considerar View Transitions nativas antes de introduzir uma nova biblioteca de animação. Usar somente para comunicar continuidade, não como padrão decorativo de toda navegação:
