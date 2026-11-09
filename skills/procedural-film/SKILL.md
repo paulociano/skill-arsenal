@@ -1,6 +1,6 @@
 ---
 name: procedural-film
-description: "Criar curtas verticais animados proceduralmente com Canvas/Web Audio, storyboard em beat grid, render determinístico e revisão quadro a quadro."
+description: "Criar curtas animados por código (Canvas/HTML/Web Audio) — inclusive filmes de lançamento de produto — com direção a partir do produto real, três direções, tratamento em beat grid, render determinístico e revisão quadro a quadro."
 ---
 
 # procedural-film
@@ -117,6 +117,18 @@ Quando o filme é de um produto digital existente, a autoridade visual deve ser 
 - manter versões de render e verificar os deliverables finais pelo arquivo decodificado quando a pipeline suportar;
 - em landing loops, garantir compreensão sem áudio e testar seamless loop quando esse for o contrato.
 
+### Direção de filme de lançamento (huashu-motion, 2026-11-09)
+
+Para vídeo de lançamento, explainer ou vinheta de produto, ler [references/launch-film-direction.md](references/launch-film-direction.md) antes do storyboard. Resumo do método:
+
+1. **Ler o produto e juntar material real** (logo original, telas, cores, fontes, números com fonte) antes de perguntar; perguntar numa só mensagem com defaults escritos e sempre fechar a narração.
+2. **Forma da mensagem → linguagem** (afirmação, fluxo, mecanismo, evidência, lista, transformação, história, showcase) e **personalidade em cinco eixos**, resumida numa frase que vira o brief.
+3. **Três direções** diferentes em linguagem ou material (encaixe, amplificar, inesperada; exatamente uma em profundidade), cada uma com um quadro-chave real e cartão com paleta tirada do produto.
+4. **Tratamento antes do build:** folha de ritmo (rota contínua/montagem/híbrida, gancho em até 3 s, rajada entre 30–60 %), mapa de batidas, quatro stills e cadeia de continuidade.
+5. **Construir o plano mais difícil primeiro**, revisar em velocidade normal escrevendo as três notas de um diretor exigente, e só então mostrar.
+6. **Ajustes por apontamento** com mudança mínima no ponto e tempo indicados.
+7. **Registrar aprendizado** separando preferência do usuário, observado e verificado.
+
 ## Gates mínimos
 
 Antes de concluir, verificar conforme o runtime permitir:
@@ -152,3 +164,5 @@ Adaptada de [kuhnhomeuk-cell/procedural-film](https://github.com/kuhnhomeuk-cell
 Brand-first discovery, product claims, componentes reais e verificação de deliverables adaptados de [Rieranthony/product-film-skill](https://github.com/Rieranthony/product-film-skill), sem exigir Remotion, Bun, uv ou seus scripts locais.
 
 Determinismo visual, pure-frame contract e craft bar reforçados por [alexgreensh/anidoodle](https://github.com/alexgreensh/anidoodle), sem importar sua engine, estilos ou tooling.
+
+Direção de filme de lançamento (forma da mensagem, personalidade, três direções, tratamento, regras de gosto, revisão, ajustes por apontamento e aprendizado entre filmes) adaptada de [alchaincyf/huashu-motion](https://github.com/alchaincyf/huashu-motion) (MIT, v0.3.1), sem o CLI `om`, o estúdio, a assinatura "Made with huashu-motion" nem a checagem automática de versão.

@@ -280,7 +280,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **project-complexity-management** — Diagnosticar focos de complexidade técnica, organizacional e externa e definir intervenções proporcionais às evidências.
 - **project-health-review** — Revisar saúde de projetos por evidências de entrega, marcos, dependências, bloqueios, riscos, aging e próximas ações sem esconder incerteza em uma nota única.
 - **project-planning** — Transformar objetivos em plano executável com outcomes, workstreams, marcos, dependências, caminho crítico, capacidade, riscos e critérios de conclusão sem falsa precisão.
-- **procedural-film** — Criar curtas verticais animados proceduralmente com Canvas/Web Audio, storyboard em beat grid, render determinístico e revisão quadro a quadro.
+- **procedural-film** — Criar curtas animados por código (Canvas/HTML/Web Audio) — inclusive filmes de lançamento de produto — com direção a partir do produto real, três direções, tratamento em beat grid, render determinístico e revisão quadro a quadro.
 - **pwa-engineering** — Projetar, revisar e validar Progressive Web Apps por installability, manifest, service worker, caching, offline/update lifecycle, storage, resiliência, performance e experiência de instalação sem confundir PWA com um score ou framework.
 - **progressive-delivery-verification** — Planejar e verificar exposição progressiva de releases com canary, blue/green, cohorts, feature flags, métricas, acceptance tests, promotion/abort gates e blast radius controlado sem confundir deploy com sucesso.
 - **production-go-live** — Planejar e executar a ida de uma aplicação para produção com inventário de dependências, approval gates, verificação, handoff, drift check e teardown seguro.
