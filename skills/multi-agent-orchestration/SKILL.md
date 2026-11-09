@@ -124,3 +124,16 @@ Referência técnica: https://github.com/mattpocock/sandcastle (README e package
 Para cada unidade de trabalho distribuído, quando o runtime suportar, registrar task_id, owner, input_ref, output_ref, policy_version, attempt, lease/expiry, state e verification_ref. Separar atribuição/observabilidade da execução efetiva. Timeout ou lease expirada não prova ausência de efeito: reconciliar destino e artefatos antes de retry, com idempotency key para ações repetíveis. Não promover worker done a completed-verified sem integração e checagem do resultado final. Avaliar throughput, retrabalho, colisões de ownership, custo e latência contra execução sequencial. Consoles, hooks, MCP e swarms de Ruflo exigem runtime instalado e não podem ser simulados por personas.
 
 Fonte: https://github.com/ruvnet/ruflo . Adaptação metodológica, não integração instalada.
+
+## Arena: N candidatos para o mesmo brief (2026-11-09)
+
+Quando um design ou implementação tem mais de uma forma defensável e a primeira tentativa travaria a forma errada (estratégia de migração, superfície de API, estrutura de dados), e somente quando o usuário pedir comparação de abordagens. Nunca como gate padrão; não usar em edições mecânicas.
+
+1. **Enquadrar:** o brief é o contrato e é igual para todos. Definir o artefato e uma **rubrica de 3–6 critérios avaliáveis**, que os candidatos não veem.
+2. **Abrir em paralelo:** cada candidato com local de saída exclusivo (worktree ou pasta), devolvendo o artefato e uma justificativa com as alternativas que rejeitou. Usar modelos diferentes quando o trabalho depende de julgamento; o mesmo modelo N vezes quando depende de geração. Manter no mínimo dois candidatos válidos.
+3. **Juiz cruzado:** um avaliador somente leitura, de preferência de outra família de modelo, pontua cada critério e recomenda uma base. Se não houver modelo de outra família, dizer isso.
+4. **Escolher critério a critério**, lendo cada candidato inteiro, e comparar com o juiz; discordância indica viés ou rubrica ambígua. Desempate pela API menor e fronteira mais limpa.
+5. **Enxertar** à mão uma ou duas coisas dos perdedores, mantendo um único modelo mental. Convergência entre candidatos é sinal forte; divergência grande indica brief subespecificado: reformular e rodar de novo em vez de fazer média.
+6. **Verificar** o artefato sintetizado com evidência fresca. O resultado pertence à sessão líder; saídas de candidatos e juiz são insumos, não veredito.
+
+Fonte: [Yeachan-Heo/oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) (MIT, v5.8.2, 2026-11-09), skill `arena`, port de pstack (Lauren Tan, cursor/plugins). Absorção metodológica, sem os caminhos `.omc/`, o CLI `omc` nem hooks.

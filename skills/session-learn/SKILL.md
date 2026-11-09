@@ -151,3 +151,18 @@ Ao capturar uma correção como candidata a aprendizado:
 
 **Aceite:** duas correções equivalentes geram uma proposta; instrução “neste relatório” não vira preferência global. Rejeição de SHA leva à releitura e merge do delta, não retry cego.
 **Proveniência:** https://github.com/BayramAnnakov/claude-reflect/tree/main/mod (README, 2026-10-21). A fonte documenta risco de perda em saves simultâneos; a adaptação exige controle de concorrência sem presumir hooks ou autoaprendizagem nativos.
+
+## Escada de enforcement para erros recorrentes (2026-11-09)
+
+Instrução em texto decai; estrutura se repete. Quando a mesma classe de erro aparecer duas vezes ou mais:
+
+1. **Coletar** evidências (notas da sessão, revisões, commits de correção) e agrupar por causa raiz, não por sintoma.
+2. **Ranquear** por frequência × custo e tratar um erro por vez.
+3. **Escolher o nível mais alto que funcione:** (1) regra de linter ou erro de compilação; (2) guarda de tipo; (3) checagem em runtime/asserção na fronteira; (4) script ou codemod que torna a ação certa um comando; (5) texto de skill ou instrução — último recurso, registrando por que os níveis acima falharam.
+4. **Implementar com rota de exceção documentada** para casos legítimos.
+5. **Provar que dispara:** reproduzir o erro de propósito e mostrar o enforcement pegando, com saída real. Enforcement nunca visto disparar é hipótese.
+6. **Registrar o veredito que a reprodução sustenta**, nunca um mais forte. Nunca enfraquecer um enforcement para um teste passar.
+
+Fora de código, o mesmo princípio vale: preferir checklist obrigatório, template ou validação automática a mais uma frase na instrução.
+
+Fonte: [Yeachan-Heo/oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) (MIT, v5.8.2, 2026-11-09), skill `correct`, port de pstack (Lauren Tan, cursor/plugins). Absorção metodológica, sem os caminhos `.omc/`, o CLI `omc` nem hooks.

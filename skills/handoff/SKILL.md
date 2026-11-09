@@ -95,3 +95,18 @@ Documento avaliado: **The 7 ChatGPT Work Skills I Use Every Day — Copy-and-Pas
 Metodologia adicional adaptada de [tamaratran/fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction), preservando o princípio de retenção seletiva sem depender de Jev ou hooks do Claude Code.
 
 Origem local: [handoff.docx](../handoff.docx).
+
+## Trilha de decisões para trabalho autônomo (2026-11-09)
+
+Em trabalho longo, autônomo ou que o usuário vai auditar depois de voltar, a resposta final não é o registro; a trilha é. Manter um arquivo **append-only** (TSV ou tabela) com uma linha por decisão não óbvia, escrita **no momento da decisão**:
+
+`data/hora | tarefa | decisão (uma frase) | alternativas rejeitadas e por quê | evidência decisiva`
+
+- "Nenhuma alternativa considerada" é uma entrada válida e reveladora.
+- Passos mecânicos não entram; escolhas de julgamento, mudanças de escopo e riscos aceitos entram.
+- Trilha reconstruída no fim é ficção com data.
+- Células que começam com `=`, `+`, `-` ou `@` recebem `'` na frente para planilhas não interpretarem como fórmula; tabs e quebras de linha viram espaço.
+- Com várias sessões no mesmo arquivo, usar lock na escrita para não duplicar cabeçalho nem perder linhas.
+- A resposta final resume a trilha e aponta para ela; quando o registro precisa ser imutável, citar as linhas decisivas no PR ou no documento de entrega.
+
+Fonte: [Yeachan-Heo/oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) (MIT, v5.8.2, 2026-11-09), skill `show-me-your-work`, port de pstack (Lauren Tan, cursor/plugins). Absorção metodológica, sem os caminhos `.omc/`, o CLI `omc` nem hooks.

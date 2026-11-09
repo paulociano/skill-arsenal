@@ -75,3 +75,17 @@ Para mudanças de código materiais, pode encadear `code-review`. Consenso entre
 Adaptada de Mark393295827/third-brain-v7-skills · verify-before-claim (V8.1).
 
 Origem local: [verify-before-claim.docx](../verify-before-claim.docx).
+
+## Números medidos antes de reportar (2026-11-09)
+
+Antes de afirmar, registrar em commit/PR ou decidir com base num número medido (ganho de velocidade, regressão, throughput, latência, score de avaliação):
+
+1. **Nomear o limitante** antes de medir (CPU, contenção, I/O, rede, cache frio, o próprio harness). Melhoria numa métrica que o limitante não governa é ruído. Sem limitante plausível, o número fica "não explicado".
+2. **Medir o trabalho afirmado:** mesmas entradas e escala da afirmação, aquecimento até estado estável, cache frio ou quente declarado, caminho medido incluindo o código alterado de ponta a ponta. Microbenchmark que pula a integração não sustenta afirmação sobre o sistema.
+3. **Repetir e reportar variância:** pelo menos cinco execuções; reportar mediana e dispersão, nunca a melhor execução. Efeito menor que a variação entre execuções = "sem mudança mensurável".
+4. **Descartar o observador:** confirmar que a ferramenta mediu o trabalho (perfil cita a função, cronômetro em volta do trecho real, contadores que se mexeram); checagem que falha precisa falhar pelo motivo previsto.
+5. **Rotular:** cada número na mesma frase com sua evidência e o rótulo medido / inferido / palpite, mais máquina, build e escala de dados.
+
+Se algum passo falhar, reportar o que foi de fato estabelecido, não a afirmação desejada.
+
+Fonte: [Yeachan-Heo/oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) (MIT, v5.8.2, 2026-11-09), skill `benchmark-checklist`, port de pstack (Lauren Tan, cursor/plugins). Absorção metodológica, sem os caminhos `.omc/`, o CLI `omc` nem hooks.

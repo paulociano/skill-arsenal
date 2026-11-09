@@ -212,3 +212,18 @@ Para reconstrução, criar fixture/reprodutor mínimo e localizar a primeira div
 
 **Aceite:** string isolada não comprova cadeia de chamadas; dump não aberto por consumidor continua não validado. Código-fonte completo com pergunta simples permanece no walkthrough convencional.
 **Proveniência:** https://github.com/manyuegong33/r0crawl_skills/blob/main/SKILL.md e skills/reconstruction-and-parity/SKILL.md (2026-10-21). Absorção metodológica; sem importar módulos de evasão, hooks, anti-cheat, scripts ou presumir Frida/IDA/Ghidra.
+
+## Por que o código é assim: arqueologia com rótulos de evidência (2026-11-09)
+
+Para "por que isso foi feito assim", "por que isso existe" ou "temos certeza sobre Z" antes de apostar trabalho nisso. A entrega é uma resposta citada, não uma correção.
+
+Fontes, em ordem de autoridade:
+
+1. **Decisões humanas** citadas literalmente com autoria (mensagem de commit, comentário de issue, revisão de PR, conversa). Nunca parafrasear uma decisão; interpretação do agente é marcada como interpretação; original ausente é marcado como ausente.
+2. **Arqueologia de código:** `git log --follow`, `git log -S`, blame nas linhas decisivas e o diff que as introduziu, nomeando o commit e o problema que sua mensagem diz resolver.
+3. **Registros ligados:** issues e PRs referenciados (critérios de aceite e alternativas rejeitadas costumam estar lá).
+4. **Incidentes e observabilidade**, pelas ferramentas disponíveis; se faltar credencial, dizer e seguir.
+
+Método: declarar a pergunta e o que contaria como resposta; em conflito, a fonte mais autoritativa vence e o conflito é reportado; escrever em três camadas rotuladas — **evidência** (citada), **inferência** (marcada), **palpite** (marcado) — e terminar com a ação que a resposta mais sustenta, ou "nenhuma ação". Ausência de registro é "nenhum registro encontrado", nunca "não havia motivo". Esta investigação não edita código.
+
+Fonte: [Yeachan-Heo/oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) (MIT, v5.8.2, 2026-11-09), skill `why`, port de pstack (Lauren Tan, cursor/plugins). Absorção metodológica, sem os caminhos `.omc/`, o CLI `omc` nem hooks.
