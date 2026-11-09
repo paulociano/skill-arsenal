@@ -31,6 +31,21 @@ Partir de pesquisa, documentos, dados ou material bruto e chegar a uma apresenta
 11. **Critic pass** — em decks relevantes, fazer uma revisão independente ou fresh-eyes proporcional ao risco depois do primeiro render; priorizar poucos findings de alto impacto e reconstruir o necessário.
 12. **Verify** — conferir dados, claims, fontes, períodos, consistência narrativa e entregáveis antes de afirmar conclusão.
 
+## Contrato de entregas por etapa
+
+| Etapa | Entrega esperada | Depende de | Verificação |
+|---|---|---|---|
+| 1. Frame | Brief de uma tela: audiência, decisão, duração, densidade, formato | — | Usuário confirma ou ajusta |
+| 2. Evidence | Ledger de claims/números com fonte, período e lacunas marcadas | 1 | Todo número do deck tem linha no ledger |
+| 3. Story | Tese + lista de slides com uma frase-mensagem cada | 1, 2 | Cada slide tem função; nenhum existe só para contagem |
+| 4. Design contract | Direção visual, ritmo, densidade e famílias de componentes | 3 | Template/referência respeitados quando houver |
+| 5–7. Rotas especializadas | Cenas, dashboard ou figuras apenas onde a Story pedir | 3, 4 | Rota usada só quando acionada |
+| 8. Build | Deck gerado a partir de fonte regenerável | 2–7 | Arquivo abre sem erro |
+| 9–11. QA | Lista de findings priorizada e rodada de correção | 8 | Render ou inspeção real realizada |
+| 12. Verify | Deck final + confirmação de dados, claims e fontes | 2, 11 | Ledger e deck batem |
+
+Padrão de contrato adaptado de crewAIInc/crewAI (avaliação 2026-11-09).
+
 ## Contrato para dashboards em slides
 
 Para decks executivos, business reviews, board decks e relatórios recorrentes:

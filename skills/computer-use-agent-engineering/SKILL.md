@@ -159,6 +159,19 @@ Perfis separados por browser worker, domain allowlists e composição de subagen
 
 Consolidada de [trycua/cua](https://github.com/trycua/cua), [simular-ai/Agent-S](https://github.com/simular-ai/Agent-S), [bytedance/UI-TARS-desktop](https://github.com/bytedance/UI-TARS-desktop), [microsoft/OmniParser](https://github.com/microsoft/OmniParser), [browser-use/browser-use](https://github.com/browser-use/browser-use) e [browserbase/stagehand](https://github.com/browserbase/stagehand). Preserva grounding, action-space, isolation, trajectories e evaluation sem exigir seus drivers, modelos, sandboxes ou clouds.
 
+Reavaliação 2026-11-09: `bytedance/UI-TARS-desktop` foi **arquivado** (read-only) em 2026-11-09 e segue apenas como referência de método; não adotar seu runtime. Agent S continua exigindo um grounding model separado (UI-TARS-1.5) e executa código Python para controlar a máquina. Detalhes em `evaluations/2026-11-09-thirteen-agent-automation-repositories.md`.
+
+## Escolha de runtime e higiene de fontes (2026-11-09)
+
+Antes de adotar um runtime externo de agente de computador ou navegador:
+
+1. **Preferir o que já é nativo e supervisionado.** Computer use nativo e extensão de navegador com aprovação por ação cobrem tarefas pontuais; runtime externo só entra quando houver ganho comprovado (execução recorrente, desassistida ou em lote).
+2. **Rotear pela natureza da tarefa.** Rotina web recorrente sem código, com login/2FA e download → workflow RPA visual (ex.: Skyvern). Automação dentro de um projeto de código, com extração tipada → SDK com `observe/act/extract` (ex.: Stagehand). Tarefa pontual → ferramenta nativa.
+3. **Checar manutenção.** Repositório arquivado, sem release recente ou mantido por uma pessoa não deve controlar máquina com dados reais.
+4. **Checar onde a sessão roda.** Operadores "remotos" ou "gratuitos" em infraestrutura do fornecedor expõem telas, cookies e dados exibidos; para dados de clientes, exigir execução local ou em ambiente controlado.
+5. **Checar telemetria e custos ocultos.** Telemetria ligada por padrão, grounding model hospedado pago, proxies anti-bot só na versão cloud.
+6. **Credenciais fora do modelo.** Usar observação para obter seletores e preencher segredos por código ou cofre; o modelo nunca recebe a senha.
+
 ## Superfícies virtuais para agentes visuais (yomado)
 
 Em desktop nativo, display virtual só deve ser considerado após verificar SO, permissões, ferramenta de screenshot/input real e janelas selecionadas. Dar nome ao workspace, registrar estado/geometria original e demonstrar screenshot fresco mais ação concreta antes de avançar. Display na mesma sessão não isola foco, teclado, mouse, clipboard, filesystem nem contas. Coordenar interferência com humano/outros agentes e restaurar janelas ao terminar, inclusive falhas. Testar separadamente fechamento, múltiplos displays e monitor desligado; uma demo limitada não prova estabilidade desassistida. Fonte: https://github.com/chekusu/yomado (2026-10-18), protótipo macOS com APIs privadas, não presente neste runtime.

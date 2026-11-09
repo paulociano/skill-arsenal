@@ -119,6 +119,8 @@ Use:
 
 A stack deve ter frontmatter com `name` e `description`, workflow claro, skills candidatas e regra de parcimônia.
 
+Cada etapa do workflow deve declarar sua **entrega esperada** (o que sai da etapa e como se verifica) e de quais etapas depende. Stacks existentes ganham esse contrato quando forem editadas; não é preciso reescrever todas de uma vez. Padrão adaptado de crewAIInc/crewAI (`expected_output` e `context` por tarefa), sem personas ornamentais.
+
 Não transforme toda combinação ocasional de skills em stack.
 
 ## Atualização local
