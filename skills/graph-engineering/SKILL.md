@@ -35,6 +35,7 @@ Somente quando dependências reais e paralelismo justificarem a complexidade adi
 
 - usar `loop-engineering` para repetição temporal;
 - usar graph para largura/dependências;
+- grafos de conhecimento (ontologia, extração, resolução de entidades, GraphRAG) ficam em `knowledge-graph-engineering`;
 - evitar ciclos e expansão dinâmica sem runtime explicitamente adequado;
 - falha de um nó não exige retry do grafo inteiro;
 - todos os nós verdes não provam conclusão se o join terminal estiver incompleto;

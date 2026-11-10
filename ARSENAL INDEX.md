@@ -231,6 +231,7 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **job-opportunity-monitoring** — Monitorar vagas ao longo do tempo como um diff de oportunidades, normalizando fontes, detectando novas/fechadas/reabertas, ranqueando fit com critérios explícitos e disparando alertas somente quando há mudança relevante.
 - **jtbd-framing** — Reformular decisões de produto por Jobs-to-be-Done, situações reais, dificuldades e critérios de adoção ou abandono.
 - **kb-retriever** — Responder perguntas em bases documentais grandes por busca progressiva, leitura localizada e citações rastreáveis.
+- **knowledge-graph-engineering** — Projetar, construir e avaliar grafos de conhecimento e GraphRAG a partir de perguntas de competência, com ontologia mínima, extração restrita, resolução de entidades, proveniência e subgrafos com evidência.
 - **landing-craft** — Projetar landing pages como narrativas de scroll com conceito visual, message match, prova, objeções e CTA coerentes.
 - **japanese-functional-communication** — Ensinar japonês orientado a situações reais de vida e trabalho no Japão por Can-do, cenário, linguagem-alvo, compreensão e produção.
 - **japanese-grammar-teaching** — Ensinar gramática japonesa com explicações em português, modelos mentais, exemplos contrastivos e prática aplicada, priorizando função antes de tradução literal.
