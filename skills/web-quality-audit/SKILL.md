@@ -59,7 +59,7 @@ Quando o objetivo incluir WCAG 2.2, acrescentar ao inventário de acessibilidade
 3. Para drag-and-drop, testar alternativa sem gesto de arrastar quando a exceção normativa não for demonstrada.
 4. Exercitar estados error, disabled, loading, diálogos e formulários com nome acessível, instruções e feedback detectável por tecnologia assistiva.
 5. Registrar o número do critério e nível de conformidade ao classificar violações; não afirmar conformidade total com base em Lighthouse, axe ou somente testes automatizados.
-6. Para performance, investigar LCP, INP e CLS com evidência de laboratório ou campo identificada; não inferir Core Web Vitals de um screenshot e não prometer DevTools MCP ausente.
+6. Para performance, investigar LCP, INP e CLS com evidência de laboratório ou campo identificada; não inferir Core Web Vitals de um screenshot e não prometer DevTools MCP ausente. Para LCP, decompor em quatro partes sequenciais antes de otimizar: tempo até o primeiro byte (referência ~40%), atraso para começar a carregar o recurso (<10%), duração do download (~40%) e atraso de renderização (<10%). Atacar a parte desproporcional; comprimir a imagem não adianta se o gargalo é o atraso de renderização, o tempo só migra. Identificar o elemento LCP (imagem ou texto) e conferir na cascata de rede quando o recurso começou em relação ao HTML. Adaptado de `skills/debug-optimize-lcp` em [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) (Apache-2.0), 2026-11-10.
 
 Adaptação metodológica independente baseada em `accessibility` e `web-perf` do registro https://github.com/midudev/autoskills, consultado em 2026-10-11. Não incorpora comandos nem dependências de ferramentas externas.
 
