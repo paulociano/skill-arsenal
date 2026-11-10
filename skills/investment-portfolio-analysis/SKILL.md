@@ -102,6 +102,19 @@ Avaliar portfólios como sistemas de exposição, risco e objetivos, distinguind
 - recomendações reguladas/personalizadas exigem contexto e regras aplicáveis;
 - preservar decisão humana.
 
+## Dados no ponto do tempo, debate e checagem de decisões
+
+Para analisar um ativo numa data passada, testar uma regra ou revisar decisões já tomadas:
+
+1. **Ponto do tempo.** Usar só o que era público na data da análise: demonstrações **como foram arquivadas** naquela data (não a versão reapresentada depois), sem exercício encerrado mas ainda não publicado, e sem cadastro atual da empresa (nome, setor, classificação mudam). Fonte que data pelo período coberto e não pela publicação, ou operação de insider datada pela execução e não pelo registro, fica fora de análise histórica. A decisão entra no primeiro fechamento **depois** da data, se a análise leu notícias do próprio dia.
+2. **Identidade antes da análise.** Resolver ticker → empresa de forma determinística e ancorar preços e indicadores citados num snapshot verificado, para não analisar a empresa errada nem inventar cotação.
+3. **Debate estruturado.** Para tese de compra/venda, construir o melhor caso a favor e o melhor caso contra a partir dos mesmos relatórios, cada um respondendo diretamente aos pontos do outro, com julgamento explícito; depois, a mesma proposta passa por leituras de risco agressiva, neutra e conservadora antes da decisão. Relatório ausente é declarado ausente, não preenchido.
+4. **Carteira real ou genérica.** Sem a posição atual do cliente, escrever a orientação para um leitor genérico; "carteira vazia" é diferente de "carteira não informada".
+5. **Liquidar decisões.** Registrar cada decisão com data, horizonte e nota; quando o horizonte vencer, medir retorno realizado e alfa contra o benchmark do ativo, agrupar por nota e só então avaliar se o processo decide bem. Uma decisão isolada não diz nada sobre a qualidade do processo.
+6. **Variação esperada.** Análise com LLM varia entre execuções (amostragem, notícias que mudam); não apresentar um resultado como reprodutível nem como recomendação.
+
+Adaptado de [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) (Apache-2.0; seções "Fundamentals as filed", "Evaluating decisions over time", "Reproducibility", `dataflows/date_window.py`, `agents/researchers` e `agents/risk_mgmt`), avaliado em 2026-11-10. Não instala o framework nem executa ordens; o próprio projeto declara uso para pesquisa, não recomendação.
+
 ## Integração
 
 `personal-financial-planning`, `financial-modeling-valuation`, `scenario-forecasting`, `evidence-claim-verification` e `dashboard-design`.
