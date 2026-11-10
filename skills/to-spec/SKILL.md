@@ -59,6 +59,14 @@ Quando a implementação nasce diretamente da spec:
 
 Uma constituição ou conjunto de princípios do projeto pode funcionar como gate, mas não deve impor arquitetura genérica que contradiga necessidades reais.
 
+## Gates de qualidade da spec (antes do plano)
+
+Use quando a spec vai alimentar implementação por agente ou por outra pessoa. Pule em specs triviais.
+
+1. **Varredura de ambiguidade com cota.** Classificar cada dimensão como Clear / Partial / Missing: escopo e non-goals, atores e papéis, modelo de dados, fluxos normais, erros e edge cases, requisitos não funcionais (desempenho, segurança, acessibilidade), integrações externas, terminologia e critérios de aceite. Fazer **no máximo 5 perguntas** no total, priorizadas por impacto × incerteza, uma de cada vez, preferindo múltipla escolha com opção recomendada. Gravar cada resposta direto na seção afetada da spec. Itens que excedem a cota ou que são decisão de implementação ficam como Deferred, não como pergunta.
+2. **Checklist como teste unitário dos requisitos.** Por domínio relevante (UX, API, segurança, dados), escrever itens que testam a *redação* da spec, não o código: completude ("todos os estados de erro do formulário estão definidos?"), clareza ("'carregamento rápido' tem número?"), consistência entre seções, mensurabilidade dos critérios de aceite e cobertura de cenários. Item que verifica comportamento do sistema ("o botão funciona?") não pertence a este checklist; vai para testes.
+3. **Análise cruzada somente leitura.** Depois de existirem spec, plano e tarefas: listar requisitos sem tarefa, tarefas sem requisito, termos divergentes, duplicações e conflitos com princípios do projeto, com severidade (CRITICAL / HIGH / MEDIUM / LOW). Não editar durante a análise; propor correções e aplicar só após aprovação. Conflito com princípio do projeto é CRITICAL e se resolve mudando spec/plano/tarefas, ou mudando explicitamente o princípio, nunca ignorando-o.
+
 ## Decisões da especificação
 
 Quando a spec nasce de uma ideia ainda aberta:
