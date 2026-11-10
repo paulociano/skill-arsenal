@@ -117,6 +117,15 @@ Quando o pedido envolver **todas** as skills, não interpretar "cinco experiment
 6. Guardrail global: comparabilidade de métricas por domínio é limitada; agregar cobertura (`measured / total`), `kept`, `reverted`, `blocked` e não um score subjetivo único para todas as skills. Revalidar referências de índice e portabilidade após publicação.
 7. Encerrar informando exatamente quantas skills tiveram baseline real, cinco experimentos completos, holdout executado e publicação verificada. Nunca declarar "todas otimizadas" com amostra ou plano.
 
+## Avaliar um gate, hook ou instrução de controle
+
+Para provar que uma regra que interrompe o agente (gate, hook, checklist obrigatório) melhora o resultado, e não apenas o atrasa:
+- escrever hipóteses e critério de "vale rodar em escala" **antes** do piloto;
+- cenários pequenos com uma armadilha cada, avaliador oculto, solução de referência que precisa passar e solução ingênua que precisa falhar;
+- braços: sem regra, com regra, **placebo** (interrompe nas mesmas chamadas com perguntas genéricas) e **sem a pergunta-alvo** daquela armadilha. Sem o placebo não dá para separar o efeito da pergunta do efeito de só parar;
+- reportar custo (turnos, tokens, tempo) ao lado do efeito, e publicar o resultado qualquer que seja. Se todos os braços passam em tudo, o piloto mediu só o custo: não alegar ganho.
+Desenho adaptado de `docs/gateguard/question-effectiveness.md` em [affaan-m/ECC](https://github.com/affaan-m/ECC) (2026-11-10). O mesmo repositório anuncia "+2,25 pontos" com base em duas tarefas, enquanto seu piloto de 72 sessões não mediu efeito: tratar números de README como alegação, não como prova.
+
 ## Ferramentas e dependências
 
 Usar execuções independentes apenas quando disponíveis e autorizadas; não criar novas tarefas do usuário para simular testes. Sem contexto fresco e execução real, entregar revisão estrutural e não alegar validação empírica. Otimização paga exige orçamento autorizado.

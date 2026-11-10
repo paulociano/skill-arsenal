@@ -57,6 +57,15 @@ Cada passo deve poder falhar sem obrigar a recomeçar do zero.
 
    Recuperar detalhe progressivamente.
 
+   **Fatos antes do primeiro toque em um arquivo** (perguntas concretas, não autoavaliação do tipo "tem certeza?"). Escolher só as que se aplicam ao alvo:
+   - mudança de forma/retorno em função exportada → quem importa o arquivo; mudança dentro de helper privado → chamadas no próprio módulo;
+   - código que lê/escreve dados → amostra real do formato (separador, formato de data, decimal com vírgula), conferida além das primeiras linhas, com valores sintéticos ou mascarados;
+   - helper novo pedido → procurar se já existe um equivalente antes de criar outro;
+   - mudança de regra/valor → testes existentes que fixam o comportamento antigo;
+   - config versionada → segredos ficam como referência (`${NOME}`), nunca em texto;
+   - citar a instrução atual do usuário literalmente.
+   Arquivos sensíveis (`.env*`, chaves, credenciais, `auth`, pagamentos, migrations, workflows de CI) sempre passam por essa checagem. Evidência: o próprio ECC mediu o custo do gate automático (cerca de 45% mais turnos) e, no piloto de 72 sessões, não conseguiu medir efeito; por isso aplicar como checklist proporcional ao risco, não como bloqueio em toda edição. Fonte: `skills/gateguard` e `docs/gateguard/question-effectiveness.md` em [affaan-m/ECC](https://github.com/affaan-m/ECC), 2026-11-10.
+
 3. **Task contract**
    Definir:
    - comportamento esperado;
