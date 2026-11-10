@@ -59,6 +59,8 @@ Quando a implementação nasce diretamente da spec:
 
 Uma constituição ou conjunto de princípios do projeto pode funcionar como gate, mas não deve impor arquitetura genérica que contradiga necessidades reais.
 
+**Spec por capacidade + mudança como delta.** Em projetos que já existem, manter specs vigentes por capacidade (ex.: `auth`, `pagamentos`) e escrever cada mudança numa pasta própria com proposta, tarefas e só o *delta* da spec (requisitos adicionados, modificados, removidos). Ao concluir e verificar, mesclar o delta na spec vigente e arquivar a mudança; a spec vigente sempre descreve o sistema atual, e o histórico fica nas mudanças arquivadas. Adaptado de [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec) (MIT), 2026-11-10, sem exigir o CLI `openspec`.
+
 ## Gates de qualidade da spec (antes do plano)
 
 Use quando a spec vai alimentar implementação por agente ou por outra pessoa. Pule em specs triviais.
