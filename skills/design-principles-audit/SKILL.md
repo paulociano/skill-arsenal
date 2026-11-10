@@ -148,6 +148,8 @@ Ao auditar interfaces geradas com IA, evitar inferir a ferramenta criadora pela 
 5. Não dar nota numérica de "AI slop" sem critérios verificáveis, nem redesenhar tudo quando foi pedida apenas auditoria.
 6. Para revisão do runtime, inspecionar navegação, estados e acessibilidade; screenshot isolada não prova comportamento.
 
+Quando o pedido passar de auditoria para correção da tela, encaminhar ao modo unslop de `web-design-engineer` (`references/unslop-redline-passes.md`), que adiciona triagem pesado/leve/sem slop, direção em cinco linhas e passes ordenados.
+
 Proveniência metodológica: `MengTo/Skills`, `agent-skills/ui/audit-ai-design-slop` e `no-ai-design-slop` (2026-10-15), absorvidos como gate adicional, não skill separada.
 
 ## Auditoria de originalidade com referências externas

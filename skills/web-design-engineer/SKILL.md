@@ -118,6 +118,17 @@ Não promover para o Arsenal:
 
 Em vez disso, procurar uma assinatura coerente e poucas decisões fortes.
 
+## Modo unslop: tela existente com cara de IA
+
+Quando o pedido for limpar, polir ou redesenhar uma tela existente que parece gerada por IA **sem mudar o produto**, seguir [references/unslop-redline-passes.md](references/unslop-redline-passes.md):
+1. Ver a tela renderizada (código, cópia de URL ou reconstrução de screenshot).
+2. Auditar sinais com localização e fazer triagem: slop pesado → processo completo; slop leve → modo polish restrito ao que a auditoria achou; sem slop → dizer isso e sugerir no máximo 2–3 refinamentos.
+3. Escrever a direção em cinco linhas (produto, caráter sem adjetivos de template, mundo, momentos, assinatura) e aguardar o usuário antes de editar.
+4. Aplicar os passes na ordem espaçamento → cor → ícones → copy → tipo → layout → detalhes → visuais → motion, cada um na tela inteira.
+5. Rerenderizar, comparar com a auditoria e aplicar o teste do template.
+
+Os sinais da referência são hipóteses a confirmar no contexto, e seus valores (grade de 4px, alturas de navegação, raios, pesos) são defaults apenas quando não houver design system real; o sistema e a marca do projeto prevalecem, conforme "Design constraints versus design dogma". Fonte: heydamir/unslop (CC BY 4.0, crédito a Damir Sokolovsky).
+
 ## Research-first sem burocracia
 
 Pesquisa é obrigatória apenas quando reduz incerteza material. Para referências externas:
