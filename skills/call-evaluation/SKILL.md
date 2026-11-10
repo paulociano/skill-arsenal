@@ -70,6 +70,16 @@ Separar “não aconteceu” de “não aparece na transcrição”.
 - Não transformar o feedback em cobrança de script decorado.
 - Quando a conversa for natural e cumprir a função da etapa, considerar a etapa atendida.
 
+## Métricas de conversa (opcional, com transcrição separada por falante)
+
+Quando houver transcrição com rótulo de quem fala, complementar o Card com números calculados **por script**, nunca contados de cabeça pelo modelo:
+- proporção de fala do consultor (palavras do consultor ÷ total) e número de turnos de cada lado;
+- perguntas feitas pelo consultor (total e por 5 minutos);
+- maior monólogo do consultor e maior trecho ouvindo, com início e as primeiras palavras;
+- muletas ("né", "tipo", "assim", "então", "basicamente") e hesitações ("acho que", "talvez", "meio que", "de repente", "sei lá") por 100 palavras.
+
+Identificar antes qual rótulo é o consultor (pode haver mais de um). Comparar com a **própria média** do consultor em pelo menos 5 ligações anteriores e só destacar desvios grandes (cerca de 25%); com menos de 5, dizer que a comparação é fraca. Quando as ligações tiverem resultado registrado (agendou ou não), mostrar quais métricas diferem entre os dois grupos, sem afirmar causa. As métricas apoiam o feedback do Card, não viram nota nem meta isolada. Adaptado de `minutes-mirror` em [silverstein/minutes](https://github.com/silverstein/minutes) (MIT), 2026-11-10.
+
 ## Limitações
 
 - Se houver apenas resumo da ligação, declarar confiança reduzida.

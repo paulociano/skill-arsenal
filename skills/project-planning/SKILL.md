@@ -24,6 +24,18 @@ Converter um objetivo ou iniciativa em plano executável que mostre o que precis
 11. Definir checkpoints, critérios de aceite e gatilhos de replanning.
 12. Passar decomposição detalhada para `to-tickets` quando tickets forem realmente necessários.
 
+
+## Objetivos e resultados-chave (OKR), quando o pedido for metas de ciclo
+
+- **Confirmar que OKR é o artefato certo.** Rotina estável pede indicadores, não OKR; lista de tarefas pede plano.
+- **Separar resultado de trabalho.** O objetivo descreve a mudança desejada, qualitativa e ligada à estratégia; os resultados-chave medem mudança de comportamento ou de negócio; projetos, entregas e contagens de atividade vão para "iniciativas", cada uma dizendo qual resultado-chave pretende mover e com qual premissa.
+- **Cada resultado-chave** tem métrica definida, linha de base, meta, prazo, fonte da evidência e dono. Linha de base ou meta ausente fica marcada como `a medir` ou `premissa`, nunca inventada.
+- **Contrapeso:** todo resultado-chave de volume ou velocidade ganha um de qualidade (ex.: reuniões agendadas + taxa de comparecimento).
+- **Foco:** 1 a 3 objetivos, 2 a 4 resultados-chave cada; preferir OKR de time a individual.
+- **Nota de OKR não é avaliação de desempenho** nem base de remuneração. A faixa de 0,6–0,7 só vale para metas ambiciosas; compromisso, conformidade e contrato têm meta 1,0.
+- Se as entregas já foram impostas de cima, dizer que o OKR está tratando trabalho pré-decidido como aposta, e que métrica parada após a entrega é aprendizado, não falha do time.
+
+Adaptado de `skills/foundation-okr-writer` em [product-on-purpose/pm-skills](https://github.com/product-on-purpose/pm-skills) (Apache-2.0), 2026-11-10.
 ## Artefato mínimo
 
 - outcome e definição de concluído;
