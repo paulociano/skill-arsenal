@@ -24,6 +24,8 @@ Fundamentar decisões de programação na versão instalada de bibliotecas e na 
 
 ## Ferramentas e dependências
 
+**Serviço de documentação por versão (opcional).** Quando um MCP de documentação como Context7 estiver conectado: resolver primeiro o ID da biblioteca pelo nome e pela pergunta, preferir o ID da versão citada; fazer **uma consulta por conceito** (rotas, auth e cache são três consultas, salvo se a pergunta for sobre a interação entre eles); para fato exato que a documentação não diz (assinatura, valor padrão, origem de uma mensagem de erro), ler o código-fonte indexado e citar arquivo e linha, parando em poucas chamadas. O serviço é terceiro: backend, parser e crawler são privados, e uma chave de API vai no cabeçalho; não enviar código proprietário nas consultas. Adaptado de `plugins/agent-plugins/context7/skills/context7-mcp` em [upstash/context7](https://github.com/upstash/context7) (MIT), 2026-11-10.
+
 Ler manifests, lockfiles e código locais pelo terminal; consultar documentação oficial pela web quando necessário. Não exigir CLI library-skills ou symlinks. Skills instaladas podem complementar a documentação da versão real.
 
 ## Referências
