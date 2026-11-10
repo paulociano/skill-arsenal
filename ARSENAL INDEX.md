@@ -253,6 +253,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **meeting-knowledge-capture** — Converter gravações, transcrições ou notas de reuniões em decisões e ações rastreáveis no destino autorizado.
 - **mental-models-toolkit** — Escolher e aplicar o modelo mental certo (ou nenhum) para diagnosticar, decidir, entender, criar, avaliar, prever ou otimizar, com roteador que devolve NENHUM, um ou no máximo três.  
   `skills/mental-models-toolkit/SKILL.md`
+- **negotiation-preparation** — Preparar, ensaiar e registrar negociações reais (honorários e escopo com clientes, fornecedores, proposta de emprego, aumento, metas com o time) com alternativa real, ponto de saída, interesses, zona de acordo e pacotes equivalentes, sem blefe.  
+  `skills/negotiation-preparation/SKILL.md`
 - **mobile-device-automation** — Executar e verificar tarefas em dispositivos móveis somente com controle real disponível, por ações pequenas e observação de estado.
 - **multi-agent-orchestration** — Coordenar múltiplos agentes ou workers em tarefas paralelas com isolamento, ownership explícito, contratos de entrada e saída, estados observáveis e integração centralizada, somente quando ferramentas reais de delegação estiverem disponíveis.
 - **model-routing-gateway** — Projetar ou configurar roteamento de modelos LLM com seleção por capacidade, retries, fallback, orçamento e observabilidade.
