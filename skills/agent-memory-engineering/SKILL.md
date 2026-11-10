@@ -163,7 +163,9 @@ Quando contexto for capturado automaticamente do ambiente de trabalho:
 - password managers, secure fields e private browsing devem ser excluídos quando o runtime permitir;
 - local-first reduz exposição, mas não elimina risco: plaintext local continua sensível;
 - synced folders e downstream agent CLIs são trust boundaries independentes;
-- redaction é defence-in-depth, nunca garantia de DLP.
+- redaction é defence-in-depth, nunca garantia de DLP;
+- ordem obrigatória: remover blocos marcados como privados e segredos **antes** de truncar, resumir ou enviar a um agente observador; truncar primeiro pode cortar a tag de fechamento e gravar o conteúdo privado. Tag privada sem fechamento descarta todo o restante;
+- quando um segundo agente ("observer") destila a atividade em observações, ele é um consumidor de dados com custo e trust boundary próprios: registrar o que recebe, onde roda e quem paga as chamadas. Injetar na sessão seguinte só um índice compacto e buscar detalhes sob demanda. (Lições de [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem), changelog #5663, avaliado em 2026-11-10.)
 
 ## Governed organizational context
 

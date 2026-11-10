@@ -164,4 +164,17 @@ Para jogos orientados a dados e inventários, incluindo Three.js:
 5. Para editores de fase, separar rascunho reversível de dado publicado, com schema versionado, import/export validado, undo e proteção de rotas de edição. Nunca deixar uma edição visual mutar a sessão de produção implicitamente.
 6. Demonstrar o caminho do jogador com evidência runtime quando disponível: entrar, agir, receber feedback, ganhar recompensa, modificar inventário, salvar e continuar. Uma compilação verde não substitui o percurso jogável.
 
+## Do brief ao primeiro build verificado
+
+Para transformar uma ideia de jogo em primeiro protótipo jogável:
+
+1. **Uma rodada de perguntas por gênero**, só sobre o que molda o jogo (escolhas centrais, sensação, visual, dificuldade, objetivo), cada uma com resposta padrão para que "você escolhe" funcione. Ideia vaga recebe 2–3 pitches de uma linha antes das perguntas.
+2. **Brief de uma página** antes do código: palavras do usuário preservadas, visual, primeiro minuto, desafio, features e o que fica para depois. Construir só após aprovação.
+3. **Rastreio linha a linha**: depois do build, marcar cada linha do brief como *built*, *missing*, *broken* ou *not assessed* (quando não deu para checar), com base em execução, screenshots e código. Uma rodada de correção para erros de console, texto ilegível/sobreposto/fora da tela e telas congeladas.
+4. **Cartão de entrega honesto**: o que passou, o que segue quebrado, o que foi suposição, e a declaração explícita "ainda não jogado por uma pessoa". Teste automatizado não substitui playtest.
+5. **Veredito do protótipo**: PROCEED, PIVOT ou KILL; NOT ASSESSED enquanto ninguém jogou.
+6. Mudanças posteriores são checadas contra o que o usuário pediu para manter e evitar, e cada mudança aceita vira checkpoint reversível.
+
+**Proveniência adicional:** fluxo `/prototype` de [Donchitos/Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios), avaliado em 2026-11-10. Não requer seus 49 agentes, hooks, scripts nem `.claude/settings.json`.
+
 **Proveniência:** metodologias de `MengTo/Skills` (`build-game-inventory`, `build-threejs-enemy-systems`, `design-action-combat`, `build-game-map-editor`, `test-playable-web-games`), avaliadas em 2026-10-15. Não presume Three.js, navegador, sessões de teste ou ferramentas instaladas.
