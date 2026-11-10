@@ -251,6 +251,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **motion-asset-engineering** — Escolher, integrar e validar assets animados em web entre SVG/CSS, Lottie, Rive, Canvas e vídeo conforme interação, peso, editabilidade e acessibilidade.
 - **merge-conflict-resolution** — Resolver conflitos de merge ou rebase por intenção e fonte primária, preservando comportamentos compatíveis, validando checks e concluindo a operação sem inventar mudanças novas.
 - **meeting-knowledge-capture** — Converter gravações, transcrições ou notas de reuniões em decisões e ações rastreáveis no destino autorizado.
+- **mental-models-toolkit** — Escolher e aplicar o modelo mental certo (ou nenhum) para diagnosticar, decidir, entender, criar, avaliar, prever ou otimizar, com roteador que devolve NENHUM, um ou no máximo três.  
+  `skills/mental-models-toolkit/SKILL.md`
 - **mobile-device-automation** — Executar e verificar tarefas em dispositivos móveis somente com controle real disponível, por ações pequenas e observação de estado.
 - **multi-agent-orchestration** — Coordenar múltiplos agentes ou workers em tarefas paralelas com isolamento, ownership explícito, contratos de entrada e saída, estados observáveis e integração centralizada, somente quando ferramentas reais de delegação estiverem disponíveis.
 - **model-routing-gateway** — Projetar ou configurar roteamento de modelos LLM com seleção por capacidade, retries, fallback, orçamento e observabilidade.

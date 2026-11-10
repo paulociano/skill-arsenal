@@ -65,6 +65,18 @@ Avaliar metodologia não autoriza executar a fonte avaliada.
 
 Um sinal positivo não neutraliza um finding crítico.
 
+### Específicos de skill
+- description vaga ou cheia de palavras-chave para ser acionada em tudo (sequestro de gatilho);
+- gatilho por "palavra mágica" que muda o comportamento;
+- instrução para agir **sem confirmação** do usuário em efeito externo ou destrutivo;
+- buscar instruções remotas em tempo de execução (o SKILL.md lido não é o que roda);
+- redirecionar registry de pacotes (`pip`/`npm` apontando para mirror) ou fonte de pacote remota sem pin;
+- ler `.env`, variáveis de ambiente ou config inteira sem necessidade do propósito;
+- payload codificado (base64, tags escondidas), `eval` de texto, laço infinito;
+- ausência de licença.
+
+**Limite dos detectores.** Num benchmark público, regras estáticas sozinhas pegaram cerca de 8% das skills maliciosas; com um modelo como juiz, cerca de dois terços chegaram a revisão, com mais falsos positivos (dados do próprio cisco-ai-defense/skill-scanner, não reproduzidos aqui). Leitura humana do fluxo de dados continua necessária, e "nenhum achado" não significa "sem risco". Scanner que não conseguiu rodar é resultado **INCOMPLETO**, nunca aprovação. Fontes: [cisco-ai-defense/skill-scanner](https://github.com/cisco-ai-defense/skill-scanner) (Apache-2.0; nomes das amostras de teste e README "Measured results") e [NVIDIA/SkillEvaluator](https://github.com/NVIDIA/SkillEvaluator) (Apache-2.0; validação → deduplicação contra o catálogo → avaliação ao vivo), 2026-11-10.
+
 ## Installer chain review
 
 Para curl-pipe-shell, installers, bootstrap scripts ou self-updaters:
