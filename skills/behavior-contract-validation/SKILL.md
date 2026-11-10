@@ -48,6 +48,18 @@ Quando validar uma funcionalidade reconstruída a partir de um artefato distribu
 
 Referência metodológica: https://github.com/morluto/rea; avaliação `evaluations/2026-10-11-morluto-rea.md`.
 
+## Receita de verificação reutilizável por projeto
+
+Quando o mesmo app será verificado repetidamente, registrar uma receita curta somente depois de provar um fluxo real uma vez (perfil isolado ou dados temporários, nunca dados vivos do usuário):
+1. **Launch** — comando exato, dados isolados, sinal de pronto.
+2. **Doctor** — uma checagem somente leitura com mensagem de falha acionável.
+3. **Drive** — nomes estáveis, alvos de acessibilidade, rotas ou comandos; nunca coordenadas de tela gravadas.
+4. **Evidence** — ação, estado resultante e efeito colateral relevante.
+5. **Cleanup** — encerrar só o que a execução iniciou; preservar a evidência.
+6. **Feature map** — no máximo três fluxos provados, cada um com caminho, receita, prova de sucesso e pegadinha conhecida.
+7. **Maintenance** — quando o app mudar, rodar Doctor e o fluxo afetado; atualizar instruções que derivaram, sem esconder falha de produto.
+Sem forma confiável de iniciar ou dirigir o fluxo, reportar o pré-requisito em vez de inventar comandos ou seletores. Adaptado de `skills/create-verification-skill` em [milind-soni/OpenMausBot](https://github.com/milind-soni/OpenMausBot) (Apache-2.0), 2026-11-10.
+
 ## Guardrails
 - Não declarar sucesso sem cobrir todas as cláusulas relevantes.
 - Não transformar conhecimento do código em atalho para uma validação que deveria ser black-box.
