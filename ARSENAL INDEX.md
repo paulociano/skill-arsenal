@@ -106,6 +106,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
   `skills/statistical-data-analysis/SKILL.md`
 - **travel-planning** — Transformar uma ideia de viagem em plano verificável e pronto para reservar, com custos com fonte e data, documentos e checklist, sem reservar nem pagar.  
   `skills/travel-planning/SKILL.md`
+- **youtube-channel-launch-monetization** — Planejar e lançar canal de YouTube para monetizar em qualquer nicho: validar nicho por tamanho, saturação e RPM, adaptar formatos, identidade e SEO, plano de 90 dias com conta de horas e receitas além do AdSense, dentro das regras vigentes.  
+  `skills/youtube-channel-launch-monetization/SKILL.md`
 - **vercel-platform-optimization** — Auditar custos e desempenho de projetos Vercel a partir de métricas, uso, cache e investigação seletiva sem executar mudanças de deploy ou billing.  
   `skills/vercel-platform-optimization/SKILL.md`
 
