@@ -82,14 +82,30 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 
 ## Skills
 
+- **consulting-engagement-lifecycle** — Conduzir um projeto de consultoria de ponta a ponta: proposta e escopo, precificação e margem, abertura e descoberta, governança e status, entregáveis para decisão e encerramento.  
+  `skills/consulting-engagement-lifecycle/SKILL.md`
+- **contract-review** — Revisar contratos do ponto de vista de uma parte, com checklist ou parecer por cláusula, posições de negociação e comentários sem alterar o texto, sem substituir advogado.  
+  `skills/contract-review/SKILL.md`
 - **diffusion-finetuning-planning** — Planejar, revisar e validar fine-tuning/LoRA de modelos de difusão de imagem e vídeo com dataset, captions, hardware, checkpoints e QA, sem pressupor execução de treino disponível.  
   `skills/diffusion-finetuning-planning/SKILL.md`
 
+- **ecommerce-operations** — Operar loja virtual ou marketplace: anúncio de produto, preço com margem e ponto de equilíbrio, estoque e reposição, atendimento e avaliações, dentro das regras do canal.  
+  `skills/ecommerce-operations/SKILL.md`
+- **grant-proposal-writing** — Preparar propostas para editais e chamadas de fomento: ler o edital, extrair critérios e pesos, orçar páginas, planejar de trás para frente e revisar conformidade com leitor independente.  
+  `skills/grant-proposal-writing/SKILL.md`
+- **hiring-process** — Conduzir contratação do lado de quem contrata: perfil da vaga, anúncio, entrevista estruturada com rubrica, comparação, proposta e integração, com decisão humana e sem viés.  
+  `skills/hiring-process/SKILL.md`
 - **obsidian-vault-authoring** — Criar e validar Obsidian Markdown, Bases, JSON Canvas e templates de vault preservando links, propriedades e sintaxe sem depender de Obsidian CLI.  
   `skills/obsidian-vault-authoring/SKILL.md`
 
 - **react-next-performance** — Auditar e otimizar React/Next.js por waterfall, bundle, cache, server/client boundaries, re-renders e evidência de performance versionada.  
   `skills/react-next-performance/SKILL.md`
+- **screenwriting-story-structure** — Desenvolver histórias para roteiro, ficção, vídeo narrativo ou storytelling: premissa, personagem e conflito, atos e viradas, cenas que mudam algo, diálogo e revisão.  
+  `skills/screenwriting-story-structure/SKILL.md`
+- **statistical-data-analysis** — Analisar planilha ou base com estatística: perfil dos dados, premissas, escolha do método, execução em código e saída em tabela, gráfico e parágrafo com tamanho de efeito.  
+  `skills/statistical-data-analysis/SKILL.md`
+- **travel-planning** — Transformar uma ideia de viagem em plano verificável e pronto para reservar, com custos com fonte e data, documentos e checklist, sem reservar nem pagar.  
+  `skills/travel-planning/SKILL.md`
 - **vercel-platform-optimization** — Auditar custos e desempenho de projetos Vercel a partir de métricas, uso, cache e investigação seletiva sem executar mudanças de deploy ou billing.  
   `skills/vercel-platform-optimization/SKILL.md`
 

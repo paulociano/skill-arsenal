@@ -104,6 +104,10 @@ Quando um golden path gerar projetos por presets ou remoção de features, trata
 
 Este método foi adaptado dos repositórios [marmottajr/dontpanic-create](https://github.com/marmottajr/dontpanic-create) e [marmottajr/dontpanic](https://github.com/marmottajr/dontpanic). Não executar seus scripts, instaladores nem assumir Node, pnpm, Docker ou acesso a banco disponíveis no ChatGPT. Usar ferramentas do projeto-alvo e validar resultado real quando houver runtime autorizado.
 
+## Gerar e validar configuração de infraestrutura em par
+
+Todo arquivo de infraestrutura gerado ou editado (Dockerfile, pipeline de CI, Terraform, manifest Kubernetes, Ansible, script bash) passa pelo validador canônico antes de ser entregue: formatação e sintaxe (`terraform fmt`/`validate`, `bash -n`), lint (`hadolint`, `actionlint`, `tflint`, `kubeconform`, `ansible-lint`, `shellcheck`) e varredura de segurança (`checkov`, `trivy`). Consultar a documentação da versão do provider/ação usada antes de escrever (ver `library-version-grounding`). Ferramenta ausente: tentar a imagem oficial em container; sem isso, relatar a etapa como **não executada**, nunca como aprovada. Relatório com severidade, achado, correção e referência. Adaptado de [akin-ozer/cc-devops-skills](https://github.com/akin-ozer/cc-devops-skills) (Apache-2.0; pares `*-generator`/`*-validator`, `terraform-validator`, `dockerfile-validator` com fallbacks), 2026-11-10.
+
 ## Integração
 
 `golden-path-capture`, `production-go-live`, `system-design-engineering`, `software-supply-chain-engineering`, `software-observability-engineering`, `project-skill-architecture`.

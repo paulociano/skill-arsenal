@@ -35,6 +35,17 @@ Não usar para:
 8. **Avaliar em quatro níveis (Kirkpatrick):** reação (satisfação), aprendizagem (teste ou prática), comportamento (observação e checklist em 30/60/90 dias após) e resultado (indicador de negócio). Todo programa avalia ao menos o nível 2; programas de alto investimento acompanham o nível 3.
 9. **Registrar presença e execução** de forma auditável quando o treinamento for obrigatório ou usado em gestão de desempenho; usar dados de avaliação para melhorar o programa, não para punir.
 
+## Desenho de aprendizagem baseado em evidência
+
+Ao montar atividades, preferir técnicas com boa evidência e dizer qual está sendo usada:
+- **prática de recuperação**: perguntas e exercícios sem consulta, em vez de reler o material;
+- **espaçamento**: revisitar o conteúdo em intervalos crescentes, não tudo de uma vez;
+- **exemplos resolvidos** para quem está começando, retirando a ajuda aos poucos; **exemplos com erro** para o participante encontrar e corrigir;
+- **intercalação** de tipos de problema parecidos depois da primeira compreensão;
+- **avaliação formativa** com retorno rápido e específico, e dicas em sequência (da mais geral para a mais específica) antes da resposta;
+- **metacognição**: o participante estima o que sabe antes e confere depois.
+Carga cognitiva: um conceito novo por vez, instruções curtas, sem informação decorativa. Técnicas da moda sem evidência sólida (estilos de aprendizagem, por exemplo) não entram. Inspirado em [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) (CC BY-SA 4.0; 165 skills de ensino), 2026-11-10; texto próprio, sem cópia.
+
 ## Saída padrão
 
 Documento curto com: problema e indicador, público, objetivos comportamentais, trilha e formato, plano de formação de multiplicadores (se houver), plano de avaliação com níveis e prazos, riscos e premissas.
