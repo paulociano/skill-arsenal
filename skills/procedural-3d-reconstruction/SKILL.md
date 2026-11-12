@@ -57,3 +57,13 @@ Origem local: [procedural-3d-reconstruction.docx](../procedural-3d-reconstructio
 ## Blender como runtime editável de cenas (blender-ai-mcp-addon)
 
 Se o projeto usa Blender, tratar a cena como estado observável e mutável, e não apenas script gerador: (1) inspecionar objects, hierarquia, transform, materiais e câmera antes de alterar; (2) especificar operações pequenas, ordem, snapshot/undo e resultado visual esperado; (3) para workflows de agentes, separar manager, executor e reviewer com checks após cada mutação e limite de retries; (4) validar screenshots reais de mais de uma perspectiva e reabrir arquivo/export final; (5) exigir aprovação antes de executar Python arbitrário, imports remotos, apagar objetos ou exportar dados externos. Código Python do addon não equivale a sandbox, mesmo com validação. Usar integração MCP somente se realmente instalada e autenticada; caso contrário, entregar scripts Blender e instruções de testes, sem afirmar execução na UI. Fonte: https://github.com/LiCinCan/blender-ai-mcp-addon (2026-10-18), Windows/Blender 4.2+ e serviços opcionais externos.
+
+## Peças nomeadas e contrato de exportação
+
+Para objetos construídos por operações geométricas, nomear peças, faces, arestas e anchors; expressar encaixes em frames locais e relações entre peças em vez de espalhar coordenadas absolutas. Declarar unidades de autoria e exportação, eixos, repouso, pose atual e hierarquia. Separar montagem estática de joints: registrar pai/filho, pivot, eixo, tipo e limites e testar repouso, extremos e transformação espelhada quando aplicável.
+
+Escolher o formato pelo que precisa sobreviver e reabrir no consumidor real: malha, materiais, árvore, joints, limites, pose e identidade. Metadados extras em GLB não garantem rig funcional em engine; IFC triangulado com proxies não garante semântica BIM nem identidade estável. Não usar IDs derivados de geometria/posição como identidade persistente sem contrato explícito.
+
+sand3d é backend opcional para objetos procedurais sobre bpy, não substituto automático de rigging orgânico ou reconstrução neural. Confirmar compatibilidade Python/bpy/sand3d antes de gerar código específico; no backend consultado autoria usa mm por padrão e export declara metros, GLB guarda joints em extras, URDF exporta repouso e IFC pose atual sem joints. Verificar esses contratos na versão usada. Sem runtime, entregar programa/spec e declarar ausência de validação de malha e exportação.
+
+Origem: https://github.com/Sandflow-ai/sand3d (README.md e docs/api.md, 2026-11-12); sem instalar biblioteca ou copiar código.
