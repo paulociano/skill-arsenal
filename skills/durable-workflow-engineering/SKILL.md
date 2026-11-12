@@ -142,3 +142,13 @@ Conectores MCP, provedores de modelo, dashboard, agendamentos e daemon são inte
 **Should trigger:** 'Desenhe uma plataforma de agentes com aprovação, replay e execução em várias máquinas'. **Near miss:** 'Faça uma consulta pontual em um repositório'.
 
 **Origem:** https://github.com/omnara-ai/omnara. Arquitetura conceitual absorvida; nenhum deploy, chave, máquina ou processo externo instalado.
+
+## Retomada de turnos e limite causal de eventos
+
+Em agentes disparados por eventos, persistir espera humana/timer e liberar o processo executor quando o runtime suportar retomada. Separar falha de sessão, falha do trabalho e falha do recibo estruturado: um recibo inválido pede reparo limitado do recibo, não repetição de efeitos já concluídos. Confirmar estado externo antes de qualquer retry ambíguo.
+
+Propagar identidade causal e contador de saltos por toda a cadeia de eventos, inclusive aprovações e timers; esses passos não devem zerar o contador. O limite é política do projeto, imposto pelo orquestrador, não pelo texto do agente. Ao atingir o teto, registrar bloqueio e permitir decisão humana explícita. Testar cadeia cíclica que passa por timer e aprovação.
+
+Configuração inválida pode manter a última versão válida somente se essa política for explícita e visível; pause/resume deve registrar eventos ignorados e separar replay deliberado de catch-up automático.
+
+Origem: https://github.com/KKKKhazix/agent-autoloop (README e SECURITY.md, 2026-11-12). Padrões portáteis; não instala daemon nem fornece execução autônoma ao ChatGPT. askFirst no prompt não é enforcement; MCP de aprovação não deve ser disponibilizado ao agente que aprova a própria execução.
