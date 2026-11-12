@@ -300,3 +300,13 @@ Para APIs de survey, separar respostas completas de parciais/desqualificadas, pr
 ## Arquivos temporários, webhooks e aprovações de RH (ComposioHQ 732–831, 2026-10-15)
 
 Ao integrar serviços de mídia, distinguir arquivo enviado, armazenado permanentemente e URL temporária. Um upload pode ser apagado automaticamente se não houver etapa de persistência, e um link temporário não deve ser registrado como permanente; confirmar UUID, retenção e estado do arquivo. Em webhooks e mensagens, validar destinatário único, limites de payload/arquivo, entregabilidade HTTP e desativação automática por falhas; webhook criado não é webhook saudável. Para solicitações de férias ou afastamento via HRIS, resolver pessoa e tipo de ausência elegível, usar contrato de datas correto e separar solicitação criada de aprovação concluída. Referências adaptadas de Uploadcare, Webex e Workday (ComposioHQ 732–831); sem conectores Rube ativos.
+
+## Modo de observação antes de ativar regras
+
+Para regras novas com efeitos externos, considerar um período explícito de observação: registrar entrada, decisão, efeito que seria executado e custo estimado, sem enviar mensagens nem alterar sistemas de negócio. Não simular sucesso de ferramentas que não rodaram. Comparar falsos avisos e oportunidades perdidas antes de ativar; observação também precisa de autorização de leitura e política de dados.
+
+Separar budgets por execução e acumulados no período, contabilizando retries e tarefas auxiliares. Definir suspensão ao atingir limite, timezone, janela de silêncio, teto de notificações e digest quando adequado; usar valores do usuário/projeto, nunca copiar preços ou limites de outro aplicativo. Diferenciar tarefa interrompida de entrega pendente: guardar a saída antes de enviar e retomar entrega com deduplicação, sem refazer o trabalho concluído.
+
+Retenção de logs e remoção de temporários não devem apagar entregáveis persistentes. Tornar prazo, preservação e escopo da limpeza explícitos; não importar política de exclusão automática de um produto externo.
+
+Origem: https://github.com/modelflare-ai/AnyModelBot (README e README_pt.md, 2026-11-12). Metodologia incorporada, sem instalar runtime, conectar contas, enviar mensagens ou criar agendamentos. Armazenamento local não implica inferência local: prompts, capturas e resultados podem ir ao provedor e gateway.
