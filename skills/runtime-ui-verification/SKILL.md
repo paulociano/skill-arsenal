@@ -174,3 +174,11 @@ Ao examinar um componente isolado, escolher um dos dois protocolos:
 Não usar credenciais, dados ou serviços de produção nas fixtures. Sem navegador ou execução, classificar como UNKNOWN e fornecer procedimento de reprodução, não alegar que viu o resultado. Evitar dependência obrigatória de Storybook, Playwright e Claude. Quando corrigir, repetir o cenário idêntico. Manter a rota enquanto fizer parte de um relatório visual solicitado e removê-la, com fixtures e imports, quando for concluída a exploração e solicitada limpeza.
 
 Fonte: https://github.com/jakubkrehel/skills/tree/main/skills/break e https://github.com/jakubkrehel/skills/tree/main/skills/state-machine .
+
+## Relógio controlado e paridade entre hosts
+
+Quando o app ou harness fornecer relógio virtual, dirigir timers/animações por avanço explícito e condição de estabilização, em vez de sleeps arbitrários. Declarar quais relógios são controlados: tempo de rede, sistema e serviços externos podem continuar reais. Testar antes/depois do limite e reexecução; não atribuir determinismo a um ambiente sem esse suporte.
+
+Em aplicações multiplataforma, reutilizar o roteiro de intenção e asserções de domínio em cada host suportado, com adapters de ação observados. Inspecionar árvore, estado, layout, logs e captura conforme ferramentas reais. Registrar PASS/FAIL/UNKNOWN por host e build; resultado web não prova resultado nativo. Verificar que o binário testado corresponde às fontes atuais; build antigo deve ser reconstruído antes de servir como evidência. Paridade funcional não exige pixels idênticos para controles nativos.
+
+Origem: https://github.com/expo/exact (README.md, 2026-11-12). Metodologia, sem adotar Contract, instalar Exact ou prometer driver universal. O projeto é pre-1.0 e declara cobertura desigual entre plataformas.
