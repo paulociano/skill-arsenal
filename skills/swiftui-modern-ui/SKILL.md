@@ -106,3 +106,11 @@ Ativar para escrita, manutenção ou auditoria de projetos **SwiftUI nativos**. 
 
 ### Provenance
 Metodologia adaptada após leitura do `SKILL.md` e das 12 referências (accessibility, api, data, design, hygiene, localization, navigation, performance, performance-plus, resizability, swift, views) em https://github.com/twostraws/SwiftUI-Agent-Skill/tree/main/swiftui-pro. Não incorpora regras absolutas sem contexto nem presume integração do agente original.
+
+## Capturas macOS isoladas do armazenamento real
+
+Ao verificar UI macOS, usar banco/store de teste separado e fixtures que incluam textos longos, datas e estados representativos; seed vazio só prova estado vazio. Resetar apenas artefatos de teste identificados, nunca o banco do usuário. Capturar a própria janela e as páginas afetadas em claro/escuro, com foco/atividade registrados.
+
+Se captura vier de fallback sem permissão de gravação, janela inativa, display adormecido ou outra aplicação escondendo a janela, classificar evidência como insuficiente e corrigir a condição de captura antes de alterar materiais/contraste. Não “corrigir” UI por artefato de captura. Snapshots provam aparência; ações precisam de checks funcionais separados. Sem ambiente Apple, informar que build e capturas ficaram sem execução.
+
+Origem: https://github.com/daveebbelaar/bama, skills/ship/build-and-verify/SKILL.md (2026-11-12). Sem importar scripts, caminhos locais, requisitos fixos de SDK, regras estéticas absolutas ou autorização para instalar aplicativo.
