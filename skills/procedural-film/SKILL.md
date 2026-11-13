@@ -166,3 +166,13 @@ Brand-first discovery, product claims, componentes reais e verificação de deli
 Determinismo visual, pure-frame contract e craft bar reforçados por [alexgreensh/anidoodle](https://github.com/alexgreensh/anidoodle), sem importar sua engine, estilos ou tooling.
 
 Direção de filme de lançamento (forma da mensagem, personalidade, três direções, tratamento, regras de gosto, revisão, ajustes por apontamento e aprendizado entre filmes) adaptada de [alchaincyf/huashu-motion](https://github.com/alchaincyf/huashu-motion) (MIT, v0.3.1), sem o CLI `om`, o estúdio, a assinatura "Made with huashu-motion" nem a checagem automática de versão.
+
+## Render longo com piloto e retomada verificável
+
+Antes de exportação longa, validar um trecho curto representativo com os settings finais, incluindo o plano mais caro, transição e áudio quando existentes. Medir segundos por frame e estimar custo/tempo com margem; distinguir essa previsão de medição do filme completo. Usar os gates e a autorização já definidos no projeto, sem criar confirmação adicional se a exportação já estiver autorizada.
+
+Quando suportado, salvar frames e checkpoints para retomada. Só reutilizar frames se o manifesto confirmar a mesma revisão de cena, timeline, seed, câmera, assets, fontes, resolução, fps e settings de render; arquivo existente sozinho não prova validade. Mudança que afete frames exige invalidá-los, não completar um vídeo misturando versões. Codificar e muxar após confirmar cobertura dos frames esperados; verificar arquivo final decodificado, duração, fps, dimensões e streams exigidos.
+
+Em hardware limitado, separar preview barato de render offline por frame quando isso atender ao produto. Acumulação de subframes para AA, blur ou DOF é opção condicionada ao renderer e budget, não garantia de qualidade ou solução para falta de RAM. Não reduzir requisitos de runtime de um jogo interativo porque um vídeo offline parece bom. Se áudio não pôde ser ouvido, declarar isso; presença de stream não prova qualidade sonora.
+
+Origem adaptada: https://github.com/Leonxlnx/cook, references/rules.md e references/ship.md, consultados em 2026-11-12. Nenhum renderer, FFmpeg ou script externo presumido instalado; não adota tempo mínimo de oito horas, consumo de cota ou gate extra por padrão.
