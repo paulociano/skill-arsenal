@@ -336,3 +336,17 @@ Quando uma sessão de agente de programação usa um sistema de skills/planos e 
 Para fluxos longos com tarefas independentes, compare **execução inline com revisão final** versus **worker de contexto fresco por tarefa + revisão de spec e qualidade por tarefa + revisão de integração final**. Escolher pelo risco, independência e custo; só delegar se houver ferramenta real de subagentes. O plano aprovado limita decisões; mudanças irreversíveis, escopo ou efeitos externos continuam sujeitos a policy e aprovações.
 
 **Proveniência:** https://github.com/obra/superpowers/tree/main/skills/diagnosing-superpowers, `subagent-driven-development`, `using-superpowers` e README (2026-10-21). Metodologia adaptada sem hooks, agentes delegados, transcript APIs ou runtime Superpowers presumidos.
+
+## Geração automatizada de agentes e ferramentas com validação (Youtu-Agent)
+
+Quando a tarefa for construir um agente ou gerar ferramentas a partir de requisitos, separar duas rotas: **workflow determinístico** para tarefas conhecidas, e **meta-agent/prototipagem** para requisitos incertos. Não tratar síntese de código, YAML ou prompts como capacidade aprovada para execução.
+
+1. Especificar objetivo, dados, ferramentas permitidas, entradas/saídas, budgets, non-goals e critérios de aceitação antes de gerar.
+2. Gerar proposta de tool schema, implementação e configuração em áreas de staging; revisar schema, argumentos, permissões, rede, side effects e uso de secrets. Ferramentas sintetizadas são código não confiável até revisão, teste e aprovação.
+3. Testar em casos normais, negativos e adversariais com exemplos reprodutíveis; distinguir sucesso de síntese, execução e resultado final. Benchmarks publicados de outros agentes/modelos não comprovam desempenho local.
+4. Se houver ciclos de aprendizado por experiências ou policy optimization, armazenar traces e feedback com proveniência, separar treino/avaliação held-out, medir regressões/custo/latência e não atualizar comportamento de produção automaticamente.
+5. Apenas promover configurações, ferramentas ou políticas após validação independente e autorização específica. Multiagente, RL distribuído e geração de ferramentas em runtime requerem infraestrutura real, não são capacidades nativas garantidas do ChatGPT.
+
+**Should-trigger:** projetar agente que sintetiza ferramentas e valida execuções. **Near-miss:** pedido de patch simples num repositório existente, sem geração de agente.
+
+**Fonte metodológica:** https://github.com/TencentCloudADP/youtu-agent (README e framework; execução e claims de benchmark não reproduzidos na avaliação de 2026-11-14).
