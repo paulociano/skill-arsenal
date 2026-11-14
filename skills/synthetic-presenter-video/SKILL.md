@@ -102,3 +102,18 @@ Produzir apresentação sintética controlável sem perder sincronização, iden
 ## Provenance
 
 Consolidada de Wav2Lip, MuseTalk, LivePortrait, OpenVoice, F5-TTS, Fish Speech, CosyVoice and related TTS runtimes. Methodology only; no model weights or runtime are assumed available.
+
+## Vídeo longo com fala: continuidade por segmentos (InfiniteTalk)
+
+Para talking-head, avatar ou personagem que fala por períodos extensos, planejar **segmentos encadeados**, em vez de considerar duração ilimitada como garantia de continuidade perfeita.
+
+1. Separar áudio-fonte autorizado e transcrição/timestamps de identidade, imagem/vídeo de referência, configuração de movimento, duração e idioma. Registrar versão de todas as fontes.
+2. Para cada segmento, conservar fotogramas/estado de movimento adequados à continuidade e auditar junções (posição facial, escala, boca, olhos, luz, cor, fundo, áudio, prosódia).
+3. Medir drift de identidade e cor ao longo da duração, sobretudo após muitos segmentos. O projeto InfiniteTalk relata diferenças entre image-to-video e video-to-video: I2V pode acumular mudança de cor depois de cerca de um minuto; V2V é a rota declarada para sequências mais longas, mas não garante câmera idêntica.
+4. Testar amostra curta antes de renderizar vídeo extenso; comparar sincronização labial, estabilização facial, fluidez, costuras e erro acumulado. Fallback: cortes editoriais, reancoragem por referência, B-roll e trechos curtos.
+5. Escolher entre API disponível e runtime local conforme qualidade, VRAM, custo e direitos sobre pesos/modelos. Quantização, offload, TeaCache e LoRA são mecanismos específicos de implementação: nunca prometer que estão disponíveis no ChatGPT ou que eliminam requisitos de GPU.
+6. Preservar consentimento de identidade e voz, proveniência e sinalização adequada para conteúdo sintético, especialmente quando puder ser confundido com fala autêntica de uma pessoa.
+
+**Should-trigger:** gerar avatar falante por vários minutos com continuidade. **Near-miss:** legenda de um Reel gravado, sem sintetizar fala ou rosto.
+
+**Fonte metodológica:** https://github.com/MeiGen-AI/InfiniteTalk (README de uso e modos de inferência, 2026-11-14). Não foram importados modelos, scripts ou pesos.
