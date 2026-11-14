@@ -75,3 +75,15 @@ Quando uma plataforma oferecer treinamento de identidade reutilizável a partir 
 5. Falhas ou ausência de suporte exigem fallback explícito para imagens mestre/atlas. Nunca declarar um personagem treinado ou pronto sem confirmação do backend.
 
 **Origem metodológica:** https://github.com/higgsfield-ai/skills/blob/main/higgsfield-soul-id/SKILL.md; comandos de instalação por `curl | sh` deliberadamente não incorporados.
+
+## Referências desacopladas de identidade e estilo (USO)
+
+Em geração ou edição de várias cenas com personagem/produto recorrente, distinguir **referência de sujeito** (silhueta, anatomia, traços) de **referência de estilo** (render, textura, iluminação, linguagem gráfica) e de **referência de composição** (pose/câmera/layout). Essa separação é inspirada na formulação de disentanglement do USO, sem exigir o modelo de difusão.
+
+1. Identificar uma autoridade por dimensão e ordenar precedência quando referências entram em conflito. Estilo não autoriza trocar rosto/anatomia; identidade não fixa pose e cenário.
+2. Construir testes independentes de fidelidade ao sujeito, aderência ao estilo e liberdade composicional. Comparar saídas sob mudanças controladas de estilo com identidade fixa, e de pose com estilo fixo.
+3. Para recorrência, escolher poucas referências de alta qualidade e registrar drift por dimensão (sujeito, estilo, composição); corrigir o controle específico, não reescrever todos os prompts indiscriminadamente.
+4. Só recomendar USO/ComfyUI/FLUX quando houver runtime e VRAM suficientes, pesos e licenças verificados. O README do USO descreve aproximadamente 16–18 GB de VRAM mesmo em modo otimizado fp8/offload; não presumir viabilidade em GPU integrada.
+5. Não confundir consistência visual de rosto com permissão para gerar retratos de pessoas; manter direitos, consentimento e autenticação de referências conforme o contexto.
+
+**Fonte:** https://github.com/bytedance/USO (paper e README, 2026-11-14). Metodologia absorvida, sem pesos/scripts ou execução de modelo.
