@@ -176,3 +176,17 @@ Quando suportado, salvar frames e checkpoints para retomada. Só reutilizar fram
 Em hardware limitado, separar preview barato de render offline por frame quando isso atender ao produto. Acumulação de subframes para AA, blur ou DOF é opção condicionada ao renderer e budget, não garantia de qualidade ou solução para falta de RAM. Não reduzir requisitos de runtime de um jogo interativo porque um vídeo offline parece bom. Se áudio não pôde ser ouvido, declarar isso; presença de stream não prova qualidade sonora.
 
 Origem adaptada: https://github.com/Leonxlnx/cook, references/rules.md e references/ship.md, consultados em 2026-11-12. Nenhum renderer, FFmpeg ou script externo presumido instalado; não adota tempo mínimo de oito horas, consumo de cota ou gate extra por padrão.
+
+## Filme documental por câmera contínua e sincronização lexical (cinematic-skill, 2026-11-14)
+
+Para curtas narrados compostos de fotos, documentos, mapas, números e cards em um mundo gráfico único, considerar o modelo de "câmera que percorre um painel" de [Moh4696/cinematic-skill](https://github.com/Moh4696/cinematic-skill). É uma gramática de direção, **não** requisito de Skia, Python ou da engine do repositório.
+
+1. **Facts → beat table:** ligar cada frase narrada a uma afirmação verificável, sujeito/hero visual único e elemento gráfico correspondente. Checar cronologia e evitar evidências fabricadas, inclusive recriações que pareçam documentos originais.
+2. **Uma superfície espacial:** organizar clusters de fotografias, mapas, documentos e legendas em coordenadas persistentes. Planejar câmera/spotlight juntos e evitar que foco e narrativa se separem; não escolher o efeito de quadro de investigação quando não combinar com o tema.
+3. **Timing derivado da voz real:** capturar timestamps de palavras-chave ou trechos da gravação; sincronizar destaques, stamps, contadores e transições ao que é **dito**, não somente ao início da frase. Quando não houver forced alignment confiável, usar cues por trecho verificados ao ouvir; não inventar timecodes.
+4. **Troca de voz sem drift:** preservar IDs de lines/cues e reconstruir timeline a partir da duração das novas tomadas; revisar cortes ruins, pausas e posições das marcas após re-timing.
+5. **Direção por leitura:** um hero por beat, legibilidade no mobile, evitar duplicar frases longas em tela e documento, atenuar elementos antigos sem perder continuidade espacial; revisar pullback final para sobreposição e densidade.
+6. **Gates proporcionais:** beat table e fatos → look/keyframe → trecho curto com voz → master. Conferir stills por linha, strips dos moves, timestamps relevantes, licenças/créditos, SRT e render final decodificado quando ferramentas reais permitirem.
+7. Usar imagens próprias, licenciadas ou domínio público com provenance. Efeitos sonoros sintéticos não dispensam QA de mixagem; não importar instalador `curl | bash`, dependências Skia, ffmpeg, fontes ou downloader só para aplicar este método.
+
+**Should-trigger:** minidocumentário narrado com fotos, mapas e sincronização de destaques a palavras. **Near-miss:** simples montagem de footage existente, cujo owner é `video-editing-pipeline`. **Prova:** timeline/cue sheet, checagem de fatos/credit, stills/strip e sync audiovisual comprovado.
