@@ -82,6 +82,9 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 
 ## Skills
 
+- **technical-interview-simulation** — Simular entrevistas técnicas de programação, DSA e system design com perguntas progressivas, testes quando executáveis e avaliação baseada em evidências.  
+  `skills/technical-interview-simulation/SKILL.md`
+
 - **consulting-engagement-lifecycle** — Conduzir um projeto de consultoria de ponta a ponta: proposta e escopo, precificação e margem, abertura e descoberta, governança e status, entregáveis para decisão e encerramento.  
   `skills/consulting-engagement-lifecycle/SKILL.md`
 - **contract-review** — Revisar contratos do ponto de vista de uma parte, com checklist ou parecer por cláusula, posições de negociação e comentários sem alterar o texto, sem substituir advogado.  
