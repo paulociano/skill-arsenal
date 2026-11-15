@@ -182,3 +182,17 @@ Quando o app ou harness fornecer relógio virtual, dirigir timers/animações po
 Em aplicações multiplataforma, reutilizar o roteiro de intenção e asserções de domínio em cada host suportado, com adapters de ação observados. Inspecionar árvore, estado, layout, logs e captura conforme ferramentas reais. Registrar PASS/FAIL/UNKNOWN por host e build; resultado web não prova resultado nativo. Verificar que o binário testado corresponde às fontes atuais; build antigo deve ser reconstruído antes de servir como evidência. Paridade funcional não exige pixels idênticos para controles nativos.
 
 Origem: https://github.com/expo/exact (README.md, 2026-11-12). Metodologia, sem adotar Contract, instalar Exact ou prometer driver universal. O projeto é pre-1.0 e declara cobertura desigual entre plataformas.
+
+## Benchmark de reconstrução de websites: evidência visual E funcional (WebsiteBench, 2026-11-14)
+
+Em reconstrução autorizada de websites, não avaliar somente screenshot nem somente botões clicáveis. A referência [TIGER-AI-Lab/WebsiteBench](https://github.com/TIGER-AI-Lab/WebsiteBench) usa casos com checks funcionais e checkpoints visuais; sua pontuação e seus thresholds são **específicos daquele benchmark**, não padrões universais de aceitação.
+
+1. Definir escopo de comportamento permitido, direitos sobre conteúdo/assets e matriz de jornadas, páginas, viewports e estados **antes** da implementação.
+2. Para cada cenário, declarar precondições, sequência de interação, postcondição funcional e checkpoints visuais: viewport, DPR, fonts, assets, dados seedados, estado autenticado e esperas.
+3. Medir equivalência visual por comparação perceptual quando instrumento real existir; SSIM ou threshold não provam equivalência semântica e são sensíveis a render de fonte, anti-aliasing, conteúdo dinâmico e geometria de captura.
+4. Verificar navegação, formulários, erros, persistência e efeito real em state/network/backend. Screenshot perfeito com submit inoperante falha; funcionalidade correta com layout quebrado também falha quando fidelidade visual é requisito.
+5. Classificar caso como `PASS / FAIL / UNKNOWN`; evidência ausente não vira PASS. Distinguir erro do produto de erro do teste/oráculo.
+6. Para regressão, comparar mesmo percurso com mesma configuração e armazenar screenshots, logs e observações sem secrets. Não atualizar baseline apenas para passar.
+7. Não baixar os datasets/reproduções de sites de terceiros para uso comercial automaticamente: o README do benchmark delimita referências para pesquisa não comercial. Não presumir Docker, Harbor, download de tasks ou 46.916 checks como capacidades locais.
+
+**Should-trigger:** testar reconstrução funcional e visual de site público com autorização e contratos claros. **Near-miss:** auditoria pontual de LCP/INP sem reconstrução. **Prova:** matriz de casos, traces, screenshots comparáveis e postconditions verificadas.
