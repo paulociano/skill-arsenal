@@ -102,3 +102,17 @@ Quando a arte nasce em Figma/Affinity e será animada em uma ferramenta como Cav
 6. Produzir uma cena curta de teste com movimento, exportar um frame e um trecho animado e revisar clipping, fontes, blend, gradientes, composição e cor. Salvar os arquivos fonte e destino versionados para refazer o handoff.
 
 O Quiver (https://github.com/phillip-motion/quiver) implementa um bridge Figma/Affinity → Cavalry e ferramentas de edição de camadas. É **referência opcional** para desktop, não ferramenta integrada ou instalada neste ChatGPT. Sua instalação para Affinity solicita acesso a arquivos e rede: revisar scripts, permissões e destino de dados antes de ativá-los; nunca executar instaladores desconhecidos para avaliar a técnica.
+
+## Line art procedural com SVG e movimento físico
+
+Em ilustrações vetoriais interativas (personagens caminhando, rua viva, natureza e ciclos dia/noite), avaliar animação SVG procedural como alternativa a GIF, vídeo ou Lottie. Método extraído de [JDhruv14/line-art-animation](https://github.com/JDhruv14/line-art-animation) (MIT), sem exigir sua biblioteca TypeScript.
+
+1. Aprovar primeiro o **estilo imóvel** de uma figura/recorte (proporção, largura/curvatura de linha, fundo, acentos) antes de montar a cena toda.
+2. Modelar pose e deslocamento em espaços locais; distinguir transform global da figura de articulações, roupa e acessórios.
+3. Para caminhada, casar velocidade de translação com comprimento/fase da passada e assegurar **pé de apoio plantado**, balanço suave, joelho articulado e ausência de foot sliding; evitar seno livre como substituto de gait.
+4. Usar springs/pendulums para acessórios e vento, com limites estáveis, sem criar movimento excessivo ao pausar/reentrar.
+5. Para cenas com ciclos temporais, separar tempo do mundo de animação física; não acelerar a passada só para comprimir o ciclo dia/noite.
+6. Interações devem ter feedback visível e testável; controlar `prefers-reduced-motion`, pausa fora de viewport e fallback estático.
+7. Validar sequência de frames em tempos fixos (não apenas screenshot único), comparar poses e timing com referência permitida quando houver, testar interação, responsividade e custo de CPU/GPU. Render para vídeo só quando houver exportação e ferramentas realmente disponíveis.
+
+Should-trigger: ilustração SVG de pessoa caminhando e reagindo ao clique. Near-miss: ícone estático ou simples revelação de stroke (usar `svg-handdrawn-animation`). Prova: frame strip com fase de apoio estável + teste de interação + reduced-motion; não alegar testes de Node/Chrome/ffmpeg não executados.
