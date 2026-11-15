@@ -253,3 +253,17 @@ Em **toda criação, redesign, melhoria ou auditoria de sites e landing pages**,
 **Obrigatório é o método, não a instalação do software**: executar CLI, hooks, extensão ou detectores Impeccable apenas quando realmente disponíveis. Caso contrário, aplicar as etapas equivalentes com as ferramentas do ChatGPT. Nunca afirmar execução de testes ou comandos não realizados; não instalar executáveis implicitamente. Preservar marca, design system, fatos do produto e decisões contextuais em vez de adotar proibições estéticas genéricas.
 
 Para páginas de conversão, aplicar também landing-craft. Mesmo em mudanças menores, percorrer o gate com profundidade proporcional ao escopo.
+
+## Modern Web Platform: escolha orientada por compatibilidade
+
+Para UI/CSS/JS no navegador, quando a feature ou o suporte entre browsers for relevante, consultar primeiro orientação atual e pontual da plataforma (MDN, web.dev, Chrome Developers e dados Baseline/Web Features) em vez de repetir receitas de código antigas. Fonte de metodologia: [GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance), especialmente o fluxo search → retrieve → verify. Não pressupor CLI `npx` instalado ou rede disponível; usar leitura direcionada do guia hospedado quando possível.
+
+1. Traduzir o requisito para um recurso de plataforma (p. ex. dialog, popover, container queries, view transitions, scroll-driven animation), sem misturar perguntas heterogêneas.
+2. Procurar guia/compatibilidade específicos; **não inventar IDs ou regras** quando a fonte não estiver acessível.
+3. Comparar solução nativa com dependência externa em semântica, acessibilidade, peso e manutenção. Preferir a solução menor que atende ao contrato.
+4. Registrar browser support target do projeto; para recursos Baseline Widely available, normalmente dispensar fallback específico; para Newly available/limited, testar feature detection, progressive enhancement ou fallback real segundo o público-alvo, não uma regra universal.
+5. Em React/SSR, preservar lifecycle e boundaries: DOM de cliente em efeitos/refs, IDs únicos por instância, sem remover atributo moderno apenas por tipagem defasada.
+6. Verificar o comportamento no navegador efetivamente suportado e conferir regressões de teclado, foco, reduced motion, layout e performance.
+7. Usar scans automáticos de padrões legados apenas para modernização ampla; validar falsos positivos manualmente e **não** interpretar uma varredura parcial como auditoria completa.
+
+Exemplo de should-trigger: implementar popover acessível com requisitos Safari/Firefox. Near-miss: alterar SQL, pipeline CI ou apenas traduzir texto de uma página. Evidência: implementação compatível + testes/inspeção no runtime; leitura de documentação sozinha é `static_only`.
