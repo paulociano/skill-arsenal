@@ -164,3 +164,15 @@ Combina com:
 ## Provenance
 
 Consolidada principalmente de `pipecat-ai/pipecat` e `pydantic/pydantic-ai`. Preserva pipelines de streaming, transports, turn-taking, flows/state, tool use, realtime speech e observabilidade, sem exigir Pipecat, Pydantic AI, WebRTC específico ou providers particulares.
+
+## Voz full-duplex e modelos expressivos
+
+Quando o requisito exigir fala expressiva, turn-taking nativo e interrupções, comparar arquiteturas streaming STT→LLM→TTS, speech-to-speech e híbrida; usar [adventists-ai/sophon-realtime](https://github.com/adventists-ai/sophon-realtime) apenas como **referência de implementação externa**, não como provider ativado por padrão.
+
+- Medir do microfone até o primeiro áudio reproduzido, qualidade dos turnos, barge-in, backchannel e consistência entre **o que foi ouvido** e o histórico retido após interrupção. Rascunhos antecipados não podem produzir ações externas ou áudio irreversível antes da confirmação da intenção.
+- Separar fala textual, marcas de expressividade e comandos para ferramentas. Tags como riso/suspiro só se tornam áudio por pipeline compatível; não devem aparecer literalmente na resposta.
+- Ao avaliar voice cloning, exigir autorização demonstrável para a voz, controles contra personificação e política de retenção para clips de referência.
+- Compatibilidade declarada com protocolo Realtime/OpenAI não garante equivalência de comportamento, autenticação, latência ou qualidade. Testar com o endpoint e versão reais.
+- Requisitos de GPU/VRAM, downloads de weights e resultados de benchmark publicados pelo projeto são claims do fornecedor até replicação. Sem GPU compatível ou API conectada, desenhar o sistema, não afirmar que roda localmente.
+
+Should-trigger: projeto de agente de suporte em voz full-duplex com interrupções e emoções. Near-miss: transcrição offline simples. Prova: corpus de áudio de teste com sotaques, silêncio, ruído, interrupções e métricas end-to-end.
