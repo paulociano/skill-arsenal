@@ -91,3 +91,17 @@ Em ferramentas B2B usadas o dia inteiro, otimizar **tempo até ação** em vez d
 ## Visualização densa com WebGPU (ChartGPU, 2026-10-24)
 
 Para dashboards com milhares/milhões de pontos ou streaming, medir custo de CPU, memória, GPU, FPS, latência de interação e precisão visual antes de migrar de SVG/Canvas para WebGPU. Aplicar downsampling por objetivo, preservar extremos e gaps, limitar ring buffers e distinguir perda visual aceitável de distorção da métrica. Múltiplos gráficos podem compartilhar device quando suportado, mas validar perda de device, resize, zoom sincronizado, export e acessibilidade. Exigir detecção de WebGPU e fallback legível ou explicitar navegador não suportado: ChartGPU não fornece fallback Canvas/WebGL. Fonte: https://github.com/ChartGPU/ChartGPU.
+
+## Chart cards narrativos e especificações verificáveis (ztd-charts, 2026-11-14)
+
+Para gráficos em dashboards e relatórios, aplicar o fluxo **pergunta → grain e dados → tipo visual → especificação → validação → preview → interpretação**. Método inspirado em [Junhan2/ztd-charts](https://github.com/Junhan2/ztd-charts), sem exigir seu React, CLI ou MCP.
+
+1. Cada gráfico deve responder a **uma pergunta concreta**, com título semântico, período/unidade e um takeaway factual; não gerar conclusões automáticas sem verificar numerador, denominador e filtros.
+2. Escolher tipo por tarefa: barras ordenadas para ranking e composição com muitas categorias; linha para tempo ordenado; slope/dumbbell para dois momentos; waterfall para drivers reconciliados; funnel para estágios comparáveis; sankey para fluxos; histogram/box para distribuição; scatter para relações; bullet para meta. Evitar pie com muitas fatias e mapas quando geografia não importa.
+3. Ao gerar especificação JSON, explicitar campos, tipos, encoding, agregação, escala, locale e formato numérico; validar esquema e dados antes do render. O schema próprio de ztd-charts não é genérico nem suportado automaticamente neste ambiente.
+4. Usar realce visual seletivo apenas para insight material ou estado semântico. Não reduzir tudo a uma cor decorativa, nem esconder categorias necessárias à decisão. Enfatizar exceções com critério verificável.
+5. Para cada gráfico interativo, exigir alternativa acessível (descrição, leitura por teclado e tabela de dados), contraste suficiente, feedback de foco e comportamento reduced-motion. Efeitos de entrada não podem esconder a informação.
+6. Validar preview quanto a eixos/unidades, clipping, séries, ausências, números grandes, zoom, locale e mudanças no dataset; separar verificação numérica de revisão perceptual.
+7. Se `ztd-charts` fizer sentido num projeto React, avaliar licença, versão, peso, navegador, schema e compatibilidade antes de escolher; não executar `npx @latest` como passo automático.
+
+**Should-trigger:** dashboard de vendas que precisa de gráfico e takeaway com base nos dados reais. **Near-miss:** tabela operacional simples sem ganho de visualização. **Prova:** gráfico + fonte/reconciliação do cálculo + revisão visual e acessível, quando runtime disponível.
