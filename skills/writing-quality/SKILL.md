@@ -125,3 +125,17 @@ Fonte: https://github.com/vercel-labs/agent-skills/tree/main/skills/writing-guid
 **Aceite mínimo:** mudanças reversíveis; nenhum trecho autoral apagado sem autorização; pendências localizáveis; estrutura coerente; distinção entre texto mestre e versão exportada; continuidade verificada no escopo editado.
 
 **Proveniência:** [hughhowey/neo](https://github.com/hughhowey/neo), sobretudo [README](https://github.com/hughhowey/neo/blob/main/README.md), [CONTRIBUTING](https://github.com/hughhowey/neo/blob/main/CONTRIBUTING.md) e [AGENTS](https://github.com/hughhowey/neo/blob/main/AGENTS.md). Adaptação de princípios de trabalho autoral (*index cards*, *Darlings*, placeholders, edição recuperável); não pressupõe aplicativo NEO instalado, suas APIs, Electron, autosave, sincronização ou geração de capa.
+
+## Humanização factual em duas passagens (STE80, 2026-11-14)
+
+Quando o usuário pedir para reduzir tom artificial/robótico ou clarear documentação, aplicar seletivamente o método de duas passagens de [Dodaios/ste80-humanizer](https://github.com/Dodaios/ste80-humanizer) (MIT), **sem** prometer evasão de detectores e **sem** impor padrão estilístico universal.
+
+1. **Inventário factual:** registrar números, nomes, datas, qualificadores, negações, atribuições, condições, citações, avisos, URLs e termos técnicos que não podem mudar.
+2. **Passagem 1, resíduos e retórica:** remover aberturas de chatbot, conclusões vazias, adjetivos inflados, autoridade vaga e contrastes performáticos **somente quando prejudicarem a leitura**. Não eliminar ritmo, contraste, humor ou escolhas conscientes do autor.
+3. **Passagem 2, estrutura:** preferir ator explícito, verbo concreto, uma ideia principal por frase, condições antes da ação, terminologia estável e parágrafos coerentes. Dividir frases longas apenas se não cortar causalidade e escopo. A referência de Simplified Technical English é uma heurística; não alegar conformidade com ASD-STE100.
+4. **Intensidade:** light (retoques), padrão (clareza e fluidez), ou estilo técnico controlado para procedimento. No modo rigoroso, revisar pré-condições, passos, avisos e pós-condições; evitar fórmulas rígidas em texto literário, comercial ou pessoal.
+5. **Verificação de fidelidade:** comparar original e resultado para garantir que `may` não virou `will`, `some` não virou `all`, hipótese não virou evidência, citações não foram alteradas e nenhuma ressalva desapareceu.
+6. Se o usuário fornecer exemplo de sua voz, preservá-la acima de defaults de pontuação e tamanho de frase. Em auditoria, descrever achados antes de reescrever; em revisão, devolver o texto final sem metacomentário desnecessário.
+7. Um linter opcional pode apontar frases e sintaxe, mas não comprova qualidade, naturalidade, autoria humana ou integridade factual. Não executar scripts externos para simples revisão.
+
+**Should-trigger:** "deixe este README menos robótico sem alterar fatos". **Near-miss:** "escreva um poema barroco" ou "mude o posicionamento estratégico", que requerem outro contrato. **Prova:** diff sem perda de claims, modais ou links, com clareza maior avaliada no contexto.
