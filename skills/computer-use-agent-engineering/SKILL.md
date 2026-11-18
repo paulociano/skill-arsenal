@@ -189,3 +189,7 @@ Quando houver um navegador realmente controlável e captura autorizada de evento
 7. **Portabilidade**: não presumir Node, `browse`, Browserbase, Stagehand, CDP, browser remoto, proxies ou capacidade de interceptar tráfego no ChatGPT. Sem observação real, entregar plano de instrumentação e marcar execução como não verificada.
 
 Fontes: https://github.com/browserbase/skills/tree/main/skills/browser-trace e https://github.com/browserbase/skills/tree/main/skills/browser-to-api . Princípios adaptados, sem copiar scripts ou instalar serviços.
+
+
+## Separação de abas privadas e operadas por agentes (Yab, 2026-11-18)
+Em desenho de browsers com agentes, tratar **perfil/aba privada** e **aba delegada** como limites de autorização: o agente não deve poder enumerar, ler, observar histórico, extrair cookies ou agir em abas privadas; implementar tal fronteira no browser, não apenas em prompt. Permitir que o agente use uma sessão autenticada somente com o escopo concedido, com confirmação para enviar, pagar, excluir ou alterar permissões. Registrar quais dados de página entram no contexto e são enviados ao provedor do modelo; histórico full-text, snippets e memórias são stores distintos com retenção e opt-out. Verificar separação entre armazenamento local, sync criptografado e telemetria. Não assumir que duas engines (WebKit/Chromium) isolam credenciais ou ferramentas por padrão. Proveniência: https://github.com/yetanotherbrowser/yab (README e `docs/privacy.md`); aplicativo macOS, não conectado ao ChatGPT.
