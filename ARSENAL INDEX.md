@@ -122,6 +122,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **image-to-svg-vectorization** — Converter logos e ícones raster em SVG vetorial editável por tracing de silhueta, com seleção de motor, preservação de vazados e validação estrutural/visual.
 
 - **2d-mesh-avatar-rigging** — Transformar uma ilustração 2D em avatar animável por layers, mesh, pivots, face/mouth/eye rig, corrective variants e pose QA antes de uso ao vivo.
+- **3d-print-production** — Planejar e verificar a produção de peças para impressão 3D do requisito e CAD à preparação de fatiamento, despacho autorizado e feedback físico, sem presumir acesso à impressora.  
+  `skills/3d-print-production/SKILL.md`
 - **3gpp-standards-research** — Pesquisar padrões celulares 3GPP, protocolos e evolução de releases com TS/TR e status normativo verificáveis.
 - **academic-paper-orchestration** — Estruturar e revisar manuscritos acadêmicos a partir de pesquisa real, verificando claims, resultados, figuras e citações.
 - **academic-rebuttal** — Estruturar rebuttals e author responses acadêmicos a partir de reviews, paper, código, regras confirmadas do venue, evidência rastreável, triagem de experimentos e cobertura completa das preocupações dos revisores.
