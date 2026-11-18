@@ -117,3 +117,15 @@ Quando uma base tiver PDFs, imagens, áudio, vídeo e código, representar hits 
 ## Navegação incremental por canais de busca (Television, 2026-10-24)
 
 Quando houver múltiplas fontes locais heterogêneas (arquivos, conteúdo, commits, containers, documentação), escolher canais de descoberta por domínio com um contrato fonte → filtro → preview → ação; buscar e pré-visualizar antes de abrir arquivo inteiro. Separar comandos de leitura de actions que executam processo ou alteram estado; não interpolar string de resultado não confiável em shell sem escaping/allowlist. Em cliente sem CLI/local filesystem, transpor o padrão para índices e conectores disponíveis, não assumir o binário tv instalado. Fonte: https://github.com/alexpasmantier/television.
+
+
+## Biblioteca offline de decisão com fontes verificáveis (Lastbook, 2026-11-18)
+Quando o conhecimento for empacotado para uso desconectado ou de emergência:
+1. Distinguir modo **agora** (necessidade imediata) de **aprender** (trilha de estudo), sem confundir orientação de busca com instrução técnica inventada.
+2. Estruturar por situação/choice, 1–4 leituras prioritárias, limites/avisos, preparação, aprofundamento e, quando aplicável, rota progressiva.
+3. Cada leitura precisa de identificador estável do catálogo + página real (arquivo, não numeração impressa) ou timestamp/trecho conforme modalidade; verificar se o alvo existe.
+4. Preservar `gaps`/lacunas e metadados de publisher/edição/data separados das notas editoriais; evidência desatualizada deve ter alerta, não atualização inferida.
+5. Para base offline, explicitar quais conteúdos/modelos/mapas estão realmente baixados, testados e disponíveis sem rede. Busca lexical e semântica são capacidades diferentes; a ausência de IA local não deve impedir encontrar páginas.
+6. Para operação local de dados, validar manifest e hashes, extração segura de archives, atualizações atômicas com rollback e fronteiras de rede. São requisitos arquiteturais, **não garantias** de uma implementação ainda não testada.
+7. Em temas médicos, químicos ou de sobrevivência, distinguir texto citado de instrução procedimental e priorizar fontes atuais/autoridades competentes.
+Proveniência: https://github.com/Immortal-Protocols/lastbook (README e `content/SCHEMA.md`, 2026-11-18). Adaptação metodológica; Lastbook e modelos offline não foram instalados.
