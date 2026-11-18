@@ -198,3 +198,11 @@ Ao auditar um fluxo de concentração:
 **Trade-off:** “menos controles” não é objetivo em si; o objetivo é **menos trabalho incidental e menor risco de erro** sem prejudicar recursos avançados legítimos. Não copiar literalmente visibilidade apenas em hover, atalhos, limite de recursos ou visuais do NEO como regras universais.
 
 **Proveniência:** [hughhowey/neo](https://github.com/hughhowey/neo), [CONTRIBUTING.md](https://github.com/hughhowey/neo/blob/main/CONTRIBUTING.md) e [AGENTS.md](https://github.com/hughhowey/neo/blob/main/AGENTS.md). O padrão é uma lente de auditoria, não uma certificação de usabilidade do aplicativo original; nada do runtime Electron foi instalado ou testado.
+
+
+## Triagem antitemplate com prioridade no fluxo real (Unslopovich, 2026-11-18)
+Em revisões de aplicativos/websites gerados com IA, **não** adotar uma regra estética universal contra gradientes/cartões. Priorizar: ações essenciais quebradas ou escondidas, back navigation, login e teclado, foco e acessibilidade, ausência de feedback de erro, números não comprovados, densidade adequada ao trabalho, diferenças nativas mobile/web e interrupções sem propósito. Separar:
+- **Inspeção de runtime:** observação de tarefas representativas, estados vazios/erro, navegação, responsividade e comportamento real;
+- **Linter estático:** detector de padrões suspeitos (div clicável, foco suprimido, zoom desativado, listas não virtualizadas, copy genérica, cards aninhados, emojis decorativos); achado é hipótese, não bug provado;
+- **Medição:** crash, latência e uso real precisam de testes, não de screenshot ou nota subjetiva.
+Começar por tarefas e identidade visual existentes; proteger convenções que usuários aprenderam. Propor mudanças em componentes compartilhados, verificar antes/depois, registrar regressões e não trocar uma estética genérica por outra. Proveniência: https://github.com/erkamyaman/unslopovich (README, pesquisa referenciada pelo autor). As estatísticas e scores do projeto não foram reproduzidos; não instalar nem presumir o detector.
