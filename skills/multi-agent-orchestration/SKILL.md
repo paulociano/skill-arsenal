@@ -137,3 +137,21 @@ Quando um design ou implementação tem mais de uma forma defensável e a primei
 6. **Verificar** o artefato sintetizado com evidência fresca. O resultado pertence à sessão líder; saídas de candidatos e juiz são insumos, não veredito.
 
 Fonte: [Yeachan-Heo/oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) (MIT, v5.8.2, 2026-11-09), skill `arena`, port de pstack (Lauren Tan, cursor/plugins). Absorção metodológica, sem os caminhos `.omc/`, o CLI `omc` nem hooks.
+
+
+## Workspace persistente de agentes: aprendizados do OpenBot (2026-11-18)
+
+Fonte: https://openbot.run/ e https://github.com/nightly-labs/openbot (README, consulta estatica em 2026-11-18).
+
+Aplicar estes contratos **somente quando o runtime realmente disponibilizar** agentes persistentes e mensageria entre agentes:
+
+1. **Fila por agente:** registrar message/task ID, ordem FIFO, owner, estado (queued/running/paused/cancelled/verified), retries e recibo de resultado. Persistencia em disco e recuperacao apos crash precisam ser comprovadas, nao presumidas.
+2. **Canal compartilhado:** a conversa do grupo nao substitui atribuicao. Cada tarefa tem um unico responsavel ativo; delegacao, reatribuicao, pausa e retomada precisam ser explicitas e rastreaveis.
+3. **Troca de provedor:** separar identidade/objetivo/memoria do agente de sua sessao no modelo. Registrar provider/model efetivos, limites e falhas; fallback nao garante equivalencia de ferramentas, qualidade nem permissao.
+4. **Transferencia de arquivos:** anexos e paths devem ter ownership, permissao, versao e recibo. Nao transferir credenciais nem usar chat entre agentes como canal de autoridade.
+5. **Controle humano:** intervencoes de stop, reassign e approval sao eventos auditaveis; tarefas de alto risco precisam de gate externo real antes do efeito, mesmo que o aplicativo suporte autonomia ampla.
+6. **Continuacao:** apos crash/restart, reconciliar fila, arquivos, efeitos externos e idempotencia antes de continuar; status do chat nao prova conclusao.
+7. **Seguranca concreta do OpenBot:** a fonte declara `danger-full-access` com `approvalPolicy: never` apos consentimento inicial. Portanto, **nao inferir isolamento nem per-action approval**, usar ambiente limitado e backups se for implantado, e nao recomendar acesso a arquivos/contas sensiveis sem contencao.
+8. **Limites:** OpenBot e um aplicativo Electron/self-hosted com binarios, CLIs, contas e licenca PolyForm Noncommercial. Nenhum dos seus mecanismos esta instalado ou integrado por esta adaptacao metodologica ao ChatGPT. A capacidade so existe apos instalacao, configuracao, autorizacao e teste do runtime externo.
+
+Use como referencia complementar aos contratos de orquestracao existentes, nao como uma skill separada nem como instrucao para instalar/executar o OpenBot.
