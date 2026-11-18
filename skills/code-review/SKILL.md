@@ -126,3 +126,23 @@ Em codebases com dívida técnica, procurar sinais estruturais além de lint: re
 Para revisão que também envolverá correções, manter quatro estados explícitos: **review → síntese → correção autorizada → verificação**. Consolidar findings duplicados de múltiplas perspectivas sem inventar revisores independentes; selecionar correções por checklist com aprovação/escopo do usuário; preservar código não relacionado; executar testes focados e regressão quando disponíveis; registrar estado de cada finding como aberto, aceito, corrigido, verificado ou descartado, com evidência e motivo. Review-only nunca altera o código do produto. Guardar artefatos de revisão fora dos diretórios de produto quando isso reduzir ruído e houver persistência disponível.
 
 **Proveniência:** [vikingmute/review-forge](https://github.com/vikingmute/review-forge), SKILL.md consultado em 2026-10-19. O fluxo foi adaptado sem comandos específicos, múltiplos modelos obrigatórios ou acesso presumido ao working tree.
+
+
+## Higiene estrutural em diffs pequenos (CodeHygiene, 2026-11-18)
+
+Quando uma revisão de codigo novo ou substancialmente alterado exigir avaliacao de **legibilidade estrutural**, acrescentar um pass separado de `Standards` e `Spec`, sem transforma-lo em nota automatica de qualidade:
+
+1. **Escopo restrito:** focar arquivos e funcoes tocados; para arquivos grandes existentes, inspecionar apenas as faixas alteradas e o contexto suficiente. Nao varrer e reescrever todo o legado por padrao.
+2. **Baseline funcional:** confirmar sintaxe, regras de projeto, testes e typecheck quando possivel; melhoria estilistica nao tem prioridade sobre comportamento, confiabilidade, seguranca e convencoes obrigatorias.
+3. **Sinais candidatos:** fluxo piramidal que poderia usar guard clauses; `catch/except` que silencia falhas; comentarios que apenas narram o codigo; identificadores indecifraveis; `Factory/Manager/Helper` sem responsabilidade real; indices magicos; assinaturas com flags booleanas ambiguas; blocos duplicados ou renomeados; cadeias de expressoes excessivamente densas.
+4. **Refutar cada achado:** validar contexto de dominio, semantica, linguagens e convencoes. `Factory` pode representar um padrao real, nomes curtos podem ser idiomaticos em matematica e comentarios podem preservar invariantes. Um diagnostico estrutural nao prova bug e nao justifica remover tratamento legitimo de erro.
+5. **Priorizar utilidade:** corrigir primeiro os pontos de manutencao com impacto demonstravel, em componentes tocados; separar sugestoes esteticas e preferencias de findings materiais.
+6. **Limite de iteracoes:** ate duas rodadas focadas de ajuste/reverificacao quando o usuario pedir correcao, evitando ciclos de otimizar pontuacao. Reexecutar testes relevantes apos a edicao.
+7. **Detector opcional:** se `codehygiene` estiver realmente instalado e autorizado no runtime, ele pode fornecer sinais por linha em `--json`; registrar versao, threshold, escopo e falsos positivos. Nao inferir scores, squiggles ou sucesso do CLI sem executar. Nao instalar `npx skills`, `uvx`, modelos ou hooks apenas para a revisao.
+8. **Saida:** relatar caminho/linha, evidencia, por que incomoda a manutencao, proposta minima, risco comportamental, estado de teste e problemas conscientemente ignorados. Nao usar uma nota de higiene para afirmar que o codigo esta correto ou seguro.
+
+### Guardrails e procedencia
+- A fonte original se declara **early preview** e recomenda checks em diffs pequenos; benchmarks reportados pelo autor nao foram reproduzidos nesta adaptacao.
+- Seu runtime requer Python >=3.10 e NumPy, carrega `weights.npz` e pode consultar a versao no GitHub por update check periodico, salvo opt-out/CI. Em ambiente sensivel, usar `--no-update-check` quando efetivamente instalado.
+- A metodologia e textual e portavel; **o detector/modelo nao foi instalado, executado nem integrado ao ChatGPT**.
+- Fonte: https://github.com/brianbell-x/codehygiene (README, `codehygiene/SKILL.md`, `pyproject.toml`, `codehygiene/update_check.py`, consultados em 2026-11-18).
