@@ -33,3 +33,7 @@ Use quando o usuário pedir auditoria, estratégia, planejamento, otimização, 
 
 ## Proveniência
 Adaptada metodologicamente de https://github.com/AgriciDaniel/claude-ads e https://github.com/irinabuht12-oss/marketing-skills, avaliados em 2026-10-10. Os scripts, comandos Claude, conectores e thresholds não foram importados.
+
+
+## Incrementalidade além da atribuição (boring-marketing-skills, 2026-11-18)
+Para campanhas em que a plataforma reivindica chamadas, visitas ao perfil ou conversões de marca, **conversões atribuídas não demonstram causalidade**. Preferir medidas independentes: registros first-party de chamadas recebidas, atendidas, duração, números únicos/novos, formulários, agendamentos e vendas, descontando ligações de suporte/spam. Planejar teste de pausa/reinício ou holdout com janela antes-durante-depois, controle de dia da semana, sazonalidade, outras campanhas e mudanças comerciais, riscos de perder demanda, amostra/intervalos e regras de decisão pré-definidas. **Nunca pausar, reativar ou alterar gasto sem autorização explícita.** Relatório deve admitir `inconclusivo` quando dados, prazo ou controles insuficientes e estimar custo por resultado incremental apenas se sustentado. Fonte: https://github.com/boringmarketer/boring-marketing-skills/blob/main/skills/ads-incrementality-check/SKILL.md; scripts e integrações externos não foram executados.
