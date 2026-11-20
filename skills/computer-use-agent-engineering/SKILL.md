@@ -193,3 +193,18 @@ Fontes: https://github.com/browserbase/skills/tree/main/skills/browser-trace e h
 
 ## Separação de abas privadas e operadas por agentes (Yab, 2026-11-18)
 Em desenho de browsers com agentes, tratar **perfil/aba privada** e **aba delegada** como limites de autorização: o agente não deve poder enumerar, ler, observar histórico, extrair cookies ou agir em abas privadas; implementar tal fronteira no browser, não apenas em prompt. Permitir que o agente use uma sessão autenticada somente com o escopo concedido, com confirmação para enviar, pagar, excluir ou alterar permissões. Registrar quais dados de página entram no contexto e são enviados ao provedor do modelo; histórico full-text, snippets e memórias são stores distintos com retenção e opt-out. Verificar separação entre armazenamento local, sync criptografado e telemetria. Não assumir que duas engines (WebKit/Chromium) isolam credenciais ou ferramentas por padrão. Proveniência: https://github.com/yetanotherbrowser/yab (README e `docs/privacy.md`); aplicativo macOS, não conectado ao ChatGPT.
+
+
+## Captura e replay de fluxos determinísticos (Ui.Vision, WebBrain, BrowserKitten; 2026-11-19)
+
+Quando uma tarefa browser/desktop for recorrente e a sequência puder ser reproduzida, avaliar a passagem **trajetória observada → macro parametrizada → replay controlado** em vez de exigir que um LLM redescubra cada clique:
+
+1. Capturar uma execução autorizada e bem-sucedida com targets, condições prévias, parâmetros, postconditions e pontos onde a interface muda.
+2. Separar valores voláteis (IDs, senhas, datas, dados de clientes) da definição da macro. Não gravar cookies, tokens, senhas, prompts sensíveis ou screenshots de clientes em exemplos compartilháveis.
+3. Preferir API/DOM/alvos semânticos observados; usar OCR/matching visual apenas quando necessário, com resolução, escala e idioma como condições explícitas.
+4. Introduzir checkpoints após mudanças de página, downloads, salvamentos e formulários. Em erro de target, pausar/reobservar; não repetir cegamente uma ação potencialmente não idempotente.
+5. Exigir aprovação humana para submissão, compra, envio, exclusão, troca de permissões e outras ações consequenciais. Um plano aprovado não autoriza efeitos externos ilimitados.
+6. Fazer replay em ambiente de teste com estado inicial definido; comparar outputs, quantidade de etapas, falhas, intervenções e efeitos externos. Diferenciar script gerado, macro salva e execução real verificada.
+7. Para watches e follow-ups, definir gatilho, frequência, limite de tentativas, condição de parada, horário de operação e dependência de browser/computador ativo. Só prometer execução programada quando uma ferramenta conectada a suportar.
+
+Referências: https://github.com/A9T9/RPA (macros e ponte MCP externa); https://github.com/webbrain-one/webbrain (modos read-only/act/dev, plano aprovado e workflows); https://github.com/Player-YN/BrowserKitten (execução em sessão local e follow-ups). As extensões, bridge MCP, OCR, controle de desktop e agendadores locais **não** são ferramentas presumidas disponíveis no ChatGPT. Revisão estática dos READMEs em 2026-11-19.
