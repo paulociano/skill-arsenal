@@ -65,3 +65,18 @@ Síntese adaptada de `facebookresearch/secpriv-skill` e `Clear-Capabilities/agen
 Ao revisar ferramentas de inspeção de conexões por sockets/processos e GeoIP, separar observação de conexão, atribuição a executável e inferência geográfica. Um IP geolocalizado é aproximação de infraestrutura, não localização de pessoa nem evidência de exfiltração; CDN, NAT, VPN, proxies e conexões locais podem distorcer interpretações. Registrar janela de coleta, método, permissões, atualização da base GeoIP, processo/PID, status de assinatura/verificação e confiança; ausência de conexão observada não comprova ausência de tráfego. Avaliar retenção, coleta de paths/processos, exposição do dashboard local, autostart, notificações e integração MQTT como superfícies de privacidade. Usar baseline histórico e novas ocorrências para priorizar investigação, não marcar automaticamente todo país ou ASN incomum como ameaça.
 
 Referência: https://github.com/olalie/tapmap . Ferramenta de visibilidade, não firewall nem detector completo; não foi instalada nem executada.
+
+
+## Camada de proteção pré-provedor para IA (PasteGuard, 2026-11-19)
+
+Ao revisar uma aplicação que encaminha prompts, documentos, logs ou respostas a LLMs externos, considerar um **boundary de privacidade antes do provedor**, além da privacidade em storage e logs:
+
+1. Inventariar campos e segredos que podem sair no prompt, system context, tool results, anexos, embeddings e streaming; distinguir PII estruturada (e-mail, documento, credencial) de entidades semânticas (nomes, locais) e dados que precisam permanecer íntegros para executar a tarefa.
+2. Mapear o caminho `input → detector → placeholder/tokenização → roteamento cloud/local → resposta → restauração`. Verificar que falhas do detector, dados não reconhecidos e formatos não suportados não sejam descritos como anonimização total.
+3. Usar placeholders estáveis apenas dentro do escopo necessário, evitando que tabela de reversão e originais atravessem o mesmo boundary que se pretende proteger; validar colisão, múltiplas ocorrências e correspondência exata na resposta, inclusive streaming.
+4. Verificar vazamentos paralelos: anexos, prompts de ferramentas, URL/query, telemetria, dashboard, traces, logs de erro, cache, retries, métricas e backups. Redigir logs **antes** de persistir, não apenas antes de chamar o modelo.
+5. Tratar `mask` e `route` como controles distintos: mascaramento antes de envio externo versus roteamento de conteúdo sensível para modelo local. Roteamento local não impede vazamentos por outros canais.
+6. Testar casos positivos/negativos e adversariais com dados sintéticos: segredo suportado, nome ambíguo, falso positivo, placeholder repetido, resposta parcial, timeout, streaming e erro upstream. Exigir teste de ausência de original no payload realmente enviado.
+7. Registrar risco residual, escopo de cobertura, performance, idioma, custódia da tabela de reversão, retenção e bases de legitimidade para tratamento. Não afirmar conformidade legal ou proteção absoluta a partir da presença de proxy.
+
+**Portabilidade e segurança:** PasteGuard (https://github.com/sgasser/pasteguard) é uma implementação externa em Bun/Hono com detector GLiNER, proxy, extensão e armazenamento. Não presumir instalação, interceptação nativa de mensagens do ChatGPT, acesso à configuração do provedor, nem segurança de imagem Docker `latest`; aplicar a metodologia com os acessos efetivamente disponíveis. Fonte: README do projeto, consulta estática em 2026-11-19.
