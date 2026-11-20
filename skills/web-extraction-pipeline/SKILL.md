@@ -151,3 +151,19 @@ A separação search/map/scrape/batch/crawl/interact, schema-first extraction e 
 Extração em duas etapas (discovery estruturado → páginas de detalhe) refinada a partir de `PrettyPrinted/youtube_video_code` (2026-07-31), sem incorporar proxy bypass, anti-detection ou scraping específico do site demonstrado.
 
 Origem local: [web-extraction-pipeline.docx](../web-extraction-pipeline.docx).
+
+
+## Cobertura de tabelas dinâmicas e exportação com proveniência (BrowserSkill, 2026-11-19)
+
+Para extrair tabelas HTML, ARIA grids, listas paginadas ou views virtualizadas de um navegador **realmente controlável**, não confundir o DOM carregado com o conjunto completo de registros:
+
+1. **Discover e scope:** localizar o container certo, identificando documento, frame e shadow root acessível; resolver ambiguidade em vez de escolher a primeira tabela ou link. Tratar referências de elementos como efêmeras e invalidá-las após navegação, remoção de nó ou troca de attachment.
+2. **Schema sem coerção prematura:** preservar identificadores, datas, moedas e códigos como strings; separar `null` (ausente/oculto/posição coberta por merge), `""` (célula existente vazia) e valor preenchido. Desambiguar cabeçalhos repetidos por chaves estáveis e preservar hierarquia de headers.
+3. **Proveniência por linha:** guardar URL da página/frame, timestamp, ordem, posição DOM/ARIA quando disponível, espécie de linha (dado/total/footer), locators diagnósticos e aviso de células mescladas; não afirmar que locator é seletor permanente.
+4. **Coverage explicitado:** registrar `loaded_rows`, `returned_rows`, estimativas/contagens declaradas, paginação, truncation, warnings e `dataset_complete: true|false|unknown`. Marcar `unknown` quando o DOM não comprova completude; grids virtualizados podem expor só algumas linhas mesmo quando anunciam um total. Um número observado em `aria-rowcount` não valida sozinho todos os registros.
+5. **Ordem e fragmentação:** para tabelas ARIA, avaliar `aria-rowindex`/`aria-colindex`; só mesclar partes de uma linha quando os índices explícitos forem compatíveis e não conflitantes. Preservar warnings para posições duplicadas, colunas faltantes, frames inacessíveis e linhas incompletas. Não transformar lacuna em zero.
+6. **Limites e falhas:** limitar linhas, colunas, bytes, frames e tempo; retornar linhas completas, estado parcial e erros estruturados. Após truncamento, não apresentar totalizações como se fossem do dataset inteiro.
+7. **Export seguro:** CSV com quoting correto, metadados de origem, checagem de integridade e proteção contra *CSV formula injection* quando aberto em planilha. O valor bruto pode ser preservado num JSON protegido; `--csv-safe` é funcionalidade da ferramenta externa, não recurso presumido deste ambiente.
+8. **Teste:** numa tabela de 100 registros com somente 20 linhas carregadas, o output deve mostrar 20 linhas mais `dataset_complete: unknown/incomplete`, nunca afirmar exportação dos 100. Near-miss: tabela estática pequena com evidência de completude não exige automação de scroll/paginação.
+
+Fonte: https://github.com/Tencent/BrowserSkill, `docs/structured-extraction.md`, consultado em 2026-11-19. **Portabilidade:** não pressupor a CLI `bsk`, extensão Chromium, CDP, comandos MCP, OCR ou acesso a frames nesta sessão; adaptar estas verificações aos dados e ferramentas efetivamente disponíveis.
