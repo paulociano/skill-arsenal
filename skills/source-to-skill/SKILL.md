@@ -93,3 +93,19 @@ Criar uma pasta com SKILL.md iniciado por frontmatter YAML `name` e `description
 Adaptada de virgiliojr94/book-to-skill.
 
 Origem local: [source-to-skill.docx](../source-to-skill.docx).
+
+## Material de estudo derivado com cobertura e auditoria de fonte (Skill-Anything, 2026-11-21)
+
+Quando uma fonte longa também precisar virar guia de estudo, quiz, exercícios ou flashcards, preservar a distinção entre **skill de conhecimento** e **study pack**:
+
+1. Segmentar por capítulos/seções reais e construir um índice de cobertura antes de gerar perguntas; para fontes extensas, processar blocos menores e consolidar síntese global sem truncar silenciosamente o final.
+2. Para cada cartão, questão e exercício factual, armazenar locator da seção e evidência local (trecho literal curto ou referência verificável). Checar o trecho contra a fonte; não inventar citações.
+3. Distribuir itens por seções de acordo com objetivos de aprendizagem, importância e volume; não alegar “cobertura completa” se uma seção relevante não foi examinada.
+4. Auditar duplicatas semânticas, gabaritos, alternativas, soluções, resposta impossível, confusão entre fonte e inferência e itens sem evidência; rejeitar ou sinalizar os itens não sustentados.
+5. Exportar para Markdown, tabela TSV compatível com importação no Anki, HTML estático ou formato de skill **somente quando solicitado e realmente gerado**. A existência de um arquivo TSV não equivale a inserir cards no Anki.
+6. Em material privado, evitar publicações automáticas, analytics, URLs remotas incorporadas e envio de conteúdo para modelos externos sem necessidade ou autorização. Verificar licença e redistribuição antes de compartilhar o pacote.
+
+**Should-trigger:** “Transforme este livro em guia, 30 flashcards e quiz, mostrando a fonte de cada questão.”
+**Near-miss:** “Resuma este parágrafo”; não exigir pipeline nem exportação múltipla.
+
+**Proveniência:** [SYuan03/Skill-Anything](https://github.com/SYuan03/Skill-Anything), especialmente sua abordagem de segmentação, cobertura, verificação de citações e auditoria; também [PaoloJN/recap](https://github.com/PaoloJN/recap) para navegação de transcrições por momento/capítulo, quando houver timestamps verificáveis. Metodologia absorvida sem instalar CLI, extensões, modelos ou executores externos.
