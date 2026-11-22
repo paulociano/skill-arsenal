@@ -160,6 +160,8 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 - **codebase-design** — Projetar ou refatorar módulos profundos com interfaces pequenas, seams explícitos, alta alavancagem, locality e testabilidade, evitando abstrações rasas e pass-through.
 - **coaching-development-loop** — Transformar evidências de desempenho ao longo do tempo em coaching longitudinal, distinguindo melhoria, regressão e padrão estável e fechando o ciclo com prática observável e nova verificação.
 - **code-review** — Revisar mudanças de código e feedback de PR separando conformidade com padrões, fidelidade à spec e impacto real.
+- **codebase-design-derivation** — Ensinar arquitetura de um repositório pela reconstrução socrática de decisões de design, restrições e trade-offs, ancorada em arquivos e símbolos reais, sem implementar mudanças.  
+  `skills/codebase-design-derivation/SKILL.md`
 - **code-understanding-audit** — Explicar código ou auditar decisões arquiteturais com evidências, ajustando profundidade ao conhecimento do leitor.
 - **color-psychology-context** — Escolher e revisar cores por significado, contexto cultural, contraste, função e associação de marca sem tratar psicologia das cores como regra universal.
 - **codex-cost-efficiency** — Reduzir tokens e gasto em tarefas de desenvolvimento no Codex por medição, leitura seletiva, controle de saída e comparação de tarefas concluídas.
