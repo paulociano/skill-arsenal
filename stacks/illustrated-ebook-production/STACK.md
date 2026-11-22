@@ -89,3 +89,20 @@ A stack deve conseguir:
 
 ## Provenance
 Stack consolidada a partir de padrões portáveis observados em GenielabsOpenSource/style-consistency-ai, kart-io/picture-skills, JimLiu/baoyu-skills, jmilinovich/comicgen e jakerains/StoryFox.
+
+## Variante: livro-aula narrado e interativo (Papermorph, 2026-11-21)
+
+Usar quando o usuário solicitar **livro educativo animado**, narração sincronizada com diagramas, páginas exploráveis ou livro infantil com interação real. Livro ilustrado estático continua usando o pipeline padrão.
+
+1. **Selecionar modalidade:** lição por capítulo; livro ilustrado com personagens/cenários; documentário educacional; história em scroll; mapa temporal explorável. Não converter todos em vídeo automaticamente.
+2. **Piloto por capítulo:** validar primeiro uma amostra curta com direção visual, objetivos, conteúdo factual, voz e acessibilidade; manter um pequeno contrato de estilo/continuidade aprovado para capítulos seguintes.
+3. **Beat sheet:** dividir cada capítulo em estados visuais/narrativos com roteiro, duração prevista, frase falada, ação/elemento que muda e fonte factual. Sincronizar animação e texto com áudio real somente se houver arquivo de narração e timestamps verificados.
+4. **Interação pedagogicamente necessária:** incluir pausa, retrocesso e captions em vídeo; em páginas interativas, deixar o aluno manipular um estado causal ou responder a um microcheck. Questões matemáticas verificam equivalência quando a capacidade real permitir, não apenas igualdade de string.
+5. **Artefatos e fidelidade:** separar fonte protegida, extratos, planejamento e assets do site publicável; não publicar scans, ilustrações ou trilhas de terceiros sem licença suficiente. Mapas históricos e gráficos precisam de dados e datação de origem, nunca movimento inventado.
+6. **QA ampliado:** inspecionar screenshots em pontos-chave, continuidade temporal, sobreposições, cortes, sincronização de legenda, erros de console, acessibilidade, saída em dispositivos e consistência de afirmações. Sem navegador/áudio/testes reais, registrar a verificação como não executada.
+7. **Entrega:** HTML estático ou outro formato realmente produzido; MP4, SRT ou SCORM somente quando o pipeline disponível gerar e validar cada arquivo. Não presumir `ffmpeg`, Playwright, TTS, kits/engine do projeto de origem ou subagentes.
+
+**Should-trigger:** “Transforme o capítulo de álgebra em lição web narrada com gráficos que aparecem conforme a explicação e exercícios de revisão.”
+**Near-miss:** “Gere um PDF ilustrado com capítulos”; usar o fluxo padrão sem runtime de animação.
+
+**Proveniência:** [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph), `.claude/skills/papermorph/SKILL.md` (2026-11-21). Adaptado apenas o workflow de escolha de modalidade, piloto, beat sheet, sincronização e QA; não importados scripts, engine, voz sintética ou outros serviços externos.
