@@ -148,3 +148,21 @@ Quando o aluno enviar resolução manuscrita ou imagem de etapas matemáticas:
 **Should trigger:** 'Corrija minha resolução fotografada da integral e me dê uma dica sem resolver'. **Near miss:** 'Quanto é 8 vezes 7?'.
 
 **Origem:** https://github.com/AbdullahAlhariri/penmentor. Padrão pedagógico incorporado sem Xournal++, X11, Python, Manim ou CLI de agentes.
+
+## Ciclo adaptativo de prática e remediação (fontes educacionais, 2026-11-21)
+
+Quando a tarefa for tutoria, aprendizagem de idiomas ou revisão recorrente:
+
+1. **Contrato de competência:** escolher objetivo observável, nível inicial e pré-requisitos; registrar o que conta como desempenho independente, com suporte e em transferência.
+2. **Prática variada:** distinguir recuperação livre, recuperação com pista e reconhecimento; usar reconhecimento como apoio inicial, não como prova final de domínio.
+3. **Revisão planejada:** distribuir recuperações ao longo do tempo, ajustando a distância ao horizonte de retenção e ao resultado real; não afirmar que exista uma curva de esquecimento individual exata ou um intervalo universal.
+4. **Erro com diagnóstico:** classificar resposta incorreta como desconhecimento, confusão conceitual, falha de recuperação ou lapso; verificar essa hipótese com uma questão contrastiva curta antes de reensinar.
+5. **Remediação direcionada:** explicar o mecanismo do erro, oferecer uma pista graduada e uma nova tarefa equivalente; para erros recorrentes, alternar representação textual, exemplo contextual e mnemônico autorizado pelo aluno, sem reescrever registros externos automaticamente.
+6. **Roleplay por missão:** definir situação, papel do interlocutor, objetivo e nível. Oferecer modo **guiado** (pistas e traduções) ou **imersivo** (interação prioritariamente na língua-alvo); permitir saída do modo imersivo a pedido, sem bloquear a aprendizagem por regra artificial.
+7. **Evidência e progressão:** registrar, quando autorizado, item/competência, erro observado, auxílio utilizado, desempenho na transferência e próxima oportunidade de revisão. Não confundir streak, XP, confiança ou quantidade de cards com domínio.
+8. **Privacidade e revisão:** nunca presumir conexão com Anki, ferramentas de áudio, calendário ou memória externa; apresentar exportação ou mudanças de decks como proposta, usando somente conector realmente disponível e respeitando aprovação para escritas.
+
+**Should-trigger:** “Monte uma trilha de francês, teste minha fala por situações e revise os itens que errei ontem.”
+**Near-miss:** “Traduza esta frase para francês”; resposta pontual, sem gerar um ciclo de estudo.
+
+**Proveniência:** metodologias abstraídas de [FreeLingo](https://github.com/artcc/freelingo), [Immersive Language Learning](https://github.com/ZackAkil/immersive-language-learning-with-live-api), [AnkiAIUtils](https://github.com/thiswillbeyourgithub/AnkiAIUtils), [Tutor-GPT](https://github.com/plastic-labs/tutor-gpt) e amostra de *retrieval-practice-generator* e *spaced-practice-scheduler* do catálogo [education-agent-skills](https://github.com/GarethManning/education-agent-skills). Não pressupõe acesso aos runtimes, modelos de perfilamento, infraestrutura de voz ou ao Anki desses projetos.
