@@ -166,3 +166,18 @@ Quando a tarefa for tutoria, aprendizagem de idiomas ou revisão recorrente:
 **Near-miss:** “Traduza esta frase para francês”; resposta pontual, sem gerar um ciclo de estudo.
 
 **Proveniência:** metodologias abstraídas de [FreeLingo](https://github.com/artcc/freelingo), [Immersive Language Learning](https://github.com/ZackAkil/immersive-language-learning-with-live-api), [AnkiAIUtils](https://github.com/thiswillbeyourgithub/AnkiAIUtils), [Tutor-GPT](https://github.com/plastic-labs/tutor-gpt) e amostra de *retrieval-practice-generator* e *spaced-practice-scheduler* do catálogo [education-agent-skills](https://github.com/GarethManning/education-agent-skills). Não pressupõe acesso aos runtimes, modelos de perfilamento, infraestrutura de voz ou ao Anki desses projetos.
+
+## Competência multimodal, leitura contextual e evidência multidimensional (2026-11-21)
+
+Usar quando a aprendizagem envolver vocabulário descoberto em imagens/vídeos, documentos longos ou tutoria com vários tipos de avaliação, não para tradução pontual.
+
+1. **Captura contextual:** extrair palavras/frases de textos, legendas fornecidas, descrições de imagens ou situações reais; preservar frase original, significado contextual, uso pragmático e grau de confiança. Distinguir tradução contextual de equivalência literal. Quando não houver acesso a áudio, vídeo, OCR ou legenda, não alegar que foram processados.
+2. **Prática sob demanda:** partir dos itens que o aluno ainda não domina e oferecer definição, contraste, produção em nova frase e simulação comunicativa; não assumir domínio a partir de autoavaliação binária 'sei/não sei'.
+3. **Triangulação por competência:** analisar separadamente **recuperação da memória**, **compreensão**, **organização conceitual** e **aplicação/transferência**; evidências podem vir de explicação pelo aluno (Feynman), questões inéditas, situações reais e exercícios. Não reduzir todas as dimensões a um número sem rubrica auditável.
+4. **Revisão não monotônica:** manter progresso histórico, mas permitir constatar regressão ou esquecimento em avaliações posteriores. Não usar score que só aumenta como prova de domínio real.
+5. **Orientação visual:** quando houver elemento interativo realmente executável, relacionar ação, hipótese e mudança observável; preferir uma visualização causal a enfeites. Se não houver runtime de interação, usar desenho estático com o mesmo raciocínio, sem simular aula ao vivo.
+6. **Foco e continuidade:** escolher base documental/trecho autorizado, citar a fonte de conteúdo estudado e distinguir contexto de sessão de memória durável. Antes de exportar flashcards, registros, notas ou agendas, exigir ferramenta e permissão real.
+
+**Should-trigger:** “Quero estudar física a partir deste PDF: me teste, faça eu explicar e mostre onde ainda não consigo aplicar.” **Near-miss:** “Qual é a tradução desta palavra?” exige resposta curta, sem painel de domínio.
+
+**Proveniência:** [wordpecker-app](https://github.com/baturyilmaz/wordpecker-app) (aquisição contextual e vocabulário visual), [LLPlayer](https://github.com/umlx5h/LLPlayer) (legendas bilíngues e tradução contextual), [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) e [ChatTutor](https://github.com/HugeCatLab/ChatTutor) (orientação visual e manipulação de representações), [DeepTutor](https://github.com/HKUDS/DeepTutor) (workspace de aprendizagem e modos especializados), [Get It](https://github.com/beltromatti/get-it) (dimensões de domínio, com **rejeição explícita** à pontuação monotônica). Apenas metodologia; sem aplicativos, voz, players, agentes ou modelos externos instalados.
