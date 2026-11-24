@@ -145,3 +145,18 @@ Para avaliar treinamento ou adaptacao de modelos pequenos, separar o experimento
 MiniMind e uma referencia didatica PyTorch com modelo de 64M parametros e variante MoE. Custos e duracoes do autor nao sao garantias. Este owner continua responsavel por inferencia; para um projeto extensivo de treinamento, estruturar experimento proprio em vez de confundir etapas.
 
 Proveniencia: https://github.com/jingyaogong/minimind (README da branch master, consultado em 2026-10-18). Metodologia absorvida, sem copiar scripts/datasets/checkpoints.
+
+## Otimização experimental de serving sob limites físicos (2026-11-24)
+
+Para pedidos de tuning de decode/prefill, TTFT, concorrência ou KV cache, usar um ciclo de hill-climbing controlado, não uma lista genérica de flags.
+
+1. Fixar modelo/revisão, engine/build, quantização, hardware, comprimento real de contexto, concorrência, orçamento de memória e piso de qualidade. Medir bandwidth, compute efetivo e estado térmico quando houver hardware disponível.
+2. Estimar teto por regime: decode limitado por memória ≈ bandwidth efetivo / bytes efetivamente movimentados por token (pesos ativos, KV, head e overhead); prefill por FLOPs efetivos / FLOPs por token; KV por bytes por token/camada efetiva e orçamento residual. São aproximações condicionais ao gargalo, não limites universais. Em speculative decoding contabilizar custo de draft e verificação por token emitido, não apenas acceptance rate.
+3. Registrar baseline, teto estimado, hipótese e configs versionadas. Alterar uma variável por rodada; intercalar controle/candidato/controle, com pelo menos seis amostras de decode quando praticável, mediana e dispersão. Repetir ganhos surpreendentes; aceitar apenas ganho acima do ruído contra ambos controles e sem regressão além do orçamento pré-acordado. Não tornar 3% um limiar universal.
+4. Separar startup, TTFT, cold/warm prefill, decode individual/agregado, latência ponta a ponta e memória real (inclusive residência GPU em memória unificada). Contar tokens via tokenizer/usage confiável, nunca chunks SSE. Registrar cache hits, erros, outputs degenerados e interferência de outros jobs.
+5. Priorizar knobs reversíveis antes de kernels: caches de compilação, graphs, draft length por contexto/concorrência, KV/admission, chunked prefill e attention backend; usar profiling para justificar trabalho de kernel.
+6. Antes de promover: retrieval em contextos intermediário e máximo, soak concorrente no contexto contratado, qualidade representativa e equivalência quando alegar lossless. Rebuild limpo com pesos, engine e dependências pinados; repetir comparação e testes de carregamento, chat e tools quando aplicáveis. Preservar rollback e não parar processos alheios.
+7. Ledger por rodada: config, hardware, timestamps, métricas, dispersão, falhas, decisão e motivo. Se ganhos sucessivos estiverem dentro do ruído, declarar plateau e listar hipóteses restantes. Sem GPU/servidor/medição real, entregar plano e fórmulas com inputs ausentes, nunca números inventados.
+
+Should-trigger: otimizar um servidor local sob teto de VRAM e contexto. Near-miss: pedir resposta mais rápida no ChatGPT hospedado; não afirmar controle sobre kernels, pesos ou serving do produto.
+Fonte: https://github.com/sybil-solutions/inference-optimisation-skill (README e skills/inference-optimisation/SKILL.md). Metodologia adaptada; harness Python/bash, watchdog, servidores e benchmarks externos não executados nem importados.

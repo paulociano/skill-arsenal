@@ -196,3 +196,15 @@ Combina com experiment-design, llm-observability-evaluation, tdd, model-routing-
 ## Referências
 
 Adaptada de https://github.com/GokuMohandas/Made-With-ML, preservando o ciclo design → develop → deploy → iterate, testes de dados/modelos, evaluation, serving e continual learning sem exigir Ray/Anyscale ou a stack da fonte.
+
+## Serving de visão temporal e múltiplos streams (Tamserve, 2026-11-24)
+
+Para pipelines autorizados de segmentação/tracking de objetos em vídeo ao vivo, estender o contrato de serving com estado temporal explícito:
+- Separar pesos compartilháveis, encoding por frame/stream e estado por objeto/stream; limitar histórico às dependências reais do modelo. Nunca compartilhar memória temporal entre streams por acidente.
+- Batch dinâmico com limites de memória e latência, agrupando entradas de shape/estado compatível; medir encoding, tracking e latência ponta a ponta. Diferenciar throughput agregado de FPS efetivo por stream e idade do frame.
+- Definir política de backpressure e descarte: latest-frame para aplicações que toleram perda, processamento integral quando cada frame é necessário. Medir impacto sobre drift, oclusão e recuperação, não apenas velocidade.
+- Dar identidade a stream/frame/objeto; prever start, stop, correção/reset, entrada tardia, desconexão e reentrada. Adicionar objeto ao frame corrente não pode avançar duas vezes o estado dos demais.
+- Comparar com implementação de referência em mesmo modelo, hardware, resolução e workload; medir qualidade de máscara/tracking, memória com duração e concorrência crescentes, p95 de latência, isolamento e soak. Precisão offline semelhante não prova qualidade ao vivo.
+- Exigir finalidade autorizada, minimização/retenção e proteção de imagens; não usar como autorização para vigilância de pessoas. Confirmar GPU/runtime, licença e origem dos pesos antes de execução.
+
+Should-trigger: desenhar serving de segmentação de objetos em vários fluxos de vídeo. Near-miss: recortar uma imagem estática ou editar um clipe simples. Fonte: https://github.com/aryamandarda/tamserve (README e docs/how-it-works.md). SAM, PyTorch, pesos, câmeras e GPUs não foram executados/importados; resultados publicados são dos autores.

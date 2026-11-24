@@ -170,3 +170,15 @@ Se o usuário pedir inspeção ou auditoria real e um conector autorizado (por e
 - **cobertura parcial:** somente fonte onboarding/demo → não apresentar como saúde da aplicação de produção.
 
 **Proveniência:** reavaliação do `BetterStackHQ/codex-plugin` com plugin Better Stack efetivamente acessível no ChatGPT em 2026-10-21. O backend é opcional, e este contrato é portátil para outras plataformas de observabilidade com ferramentas reais. Ver `evaluations/2026-10-21-arsenal-evolution-run-001.md`.
+
+## Contrato de ingestão e oracle de ponta a ponta (DataCat, 2026-11-24)
+
+Ao selecionar ou auditar backend de telemetria self-hosted ou compatível com múltiplos protocolos:
+- Construir matriz sender/protocolo/versão/tipo de sinal/encoding, com estados verificado, parcial e desconhecido. Compatibilidade nominal não prova paridade; formatos não suportados devem falhar explicitamente em vez de retornar sucesso silencioso.
+- Enviar fixtures sintéticas de resposta conhecida para métricas, logs e traces; conferir recebido, aceito, persistido, descartado e consultável por janela/run ID. Reconciliar contadores com valores esperados, incluindo duplicatas/retries e eventual consistência; HTTP 2xx não comprova persistência.
+- Medir throughput de ingestão, latência de consulta e tempo até o dado ficar pesquisável separadamente; validar correlação, precisão de agregações, alertas de recuperação, overload e isolamento entre tenants com dados de teste.
+- Comparar storage alternativo com a mesma carga, retenção, cardinalidade e oracle; testar backup/restauração, migração e perda de coletor antes de recomendar produção.
+- Inventariar HTTPS, bootstrap admin, escopo de chaves, segredo de sessão, retenção e permissões de agentes; não instalar nem enviar telemetria real sem autorização.
+
+Should-trigger: verificar migração/compatibilidade de backend de observabilidade. Near-miss: consultar um incidente em backend existente, sem mudança de ingestão; usar playbook anterior.
+Fonte: https://github.com/replit/datacat (README, estrutura bench/). PostgreSQL, ClickHouse, OTLP/Datadog, Docker e agentes são referências externas; nenhum deploy ou benchmark foi executado.

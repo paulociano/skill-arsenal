@@ -223,3 +223,15 @@ Em arquiteturas onde agente/CLI/MCP controla uma **extensão no navegador já au
 7. **Acceptance:** pareamento de navegador A não deve abrir aba no perfil B; Stop precisa impedir **novas** ações; após timeout em envio, o agente não deve reenviar até reconciliar; aba emprestada deve retornar ao proprietário após encerramento normal. Near-miss: consulta apenas textual, sem controle de browser, não exige daemon, pareamento nem sessão.
 
 Fontes: https://github.com/Tencent/BrowserSkill (`crates/bsk-cli/skill/SKILL.md`, `docs/local-pairing.md`, `docs/remote-extension-connection.md`, `docs/operation-audit.md`) e https://github.com/BrowserMCP/mcp (`README.md`, `packages/mcp/README.md`). Metodologias adaptadas sem executar extensões, scripts, CLI, ponte CDP ou MCP; documentação consultada em 2026-11-19. Apenas usar runtime conectado e efetivamente autorizado no ambiente atual.
+
+## Gate de compatibilidade de engine headless alternativa (2026-11-24)
+
+Quando avaliar substituir Chromium/WebKit por engine leve para extração, automação ou renderização autorizada:
+1. Separar contrato de navegação/JS, DOM, action space, CDP/MCP, screenshots e PDF; compatibilidade de transporte não implica paridade de comandos, APIs Web, layout ou acessibilidade.
+2. Usar fixtures determinísticas e páginas autorizadas representativas; comparar viewport, escala, inputs, fontes, scroll, estado de animação e critério de settle equivalentes. Confirmar navegação e imagem não vazia antes de interpretar diffs.
+3. Validar geometria, wrapping, clipping, elementos sticky/fixed, recursos e postconditions semânticas; diferença de pixels é sinal para investigação, não veredito. Para PDF, verificar também texto selecionável, tags e paginação conforme o requisito.
+4. Medir latência/memória junto com taxa de sucesso, erros, retries e fidelidade. Reduzir falhas a fixtures reproduzíveis e manter fallback para engine com cobertura necessária. Não considerar bypass de bloqueios, disfarce de identidade ou acesso a rede privada como critérios de sucesso; respeitar permissões, restrições de acesso e isolamento de rede.
+5. Sem runtime real, devolver matriz e plano de teste; não afirmar que Playwright/CDP/MCP ou o browser está conectado.
+
+Should-trigger: escolher engine headless para testes de um site próprio. Near-miss: navegação textual pontual com ferramenta nativa, sem necessidade de substituir engine.
+Fonte: https://github.com/h4ckf0r0day/obscura (README e skills/obscura/SKILL.md). Absorvida somente a metodologia de validação; stealth, anti-detection, acesso a rede privada, binários e scripts excluídos.
