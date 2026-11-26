@@ -12,6 +12,9 @@ Catálogo de roteamento do Skill Arsenal. Use este arquivo para selecionar candi
 
 ## Stacks
 
+- **ai-3d-asset-factory** — Produzir kits modulares de assets 3D para jogos e web com contratos de encaixe, geração procedural/neural, GLB, colisões, manifestos e QA; priorizar backends gratuitos realmente disponíveis.  
+  `stacks/ai-3d-asset-factory/STACK.md`
+
 - **ai-reels-production** — Produzir Reels/Shorts com IA do roteiro ou long-form ao corte, reframing 9:16, captions, B-roll, voz/avatar, motion, variantes e QA, carregando apenas os owners necessários.  
   `stacks/ai-reels-production/STACK.md`
 - **ai-workspace-operating-cycle** — Opera trabalhos complexos e persistentes como um workspace estruturado, conectando fontes, decisões, assets, artifacts, contexto seletivo, geração, verificação e retomada entre sessões sem reduzir tudo a uma conversa linear.  
